@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Glassy - Suika Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Main Menu UI -->
+    <div id="main-menu" class="ui-layer glass-panel">
+      <div id="lives-container" class="lives-container glass-panel">
+        <span class="heart active">♥</span>
+        <span class="heart active">♥</span>
+        <span class="heart active">♥</span>
+        <span class="heart active">♥</span>
+        <span class="heart active">♥</span>
+      </div>
+      <h1 class="title">Glassy</h1>
+      <p class="subtitle">Relax and Merge</p>
+      <div class="menu-buttons">
+        <button id="btn-play" class="btn primary-btn">Jugar</button>
+        <button id="btn-get-lives" class="btn primary-btn" style="background: linear-gradient(135deg, #fb923c, #f87171);">Tienda de Vidas</button>
+        <button id="btn-leaderboards" class="btn secondary-btn">Leaderboards</button>
+        <button id="btn-config" class="btn secondary-btn">Configuración</button>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="ui-layer glass-panel active">
+      <div class="glass-title-container">
+        <h1 class="glass-title">Glassy</h1>
+      </div>
+      <p class="subtitle" style="margin-bottom: 30px;">Guarda tus vidas y progreso en la nube</p>
+      
+      <button id="btn-google-login" class="btn google-btn">
+        <svg class="google-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        Continuar con Google
+      </button>
+      
+      <button id="btn-back-menu" class="btn secondary-btn" style="margin-top: 20px;">Volver al Menú</button>
+    </div>
+
+    <!-- Leaderboard Screen -->
+    <div id="leaderboard-screen" class="ui-layer glass-panel">
+      <h2 class="glass-title" style="font-size: 2.5rem; margin-bottom: 20px;">Top Jugadores</h2>
+      <div class="leaderboard-container">
+        <table id="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th>Puntos</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+            <!-- Filled via JS -->
+          </tbody>
+        </table>
+      </div>
+      <button id="btn-close-leaderboard" class="btn secondary-btn" style="margin-top: 20px;">Cerrar</button>
+    </div>
+
+    <!-- Config Screen -->
+    <div id="config-screen" class="ui-layer glass-panel">
+      <h2 class="glass-title" style="margin-bottom: 20px;">Configuración</h2>
+      <div style="margin: 20px 0; display: flex; flex-direction: column; gap: 20px; text-align: left; width: 100%; max-width: 250px;">
+        <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+          <span>Música</span>
+          <input type="checkbox" id="toggle-music" checked style="width: 20px; height: 20px;">
+        </label>
+        <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+          <span>Efectos de Sonido</span>
+          <input type="checkbox" id="toggle-sfx" checked style="width: 20px; height: 20px;">
+        </label>
+      </div>
+      <button id="btn-logout" class="btn google-btn" style="background: rgba(234, 67, 53, 0.2); margin-top: 20px; margin-bottom: 10px;">Cerrar Sesión</button>
+      <button id="btn-close-config" class="btn secondary-btn">Volver</button>
+    </div>
+
+    <!-- Store Screen -->
+    <div id="store-screen" class="ui-layer glass-panel">
+      <h2 class="glass-title" style="margin-bottom: 10px;">Tienda</h2>
+      <p style="margin-bottom: 20px; color: var(--text-secondary);">Consigue vidas ilimitadas o recarga ahora.</p>
+      
+      <button id="btn-ad-life" class="btn secondary-btn" style="margin-bottom: 30px; background: rgba(74, 222, 128, 0.15); border: 1px solid #4ade80;">
+        📺 Ver Anuncio (+1 Vida)
+      </button>
+      
+      <div class="packages-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+        <div class="package-card glass-panel" style="padding: 15px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <h3 style="color: #fb923c; margin: 0 0 5px 0;">24 Horas</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 15px;">Vidas Ilimitadas</p>
+          <button class="btn primary-btn btn-buy" data-price="1">$1.00</button>
+        </div>
+        <div class="package-card glass-panel" style="padding: 15px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <h3 style="color: #4ade80; margin: 0 0 5px 0;">3 Días</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 15px;">Vidas Ilimitadas</p>
+          <button class="btn primary-btn btn-buy" data-price="3">$3.00</button>
+        </div>
+        <div class="package-card glass-panel" style="padding: 15px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <h3 style="color: #60a5fa; margin: 0 0 5px 0;">7 Días</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 15px;">Vidas Ilimitadas</p>
+          <button class="btn primary-btn btn-buy" data-price="5">$5.00</button>
+        </div>
+        <div class="package-card glass-panel" style="padding: 15px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <h3 style="color: #c084fc; margin: 0 0 5px 0;">15 Días</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 15px;">Vidas Ilimitadas</p>
+          <button class="btn primary-btn btn-buy" data-price="10">$10.00</button>
+        </div>
+        <div class="package-card glass-panel" style="padding: 15px; border-radius: 12px; grid-column: span 2; display: flex; flex-direction: column; align-items: center; text-align: center; background: rgba(192, 132, 252, 0.1);">
+          <h3 style="color: #f87171; margin: 0 0 5px 0;">30 Días (Premium)</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 15px;">Vidas Ilimitadas</p>
+          <button class="btn primary-btn btn-buy" data-price="20" style="background: linear-gradient(135deg, #c084fc, #f87171); border: none; width: 80%;">$20.00</button>
+        </div>
+      </div>
+      <button id="btn-close-store" class="btn secondary-btn" style="margin-top: 25px;">Volver</button>
+    </div>
+
+    <!-- Game UI -->
+    <div id="game-ui" class="ui-layer">
+      <div class="top-bar">
+        <div class="score-container glass-panel">
+          <span class="score-label">Puntaje</span>
+          <span id="score-value">0</span>
+        </div>
+        <button id="btn-pause" class="icon-btn glass-panel">⏸</button>
+      </div>
+      <!-- Physics Canvas Container -->
+      <div id="canvas-container"></div>
+      
+      <!-- Next Gem Preview UI -->
+      <div class="next-gem-preview glass-panel">
+        <span>Siguiente:</span>
+        <div id="next-gem-circle"></div>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="ui-layer glass-panel">
+      <h2>Game Over</h2>
+      <div class="final-score-box">
+        <span>Tu Puntaje</span>
+        <span id="final-score-value">0</span>
+      </div>
+      <button id="btn-restart" class="btn primary-btn">Intentar de nuevo</button>
+      <button id="btn-home" class="btn secondary-btn">Menú Principal</button>
+    </div>
+
+    <!-- No Lives Modal -->
+    <div id="no-lives-modal" class="ui-layer">
+      <div class="glass-panel" style="padding: 40px; text-align: center; max-width: 350px;">
+        <div style="font-size: 4rem; margin-bottom: 10px;">💔</div>
+        <h2 style="margin-bottom: 15px; color: var(--text-primary);">Sin Vidas</h2>
+        <p style="margin-bottom: 25px; line-height: 1.5; color: var(--text-secondary);">
+          Te has quedado sin vidas de cristal.<br>
+          Espera un poco a que se recarguen de forma natural.
+        </p>
+        <button id="btn-close-modal" class="btn primary-btn">Entendido</button>
+      </div>
+    </div>
+
+    <!-- Pause Menu -->
+    <div id="pause-screen" class="ui-layer">
+      <div class="glass-panel" style="padding: 40px; text-align: center; max-width: 350px;">
+        <h2 style="margin-bottom: 25px; color: var(--text-primary);">Juego Pausado</h2>
+        <button id="btn-resume" class="btn primary-btn" style="margin-bottom: 15px;">Reanudar</button>
+        <button id="btn-quit" class="btn secondary-btn">Salir al Menú</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
