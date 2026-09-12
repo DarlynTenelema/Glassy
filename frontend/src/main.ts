@@ -2,7 +2,6 @@ import './style.css';
 import Matter from 'matter-js';
 import * as PIXI from 'pixi.js';
 import { GlowFilter } from '@pixi/filter-glow';
-import CryptoJS from 'crypto-js';
 import { supabase } from './supabase';
 
 // Game Constants and Tiers
@@ -102,7 +101,6 @@ const hearts = document.querySelectorAll('.heart');
 
 // API CONFIG (using env vars)
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
-const GAME_SECRET = import.meta.env.VITE_GAME_SECRET || 'change-this-to-a-random-string-for-production';
 
 
 
@@ -597,18 +595,12 @@ function triggerGameOver() {
   document.getElementById('final-score-value')!.innerText = score.toString();
   gameOverLayer.classList.add('active');
 
-  // Anti-Cheat: Sign the score
+  // Submit score — JWT auth is the security layer; server validates bounds
   if (session && score > 0) {
-    const userId = session.user.id;
-    
-    // Hash: "score={score}&user={userID}" using GAME_SECRET
-    const dataToHash = `score=${score}&user=${userId}`;
-    const hash = CryptoJS.HmacSHA256(dataToHash, GAME_SECRET).toString(CryptoJS.enc.Hex);
-
     fetch(`${API_URL}/leaderboard`, {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${session.access_token}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ score, hash })
+      body: JSON.stringify({ score })
     }).catch(e => console.error('Failed to submit score', e));
   }
 }
