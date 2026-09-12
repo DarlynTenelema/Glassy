@@ -3,6 +3,7 @@ import Matter from 'matter-js';
 import * as PIXI from 'pixi.js';
 import { GlowFilter } from '@pixi/filter-glow';
 import CryptoJS from 'crypto-js';
+import { supabase } from './supabase';
 
 // Game Constants and Tiers
 const GEMS = [
@@ -19,19 +20,8 @@ const GEMS = [
 // App State
 let score = 0;
 let lives = 5;
-let token = localStorage.getItem('glassy_token') || '';
+let session: any = null;
 let isPlaying = false;
-
-// JWT Parser to get userID for Anti-Cheat
-function parseJwt(token: string) {
-  try {
-    const base64Url = token.split('.')[1];
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    return JSON.parse(window.atob(base64));
-  } catch (e) {
-    return null;
-  }
-}
 
 // Audio setup
 const bgMusic = new Audio('/assets/bgm.mp3');
@@ -114,13 +104,7 @@ const hearts = document.querySelectorAll('.heart');
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
 const GAME_SECRET = import.meta.env.VITE_GAME_SECRET || 'change-this-to-a-random-string-for-production';
 
-const urlParams = new URLSearchParams(window.location.search);
-const urlToken = urlParams.get('token');
-if (urlToken) {
-  token = urlToken;
-  localStorage.setItem('glassy_token', token);
-  window.history.replaceState({}, document.title, "/");
-}
+
 
 function updateHeartsUI() {
   hearts.forEach((heart, index) => {
@@ -133,7 +117,10 @@ function updateHeartsUI() {
 }
 
 async function fetchPlayerState() {
-  if (!token) {
+  const { data } = await supabase.auth.getSession();
+  session = data.session;
+
+  if (!session) {
     btnGoogleLogin.style.display = 'flex';
     // Ensure login screen is active if not authenticated
     menuLayer.classList.remove('active');
@@ -147,7 +134,7 @@ async function fetchPlayerState() {
   
   try {
     const res = await fetch(`${API_URL}/player/state`, {
-      headers: { 'Authorization': `Bearer ${token}` }
+      headers: { 'Authorization': `Bearer ${session.access_token}` }
     });
     if (res.ok) {
       const data = await res.json();
@@ -164,9 +151,9 @@ fetchPlayerState();
 // Navigation Logic
 btnConfig.addEventListener('click', () => { menuLayer.classList.remove('active'); configLayer.classList.add('active'); });
 btnCloseConfig.addEventListener('click', () => { configLayer.classList.remove('active'); menuLayer.classList.add('active'); });
-btnLogout.addEventListener('click', () => {
-  localStorage.removeItem('glassy_token');
-  token = '';
+btnLogout.addEventListener('click', async () => {
+  await supabase.auth.signOut();
+  session = null;
   configLayer.classList.remove('active');
   loginLayer.classList.add('active');
 });
@@ -209,9 +196,10 @@ btnBuyPackages.forEach(btn => {
     const mockPurchaseToken = "test_google_play_token_12345"; 
     
     try {
+      if (!session) return;
       const res = await fetch(`${API_URL}/player/verify-purchase`, {
         method: 'POST',
-        headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+        headers: { 'Authorization': `Bearer ${session.access_token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ purchase_token: mockPurchaseToken, product_id: productId })
       });
       if (res.ok) {
@@ -261,13 +249,12 @@ btnQuit.addEventListener('click', () => {
 
 btnBackMenu.addEventListener('click', () => { loginLayer.classList.remove('active'); menuLayer.classList.add('active'); });
 
-btnGoogleLogin.addEventListener('click', () => {
-  const backendUrl = API_URL.replace('/api', '');
-  window.location.href = `${backendUrl}/auth/google/login`;
+btnGoogleLogin.addEventListener('click', async () => {
+  await supabase.auth.signInWithOAuth({ provider: 'google' });
 });
 
 btnPlay.addEventListener('click', async () => {
-  if (!token) {
+  if (!session) {
     menuLayer.classList.remove('active');
     loginLayer.classList.add('active');
     return;
@@ -276,7 +263,7 @@ btnPlay.addEventListener('click', async () => {
   try {
     const res = await fetch(`${API_URL}/player/use-life`, {
       method: 'POST',
-      headers: { 'Authorization': `Bearer ${token}` }
+      headers: { 'Authorization': `Bearer ${session.access_token}` }
     });
     if (res.ok) {
       const data = await res.json();
@@ -611,9 +598,8 @@ function triggerGameOver() {
   gameOverLayer.classList.add('active');
 
   // Anti-Cheat: Sign the score
-  if (token && score > 0) {
-    const jwtData = parseJwt(token);
-    const userId = jwtData ? jwtData.user_id : '';
+  if (session && score > 0) {
+    const userId = session.user.id;
     
     // Hash: "score={score}&user={userID}" using GAME_SECRET
     const dataToHash = `score=${score}&user=${userId}`;
@@ -621,7 +607,7 @@ function triggerGameOver() {
 
     fetch(`${API_URL}/leaderboard`, {
       method: 'POST',
-      headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+      headers: { 'Authorization': `Bearer ${session.access_token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ score, hash })
     }).catch(e => console.error('Failed to submit score', e));
   }

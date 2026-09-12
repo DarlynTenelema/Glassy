@@ -38,7 +38,7 @@ func createTables() {
 
 	CREATE TABLE IF NOT EXISTS users (
 		id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-		google_id VARCHAR(255) UNIQUE NOT NULL,
+		google_id VARCHAR(255) UNIQUE,
 		email VARCHAR(255) UNIQUE NOT NULL,
 		name VARCHAR(255) NOT NULL,
 		avatar_url TEXT,

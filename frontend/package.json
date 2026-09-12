@@ -19,6 +19,7 @@
     "@capacitor/cli": "^8.5.2",
     "@capacitor/core": "^8.5.2",
     "@pixi/filter-glow": "^5.2.1",
+    "@supabase/supabase-js": "^2.116.0",
     "crypto-js": "^4.2.0",
     "matter-js": "^0.20.0",
     "pixi.js": "^8.20.1"
