@@ -135,9 +135,15 @@ function updateHeartsUI() {
 async function fetchPlayerState() {
   if (!token) {
     btnGoogleLogin.style.display = 'flex';
+    // Ensure login screen is active if not authenticated
+    menuLayer.classList.remove('active');
+    loginLayer.classList.add('active');
     return;
   }
   btnGoogleLogin.style.display = 'none';
+  // Switch to main menu if authenticated
+  loginLayer.classList.remove('active');
+  menuLayer.classList.add('active');
   
   try {
     const res = await fetch(`${API_URL}/player/state`, {
@@ -438,7 +444,7 @@ function drawPixiBottle() {
   bottleGfx.stroke();
   
   // Add an ASMR Glow to the bottle
-  bottleGfx.filters = [new GlowFilter({ distance: 10, outerStrength: 1.5, innerStrength: 0, color: 0xc084fc, quality: 0.2 })];
+  bottleGfx.filters = [new GlowFilter({ distance: 10, outerStrength: 1.5, innerStrength: 0, color: 0xc084fc, quality: 0.2 }) as any];
   
   pixiApp.stage.addChild(bottleGfx);
 }
@@ -483,7 +489,7 @@ function createPixiGem(body: Matter.Body) {
   
   // Add Glow Filter for ASMR feel
   const glow = new GlowFilter({ distance: 15, outerStrength: 1.5, innerStrength: 0.5, color: colorNum, quality: 0.5 });
-  container.filters = [glow];
+  container.filters = [glow as any];
   
   container.addChild(gfx);
   pixiApp.stage.addChild(container);
