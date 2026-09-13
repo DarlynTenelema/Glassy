@@ -1,4 +1,81 @@
-
+# ========================
+# SECRETOS Y CREDENCIALES
+# ========================
 backend/.env
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+*.env
 
-frontend/.env*
+# ========================
+# BACKEND — Go
+# ========================
+backend/golang/backend.exe
+backend/golang/*.exe
+backend/golang/backend
+# Binarios compilados
+*.out
+*.test
+# Caché de módulos Go local
+/pkg/
+
+# ========================
+# FRONTEND — Node / Vite
+# ========================
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ========================
+# ANDROID — Capacitor
+# ========================
+# Archivos generados por Gradle
+frontend/android/.gradle/
+frontend/android/build/
+frontend/android/app/build/
+frontend/android/local.properties
+frontend/android/.idea/
+frontend/android/captures/
+frontend/android/*.iml
+frontend/android/**/*.iml
+
+# APKs y bundles
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# ========================
+# SISTEMA OPERATIVO
+# ========================
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ========================
+# EDITORES / IDEs
+# ========================
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+*.swp
+*.swo
+
+# ========================
+# LOGS Y TEMPORALES
+# ========================
+*.log
+logs/
+tmp/
+temp/
