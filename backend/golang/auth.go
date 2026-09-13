@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/base64"
 	"fmt"
 	"net/http"
 	"os"
@@ -13,9 +14,18 @@ import (
 var jwtSecret []byte
 
 func InitAuth() {
-	jwtSecret = []byte(os.Getenv("JWT_SECRET"))
-	if len(jwtSecret) == 0 {
+	rawSecret := os.Getenv("JWT_SECRET")
+	if rawSecret == "" {
 		fmt.Println("Warning: JWT_SECRET environment variable is not set")
+		return
+	}
+	// Supabase signs JWTs with the base64-decoded version of the JWT Secret.
+	decoded, err := base64.StdEncoding.DecodeString(rawSecret)
+	if err != nil {
+		// Not valid base64 — use raw bytes as fallback (handles local dev / custom secrets)
+		jwtSecret = []byte(rawSecret)
+	} else {
+		jwtSecret = decoded
 	}
 }
 

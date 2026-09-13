@@ -3,6 +3,8 @@ import Matter from 'matter-js';
 import * as PIXI from 'pixi.js';
 import { GlowFilter } from '@pixi/filter-glow';
 import { supabase } from './supabase';
+import { App } from '@capacitor/app';
+import { Capacitor } from '@capacitor/core';
 
 // Game Constants and Tiers
 const GEMS = [
@@ -91,7 +93,7 @@ const btnQuit = document.getElementById('btn-quit')!;
 
 const nextGemCircle = document.getElementById('next-gem-circle')!;
 const btnConfig = document.getElementById('btn-config')!;
-const btnBackMenu = document.getElementById('btn-back-menu')!;
+// btn-back-menu removed (login is the first screen);
 const btnGoogleLogin = document.getElementById('btn-google-login')!;
 const btnPlay = document.getElementById('btn-play')!;
 const btnLeaderboards = document.getElementById('btn-leaderboards')!;
@@ -119,8 +121,7 @@ async function fetchPlayerState() {
   session = data.session;
 
   if (!session) {
-    btnGoogleLogin.style.display = 'flex';
-    // Ensure login screen is active if not authenticated
+    // No session — show login screen
     menuLayer.classList.remove('active');
     loginLayer.classList.add('active');
     return;
@@ -245,14 +246,54 @@ btnQuit.addEventListener('click', () => {
   bgMusic.pause();
 });
 
-btnBackMenu.addEventListener('click', () => { loginLayer.classList.remove('active'); menuLayer.classList.add('active'); });
+// btnBackMenu listener removed (button no longer exists in login screen)
 
 btnGoogleLogin.addEventListener('click', async () => {
-  await supabase.auth.signInWithOAuth({ provider: 'google' });
+  const isNative = Capacitor.isNativePlatform();
+  const redirectUrl = isNative ? 'com.darlyntenelema.glassy://login-callback' : window.location.origin;
+  
+  await supabase.auth.signInWithOAuth({ 
+    provider: 'google',
+    options: {
+      redirectTo: redirectUrl
+    }
+  });
+});
+
+// Listen for deep links from Supabase OAuth redirect
+App.addListener('appUrlOpen', async (event) => {
+  const url = event.url;
+  if (url.includes('login-callback')) {
+    // Parse the tokens from the deep link
+    if (url.includes('#')) {
+      const hash = url.split('#')[1];
+      const params = new URLSearchParams(hash);
+      const accessToken = params.get('access_token');
+      const refreshToken = params.get('refresh_token');
+      
+      if (accessToken && refreshToken) {
+        await supabase.auth.setSession({ 
+          access_token: accessToken, 
+          refresh_token: refreshToken 
+        });
+        await fetchPlayerState();
+      }
+    } else if (url.includes('?')) {
+      const query = url.split('?')[1];
+      const params = new URLSearchParams(query);
+      const code = params.get('code');
+      
+      if (code) {
+        await supabase.auth.exchangeCodeForSession(code);
+        await fetchPlayerState();
+      }
+    }
+  }
 });
 
 btnPlay.addEventListener('click', async () => {
   if (!session) {
+    // Require login before playing
     menuLayer.classList.remove('active');
     loginLayer.classList.add('active');
     return;
@@ -670,7 +711,30 @@ document.getElementById('btn-home')?.addEventListener('click', () => {
   menuLayer.classList.add('active');
 });
 
-document.getElementById('btn-restart')?.addEventListener('click', () => {
-  gameOverLayer.classList.remove('active');
-  initGame();
+document.getElementById('btn-restart')?.addEventListener('click', async () => {
+  if (!session) {
+    gameOverLayer.classList.remove('active');
+    loginLayer.classList.add('active');
+    return;
+  }
+  try {
+    const res = await fetch(`${API_URL}/player/use-life`, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${session.access_token}` }
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.lives_remaining !== undefined) {
+        lives = data.lives_remaining;
+        updateHeartsUI();
+      }
+      gameOverLayer.classList.remove('active');
+      initGame();
+    } else if (res.status === 403) {
+      gameOverLayer.classList.remove('active');
+      noLivesModal.classList.add('active');
+    }
+  } catch (e) {
+    console.error('Error using life on restart', e);
+  }
 });
