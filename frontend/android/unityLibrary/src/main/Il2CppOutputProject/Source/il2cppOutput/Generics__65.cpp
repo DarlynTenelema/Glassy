@@ -1,0 +1,5172 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+
+struct Dictionary_2_t6050BC246D4D7EC381E9FA18942C2D07866D1221;
+struct Dictionary_2_t2A8A5CCEF5D56C1B28F0BD6C7DD56F31ACABF578;
+struct Dictionary_2_t5849F5B7879048D8019AD12A1471C48CEB9C4B3A;
+struct Dictionary_2_tF2B2DE5A6B6F86DE529BD2F60E6A242723A2B0C8;
+struct Dictionary_2_tCA07E20055F03A190FFD7DD07F75CA5BFD95F4C3;
+struct IComparer_1_tFAD3AE9FE3CE1FB3CBB781C55DC57C986D71521E;
+struct KeyValuePair_2_tC24A74EF64A292F5C6BA77D0B04CD6620D2DE3AC;
+struct LinkedListNode_1_t67D23132699BD5AA974F03A53E11E94CB77B8EB1;
+struct LinkedList_1_t09F6FB09C766455615BBF59716D285304C49E0E7;
+struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73;
+struct List_1_tDB6FA8EDA7A26227B5CA100203EF7BAFA0FDBDDF;
+struct List_1_t274EF879F062D96E9E5D05941FF15F5051FF20C2;
+struct List_1_t2540B9D90666DF67213CF6D95029A7AB686A8C52;
+struct List_1_t75F32F8B26A8DE99110935551964E286930C7D5F;
+struct List_1_t58938DE48BE615DDDBA091679D189CBD2CB643E4;
+struct List_1_t70EE7982F45810D4B024CF720D910E67974A3094;
+struct List_1_tB0B308D151FBF226396B20253C1FF11CF7D10D3A;
+struct List_1_tA1547550E5FBA50050B20DA74245C38434654EE8;
+struct List_1_t0BE12F16A937298114B20824E93D706BCA5214D5;
+struct List_1_t4627353295F8415A37CF5B575A1EE871A8174EF0;
+struct List_1_t33D0D5DC1CC999D9E66584CFA3E5F86E9C719E8C;
+struct List_1_tDAC168B85619D7ADBBDA6B87ED8C7124EE28A782;
+struct List_1_t115BFDF2D524B656F091D4CBADCF1C35287684B4;
+struct List_1_t82C928BB4A4FE60D606FEBAFB9949F993554C39F;
+struct List_1_t70BBA01AC05569034FEB9847D92E5F046528FBAF;
+struct List_1_t10D8EC0B84DD3EDB54DA9AE6AF65B5AB50BA9D5A;
+struct List_1_t3A511618E31C01BE3D1EA788ABB9AD6F354E8485;
+struct List_1_t26341617DEEF2F474C452D0114883D846E7447E7;
+struct List_1_t5BCDFABB5581B18BC92A87B18202C6A7634A62C6;
+struct List_1_tCC4B3F79847D81D1745030169EADE8099695D318;
+struct List_1_t92717732BF98956375510DF49F6E823610AF4FA0;
+struct List_1_t4E502B2E42676E48E6F9A8F0251ADB1DF4BD490E;
+struct List_1_t7F4AA6F9C342BE74D42CA46E2EE7924B540577C8;
+struct List_1_t81AE31C723E905C926562FE0E86DA9B00022EA43;
+struct List_1_tE250E7115251CE18B77DAB637654B67982239650;
+struct List_1_tA9133CFCF211C161818125828AEB3F0BF145615A;
+struct Stack_1_t26AC719A2FAC6B6D9396AC26A3A1BD4EDDDBD3DD;
+struct Stack_1_t0B236E77382B6037C04F4090B3C6259495694C1C;
+struct KeyValuePair_2U5BU5D_tF8154B2302178CCE00D745DBF55F703880469DFC;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct StyleValueHandleU5BU5D_t66B7732469E9E30B1FB9A6E386315DAB36914ADE;
+struct UnsafePerCameraInstanceDataU5BU5D_t0F685A485087E9C61C3F0ECE1FC0975B6402E476;
+struct StpConstantBufferDataU5BU5D_t07D3A37257C2EF165B84B5D9DAE8B5AA029FD586;
+struct LightDataU5BU5D_t964B7E2BC84D26719DA1EFB1402E9985EEA70799;
+struct RemappingInfoU5BU5D_t116B0DE75DBD9FF07599A4AF2EEA5E84FA0519BE;
+struct ShadowMeshVertexU5BU5D_t416281C4E56205A4C3CC3B8D754A5F758F0510F5;
+struct SlotU5BU5D_t7DBD0CD2ED0546356E610CA5C77E8ACC7D24A2B6;
+struct JobAngleRangeU5BU5D_t9290AC06A9C42413A046E4FCA052C1B62628391D;
+struct JobContourPointU5BU5D_tAACA401A9844AC53BC17A51A59ECAEC1F47FF862;
+struct JobControlPointU5BU5D_t39FF939252A65B9A1B1C99FD58EDFC7C4DDF7AC2;
+struct JobCornerInfoU5BU5D_tBF9CFE5E68565912574D19E9896E0C61014DC67E;
+struct JobIntersectPointU5BU5D_tBD1221A8C97AB932FE90E0A94F2A44D556B16305;
+struct JobSegmentInfoU5BU5D_t5692AB7F788B638969BBAC1DCFC6D2D8509E128F;
+struct JobShapeVertexU5BU5D_tA42A39B6FCDE3290CBADE26A1D14536D1A8B9502;
+struct JobSpriteInfoU5BU5D_tFE11B9CF3F9F607C7B6CEF1AD282588208867186;
+struct TransformDataU5BU5D_tBA9854EF6A32CC2EBE5E8899EC40A5213251711D;
+struct OutputVertexU5BU5D_t37E2B36F8CD01F72AA1B808482600876FA32CFA5;
+struct RuneU5BU5D_tC5D18E7E71C1362F5C33ACC3A4A8250197B3B2A6;
+struct LightDescriptorU5BU5D_t96B1283B957D49AE7F3D7C2A269EFB424AF80B31;
+struct PTLightU5BU5D_t9592476161BA9F6C7956249ABC75077F03983DEA;
+struct BodyUpdateTargetU5BU5D_t5D4BD4B5C827E7F4843BFD2E3EC693BB16E36166;
+struct ContactBeginTargetU5BU5D_tAC27987891A046FB92D0A46EB518256A19BCD33B;
+struct ContactEndTargetU5BU5D_t1D2126A8408E50570A7112B1BC01DEFD5523EA44;
+struct JointThresholdTargetU5BU5D_tDF23D282AD8A1893D2FD954450F7F60B5DCAA60E;
+struct TriggerBeginTargetU5BU5D_tFC03B81B7F6EC01D3836BCDDA397066069D1FED6;
+struct TriggerEndTargetU5BU5D_tAE18D417A3AF8BC549C5EE257A0103E48D483CCB;
+struct CapsuleGeometryElementU5BU5D_t5EC627D962DAD22492724B3A6E8DFE6BB7DA70C8;
+struct CircleGeometryElementU5BU5D_t2315FED6B2715C426040EC3B3D36C6E684245DD0;
+struct LineElementU5BU5D_tA35E6C251A054CABB09D18A667DEFC83F415BCC2;
+struct PointElementU5BU5D_t2A3A6DE779A23751FC4B89B33978060A655B5115;
+struct PolygonGeometryElementU5BU5D_t4B5612FD3E5DD9A8A7358E74E4AD92F8BFDCFE18;
+struct Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07;
+struct BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B;
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3;
+struct CommandListManager_tE51C77834C44250F2CB8B9505F24D75EB559A764;
+struct Entry_t475ED76E31923970E7F7A6522E570E7577C487B9;
+struct Font_tC95270EA3198038970422D78B74A7F2E218A96B6;
+struct FontAsset_t61A6446D934E582651044E33D250EA8D306AB958;
+struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931;
+struct ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158;
+struct MeshManager_tC59FCD17654AD8564D8D69141EB25A5C0A1097CC;
+struct RenderData_t1ABE116B2B5E0409AC699E195922516606531DC2;
+struct SendOrPostCallback_t5C292A12062F24027A98492F52ECFE9802AA6F0E;
+struct SequenceNode_t49ACD22961E06675458A60447D7AA32B26835AB0;
+struct String_t;
+struct StyleSheet_t6FAF43FCDB45BC6BED0522A222FD4C1A9BB10428;
+struct Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700;
+struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
+struct Type_t;
+struct UxmlSerializedData_t5BDDB665835158F6BC2975E086891B337C3BB706;
+struct VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115;
+struct VisualTreeAsset_tFB5BF81F0780A412AE5A7C2C552B3EEA64EA2EEB;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377;
+struct VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1;
+struct VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1;
+struct MeshBlas_tA944843D34F1D79DA6D31525E850F0D850EB4FF4;
+struct SplitInfo_tBD1436BC99CBBC9658FA9219EB22657F757C4A1A;
+struct Slot_tA2F29CF08EAE46C3E2B6D96DCD7C96BF887A6127;
+struct FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D;
+struct BufferResourceData_t0B823212ADCC9AA80412877B802DD43236781D57;
+struct TextureResourceData_t0714EB0BFE2BFB2FC4E0CCFFBFE5CAA6C4B53BE3;
+struct NRPInfo_tFAE346DBF564B1FDA1EBC1D2F0C3EDC93143D04F;
+struct ResourceIdLists_tD6328DF3B43DB6A2B045464122D4DD5AC1629D99;
+
+struct StyleValueHandle_t5831643AAA7AD8C5C43A4498C5E0A2545F78227D;
+
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct Enumerator_t8600AAAF8D466A170FAFB8112C2C60124E59B986 
+{
+	SplitInfo_tBD1436BC99CBBC9658FA9219EB22657F757C4A1A* ___m_Ptr;
+	int32_t ___m_Length;
+	int32_t ___m_Index;
+};
+struct Enumerator_tAD999BDE5A48D2BFFA43939551850A2E84D6F1CB 
+{
+	UnsafePerCameraInstanceDataU5BU5D_t0F685A485087E9C61C3F0ECE1FC0975B6402E476* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t7C8F6C3CA781A1ED9AF932420BA995FE1946F123 
+{
+	StpConstantBufferDataU5BU5D_t07D3A37257C2EF165B84B5D9DAE8B5AA029FD586* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t35F964FAA4C3951A5535EF80F8DF52889959A829 
+{
+	LightDataU5BU5D_t964B7E2BC84D26719DA1EFB1402E9985EEA70799* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tBB4430D7F3B7FB51FBD9E2892B75ED9A9DA40FB1 
+{
+	RemappingInfoU5BU5D_t116B0DE75DBD9FF07599A4AF2EEA5E84FA0519BE* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t6CCF2F8AC25B1E7A296666AE8330A7DDED200008 
+{
+	ShadowMeshVertexU5BU5D_t416281C4E56205A4C3CC3B8D754A5F758F0510F5* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t7E7B205CF42F6A56CF4604910DF09F6A813213AB 
+{
+	SlotU5BU5D_t7DBD0CD2ED0546356E610CA5C77E8ACC7D24A2B6* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t59BD6B3248E5BE69D111155ECE49C66A4DB1B3C6 
+{
+	Slot_tA2F29CF08EAE46C3E2B6D96DCD7C96BF887A6127* ___m_Ptr;
+	int32_t ___m_Length;
+	int32_t ___m_Index;
+};
+struct Enumerator_tFFC802F3499C21F5C4B7EE62182194CC8C0E7705 
+{
+	JobAngleRangeU5BU5D_t9290AC06A9C42413A046E4FCA052C1B62628391D* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tE86A975C3D92BF1E035E1A9961447FD1D4D3A56E 
+{
+	JobContourPointU5BU5D_tAACA401A9844AC53BC17A51A59ECAEC1F47FF862* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tC287AAFDA714162A868AEA37F12DBB5587CC0B7A 
+{
+	JobControlPointU5BU5D_t39FF939252A65B9A1B1C99FD58EDFC7C4DDF7AC2* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t0D5574A84062A9D3B692B5EFC589F3275D8C0339 
+{
+	JobCornerInfoU5BU5D_tBF9CFE5E68565912574D19E9896E0C61014DC67E* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t89C052738E8D61834F33E6D8FAFC17528201E19A 
+{
+	JobIntersectPointU5BU5D_tBD1221A8C97AB932FE90E0A94F2A44D556B16305* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tEAEEB73E5CE307656FF55EAB0C746C08C3451515 
+{
+	JobSegmentInfoU5BU5D_t5692AB7F788B638969BBAC1DCFC6D2D8509E128F* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t9C00822C654CAC5B49C16B07B63A819CA05A008E 
+{
+	JobShapeVertexU5BU5D_tA42A39B6FCDE3290CBADE26A1D14536D1A8B9502* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t31AD85E6460A3D02DDEA66291B76FC0199D416FF 
+{
+	JobSpriteInfoU5BU5D_tFE11B9CF3F9F607C7B6CEF1AD282588208867186* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tFBA87FD92DA75B4145466696D7C55BEE48A0E5D2 
+{
+	TransformDataU5BU5D_tBA9854EF6A32CC2EBE5E8899EC40A5213251711D* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tCB28AC526A8EA6D4C41D606FD23DEEB7010A6EF1 
+{
+	OutputVertexU5BU5D_t37E2B36F8CD01F72AA1B808482600876FA32CFA5* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t14F15C9E1D2D013C3B72EDAC39136304A153544C 
+{
+	RuneU5BU5D_tC5D18E7E71C1362F5C33ACC3A4A8250197B3B2A6* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tA0189ECB81C493742105821483AA0C398F31DDA0 
+{
+	LightDescriptorU5BU5D_t96B1283B957D49AE7F3D7C2A269EFB424AF80B31* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tD006C70800D6BB43767AC9559614D5CA587027C0 
+{
+	PTLightU5BU5D_t9592476161BA9F6C7956249ABC75077F03983DEA* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t36F85CD4619606F545F82192FC6354718100FF28 
+{
+	BodyUpdateTargetU5BU5D_t5D4BD4B5C827E7F4843BFD2E3EC693BB16E36166* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tC4C555527CE8592401D7CDF6FE39C6112C2DB03A 
+{
+	ContactBeginTargetU5BU5D_tAC27987891A046FB92D0A46EB518256A19BCD33B* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tAA3B21973FB67A7906B8B5C61698573849CC7359 
+{
+	ContactEndTargetU5BU5D_t1D2126A8408E50570A7112B1BC01DEFD5523EA44* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t0576D8AFC11BEA5616939C8DED581F615A14FD51 
+{
+	JointThresholdTargetU5BU5D_tDF23D282AD8A1893D2FD954450F7F60B5DCAA60E* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t038AD7D6BA83D17F4278DE7400E7F52835F667AD 
+{
+	TriggerBeginTargetU5BU5D_tFC03B81B7F6EC01D3836BCDDA397066069D1FED6* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t997B7FE0E7C3C36435409AA594847B4E412A0287 
+{
+	TriggerEndTargetU5BU5D_tAE18D417A3AF8BC549C5EE257A0103E48D483CCB* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tE22281284913E0BFDE27BD8A8BA97F9B4395395C 
+{
+	CapsuleGeometryElementU5BU5D_t5EC627D962DAD22492724B3A6E8DFE6BB7DA70C8* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t792CCE1C9091B39BF04DC4DB16DE685511D3654F 
+{
+	CircleGeometryElementU5BU5D_t2315FED6B2715C426040EC3B3D36C6E684245DD0* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tAE9D3401DA6BB3C5D505711F04F38708A2193D0A 
+{
+	LineElementU5BU5D_tA35E6C251A054CABB09D18A667DEFC83F415BCC2* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tA17209D78C80671FDE678FC1EBCD00E89BB10E91 
+{
+	PointElementU5BU5D_t2A3A6DE779A23751FC4B89B33978060A655B5115* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_tB10E17E7FDA3380E2DE4365BEBF6C73AB2D0657D 
+{
+	PolygonGeometryElementU5BU5D_t4B5612FD3E5DD9A8A7358E74E4AD92F8BFDCFE18* ____array;
+	int32_t ____start;
+	int32_t ____end;
+	int32_t ____current;
+};
+struct Enumerator_t2814C7C6FD499DAE7E67A6A9DD0282A8261F570C 
+{
+	Dictionary_2_t6050BC246D4D7EC381E9FA18942C2D07866D1221* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ____currentValue;
+};
+struct Enumerator_t2D5CBAD1829507E8B80704E1C6BD2E54D09F6195 
+{
+	Dictionary_2_t2A8A5CCEF5D56C1B28F0BD6C7DD56F31ACABF578* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	int32_t ____currentValue;
+};
+struct Enumerator_t19374E261CB593CE38A6027BD6CA4B592384B6E9 
+{
+	Dictionary_2_tF2B2DE5A6B6F86DE529BD2F60E6A242723A2B0C8* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* ____currentValue;
+};
+struct Handle_1_t78EA27F15D89081CB224A7229220EED408650D50 
+{
+	uint64_t ___Value;
+};
+struct Handle_1_tE2D3875A6BB5B9878CCD9582982E7BDA7D42F4CF 
+{
+	uint64_t ___Value;
+};
+struct ReadOnly_tCC55AFF27C715764DD94EADBD62398A54A416CD0 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t71987D6B97F0CF93BABC2F5B3CDA89D076C2A372 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t37CCA313F8D670925051D441B669A6C13037061F 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t890D24C3B04F979FD5F2961BC38BD5F2B796D9B6 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t28DFAEC6612A7E4D525A85509E725AAA7495761C 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tDCEED2CFBEB31EA295986393AC6277E98D2FF755 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tDEC364368BF802558B50C3FB14E148087C65F5FB 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tD36E017BBA958D460DE4C3A0C5549EB388E069A7 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t170003F639EF504FF674396468D7B23D8A0F59EA 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tBA129549CC3BC8F7DE5E2AD6AA7191A968C24777 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tDBFBCE2C74723D73A71DFEF05665C53ADAB4C5A9 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tA08F01CB2BAEF2A0F1A1714074D8FF3BF279A73D 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t4674EF895BAFD43031B2D1744F533237449DABE0 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tF361FBEA8E062AE574792BDA469C92E6521F3740 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t7BAAF62E25D80BA0B67C62CA7739408865759255 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tD6DFECB2AA9D3248E7710BB3FC618FC91206D7F3 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t2D69DB7E1275BCC1E425E7B37F4FAD139BEBF44B 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t0EE7BF3CF070DD4A4F70A76CF85725C458A36A7B 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_tB5A5F4635FF1910F51F4EFF0C940EA49FD8B3ACF 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t76DE43AEF2590D9E9F8182A4944B8A7E6A190080 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t9E1F0CB9DACF5ECAF4722999CF90E3044213033B 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ReadOnly_t6F9D9B0945F93B912B19572598BE116418FE8CE7 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+};
+struct ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D 
+{
+	int32_t ___Item1;
+	int32_t ___Item2;
+};
+struct Color_tD001788D726C3A7F1379BEED0260B9591F440C1F 
+{
+	float ___r;
+	float ___g;
+	float ___b;
+	float ___a;
+};
+struct EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 
+{
+	union
+	{
+		struct
+		{
+			uint64_t ___m_rawData;
+		};
+		uint8_t EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8__padding[8];
+	};
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555 
+{
+	KeyValuePair_2U5BU5D_tF8154B2302178CCE00D745DBF55F703880469DFC* ___m_Patterns;
+};
+struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_pinvoke
+{
+	KeyValuePair_2_tC24A74EF64A292F5C6BA77D0B04CD6620D2DE3AC* ___m_Patterns;
+};
+struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_com
+{
+	KeyValuePair_2_tC24A74EF64A292F5C6BA77D0B04CD6620D2DE3AC* ___m_Patterns;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct InternedString_t8D62A48CB7D85AAE9CFCCCFB0A77AC2844905735 
+{
+	String_t* ___m_StringOriginalCase;
+	String_t* ___m_StringLowerCase;
+};
+struct InternedString_t8D62A48CB7D85AAE9CFCCCFB0A77AC2844905735_marshaled_pinvoke
+{
+	char* ___m_StringOriginalCase;
+	char* ___m_StringLowerCase;
+};
+struct InternedString_t8D62A48CB7D85AAE9CFCCCFB0A77AC2844905735_marshaled_com
+{
+	Il2CppChar* ___m_StringOriginalCase;
+	Il2CppChar* ___m_StringLowerCase;
+};
+struct RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 
+{
+	int32_t ___m_XMin;
+	int32_t ___m_YMin;
+	int32_t ___m_Width;
+	int32_t ___m_Height;
+};
+struct Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 
+{
+	float ___x;
+	float ___y;
+};
+struct Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A 
+{
+	int32_t ___m_X;
+	int32_t ___m_Y;
+};
+struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+};
+struct Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+	float ___w;
+};
+struct float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 
+{
+	float ___x;
+	float ___y;
+};
+struct float4_t545A994996126766890C1F28B43EA823F2410190 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+	float ___w;
+};
+struct int2_tB123E869131C6102341F8F9AA01726E0E7C2768D 
+{
+	int32_t ___x;
+	int32_t ___y;
+};
+struct int4_t6DC3FEACC0DD1EAE4D5B897188E8D669BC4DAB90 
+{
+	int32_t ___x;
+	int32_t ___y;
+	int32_t ___z;
+	int32_t ___w;
+};
+struct AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 
+{
+	uint16_t ___Index;
+	uint16_t ___Version;
+};
+struct SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC 
+{
+	Il2CppChar ___First;
+	Il2CppChar ___Last;
+};
+struct SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC_marshaled_pinvoke
+{
+	uint8_t ___First;
+	uint8_t ___Last;
+};
+struct SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC_marshaled_com
+{
+	uint8_t ___First;
+	uint8_t ___Last;
+};
+struct ElementInsertionData_tA691432209201F6E803ADDFD410186B673527959 
+{
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___element;
+	bool ___canceled;
+};
+struct ElementInsertionData_tA691432209201F6E803ADDFD410186B673527959_marshaled_pinvoke
+{
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___element;
+	int32_t ___canceled;
+};
+struct ElementInsertionData_tA691432209201F6E803ADDFD410186B673527959_marshaled_com
+{
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___element;
+	int32_t ___canceled;
+};
+struct SequenceConstructPosContext_tDEC4FB1B8F19EFD1AC27C150D561C2D4F6090BA7 
+{
+	SequenceNode_t49ACD22961E06675458A60447D7AA32B26835AB0* ___this_;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___firstpos;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___lastpos;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___lastposLeft;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___firstposRight;
+};
+struct SequenceConstructPosContext_tDEC4FB1B8F19EFD1AC27C150D561C2D4F6090BA7_marshaled_pinvoke
+{
+	SequenceNode_t49ACD22961E06675458A60447D7AA32B26835AB0* ___this_;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___firstpos;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___lastpos;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___lastposLeft;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___firstposRight;
+};
+struct SequenceConstructPosContext_tDEC4FB1B8F19EFD1AC27C150D561C2D4F6090BA7_marshaled_com
+{
+	SequenceNode_t49ACD22961E06675458A60447D7AA32B26835AB0* ___this_;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___firstpos;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___lastpos;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___lastposLeft;
+	BitSet_t89F906D542C052F4565FBEF32E1E9713B966026B* ___firstposRight;
+};
+struct RemappingInfo_t27437378F969AFC36D804A6C4F0F974E20EF15D4 
+{
+	int32_t ___count;
+	int32_t ___index;
+	int32_t ___v0Offset;
+	int32_t ___v1Offset;
+};
+struct TransformData_t1EB326D4F0A7D2FABB34DAB3D379349B5F623646 
+{
+	String_t* ___fullName;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___transform;
+};
+struct TransformData_t1EB326D4F0A7D2FABB34DAB3D379349B5F623646_marshaled_pinvoke
+{
+	char* ___fullName;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___transform;
+};
+struct TransformData_t1EB326D4F0A7D2FABB34DAB3D379349B5F623646_marshaled_com
+{
+	Il2CppChar* ___fullName;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___transform;
+};
+struct ResolveContext_tEF37DBA22D641E4FE1568C5EBE1605A98D86C992 
+{
+	StyleSheet_t6FAF43FCDB45BC6BED0522A222FD4C1A9BB10428* ___sheet;
+	StyleValueHandleU5BU5D_t66B7732469E9E30B1FB9A6E386315DAB36914ADE* ___handles;
+};
+struct ResolveContext_tEF37DBA22D641E4FE1568C5EBE1605A98D86C992_marshaled_pinvoke
+{
+	StyleSheet_t6FAF43FCDB45BC6BED0522A222FD4C1A9BB10428* ___sheet;
+	StyleValueHandle_t5831643AAA7AD8C5C43A4498C5E0A2545F78227D* ___handles;
+};
+struct ResolveContext_tEF37DBA22D641E4FE1568C5EBE1605A98D86C992_marshaled_com
+{
+	StyleSheet_t6FAF43FCDB45BC6BED0522A222FD4C1A9BB10428* ___sheet;
+	StyleValueHandle_t5831643AAA7AD8C5C43A4498C5E0A2545F78227D* ___handles;
+};
+struct AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF 
+{
+	String_t* ___m_ElementName;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___m_NamesPath;
+	String_t* ___m_AttributeName;
+	String_t* ___m_Value;
+};
+struct AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF_marshaled_pinvoke
+{
+	char* ___m_ElementName;
+	char** ___m_NamesPath;
+	char* ___m_AttributeName;
+	char* ___m_Value;
+};
+struct AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF_marshaled_com
+{
+	Il2CppChar* ___m_ElementName;
+	Il2CppChar** ___m_NamesPath;
+	Il2CppChar* ___m_AttributeName;
+	Il2CppChar* ___m_Value;
+};
+struct UxmlSerializedDataOverride_t612A2DF19F1F3AF231244900F30A331CFB9CAD67 
+{
+	int32_t ___m_ElementId;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___m_ElementIdsPath;
+	UxmlSerializedData_t5BDDB665835158F6BC2975E086891B337C3BB706* ___m_SerializedData;
+};
+struct UxmlSerializedDataOverride_t612A2DF19F1F3AF231244900F30A331CFB9CAD67_marshaled_pinvoke
+{
+	int32_t ___m_ElementId;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___m_ElementIdsPath;
+	UxmlSerializedData_t5BDDB665835158F6BC2975E086891B337C3BB706* ___m_SerializedData;
+};
+struct UxmlSerializedDataOverride_t612A2DF19F1F3AF231244900F30A331CFB9CAD67_marshaled_com
+{
+	int32_t ___m_ElementId;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___m_ElementIdsPath;
+	UxmlSerializedData_t5BDDB665835158F6BC2975E086891B337C3BB706* ___m_SerializedData;
+};
+struct FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 
+{
+	Font_tC95270EA3198038970422D78B74A7F2E218A96B6* ___font;
+	FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___fontAsset;
+};
+struct FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831_marshaled_pinvoke
+{
+	Font_tC95270EA3198038970422D78B74A7F2E218A96B6* ___font;
+	FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___fontAsset;
+};
+struct FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831_marshaled_com
+{
+	Font_tC95270EA3198038970422D78B74A7F2E218A96B6* ___font;
+	FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___fontAsset;
+};
+struct SpriteFrame_t0AD908328349FA1B90D428FEBAAD7B480B6D59F4 
+{
+	float ___x;
+	float ___y;
+	float ___w;
+	float ___h;
+};
+struct SpriteSize_tF99BB7603AE2E6587E6184ACAB6CD209FE6569B3 
+{
+	float ___w;
+	float ___h;
+};
+struct TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B 
+{
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___texture;
+	bool ___dynamic;
+	int32_t ___refCount;
+};
+struct TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B_marshaled_pinvoke
+{
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___texture;
+	int32_t ___dynamic;
+	int32_t ___refCount;
+};
+struct TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B_marshaled_com
+{
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___texture;
+	int32_t ___dynamic;
+	int32_t ___refCount;
+};
+struct TransformData_tEC27E9D73132522EA47BF569B8FE23C627A5FC20 
+{
+	int32_t ___transformIndex;
+	int32_t ___refCount;
+};
+struct DeviceToFree_tF2AD2D5F5C1936F25516AEF0736CF4BCA1B3052B 
+{
+	uint32_t ___handle;
+	CommandListManager_tE51C77834C44250F2CB8B9505F24D75EB559A764* ___commandListManager;
+	MeshManager_tC59FCD17654AD8564D8D69141EB25A5C0A1097CC* ___meshManager;
+};
+struct DeviceToFree_tF2AD2D5F5C1936F25516AEF0736CF4BCA1B3052B_marshaled_pinvoke
+{
+	uint32_t ___handle;
+	CommandListManager_tE51C77834C44250F2CB8B9505F24D75EB559A764* ___commandListManager;
+	MeshManager_tC59FCD17654AD8564D8D69141EB25A5C0A1097CC* ___meshManager;
+};
+struct DeviceToFree_tF2AD2D5F5C1936F25516AEF0736CF4BCA1B3052B_marshaled_com
+{
+	uint32_t ___handle;
+	CommandListManager_tE51C77834C44250F2CB8B9505F24D75EB559A764* ___commandListManager;
+	MeshManager_tC59FCD17654AD8564D8D69141EB25A5C0A1097CC* ___meshManager;
+};
+struct WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 
+{
+	SendOrPostCallback_t5C292A12062F24027A98492F52ECFE9802AA6F0E* ___m_DelagateCallback;
+	RuntimeObject* ___m_DelagateState;
+	ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158* ___m_WaitHandle;
+};
+struct WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44_marshaled_pinvoke
+{
+	Il2CppMethodPointer ___m_DelagateCallback;
+	Il2CppIUnknown* ___m_DelagateState;
+	ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158* ___m_WaitHandle;
+};
+struct WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44_marshaled_com
+{
+	Il2CppMethodPointer ___m_DelagateCallback;
+	Il2CppIUnknown* ___m_DelagateState;
+	ManualResetEvent_t63959486AA41A113A4353D0BF4A68E77EBA0A158* ___m_WaitHandle;
+};
+struct SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 
+{
+	String_t* ___name;
+	int32_t ___insertionPointId;
+};
+struct SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8_marshaled_pinvoke
+{
+	char* ___name;
+	int32_t ___insertionPointId;
+};
+struct SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8_marshaled_com
+{
+	Il2CppChar* ___name;
+	int32_t ___insertionPointId;
+};
+struct SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 
+{
+	String_t* ___slotName;
+	int32_t ___assetId;
+};
+struct SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76_marshaled_pinvoke
+{
+	char* ___slotName;
+	int32_t ___assetId;
+};
+struct SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76_marshaled_com
+{
+	Il2CppChar* ___slotName;
+	int32_t ___assetId;
+};
+struct UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 
+{
+	String_t* ___alias;
+	String_t* ___path;
+	VisualTreeAsset_tFB5BF81F0780A412AE5A7C2C552B3EEA64EA2EEB* ___asset;
+};
+struct UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_pinvoke
+{
+	char* ___alias;
+	char* ___path;
+	VisualTreeAsset_tFB5BF81F0780A412AE5A7C2C552B3EEA64EA2EEB* ___asset;
+};
+struct UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484_marshaled_com
+{
+	Il2CppChar* ___alias;
+	Il2CppChar* ___path;
+	VisualTreeAsset_tFB5BF81F0780A412AE5A7C2C552B3EEA64EA2EEB* ___asset;
+};
+struct VersionInfo_tD8EF94E6EB7FCB9167CE193F9FFAAB6DE0518DE8 
+{
+	RuntimeObject* ___source;
+	int64_t ___version;
+};
+struct VersionInfo_tD8EF94E6EB7FCB9167CE193F9FFAAB6DE0518DE8_marshaled_pinvoke
+{
+	Il2CppIUnknown* ___source;
+	int64_t ___version;
+};
+struct VersionInfo_tD8EF94E6EB7FCB9167CE193F9FFAAB6DE0518DE8_marshaled_com
+{
+	Il2CppIUnknown* ___source;
+	int64_t ___version;
+};
+struct ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 
+{
+	String_t* ___displayName;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___action;
+};
+struct ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9_marshaled_pinvoke
+{
+	char* ___displayName;
+	Il2CppMethodPointer ___action;
+};
+struct ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9_marshaled_com
+{
+	Il2CppChar* ___displayName;
+	Il2CppMethodPointer ___action;
+};
+struct NameAndTooltip_tA6656221A6E70C8409CFCBAF6CCEC9C718E344D4 
+{
+	String_t* ___name;
+	String_t* ___tooltip;
+};
+struct NameAndTooltip_tA6656221A6E70C8409CFCBAF6CCEC9C718E344D4_marshaled_pinvoke
+{
+	char* ___name;
+	char* ___tooltip;
+};
+struct NameAndTooltip_tA6656221A6E70C8409CFCBAF6CCEC9C718E344D4_marshaled_com
+{
+	Il2CppChar* ___name;
+	Il2CppChar* ___tooltip;
+};
+struct PassScriptInfo_t8619301849E12A8422C5C4BF3D19F5D7410A0A31 
+{
+	String_t* ___filePath;
+	int32_t ___line;
+};
+struct PassScriptInfo_t8619301849E12A8422C5C4BF3D19F5D7410A0A31_marshaled_pinvoke
+{
+	char* ___filePath;
+	int32_t ___line;
+};
+struct PassScriptInfo_t8619301849E12A8422C5C4BF3D19F5D7410A0A31_marshaled_com
+{
+	Il2CppChar* ___filePath;
+	int32_t ___line;
+};
+struct ResourceData_t78BFD0FF4432C51882F5558EEDF6A8925F4F28B3 
+{
+	String_t* ___name;
+	bool ___imported;
+	int32_t ___creationPassIndex;
+	int32_t ___releasePassIndex;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___consumerList;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___producerList;
+	bool ___memoryless;
+	TextureResourceData_t0714EB0BFE2BFB2FC4E0CCFFBFE5CAA6C4B53BE3* ___textureData;
+	BufferResourceData_t0B823212ADCC9AA80412877B802DD43236781D57* ___bufferData;
+};
+struct ResourceData_t78BFD0FF4432C51882F5558EEDF6A8925F4F28B3_marshaled_pinvoke
+{
+	char* ___name;
+	int32_t ___imported;
+	int32_t ___creationPassIndex;
+	int32_t ___releasePassIndex;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___consumerList;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___producerList;
+	int32_t ___memoryless;
+	TextureResourceData_t0714EB0BFE2BFB2FC4E0CCFFBFE5CAA6C4B53BE3* ___textureData;
+	BufferResourceData_t0B823212ADCC9AA80412877B802DD43236781D57* ___bufferData;
+};
+struct ResourceData_t78BFD0FF4432C51882F5558EEDF6A8925F4F28B3_marshaled_com
+{
+	Il2CppChar* ___name;
+	int32_t ___imported;
+	int32_t ___creationPassIndex;
+	int32_t ___releasePassIndex;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___consumerList;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___producerList;
+	int32_t ___memoryless;
+	TextureResourceData_t0714EB0BFE2BFB2FC4E0CCFFBFE5CAA6C4B53BE3* ___textureData;
+	BufferResourceData_t0B823212ADCC9AA80412877B802DD43236781D57* ___bufferData;
+};
+struct U3C_StpSetupPerViewConstantsU3Ee__FixedBuffer_t9BB7998676CF28C673FFF3872BE1163DFEDAB3F6 
+{
+	union
+	{
+		struct
+		{
+			float ___FixedElementField;
+		};
+		uint8_t U3C_StpSetupPerViewConstantsU3Ee__FixedBuffer_t9BB7998676CF28C673FFF3872BE1163DFEDAB3F6__padding[256];
+	};
+};
+struct PassCompatibilityInfo_tD79DCD78EC09F9D22A9E203048C684EEC9C237F3 
+{
+	String_t* ___message;
+	bool ___isCompatible;
+};
+struct PassCompatibilityInfo_tD79DCD78EC09F9D22A9E203048C684EEC9C237F3_marshaled_pinvoke
+{
+	char* ___message;
+	int32_t ___isCompatible;
+};
+struct PassCompatibilityInfo_tD79DCD78EC09F9D22A9E203048C684EEC9C237F3_marshaled_com
+{
+	Il2CppChar* ___message;
+	int32_t ___isCompatible;
+};
+struct ByReference_1_tDA237A7270D54E16B5BF368792990AF8471670E1 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tE1834A79773C63150150B17F2C9804C1C95C20E5 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t8BD8D2D8E8F365D597C0C71734C0F79B07C96ED7 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tE43879E07228A9F47EB8AA97B49F43FACB6CCD6F 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tA2C149698957E984A78A9CE6BEDDD3209A237EC5 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t32D51F3A1A91B4AF5158CFCCBF41619784D785B1 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t650831C3A01EB8A4BC2F50F7009E47017A37D0C9 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tD0352A5BB130E5F4D951173CD2AB0E0B9693DBED 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tA2C5AC8167599C1D8BF23126250A5BA14B33C918 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t6484CD36C5222E6E840B3A5C6091CCC6C6B0F60B 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tC8C8584A9D42A3C1A3649E08F4ED73F1FED7DDC6 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t920CECBE960634F5FB15F1093D54A3D9B4DB5640 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t1CA687940FFEC1413E5F02982B27AAB557EF4099 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t7141348999835347618AA9AD9603C4A021D3DCDE 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t364FDDC5C234124CDCBC1E4F10B4FEE114E59220 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t5138B1F03E927978092AEF650EBF63CB318078DD 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tC0786270723AE96D0A9375D8AC2CCB813B3FE9A3 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t149C985A78FC9F16896CBC1323E241470D4519BF 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tEA526C5E6C207732E340A1F2AAFF7BD72D8CC806 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t20469D28B5ADF235D10A97D118EFC26D5BDB67F0 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t3FCA8FF1FA32CFC8B394F6C061E343A0D3701912 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t94B9C7E612FAA889D668D045B2EC5F1DBF3AFFF9 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t4A0B0D8287F5D040285FB49C3AA25A8EE38D5B23 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tA7727FC82C1D779EE2802A1968C3FFC569152294 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tB78BE0105D10907AA8C665AF95DBAEF4BEF517CF 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t5A8D94A74D3EF9FFDEF739B5061D38830B7FE058 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t55AA67E29A3ECACAB26A99C259BAE9986833066F 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t36B48293C971AABB7949CED7934A487AB408F9FB 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_tFBE5581BA218BD534C93EE5CDBFF72F1850DAB2D 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t35C7A568359B649F81337FEE709ED5AE4A4F5BB0 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t202968E70F3E147C9542F8B8D25464AEC5A17767 
+{
+	intptr_t ____value;
+};
+struct Enumerator_t59E02176F2EE4E264A4750514AA127E2E21FF5D9 
+{
+	List_1_tDB6FA8EDA7A26227B5CA100203EF7BAFA0FDBDDF* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC ____current;
+};
+struct Enumerator_tD9A65EE19A797992BB565E9671EAD6D7C5EC0347 
+{
+	List_1_t274EF879F062D96E9E5D05941FF15F5051FF20C2* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	ElementInsertionData_tA691432209201F6E803ADDFD410186B673527959 ____current;
+};
+struct Enumerator_t254E5C25FBE652B0DABE4C9F8D3D68BEE6E4B9F4 
+{
+	Stack_1_t26AC719A2FAC6B6D9396AC26A3A1BD4EDDDBD3DD* ____stack;
+	int32_t ____version;
+	int32_t ____index;
+	SequenceConstructPosContext_tDEC4FB1B8F19EFD1AC27C150D561C2D4F6090BA7 ____currentElement;
+};
+struct Enumerator_t2D378166D1655EE934339D5AD1B93266471F0D85 
+{
+	ReadOnly_t28DFAEC6612A7E4D525A85509E725AAA7495761C ___m_Array;
+	int32_t ___m_Index;
+	RemappingInfo_t27437378F969AFC36D804A6C4F0F974E20EF15D4 ___value;
+};
+struct Enumerator_t0EF8181C01113E4BD2FD1341F6AA75D51E6FBE43 
+{
+	List_1_t75F32F8B26A8DE99110935551964E286930C7D5F* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	TransformData_t1EB326D4F0A7D2FABB34DAB3D379349B5F623646 ____current;
+};
+struct Enumerator_t85DB20F848713CB511BD91F315F67ACB016B4C56 
+{
+	Stack_1_t0B236E77382B6037C04F4090B3C6259495694C1C* ____stack;
+	int32_t ____version;
+	int32_t ____index;
+	ResolveContext_tEF37DBA22D641E4FE1568C5EBE1605A98D86C992 ____currentElement;
+};
+struct Enumerator_t8DA2C6537D86E59972669F4C087D22B8FE3820EB 
+{
+	List_1_t70EE7982F45810D4B024CF720D910E67974A3094* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF ____current;
+};
+struct Enumerator_t3DA078F9E086CA9F562B279FACBF8C4F48F3DC05 
+{
+	List_1_tB0B308D151FBF226396B20253C1FF11CF7D10D3A* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	UxmlSerializedDataOverride_t612A2DF19F1F3AF231244900F30A331CFB9CAD67 ____current;
+};
+struct Enumerator_t2D855D5C1E4307D40736B1FE4072CBCF7BC96260 
+{
+	List_1_tA1547550E5FBA50050B20DA74245C38434654EE8* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 ____current;
+};
+struct Enumerator_t120E2705244348C9EA9FB217CACED3A9E78FCE83 
+{
+	List_1_t33D0D5DC1CC999D9E66584CFA3E5F86E9C719E8C* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B ____current;
+};
+struct Enumerator_t908F44A280FF73F809EA8A4EA80187C632061F61 
+{
+	ReadOnly_tD6DFECB2AA9D3248E7710BB3FC618FC91206D7F3 ___m_Array;
+	int32_t ___m_Index;
+	TransformData_tEC27E9D73132522EA47BF569B8FE23C627A5FC20 ___value;
+};
+struct Enumerator_t1819F28FA342D6A1BDF5342E01218E1C20571E23 
+{
+	LinkedList_1_t09F6FB09C766455615BBF59716D285304C49E0E7* ____list;
+	LinkedListNode_1_t67D23132699BD5AA974F03A53E11E94CB77B8EB1* ____node;
+	int32_t ____version;
+	DeviceToFree_tF2AD2D5F5C1936F25516AEF0736CF4BCA1B3052B ____current;
+	int32_t ____index;
+};
+struct Enumerator_t7ECA23D5C1F4F41D95EEA8488F11D3D913089B4C 
+{
+	List_1_t115BFDF2D524B656F091D4CBADCF1C35287684B4* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 ____current;
+};
+struct Enumerator_tDA4FB7C6BD6D95A2E703F84D53E433F5FDF339AB 
+{
+	List_1_t70BBA01AC05569034FEB9847D92E5F046528FBAF* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 ____current;
+};
+struct Enumerator_t658CB92185890E7817C7C1B23A144223D1FF2FF1 
+{
+	List_1_t10D8EC0B84DD3EDB54DA9AE6AF65B5AB50BA9D5A* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 ____current;
+};
+struct Enumerator_tB0F816093F81D6672785A2ADF957047667737977 
+{
+	List_1_t3A511618E31C01BE3D1EA788ABB9AD6F354E8485* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 ____current;
+};
+struct Enumerator_tB6261D207E20D77B85F02CBD2FBA6639D47EF54E 
+{
+	List_1_t26341617DEEF2F474C452D0114883D846E7447E7* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	VersionInfo_tD8EF94E6EB7FCB9167CE193F9FFAAB6DE0518DE8 ____current;
+};
+struct Enumerator_tFD1CA9027569A696A51D698BEDCD6D44864114CD 
+{
+	List_1_t92717732BF98956375510DF49F6E823610AF4FA0* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 ____current;
+};
+struct Enumerator_t6C6890F43396D8A79FFD1F5E8D7ECA7D18092BA2 
+{
+	List_1_t81AE31C723E905C926562FE0E86DA9B00022EA43* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	ResourceData_t78BFD0FF4432C51882F5558EEDF6A8925F4F28B3 ____current;
+};
+struct Enumerator_t513AC545F250DE7F74619998E12B5813609EF80F 
+{
+	List_1_tA9133CFCF211C161818125828AEB3F0BF145615A* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	PassCompatibilityInfo_tD79DCD78EC09F9D22A9E203048C684EEC9C237F3 ____current;
+};
+struct Enumerator_tBF797AE74A3A59D784FD8C5ADEDEE1DC0BA2D71C 
+{
+	Dictionary_2_t6050BC246D4D7EC381E9FA18942C2D07866D1221* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	Handle_1_t78EA27F15D89081CB224A7229220EED408650D50 ____currentKey;
+};
+struct Enumerator_tD80309A923B8EEAD442D0E8AFA95F33A203600CB 
+{
+	Dictionary_2_t2A8A5CCEF5D56C1B28F0BD6C7DD56F31ACABF578* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	Handle_1_tE2D3875A6BB5B9878CCD9582982E7BDA7D42F4CF ____currentKey;
+};
+struct Enumerator_t386A24DF20DEC30ADDC5264CAAE889E50554042B 
+{
+	Dictionary_2_t5849F5B7879048D8019AD12A1471C48CEB9C4B3A* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	Handle_1_tE2D3875A6BB5B9878CCD9582982E7BDA7D42F4CF ____currentKey;
+};
+struct Enumerator_t0D435AD3F0D45E7E2A5C376CF0E7E84D1393C067 
+{
+	Dictionary_2_tCA07E20055F03A190FFD7DD07F75CA5BFD95F4C3* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D ____currentKey;
+};
+struct KeyValuePair_2_t9E583C1F8EF292D275484C9B2FA73A1F18715D64 
+{
+	Handle_1_t78EA27F15D89081CB224A7229220EED408650D50 ___key;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___value;
+};
+struct KeyValuePair_2_t5983FF105A14D8704CA46C2C96E4BE6EFA82F2C5 
+{
+	Handle_1_tE2D3875A6BB5B9878CCD9582982E7BDA7D42F4CF ___key;
+	int32_t ___value;
+};
+struct KeyValuePair_2_t6D2C9091E7A218EE01AFB3085A3F5798BA5E2271 
+{
+	ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D ___key;
+	MeshBlas_tA944843D34F1D79DA6D31525E850F0D850EB4FF4* ___value;
+};
+struct LazyLoadReference_1_tD57A582D5A28F3AE34FBB810985EF171325FAF1B 
+{
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___m_EntityId;
+};
+struct UnsafeList_1_t5C65DCA6782B7C9860C859C2F0C07A2C497E822D 
+{
+	uint8_t* ___Ptr;
+	int32_t ___m_length;
+	int32_t ___m_capacity;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator;
+	int32_t ___padding;
+};
+struct ValueTuple_2_t2213E297C2566AA4A7DCFBBE72C1DD9A274C79F7 
+{
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___Item1;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___Item2;
+};
+struct Allocator_t996642592271AAD9EE688F142741D512C07B5824 
+{
+	int32_t ___value__;
+};
+struct PhysicsRotate_t3AF8BA583108282C8B59872CB621EC366BC042B0 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___direction;
+};
+struct RenderGraphPassType_tD00EC2DAA135C660EE7E71652291A4672104EA2D 
+{
+	int32_t ___value__;
+};
+struct DrawFillOptions_tEDFBA1E7E9317CE7533535BC608111EE1E408298 
+{
+	int32_t ___value__;
+};
+struct SplitInfo_tBD1436BC99CBBC9658FA9219EB22657F757C4A1A 
+{
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___receiverSphereLightSpace;
+	float ___cascadeBlendCullingFactor;
+};
+struct StpConstantBufferData_t12C7727CEDC1B8B7ECA73862CD7BB3F5D32B2754 
+{
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpCommonConstant;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpSetupConstants0;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpSetupConstants1;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpSetupConstants2;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpSetupConstants3;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpSetupConstants4;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpSetupConstants5;
+	U3C_StpSetupPerViewConstantsU3Ee__FixedBuffer_t9BB7998676CF28C673FFF3872BE1163DFEDAB3F6 ____StpSetupPerViewConstants;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpDilConstants0;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpTaaConstants0;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpTaaConstants1;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpTaaConstants2;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ____StpTaaConstants3;
+};
+struct LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED 
+{
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___position;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___color;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___attenuation;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___spotDirection;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___occlusionProbeChannels;
+	uint32_t ___layerMask;
+};
+struct MinMaxBounds_t35E6E7F057C2DA166CB55DB2865E06EC1E344537 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___min;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___max;
+};
+struct ShadowMeshVertex_t79CEE224683C48457A66B224C228E3A6F7529B79 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___tangent;
+};
+struct Slot_tA2F29CF08EAE46C3E2B6D96DCD7C96BF887A6127 
+{
+	bool ___isActive;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___viewID;
+	int32_t ___planeCount;
+	int32_t ___lastUsedFrameIndex;
+};
+struct Slot_tA2F29CF08EAE46C3E2B6D96DCD7C96BF887A6127_marshaled_pinvoke
+{
+	int32_t ___isActive;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___viewID;
+	int32_t ___planeCount;
+	int32_t ___lastUsedFrameIndex;
+};
+struct Slot_tA2F29CF08EAE46C3E2B6D96DCD7C96BF887A6127_marshaled_com
+{
+	int32_t ___isActive;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___viewID;
+	int32_t ___planeCount;
+	int32_t ___lastUsedFrameIndex;
+};
+struct JobAngleRange_t974C3D0183C9572CE9C7D88703CABC5FAE543F13 
+{
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___spriteAngles;
+	int4_t6DC3FEACC0DD1EAE4D5B897188E8D669BC4DAB90 ___spriteData;
+};
+struct JobContourPoint_t4C410C8E8FEECD48C1DE496790BA15C88F09E3E3 
+{
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___position;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___ptData;
+};
+struct JobControlPoint_t4A1C76318BCFAEC1F3FBA7879A2FB6FD0AFB2A36 
+{
+	int4_t6DC3FEACC0DD1EAE4D5B897188E8D669BC4DAB90 ___cpData;
+	int4_t6DC3FEACC0DD1EAE4D5B897188E8D669BC4DAB90 ___exData;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___cpInfo;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___position;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___tangentLt;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___tangentRt;
+};
+struct JobCornerInfo_t4B00296B36DDE3A9780DD95B9FF3D93CD8F3FD99 
+{
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___bottom;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___top;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___left;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___right;
+	int2_tB123E869131C6102341F8F9AA01726E0E7C2768D ___cornerData;
+};
+struct JobIntersectPoint_t0F9A7C2D6E77A6B8C54351175052D3E5691BDB0C 
+{
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___top;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___bottom;
+};
+struct JobSegmentInfo_tA77A98E2F21524FDF0D28D2E53452DF45FC40481 
+{
+	int4_t6DC3FEACC0DD1EAE4D5B897188E8D669BC4DAB90 ___sgInfo;
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___spriteInfo;
+};
+struct JobShapeVertex_t630D64AD32E441EC9BC0B7B54948F861B2ECE9CC 
+{
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___pos;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___uv;
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___tan;
+	float2_t3398D7209CB6D09FEA5C49AC55070C5E7BE0B2A5 ___meta;
+	int4_t6DC3FEACC0DD1EAE4D5B897188E8D669BC4DAB90 ___sprite;
+};
+struct JobSpriteInfo_t002F5BF7D329A7F7A8DA7E9CB9B923C73B1C5E29 
+{
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___texRect;
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___texData;
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___uvInfo;
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___metaInfo;
+	float4_t545A994996126766890C1F28B43EA823F2410190 ___border;
+};
+struct BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 
+{
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___src;
+	RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 ___srcRect;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___dstPos;
+	int32_t ___border;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___tint;
+};
+struct BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357_marshaled_pinvoke
+{
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___src;
+	RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 ___srcRect;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___dstPos;
+	int32_t ___border;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___tint;
+};
+struct BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357_marshaled_com
+{
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___src;
+	RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 ___srcRect;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___dstPos;
+	int32_t ___border;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___tint;
+};
+struct Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD 
+{
+	String_t* ___filename;
+	SpriteFrame_t0AD908328349FA1B90D428FEBAAD7B480B6D59F4 ___frame;
+	bool ___rotated;
+	bool ___trimmed;
+	SpriteFrame_t0AD908328349FA1B90D428FEBAAD7B480B6D59F4 ___spriteSourceSize;
+	SpriteSize_tF99BB7603AE2E6587E6184ACAB6CD209FE6569B3 ___sourceSize;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pivot;
+};
+struct Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD_marshaled_pinvoke
+{
+	char* ___filename;
+	SpriteFrame_t0AD908328349FA1B90D428FEBAAD7B480B6D59F4 ___frame;
+	int32_t ___rotated;
+	int32_t ___trimmed;
+	SpriteFrame_t0AD908328349FA1B90D428FEBAAD7B480B6D59F4 ___spriteSourceSize;
+	SpriteSize_tF99BB7603AE2E6587E6184ACAB6CD209FE6569B3 ___sourceSize;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pivot;
+};
+struct Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD_marshaled_com
+{
+	Il2CppChar* ___filename;
+	SpriteFrame_t0AD908328349FA1B90D428FEBAAD7B480B6D59F4 ___frame;
+	int32_t ___rotated;
+	int32_t ___trimmed;
+	SpriteFrame_t0AD908328349FA1B90D428FEBAAD7B480B6D59F4 ___spriteSourceSize;
+	SpriteSize_tF99BB7603AE2E6587E6184ACAB6CD209FE6569B3 ___sourceSize;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pivot;
+};
+struct RaycastHitData_t5EAB266730389AB27715962670C2512800451841 
+{
+	Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* ___U3CgraphicU3Ek__BackingField;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CworldHitPositionU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CscreenPositionU3Ek__BackingField;
+	float ___U3CdistanceU3Ek__BackingField;
+};
+struct RaycastHitData_t5EAB266730389AB27715962670C2512800451841_marshaled_pinvoke
+{
+	Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* ___U3CgraphicU3Ek__BackingField;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CworldHitPositionU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CscreenPositionU3Ek__BackingField;
+	float ___U3CdistanceU3Ek__BackingField;
+};
+struct RaycastHitData_t5EAB266730389AB27715962670C2512800451841_marshaled_com
+{
+	Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* ___U3CgraphicU3Ek__BackingField;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CworldHitPositionU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CscreenPositionU3Ek__BackingField;
+	float ___U3CdistanceU3Ek__BackingField;
+};
+struct OutputVertex_tA4BCEA851534A5A22BE19AD8D0F20102B11F88C4 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___Position;
+};
+struct PTLight_tBEB70EAD4BA181C3FDAFE151BEB34830CFF92778 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position;
+	int32_t ___type;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___intensity;
+	int32_t ___castShadows;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___forward;
+	int32_t ___contributesToDirectLighting;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___attenuation;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___up;
+	float ___width;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___right;
+	float ___height;
+	uint32_t ___layerMask;
+	float ___indirectScale;
+	float ___spotAngle;
+	float ___innerSpotAngle;
+	float ___range;
+	int32_t ___shadowMaskChannel;
+	int32_t ___falloffIndex;
+	float ___shadowRadius;
+	int32_t ___cookieIndex;
+};
+struct VolumeParameterChain_tF0AF946FA26C5D61B2713BA220DD70D041EAA35E 
+{
+	NameAndTooltip_tA6656221A6E70C8409CFCBAF6CCEC9C718E344D4 ___nameAndTooltip;
+	VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* ___volumeProfile;
+	VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1* ___volumeComponent;
+	Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* ___volume;
+};
+struct VolumeParameterChain_tF0AF946FA26C5D61B2713BA220DD70D041EAA35E_marshaled_pinvoke
+{
+	NameAndTooltip_tA6656221A6E70C8409CFCBAF6CCEC9C718E344D4_marshaled_pinvoke ___nameAndTooltip;
+	VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* ___volumeProfile;
+	VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1* ___volumeComponent;
+	Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* ___volume;
+};
+struct VolumeParameterChain_tF0AF946FA26C5D61B2713BA220DD70D041EAA35E_marshaled_com
+{
+	NameAndTooltip_tA6656221A6E70C8409CFCBAF6CCEC9C718E344D4_marshaled_com ___nameAndTooltip;
+	VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1* ___volumeProfile;
+	VolumeComponent_t8121D1F6054A9DFB3A596EE451FD65A2BFE2D7E1* ___volumeComponent;
+	Volume_t7CAAEA22D7F13A50FAE114DE7A6986FEAC837377* ___volume;
+};
+struct LayoutMatcher_t0D8F5E32A7C82BC292EBA0FAA3EB2D9F1F72A0A6 
+{
+	InternedString_t8D62A48CB7D85AAE9CFCCCFB0A77AC2844905735 ___layoutName;
+	InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555 ___deviceMatcher;
+};
+struct LayoutMatcher_t0D8F5E32A7C82BC292EBA0FAA3EB2D9F1F72A0A6_marshaled_pinvoke
+{
+	InternedString_t8D62A48CB7D85AAE9CFCCCFB0A77AC2844905735_marshaled_pinvoke ___layoutName;
+	InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_pinvoke ___deviceMatcher;
+};
+struct LayoutMatcher_t0D8F5E32A7C82BC292EBA0FAA3EB2D9F1F72A0A6_marshaled_com
+{
+	InternedString_t8D62A48CB7D85AAE9CFCCCFB0A77AC2844905735_marshaled_com ___layoutName;
+	InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_com ___deviceMatcher;
+};
+struct PointElement_t5B29DB72B622AE3FF0CFB790DF18EC71970C66A0 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___position;
+	float ___radius;
+	float ___elementDepth;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___color;
+};
+struct VisualsProcessingType_t19983E0076886C15ED2761057B9992989A710ECC 
+{
+	int32_t ___value__;
+};
+struct Enumerator_t10E4D6A69EA58614DE4A327D9F24C3F6DE661673 
+{
+	ReadOnly_tCC55AFF27C715764DD94EADBD62398A54A416CD0 ___m_Array;
+	int32_t ___m_Index;
+	SplitInfo_tBD1436BC99CBBC9658FA9219EB22657F757C4A1A ___value;
+};
+struct Enumerator_t6138A7577EFE976D77B2B547FB797E4866987E50 
+{
+	ReadOnly_t37CCA313F8D670925051D441B669A6C13037061F ___m_Array;
+	int32_t ___m_Index;
+	StpConstantBufferData_t12C7727CEDC1B8B7ECA73862CD7BB3F5D32B2754 ___value;
+};
+struct Enumerator_t10CBBC4ABAE537F4FB58D10E9A89F22F8B36FE88 
+{
+	ReadOnly_t890D24C3B04F979FD5F2961BC38BD5F2B796D9B6 ___m_Array;
+	int32_t ___m_Index;
+	LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED ___value;
+};
+struct Enumerator_t8431A1D1CEE461C138C3AA6D54E2A4C939EE817B 
+{
+	List_1_t2540B9D90666DF67213CF6D95029A7AB686A8C52* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	MinMaxBounds_t35E6E7F057C2DA166CB55DB2865E06EC1E344537 ____current;
+};
+struct Enumerator_t3B9B063208074C5E566A7945D75943BF85B63EF9 
+{
+	ReadOnly_tDCEED2CFBEB31EA295986393AC6277E98D2FF755 ___m_Array;
+	int32_t ___m_Index;
+	ShadowMeshVertex_t79CEE224683C48457A66B224C228E3A6F7529B79 ___value;
+};
+struct Enumerator_tCFCBA2C75826DE533E23B975FA7F18A10F4AED2A 
+{
+	ReadOnly_tDEC364368BF802558B50C3FB14E148087C65F5FB ___m_Array;
+	int32_t ___m_Index;
+	Slot_tA2F29CF08EAE46C3E2B6D96DCD7C96BF887A6127 ___value;
+};
+struct Enumerator_t1FF4A2BADF580731ECEE89AF2475FE8096235884 
+{
+	ReadOnly_tD36E017BBA958D460DE4C3A0C5549EB388E069A7 ___m_Array;
+	int32_t ___m_Index;
+	JobAngleRange_t974C3D0183C9572CE9C7D88703CABC5FAE543F13 ___value;
+};
+struct Enumerator_tABA179E06AF4CDB9B33189EB709D8E683F31C128 
+{
+	ReadOnly_t170003F639EF504FF674396468D7B23D8A0F59EA ___m_Array;
+	int32_t ___m_Index;
+	JobContourPoint_t4C410C8E8FEECD48C1DE496790BA15C88F09E3E3 ___value;
+};
+struct Enumerator_t62F9224BAF0E67537DD933A81097F3A229C12D59 
+{
+	ReadOnly_tBA129549CC3BC8F7DE5E2AD6AA7191A968C24777 ___m_Array;
+	int32_t ___m_Index;
+	JobControlPoint_t4A1C76318BCFAEC1F3FBA7879A2FB6FD0AFB2A36 ___value;
+};
+struct Enumerator_t0223412810B31F38D00EC2C6121878A44BDB2A8E 
+{
+	ReadOnly_tDBFBCE2C74723D73A71DFEF05665C53ADAB4C5A9 ___m_Array;
+	int32_t ___m_Index;
+	JobCornerInfo_t4B00296B36DDE3A9780DD95B9FF3D93CD8F3FD99 ___value;
+};
+struct Enumerator_t6CDA668E85D9187D02CE59A2604191513F682832 
+{
+	ReadOnly_tA08F01CB2BAEF2A0F1A1714074D8FF3BF279A73D ___m_Array;
+	int32_t ___m_Index;
+	JobIntersectPoint_t0F9A7C2D6E77A6B8C54351175052D3E5691BDB0C ___value;
+};
+struct Enumerator_t9512F5535DCC57B605F2B7F3C92FF62A86F84F62 
+{
+	ReadOnly_t4674EF895BAFD43031B2D1744F533237449DABE0 ___m_Array;
+	int32_t ___m_Index;
+	JobSegmentInfo_tA77A98E2F21524FDF0D28D2E53452DF45FC40481 ___value;
+};
+struct Enumerator_tDBA9BAB1B65338CCE39C8BFC161CDEB86267592A 
+{
+	ReadOnly_tF361FBEA8E062AE574792BDA469C92E6521F3740 ___m_Array;
+	int32_t ___m_Index;
+	JobShapeVertex_t630D64AD32E441EC9BC0B7B54948F861B2ECE9CC ___value;
+};
+struct Enumerator_t2280FD6E49528E817BFDD4CCA6C5CB9ECE4BA124 
+{
+	ReadOnly_t7BAAF62E25D80BA0B67C62CA7739408865759255 ___m_Array;
+	int32_t ___m_Index;
+	JobSpriteInfo_t002F5BF7D329A7F7A8DA7E9CB9B923C73B1C5E29 ___value;
+};
+struct Enumerator_tD293B4615446BCEF781D9E4F98CE20AB25366220 
+{
+	List_1_t0BE12F16A937298114B20824E93D706BCA5214D5* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 ____current;
+};
+struct Enumerator_tEDC227D5689CB92A259B60700F2DF42A7BA07A1E 
+{
+	List_1_t4627353295F8415A37CF5B575A1EE871A8174EF0* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD ____current;
+};
+struct Enumerator_t515418E6EACED7E6A1AC32BAD69B1ACA3403266E 
+{
+	List_1_tDAC168B85619D7ADBBDA6B87ED8C7124EE28A782* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	RaycastHitData_t5EAB266730389AB27715962670C2512800451841 ____current;
+};
+struct Enumerator_t144E84E08D1E96108440A332D185F2057B3271CC 
+{
+	ReadOnly_t2D69DB7E1275BCC1E425E7B37F4FAD139BEBF44B ___m_Array;
+	int32_t ___m_Index;
+	OutputVertex_tA4BCEA851534A5A22BE19AD8D0F20102B11F88C4 ___value;
+};
+struct Enumerator_tF84B3E67D55EC58416A0001B6AC58AACF133C986 
+{
+	List_1_t5BCDFABB5581B18BC92A87B18202C6A7634A62C6* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	PTLight_tBEB70EAD4BA181C3FDAFE151BEB34830CFF92778 ____current;
+};
+struct Enumerator_t757A61BD5A750C34A6E5AE0B80650CB941F47870 
+{
+	List_1_tCC4B3F79847D81D1745030169EADE8099695D318* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	VolumeParameterChain_tF0AF946FA26C5D61B2713BA220DD70D041EAA35E ____current;
+};
+struct Enumerator_tA8F2A50A59869384E8EF98BC7E292C53A2BDEC5E 
+{
+	List_1_t4E502B2E42676E48E6F9A8F0251ADB1DF4BD490E* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	LayoutMatcher_t0D8F5E32A7C82BC292EBA0FAA3EB2D9F1F72A0A6 ____current;
+};
+struct Enumerator_t3614D1308FFA573AAC28D471F5DD985AE3BB5E38 
+{
+	ReadOnly_t9E1F0CB9DACF5ECAF4722999CF90E3044213033B ___m_Array;
+	int32_t ___m_Index;
+	PointElement_t5B29DB72B622AE3FF0CFB790DF18EC71970C66A0 ___value;
+};
+struct Enumerator_t140A481181ADCE7643FE780D4C722CE4AD423E6D 
+{
+	Dictionary_2_t6050BC246D4D7EC381E9FA18942C2D07866D1221* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_t9E583C1F8EF292D275484C9B2FA73A1F18715D64 ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct Enumerator_t8162094AC1440B081573E1E245F31EDB48A3209B 
+{
+	Dictionary_2_t2A8A5CCEF5D56C1B28F0BD6C7DD56F31ACABF578* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_t5983FF105A14D8704CA46C2C96E4BE6EFA82F2C5 ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct Enumerator_t6E341B3AB37B78944D83DC2452785C4B24EA576B 
+{
+	Dictionary_2_t5849F5B7879048D8019AD12A1471C48CEB9C4B3A* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	PTLight_tBEB70EAD4BA181C3FDAFE151BEB34830CFF92778 ____currentValue;
+};
+struct Enumerator_tFFF8DAF1E565BFB9C869DF212CE7E3975C045618 
+{
+	Dictionary_2_tF2B2DE5A6B6F86DE529BD2F60E6A242723A2B0C8* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	ValueTuple_2_t2213E297C2566AA4A7DCFBBE72C1DD9A274C79F7 ____currentKey;
+};
+struct Enumerator_t30D9325A9528F4101C6564C32A4F680A5C3602D1 
+{
+	Dictionary_2_tCA07E20055F03A190FFD7DD07F75CA5BFD95F4C3* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_t6D2C9091E7A218EE01AFB3085A3F5798BA5E2271 ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct KeyValuePair_2_t4A53BA87D4CB781413DDB7297458542DABE77EB0 
+{
+	Handle_1_tE2D3875A6BB5B9878CCD9582982E7BDA7D42F4CF ___key;
+	PTLight_tBEB70EAD4BA181C3FDAFE151BEB34830CFF92778 ___value;
+};
+struct KeyValuePair_2_t58390312DFF7F372799E6EB457BAB397BB05688E 
+{
+	ValueTuple_2_t2213E297C2566AA4A7DCFBBE72C1DD9A274C79F7 ___key;
+	FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* ___value;
+};
+struct NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t933EB4C2ED1CCB3C68D5E2EC18C770C2893C8443 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t251C0B6A4D277C92366F302523FD5C0031FA1B31 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t3B6D299C308C4B6D24A1EE8D506A093CCB0EABDE 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tCD560B25A8B4F8654C3DF3626A5F13D31353E25A 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t85359D403CDD7B2133E158A14F5D82BD71E07091 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t6FF0646F3439F6B23FA364501169F60B17BCBD01 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tB8D8B86A987B7E27BD621893A826604AA3A66C5C 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t6A9440FA4CD97A8AF79CFC6B5EACC6334B735C72 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t1B14A657C1CECB432BE147E154F55E2CA5137892 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tD02731CFBE491B5BFFD8328166FDE46F8D844B1A 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tE2E3F30FD2D061E2FA4FCA86BD8F1118E53219C9 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tDE55A9B6B2881EDDA38508CBC140670DE3C5F42A 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t4208ED8A2AD50A8F390E613A7D4B98392469DE9A 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t323330EC7C43ABA9BE4DA373808C876DAD3BBFA8 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t6F6DC3ADF226AD65ED9319CB852676AE3EEEDB13 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t0ACB9B0C86A6C4EB0F75988F15C3A24D9F919F92 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t530E1BCD5F170EB8869B833E26D24B3B80AEFB7A 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tAE73165FE666BFCBFB4CA0B72FFA351ED1872602 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tBA0BC79DB482632B1DB9D7FF91357CE99B4C73CF 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_t2EDCD6FB85206C53A92873BFCBE46ACD9462C683 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tE9E9E78E659CC7A96EFD37D8824AEE58DE412CA8 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct NativeArray_1_tA05A93824C515FF087043027C088AD9C5375BB1D 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct ReadOnlySpan_1_tE3F5053A4152922F57664C3ECE14E14DBE8F2187 
+{
+	ByReference_1_tDA237A7270D54E16B5BF368792990AF8471670E1 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tF7C1A1E08C3CBCF755A0BA2F367403FF5938B0BB 
+{
+	ByReference_1_tE1834A79773C63150150B17F2C9804C1C95C20E5 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tAFB0359BE26ED61A60EF78D5D3E6AB14F8468AA9 
+{
+	ByReference_1_t8BD8D2D8E8F365D597C0C71734C0F79B07C96ED7 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t8A6EE2C8A0DB1B95C2A836E13E6C583ED715E407 
+{
+	ByReference_1_tE43879E07228A9F47EB8AA97B49F43FACB6CCD6F ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tB6893F3E45F10A07F45B78AFCB0FC6EC9E3AAE5B 
+{
+	ByReference_1_tA2C149698957E984A78A9CE6BEDDD3209A237EC5 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tF19166560FF54AFB2D7BE36FBC29D25D1ACDD880 
+{
+	ByReference_1_t32D51F3A1A91B4AF5158CFCCBF41619784D785B1 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t74B6228DF521A3A075DD40506DCC43652BD32C83 
+{
+	ByReference_1_t650831C3A01EB8A4BC2F50F7009E47017A37D0C9 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t8FE222E620BF33EE51F1758F67EBF36FE7FD551A 
+{
+	ByReference_1_tD0352A5BB130E5F4D951173CD2AB0E0B9693DBED ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tEE02E5A85A2C50C190CB276541EBDBD9F1BB5282 
+{
+	ByReference_1_tA2C5AC8167599C1D8BF23126250A5BA14B33C918 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tB009EDF6F655930F19EBED98133FF54C94A7FF76 
+{
+	ByReference_1_t6484CD36C5222E6E840B3A5C6091CCC6C6B0F60B ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t7FE7458FAEA6A6FC1EB6A063995B8A44B37734BA 
+{
+	ByReference_1_tC8C8584A9D42A3C1A3649E08F4ED73F1FED7DDC6 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tA6867D606C182B46D8AD1BA2019351B386BF7188 
+{
+	ByReference_1_t920CECBE960634F5FB15F1093D54A3D9B4DB5640 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t8EEA8194D2B70E305BFF3965FC3ED3DDBCF21040 
+{
+	ByReference_1_t1CA687940FFEC1413E5F02982B27AAB557EF4099 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t5386CB68F740601279C1DA4B28F9AF21CC7A3396 
+{
+	ByReference_1_t7141348999835347618AA9AD9603C4A021D3DCDE ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t7C0C5271CD7E67C7943D2F3EE3150A6D44C2A0A1 
+{
+	ByReference_1_t364FDDC5C234124CDCBC1E4F10B4FEE114E59220 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tD6A262B556F1AADB4F032C75F8E50EB2D82BF83D 
+{
+	ByReference_1_t5138B1F03E927978092AEF650EBF63CB318078DD ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t1BA4E4DCEDE4884077AC36D88AACCF7A361D4AD2 
+{
+	ByReference_1_tC0786270723AE96D0A9375D8AC2CCB813B3FE9A3 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t162127D45FD7C773C67C344292D10A1AE8D77AF2 
+{
+	ByReference_1_t149C985A78FC9F16896CBC1323E241470D4519BF ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t369E68052EBB9DE4942AD9298D39B0AC3412DE57 
+{
+	ByReference_1_tEA526C5E6C207732E340A1F2AAFF7BD72D8CC806 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t2E4A80DDF72A76EF69CD22B2843E75E33E294647 
+{
+	ByReference_1_t20469D28B5ADF235D10A97D118EFC26D5BDB67F0 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t7C8438B00110311A3FFF078F848928218D9D79F1 
+{
+	ByReference_1_t3FCA8FF1FA32CFC8B394F6C061E343A0D3701912 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tD1C684B7FBBE6B196C3D9C25D26C14087DDACC42 
+{
+	ByReference_1_t94B9C7E612FAA889D668D045B2EC5F1DBF3AFFF9 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t2FC42E74698A85F864327A2F3603A016F223B360 
+{
+	ByReference_1_t4A0B0D8287F5D040285FB49C3AA25A8EE38D5B23 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t7D0A62688D12B6224D58E7D7EB6BBE34C2B5705B 
+{
+	ByReference_1_tA7727FC82C1D779EE2802A1968C3FFC569152294 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t2239736A651E959D4A4360EBC03DFBCFAE1C9DA6 
+{
+	ByReference_1_tB78BE0105D10907AA8C665AF95DBAEF4BEF517CF ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t4A1964D3768FECC83DDD199B546B177020E04377 
+{
+	ByReference_1_t5A8D94A74D3EF9FFDEF739B5061D38830B7FE058 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t69C2D231426A3CCD49A1147827E6A4A20797BD4A 
+{
+	ByReference_1_t55AA67E29A3ECACAB26A99C259BAE9986833066F ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tFE6B88D1F5F985608AD058B340743800AACA21CE 
+{
+	ByReference_1_t36B48293C971AABB7949CED7934A487AB408F9FB ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tA503B85A737C7971441E515A87B4E45C451DFD2B 
+{
+	ByReference_1_tFBE5581BA218BD534C93EE5CDBFF72F1850DAB2D ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tBCBB7D56F632F6E0544071FFF75E20BFDB5F67D3 
+{
+	ByReference_1_t35C7A568359B649F81337FEE709ED5AE4A4F5BB0 ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_tFCAB81603EED44CB0EDDA615229DA6C9D58F8C33 
+{
+	ByReference_1_t202968E70F3E147C9542F8B8D25464AEC5A17767 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t576D705C27D6C3A8880F2D0C9ABCDBADAFF4BC53 
+{
+	ByReference_1_tDA237A7270D54E16B5BF368792990AF8471670E1 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t1F52858B86459A2D3DDD942F803D19E884D42AAD 
+{
+	ByReference_1_tE1834A79773C63150150B17F2C9804C1C95C20E5 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t07C1894D60BBDC3166D3BB1C404D410F45CF8FE6 
+{
+	ByReference_1_t8BD8D2D8E8F365D597C0C71734C0F79B07C96ED7 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tF70510177F39362BA23377F908D7A1BF79A523B9 
+{
+	ByReference_1_tE43879E07228A9F47EB8AA97B49F43FACB6CCD6F ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t8C4E5171DE283EC29286C660AFCD79939F783D0E 
+{
+	ByReference_1_tA2C149698957E984A78A9CE6BEDDD3209A237EC5 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t045F1668C339FF6DF492187D9C29DE81993E223A 
+{
+	ByReference_1_t32D51F3A1A91B4AF5158CFCCBF41619784D785B1 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t0596A87069AD8431D2B66F5A14EAA5CE0D61CC1F 
+{
+	ByReference_1_t650831C3A01EB8A4BC2F50F7009E47017A37D0C9 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tCD0F3D501EEABE4C1899A47484362B7FCD41B724 
+{
+	ByReference_1_tD0352A5BB130E5F4D951173CD2AB0E0B9693DBED ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tCC3780EB2A3879FBDEE63279DA86DB7D4367D72A 
+{
+	ByReference_1_tA2C5AC8167599C1D8BF23126250A5BA14B33C918 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t3C803D988B1A77FD2F62D78EB35039750E3CAFFC 
+{
+	ByReference_1_t6484CD36C5222E6E840B3A5C6091CCC6C6B0F60B ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t4C9E38B29B1C8EC7A69D6B434ABD5CB67F492F68 
+{
+	ByReference_1_tC8C8584A9D42A3C1A3649E08F4ED73F1FED7DDC6 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t2E341F85E2ED7AC7627B4C3DA5B618AEC8F9584E 
+{
+	ByReference_1_t920CECBE960634F5FB15F1093D54A3D9B4DB5640 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tD6C4E5DF3D45757E761604681FC5FDEC5754636D 
+{
+	ByReference_1_t1CA687940FFEC1413E5F02982B27AAB557EF4099 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tF1AFBC87D78FE396E3EBF80285AE195012F9DD41 
+{
+	ByReference_1_t7141348999835347618AA9AD9603C4A021D3DCDE ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tE697C194C940F75F42B87D0AA1C239325BE04E29 
+{
+	ByReference_1_t364FDDC5C234124CDCBC1E4F10B4FEE114E59220 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tB5B119F65414D0ED82D706D4723312D9C62A2A1C 
+{
+	ByReference_1_t5138B1F03E927978092AEF650EBF63CB318078DD ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tAAA990E231FD347AC9ADE2CADE84FC6038823B65 
+{
+	ByReference_1_tC0786270723AE96D0A9375D8AC2CCB813B3FE9A3 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t076DF94D570C870A1FCFFFBD818E0525C338F543 
+{
+	ByReference_1_t149C985A78FC9F16896CBC1323E241470D4519BF ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t49413A8023C3C460E57F46B5FE8A5054FA4EB990 
+{
+	ByReference_1_tEA526C5E6C207732E340A1F2AAFF7BD72D8CC806 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t7376F0E55C98DAF45DB09C15E57162D828B64A26 
+{
+	ByReference_1_t20469D28B5ADF235D10A97D118EFC26D5BDB67F0 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tF43A7E39B0E02FA581099E65B07DE705C84BF82B 
+{
+	ByReference_1_t3FCA8FF1FA32CFC8B394F6C061E343A0D3701912 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t7788EA7D78B35C79410AE1276F02A3C32F524693 
+{
+	ByReference_1_t94B9C7E612FAA889D668D045B2EC5F1DBF3AFFF9 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t9AC0625A10517F134F8A74A5510C8E2303A60AC9 
+{
+	ByReference_1_t4A0B0D8287F5D040285FB49C3AA25A8EE38D5B23 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t88F8CD1EA75EBE712BE2BF4097FFF46F17BF67FE 
+{
+	ByReference_1_tA7727FC82C1D779EE2802A1968C3FFC569152294 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t79152BAC0EB801C28951EADEE8C12D339766593A 
+{
+	ByReference_1_tB78BE0105D10907AA8C665AF95DBAEF4BEF517CF ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t558158396DF3F0024B523894C571C6BDC2EBB44C 
+{
+	ByReference_1_t5A8D94A74D3EF9FFDEF739B5061D38830B7FE058 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t180448960B6B6F682EFC16994B9716109E7DD2C6 
+{
+	ByReference_1_t55AA67E29A3ECACAB26A99C259BAE9986833066F ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t34B932F5AC7CBB47C9A670FA2E06063AE44CEEEE 
+{
+	ByReference_1_t36B48293C971AABB7949CED7934A487AB408F9FB ____pointer;
+	int32_t ____length;
+};
+struct Span_1_t497BE6EFB8E493B6B683E05FE152E8C5354022CB 
+{
+	ByReference_1_tFBE5581BA218BD534C93EE5CDBFF72F1850DAB2D ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tD01BE6CE0AD935A9C7F96CFE915AB46E9ECED0AA 
+{
+	ByReference_1_t35C7A568359B649F81337FEE709ED5AE4A4F5BB0 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tFEDD78D7F7F7CAC447265BA315649C319C0AE5A9 
+{
+	ByReference_1_t202968E70F3E147C9542F8B8D25464AEC5A17767 ____pointer;
+	int32_t ____length;
+};
+struct PhysicsTransform_tB8A6E5FBEECAEFA43E89B0975A2D617AC701E434 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___position;
+	PhysicsRotate_t3AF8BA583108282C8B59872CB621EC366BC042B0 ___rotation;
+};
+struct UnsafePerCameraInstanceData_tFE00A87578E2CC5C4A5CD6F93975B35DE6D78750 
+{
+	UnsafeList_1_t5C65DCA6782B7C9860C859C2F0C07A2C497E822D ___meshLods;
+	UnsafeList_1_t5C65DCA6782B7C9860C859C2F0C07A2C497E822D ___crossFades;
+};
+struct AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D 
+{
+	String_t* ___m_Path;
+	String_t* ___m_TypeFullName;
+	LazyLoadReference_1_tD57A582D5A28F3AE34FBB810985EF171325FAF1B ___m_AssetReference;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___m_EntityId;
+	Type_t* ___m_CachedType;
+};
+struct AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D_marshaled_pinvoke
+{
+	char* ___m_Path;
+	char* ___m_TypeFullName;
+	LazyLoadReference_1_tD57A582D5A28F3AE34FBB810985EF171325FAF1B ___m_AssetReference;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___m_EntityId;
+	Type_t* ___m_CachedType;
+};
+struct AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D_marshaled_com
+{
+	Il2CppChar* ___m_Path;
+	Il2CppChar* ___m_TypeFullName;
+	LazyLoadReference_1_tD57A582D5A28F3AE34FBB810985EF171325FAF1B ___m_AssetReference;
+	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___m_EntityId;
+	Type_t* ___m_CachedType;
+};
+struct PassData_t70EFDE0ED44B50E9E144E803C17DE2373723887F 
+{
+	String_t* ___name;
+	int32_t ___type;
+	ResourceIdLists_tD6328DF3B43DB6A2B045464122D4DD5AC1629D99* ___resourceReadLists;
+	ResourceIdLists_tD6328DF3B43DB6A2B045464122D4DD5AC1629D99* ___resourceWriteLists;
+	bool ___culled;
+	bool ___async;
+	int32_t ___nativeSubPassIndex;
+	int32_t ___syncToPassIndex;
+	int32_t ___syncFromPassIndex;
+	bool ___generateDebugData;
+	NRPInfo_tFAE346DBF564B1FDA1EBC1D2F0C3EDC93143D04F* ___nrpInfo;
+	PassScriptInfo_t8619301849E12A8422C5C4BF3D19F5D7410A0A31 ___scriptInfo;
+};
+struct PassData_t70EFDE0ED44B50E9E144E803C17DE2373723887F_marshaled_pinvoke
+{
+	char* ___name;
+	int32_t ___type;
+	ResourceIdLists_tD6328DF3B43DB6A2B045464122D4DD5AC1629D99* ___resourceReadLists;
+	ResourceIdLists_tD6328DF3B43DB6A2B045464122D4DD5AC1629D99* ___resourceWriteLists;
+	int32_t ___culled;
+	int32_t ___async;
+	int32_t ___nativeSubPassIndex;
+	int32_t ___syncToPassIndex;
+	int32_t ___syncFromPassIndex;
+	int32_t ___generateDebugData;
+	NRPInfo_tFAE346DBF564B1FDA1EBC1D2F0C3EDC93143D04F* ___nrpInfo;
+	PassScriptInfo_t8619301849E12A8422C5C4BF3D19F5D7410A0A31_marshaled_pinvoke ___scriptInfo;
+};
+struct PassData_t70EFDE0ED44B50E9E144E803C17DE2373723887F_marshaled_com
+{
+	Il2CppChar* ___name;
+	int32_t ___type;
+	ResourceIdLists_tD6328DF3B43DB6A2B045464122D4DD5AC1629D99* ___resourceReadLists;
+	ResourceIdLists_tD6328DF3B43DB6A2B045464122D4DD5AC1629D99* ___resourceWriteLists;
+	int32_t ___culled;
+	int32_t ___async;
+	int32_t ___nativeSubPassIndex;
+	int32_t ___syncToPassIndex;
+	int32_t ___syncFromPassIndex;
+	int32_t ___generateDebugData;
+	NRPInfo_tFAE346DBF564B1FDA1EBC1D2F0C3EDC93143D04F* ___nrpInfo;
+	PassScriptInfo_t8619301849E12A8422C5C4BF3D19F5D7410A0A31_marshaled_com ___scriptInfo;
+};
+struct EntryProcessingInfo_tE4803801829E2739380552B9DE313B056A9C9289 
+{
+	RenderData_t1ABE116B2B5E0409AC699E195922516606531DC2* ___renderData;
+	int32_t ___type;
+	Entry_t475ED76E31923970E7F7A6522E570E7577C487B9* ___rootEntry;
+};
+struct EntryProcessingInfo_tE4803801829E2739380552B9DE313B056A9C9289_marshaled_pinvoke
+{
+	RenderData_t1ABE116B2B5E0409AC699E195922516606531DC2* ___renderData;
+	int32_t ___type;
+	Entry_t475ED76E31923970E7F7A6522E570E7577C487B9* ___rootEntry;
+};
+struct EntryProcessingInfo_tE4803801829E2739380552B9DE313B056A9C9289_marshaled_com
+{
+	RenderData_t1ABE116B2B5E0409AC699E195922516606531DC2* ___renderData;
+	int32_t ___type;
+	Entry_t475ED76E31923970E7F7A6522E570E7577C487B9* ___rootEntry;
+};
+struct Enumerator_tB622502AA1B9DEF2000DF1C5C6B786B1BD57210B 
+{
+	NativeArray_1_t933EB4C2ED1CCB3C68D5E2EC18C770C2893C8443 ___m_Array;
+	int32_t ___m_Index;
+	SplitInfo_tBD1436BC99CBBC9658FA9219EB22657F757C4A1A ___value;
+};
+struct Enumerator_tDE65A3700285605F4BACF28258581005B3C61477 
+{
+	ReadOnlySpan_1_tE3F5053A4152922F57664C3ECE14E14DBE8F2187 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t033ED13FB73B06C498DF8FC6D791F39D6A51E2B7 
+{
+	Span_1_t576D705C27D6C3A8880F2D0C9ABCDBADAFF4BC53 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t0D8307FC778E2AD7816234CCFCFD044628670E66 
+{
+	NativeArray_1_t251C0B6A4D277C92366F302523FD5C0031FA1B31 ___m_Array;
+	int32_t ___m_Index;
+	UnsafePerCameraInstanceData_tFE00A87578E2CC5C4A5CD6F93975B35DE6D78750 ___value;
+};
+struct Enumerator_t1120C65B5B1143F38C93C820658A6AF4BCEC40FF 
+{
+	ReadOnlySpan_1_tF7C1A1E08C3CBCF755A0BA2F367403FF5938B0BB ____span;
+	int32_t ____index;
+};
+struct Enumerator_tD886825E89DB81A91CAE9716DCA12FC604819FB4 
+{
+	Span_1_t1F52858B86459A2D3DDD942F803D19E884D42AAD ____span;
+	int32_t ____index;
+};
+struct Enumerator_t11C6D7B5F27D860D28FFEFA1BC40B61DE30BC12C 
+{
+	ReadOnly_t71987D6B97F0CF93BABC2F5B3CDA89D076C2A372 ___m_Array;
+	int32_t ___m_Index;
+	UnsafePerCameraInstanceData_tFE00A87578E2CC5C4A5CD6F93975B35DE6D78750 ___value;
+};
+struct Enumerator_tE149D72F20A3FEB2D075973F8D99C6607C0C8BBB 
+{
+	NativeArray_1_t3B6D299C308C4B6D24A1EE8D506A093CCB0EABDE ___m_Array;
+	int32_t ___m_Index;
+	StpConstantBufferData_t12C7727CEDC1B8B7ECA73862CD7BB3F5D32B2754 ___value;
+};
+struct Enumerator_t101B6BCC66E879AE8379A735E1853740DCAC4844 
+{
+	ReadOnlySpan_1_tAFB0359BE26ED61A60EF78D5D3E6AB14F8468AA9 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t054B4CA22CE7A6784BA830FD8D64AAA94CA4A591 
+{
+	Span_1_t07C1894D60BBDC3166D3BB1C404D410F45CF8FE6 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t46342BF1DCF08FD127D86B7A3F43B24E51F97AA2 
+{
+	NativeArray_1_tCD560B25A8B4F8654C3DF3626A5F13D31353E25A ___m_Array;
+	int32_t ___m_Index;
+	LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED ___value;
+};
+struct Enumerator_t144D16BF76515056C25A1E26B729CF38F21D25C3 
+{
+	ReadOnlySpan_1_t8A6EE2C8A0DB1B95C2A836E13E6C583ED715E407 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t50778FE1E205ED0E9DD17C8C78BC1B0E8BDFF3AE 
+{
+	Span_1_tF70510177F39362BA23377F908D7A1BF79A523B9 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tBB87AF4666E02FC1D638B3EDE45789DAB88FC1B2 
+{
+	NativeArray_1_t85359D403CDD7B2133E158A14F5D82BD71E07091 ___m_Array;
+	int32_t ___m_Index;
+	RemappingInfo_t27437378F969AFC36D804A6C4F0F974E20EF15D4 ___value;
+};
+struct Enumerator_tC4CFF2DA919A9D2AABF5982E1B2EC9C0FD0599B2 
+{
+	ReadOnlySpan_1_tB6893F3E45F10A07F45B78AFCB0FC6EC9E3AAE5B ____span;
+	int32_t ____index;
+};
+struct Enumerator_t8981F8778AD387184C9A1BA59262F7F439E83163 
+{
+	Span_1_t8C4E5171DE283EC29286C660AFCD79939F783D0E ____span;
+	int32_t ____index;
+};
+struct Enumerator_t7B04F2FA5B9F11110FBE27F4E81ADEC116B0B266 
+{
+	NativeArray_1_t6FF0646F3439F6B23FA364501169F60B17BCBD01 ___m_Array;
+	int32_t ___m_Index;
+	ShadowMeshVertex_t79CEE224683C48457A66B224C228E3A6F7529B79 ___value;
+};
+struct Enumerator_tE4987926C34A0F253F1BC8A8D1DB765270889C94 
+{
+	ReadOnlySpan_1_tF19166560FF54AFB2D7BE36FBC29D25D1ACDD880 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tD3EBE5B7061DFD874B3CDD47CE1C4B0D38FD0C15 
+{
+	Span_1_t045F1668C339FF6DF492187D9C29DE81993E223A ____span;
+	int32_t ____index;
+};
+struct Enumerator_tE05884625ED05F86C7B2D25D059BED766405303B 
+{
+	NativeArray_1_tB8D8B86A987B7E27BD621893A826604AA3A66C5C ___m_Array;
+	int32_t ___m_Index;
+	Slot_tA2F29CF08EAE46C3E2B6D96DCD7C96BF887A6127 ___value;
+};
+struct Enumerator_tA9CD8C613440AC128DD65A93B6438427BCCA74E3 
+{
+	ReadOnlySpan_1_t74B6228DF521A3A075DD40506DCC43652BD32C83 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tAAF77DAA8F52EAD66DEBA7BB7DA3AC9E59CD2494 
+{
+	Span_1_t0596A87069AD8431D2B66F5A14EAA5CE0D61CC1F ____span;
+	int32_t ____index;
+};
+struct Enumerator_tF21B8ED1E0DF8A76D5D995C54FB11469A8E46C3D 
+{
+	NativeArray_1_t6A9440FA4CD97A8AF79CFC6B5EACC6334B735C72 ___m_Array;
+	int32_t ___m_Index;
+	JobAngleRange_t974C3D0183C9572CE9C7D88703CABC5FAE543F13 ___value;
+};
+struct Enumerator_tBDDAB3F74EDD622A697A58DD45420A62EA46CEDD 
+{
+	ReadOnlySpan_1_t8FE222E620BF33EE51F1758F67EBF36FE7FD551A ____span;
+	int32_t ____index;
+};
+struct Enumerator_t252E8F698FAD0B4B57D15F58940FF3286BF99AC6 
+{
+	Span_1_tCD0F3D501EEABE4C1899A47484362B7FCD41B724 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t58B2078EAF287635244DB4AB38A209A0CCF43958 
+{
+	NativeArray_1_t1B14A657C1CECB432BE147E154F55E2CA5137892 ___m_Array;
+	int32_t ___m_Index;
+	JobContourPoint_t4C410C8E8FEECD48C1DE496790BA15C88F09E3E3 ___value;
+};
+struct Enumerator_tE867AFA540F06061A2584C42C0B94DE0D8ECC336 
+{
+	ReadOnlySpan_1_tEE02E5A85A2C50C190CB276541EBDBD9F1BB5282 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t671D079C60599F758F201740C536F0D2AB45F071 
+{
+	Span_1_tCC3780EB2A3879FBDEE63279DA86DB7D4367D72A ____span;
+	int32_t ____index;
+};
+struct Enumerator_t188DE089F689AD3DD5DD84AAA4CD2360B3E1CCC2 
+{
+	NativeArray_1_tD02731CFBE491B5BFFD8328166FDE46F8D844B1A ___m_Array;
+	int32_t ___m_Index;
+	JobControlPoint_t4A1C76318BCFAEC1F3FBA7879A2FB6FD0AFB2A36 ___value;
+};
+struct Enumerator_t1132A296F630592BDBF88944AE6D0A6FA7DB2D05 
+{
+	ReadOnlySpan_1_tB009EDF6F655930F19EBED98133FF54C94A7FF76 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t2B270A71F6BE8E61AF818FF21B0C6B8079668F53 
+{
+	Span_1_t3C803D988B1A77FD2F62D78EB35039750E3CAFFC ____span;
+	int32_t ____index;
+};
+struct Enumerator_tD47D0338B088FC2BA1420EA90CB2ADAD1642F452 
+{
+	NativeArray_1_tE2E3F30FD2D061E2FA4FCA86BD8F1118E53219C9 ___m_Array;
+	int32_t ___m_Index;
+	JobCornerInfo_t4B00296B36DDE3A9780DD95B9FF3D93CD8F3FD99 ___value;
+};
+struct Enumerator_tB23A6B264DEA25B40E09C640A6D0AAEFC595878F 
+{
+	ReadOnlySpan_1_t7FE7458FAEA6A6FC1EB6A063995B8A44B37734BA ____span;
+	int32_t ____index;
+};
+struct Enumerator_t8A01583E871E892E61260C3EDF8BFD9D4C1EDDAB 
+{
+	Span_1_t4C9E38B29B1C8EC7A69D6B434ABD5CB67F492F68 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t9FDA2313F80C71AB1E805A7280F4348242C4010E 
+{
+	NativeArray_1_tDE55A9B6B2881EDDA38508CBC140670DE3C5F42A ___m_Array;
+	int32_t ___m_Index;
+	JobIntersectPoint_t0F9A7C2D6E77A6B8C54351175052D3E5691BDB0C ___value;
+};
+struct Enumerator_t48A1E3855F2233B2A43F61C05134AB7E58336C4A 
+{
+	ReadOnlySpan_1_tA6867D606C182B46D8AD1BA2019351B386BF7188 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t963FA1D963B19737A2375B4DBA376CD82E1937BD 
+{
+	Span_1_t2E341F85E2ED7AC7627B4C3DA5B618AEC8F9584E ____span;
+	int32_t ____index;
+};
+struct Enumerator_tDF10B6FC21F18E01CCE8B14F8288003A1D1D924F 
+{
+	NativeArray_1_t4208ED8A2AD50A8F390E613A7D4B98392469DE9A ___m_Array;
+	int32_t ___m_Index;
+	JobSegmentInfo_tA77A98E2F21524FDF0D28D2E53452DF45FC40481 ___value;
+};
+struct Enumerator_tF18A333F82683E21BF7F83224A278400FB92349F 
+{
+	ReadOnlySpan_1_t8EEA8194D2B70E305BFF3965FC3ED3DDBCF21040 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t9A6A08D6CF91F5A96F2C104564D0D1C62C4A1437 
+{
+	Span_1_tD6C4E5DF3D45757E761604681FC5FDEC5754636D ____span;
+	int32_t ____index;
+};
+struct Enumerator_t94B5FF33AFC38D43DA2791F6B5BE95F9AFADD7F4 
+{
+	NativeArray_1_t323330EC7C43ABA9BE4DA373808C876DAD3BBFA8 ___m_Array;
+	int32_t ___m_Index;
+	JobShapeVertex_t630D64AD32E441EC9BC0B7B54948F861B2ECE9CC ___value;
+};
+struct Enumerator_t53A512F2E67ECD7FA1B7918640BF13EAC41D799F 
+{
+	ReadOnlySpan_1_t5386CB68F740601279C1DA4B28F9AF21CC7A3396 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t8519EBFED936C01C7D09946DF0C7AB6404A0AD84 
+{
+	Span_1_tF1AFBC87D78FE396E3EBF80285AE195012F9DD41 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tDC84B0F41897D1FA321994646A210B8CDF548888 
+{
+	NativeArray_1_t6F6DC3ADF226AD65ED9319CB852676AE3EEEDB13 ___m_Array;
+	int32_t ___m_Index;
+	JobSpriteInfo_t002F5BF7D329A7F7A8DA7E9CB9B923C73B1C5E29 ___value;
+};
+struct Enumerator_t57B9FAAB81794AEEC793EA9D8D0D85A9AC8FB416 
+{
+	ReadOnlySpan_1_t7C0C5271CD7E67C7943D2F3EE3150A6D44C2A0A1 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tF8D065AA54C70FBA78BCAE80BF0EB6A335D9525E 
+{
+	Span_1_tE697C194C940F75F42B87D0AA1C239325BE04E29 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tDF76DAA4F995D4D483953D87E96D78E1D94C824D 
+{
+	NativeArray_1_t0ACB9B0C86A6C4EB0F75988F15C3A24D9F919F92 ___m_Array;
+	int32_t ___m_Index;
+	TransformData_tEC27E9D73132522EA47BF569B8FE23C627A5FC20 ___value;
+};
+struct Enumerator_tD086DBE56B6A2D1C1495BA795E23B3022B179184 
+{
+	ReadOnlySpan_1_tD6A262B556F1AADB4F032C75F8E50EB2D82BF83D ____span;
+	int32_t ____index;
+};
+struct Enumerator_t29C451B43A025D10E94A675719E303400FCBCEC2 
+{
+	Span_1_tB5B119F65414D0ED82D706D4723312D9C62A2A1C ____span;
+	int32_t ____index;
+};
+struct Enumerator_t14406F67B1351C971BFD01AF26B3A9C674A2E53A 
+{
+	NativeArray_1_t530E1BCD5F170EB8869B833E26D24B3B80AEFB7A ___m_Array;
+	int32_t ___m_Index;
+	OutputVertex_tA4BCEA851534A5A22BE19AD8D0F20102B11F88C4 ___value;
+};
+struct Enumerator_t3912F8EDCBFAA10ED79E247EF81372DCFC82771B 
+{
+	ReadOnlySpan_1_t1BA4E4DCEDE4884077AC36D88AACCF7A361D4AD2 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t25EE2304F39B52009A471C637FDF5196FAAFDEE3 
+{
+	Span_1_tAAA990E231FD347AC9ADE2CADE84FC6038823B65 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t55D7ADF338612CFA65416243965651F49222BD6E 
+{
+	ReadOnlySpan_1_t162127D45FD7C773C67C344292D10A1AE8D77AF2 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t30A303751FD21585736AA3EB7DB187DB5CEEB08C 
+{
+	Span_1_t076DF94D570C870A1FCFFFBD818E0525C338F543 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t67733E7D003F6D68C34D51D553319BD83643A4FD 
+{
+	List_1_t82C928BB4A4FE60D606FEBAFB9949F993554C39F* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D ____current;
+};
+struct Enumerator_t2577D9B395C8CEF02582DC573A824579A9B65B95 
+{
+	ReadOnlySpan_1_t369E68052EBB9DE4942AD9298D39B0AC3412DE57 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tC5D49F56009A43EF384110C8A8B511661C4BB0B0 
+{
+	Span_1_t49413A8023C3C460E57F46B5FE8A5054FA4EB990 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t1347B8F7550953424454924534BD5DFF99136211 
+{
+	ReadOnlySpan_1_t2E4A80DDF72A76EF69CD22B2843E75E33E294647 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t8285CC8C5ADFAB77CB221082C1418B1883DCEA28 
+{
+	Span_1_t7376F0E55C98DAF45DB09C15E57162D828B64A26 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tB40B321862741C1C05847BA6FDC0C261AB89DD1A 
+{
+	ReadOnlySpan_1_t7C8438B00110311A3FFF078F848928218D9D79F1 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tC4FB203B86C9BAC5E3547D81AA0F4110AD5E852B 
+{
+	Span_1_tF43A7E39B0E02FA581099E65B07DE705C84BF82B ____span;
+	int32_t ____index;
+};
+struct Enumerator_tF95443C2C80698B61392148246B207F6FDC50D0D 
+{
+	ReadOnlySpan_1_tD1C684B7FBBE6B196C3D9C25D26C14087DDACC42 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tBD6D02F97DB167EABE1352D6D6F55D48D92C4F2E 
+{
+	Span_1_t7788EA7D78B35C79410AE1276F02A3C32F524693 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t87FDD4CE1D48E4FBEEB3CBD186EF84C1E5424F23 
+{
+	ReadOnlySpan_1_t2FC42E74698A85F864327A2F3603A016F223B360 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tA17D5724B86CAD7CC94EBA8E6DCAB3CA236628F0 
+{
+	Span_1_t9AC0625A10517F134F8A74A5510C8E2303A60AC9 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tBFAE9C4744C64E39C8E8F6E2DB11DB3CB908057A 
+{
+	ReadOnlySpan_1_t7D0A62688D12B6224D58E7D7EB6BBE34C2B5705B ____span;
+	int32_t ____index;
+};
+struct Enumerator_t9558ADD3753E0C0C1EBF87E40A0E287E36FD7420 
+{
+	Span_1_t88F8CD1EA75EBE712BE2BF4097FFF46F17BF67FE ____span;
+	int32_t ____index;
+};
+struct Enumerator_t7458D61B30B9BD55ED0C11D4C78F87D78320B76D 
+{
+	ReadOnlySpan_1_t2239736A651E959D4A4360EBC03DFBCFAE1C9DA6 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t04741B3F96EC4B3D2C644119421967552378DDA8 
+{
+	Span_1_t79152BAC0EB801C28951EADEE8C12D339766593A ____span;
+	int32_t ____index;
+};
+struct Enumerator_t381C2D6F198275105BA2981F79D13F9FC1C167DD 
+{
+	ReadOnlySpan_1_t4A1964D3768FECC83DDD199B546B177020E04377 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tA83D463398968D63544B13D9A3EE4135F5EF7163 
+{
+	Span_1_t558158396DF3F0024B523894C571C6BDC2EBB44C ____span;
+	int32_t ____index;
+};
+struct Enumerator_t6D98942F5CC943A8E6BEC35843AB1B25E8955C80 
+{
+	ReadOnlySpan_1_t69C2D231426A3CCD49A1147827E6A4A20797BD4A ____span;
+	int32_t ____index;
+};
+struct Enumerator_t710D564E881D280E247CD333A7488A409946307F 
+{
+	Span_1_t180448960B6B6F682EFC16994B9716109E7DD2C6 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t28560785746C2A84E369CC304DDAA718FC83C17C 
+{
+	ReadOnlySpan_1_tFE6B88D1F5F985608AD058B340743800AACA21CE ____span;
+	int32_t ____index;
+};
+struct Enumerator_t38F19D34A6C1C16079AE976822FAA9B56D4C4B9E 
+{
+	Span_1_t34B932F5AC7CBB47C9A670FA2E06063AE44CEEEE ____span;
+	int32_t ____index;
+};
+struct Enumerator_t7E9C9CD81C17D65CFE314B20F22A99C878B68BAD 
+{
+	ReadOnlySpan_1_tA503B85A737C7971441E515A87B4E45C451DFD2B ____span;
+	int32_t ____index;
+};
+struct Enumerator_tC338F9B04BC22325AB803AB8DDB28CE2FE30F654 
+{
+	Span_1_t497BE6EFB8E493B6B683E05FE152E8C5354022CB ____span;
+	int32_t ____index;
+};
+struct Enumerator_tAF121CE1D131FC959DAB8042D3DCEE55B933163E 
+{
+	NativeArray_1_tE9E9E78E659CC7A96EFD37D8824AEE58DE412CA8 ___m_Array;
+	int32_t ___m_Index;
+	PointElement_t5B29DB72B622AE3FF0CFB790DF18EC71970C66A0 ___value;
+};
+struct Enumerator_t7565E8EF1717B51A6CF639E6E9F8635236ED279F 
+{
+	ReadOnlySpan_1_tBCBB7D56F632F6E0544071FFF75E20BFDB5F67D3 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tAF9A04D7AE800FF29A7BD83C35F2951A49B8D146 
+{
+	Span_1_tD01BE6CE0AD935A9C7F96CFE915AB46E9ECED0AA ____span;
+	int32_t ____index;
+};
+struct Enumerator_t23DB876FD5801E03C5BB2753F18213842E07A039 
+{
+	ReadOnlySpan_1_tFCAB81603EED44CB0EDDA615229DA6C9D58F8C33 ____span;
+	int32_t ____index;
+};
+struct Enumerator_t13D0FDD646A703AA6D2F059AF435B4EF6FBC7CFF 
+{
+	Span_1_tFEDD78D7F7F7CAC447265BA315649C319C0AE5A9 ____span;
+	int32_t ____index;
+};
+struct Enumerator_tCCF84AC2D4DCE5471A8468FCC6E2EC3422B7079F 
+{
+	List_1_t7F4AA6F9C342BE74D42CA46E2EE7924B540577C8* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	PassData_t70EFDE0ED44B50E9E144E803C17DE2373723887F ____current;
+};
+struct Enumerator_t6336C96476C660EA0AF5747A400C194780FA46D6 
+{
+	List_1_tE250E7115251CE18B77DAB637654B67982239650* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	EntryProcessingInfo_tE4803801829E2739380552B9DE313B056A9C9289 ____current;
+};
+struct Enumerator_t14551B0CCF5BF2364DB3720A296456BB22C84ECD 
+{
+	Dictionary_2_t5849F5B7879048D8019AD12A1471C48CEB9C4B3A* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_t4A53BA87D4CB781413DDB7297458542DABE77EB0 ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct Enumerator_t7B661F301D5B80884EF4834B0142733CE4FB6F79 
+{
+	Dictionary_2_tF2B2DE5A6B6F86DE529BD2F60E6A242723A2B0C8* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_t58390312DFF7F372799E6EB457BAB397BB05688E ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct Page_tF4CAEB005DC95E53F6992D59C12E548C3C2DE981 
+{
+	NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF ___array;
+	int32_t ___used;
+};
+struct CapsuleGeometryElement_t834B66F28B944AA313AB50C9C1343105C15B591E 
+{
+	PhysicsTransform_tB8A6E5FBEECAEFA43E89B0975A2D617AC701E434 ___transform;
+	float ___radius;
+	float ___length;
+	float ___elementDepth;
+	int32_t ___drawFillOptions;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___color;
+};
+struct CircleGeometryElement_t9BD9AA0533C99AD620F9AED6458DFAE45B09B2B1 
+{
+	PhysicsTransform_tB8A6E5FBEECAEFA43E89B0975A2D617AC701E434 ___transform;
+	float ___radius;
+	float ___elementDepth;
+	int32_t ___drawFillOptions;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___color;
+};
+struct LineElement_t012671A3568902C51830B75D1F5DB18B390F8454 
+{
+	PhysicsTransform_tB8A6E5FBEECAEFA43E89B0975A2D617AC701E434 ___transform;
+	float ___length;
+	float ___elementDepth;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___color;
+};
+struct PolygonGeometryElement_t4D6D06844AC5A1A51A7DD2F3BBA661FF1C906A57 
+{
+	PhysicsTransform_tB8A6E5FBEECAEFA43E89B0975A2D617AC701E434 ___transform;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p0;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p1;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p2;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p3;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p4;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p5;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p6;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p7;
+	int32_t ___count;
+	float ___radius;
+	float ___elementDepth;
+	int32_t ___drawFillOptions;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___color;
+};
+struct Enumerator_tDC29489448DC508117E08115DD80F0A7E2BFEB40 
+{
+	List_1_t58938DE48BE615DDDBA091679D189CBD2CB643E4* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	Page_tF4CAEB005DC95E53F6992D59C12E548C3C2DE981 ____current;
+};
+struct Enumerator_tFD7F709951A598F9E919E14AE23047814F75A49D 
+{
+	NativeArray_1_tAE73165FE666BFCBFB4CA0B72FFA351ED1872602 ___m_Array;
+	int32_t ___m_Index;
+	CapsuleGeometryElement_t834B66F28B944AA313AB50C9C1343105C15B591E ___value;
+};
+struct Enumerator_t64845150F03B71F348150AC390749369FE57BE3E 
+{
+	ReadOnly_t0EE7BF3CF070DD4A4F70A76CF85725C458A36A7B ___m_Array;
+	int32_t ___m_Index;
+	CapsuleGeometryElement_t834B66F28B944AA313AB50C9C1343105C15B591E ___value;
+};
+struct Enumerator_tB9DD9569CC492B1426EEB0704E2B7BA9BC016939 
+{
+	NativeArray_1_tBA0BC79DB482632B1DB9D7FF91357CE99B4C73CF ___m_Array;
+	int32_t ___m_Index;
+	CircleGeometryElement_t9BD9AA0533C99AD620F9AED6458DFAE45B09B2B1 ___value;
+};
+struct Enumerator_tFB3BAEE9C5804F5CB68E012DFB673A025110C2FD 
+{
+	ReadOnly_tB5A5F4635FF1910F51F4EFF0C940EA49FD8B3ACF ___m_Array;
+	int32_t ___m_Index;
+	CircleGeometryElement_t9BD9AA0533C99AD620F9AED6458DFAE45B09B2B1 ___value;
+};
+struct Enumerator_t6C37948B0C18DC7ED847FBE11592B3F178A8AE15 
+{
+	NativeArray_1_t2EDCD6FB85206C53A92873BFCBE46ACD9462C683 ___m_Array;
+	int32_t ___m_Index;
+	LineElement_t012671A3568902C51830B75D1F5DB18B390F8454 ___value;
+};
+struct Enumerator_t58DC598AACA99C86AEF82587A96147DFEE7BD172 
+{
+	ReadOnly_t76DE43AEF2590D9E9F8182A4944B8A7E6A190080 ___m_Array;
+	int32_t ___m_Index;
+	LineElement_t012671A3568902C51830B75D1F5DB18B390F8454 ___value;
+};
+struct Enumerator_tA0B3B10FA20F14F8C92A779F363F88BA918CBA7B 
+{
+	NativeArray_1_tA05A93824C515FF087043027C088AD9C5375BB1D ___m_Array;
+	int32_t ___m_Index;
+	PolygonGeometryElement_t4D6D06844AC5A1A51A7DD2F3BBA661FF1C906A57 ___value;
+};
+struct Enumerator_t44DFC44FD1721AA5FBE95CE8830142907FEE2188 
+{
+	ReadOnly_t6F9D9B0945F93B912B19572598BE116418FE8CE7 ___m_Array;
+	int32_t ___m_Index;
+	PolygonGeometryElement_t4D6D06844AC5A1A51A7DD2F3BBA661FF1C906A57 ___value;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+
+
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 53409
+// Method Definition Index: 53410
+// Method Definition Index: 53411
+// Method Definition Index: 53412
+// Method Definition Index: 53413
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11270
+// Method Definition Index: 11271
+// Method Definition Index: 11272
+// Method Definition Index: 11273
+// Method Definition Index: 11274
+// Method Definition Index: 11275
+// Method Definition Index: 11276
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 53409
+// Method Definition Index: 53410
+// Method Definition Index: 53411
+// Method Definition Index: 53412
+// Method Definition Index: 53413
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11270
+// Method Definition Index: 11271
+// Method Definition Index: 11272
+// Method Definition Index: 11273
+// Method Definition Index: 11274
+// Method Definition Index: 11275
+// Method Definition Index: 11276
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 46479
+// Method Definition Index: 46480
+// Method Definition Index: 46481
+// Method Definition Index: 46482
+// Method Definition Index: 46483
+// Method Definition Index: 46484
+// Method Definition Index: 46485
+// Method Definition Index: 46486
+// Method Definition Index: 46487
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 972
+// Method Definition Index: 973
+// Method Definition Index: 974
+// Method Definition Index: 975
+// Method Definition Index: 976
+// Method Definition Index: 977
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35106
+// Method Definition Index: 35107
+// Method Definition Index: 35108
+// Method Definition Index: 35109
+// Method Definition Index: 35110
+// Method Definition Index: 35111
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2366
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 2465
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 35121
+// Method Definition Index: 35122
+// Method Definition Index: 35123
+// Method Definition Index: 35124
+// Method Definition Index: 35125
+// Method Definition Index: 35126
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11181
+// Method Definition Index: 11182
+// Method Definition Index: 11183
+// Method Definition Index: 11184
+// Method Definition Index: 11185
+// Method Definition Index: 11186
+// Method Definition Index: 11187
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11025
+// Method Definition Index: 11026
+// Method Definition Index: 11027
+// Method Definition Index: 11028
+// Method Definition Index: 11029
+// Method Definition Index: 11030
+// Method Definition Index: 11031
+// Method Definition Index: 11032
+// Method Definition Index: 11033
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11048
+// Method Definition Index: 11049
+// Method Definition Index: 11050
+// Method Definition Index: 11051
+// Method Definition Index: 11052
+// Method Definition Index: 11053
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11068
+// Method Definition Index: 11069
+// Method Definition Index: 11070
+// Method Definition Index: 11071
+// Method Definition Index: 11072
+// Method Definition Index: 11073
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11025
+// Method Definition Index: 11026
+// Method Definition Index: 11027
+// Method Definition Index: 11028
+// Method Definition Index: 11029
+// Method Definition Index: 11030
+// Method Definition Index: 11031
+// Method Definition Index: 11032
+// Method Definition Index: 11033
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11048
+// Method Definition Index: 11049
+// Method Definition Index: 11050
+// Method Definition Index: 11051
+// Method Definition Index: 11052
+// Method Definition Index: 11053
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11068
+// Method Definition Index: 11069
+// Method Definition Index: 11070
+// Method Definition Index: 11071
+// Method Definition Index: 11072
+// Method Definition Index: 11073
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11025
+// Method Definition Index: 11026
+// Method Definition Index: 11027
+// Method Definition Index: 11028
+// Method Definition Index: 11029
+// Method Definition Index: 11030
+// Method Definition Index: 11031
+// Method Definition Index: 11032
+// Method Definition Index: 11033
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11048
+// Method Definition Index: 11049
+// Method Definition Index: 11050
+// Method Definition Index: 11051
+// Method Definition Index: 11052
+// Method Definition Index: 11053
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11068
+// Method Definition Index: 11069
+// Method Definition Index: 11070
+// Method Definition Index: 11071
+// Method Definition Index: 11072
+// Method Definition Index: 11073
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11025
+// Method Definition Index: 11026
+// Method Definition Index: 11027
+// Method Definition Index: 11028
+// Method Definition Index: 11029
+// Method Definition Index: 11030
+// Method Definition Index: 11031
+// Method Definition Index: 11032
+// Method Definition Index: 11033
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11048
+// Method Definition Index: 11049
+// Method Definition Index: 11050
+// Method Definition Index: 11051
+// Method Definition Index: 11052
+// Method Definition Index: 11053
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11068
+// Method Definition Index: 11069
+// Method Definition Index: 11070
+// Method Definition Index: 11071
+// Method Definition Index: 11072
+// Method Definition Index: 11073
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11025
+// Method Definition Index: 11026
+// Method Definition Index: 11027
+// Method Definition Index: 11028
+// Method Definition Index: 11029
+// Method Definition Index: 11030
+// Method Definition Index: 11031
+// Method Definition Index: 11032
+// Method Definition Index: 11033
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 11048
+// Method Definition Index: 11049
+// Method Definition Index: 11050
+// Method Definition Index: 11051
+// Method Definition Index: 11052
+// Method Definition Index: 11053
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif

@@ -1,0 +1,6970 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+template <typename T1>
+struct VirtualActionInvoker1
+{
+	typedef void (*Action)(void*,T1,const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj,p1,invokeData.method);
+	}
+};
+template <typename R>
+struct VirtualFuncInvoker0
+{
+	typedef R (*Func)(void*,const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj,invokeData.method);
+	}
+};
+template <typename R, typename T1>
+struct VirtualFuncInvoker1
+{
+	typedef R (*Func)(void*,T1,const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj,p1,invokeData.method);
+	}
+};
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*,const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj,invokeData.method);
+	}
+};
+template <typename R>
+struct InterfaceFuncInvoker0
+{
+	typedef R (*Func)(void*,const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		return ((Func)invokeData.methodPtr)(obj,invokeData.method);
+	}
+};
+
+struct ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79;
+struct Dictionary_2_t54C1839F4EE32A546D24F6AD598F3A048EE2AB9A;
+struct Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83;
+struct Dictionary_2_t0E78110F7AC151EB839DC1E384451EB29D89A92A;
+struct Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E;
+struct Func_3_t0787D839A577CB564A3192D4164941D5F3DCFBB5;
+struct IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44;
+struct IEnumerator_1_t73FD060C436E3C4264A734C8F8DCC01DFF6046B8;
+struct IEqualityComparer_1_tC153F65F278AE0C32BA0CC809B12AA724AF65F85;
+struct KeyCollection_t59AB6D7A56AAB8B527E4EEBED39397629A9430E0;
+struct KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55;
+struct LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599;
+struct List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14;
+struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
+struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A;
+struct Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41;
+struct Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A;
+struct ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992;
+struct ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F;
+struct ValueCollection_tC492596681BD51AB34FC76FA76C15C9B3FFB7B40;
+struct EntryU5BU5D_tAABC49AF86D770891D85331C61A2CF1F7BCB6899;
+struct ActiveLifecycleScopeBaseU5BU5D_t838742F7550A7877BD0F3E2C6EB34055C35B57B2;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D;
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
+struct ScopeTransitionRequestBaseU5BU5D_t607E74D78847B27124900B6FFF0ED216E09E95C7;
+struct ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C;
+struct ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7;
+struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0;
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
+struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
+struct Delegate_t;
+struct DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0;
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+struct Exception_t;
+struct GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8;
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
+struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+struct INativeCallbackProvider_t9C3AAA36B250E1A3DD05DF6F0A4C236CA6DD6DFF;
+struct ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38;
+struct LifecycleMethodRegistry_t683994E033865F86C96A14E5F2674E6AD8B97EA8;
+struct LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB;
+struct LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755;
+struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
+struct MethodInfo_t;
+struct MissingMethodException_t3D861B41F6520C32A7994A884343802925703155;
+struct MonoTypeInfo_t90D5999A69AC524474FDEAC50F55B6CE868AB501;
+struct RuntimeConstructorInfo_tB41E49C7CFA74A03CCC986E78ABB0C0BD331A5AE;
+struct RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1;
+struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+struct ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347;
+struct StackOrderedAssemblyList_t57E870538D7E4DC7B2168FFB75368CE0C906AF97;
+struct String_t;
+struct Type_t;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16;
+struct TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA;
+
+IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_AndroidJNIModule[];
+IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_BurstModule[];
+IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_CoreModule[];
+IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_MathematicsModule[];
+IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_ScriptingModule[];
+IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_Collections[];
+IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_Scripting[];
+IL2CPP_EXTERN_C RuntimeClass* AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* BurstCompiler_t6972AFDB97C8649095A1B7EE54AAADB676BE2C37_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_1_t73FD060C436E3C4264A734C8F8DCC01DFF6046B8_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MissingMethodException_t3D861B41F6520C32A7994A884343802925703155_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* _AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral00B9D6CD2F31410E688E8B500A17CB53A5159DC7;
+IL2CPP_EXTERN_C String_t* _stringLiteral07AFEE37B4EEA247E58EACE22E28DEF694A4927A;
+IL2CPP_EXTERN_C String_t* _stringLiteral085E2DF95CBA541D8E08411BA60759DB8E782A9E;
+IL2CPP_EXTERN_C String_t* _stringLiteral13E8ABAF4FCA9340FD639F44DC79CC73FDE724C1;
+IL2CPP_EXTERN_C String_t* _stringLiteral190A3A7EF1BCDD282CB0B05FB99BEDDD2405B809;
+IL2CPP_EXTERN_C String_t* _stringLiteral24A0D1C954F6F30A64E2AB214561ABB5C363D424;
+IL2CPP_EXTERN_C String_t* _stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D;
+IL2CPP_EXTERN_C String_t* _stringLiteral84DED65F0B23E6F91065E5F2EFCC5631A498E3E4;
+IL2CPP_EXTERN_C String_t* _stringLiteral9C503A4CDCF098739894D1E4B88AEFF08E94B305;
+IL2CPP_EXTERN_C String_t* _stringLiteral9F7B27B5BF4E1DCCB7582CE12885371A3C21BF8C;
+IL2CPP_EXTERN_C String_t* _stringLiteralA4EC0E533020275EA02CC859DA22C7578B5C0119;
+IL2CPP_EXTERN_C String_t* _stringLiteralB9EDD49DDBC303A2087668B4B6E4ACAC60995136;
+IL2CPP_EXTERN_C String_t* _stringLiteralC5C3A106612C3457D1A199E43E729AE62EDAD988;
+IL2CPP_EXTERN_C String_t* _stringLiteralCC59788671EF0B981BF46F9F140D4B1454A1146D;
+IL2CPP_EXTERN_C String_t* _stringLiteralD06FDE4FC2CBD6E5FAFE1400B04AC8E4F3001D0C;
+IL2CPP_EXTERN_C String_t* _stringLiteralDC955F06F1DA8A3B06C4755211822B06D698CF11;
+IL2CPP_EXTERN_C String_t* _stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3;
+IL2CPP_EXTERN_C String_t* _stringLiteralFF3F5572DC5BB6A7D025C792614F24AE73C2D8FC;
+IL2CPP_EXTERN_C const RuntimeMethod* ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BurstCompiler_CompileFunctionPointer_TisTryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA_m6382E4A1B7D58FC335FB65886ACE11A8AAABB0CB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* DebugLifecycle_get_LoggingEnabled_mADB463016DF27BC61A483A646E5B999ABB3A8D94_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Add_mA42C372CA350E01B08326C78A32C2D4331199A3D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Keys_m9CB10267CF4FC83CDDD3FDC4B898C73488C93FB8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m5560B98567B989C4754E5C182136BE4AC88848CB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m80B75619D3D43280CFC1D0556BBFE923F8643835_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mD343B871CBC9CC3590A9CB7326BB5E263AD03BE1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m4CA597288EC15016493B62A210A4A63E27177117_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mD85ED63385062F8013FBC6C57320F2B23C975EFE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mFEAE796204BD77488174AB22E0DE4C2721159335_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m132E4E286C55B63A011879B1F62299A7E6CF8DE2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m21C7125C1D35261357C56A874C207249FC3E4F4A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m422894DCBE54CC53F8C3729BEE72B601B02C8686_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* FunctionPointer_1__ctor_mEF7003D84F3F237841EAE974B1928ACDF564F51D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* KeyCollection_GetEnumerator_mB40FC79A8A11DB8F002E9192693045C2F194E3E7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* LifecycleScopeBase_get_AllowNestedTransitions_mEF03BE23B67C81955948C2C709D01AB9B71F0345_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* LifecycleScopeKey_get_Type_mEC585239B2BC794EDFDE68B89A6533971E12C752_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m3A7E9AECB2ED791F09FADAD0BC7B826FB62A85A4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_Enqueue_mEC947B45B7F992351EFE2AD95F9D29AB3165DA96_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_GetEnumerator_m311A1E04C52E396219D02261B478965B9C97BD3D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Queue_1_get_Count_mBDB81B637CD62D30A1C0B03D246CE38660A6FB1C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ScopeTransitionRequestBase_get_TransitionType_m64E9CBFD2036C2727F62B4276B07594B1AD0244B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* math_max_m5EE58D9462EC2A39BDE97B0C27BB14CF4A0DB651_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeType* ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Enumerator_t624742B8D885649511A5739F11184E2221942252_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* FunctionPointer_1_t60AAF8D3A61EED75D38EB11A8F1DD1414CA650C3_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* IEnumerator_1_t73FD060C436E3C4264A734C8F8DCC01DFF6046B8_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* LifecycleScopeWithContext_1_t709F6A4287432804D884040D1A88020487FBCBE6_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* NativeArray_1_t6E2931CC2E1AA6B9F666FF4270BD177E2114779B_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* SByteU2A_tBC599F914C08CF451092480B53CF897433D9E152_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* ScopeTransitionType_t6E07CFC7F104E66937274EA67AF2704D03670F82_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* String_t_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* TableEntry_t5E44AFA7857A41AC654D7F248FD36B15D7835FFE_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965_0_0_0_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
+
+struct ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct AllocatorCache_1_tE4A3FB98A13F6767AD7FC224210A0475AE15E18E  : public RuntimeObject
+{
+};
+struct Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_tAABC49AF86D770891D85331C61A2CF1F7BCB6899* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_t59AB6D7A56AAB8B527E4EEBED39397629A9430E0* ____keys;
+	ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct KeyCollection_t59AB6D7A56AAB8B527E4EEBED39397629A9430E0  : public RuntimeObject
+{
+	Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* ____dictionary;
+};
+struct List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14  : public RuntimeObject
+{
+	ActiveLifecycleScopeBaseU5BU5D_t838742F7550A7877BD0F3E2C6EB34055C35B57B2* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41  : public RuntimeObject
+{
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ____array;
+	int32_t ____head;
+	int32_t ____tail;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A  : public RuntimeObject
+{
+	ScopeTransitionRequestBaseU5BU5D_t607E74D78847B27124900B6FFF0ED216E09E95C7* ____array;
+	int32_t ____head;
+	int32_t ____tail;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F  : public RuntimeObject
+{
+	Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* ____dictionary;
+};
+struct Activator_tB31D4E2D282C5AA90D61D6EB0A297A5D3D41DA24  : public RuntimeObject
+{
+};
+struct ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C  : public RuntimeObject
+{
+	LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* ___U3CScopeU3Ek__BackingField;
+};
+struct ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7  : public RuntimeObject
+{
+	Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* ____activeScopes;
+	ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347* ____scopeTransitionHelper;
+	Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* ____transitionRequestQueue;
+	Dictionary_2_t54C1839F4EE32A546D24F6AD598F3A048EE2AB9A* ____autoCleanups;
+	RuntimeObject* ____autoCleanupsLock;
+};
+struct AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C  : public RuntimeObject
+{
+};
+struct AndroidJNI_t531BC9A6383F7C0F76A1270297952462F52308EE  : public RuntimeObject
+{
+};
+struct AndroidJNIHelper_t2C1AB9F6B2295C20B24108936A003F65F02D71DD  : public RuntimeObject
+{
+};
+struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0  : public RuntimeObject
+{
+	GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8* ___m_jobject;
+	GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8* ___m_jclass;
+};
+struct DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11  : public RuntimeObject
+{
+};
+struct LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755  : public RuntimeObject
+{
+	String_t* ___U3CNameU3Ek__BackingField;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___U3CExplicitRequiredOuterScopesU3Ek__BackingField;
+	bool ___U3CAllowNestedTransitionsU3Ek__BackingField;
+	ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* ___U3CImplicitOuterScopesU3Ek__BackingField;
+};
+struct MemberInfo_t  : public RuntimeObject
+{
+};
+struct ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347  : public RuntimeObject
+{
+	StackOrderedAssemblyList_t57E870538D7E4DC7B2168FFB75368CE0C906AF97* ____assemblyList;
+	LifecycleMethodRegistry_t683994E033865F86C96A14E5F2674E6AD8B97EA8* ____lifecycleMethodRegistry;
+	Dictionary_2_t0E78110F7AC151EB839DC1E384451EB29D89A92A* ____processMarkers;
+	RuntimeObject* ___U3CNativeCallbackProviderU3Ek__BackingField;
+};
+struct String_t  : public RuntimeObject
+{
+	int32_t ____stringLength;
+	Il2CppChar ____firstChar;
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F  : public RuntimeObject
+{
+};
+struct IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C  : public RuntimeObject
+{
+};
+struct Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352 
+{
+	List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* ____current;
+};
+typedef Il2CppFullySharedGenericStruct Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF;
+typedef Il2CppFullySharedGenericStruct Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C;
+struct Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201 
+{
+	Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* ____q;
+	int32_t ____version;
+	int32_t ____index;
+	ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* ____currentElement;
+};
+struct Enumerator_t624742B8D885649511A5739F11184E2221942252 
+{
+	Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* ____currentValue;
+};
+typedef Il2CppFullySharedGenericStruct Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977;
+typedef Il2CppFullySharedGenericStruct Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222;
+struct LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599  : public LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755
+{
+	Il2CppSharedGenericObject* ___U3CContextU3Ek__BackingField;
+};
+struct SharedStatic_1_t30E47B9FE97163C57461A13B0C4509349C109FD5 
+{
+	void* ____buffer;
+};
+struct SharedStatic_1_t992C7AC6924726715BD75765E85C2A7923405408 
+{
+	void* ____buffer;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	bool ___m_value;
+};
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	uint8_t ___m_value;
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	int32_t ___m_value;
+};
+struct Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3 
+{
+	int64_t ___m_value;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB  : public LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755
+{
+};
+struct LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D 
+{
+	Type_t* ____scopeType;
+	RuntimeObject* ____context;
+};
+struct LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D_marshaled_pinvoke
+{
+	Type_t* ____scopeType;
+	Il2CppIUnknown* ____context;
+};
+struct LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D_marshaled_com
+{
+	Type_t* ____scopeType;
+	Il2CppIUnknown* ____context;
+};
+struct Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 
+{
+	int64_t ___f0;
+	int64_t ___f1;
+	int64_t ___f2;
+	int64_t ___f3;
+	int64_t ___f4;
+	int64_t ___f5;
+	int64_t ___f6;
+	int64_t ___f7;
+};
+struct SByte_tFEFFEF5D2FEBF5207950AE6FAC150FC53B668DB5 
+{
+	int8_t ___m_value;
+};
+struct UInt16_tF4C148C876015C212FD72652D0B6ED8CC247A455 
+{
+	uint16_t ___m_value;
+};
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+struct AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 
+{
+	uint16_t ___Index;
+	uint16_t ___Version;
+};
+struct ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79  : public ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C
+{
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D ___U3CScopeKeyU3Ek__BackingField;
+};
+struct Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE 
+{
+	Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D ____currentKey;
+};
+struct FunctionPointer_1_tFA7B05CB8F034C67CD0B63063DD837ACC1C06AE9 
+{
+	intptr_t ____ptr;
+};
+struct FunctionPointer_1_t8F9F55036C9757966AA570D1DB1FADC59D4C7547 
+{
+	intptr_t ____ptr;
+};
+struct FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF 
+{
+	intptr_t ____ptr;
+};
+struct Allocator_t996642592271AAD9EE688F142741D512C07B5824 
+{
+	int32_t ___value__;
+};
+struct Delegate_t  : public RuntimeObject
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	RuntimeObject* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	bool ___method_is_virtual;
+};
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Exception_t  : public RuntimeObject
+{
+	String_t* ____className;
+	String_t* ____message;
+	RuntimeObject* ____data;
+	Exception_t* ____innerException;
+	String_t* ____helpURL;
+	RuntimeObject* ____stackTrace;
+	String_t* ____stackTraceString;
+	String_t* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	RuntimeObject* ____dynamicMethods;
+	int32_t ____HResult;
+	String_t* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className;
+	char* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_pinvoke* ____innerException;
+	char* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	char* ____stackTraceString;
+	char* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	char* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className;
+	Il2CppChar* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_com* ____innerException;
+	Il2CppChar* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	Il2CppChar* ____stackTraceString;
+	Il2CppChar* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	Il2CppChar* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38  : public LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB
+{
+};
+struct Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D 
+{
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f0;
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f1;
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f2;
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f3;
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f4;
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f5;
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f6;
+	Long8_t47945FFD68CACB5C8CE8E03AECE69B817A6A9659 ___f7;
+};
+struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B 
+{
+	intptr_t ___value;
+};
+struct StackCrawlMark_t95CDBA5EE7D71D392741A5533D7EB93341DFC730 
+{
+	int32_t ___value__;
+};
+struct ScopeTransitionType_t6E07CFC7F104E66937274EA67AF2704D03670F82 
+{
+	int32_t ___value__;
+};
+struct Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC 
+{
+	intptr_t ___Pointer;
+	int32_t ___Items;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Allocator;
+};
+struct TableEntry_t5E44AFA7857A41AC654D7F248FD36B15D7835FFE 
+{
+	intptr_t ___function;
+	intptr_t ___state;
+};
+struct NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 
+{
+	void* ___m_Buffer;
+	int32_t ___m_Length;
+	int32_t ___m_AllocatorLabel;
+};
+struct Long512_t2D339FF6672EB3709A6C638EABA7D13C7FEC1878 
+{
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f0;
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f1;
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f2;
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f3;
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f4;
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f5;
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f6;
+	Long64_t9C8641A91D7FEF90D4B55FDC6B5823A59670156D ___f7;
+};
+struct MulticastDelegate_t  : public Delegate_t
+{
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
+};
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates;
+};
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates;
+};
+struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
+{
+};
+struct Type_t  : public MemberInfo_t
+{
+	RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ____impl;
+};
+struct ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16  : public RuntimeObject
+{
+	LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* ___U3CScopeU3Ek__BackingField;
+	int32_t ___U3CTransitionTypeU3Ek__BackingField;
+	bool ___U3CAlsoExitNestedScopesU3Ek__BackingField;
+};
+struct Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 
+{
+	Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC ___Range;
+	int32_t ___BytesPerItem;
+	int32_t ___AllocatedItems;
+	uint8_t ___Log2Alignment;
+	uint8_t ___Padding0;
+	uint16_t ___Padding1;
+	uint32_t ___Padding2;
+};
+struct ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992  : public ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16
+{
+};
+struct Long1024_tEE887C506947419DC829213E6C7483D80AF5659F 
+{
+	Long512_t2D339FF6672EB3709A6C638EABA7D13C7FEC1878 ___f0;
+	Long512_t2D339FF6672EB3709A6C638EABA7D13C7FEC1878 ___f1;
+};
+struct MemberAccessException_t4BB9AF02B906BB4818600FC8988DECA4D37F2EFC  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+struct TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D  : public Type_t
+{
+};
+struct TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA  : public MulticastDelegate_t
+{
+};
+struct MissingMemberException_tB9D7B25FF06EEBB52D036DA8B1BE67F67619D211  : public MemberAccessException_t4BB9AF02B906BB4818600FC8988DECA4D37F2EFC
+{
+	String_t* ___ClassName;
+	String_t* ___MemberName;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___Signature;
+};
+struct RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1  : public TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D
+{
+	MonoTypeInfo_t90D5999A69AC524474FDEAC50F55B6CE868AB501* ___type_info;
+	RuntimeObject* ___GenericCache;
+	RuntimeConstructorInfo_tB41E49C7CFA74A03CCC986E78ABB0C0BD331A5AE* ___m_serializationCtor;
+};
+struct MissingMethodException_t3D861B41F6520C32A7994A884343802925703155  : public MissingMemberException_tB9D7B25FF06EEBB52D036DA8B1BE67F67619D211
+{
+};
+struct AllocatorCache_1_tE4A3FB98A13F6767AD7FC224210A0475AE15E18E_StaticFields
+{
+	FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF ___TryFunction;
+	TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* ___CachedFunction;
+	DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0* _____autoCleanup_UnityEngine_PlayModeScope_Both;
+};
+struct List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14_StaticFields
+{
+	ActiveLifecycleScopeBaseU5BU5D_t838742F7550A7877BD0F3E2C6EB34055C35B57B2* ___s_emptyArray;
+};
+struct AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticFields
+{
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Invalid;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___None;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Temp;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___TempJob;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___Persistent;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___AudioKernel;
+	uint16_t ___NumGlobalScratchAllocators;
+	uint16_t ___MaxNumGlobalAllocators;
+	uint32_t ___GlobalAllocatorBaseIndex;
+	uint32_t ___FirstGlobalScratchpadAllocatorIndex;
+};
+struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_StaticFields
+{
+	bool ___enableDebugPrints;
+};
+struct DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticFields
+{
+	bool ___loggingEnabled;
+	bool ___verificationEnabled;
+};
+struct ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347_StaticFields
+{
+	String_t* ___k_ProfilerMarkerPrefix;
+	String_t* ___k_DetailedInvokeMarkerPrefix;
+};
+struct String_t_StaticFields
+{
+	String_t* ___Empty;
+};
+struct IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_StaticFields
+{
+	SharedStatic_1_t30E47B9FE97163C57461A13B0C4509349C109FD5 ___Ref;
+};
+struct IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_StaticFields
+{
+	SharedStatic_1_t30E47B9FE97163C57461A13B0C4509349C109FD5 ___Ref;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	String_t* ___TrueString;
+	String_t* ___FalseString;
+};
+struct IntPtr_t_StaticFields
+{
+	intptr_t ___Zero;
+};
+struct Exception_t_StaticFields
+{
+	RuntimeObject* ___s_EDILock;
+};
+struct Type_t_StaticFields
+{
+	Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235* ___s_defaultBinder;
+	Il2CppChar ___Delimiter;
+	TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___EmptyTypes;
+	RuntimeObject* ___Missing;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterAttribute;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterName;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterNameIgnoreCase;
+};
+struct RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1_StaticFields
+{
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* ___ValueType;
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* ___EnumType;
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* ___ObjectType;
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* ___StringType;
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* ___DelegateType;
+	TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___s_SICtorParamTypes;
+	Func_3_t0787D839A577CB564A3192D4164941D5F3DCFBB5* ___MakeTypeBuilderInstantiation;
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* ___s_typedRef;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
+{
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D  : public RuntimeArray
+{
+	ALIGN_FIELD (8) ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* m_Items[1];
+
+	inline ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + il2cpp_array_calc_byte_offset(this, index);
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + il2cpp_array_calc_byte_offset(this, index);
+	}
+};
+
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScopeTransitionRequestWithContext_1__ctor_m7A1A1AC74D13C0C6C043707C1E237708A5B7B9B9_gshared (ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scope, int32_t ___1_scopeTransitionType, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_mE6103188ACDEC07F90F2D2986554730D18029750_fshared_inline (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppSharedGenericObject* LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_gshared_inline (LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_Enqueue_m9159DC6A9BC5528A3444329C408F4101004CF652_fshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* Dictionary_2_get_Keys_mD82D6690B1A801E8EED43F1B1D310893C9D334CF_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyCollection_GetEnumerator_m1624A44B07D62B8CC592FEAE7A521D9504E0ACB3_fshared (KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55* __this, Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m3E0B734E98D35978EEE706FCEC2FE08FEA74FD35_fshared (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_fshared_inline (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m21C503A713FDCA406492E2BE960D85320752E615_fshared (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_TisIl2CppSharedGenericObject_m5267E4C686C348E337CB4A9ED51372D608957B0F_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Il2CppSharedGenericObject* ___0_scopeContext, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Queue_1_GetEnumerator_m6C532F76552CCD7154B74816F66DA3CE367BD90D_fshared (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mA25DFE205338DF12128791E990699B49B335B759_fshared (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2DDD9E2B36A595D40708EBE84125C065CCF6F11D_fshared (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mA6D24403558EA8BFEE5028D75AC049EC8677F637_fshared (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_m65AF7C880B3A8B7B6F7C6F59C699EA3FC8FC1BEE_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scopeWithContext, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueCollection_tC492596681BD51AB34FC76FA76C15C9B3FFB7B40* Dictionary_2_get_Values_mE06FB7381D8152E35F0716DC7FE13788362112A7_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueCollection_GetEnumerator_m22BB9C6494A679370661D0B6DA1FA7EF744281EA_fshared (ValueCollection_tC492596681BD51AB34FC76FA76C15C9B3FFB7B40* __this, Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mB05777B182DD6D8C5ED21811C2CA95405D2743F8_fshared (Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m77681472C32B9ABB97AE602C0D4C365A0A8E8ACE_fshared_inline (Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m297C3CEEAAC8D29D8F7C93E0801CD1D362D1C66F_fshared (Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_fshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_fshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_fshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_fshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_Remove_m583C4F0E2926B584BE6EC6008195360FC631C14C_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_TisIl2CppSharedGenericObject_m781DD3D4A86DAE2D7A3F31DD07A1A4B6C4ACFFB7_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, int32_t ___1_scopeTransitionType, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_PrepareTryEnterScopeWithContext_TisIl2CppSharedGenericObject_m3D8B69D9E50547113449972B07933BE902744D59_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopeWithContext_1__ctor_mDD6FD21DC68167495A10EE8C4AB04C783A8A809C_gshared (ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scope, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D LifecycleScopeKey_CreateFromScope_TisIl2CppSharedGenericObject_m613ECBEDFFC63C9393C625204DC116D94C244FBB_gshared (LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scope, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, Il2CppFullySharedGenericAny ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_PrepareTryExitScope_TisIl2CppSharedGenericObject_mB20E9E3D9D7A9E4B5F58A5783EB2EBB2733EF4E7_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, Il2CppSharedGenericObject* ___1_activationContext, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppSharedGenericObject* ActiveLifecycleScopeWithContext_1_get_Context_m45FFE4CAC1E3D5639C3DEE4433FAE9E204851CC0_gshared (ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_m7519D765EAF1E8A7D3137C2F1B7B3A01D15A1692_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, Il2CppFullySharedGenericAny* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_m0EABE0B1B2068441A3F575974A2603420E428E12_fshared (Il2CppFullySharedGenericStruct* ___0_t, Il2CppFullySharedGenericStruct ___1_u, int32_t ___2_items, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_fshared_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_fshared_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_mC90FE69E6FB94B1EDDFC81D29625CAB1468D5173_fshared (Il2CppFullySharedGenericStruct* ___0_t, int32_t ___1_sizeOf, int32_t ___2_alignOf, int32_t ___3_items, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 AllocatorManager_AllocateBlock_TisIl2CppFullySharedGenericStruct_mF04F260543AD3905A083FEBFC5A5F6DCF60EDE7C_fshared (Il2CppFullySharedGenericStruct* ___0_t, int32_t ___1_sizeOf, int32_t ___2_alignOf, int32_t ___3_items, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* UnsafeUtility_AsRef_TisIl2CppFullySharedGenericStruct_m78B0690121A96EFFDA7D6D3ADAF97940CF8136BE_fshared_inline (void* ___0_ptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Register_TisIl2CppFullySharedGenericStruct_mF147D5344F44C9D73EE0A38448CDCCBD8931FEA9_fshared (Il2CppFullySharedGenericStruct* ___0_t, bool ___1_IsAutoDispose, bool ___2_isGlobal, int32_t ___3_globalIndex, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Unregister_TisIl2CppFullySharedGenericStruct_m1782C417767DBDCC0F33DE0B0ACCEE7BE0C9570D_fshared (Il2CppFullySharedGenericStruct* ___0_t, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* UnsafeUtility_AddressOf_TisIl2CppFullySharedGenericStruct_m8D42BD9F3A34A0C9A6BF4AA6104B9DAE7B629DE7_fshared_inline (Il2CppFullySharedGenericStruct* ___0_output, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_mD4F26E4C816E71D730D23642B46E9C40DB139DE5_fshared (Il2CppFullySharedGenericStruct* ___0_t, Il2CppFullySharedGenericStruct* ___1_pointer, int32_t ___2_items, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_mDBB8A012EA9B6286BBF754ABC553D87E29E2084C_fshared (Il2CppFullySharedGenericStruct* ___0_t, void* ___1_pointer, int32_t ___2_sizeOf, int32_t ___3_alignOf, int32_t ___4_items, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_FreeBlock_TisIl2CppFullySharedGenericStruct_m44D182E4FE9D7ACB24809B27EAF206F1538A71E3_fshared (Il2CppFullySharedGenericStruct* ___0_t, Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3* ___1_block, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FunctionPointer_1__ctor_m539FE4A638EAB194C030CB25B52DBB1BADEA6E5A_fshared_inline (FunctionPointer_1_t8F9F55036C9757966AA570D1DB1FADC59D4C7547* __this, intptr_t ___0_ptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionPointer_1_tFA7B05CB8F034C67CD0B63063DD837ACC1C06AE9 BurstCompiler_CompileFunctionPointer_TisIl2CppSharedGenericObject_m56881AF9D74018BA2CDE51DE51F9700B6BD85134_gshared (Il2CppSharedGenericObject* ___0_delegateMethod, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* SharedStatic_1_get_Data_mAFC48834EE1CC1F6BD26B17A0C17C548C182E059_fshared (SharedStatic_1_t992C7AC6924726715BD75765E85C2A7923405408* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ConcurrentMask_TryFree_TisIl2CppFullySharedGenericAny_m7D237A8BFDC8529A2B0AD3B5CCD7249B03FE9245_fshared (Il2CppFullySharedGenericAny* ___0_t, int32_t ___1_offset, int32_t ___2_bits, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisIl2CppFullySharedGenericStruct_m6920C14D4E38FAB84BD2B5F148CE70DF7F224F52_fshared (void* ___0_dataPointer, int32_t ___1_length, int32_t ___2_allocator, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool NativeArray_1_get_IsCreated_m527A2C3B75C25BFF29D1D9EA88C81172FF4F5A5A_fshared_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mBE5CC8B844994CFC4AB434235F915881575E63C8_fshared_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_m4AB802D5B1B296D0F976C1E7631699B0C4A4D00F_fshared_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___0_nativeArray, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mD6B660A63955117687D6131FC1DB255161D1A2BA_fshared (intptr_t ___0_array, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t _AndroidJNIHelper_GetFieldID_TisIl2CppFullySharedGenericAny_m5714D44FF454CB672C9F04F1316533DAD6C6BCBB_fshared (intptr_t ___0_jclass, String_t* ___1_fieldName, bool ___2_isStatic, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t _AndroidJNIHelper_GetMethodID_TisIl2CppFullySharedGenericAny_mBB787943D3DB158E741B5FF2B66EFB90237F837C_fshared (intptr_t ___0_jclass, String_t* ___1_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___2_args, bool ___3_isStatic, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* _AndroidJNIHelper_GetSignature_TisIl2CppFullySharedGenericAny_m5BFF8BF215EBBD2B94DB67B384DAB97E221FA134_fshared (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_args, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_m4720E88EC57849809AFC4A771495414E75120D8F_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_mA1A866611778FF72A2067F7E30B32913C4EB4904_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_m8D1EB1F6B7C8D0B7D54EF55F42BCE6B7576E0953_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_mA069934E49E8EFEB980CA5EED2B1DE810C150A68_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mE2FE04F1AE05E31AFCB6C62A0D8015274310BBE7_fshared (intptr_t ___0_array, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m16AE597DA478C33ABF978BB8131126B5C7360D09_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m6AA7C8A5BE069836640026CB6EDA5D93B3246683_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m265EB43F18C8FB22DCD571C5E50A76642369551D_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m5FA6F86B221B6AD76DDD71818F721187D59BFC38_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m84E47B5A5FF416288BF85C7F79F287D6FD90356F_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m1AF6344C2EF172B8799D007F4BAC3ECDC182BC22_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_m07564225CF639F8502927F2D783809867A34367A_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_mA923EF05918D13946E2452B81B496229D8B952FB_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtilityInternal_SizeOf_TisIl2CppFullySharedGenericStruct_m9FC95A845D303A9C72ED4044691DD435A70F994A_fshared_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtilityInternal_AlignOf_TisIl2CppFullySharedGenericStruct_m530059660A1E31984686E17CC9E1E8EC5BADDADF_fshared_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* UnsafeUtilityInternal_AsRef_TisIl2CppFullySharedGenericStruct_m4AE204964F54C3F7626BE47CADE4A52CF2797B6B_fshared_inline (void* ___0_ptr, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* UnsafeUtilityInternal_AddressOf_TisIl2CppFullySharedGenericStruct_m4556F0DE0C4C5FAA9B2E203DD1D76CC0B1FE567C_fshared_inline (Il2CppFullySharedGenericStruct* ___0_output, const RuntimeMethod* method) ;
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___0_handle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_get_HasElementType_m44F9601E586D2EEA2EDB93FB81D1D80521C264EE (Type_t* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058 (String_t* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MissingMethodException__ctor_mAA7B921D386638F5F7B7E427EC5881150258C838 (MissingMethodException_t3D861B41F6520C32A7994A884343802925703155* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RuntimeType_CreateInstanceDefaultCtor_m049DF408DA0C9B09F8964B90B62456E3A1F135C6 (RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* __this, bool ___0_publicOnly, bool ___1_skipCheckThis, bool ___2_fillCache, bool ___3_wrapExceptions, int32_t* ___4_stackMark, const RuntimeMethod* method) ;
+inline void ScopeTransitionRequestWithContext_1__ctor_m7A1A1AC74D13C0C6C043707C1E237708A5B7B9B9 (ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scope, int32_t ___1_scopeTransitionType, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method)
+{
+	((  void (*) (ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992*, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, int32_t, bool, const RuntimeMethod*))ScopeTransitionRequestWithContext_1__ctor_m7A1A1AC74D13C0C6C043707C1E237708A5B7B9B9_gshared)(__this, ___0_scope, ___1_scopeTransitionType, ___2_alsoExitNestedScopes, method);
+}
+inline int32_t Queue_1_get_Count_mBDB81B637CD62D30A1C0B03D246CE38660A6FB1C_inline (Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A*, const RuntimeMethod*))Queue_1_get_Count_mE6103188ACDEC07F90F2D2986554730D18029750_fshared_inline)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool LifecycleScopeBase_get_AllowNestedTransitions_mEF03BE23B67C81955948C2C709D01AB9B71F0345_inline (LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_inline (ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline (LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* __this, const RuntimeMethod* method) ;
+inline Il2CppSharedGenericObject* LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_inline (LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* __this, const RuntimeMethod* method)
+{
+	return ((  Il2CppSharedGenericObject* (*) (LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, const RuntimeMethod*))LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987 (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3 (String_t* ___0_message, bool ___1_criticalError, const RuntimeMethod* method) ;
+inline void Queue_1_Enqueue_mEC947B45B7F992351EFE2AD95F9D29AB3165DA96 (Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* __this, ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Queue_1_Enqueue_m9159DC6A9BC5528A3444329C408F4101004CF652_fshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool DebugLifecycle_get_LoggingEnabled_mADB463016DF27BC61A483A646E5B999ABB3A8D94_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugLifecycle_Log_mF5AF374C4A49186C856B489B40F56163BE723BBB (String_t* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_ExecuteTransitions_m5EFD022DEA5213ACB1E9DF082B376BB6C43FE2D0 (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, bool ___0_executeAndPop, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LifecycleScopeKey__ctor_m7DCCBE2ED25A7746808F3555AB845EE71FEB6A71 (LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D* __this, Type_t* ___0_scopeType, const RuntimeMethod* method) ;
+inline bool Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281 (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* __this, LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, method);
+}
+inline KeyCollection_t59AB6D7A56AAB8B527E4EEBED39397629A9430E0* Dictionary_2_get_Keys_m9CB10267CF4FC83CDDD3FDC4B898C73488C93FB8 (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* __this, const RuntimeMethod* method)
+{
+	return ((  KeyCollection_t59AB6D7A56AAB8B527E4EEBED39397629A9430E0* (*) (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83*, const RuntimeMethod*))Dictionary_2_get_Keys_mD82D6690B1A801E8EED43F1B1D310893C9D334CF_fshared)(__this, method);
+}
+inline Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE KeyCollection_GetEnumerator_mB40FC79A8A11DB8F002E9192693045C2F194E3E7 (KeyCollection_t59AB6D7A56AAB8B527E4EEBED39397629A9430E0* __this, const RuntimeMethod* method)
+{
+	Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE il2cppRetVal;
+	((  void (*) (KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55*, Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, const RuntimeMethod*))KeyCollection_GetEnumerator_m1624A44B07D62B8CC592FEAE7A521D9504E0ACB3_fshared)((KeyCollection_tB792ACBAE0B99278B0B7B0F7440B4788E98F0D55*)__this, (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+inline void Enumerator_Dispose_mD343B871CBC9CC3590A9CB7326BB5E263AD03BE1 (Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE*, const RuntimeMethod*))Enumerator_Dispose_m3E0B734E98D35978EEE706FCEC2FE08FEA74FD35_fshared)(__this, method);
+}
+inline LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D Enumerator_get_Current_m21C7125C1D35261357C56A874C207249FC3E4F4A_inline (Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE* __this, const RuntimeMethod* method)
+{
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D il2cppRetVal;
+	((  void (*) (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_fshared_inline)((Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* LifecycleScopeKey_get_Type_mEC585239B2BC794EDFDE68B89A6533971E12C752_inline (LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC (Type_t* ___0_left, Type_t* ___1_right, const RuntimeMethod* method) ;
+inline bool Enumerator_MoveNext_mFEAE796204BD77488174AB22E0DE4C2721159335 (Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE*, const RuntimeMethod*))Enumerator_MoveNext_m21C503A713FDCA406492E2BE960D85320752E615_fshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LifecycleScopeKey__ctor_m3BFDFB377FD3F489668C9B18AF174EF462838E6C (LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D* __this, Type_t* ___0_scopeType, RuntimeObject* ___1_context, const RuntimeMethod* method) ;
+inline bool ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_TisIl2CppSharedGenericObject_m5267E4C686C348E337CB4A9ED51372D608957B0F (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Il2CppSharedGenericObject* ___0_scopeContext, const RuntimeMethod* method)
+{
+	return ((  bool (*) (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7*, Il2CppSharedGenericObject*, const RuntimeMethod*))ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_TisIl2CppSharedGenericObject_m5267E4C686C348E337CB4A9ED51372D608957B0F_gshared)(__this, ___0_scopeContext, method);
+}
+inline Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201 Queue_1_GetEnumerator_m311A1E04C52E396219D02261B478965B9C97BD3D (Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* __this, const RuntimeMethod* method)
+{
+	Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201 il2cppRetVal;
+	((  void (*) (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*, Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*, const RuntimeMethod*))Queue_1_GetEnumerator_m6C532F76552CCD7154B74816F66DA3CE367BD90D_fshared)((Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41*)__this, (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+inline void Enumerator_Dispose_m5560B98567B989C4754E5C182136BE4AC88848CB (Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201*, const RuntimeMethod*))Enumerator_Dispose_mA25DFE205338DF12128791E990699B49B335B759_fshared)(__this, method);
+}
+inline ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* Enumerator_get_Current_m132E4E286C55B63A011879B1F62299A7E6CF8DE2 (Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201* __this, const RuntimeMethod* method)
+{
+	ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* il2cppRetVal;
+	((  void (*) (Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m2DDD9E2B36A595D40708EBE84125C065CCF6F11D_fshared)((Enumerator_tFA6E7D5BA5EFB0C82F2AA1342FFD5C2B753D673C*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ScopeTransitionRequestBase_get_TransitionType_m64E9CBFD2036C2727F62B4276B07594B1AD0244B_inline (ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* __this, const RuntimeMethod* method) ;
+inline bool Enumerator_MoveNext_m4CA597288EC15016493B62A210A4A63E27177117 (Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201*, const RuntimeMethod*))Enumerator_MoveNext_mA6D24403558EA8BFEE5028D75AC049EC8677F637_fshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LifecycleScopeBase_get_RequiredOuterScopes_mE1B35D619BCE1A19CF63F53E917F8D86731225B7 (LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsInsideScope_m326DF0210C805B6FEFF0848D0A1C1891D1AD8ABE (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, String_t* ___0_scopeName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_values, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsInsideScope_m6A9229A85BC7290BB7CABC0F5726CF29CE197886 (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB* ___0_scope, const RuntimeMethod* method) ;
+inline bool ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_m65AF7C880B3A8B7B6F7C6F59C699EA3FC8FC1BEE (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scopeWithContext, const RuntimeMethod* method)
+{
+	return ((  bool (*) (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7*, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, const RuntimeMethod*))ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_m65AF7C880B3A8B7B6F7C6F59C699EA3FC8FC1BEE_gshared)(__this, ___0_scopeWithContext, method);
+}
+inline ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F* Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49 (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* __this, const RuntimeMethod* method)
+{
+	return ((  ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F* (*) (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83*, const RuntimeMethod*))Dictionary_2_get_Values_mE06FB7381D8152E35F0716DC7FE13788362112A7_fshared)(__this, method);
+}
+inline Enumerator_t624742B8D885649511A5739F11184E2221942252 ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE (ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F* __this, const RuntimeMethod* method)
+{
+	Enumerator_t624742B8D885649511A5739F11184E2221942252 il2cppRetVal;
+	((  void (*) (ValueCollection_tC492596681BD51AB34FC76FA76C15C9B3FFB7B40*, Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222*, const RuntimeMethod*))ValueCollection_GetEnumerator_m22BB9C6494A679370661D0B6DA1FA7EF744281EA_fshared)((ValueCollection_tC492596681BD51AB34FC76FA76C15C9B3FFB7B40*)__this, (Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+inline void Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE (Enumerator_t624742B8D885649511A5739F11184E2221942252* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t624742B8D885649511A5739F11184E2221942252*, const RuntimeMethod*))Enumerator_Dispose_mB05777B182DD6D8C5ED21811C2CA95405D2743F8_fshared)(__this, method);
+}
+inline ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_inline (Enumerator_t624742B8D885649511A5739F11184E2221942252* __this, const RuntimeMethod* method)
+{
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* il2cppRetVal;
+	((  void (*) (Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m77681472C32B9ABB97AE602C0D4C365A0A8E8ACE_fshared_inline)((Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline (ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
+inline bool Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385 (Enumerator_t624742B8D885649511A5739F11184E2221942252* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t624742B8D885649511A5739F11184E2221942252*, const RuntimeMethod*))Enumerator_MoveNext_m297C3CEEAAC8D29D8F7C93E0801CD1D362D1C66F_fshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_CollectNestedScopesToExit_m7489DDE99FDA05A011E202D63B4146E96B7761AD (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, String_t* ___0_scopeName, List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14** ___1_nestedActiveScopesInOrder, const RuntimeMethod* method) ;
+inline Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352 List_1_GetEnumerator_m3A7E9AECB2ED791F09FADAD0BC7B826FB62A85A4 (List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14* __this, const RuntimeMethod* method)
+{
+	Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352 il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_fshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+inline void Enumerator_Dispose_m80B75619D3D43280CFC1D0556BBFE923F8643835 (Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_fshared)(__this, method);
+}
+inline ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* Enumerator_get_Current_m422894DCBE54CC53F8C3729BEE72B601B02C8686_inline (Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352* __this, const RuntimeMethod* method)
+{
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* il2cppRetVal;
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_fshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
+}
+inline bool Enumerator_MoveNext_mD85ED63385062F8013FBC6C57320F2B23C975EFE (Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_fshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_RaiseAutoCleanups_m5620B257E893397698E4CA9CBD38E695BADBA8ED (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Type_t* ___0_lifecycleScopeType, int32_t ___1_scopeTransitionType, const RuntimeMethod* method) ;
+inline bool Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726 (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* __this, LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Remove_m583C4F0E2926B584BE6EC6008195360FC631C14C_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_m9994ACEAA4926C9C17BB51EEA3411DA150DB15D9 (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB* ___0_lifecycleScope, int32_t ___1_scopeTransitionType, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method) ;
+inline void ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_TisIl2CppSharedGenericObject_m781DD3D4A86DAE2D7A3F31DD07A1A4B6C4ACFFB7 (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, int32_t ___1_scopeTransitionType, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method)
+{
+	((  void (*) (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7*, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, int32_t, bool, const RuntimeMethod*))ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_TisIl2CppSharedGenericObject_m781DD3D4A86DAE2D7A3F31DD07A1A4B6C4ACFFB7_gshared)(__this, ___0_lifecycleScope, ___1_scopeTransitionType, ___2_alsoExitNestedScopes, method);
+}
+inline bool ActiveLifecycleScopesTracker_PrepareTryEnterScopeWithContext_TisIl2CppSharedGenericObject_m3D8B69D9E50547113449972B07933BE902744D59 (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, const RuntimeMethod* method)
+{
+	return ((  bool (*) (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7*, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, const RuntimeMethod*))ActiveLifecycleScopesTracker_PrepareTryEnterScopeWithContext_TisIl2CppSharedGenericObject_m3D8B69D9E50547113449972B07933BE902744D59_gshared)(__this, ___0_lifecycleScope, method);
+}
+inline void ActiveLifecycleScopeWithContext_1__ctor_mDD6FD21DC68167495A10EE8C4AB04C783A8A809C (ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scope, const RuntimeMethod* method)
+{
+	((  void (*) (ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79*, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, const RuntimeMethod*))ActiveLifecycleScopeWithContext_1__ctor_mDD6FD21DC68167495A10EE8C4AB04C783A8A809C_gshared)(__this, ___0_scope, method);
+}
+inline LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D LifecycleScopeKey_CreateFromScope_TisIl2CppSharedGenericObject_m613ECBEDFFC63C9393C625204DC116D94C244FBB (LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scope, const RuntimeMethod* method)
+{
+	return ((  LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D (*) (LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, const RuntimeMethod*))LifecycleScopeKey_CreateFromScope_TisIl2CppSharedGenericObject_m613ECBEDFFC63C9393C625204DC116D94C244FBB_gshared)(___0_scope, method);
+}
+inline void Dictionary_2_Add_mA42C372CA350E01B08326C78A32C2D4331199A3D (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* __this, LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D ___0_key, ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, (Il2CppFullySharedGenericAny)___1_value, method);
+}
+inline bool ActiveLifecycleScopesTracker_PrepareTryExitScope_TisIl2CppSharedGenericObject_mB20E9E3D9D7A9E4B5F58A5783EB2EBB2733EF4E7 (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, Il2CppSharedGenericObject* ___1_activationContext, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method)
+{
+	return ((  bool (*) (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7*, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*, Il2CppSharedGenericObject*, bool, const RuntimeMethod*))ActiveLifecycleScopesTracker_PrepareTryExitScope_TisIl2CppSharedGenericObject_mB20E9E3D9D7A9E4B5F58A5783EB2EBB2733EF4E7_gshared)(__this, ___0_lifecycleScope, ___1_activationContext, ___2_alsoExitNestedScopes, method);
+}
+inline Il2CppSharedGenericObject* ActiveLifecycleScopeWithContext_1_get_Context_m45FFE4CAC1E3D5639C3DEE4433FAE9E204851CC0 (ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* __this, const RuntimeMethod* method)
+{
+	return ((  Il2CppSharedGenericObject* (*) (ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79*, const RuntimeMethod*))ActiveLifecycleScopeWithContext_1_get_Context_m45FFE4CAC1E3D5639C3DEE4433FAE9E204851CC0_gshared)(__this, method);
+}
+inline bool Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89 (Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* __this, LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D ___0_key, ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C** ___1_value, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Dictionary_2_TryGetValue_m7519D765EAF1E8A7D3137C2F1B7B3A01D15A1692_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, (Il2CppFullySharedGenericAny*)___1_value, method);
+}
+inline Il2CppFullySharedGenericStruct* AllocatorManager_Allocate_TisAllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148_TisIl2CppFullySharedGenericStruct_m93C704405E17E59888DFF4A94275FE03009F16D8 (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148* ___0_t, Il2CppFullySharedGenericStruct ___1_u, int32_t ___2_items, const RuntimeMethod* method)
+{
+	return ((  Il2CppFullySharedGenericStruct* (*) (Il2CppFullySharedGenericStruct*, Il2CppFullySharedGenericStruct, int32_t, const RuntimeMethod*))AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_m0EABE0B1B2068441A3F575974A2603420E428E12_fshared)((Il2CppFullySharedGenericStruct*)___0_t, ___1_u, ___2_items, method);
+}
+inline int32_t UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_inline (const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_fshared_inline)(method);
+}
+inline int32_t UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_inline (const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_fshared_inline)(method);
+}
+inline void* AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_mC90FE69E6FB94B1EDDFC81D29625CAB1468D5173 (Il2CppFullySharedGenericStruct* ___0_t, int32_t ___1_sizeOf, int32_t ___2_alignOf, int32_t ___3_items, const RuntimeMethod* method)
+{
+	return ((  void* (*) (Il2CppFullySharedGenericStruct*, int32_t, int32_t, int32_t, const RuntimeMethod*))AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_mC90FE69E6FB94B1EDDFC81D29625CAB1468D5173_fshared)(___0_t, ___1_sizeOf, ___2_alignOf, ___3_items, method);
+}
+inline Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 AllocatorManager_AllocateBlock_TisIl2CppFullySharedGenericStruct_mF04F260543AD3905A083FEBFC5A5F6DCF60EDE7C (Il2CppFullySharedGenericStruct* ___0_t, int32_t ___1_sizeOf, int32_t ___2_alignOf, int32_t ___3_items, const RuntimeMethod* method)
+{
+	return ((  Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 (*) (Il2CppFullySharedGenericStruct*, int32_t, int32_t, int32_t, const RuntimeMethod*))AllocatorManager_AllocateBlock_TisIl2CppFullySharedGenericStruct_mF04F260543AD3905A083FEBFC5A5F6DCF60EDE7C_fshared)(___0_t, ___1_sizeOf, ___2_alignOf, ___3_items, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* IntPtr_op_Explicit_m2728CBA081E79B97DDCF1D4FAD77B309CA1E94BF (intptr_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t math_max_m5EE58D9462EC2A39BDE97B0C27BB14CF4A0DB651_inline (int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Block_set_Alignment_m4E74D90E827C5F58B3EBE91B2F5B097388E0500F (Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* Unmanaged_Allocate_m7310B1FE896DEFFA18303D961C9859C8FF3D21E5 (int64_t ___0_size, int32_t ___1_align, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___2_allocator, const RuntimeMethod* method) ;
+inline Il2CppFullySharedGenericStruct* UnsafeUtility_AsRef_TisIl2CppFullySharedGenericStruct_m78B0690121A96EFFDA7D6D3ADAF97940CF8136BE_inline (void* ___0_ptr, const RuntimeMethod* method)
+{
+	return ((  Il2CppFullySharedGenericStruct* (*) (void*, const RuntimeMethod*))UnsafeUtility_AsRef_TisIl2CppFullySharedGenericStruct_m78B0690121A96EFFDA7D6D3ADAF97940CF8136BE_fshared_inline)(___0_ptr, method);
+}
+inline void AllocatorManager_Register_TisIl2CppFullySharedGenericStruct_mF147D5344F44C9D73EE0A38448CDCCBD8931FEA9 (Il2CppFullySharedGenericStruct* ___0_t, bool ___1_IsAutoDispose, bool ___2_isGlobal, int32_t ___3_globalIndex, const RuntimeMethod* method)
+{
+	((  void (*) (Il2CppFullySharedGenericStruct*, bool, bool, int32_t, const RuntimeMethod*))AllocatorManager_Register_TisIl2CppFullySharedGenericStruct_mF147D5344F44C9D73EE0A38448CDCCBD8931FEA9_fshared)(___0_t, ___1_IsAutoDispose, ___2_isGlobal, ___3_globalIndex, method);
+}
+inline void AllocatorManager_Unregister_TisIl2CppFullySharedGenericStruct_m1782C417767DBDCC0F33DE0B0ACCEE7BE0C9570D (Il2CppFullySharedGenericStruct* ___0_t, const RuntimeMethod* method)
+{
+	((  void (*) (Il2CppFullySharedGenericStruct*, const RuntimeMethod*))AllocatorManager_Unregister_TisIl2CppFullySharedGenericStruct_m1782C417767DBDCC0F33DE0B0ACCEE7BE0C9570D_fshared)(___0_t, method);
+}
+inline void* UnsafeUtility_AddressOf_TisIl2CppFullySharedGenericStruct_m8D42BD9F3A34A0C9A6BF4AA6104B9DAE7B629DE7_inline (Il2CppFullySharedGenericStruct* ___0_output, const RuntimeMethod* method)
+{
+	return ((  void* (*) (Il2CppFullySharedGenericStruct*, const RuntimeMethod*))UnsafeUtility_AddressOf_TisIl2CppFullySharedGenericStruct_m8D42BD9F3A34A0C9A6BF4AA6104B9DAE7B629DE7_fshared_inline)(___0_output, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Unmanaged_Free_m09F6EA89F368ED2C9E5EC5EA60C894C4434F4FD1 (void* ___0_pointer, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___1_allocator, const RuntimeMethod* method) ;
+inline void AllocatorManager_Free_TisAllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148_TisIl2CppFullySharedGenericStruct_mB75CC98B852CC6B46BBB09CE776178929311F11A (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148* ___0_t, Il2CppFullySharedGenericStruct* ___1_pointer, int32_t ___2_items, const RuntimeMethod* method)
+{
+	((  void (*) (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148*, Il2CppFullySharedGenericStruct*, int32_t, const RuntimeMethod*))AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_mD4F26E4C816E71D730D23642B46E9C40DB139DE5_fshared)(___0_t, ___1_pointer, ___2_items, method);
+}
+inline void AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_mDBB8A012EA9B6286BBF754ABC553D87E29E2084C (Il2CppFullySharedGenericStruct* ___0_t, void* ___1_pointer, int32_t ___2_sizeOf, int32_t ___3_alignOf, int32_t ___4_items, const RuntimeMethod* method)
+{
+	((  void (*) (Il2CppFullySharedGenericStruct*, void*, int32_t, int32_t, int32_t, const RuntimeMethod*))AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_mDBB8A012EA9B6286BBF754ABC553D87E29E2084C_fshared)(___0_t, ___1_pointer, ___2_sizeOf, ___3_alignOf, ___4_items, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t IntPtr_op_Explicit_mE2CEC14C61FD5E2159A03EA2AD97F5CDC5BB9F4D (void* ___0_value, const RuntimeMethod* method) ;
+inline void AllocatorManager_FreeBlock_TisIl2CppFullySharedGenericStruct_m44D182E4FE9D7ACB24809B27EAF206F1538A71E3 (Il2CppFullySharedGenericStruct* ___0_t, Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3* ___1_block, const RuntimeMethod* method)
+{
+	((  void (*) (Il2CppFullySharedGenericStruct*, Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3*, const RuntimeMethod*))AllocatorManager_FreeBlock_TisIl2CppFullySharedGenericStruct_m44D182E4FE9D7ACB24809B27EAF206F1538A71E3_fshared)(___0_t, ___1_block, method);
+}
+inline void FunctionPointer_1__ctor_mEF7003D84F3F237841EAE974B1928ACDF564F51D_inline (FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF* __this, intptr_t ___0_ptr, const RuntimeMethod* method)
+{
+	((  void (*) (FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF*, intptr_t, const RuntimeMethod*))FunctionPointer_1__ctor_m539FE4A638EAB194C030CB25B52DBB1BADEA6E5A_fshared_inline)(__this, ___0_ptr, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Delegate_op_Inequality_mA9EAADBA0C976289CCD49DC5A4BEDBB060B579E0 (Delegate_t* ___0_d1, Delegate_t* ___1_d2, const RuntimeMethod* method) ;
+inline FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF BurstCompiler_CompileFunctionPointer_TisTryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA_m6382E4A1B7D58FC335FB65886ACE11A8AAABB0CB (TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* ___0_delegateMethod, const RuntimeMethod* method)
+{
+	return ((  FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF (*) (TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA*, const RuntimeMethod*))BurstCompiler_CompileFunctionPointer_TisIl2CppSharedGenericObject_m56881AF9D74018BA2CDE51DE51F9700B6BD85134_gshared)(___0_delegateMethod, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 AllocatorManager_Register_mAB35952EFC6967DC1EC3A397BB9400CD4F4509B9 (intptr_t ___0_allocatorState, FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF ___1_functionPointer, bool ___2_IsAutoDispose, bool ___3_isGlobal, int32_t ___4_globalIndex, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Managed_RegisterDelegate_m494ED81F0C1945174DD1E82D6711EB329255E36F (int32_t ___0_index, TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* ___1_function, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AllocatorHandle_get_IsInstalled_mB38CD887177A87128DC9A2DE6F866F9EC18FA907 (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorHandle_Install_m0526A06766A02754698DE0115B926C15566CDD3B (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148* __this, TableEntry_t5E44AFA7857A41AC654D7F248FD36B15D7835FFE ___0_tableEntry, const RuntimeMethod* method) ;
+inline Long1024_tEE887C506947419DC829213E6C7483D80AF5659F* SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5 (SharedStatic_1_t30E47B9FE97163C57461A13B0C4509349C109FD5* __this, const RuntimeMethod* method)
+{
+	return ((  Long1024_tEE887C506947419DC829213E6C7483D80AF5659F* (*) (SharedStatic_1_t30E47B9FE97163C57461A13B0C4509349C109FD5*, const RuntimeMethod*))SharedStatic_1_get_Data_mAFC48834EE1CC1F6BD26B17A0C17C548C182E059_fshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_inline (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148* __this, const RuntimeMethod* method) ;
+inline int32_t ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323 (Long1024_tEE887C506947419DC829213E6C7483D80AF5659F* ___0_t, int32_t ___1_offset, int32_t ___2_bits, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (Long1024_tEE887C506947419DC829213E6C7483D80AF5659F*, int32_t, int32_t, const RuntimeMethod*))ConcurrentMask_TryFree_TisIl2CppFullySharedGenericAny_m7D237A8BFDC8529A2B0AD3B5CCD7249B03FE9245_fshared)(___0_t, ___1_offset, ___2_bits, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorHandle_Dispose_mB74CBC8980962C016A6C85F09D3F94775A2C58E3 (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Managed_UnregisterDelegate_mE60C615D7705C878A66FB0AA06C7EE86A2359D46 (int32_t ___0_index, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t* AndroidJNI_GetDirectBufferAddress_m0E0B127BFEB7AAF065829DC6AE11163D5616EBE8 (intptr_t ___0_buffer, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t AndroidJNI_GetDirectBufferCapacity_mCAC8D9C8E45481BE59FB17406E1E16D4F9628183 (intptr_t ___0_buffer, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F (Exception_t* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+inline NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisIl2CppFullySharedGenericStruct_m6920C14D4E38FAB84BD2B5F148CE70DF7F224F52 (void* ___0_dataPointer, int32_t ___1_length, int32_t ___2_allocator, const RuntimeMethod* method)
+{
+	return ((  NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 (*) (void*, int32_t, int32_t, const RuntimeMethod*))NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisIl2CppFullySharedGenericStruct_m6920C14D4E38FAB84BD2B5F148CE70DF7F224F52_fshared)(___0_dataPointer, ___1_length, ___2_allocator, method);
+}
+inline bool NativeArray_1_get_IsCreated_m527A2C3B75C25BFF29D1D9EA88C81172FF4F5A5A_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, const RuntimeMethod*))NativeArray_1_get_IsCreated_m527A2C3B75C25BFF29D1D9EA88C81172FF4F5A5A_fshared_inline)(__this, method);
+}
+inline int32_t NativeArray_1_get_Length_mBE5CC8B844994CFC4AB434235F915881575E63C8_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18*, const RuntimeMethod*))NativeArray_1_get_Length_mBE5CC8B844994CFC4AB434235F915881575E63C8_fshared_inline)(__this, method);
+}
+inline void* NativeArrayUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_m4AB802D5B1B296D0F976C1E7631699B0C4A4D00F_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___0_nativeArray, const RuntimeMethod* method)
+{
+	return ((  void* (*) (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18, const RuntimeMethod*))NativeArrayUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_m4AB802D5B1B296D0F976C1E7631699B0C4A4D00F_fshared_inline)(___0_nativeArray, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t AndroidJNI_NewDirectByteBuffer_m17389ED6D98CC0364180BAB43F2747B48FFDB107 (uint8_t* ___0_buffer, int64_t ___1_capacity, const RuntimeMethod* method) ;
+inline void _AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mD6B660A63955117687D6131FC1DB255161D1A2BA (intptr_t ___0_array, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (intptr_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))_AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mD6B660A63955117687D6131FC1DB255161D1A2BA_fshared)(___0_array, il2cppRetVal, method);
+}
+inline intptr_t _AndroidJNIHelper_GetFieldID_TisIl2CppFullySharedGenericAny_m5714D44FF454CB672C9F04F1316533DAD6C6BCBB (intptr_t ___0_jclass, String_t* ___1_fieldName, bool ___2_isStatic, const RuntimeMethod* method)
+{
+	return ((  intptr_t (*) (intptr_t, String_t*, bool, const RuntimeMethod*))_AndroidJNIHelper_GetFieldID_TisIl2CppFullySharedGenericAny_m5714D44FF454CB672C9F04F1316533DAD6C6BCBB_fshared)(___0_jclass, ___1_fieldName, ___2_isStatic, method);
+}
+inline intptr_t _AndroidJNIHelper_GetMethodID_TisIl2CppFullySharedGenericAny_mBB787943D3DB158E741B5FF2B66EFB90237F837C (intptr_t ___0_jclass, String_t* ___1_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___2_args, bool ___3_isStatic, const RuntimeMethod* method)
+{
+	return ((  intptr_t (*) (intptr_t, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, bool, const RuntimeMethod*))_AndroidJNIHelper_GetMethodID_TisIl2CppFullySharedGenericAny_mBB787943D3DB158E741B5FF2B66EFB90237F837C_fshared)(___0_jclass, ___1_methodName, ___2_args, ___3_isStatic, method);
+}
+inline String_t* _AndroidJNIHelper_GetSignature_TisIl2CppFullySharedGenericAny_m5BFF8BF215EBBD2B94DB67B384DAB97E221FA134 (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_args, const RuntimeMethod* method)
+{
+	return ((  String_t* (*) (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*))_AndroidJNIHelper_GetSignature_TisIl2CppFullySharedGenericAny_m5BFF8BF215EBBD2B94DB67B384DAB97E221FA134_fshared)(___0_args, method);
+}
+inline void AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_m4720E88EC57849809AFC4A771495414E75120D8F (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, intptr_t, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_m4720E88EC57849809AFC4A771495414E75120D8F_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_methodID, ___1_args, il2cppRetVal, method);
+}
+inline void AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_mA1A866611778FF72A2067F7E30B32913C4EB4904 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_mA1A866611778FF72A2067F7E30B32913C4EB4904_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_methodName, ___1_args, il2cppRetVal, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Call_m2126160FB635069207535BD0E700C3605FDB3308 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__Call_m4C4D7D7287030773175BDF47681EA018DFA4DF1A (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+inline void AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_m8D1EB1F6B7C8D0B7D54EF55F42BCE6B7576E0953 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, intptr_t, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_m8D1EB1F6B7C8D0B7D54EF55F42BCE6B7576E0953_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_methodID, ___1_args, il2cppRetVal, method);
+}
+inline void AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_mA069934E49E8EFEB980CA5EED2B1DE810C150A68 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_mA069934E49E8EFEB980CA5EED2B1DE810C150A68_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_methodName, ___1_args, il2cppRetVal, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__CallStatic_mE917E474DB9801610FB7ABE5BE749DF84CEFD48A (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject__CallStatic_mD63902D30CD5626DAEAD1D6484AF7A9ACA85590E (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+inline void AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mE2FE04F1AE05E31AFCB6C62A0D8015274310BBE7 (intptr_t ___0_array, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (intptr_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mE2FE04F1AE05E31AFCB6C62A0D8015274310BBE7_fshared)(___0_array, il2cppRetVal, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJNISafe_DeleteLocalRef_m20303564C88A1B90E3D8D7A7D893392E18967094 (intptr_t ___0_localref, const RuntimeMethod* method) ;
+inline void AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m16AE597DA478C33ABF978BB8131126B5C7360D09 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, intptr_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m16AE597DA478C33ABF978BB8131126B5C7360D09_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldID, il2cppRetVal, method);
+}
+inline void AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m6AA7C8A5BE069836640026CB6EDA5D93B3246683 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m6AA7C8A5BE069836640026CB6EDA5D93B3246683_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldName, il2cppRetVal, method);
+}
+inline void AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m265EB43F18C8FB22DCD571C5E50A76642369551D (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, intptr_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m265EB43F18C8FB22DCD571C5E50A76642369551D_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldID, il2cppRetVal, method);
+}
+inline void AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m5FA6F86B221B6AD76DDD71818F721187D59BFC38 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m5FA6F86B221B6AD76DDD71818F721187D59BFC38_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldName, il2cppRetVal, method);
+}
+inline void AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m84E47B5A5FF416288BF85C7F79F287D6FD90356F (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, intptr_t, Il2CppFullySharedGenericAny, const RuntimeMethod*))AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m84E47B5A5FF416288BF85C7F79F287D6FD90356F_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldID, ___1_val, method);
+}
+inline void AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m1AF6344C2EF172B8799D007F4BAC3ECDC182BC22 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, Il2CppFullySharedGenericAny, const RuntimeMethod*))AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m1AF6344C2EF172B8799D007F4BAC3ECDC182BC22_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldName, ___1_val, method);
+}
+inline void AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_m07564225CF639F8502927F2D783809867A34367A (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, intptr_t, Il2CppFullySharedGenericAny, const RuntimeMethod*))AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_m07564225CF639F8502927F2D783809867A34367A_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldID, ___1_val, method);
+}
+inline void AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_mA923EF05918D13946E2452B81B496229D8B952FB (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method)
+{
+	((  void (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, Il2CppFullySharedGenericAny, const RuntimeMethod*))AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_mA923EF05918D13946E2452B81B496229D8B952FB_fshared)((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)__this, ___0_fieldName, ___1_val, method);
+}
+inline int32_t UnsafeUtilityInternal_SizeOf_TisIl2CppFullySharedGenericStruct_m9FC95A845D303A9C72ED4044691DD435A70F994A_inline (const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtilityInternal_SizeOf_TisIl2CppFullySharedGenericStruct_m9FC95A845D303A9C72ED4044691DD435A70F994A_fshared_inline)(method);
+}
+inline int32_t UnsafeUtilityInternal_AlignOf_TisIl2CppFullySharedGenericStruct_m530059660A1E31984686E17CC9E1E8EC5BADDADF_inline (const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtilityInternal_AlignOf_TisIl2CppFullySharedGenericStruct_m530059660A1E31984686E17CC9E1E8EC5BADDADF_fshared_inline)(method);
+}
+inline Il2CppFullySharedGenericStruct* UnsafeUtilityInternal_AsRef_TisIl2CppFullySharedGenericStruct_m4AE204964F54C3F7626BE47CADE4A52CF2797B6B_inline (void* ___0_ptr, const RuntimeMethod* method)
+{
+	return ((  Il2CppFullySharedGenericStruct* (*) (void*, const RuntimeMethod*))UnsafeUtilityInternal_AsRef_TisIl2CppFullySharedGenericStruct_m4AE204964F54C3F7626BE47CADE4A52CF2797B6B_fshared_inline)(___0_ptr, method);
+}
+inline void* UnsafeUtilityInternal_AddressOf_TisIl2CppFullySharedGenericStruct_m4556F0DE0C4C5FAA9B2E203DD1D76CC0B1FE567C_inline (Il2CppFullySharedGenericStruct* ___0_output, const RuntimeMethod* method)
+{
+	return ((  void* (*) (Il2CppFullySharedGenericStruct*, const RuntimeMethod*))UnsafeUtilityInternal_AddressOf_TisIl2CppFullySharedGenericStruct_m4556F0DE0C4C5FAA9B2E203DD1D76CC0B1FE567C_fshared_inline)(___0_output, method);
+}
+inline int32_t UnsafeUtilityInternal_SizeOf_TisAlignOfHelper_1_tA18DF2C95F416AEB06D5F0702F37CBD85E8A7FB8_m934B08DAF1EA7B249CA769E8DCA4EBAC6AEB1885_inline (const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (const RuntimeMethod*))UnsafeUtilityInternal_SizeOf_TisIl2CppFullySharedGenericStruct_m9FC95A845D303A9C72ED4044691DD435A70F994A_fshared_inline)(method);
+}
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void Activator_CreateInstance_TisIl2CppFullySharedGenericAny_m68F3B5F53DBB1741E028DA541BE07A3D2382138D_fshared (Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	CHECKED_LOCAL(Type_t_StaticInit);
+	const uint32_t SizeOf_T_t7DFA7E7752C6CB82AD96769CC7307709CB5ACD3B = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_7 = alloca(SizeOf_T_t7DFA7E7752C6CB82AD96769CC7307709CB5ACD3B);
+	//<source_info:<no-source>:1>
+	int32_t V_0 = 0;
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* G_B2_0 = NULL;
+	RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* G_B1_0 = NULL;
+	{
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_0 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Type_t* L_1;
+		L_1 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_0, NULL);
+		RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1* L_2 = ((RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1*)IsInstClass((RuntimeObject*)L_1, RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1_il2cpp_TypeInfo_var));
+		NullCheck(L_2);
+		bool L_3;
+		L_3 = Type_get_HasElementType_m44F9601E586D2EEA2EDB93FB81D1D80521C264EE(L_2, NULL);
+		if (!L_3)
+		{
+			G_B2_0 = L_2;
+			goto IL_0027;
+		}
+		G_B1_0 = L_2;
+	}
+	{
+		String_t* L_4;
+		L_4 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD06FDE4FC2CBD6E5FAFE1400B04AC8E4F3001D0C)), NULL);
+		MissingMethodException_t3D861B41F6520C32A7994A884343802925703155* L_5 = (MissingMethodException_t3D861B41F6520C32A7994A884343802925703155*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MissingMethodException_t3D861B41F6520C32A7994A884343802925703155_il2cpp_TypeInfo_var)));
+		MissingMethodException__ctor_mAA7B921D386638F5F7B7E427EC5881150258C838(L_5, L_4, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, method);
+	}
+
+IL_0027:
+	{
+		V_0 = 1;
+		NullCheck(G_B2_0);
+		RuntimeObject* L_6;
+		L_6 = RuntimeType_CreateInstanceDefaultCtor_m049DF408DA0C9B09F8964B90B62456E3A1F135C6(G_B2_0, (bool)1, (bool)1, (bool)1, (bool)1, (&V_0), NULL);
+		void* L_8 = UnBox_Any(L_6, il2cpp_rgctx_data(method->rgctx_data, 1), L_7);
+		il2cpp_codegen_memcpy(il2cppRetVal, (((Il2CppFullySharedGenericAny)(Il2CppFullySharedGenericAny*)L_8)), SizeOf_T_t7DFA7E7752C6CB82AD96769CC7307709CB5ACD3B);
+		return;
+	}
+}
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 3343
+// Method Definition Index: 71150
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_TisIl2CppSharedGenericObject_m781DD3D4A86DAE2D7A3F31DD07A1A4B6C4ACFFB7_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, int32_t ___1_scopeTransitionType, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_Enqueue_mEC947B45B7F992351EFE2AD95F9D29AB3165DA96_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_get_Count_mBDB81B637CD62D30A1C0B03D246CE38660A6FB1C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral07AFEE37B4EEA247E58EACE22E28DEF694A4927A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFF3F5572DC5BB6A7D025C792614F24AE73C2D8FC);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit);
+	ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992* V_0 = NULL;
+	bool V_1 = false;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope), (&___1_scopeTransitionType), (&___2_alsoExitNestedScopes));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1336));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 1337));
+	ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* G_B9_0 = NULL;
+	ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* G_B8_0 = NULL;
+	int32_t G_B10_0 = 0;
+	ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* G_B10_1 = NULL;
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:617>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1338));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_lifecycleScope;
+		int32_t L_1 = ___1_scopeTransitionType;
+		bool L_2 = ___2_alsoExitNestedScopes;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1339));
+		ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992* L_3 = (ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992*)il2cpp_codegen_object_new(il2cpp_rgctx_data(method->rgctx_data, 0));
+		ScopeTransitionRequestWithContext_1__ctor_m7A1A1AC74D13C0C6C043707C1E237708A5B7B9B9(L_3, L_0, L_1, L_2, il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1339));
+		V_0 = L_3;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:619>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1340));
+		Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* L_4 = __this->____transitionRequestQueue;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1341));
+		NullCheck(L_4);
+		int32_t L_5;
+		L_5 = Queue_1_get_Count_mBDB81B637CD62D30A1C0B03D246CE38660A6FB1C_inline(L_4, Queue_1_get_Count_mBDB81B637CD62D30A1C0B03D246CE38660A6FB1C_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1341));
+		V_1 = (bool)((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:620>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1342));
+		bool L_6 = V_1;
+		if (L_6)
+		{
+			goto IL_004a;
+		}
+	}
+	{
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_7 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1343));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_7);
+		bool L_8;
+		L_8 = LifecycleScopeBase_get_AllowNestedTransitions_mEF03BE23B67C81955948C2C709D01AB9B71F0345_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_7, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1343));
+		if (!L_8)
+		{
+			goto IL_004a;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:622>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1344));
+		ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992* L_9 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1345));
+		NullCheck((ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16*)L_9);
+		LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_10;
+		L_10 = ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_inline((ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16*)L_9, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1345));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1346));
+		NullCheck(L_10);
+		String_t* L_11;
+		L_11 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline(L_10, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1346));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_12 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1347));
+		NullCheck(L_12);
+		Il2CppSharedGenericObject* L_13;
+		L_13 = LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_inline(L_12, il2cpp_rgctx_method(method->rgctx_data, 2));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1347));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1348));
+		String_t* L_14;
+		L_14 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral07AFEE37B4EEA247E58EACE22E28DEF694A4927A, L_11, (RuntimeObject*)L_13, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1348));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1349));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_14, (bool)1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1349));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:623>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1350));
+		return;
+	}
+
+IL_004a:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:626>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1351));
+		Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* L_15 = __this->____transitionRequestQueue;
+		ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992* L_16 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1352));
+		NullCheck(L_15);
+		Queue_1_Enqueue_mEC947B45B7F992351EFE2AD95F9D29AB3165DA96(L_15, (ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16*)L_16, Queue_1_Enqueue_mEC947B45B7F992351EFE2AD95F9D29AB3165DA96_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1352));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:627>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1353));
+		bool L_17 = V_1;
+		if (L_17)
+		{
+			goto IL_0080;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:629>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1354));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1355));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		bool L_18;
+		L_18 = DebugLifecycle_get_LoggingEnabled_mADB463016DF27BC61A483A646E5B999ABB3A8D94_inline(NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1355));
+		if (!L_18)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:630>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1356));
+		ScopeTransitionRequestWithContext_1_t7D86FB5BB8860C08CD532994E81CE06405D87992* L_19 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1357));
+		NullCheck((ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16*)L_19);
+		LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_20;
+		L_20 = ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_inline((ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16*)L_19, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1357));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1358));
+		NullCheck(L_20);
+		String_t* L_21;
+		L_21 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline(L_20, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1358));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1359));
+		String_t* L_22;
+		L_22 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralFF3F5572DC5BB6A7D025C792614F24AE73C2D8FC, L_21, _stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1359));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1360));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_Log_mF5AF374C4A49186C856B489B40F56163BE723BBB(L_22, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1360));
+	}
+
+IL_007f:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:632>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1361));
+		return;
+	}
+
+IL_0080:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:637>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1362));
+		bool L_23 = V_1;
+		if (!L_23)
+		{
+			G_B9_0 = __this;
+			goto IL_008c;
+		}
+		G_B8_0 = __this;
+	}
+	{
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_24 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1363));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_24);
+		bool L_25;
+		L_25 = LifecycleScopeBase_get_AllowNestedTransitions_mEF03BE23B67C81955948C2C709D01AB9B71F0345_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_24, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1363));
+		G_B10_0 = ((int32_t)(L_25));
+		G_B10_1 = G_B8_0;
+		goto IL_008d;
+	}
+
+IL_008c:
+	{
+		G_B10_0 = 0;
+		G_B10_1 = G_B9_0;
+	}
+
+IL_008d:
+	{
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1364));
+		NullCheck(G_B10_1);
+		ActiveLifecycleScopesTracker_ExecuteTransitions_m5EFD022DEA5213ACB1E9DF082B376BB6C43FE2D0(G_B10_1, (bool)G_B10_0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1364));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:638>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1365));
+		return;
+	}
+}
+// Method Definition Index: 71131
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsInsideScope_TisIl2CppSharedGenericObject_m24EFB513F5A18B9400EB5F08E463BF44AF9EA8CE_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Keys_m9CB10267CF4FC83CDDD3FDC4B898C73488C93FB8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mD343B871CBC9CC3590A9CB7326BB5E263AD03BE1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mFEAE796204BD77488174AB22E0DE4C2721159335_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m21C7125C1D35261357C56A874C207249FC3E4F4A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyCollection_GetEnumerator_mB40FC79A8A11DB8F002E9192693045C2F194E3E7_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(Type_t_StaticInit);
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	bool V_3 = false;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_2));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, NULL, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 797));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 798));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:221>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 799));
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_0 = { reinterpret_cast<intptr_t> (LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB_0_0_0_var) };
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 800));
+		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Type_t* L_1;
+		L_1 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 800));
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_2 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 801));
+		Type_t* L_3;
+		L_3 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 801));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 802));
+		NullCheck(L_1);
+		bool L_4;
+		L_4 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(23, L_1, L_3);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 802));
+		if (!L_4)
+		{
+			goto IL_0039;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:223>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 803));
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_5 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 804));
+		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Type_t* L_6;
+		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 804));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 805));
+		LifecycleScopeKey__ctor_m7DCCBE2ED25A7746808F3555AB845EE71FEB6A71((&V_0), L_6, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 805));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:224>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 806));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_7 = __this->____activeScopes;
+		LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_8 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 807));
+		NullCheck(L_7);
+		bool L_9;
+		L_9 = Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281(L_7, L_8, Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 807));
+		return L_9;
+	}
+
+IL_0039:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:228>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 808));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_10 = __this->____activeScopes;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 809));
+		NullCheck(L_10);
+		KeyCollection_t59AB6D7A56AAB8B527E4EEBED39397629A9430E0* L_11;
+		L_11 = Dictionary_2_get_Keys_m9CB10267CF4FC83CDDD3FDC4B898C73488C93FB8(L_10, Dictionary_2_get_Keys_m9CB10267CF4FC83CDDD3FDC4B898C73488C93FB8_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 809));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 810));
+		NullCheck(L_11);
+		Enumerator_t1D172B50FF172AB824E07EA102C607D9282D3CAE L_12;
+		L_12 = KeyCollection_GetEnumerator_mB40FC79A8A11DB8F002E9192693045C2F194E3E7(L_11, KeyCollection_GetEnumerator_mB40FC79A8A11DB8F002E9192693045C2F194E3E7_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 810));
+		V_1 = L_12;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_007b:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 821));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 822));
+				Enumerator_Dispose_mD343B871CBC9CC3590A9CB7326BB5E263AD03BE1((&V_1), Enumerator_Dispose_mD343B871CBC9CC3590A9CB7326BB5E263AD03BE1_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 822));
+				return;
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 0);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 811));
+				goto IL_0070_1;
+			}
+
+IL_004c_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:228>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 812));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 813));
+				LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_13;
+				L_13 = Enumerator_get_Current_m21C7125C1D35261357C56A874C207249FC3E4F4A_inline((&V_1), Enumerator_get_Current_m21C7125C1D35261357C56A874C207249FC3E4F4A_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 813));
+				V_2 = L_13;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:230>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 814));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 815));
+				Type_t* L_14;
+				L_14 = LifecycleScopeKey_get_Type_mEC585239B2BC794EDFDE68B89A6533971E12C752_inline((&V_2), NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 815));
+				RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_15 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 816));
+				CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+				Type_t* L_16;
+				L_16 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_15, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 816));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 817));
+				bool L_17;
+				L_17 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_14, L_16, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 817));
+				if (!L_17)
+				{
+					goto IL_0070_1;
+				}
+			}
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:232>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 818));
+				V_3 = (bool)1;
+				goto IL_008b;
+			}
+
+IL_0070_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:228>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 819));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 820));
+				bool L_18;
+				L_18 = Enumerator_MoveNext_mFEAE796204BD77488174AB22E0DE4C2721159335((&V_1), Enumerator_MoveNext_mFEAE796204BD77488174AB22E0DE4C2721159335_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 820));
+				if (L_18)
+				{
+					goto IL_004c_1;
+				}
+			}
+			{
+				goto IL_0089;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0089:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:235>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 823));
+		return (bool)0;
+	}
+
+IL_008b:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:236>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 824));
+		bool L_19 = V_3;
+		return L_19;
+	}
+}
+// Method Definition Index: 71134
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_m65AF7C880B3A8B7B6F7C6F59C699EA3FC8FC1BEE_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_scopeWithContext, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_scopeWithContext));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 839));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 840));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:255>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 841));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_scopeWithContext;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 842));
+		NullCheck((RuntimeObject*)L_0);
+		Type_t* L_1;
+		L_1 = il2cpp_codegen_object_get_type((RuntimeObject*)L_0);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 842));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_2 = ___0_scopeWithContext;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 843));
+		NullCheck(L_2);
+		Il2CppSharedGenericObject* L_3;
+		L_3 = LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_inline(L_2, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 843));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 844));
+		LifecycleScopeKey__ctor_m3BFDFB377FD3F489668C9B18AF174EF462838E6C((&V_0), L_1, (RuntimeObject*)L_3, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 844));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:256>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 845));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_4 = __this->____activeScopes;
+		LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_5 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 846));
+		NullCheck(L_4);
+		bool L_6;
+		L_6 = Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281(L_4, L_5, Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 846));
+		return L_6;
+	}
+}
+// Method Definition Index: 71133
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_TisIl2CppSharedGenericObject_m5267E4C686C348E337CB4A9ED51372D608957B0F_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Il2CppSharedGenericObject* ___0_scopeContext, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(Type_t_StaticInit);
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_scopeContext));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 832));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 833));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:248>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 834));
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_0 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 835));
+		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Type_t* L_1;
+		L_1 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 835));
+		Il2CppSharedGenericObject* L_2 = ___0_scopeContext;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 836));
+		LifecycleScopeKey__ctor_m3BFDFB377FD3F489668C9B18AF174EF462838E6C((&V_0), L_1, (RuntimeObject*)L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 836));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:249>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 837));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_3 = __this->____activeScopes;
+		LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_4 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 838));
+		NullCheck(L_3);
+		bool L_5;
+		L_5 = Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281(L_3, L_4, Dictionary_2_ContainsKey_m43D6ABEDBE5F0A936823EEB675589E5EAFD43281_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 838));
+		return L_5;
+	}
+}
+// Method Definition Index: 71136
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_IsOrWillBeInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_TisIl2CppSharedGenericObject_m419B96676C8763DBFC6F67EFD3F1F972EBBC03B0_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Il2CppSharedGenericObject* ___0_activationContext, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5560B98567B989C4754E5C182136BE4AC88848CB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m4CA597288EC15016493B62A210A4A63E27177117_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m132E4E286C55B63A011879B1F62299A7E6CF8DE2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_GetEnumerator_m311A1E04C52E396219D02261B478965B9C97BD3D_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	bool V_0 = false;
+	Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* V_2 = NULL;
+	Il2CppSharedGenericObject* V_3 = NULL;
+	bool V_4 = false;
+	int32_t V_5 = 0;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_activationContext));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_2), (&V_3));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 873));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 874));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:282>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 875));
+		Il2CppSharedGenericObject* L_0 = ___0_activationContext;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 876));
+		bool L_1;
+		L_1 = ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_TisIl2CppSharedGenericObject_m5267E4C686C348E337CB4A9ED51372D608957B0F(__this, L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 876));
+		V_0 = L_1;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:283>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 877));
+		Queue_1_t0213AA1BB5D12D3BCD5727E71F92BE13870D391A* L_2 = __this->____transitionRequestQueue;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 878));
+		NullCheck(L_2);
+		Enumerator_t6E1C3DAF9D5E130F31F921E6BBBA1D4E27891201 L_3;
+		L_3 = Queue_1_GetEnumerator_m311A1E04C52E396219D02261B478965B9C97BD3D(L_2, Queue_1_GetEnumerator_m311A1E04C52E396219D02261B478965B9C97BD3D_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 878));
+		V_1 = L_3;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_007d:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 893));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 894));
+				Enumerator_Dispose_m5560B98567B989C4754E5C182136BE4AC88848CB((&V_1), Enumerator_Dispose_m5560B98567B989C4754E5C182136BE4AC88848CB_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 894));
+				return;
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 0);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 879));
+				goto IL_0072_1;
+			}
+
+IL_0016_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:283>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 880));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 881));
+				ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* L_4;
+				L_4 = Enumerator_get_Current_m132E4E286C55B63A011879B1F62299A7E6CF8DE2((&V_1), Enumerator_get_Current_m132E4E286C55B63A011879B1F62299A7E6CF8DE2_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 881));
+				V_2 = L_4;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:285>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 882));
+				ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* L_5 = V_2;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 883));
+				NullCheck(L_5);
+				LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_6;
+				L_6 = ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_inline(L_5, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 883));
+				V_3 = ((Il2CppSharedGenericObject*)IsInst((RuntimeObject*)L_6, il2cpp_rgctx_data(method->rgctx_data, 1)));
+				Il2CppSharedGenericObject* L_7 = V_3;
+				if (!L_7)
+				{
+					goto IL_0072_1;
+				}
+			}
+			{
+				Il2CppSharedGenericObject* L_8 = V_3;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 884));
+				NullCheck((LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*)L_8);
+				Il2CppSharedGenericObject* L_9;
+				L_9 = LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_inline((LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599*)L_8, il2cpp_rgctx_method(method->rgctx_data, 2));
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 884));
+				Il2CppSharedGenericObject* L_10 = ___0_activationContext;
+				if ((!(((RuntimeObject*)(Il2CppSharedGenericObject*)L_9) == ((RuntimeObject*)(Il2CppSharedGenericObject*)L_10))))
+				{
+					goto IL_0072_1;
+				}
+			}
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:288>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 885));
+				ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* L_11 = V_2;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 886));
+				NullCheck(L_11);
+				int32_t L_12;
+				L_12 = ScopeTransitionRequestBase_get_TransitionType_m64E9CBFD2036C2727F62B4276B07594B1AD0244B_inline(L_11, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 886));
+				V_5 = L_12;
+				int32_t L_13 = V_5;
+				if (!L_13)
+				{
+					goto IL_0062_1;
+				}
+			}
+			{
+				int32_t L_14 = V_5;
+				if ((((int32_t)L_14) == ((int32_t)1)))
+				{
+					goto IL_0067_1;
+				}
+			}
+			{
+				goto IL_006c_1;
+			}
+
+IL_0062_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:290>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 887));
+				V_4 = (bool)1;
+				goto IL_006f_1;
+			}
+
+IL_0067_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:291>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 888));
+				V_4 = (bool)0;
+				goto IL_006f_1;
+			}
+
+IL_006c_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:292>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 889));
+				bool L_15 = V_0;
+				V_4 = L_15;
+			}
+
+IL_006f_1:
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 890));
+				bool L_16 = V_4;
+				V_0 = L_16;
+			}
+
+IL_0072_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:283>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 891));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 892));
+				bool L_17;
+				L_17 = Enumerator_MoveNext_m4CA597288EC15016493B62A210A4A63E27177117((&V_1), Enumerator_MoveNext_m4CA597288EC15016493B62A210A4A63E27177117_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 892));
+				if (L_17)
+				{
+					goto IL_0016_1;
+				}
+			}
+			{
+				goto IL_008b;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_008b:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:296>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 895));
+		bool L_18 = V_0;
+		return L_18;
+	}
+}
+// Method Definition Index: 71139
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_PrepareTryEnterScope_TisIl2CppSharedGenericObject_m1169BAF322245C6864C2461777208938DEC47599_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Il2CppSharedGenericObject* ___0_lifecycleScope, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t73FD060C436E3C4264A734C8F8DCC01DFF6046B8_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral13E8ABAF4FCA9340FD639F44DC79CC73FDE724C1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral84DED65F0B23E6F91065E5F2EFCC5631A498E3E4);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC5C3A106612C3457D1A199E43E729AE62EDAD988);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCC59788671EF0B981BF46F9F140D4B1454A1146D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3);
+		s_Il2CppMethodInitialized = true;
+	}
+	CHECKED_LOCAL(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit);
+	bool V_0 = false;
+	RuntimeObject* V_1 = NULL;
+	String_t* V_2 = NULL;
+	bool V_3 = false;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_2));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 920));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 921));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:333>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 922));
+		Il2CppSharedGenericObject* L_0 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 923));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_0);
+		RuntimeObject* L_1;
+		L_1 = LifecycleScopeBase_get_RequiredOuterScopes_mE1B35D619BCE1A19CF63F53E917F8D86731225B7((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 923));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:334>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 924));
+		V_0 = (bool)1;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:335>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 925));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 926));
+		NullCheck(L_1);
+		RuntimeObject* L_2;
+		L_2 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44_il2cpp_TypeInfo_var, L_1);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 926));
+		V_1 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0070:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				{
+					CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 940));
+					RuntimeObject* L_3 = V_1;
+					if (!L_3)
+					{
+						goto IL_0079;
+					}
+				}
+				{
+					RuntimeObject* L_4 = V_1;
+					STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 941));
+					NullCheck(L_4);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_4);
+					CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 941));
+				}
+
+IL_0079:
+				{
+					CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 942));
+					return;
+				}
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 0);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 927));
+				goto IL_0066_1;
+			}
+
+IL_0015_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:335>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 928));
+				RuntimeObject* L_5 = V_1;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 929));
+				NullCheck(L_5);
+				String_t* L_6;
+				L_6 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IEnumerator_1_t73FD060C436E3C4264A734C8F8DCC01DFF6046B8_il2cpp_TypeInfo_var, L_5);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 929));
+				V_2 = L_6;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:338>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 930));
+				String_t* L_7 = V_2;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 931));
+				bool L_8;
+				L_8 = ActiveLifecycleScopesTracker_IsInsideScope_m326DF0210C805B6FEFF0848D0A1C1891D1AD8ABE(__this, L_7, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 931));
+				if (L_8)
+				{
+					goto IL_0066_1;
+				}
+			}
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:341>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 932));
+				V_0 = (bool)0;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:342>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 933));
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_9;
+				NullCheck(L_10);
+				(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = L_10;
+				Il2CppSharedGenericObject* L_12 = ___0_lifecycleScope;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 934));
+				NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_12);
+				String_t* L_13;
+				L_13 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_12, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 934));
+				NullCheck(L_11);
+				(L_11)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_13);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = L_11;
+				NullCheck(L_14);
+				(L_14)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralC5C3A106612C3457D1A199E43E729AE62EDAD988);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = L_14;
+				String_t* L_16 = V_2;
+				NullCheck(L_15);
+				(L_15)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_16);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_17 = L_15;
+				NullCheck(L_17);
+				(L_17)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral13E8ABAF4FCA9340FD639F44DC79CC73FDE724C1);
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 935));
+				String_t* L_18;
+				L_18 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_17, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 935));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 936));
+				CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+				DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_18, (bool)1, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 936));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:343>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 937));
+				V_3 = (bool)0;
+				goto IL_00d1;
+			}
+
+IL_0066_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:335>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 938));
+				RuntimeObject* L_19 = V_1;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 939));
+				NullCheck(L_19);
+				bool L_20;
+				L_20 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_19);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 939));
+				if (L_20)
+				{
+					goto IL_0015_1;
+				}
+			}
+			{
+				goto IL_007a;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_007a:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:347>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 943));
+		bool L_21 = V_0;
+		if (L_21)
+		{
+			goto IL_009f;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:349>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 944));
+		Il2CppSharedGenericObject* L_22 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 945));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_22);
+		String_t* L_23;
+		L_23 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_22, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 945));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 946));
+		String_t* L_24;
+		L_24 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3, L_23, _stringLiteral84DED65F0B23E6F91065E5F2EFCC5631A498E3E4, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 946));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 947));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_24, (bool)1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 947));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:350>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 948));
+		return (bool)0;
+	}
+
+IL_009f:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:353>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 949));
+		Il2CppSharedGenericObject* L_25 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 950));
+		bool L_26;
+		L_26 = ActiveLifecycleScopesTracker_IsInsideScope_m6A9229A85BC7290BB7CABC0F5726CF29CE197886(__this, (LifecycleScope_tEA98D004E7CFF981DC51524B020E4CBD58D964CB*)L_25, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 950));
+		if (!L_26)
+		{
+			goto IL_00cf;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:355>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 951));
+		Il2CppSharedGenericObject* L_27 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 952));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_27);
+		String_t* L_28;
+		L_28 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_27, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 952));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 953));
+		String_t* L_29;
+		L_29 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3, L_28, _stringLiteralCC59788671EF0B981BF46F9F140D4B1454A1146D, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 953));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 954));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_29, (bool)1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 954));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:356>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 955));
+		return (bool)0;
+	}
+
+IL_00cf:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:359>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 956));
+		return (bool)1;
+	}
+
+IL_00d1:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:360>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 957));
+		bool L_30 = V_3;
+		return L_30;
+	}
+}
+// Method Definition Index: 71140
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_PrepareTryEnterScopeWithContext_TisIl2CppSharedGenericObject_m3D8B69D9E50547113449972B07933BE902744D59_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t73FD060C436E3C4264A734C8F8DCC01DFF6046B8_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral13E8ABAF4FCA9340FD639F44DC79CC73FDE724C1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral84DED65F0B23E6F91065E5F2EFCC5631A498E3E4);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB9EDD49DDBC303A2087668B4B6E4ACAC60995136);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC5C3A106612C3457D1A199E43E729AE62EDAD988);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit);
+	bool V_0 = false;
+	RuntimeObject* V_1 = NULL;
+	String_t* V_2 = NULL;
+	bool V_3 = false;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_2));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 958));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 959));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:365>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 960));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 961));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_0);
+		RuntimeObject* L_1;
+		L_1 = LifecycleScopeBase_get_RequiredOuterScopes_mE1B35D619BCE1A19CF63F53E917F8D86731225B7((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 961));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:366>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 962));
+		V_0 = (bool)1;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:367>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 963));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 964));
+		NullCheck(L_1);
+		RuntimeObject* L_2;
+		L_2 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, IEnumerable_1_t349E66EC5F09B881A8E52EE40A1AB9EC60E08E44_il2cpp_TypeInfo_var, L_1);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 964));
+		V_1 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0066:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				{
+					CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 978));
+					RuntimeObject* L_3 = V_1;
+					if (!L_3)
+					{
+						goto IL_006f;
+					}
+				}
+				{
+					RuntimeObject* L_4 = V_1;
+					STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 979));
+					NullCheck(L_4);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_4);
+					CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 979));
+				}
+
+IL_006f:
+				{
+					CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 980));
+					return;
+				}
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 0);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 965));
+				goto IL_005c_1;
+			}
+
+IL_0010_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:367>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 966));
+				RuntimeObject* L_5 = V_1;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 967));
+				NullCheck(L_5);
+				String_t* L_6;
+				L_6 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IEnumerator_1_t73FD060C436E3C4264A734C8F8DCC01DFF6046B8_il2cpp_TypeInfo_var, L_5);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 967));
+				V_2 = L_6;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:370>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 968));
+				String_t* L_7 = V_2;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 969));
+				bool L_8;
+				L_8 = ActiveLifecycleScopesTracker_IsInsideScope_m326DF0210C805B6FEFF0848D0A1C1891D1AD8ABE(__this, L_7, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 969));
+				if (L_8)
+				{
+					goto IL_005c_1;
+				}
+			}
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:373>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 970));
+				V_0 = (bool)0;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:374>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 971));
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_9;
+				NullCheck(L_10);
+				(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = L_10;
+				LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_12 = ___0_lifecycleScope;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 972));
+				NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_12);
+				String_t* L_13;
+				L_13 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_12, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 972));
+				NullCheck(L_11);
+				(L_11)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_13);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = L_11;
+				NullCheck(L_14);
+				(L_14)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralC5C3A106612C3457D1A199E43E729AE62EDAD988);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = L_14;
+				String_t* L_16 = V_2;
+				NullCheck(L_15);
+				(L_15)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_16);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_17 = L_15;
+				NullCheck(L_17);
+				(L_17)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral13E8ABAF4FCA9340FD639F44DC79CC73FDE724C1);
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 973));
+				String_t* L_18;
+				L_18 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_17, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 973));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 974));
+				CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+				DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_18, (bool)1, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 974));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:375>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 975));
+				V_3 = (bool)0;
+				goto IL_00be;
+			}
+
+IL_005c_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:367>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 976));
+				RuntimeObject* L_19 = V_1;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 977));
+				NullCheck(L_19);
+				bool L_20;
+				L_20 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_19);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 977));
+				if (L_20)
+				{
+					goto IL_0010_1;
+				}
+			}
+			{
+				goto IL_0070;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0070:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:379>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 981));
+		bool L_21 = V_0;
+		if (L_21)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:381>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 982));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_22 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 983));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_22);
+		String_t* L_23;
+		L_23 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_22, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 983));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 984));
+		String_t* L_24;
+		L_24 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralF0C0210C1550DE6C68F93F6E0EEC8AD3FE4F23F3, L_23, _stringLiteral84DED65F0B23E6F91065E5F2EFCC5631A498E3E4, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 984));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 985));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_24, (bool)1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 985));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:382>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 986));
+		return (bool)0;
+	}
+
+IL_0090:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:385>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 987));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_25 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 988));
+		bool L_26;
+		L_26 = ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_m65AF7C880B3A8B7B6F7C6F59C699EA3FC8FC1BEE(__this, L_25, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 988));
+		if (!L_26)
+		{
+			goto IL_00bc;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:387>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 989));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_27 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 990));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_27);
+		String_t* L_28;
+		L_28 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_27, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 990));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_29 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 991));
+		NullCheck(L_29);
+		Il2CppSharedGenericObject* L_30;
+		L_30 = LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_inline(L_29, il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 991));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 992));
+		String_t* L_31;
+		L_31 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralB9EDD49DDBC303A2087668B4B6E4ACAC60995136, L_28, (RuntimeObject*)L_30, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 992));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 993));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_31, (bool)1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 993));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:388>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 994));
+		return (bool)0;
+	}
+
+IL_00bc:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:391>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 995));
+		return (bool)1;
+	}
+
+IL_00be:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:392>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 996));
+		bool L_32 = V_3;
+		return L_32;
+	}
+}
+// Method Definition Index: 71146
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_PrepareTryExitScope_TisIl2CppSharedGenericObject_mB20E9E3D9D7A9E4B5F58A5783EB2EBB2733EF4E7_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, Il2CppSharedGenericObject* ___1_activationContext, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m80B75619D3D43280CFC1D0556BBFE923F8643835_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mD85ED63385062F8013FBC6C57320F2B23C975EFE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m422894DCBE54CC53F8C3729BEE72B601B02C8686_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m3A7E9AECB2ED791F09FADAD0BC7B826FB62A85A4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral00B9D6CD2F31410E688E8B500A17CB53A5159DC7);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral085E2DF95CBA541D8E08411BA60759DB8E782A9E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral190A3A7EF1BCDD282CB0B05FB99BEDDD2405B809);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral24A0D1C954F6F30A64E2AB214561ABB5C363D424);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9C503A4CDCF098739894D1E4B88AEFF08E94B305);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9F7B27B5BF4E1DCCB7582CE12885371A3C21BF8C);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA4EC0E533020275EA02CC859DA22C7578B5C0119);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit);
+	List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14* V_0 = NULL;
+	int32_t V_1 = 0;
+	Enumerator_t624742B8D885649511A5739F11184E2221942252 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* V_4 = NULL;
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* V_5 = NULL;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope), (&___1_activationContext), (&___2_alsoExitNestedScopes));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_4), (&V_5));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1164));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 1165));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:503>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1166));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1167));
+		bool L_1;
+		L_1 = ActiveLifecycleScopesTracker_IsInsideScopeWithActivationContext_TisIl2CppSharedGenericObject_m65AF7C880B3A8B7B6F7C6F59C699EA3FC8FC1BEE(__this, L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1167));
+		if (L_1)
+		{
+			goto IL_0027;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:505>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1168));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_2 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1169));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_2);
+		String_t* L_3;
+		L_3 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1169));
+		Il2CppSharedGenericObject* L_4 = ___1_activationContext;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1170));
+		String_t* L_5;
+		L_5 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral9F7B27B5BF4E1DCCB7582CE12885371A3C21BF8C, L_3, (RuntimeObject*)L_4, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1170));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1171));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_5, (bool)1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1171));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:506>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1172));
+		return (bool)0;
+	}
+
+IL_0027:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:509>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1173));
+		V_0 = (List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14*)NULL;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:510>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1174));
+		V_1 = 0;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:511>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1175));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_6 = __this->____activeScopes;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1176));
+		NullCheck(L_6);
+		ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F* L_7;
+		L_7 = Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49(L_6, Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1176));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1177));
+		NullCheck(L_7);
+		Enumerator_t624742B8D885649511A5739F11184E2221942252 L_8;
+		L_8 = ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE(L_7, ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1177));
+		V_2 = L_8;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_006b:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1189));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1190));
+				Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE((&V_2), Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1190));
+				return;
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 0);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1178));
+				goto IL_0060_1;
+			}
+
+IL_003e_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:511>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1179));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1180));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_9;
+				L_9 = Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_inline((&V_2), Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1180));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:513>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1181));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1182));
+				NullCheck(L_9);
+				LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_10;
+				L_10 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_9, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1182));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1183));
+				NullCheck(L_10);
+				String_t* L_11;
+				L_11 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline(L_10, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1183));
+				LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_12 = ___0_lifecycleScope;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1184));
+				NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_12);
+				String_t* L_13;
+				L_13 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_12, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1184));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1185));
+				bool L_14;
+				L_14 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_11, L_13, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1185));
+				if (!L_14)
+				{
+					goto IL_0060_1;
+				}
+			}
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:515>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1186));
+				int32_t L_15 = V_1;
+				V_1 = ((int32_t)il2cpp_codegen_add(L_15, 1));
+			}
+
+IL_0060_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:511>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1187));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1188));
+				bool L_16;
+				L_16 = Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385((&V_2), Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1188));
+				if (L_16)
+				{
+					goto IL_003e_1;
+				}
+			}
+			{
+				goto IL_0079;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0079:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:519>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1191));
+		int32_t L_17 = V_1;
+		if ((!(((uint32_t)L_17) == ((uint32_t)1))))
+		{
+			goto IL_008b;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:521>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1192));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_18 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1193));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_18);
+		String_t* L_19;
+		L_19 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_18, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1193));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1194));
+		ActiveLifecycleScopesTracker_CollectNestedScopesToExit_m7489DDE99FDA05A011E202D63B4146E96B7761AD(__this, L_19, (&V_0), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1194));
+	}
+
+IL_008b:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:524>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1195));
+		List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14* L_20 = V_0;
+		if (!L_20)
+		{
+			goto IL_01cb;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:526>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1196));
+		bool L_21 = ___2_alsoExitNestedScopes;
+		if (L_21)
+		{
+			goto IL_0120;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:528>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1197));
+		List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14* L_22 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1198));
+		NullCheck(L_22);
+		Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352 L_23;
+		L_23 = List_1_GetEnumerator_m3A7E9AECB2ED791F09FADAD0BC7B826FB62A85A4(L_22, List_1_GetEnumerator_m3A7E9AECB2ED791F09FADAD0BC7B826FB62A85A4_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1198));
+		V_3 = L_23;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00f5:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1210));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1211));
+				Enumerator_Dispose_m80B75619D3D43280CFC1D0556BBFE923F8643835((&V_3), Enumerator_Dispose_m80B75619D3D43280CFC1D0556BBFE923F8643835_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1211));
+				return;
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 1);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1199));
+				goto IL_00ea_1;
+			}
+
+IL_00a0_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:528>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1200));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1201));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_24;
+				L_24 = Enumerator_get_Current_m422894DCBE54CC53F8C3729BEE72B601B02C8686_inline((&V_3), Enumerator_get_Current_m422894DCBE54CC53F8C3729BEE72B601B02C8686_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1201));
+				V_4 = L_24;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:530>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1202));
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_25 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_26 = L_25;
+				NullCheck(L_26);
+				(L_26)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral24A0D1C954F6F30A64E2AB214561ABB5C363D424);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_27 = L_26;
+				LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_28 = ___0_lifecycleScope;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1203));
+				NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_28);
+				String_t* L_29;
+				L_29 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_28, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1203));
+				NullCheck(L_27);
+				(L_27)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_29);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = L_27;
+				NullCheck(L_30);
+				(L_30)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral085E2DF95CBA541D8E08411BA60759DB8E782A9E);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_31 = L_30;
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_32 = V_4;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1204));
+				NullCheck(L_32);
+				LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_33;
+				L_33 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_32, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1204));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1205));
+				NullCheck(L_33);
+				String_t* L_34;
+				L_34 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline(L_33, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1205));
+				NullCheck(L_31);
+				(L_31)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_34);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_35 = L_31;
+				NullCheck(L_35);
+				(L_35)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D);
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1206));
+				String_t* L_36;
+				L_36 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_35, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1206));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1207));
+				CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+				DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_36, (bool)0, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1207));
+			}
+
+IL_00ea_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:528>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1208));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1209));
+				bool L_37;
+				L_37 = Enumerator_MoveNext_mD85ED63385062F8013FBC6C57320F2B23C975EFE((&V_3), Enumerator_MoveNext_mD85ED63385062F8013FBC6C57320F2B23C975EFE_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1209));
+				if (L_37)
+				{
+					goto IL_00a0_1;
+				}
+			}
+			{
+				goto IL_0103;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0103:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:532>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1212));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_38 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1213));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_38);
+		String_t* L_39;
+		L_39 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_38, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1213));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1214));
+		String_t* L_40;
+		L_40 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral00B9D6CD2F31410E688E8B500A17CB53A5159DC7, L_39, _stringLiteral9C503A4CDCF098739894D1E4B88AEFF08E94B305, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1214));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1215));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		DebugLifecycle_ReportError_mDAF7BB6F8AD0C44C843238B5340CBB0F0A76F1B3(L_40, (bool)1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1215));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:533>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1216));
+		return (bool)0;
+	}
+
+IL_0120:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:536>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1217));
+		List_1_t9CDC351A1FD4D84CA6FE8FF3EAD218C909593E14* L_41 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1218));
+		NullCheck(L_41);
+		Enumerator_t01FAC2D987248212FF45463152AFF3B57F39A352 L_42;
+		L_42 = List_1_GetEnumerator_m3A7E9AECB2ED791F09FADAD0BC7B826FB62A85A4(L_41, List_1_GetEnumerator_m3A7E9AECB2ED791F09FADAD0BC7B826FB62A85A4_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1218));
+		V_3 = L_42;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_01bd:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1241));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1242));
+				Enumerator_Dispose_m80B75619D3D43280CFC1D0556BBFE923F8643835((&V_3), Enumerator_Dispose_m80B75619D3D43280CFC1D0556BBFE923F8643835_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1242));
+				return;
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 2);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1219));
+				goto IL_01af_1;
+			}
+
+IL_012c_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:536>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1220));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1221));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_43;
+				L_43 = Enumerator_get_Current_m422894DCBE54CC53F8C3729BEE72B601B02C8686_inline((&V_3), Enumerator_get_Current_m422894DCBE54CC53F8C3729BEE72B601B02C8686_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1221));
+				V_5 = L_43;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:538>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1222));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1223));
+				CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+				bool L_44;
+				L_44 = DebugLifecycle_get_LoggingEnabled_mADB463016DF27BC61A483A646E5B999ABB3A8D94_inline(NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1223));
+				if (!L_44)
+				{
+					goto IL_017c_1;
+				}
+			}
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:539>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1224));
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_45 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_46 = L_45;
+				NullCheck(L_46);
+				(L_46)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteralA4EC0E533020275EA02CC859DA22C7578B5C0119);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_47 = L_46;
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_48 = V_5;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1225));
+				NullCheck(L_48);
+				LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_49;
+				L_49 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_48, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1225));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1226));
+				NullCheck(L_49);
+				String_t* L_50;
+				L_50 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline(L_49, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1226));
+				NullCheck(L_47);
+				(L_47)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_50);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_51 = L_47;
+				NullCheck(L_51);
+				(L_51)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral190A3A7EF1BCDD282CB0B05FB99BEDDD2405B809);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_52 = L_51;
+				LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_53 = ___0_lifecycleScope;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1227));
+				NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_53);
+				String_t* L_54;
+				L_54 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_53, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1227));
+				NullCheck(L_52);
+				(L_52)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_54);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_55 = L_52;
+				NullCheck(L_55);
+				(L_55)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D);
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1228));
+				String_t* L_56;
+				L_56 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_55, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1228));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1229));
+				CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+				DebugLifecycle_Log_mF5AF374C4A49186C856B489B40F56163BE723BBB(L_56, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1229));
+			}
+
+IL_017c_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:540>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1230));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_57 = V_5;
+				ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347* L_58 = __this->____scopeTransitionHelper;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1231));
+				NullCheck(L_57);
+				VirtualActionInvoker1< ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347* >::Invoke(6, L_57, L_58);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1231));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:541>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1232));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_59 = V_5;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1233));
+				NullCheck(L_59);
+				LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_60;
+				L_60 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_59, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1233));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1234));
+				NullCheck(L_60);
+				Type_t* L_61;
+				L_61 = il2cpp_codegen_object_get_type(L_60);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1234));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1235));
+				ActiveLifecycleScopesTracker_RaiseAutoCleanups_m5620B257E893397698E4CA9CBD38E695BADBA8ED(__this, L_61, 1, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1235));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:542>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1236));
+				Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_62 = __this->____activeScopes;
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_63 = V_5;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1237));
+				NullCheck(L_63);
+				LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_64;
+				L_64 = VirtualFuncInvoker0< LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D >::Invoke(4, L_63);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1237));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1238));
+				NullCheck(L_62);
+				bool L_65;
+				L_65 = Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726(L_62, L_64, Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1238));
+			}
+
+IL_01af_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:536>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1239));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1240));
+				bool L_66;
+				L_66 = Enumerator_MoveNext_mD85ED63385062F8013FBC6C57320F2B23C975EFE((&V_3), Enumerator_MoveNext_mD85ED63385062F8013FBC6C57320F2B23C975EFE_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1240));
+				if (L_66)
+				{
+					goto IL_012c_1;
+				}
+			}
+			{
+				goto IL_01cb;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_01cb:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:546>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1243));
+		return (bool)1;
+	}
+}
+// Method Definition Index: 71126
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_RequestEnterScope_TisIl2CppSharedGenericObject_mED5FE3A313CDEC3F9FB3AAEDC4E753519B30D42E_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* V_0 = NULL;
+	int32_t V_1 = 0;
+	ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* V_2 = NULL;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_2));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 732));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 733));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:171>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 734));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 735));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_0);
+		ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* L_1;
+		L_1 = VirtualFuncInvoker0< ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* >::Invoke(4, (LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_0);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 735));
+		V_0 = L_1;
+		V_1 = 0;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 736));
+		goto IL_001c;
+	}
+
+IL_000b:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:171>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 737));
+		ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* L_2 = V_0;
+		int32_t L_3 = V_1;
+		NullCheck(L_2);
+		int32_t L_4 = L_3;
+		ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		V_2 = L_5;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:173>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 738));
+		ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* L_6 = V_2;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 739));
+		ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_m9994ACEAA4926C9C17BB51EEA3411DA150DB15D9(__this, L_6, 0, (bool)0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 739));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 740));
+		int32_t L_7 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
+	}
+
+IL_001c:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:171>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 741));
+		int32_t L_8 = V_1;
+		ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* L_9 = V_0;
+		NullCheck(L_9);
+		int32_t L_10 = (il2cpp_codegen_conv<int32_t,int64_t,int64_t,false,false>((((RuntimeArray*)L_9)->max_length),NULL));
+		if ((((int32_t)L_8) < ((int32_t)L_10)))
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:175>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 742));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_11 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 743));
+		ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_TisIl2CppSharedGenericObject_m781DD3D4A86DAE2D7A3F31DD07A1A4B6C4ACFFB7(__this, L_11, 0, (bool)0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 743));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:176>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 744));
+		return;
+	}
+}
+// Method Definition Index: 71128
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_RequestExitScope_TisIl2CppSharedGenericObject_m4EB341898A21003EFE763B5E5C78B4A74F0C495D_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, bool ___1_alsoExitNestedScopes, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* V_0 = NULL;
+	int32_t V_1 = 0;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope), (&___1_alsoExitNestedScopes));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 761));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 762));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:194>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 763));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_lifecycleScope;
+		bool L_1 = ___1_alsoExitNestedScopes;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 764));
+		ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_TisIl2CppSharedGenericObject_m781DD3D4A86DAE2D7A3F31DD07A1A4B6C4ACFFB7(__this, L_0, 1, L_1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 764));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:195>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 765));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_2 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 766));
+		NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_2);
+		ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* L_3;
+		L_3 = VirtualFuncInvoker0< ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* >::Invoke(4, (LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_2);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 766));
+		V_0 = L_3;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:196>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 767));
+		ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* L_4 = V_0;
+		NullCheck(L_4);
+		int32_t L_5 = (il2cpp_codegen_conv<int32_t,int64_t,int64_t,false,false>((((RuntimeArray*)L_4)->max_length),NULL));
+		V_1 = ((int32_t)il2cpp_codegen_subtract(L_5, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 768));
+		goto IL_0027;
+	}
+
+IL_0018:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:198>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 769));
+		ImplicitLifecycleScopeU5BU5D_t1C10C825AEAC8ACF7250C9F8748855C85884D38D* L_6 = V_0;
+		int32_t L_7 = V_1;
+		NullCheck(L_6);
+		int32_t L_8 = L_7;
+		ImplicitLifecycleScope_tB1D07078E6300A31DA61E2FFAB8D8A56AD296E38* L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 770));
+		ActiveLifecycleScopesTracker_CreateScopeTransitionRequest_m9994ACEAA4926C9C17BB51EEA3411DA150DB15D9(__this, L_9, 1, (bool)0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 770));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:196>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 771));
+		int32_t L_10 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_subtract(L_10, 1));
+	}
+
+IL_0027:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:196>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 772));
+		int32_t L_11 = V_1;
+		if ((((int32_t)L_11) >= ((int32_t)0)))
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:200>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 773));
+		return;
+	}
+}
+// Method Definition Index: 71143
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_TryEnterScope_TisIl2CppSharedGenericObject_m21425F19F5B67EE7574D33E6C2EB5F06DBE9E93A_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_mA42C372CA350E01B08326C78A32C2D4331199A3D_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* V_0 = NULL;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1043));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 1044));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:429>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1045));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1046));
+		bool L_1;
+		L_1 = ActiveLifecycleScopesTracker_PrepareTryEnterScopeWithContext_TisIl2CppSharedGenericObject_m3D8B69D9E50547113449972B07933BE902744D59(__this, L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1046));
+		if (L_1)
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:430>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1047));
+		return;
+	}
+
+IL_000a:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:432>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1048));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_2 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1049));
+		ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* L_3 = (ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79*)il2cpp_codegen_object_new(il2cpp_rgctx_data(method->rgctx_data, 1));
+		ActiveLifecycleScopeWithContext_1__ctor_mDD6FD21DC68167495A10EE8C4AB04C783A8A809C(L_3, L_2, il2cpp_rgctx_method(method->rgctx_data, 2));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1049));
+		V_0 = L_3;
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:433>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1050));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_4 = __this->____activeScopes;
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_5 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1051));
+		LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_6;
+		L_6 = LifecycleScopeKey_CreateFromScope_TisIl2CppSharedGenericObject_m613ECBEDFFC63C9393C625204DC116D94C244FBB(L_5, il2cpp_rgctx_method(method->rgctx_data, 3));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1051));
+		ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* L_7 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1052));
+		NullCheck(L_4);
+		Dictionary_2_Add_mA42C372CA350E01B08326C78A32C2D4331199A3D(L_4, L_6, (ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C*)L_7, Dictionary_2_Add_mA42C372CA350E01B08326C78A32C2D4331199A3D_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1052));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:434>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1053));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_8 = ___0_lifecycleScope;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1054));
+		NullCheck((RuntimeObject*)L_8);
+		Type_t* L_9;
+		L_9 = il2cpp_codegen_object_get_type((RuntimeObject*)L_8);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1054));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1055));
+		ActiveLifecycleScopesTracker_RaiseAutoCleanups_m5620B257E893397698E4CA9CBD38E695BADBA8ED(__this, L_9, 0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1055));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:435>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1056));
+		ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* L_10 = V_0;
+		ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347* L_11 = __this->____scopeTransitionHelper;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1057));
+		NullCheck((ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C*)L_10);
+		VirtualActionInvoker1< ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347* >::Invoke(5, (ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C*)L_10, L_11);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1057));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:436>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1058));
+		return;
+	}
+}
+// Method Definition Index: 71148
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActiveLifecycleScopesTracker_TryExitScope_TisIl2CppSharedGenericObject_m486A3BADE7D0AA96A07075C46B4AFF3C3DE51A66_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* ___0_lifecycleScope, Il2CppSharedGenericObject* ___1_activationContext, bool ___2_alsoExitNestedScopes, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	Enumerator_t624742B8D885649511A5739F11184E2221942252 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* V_1 = NULL;
+	ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* V_2 = NULL;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_lifecycleScope), (&___1_activationContext), (&___2_alsoExitNestedScopes));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_1), (&V_2));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1275));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 1276));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:568>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1277));
+		LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_0 = ___0_lifecycleScope;
+		Il2CppSharedGenericObject* L_1 = ___1_activationContext;
+		bool L_2 = ___2_alsoExitNestedScopes;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1278));
+		bool L_3;
+		L_3 = ActiveLifecycleScopesTracker_PrepareTryExitScope_TisIl2CppSharedGenericObject_mB20E9E3D9D7A9E4B5F58A5783EB2EBB2733EF4E7(__this, L_0, L_1, L_2, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1278));
+		if (L_3)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:569>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1279));
+		return;
+	}
+
+IL_000c:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:571>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1280));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_4 = __this->____activeScopes;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1281));
+		NullCheck(L_4);
+		ValueCollection_tB7C740A97431C55C62CC43DA7712B5896DBED97F* L_5;
+		L_5 = Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49(L_4, Dictionary_2_get_Values_m79563C16853F891CCBBC22B07DC63DA063874A49_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1281));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1282));
+		NullCheck(L_5);
+		Enumerator_t624742B8D885649511A5739F11184E2221942252 L_6;
+		L_6 = ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE(L_5, ValueCollection_GetEnumerator_m1B01F115659146468CB5EE9025E45905AB1279DE_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1282));
+		V_0 = L_6;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0099:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1304));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1305));
+				Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE((&V_0), Enumerator_Dispose_m6E582A0ECA46CE69AFD14D67DE233D2B4E1069BE_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1305));
+				return;
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 0);
+			{
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1283));
+				goto IL_008e_1;
+			}
+
+IL_001f_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:571>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1284));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1285));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_7;
+				L_7 = Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_inline((&V_0), Enumerator_get_Current_m2E4C1612FFBB402B6CF496C40499B9B84734E878_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1285));
+				V_1 = L_7;
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:573>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1286));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_8 = V_1;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1287));
+				NullCheck(L_8);
+				LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_9;
+				L_9 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_8, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1287));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1288));
+				NullCheck(L_9);
+				String_t* L_10;
+				L_10 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline(L_9, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1288));
+				LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* L_11 = ___0_lifecycleScope;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1289));
+				NullCheck((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_11);
+				String_t* L_12;
+				L_12 = LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline((LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755*)L_11, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1289));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1290));
+				bool L_13;
+				L_13 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_10, L_12, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1290));
+				if (!L_13)
+				{
+					goto IL_008e_1;
+				}
+			}
+			{
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_14 = V_1;
+				V_2 = ((ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79*)IsInstClass((RuntimeObject*)L_14, il2cpp_rgctx_data(method->rgctx_data, 1)));
+				ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* L_15 = V_2;
+				if (!L_15)
+				{
+					goto IL_008e_1;
+				}
+			}
+			{
+				ActiveLifecycleScopeWithContext_1_tD3998CF55244EF4B194F8B1E059746B5D9A85F79* L_16 = V_2;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1291));
+				NullCheck(L_16);
+				Il2CppSharedGenericObject* L_17;
+				L_17 = ActiveLifecycleScopeWithContext_1_get_Context_m45FFE4CAC1E3D5639C3DEE4433FAE9E204851CC0(L_16, il2cpp_rgctx_method(method->rgctx_data, 2));
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1291));
+				Il2CppSharedGenericObject* L_18 = ___1_activationContext;
+				if ((!(((RuntimeObject*)(Il2CppSharedGenericObject*)L_17) == ((RuntimeObject*)(Il2CppSharedGenericObject*)L_18))))
+				{
+					goto IL_008e_1;
+				}
+			}
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:577>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1292));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_19 = V_1;
+				ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347* L_20 = __this->____scopeTransitionHelper;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1293));
+				NullCheck(L_19);
+				VirtualActionInvoker1< ScopeTransitionHelper_t069C5DE337C0C8F615857F4D731C5CBE3B0F4347* >::Invoke(6, L_19, L_20);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1293));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:578>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1294));
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_21 = V_1;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1295));
+				NullCheck(L_21);
+				LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_22;
+				L_22 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_21, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1295));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1296));
+				NullCheck(L_22);
+				Type_t* L_23;
+				L_23 = il2cpp_codegen_object_get_type(L_22);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1296));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1297));
+				ActiveLifecycleScopesTracker_RaiseAutoCleanups_m5620B257E893397698E4CA9CBD38E695BADBA8ED(__this, L_23, 1, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1297));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:579>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1298));
+				Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_24 = __this->____activeScopes;
+				ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_25 = V_1;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1299));
+				NullCheck(L_25);
+				LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_26;
+				L_26 = VirtualFuncInvoker0< LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D >::Invoke(4, L_25);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1299));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1300));
+				NullCheck(L_24);
+				bool L_27;
+				L_27 = Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726(L_24, L_26, Dictionary_2_Remove_mAE2ECC0F5BDAA58524500656449EA1A387079726_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1300));
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:580>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1301));
+				goto IL_00a7;
+			}
+
+IL_008e_1:
+			{
+				//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:571>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1302));
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1303));
+				bool L_28;
+				L_28 = Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385((&V_0), Enumerator_MoveNext_mC8DD05ED5A94E9D71568B93F1FBC1A03B3A4E385_RuntimeMethod_var);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1303));
+				if (L_28)
+				{
+					goto IL_001f_1;
+				}
+			}
+			{
+				goto IL_00a7;
+			}
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00a7:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:583>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1306));
+		return;
+	}
+}
+// Method Definition Index: 71137
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_TryGetActiveScope_TisIl2CppSharedGenericObject_mD4C10B4553156820DC083CB6E542984B5DF90F55_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Il2CppSharedGenericObject** ___0_scope, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(Type_t_StaticInit);
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* V_1 = NULL;
+	Il2CppSharedGenericObject* V_2 = NULL;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_scope));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 896));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 897));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:302>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 898));
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_0 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 899));
+		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Type_t* L_1;
+		L_1 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 899));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 900));
+		LifecycleScopeKey__ctor_m7DCCBE2ED25A7746808F3555AB845EE71FEB6A71((&V_0), L_1, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 900));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:303>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 901));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_2 = __this->____activeScopes;
+		LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_3 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 902));
+		NullCheck(L_2);
+		bool L_4;
+		L_4 = Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89(L_2, L_3, (&V_1), Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 902));
+		if (!L_4)
+		{
+			goto IL_0043;
+		}
+	}
+	{
+		ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_5 = V_1;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 903));
+		NullCheck(L_5);
+		LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_6;
+		L_6 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_5, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 903));
+		V_2 = ((Il2CppSharedGenericObject*)IsInst((RuntimeObject*)L_6, il2cpp_rgctx_data(method->rgctx_data, 1)));
+		Il2CppSharedGenericObject* L_7 = V_2;
+		if (!L_7)
+		{
+			goto IL_0043;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:306>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 904));
+		Il2CppSharedGenericObject** L_8 = ___0_scope;
+		Il2CppSharedGenericObject* L_9 = V_2;
+		*(Il2CppSharedGenericObject**)L_8 = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(Il2CppSharedGenericObject**)L_8, (void*)L_9);
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:307>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 905));
+		return (bool)1;
+	}
+
+IL_0043:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:310>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 906));
+		Il2CppSharedGenericObject** L_10 = ___0_scope;
+		il2cpp_codegen_initobj(L_10, sizeof(Il2CppSharedGenericObject*));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:311>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 907));
+		return (bool)0;
+	}
+}
+// Method Definition Index: 71138
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActiveLifecycleScopesTracker_TryGetActiveScope_TisIl2CppSharedGenericObject_TisIl2CppSharedGenericObject_m8BE6AF6B2FBB31FDC0A8C52C68EBA36AA80545E0_gshared (ActiveLifecycleScopesTracker_t21B0C18F9AC8D5A5832FC8DAD92E8759C6E6A8E7* __this, Il2CppSharedGenericObject* ___0_context, Il2CppSharedGenericObject** ___1_scope, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(Type_t_StaticInit);
+	LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* V_1 = NULL;
+	Il2CppSharedGenericObject* V_2 = NULL;
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_context), (&___1_scope));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 908));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 909));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:318>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 910));
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_0 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(method->rgctx_data, 0)) };
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 911));
+		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Type_t* L_1;
+		L_1 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 911));
+		Il2CppSharedGenericObject* L_2 = ___0_context;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 912));
+		LifecycleScopeKey__ctor_m3BFDFB377FD3F489668C9B18AF174EF462838E6C((&V_0), L_1, (RuntimeObject*)L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 912));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:319>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 913));
+		Dictionary_2_tD1D7C3C9439A06F868D4705EB293B45335991F83* L_3 = __this->____activeScopes;
+		LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D L_4 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 914));
+		NullCheck(L_3);
+		bool L_5;
+		L_5 = Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89(L_3, L_4, (&V_1), Dictionary_2_TryGetValue_m23A14CBF4DD0FFE6985742AB5960E012A3D29D89_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 914));
+		if (!L_5)
+		{
+			goto IL_0049;
+		}
+	}
+	{
+		ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* L_6 = V_1;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 915));
+		NullCheck(L_6);
+		LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_7;
+		L_7 = ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline(L_6, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 915));
+		V_2 = ((Il2CppSharedGenericObject*)IsInst((RuntimeObject*)L_7, il2cpp_rgctx_data(method->rgctx_data, 1)));
+		Il2CppSharedGenericObject* L_8 = V_2;
+		if (!L_8)
+		{
+			goto IL_0049;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:322>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 916));
+		Il2CppSharedGenericObject** L_9 = ___1_scope;
+		Il2CppSharedGenericObject* L_10 = V_2;
+		*(Il2CppSharedGenericObject**)L_9 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(Il2CppSharedGenericObject**)L_9, (void*)L_10);
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:323>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 917));
+		return (bool)1;
+	}
+
+IL_0049:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:326>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 918));
+		Il2CppSharedGenericObject** L_11 = ___1_scope;
+		il2cpp_codegen_initobj(L_11, sizeof(Il2CppSharedGenericObject*));
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:327>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 919));
+		return (bool)0;
+	}
+}
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+// Method Definition Index: 50315
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_mB7FDB41C94AC9A87AFF89161489676D18C2803C4_fshared (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___0_handle, int32_t ___1_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	const uint32_t SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	const Il2CppFullySharedGenericStruct L_0 = alloca(SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642);
+	const Il2CppFullySharedGenericStruct L_2 = alloca(SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642);
+	Il2CppFullySharedGenericStruct V_0 = alloca(SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642);
+	memset(V_0, 0, SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642);
+	Il2CppFullySharedGenericStruct* V_1 = NULL;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle), (&___1_items));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 607));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 608));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 609));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:187>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 610));
+		il2cpp_codegen_initobj((Il2CppFullySharedGenericStruct*)V_0, SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642);
+		il2cpp_codegen_memcpy(L_0, V_0, SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642);
+		int32_t L_1 = ___1_items;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 611));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Il2CppFullySharedGenericStruct* L_3;
+		L_3 = AllocatorManager_Allocate_TisAllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148_TisIl2CppFullySharedGenericStruct_m93C704405E17E59888DFF4A94275FE03009F16D8((&___0_handle), il2cpp_codegen_memcpy(L_2, L_0, SizeOf_T_t9817FB00B9744738EF4B861BC5210571968EB642), L_1, il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 611));
+		V_1 = L_3;
+		goto IL_0015;
+	}
+
+IL_0015:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:188>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 612));
+		Il2CppFullySharedGenericStruct* L_4 = V_1;
+		return L_4;
+	}
+}
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_m0EABE0B1B2068441A3F575974A2603420E428E12_fshared (Il2CppFullySharedGenericStruct* ___0_t, Il2CppFullySharedGenericStruct ___1_u, int32_t ___2_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	Il2CppFullySharedGenericStruct* V_0 = NULL;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 5)) ? ___1_u : &___1_u), (&___2_items));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 554));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 555));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 556));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:132>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 557));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 558));
+		int32_t L_1;
+		L_1 = UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_inline(il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 558));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 559));
+		int32_t L_2;
+		L_2 = UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_inline(il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 559));
+		int32_t L_3 = ___2_items;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 560));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		void* L_4;
+		L_4 = AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_mC90FE69E6FB94B1EDDFC81D29625CAB1468D5173(L_0, L_1, L_2, L_3, il2cpp_rgctx_method(method->rgctx_data, 2));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 560));
+		V_0 = (Il2CppFullySharedGenericStruct*)L_4;
+		goto IL_0015;
+	}
+
+IL_0015:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:133>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 561));
+		Il2CppFullySharedGenericStruct* L_5 = V_0;
+		return L_5;
+	}
+}
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50309
+// Method Definition Index: 50308
+// Method Definition Index: 50308
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_mC90FE69E6FB94B1EDDFC81D29625CAB1468D5173_fshared (Il2CppFullySharedGenericStruct* ___0_t, int32_t ___1_sizeOf, int32_t ___2_alignOf, int32_t ___3_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	void* V_0 = NULL;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (&___1_sizeOf), (&___2_alignOf), (&___3_items));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 547));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 548));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 549));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:127>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 550));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		int32_t L_1 = ___1_sizeOf;
+		int32_t L_2 = ___2_alignOf;
+		int32_t L_3 = ___3_items;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 551));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 L_4;
+		L_4 = AllocatorManager_AllocateBlock_TisIl2CppFullySharedGenericStruct_mF04F260543AD3905A083FEBFC5A5F6DCF60EDE7C(L_0, L_1, L_2, L_3, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 551));
+		Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC L_5 = L_4.___Range;
+		intptr_t L_6 = L_5.___Pointer;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 552));
+		void* L_7;
+		L_7 = IntPtr_op_Explicit_m2728CBA081E79B97DDCF1D4FAD77B309CA1E94BF(L_6, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 552));
+		V_0 = L_7;
+		goto IL_001c;
+	}
+
+IL_001c:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:128>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 553));
+		void* L_8 = V_0;
+		return L_8;
+	}
+}
+// Method Definition Index: 50308
+// Method Definition Index: 50307
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 AllocatorManager_AllocateBlock_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_mCCDB058E96210111EC0D83DFFD1C7215DAF5B627_fshared (Il2CppFullySharedGenericStruct* ___0_t, Il2CppFullySharedGenericStruct ___1_u, int32_t ___2_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 4)) ? ___1_u : &___1_u), (&___2_items));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 539));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 540));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 541));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:113>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 542));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 543));
+		int32_t L_1;
+		L_1 = UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_inline(il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 543));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 544));
+		int32_t L_2;
+		L_2 = UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_inline(il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 544));
+		int32_t L_3 = ___2_items;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 545));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 L_4;
+		L_4 = AllocatorManager_AllocateBlock_TisIl2CppFullySharedGenericStruct_mF04F260543AD3905A083FEBFC5A5F6DCF60EDE7C(L_0, L_1, L_2, L_3, il2cpp_rgctx_method(method->rgctx_data, 2));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 545));
+		V_0 = L_4;
+		goto IL_0015;
+	}
+
+IL_0015:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:114>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 546));
+		Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 L_5 = V_0;
+		return L_5;
+	}
+}
+// Method Definition Index: 50306
+// Method Definition Index: 50306
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 AllocatorManager_AllocateBlock_TisIl2CppFullySharedGenericStruct_mF04F260543AD3905A083FEBFC5A5F6DCF60EDE7C_fshared (Il2CppFullySharedGenericStruct* ___0_t, int32_t ___1_sizeOf, int32_t ___2_alignOf, int32_t ___3_items, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	void* L_5 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	void* L_14 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	int32_t V_1 = 0;
+	Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (&___1_sizeOf), (&___2_alignOf), (&___3_items));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 523));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 524));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 525));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:98>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 526));
+		il2cpp_codegen_initobj((&V_0), sizeof(Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:99>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 527));
+		Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC* L_0 = (Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC*)(&(&V_0)->___Range);
+		L_0->___Pointer = 0;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:100>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 528));
+		Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC* L_1 = (Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC*)(&(&V_0)->___Range);
+		int32_t L_2 = ___3_items;
+		L_1->___Items = L_2;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:101>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 529));
+		Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC* L_3 = (Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC*)(&(&V_0)->___Range);
+		Il2CppFullySharedGenericStruct* L_4 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 530));
+		Il2CppConstrainedCallData L_6;
+		Il2CppMethodPointer L_7 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_4, &L_6, L_5);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_8)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_9 = ((func_L_8)L_7)(L_6.thisPtr,L_6.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 530));
+		L_3->___Allocator = L_9;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:102>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 531));
+		int32_t L_10 = ___1_sizeOf;
+		(&V_0)->___BytesPerItem = L_10;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:104>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 532));
+		int32_t L_11 = ___2_alignOf;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 533));
+		int32_t L_12;
+		L_12 = math_max_m5EE58D9462EC2A39BDE97B0C27BB14CF4A0DB651_inline(((int32_t)64), L_11, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 533));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 534));
+		Block_set_Alignment_m4E74D90E827C5F58B3EBE91B2F5B097388E0500F((&V_0), L_12, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 534));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:106>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 535));
+		Il2CppFullySharedGenericStruct* L_13 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 536));
+		Il2CppConstrainedCallData L_15;
+		Il2CppMethodPointer L_16 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 2), (void*)L_13, &L_15, L_14);
+		typedef int32_t ( *func_L_17)(void*,Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3*,const RuntimeMethod*);
+		int32_t L_18 = ((func_L_17)L_16)(L_15.thisPtr, (&V_0),L_15.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 536));
+		V_1 = L_18;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:108>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 537));
+		Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 L_19 = V_0;
+		V_2 = L_19;
+		goto IL_006a;
+	}
+
+IL_006a:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:109>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 538));
+		Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 L_20 = V_2;
+		return L_20;
+	}
+}
+// Method Definition Index: 50306
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* AllocatorManager_AllocateStruct_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_m24FC981A18EAB95A996CFC6337FAB957062F81E1_fshared (Il2CppFullySharedGenericStruct* ___0_t, Il2CppFullySharedGenericStruct ___1_u, int32_t ___2_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	void* V_0 = NULL;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 4)) ? ___1_u : &___1_u), (&___2_items));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 562));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 563));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 564));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:137>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 565));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 566));
+		int32_t L_1;
+		L_1 = UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_inline(il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 566));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 567));
+		int32_t L_2;
+		L_2 = UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_inline(il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 567));
+		int32_t L_3 = ___2_items;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 568));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		void* L_4;
+		L_4 = AllocatorManager_Allocate_TisIl2CppFullySharedGenericStruct_mC90FE69E6FB94B1EDDFC81D29625CAB1468D5173(L_0, L_1, L_2, L_3, il2cpp_rgctx_method(method->rgctx_data, 2));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 568));
+		V_0 = L_4;
+		goto IL_0015;
+	}
+
+IL_0015:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:138>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 569));
+		void* L_5 = V_0;
+		return L_5;
+	}
+}
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50310
+// Method Definition Index: 50334
+// Method Definition Index: 50334
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* AllocatorManager_CreateAllocator_TisIl2CppFullySharedGenericStruct_mB3E2285EB6231EB67406260DF96E518CC0CDB967_fshared (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___0_backingAllocator, bool ___1_isGlobal, int32_t ___2_globalIndex, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	const uint32_t SizeOf_T_t1EAB5B0433A83757E15B1FCAA1C2326A7A17748B = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	void* L_9 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 0)));
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	Il2CppFullySharedGenericStruct* V_0 = NULL;
+	Il2CppFullySharedGenericStruct* V_1 = NULL;
+	Il2CppFullySharedGenericStruct* V_2 = NULL;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_backingAllocator), (&___1_isGlobal), (&___2_globalIndex));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 922));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 923));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 924));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 925));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1618>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 926));
+		uint32_t L_0 = SizeOf_T_t1EAB5B0433A83757E15B1FCAA1C2326A7A17748B;
+		int64_t L_1 = (il2cpp_codegen_conv<int64_t,uint32_t,int32_t,false,false>(L_0,NULL));
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_2 = ___0_backingAllocator;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 927));
+		void* L_3;
+		L_3 = Unmanaged_Allocate_m7310B1FE896DEFFA18303D961C9859C8FF3D21E5(L_1, ((int32_t)16), L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 927));
+		V_0 = (Il2CppFullySharedGenericStruct*)L_3;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1619>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 928));
+		Il2CppFullySharedGenericStruct* L_4 = V_0;
+		il2cpp_codegen_initobj(L_4, SizeOf_T_t1EAB5B0433A83757E15B1FCAA1C2326A7A17748B);
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1620>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 929));
+		Il2CppFullySharedGenericStruct* L_5 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 930));
+		Il2CppFullySharedGenericStruct* L_6;
+		L_6 = UnsafeUtility_AsRef_TisIl2CppFullySharedGenericStruct_m78B0690121A96EFFDA7D6D3ADAF97940CF8136BE_inline((void*)L_5, il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 930));
+		V_1 = L_6;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1621>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 931));
+		Il2CppFullySharedGenericStruct* L_7 = V_1;
+		Il2CppFullySharedGenericStruct* L_8 = V_0;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 932));
+		Il2CppConstrainedCallData L_10;
+		Il2CppMethodPointer L_11 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 0), il2cpp_rgctx_method(method->rgctx_data, 2), (void*)L_8, &L_10, L_9);
+		typedef bool ( *func_L_12)(void*,const RuntimeMethod*);
+		bool L_13 = ((func_L_12)L_11)(L_10.thisPtr,L_10.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 932));
+		bool L_14 = ___1_isGlobal;
+		int32_t L_15 = ___2_globalIndex;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 933));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		AllocatorManager_Register_TisIl2CppFullySharedGenericStruct_mF147D5344F44C9D73EE0A38448CDCCBD8931FEA9(L_7, L_13, L_14, L_15, il2cpp_rgctx_method(method->rgctx_data, 3));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 933));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1622>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 934));
+		Il2CppFullySharedGenericStruct* L_16 = V_1;
+		V_2 = L_16;
+		goto IL_0039;
+	}
+
+IL_0039:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1624>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 935));
+		Il2CppFullySharedGenericStruct* L_17 = V_2;
+		return L_17;
+	}
+}
+// Method Definition Index: 50335
+// Method Definition Index: 50335
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_DestroyAllocator_TisIl2CppFullySharedGenericStruct_mBB46F1DC9D6AC1889886DD0B5DB327AB990498B5_fshared (Il2CppFullySharedGenericStruct* ___0_t, AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___1_backingAllocator, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	void* V_0 = NULL;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (&___1_backingAllocator));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 936));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 937));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 938));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1636>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 939));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 940));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		AllocatorManager_Unregister_TisIl2CppFullySharedGenericStruct_m1782C417767DBDCC0F33DE0B0ACCEE7BE0C9570D(L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 940));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 941));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1640>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 942));
+		Il2CppFullySharedGenericStruct* L_1 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 943));
+		void* L_2;
+		L_2 = UnsafeUtility_AddressOf_TisIl2CppFullySharedGenericStruct_m8D42BD9F3A34A0C9A6BF4AA6104B9DAE7B629DE7_inline(L_1, il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 943));
+		V_0 = L_2;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1641>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 944));
+		void* L_3 = V_0;
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_4 = ___1_backingAllocator;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 945));
+		Unmanaged_Free_m09F6EA89F368ED2C9E5EC5EA60C894C4434F4FD1(L_3, L_4, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 945));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 946));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1643>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 947));
+		return;
+	}
+}
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_m5B9AE1307BC7B800602892922A382DB01CFEE090_fshared (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ___0_handle, Il2CppFullySharedGenericStruct* ___1_pointer, int32_t ___2_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle), (&___1_pointer), (&___2_items));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 625));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 626));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 627));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:226>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 628));
+		Il2CppFullySharedGenericStruct* L_0 = ___1_pointer;
+		int32_t L_1 = ___2_items;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 629));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		AllocatorManager_Free_TisAllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148_TisIl2CppFullySharedGenericStruct_mB75CC98B852CC6B46BBB09CE776178929311F11A((&___0_handle), L_0, L_1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 629));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:227>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 630));
+		return;
+	}
+}
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50318
+// Method Definition Index: 50313
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_TisIl2CppFullySharedGenericStruct_mD4F26E4C816E71D730D23642B46E9C40DB139DE5_fshared (Il2CppFullySharedGenericStruct* ___0_t, Il2CppFullySharedGenericStruct* ___1_pointer, int32_t ___2_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (&___1_pointer), (&___2_items));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 593));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 594));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 595));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:162>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 596));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		Il2CppFullySharedGenericStruct* L_1 = ___1_pointer;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 597));
+		int32_t L_2;
+		L_2 = UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_inline(il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 597));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 598));
+		int32_t L_3;
+		L_3 = UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_inline(il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 598));
+		int32_t L_4 = ___2_items;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 599));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_mDBB8A012EA9B6286BBF754ABC553D87E29E2084C(L_0, (void*)L_1, L_2, L_3, L_4, il2cpp_rgctx_method(method->rgctx_data, 2));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 599));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:163>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 600));
+		return;
+	}
+}
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50313
+// Method Definition Index: 50312
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Free_TisIl2CppFullySharedGenericStruct_mDBB8A012EA9B6286BBF754ABC553D87E29E2084C_fshared (Il2CppFullySharedGenericStruct* ___0_t, void* ___1_pointer, int32_t ___2_sizeOf, int32_t ___3_alignOf, int32_t ___4_items, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (&___1_pointer), (&___2_sizeOf), (&___3_alignOf), (&___4_items));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 577));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 578));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 579));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:150>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 580));
+		void* L_0 = ___1_pointer;
+		uintptr_t L_1 = (il2cpp_codegen_conv<uintptr_t,int32_t,int32_t,false,false>(0,NULL));
+		V_1 = (bool)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 581));
+		bool L_2 = V_1;
+		if (!L_2)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:151>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 582));
+		goto IL_0049;
+	}
+
+IL_000c:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:152>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 583));
+		il2cpp_codegen_initobj((&V_0), sizeof(Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:153>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 584));
+		int32_t L_3 = ___4_items;
+		(&V_0)->___AllocatedItems = L_3;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:154>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 585));
+		Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC* L_4 = (Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC*)(&(&V_0)->___Range);
+		void* L_5 = ___1_pointer;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 586));
+		intptr_t L_6;
+		L_6 = IntPtr_op_Explicit_mE2CEC14C61FD5E2159A03EA2AD97F5CDC5BB9F4D(L_5, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 586));
+		L_4->___Pointer = L_6;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:155>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 587));
+		int32_t L_7 = ___2_sizeOf;
+		(&V_0)->___BytesPerItem = L_7;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:156>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 588));
+		int32_t L_8 = ___3_alignOf;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 589));
+		Block_set_Alignment_m4E74D90E827C5F58B3EBE91B2F5B097388E0500F((&V_0), L_8, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 589));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:157>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 590));
+		Il2CppFullySharedGenericStruct* L_9 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 591));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		AllocatorManager_FreeBlock_TisIl2CppFullySharedGenericStruct_m44D182E4FE9D7ACB24809B27EAF206F1538A71E3(L_9, (&V_0), il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 591));
+	}
+
+IL_0049:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:158>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 592));
+		return;
+	}
+}
+// Method Definition Index: 50312
+// Method Definition Index: 50311
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_FreeBlock_TisIl2CppFullySharedGenericStruct_m44D182E4FE9D7ACB24809B27EAF206F1538A71E3_fshared (Il2CppFullySharedGenericStruct* ___0_t, Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3* ___1_block, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	void* L_4 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	int32_t V_0 = 0;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (&___1_block));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 570));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 571));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 572));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:143>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 573));
+		Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3* L_0 = ___1_block;
+		Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC* L_1 = (Range_tB5BAD1274CA0989FC97B0093B4149EF3CD5F21AC*)(&L_0->___Range);
+		L_1->___Items = 0;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:144>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 574));
+		Il2CppFullySharedGenericStruct* L_2 = ___0_t;
+		Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3* L_3 = ___1_block;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 575));
+		Il2CppConstrainedCallData L_5;
+		Il2CppMethodPointer L_6 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_2, &L_5, L_4);
+		typedef int32_t ( *func_L_7)(void*,Block_tCCF620817FE305B5BF7B0FB7705B4571F976C4E3*,const RuntimeMethod*);
+		int32_t L_8 = ((func_L_7)L_6)(L_5.thisPtr, L_3,L_5.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 575));
+		V_0 = L_8;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:146>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 576));
+		return;
+	}
+}
+// Method Definition Index: 50311
+// Method Definition Index: 50331
+// Method Definition Index: 50331
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Register_TisIl2CppFullySharedGenericStruct_mF147D5344F44C9D73EE0A38448CDCCBD8931FEA9_fshared (Il2CppFullySharedGenericStruct* ___0_t, bool ___1_IsAutoDispose, bool ___2_isGlobal, int32_t ___3_globalIndex, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BurstCompiler_CompileFunctionPointer_TisTryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA_m6382E4A1B7D58FC335FB65886ACE11A8AAABB0CB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BurstCompiler_t6972AFDB97C8649095A1B7EE54AAADB676BE2C37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FunctionPointer_1__ctor_mEF7003D84F3F237841EAE974B1928ACDF564F51D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	void* L_1 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	CHECKED_LOCAL(AllocatorCache_1_t6CEE5DB2E9A890B3EC0B6D4837F807BE9B35BA51_StaticInit);
+	CHECKED_LOCAL(BurstCompiler_t6972AFDB97C8649095A1B7EE54AAADB676BE2C37_StaticInit);
+	CHECKED_LOCAL(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit);
+	void* L_25 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	void* L_30 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	void* L_37 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	CHECKED_LOCAL(Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_StaticInit);
+	FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* V_1 = NULL;
+	bool V_2 = false;
+	bool V_3 = false;
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t), (&___1_IsAutoDispose), (&___2_isGlobal), (&___3_globalIndex));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 842));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 843));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 844));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1550>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 845));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 846));
+		Il2CppConstrainedCallData L_2;
+		Il2CppMethodPointer L_3 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_0, &L_2, L_1);
+		typedef TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* ( *func_L_4)(void*,const RuntimeMethod*);
+		TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* L_5 = ((func_L_4)L_3)(L_2.thisPtr,L_2.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 846));
+		V_1 = L_5;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1551>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 847));
+		TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* L_6 = V_1;
+		V_2 = (bool)((((RuntimeObject*)(TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 848));
+		bool L_7 = V_2;
+		if (!L_7)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1552>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 849));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 850));
+		FunctionPointer_1__ctor_mEF7003D84F3F237841EAE974B1928ACDF564F51D_inline((&V_0), 0, FunctionPointer_1__ctor_mEF7003D84F3F237841EAE974B1928ACDF564F51D_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 850));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 851));
+		goto IL_004e;
+	}
+
+IL_0024:
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 852));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1555>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 853));
+		TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* L_8 = V_1;
+		CHECKED_LOCAL_INIT(AllocatorCache_1_t6CEE5DB2E9A890B3EC0B6D4837F807BE9B35BA51_StaticInit,(il2cpp_rgctx_data(method->rgctx_data, 2)),il2cpp_codegen_runtime_class_init_inline);
+		TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* L_9 = ((AllocatorCache_1_tE4A3FB98A13F6767AD7FC224210A0475AE15E18E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___CachedFunction;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 854));
+		bool L_10;
+		L_10 = Delegate_op_Inequality_mA9EAADBA0C976289CCD49DC5A4BEDBB060B579E0(L_8, L_9, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 854));
+		V_3 = L_10;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 855));
+		bool L_11 = V_3;
+		if (!L_11)
+		{
+			goto IL_0047;
+		}
+	}
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 856));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1557>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 857));
+		TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* L_12 = V_1;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 858));
+		CHECKED_LOCAL_INIT(BurstCompiler_t6972AFDB97C8649095A1B7EE54AAADB676BE2C37_StaticInit,(BurstCompiler_t6972AFDB97C8649095A1B7EE54AAADB676BE2C37_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF L_13;
+		L_13 = BurstCompiler_CompileFunctionPointer_TisTryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA_m6382E4A1B7D58FC335FB65886ACE11A8AAABB0CB(L_12, BurstCompiler_CompileFunctionPointer_TisTryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA_m6382E4A1B7D58FC335FB65886ACE11A8AAABB0CB_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 858));
+		CHECKED_LOCAL_INIT(AllocatorCache_1_t6CEE5DB2E9A890B3EC0B6D4837F807BE9B35BA51_StaticInit,(il2cpp_rgctx_data(method->rgctx_data, 2)),il2cpp_codegen_runtime_class_init_inline);
+		((AllocatorCache_1_tE4A3FB98A13F6767AD7FC224210A0475AE15E18E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___TryFunction = L_13;
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1558>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 859));
+		TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* L_14 = V_1;
+		((AllocatorCache_1_tE4A3FB98A13F6767AD7FC224210A0475AE15E18E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___CachedFunction = L_14;
+		Il2CppCodeGenWriteBarrier((void**)(&((AllocatorCache_1_tE4A3FB98A13F6767AD7FC224210A0475AE15E18E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___CachedFunction), (void*)L_14);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 860));
+	}
+
+IL_0047:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1560>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 861));
+		CHECKED_LOCAL_INIT(AllocatorCache_1_t6CEE5DB2E9A890B3EC0B6D4837F807BE9B35BA51_StaticInit,(il2cpp_rgctx_data(method->rgctx_data, 2)),il2cpp_codegen_runtime_class_init_inline);
+		FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF L_15 = ((AllocatorCache_1_tE4A3FB98A13F6767AD7FC224210A0475AE15E18E_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___TryFunction;
+		V_0 = L_15;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 862));
+	}
+
+IL_004e:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1562>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 863));
+		Il2CppFullySharedGenericStruct* L_16 = ___0_t;
+		Il2CppFullySharedGenericStruct* L_17 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 864));
+		void* L_18;
+		L_18 = UnsafeUtility_AddressOf_TisIl2CppFullySharedGenericStruct_m8D42BD9F3A34A0C9A6BF4AA6104B9DAE7B629DE7_inline(L_17, il2cpp_rgctx_method(method->rgctx_data, 3));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 864));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 865));
+		intptr_t L_19;
+		L_19 = IntPtr_op_Explicit_mE2CEC14C61FD5E2159A03EA2AD97F5CDC5BB9F4D(L_18, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 865));
+		FunctionPointer_1_t43DAB60A8D20BF327F8250485C83EE4BC2782CEF L_20 = V_0;
+		bool L_21 = ___1_IsAutoDispose;
+		bool L_22 = ___2_isGlobal;
+		int32_t L_23 = ___3_globalIndex;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 866));
+		CHECKED_LOCAL_INIT(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_StaticInit,(AllocatorManager_tFB15A22029C8159A3DCD4C08935BE57D3E6B3C2C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_24;
+		L_24 = AllocatorManager_Register_mAB35952EFC6967DC1EC3A397BB9400CD4F4509B9(L_19, L_20, L_21, L_22, L_23, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 866));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 867));
+		Il2CppConstrainedCallData L_26;
+		Il2CppMethodPointer L_27 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 4), (void*)L_16, &L_26, L_25);
+		typedef void ( *func_L_28)(void*,AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148,const RuntimeMethod*);
+		((func_L_28)L_27)(L_26.thisPtr, L_24,L_26.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 867));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1564>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 868));
+		Il2CppFullySharedGenericStruct* L_29 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 869));
+		Il2CppConstrainedCallData L_31;
+		Il2CppMethodPointer L_32 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 5), (void*)L_29, &L_31, L_30);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_33)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_34 = ((func_L_33)L_32)(L_31.thisPtr,L_31.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 869));
+		uint16_t L_35 = L_34.___Index;
+		Il2CppFullySharedGenericStruct* L_36 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 870));
+		Il2CppConstrainedCallData L_38;
+		Il2CppMethodPointer L_39 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_36, &L_38, L_37);
+		typedef TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* ( *func_L_40)(void*,const RuntimeMethod*);
+		TryFunction_tC277E17D1D6AD4EF20C1FC1D8F91A559208AA5CA* L_41 = ((func_L_40)L_39)(L_38.thisPtr,L_38.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 870));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 871));
+		CHECKED_LOCAL_INIT(Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_StaticInit,(Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Managed_RegisterDelegate_m494ED81F0C1945174DD1E82D6711EB329255E36F((int32_t)L_35, L_41, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 871));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1570>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 872));
+		return;
+	}
+}
+// Method Definition Index: 50332
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_UnmanagedUnregister_TisIl2CppFullySharedGenericStruct_mA531B69E183CA56C8BC7D2DD419333CA5E2DC004_fshared (Il2CppFullySharedGenericStruct* ___0_t, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	void* L_1 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	void* L_9 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	CHECKED_LOCAL(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_StaticInit);
+	void* L_17 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	CHECKED_LOCAL(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_StaticInit);
+	void* L_26 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	bool V_0 = false;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	TableEntry_t5E44AFA7857A41AC654D7F248FD36B15D7835FFE V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 873));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 874));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 875));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1579>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 876));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 877));
+		Il2CppConstrainedCallData L_2;
+		Il2CppMethodPointer L_3 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_0, &L_2, L_1);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_4)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_5 = ((func_L_4)L_3)(L_2.thisPtr,L_2.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 877));
+		V_1 = L_5;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 878));
+		bool L_6;
+		L_6 = AllocatorHandle_get_IsInstalled_mB38CD887177A87128DC9A2DE6F866F9EC18FA907((&V_1), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 878));
+		V_0 = L_6;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 879));
+		bool L_7 = V_0;
+		if (!L_7)
+		{
+			goto IL_0083;
+		}
+	}
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 880));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1581>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 881));
+		Il2CppFullySharedGenericStruct* L_8 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 882));
+		Il2CppConstrainedCallData L_10;
+		Il2CppMethodPointer L_11 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_8, &L_10, L_9);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_12)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_13 = ((func_L_12)L_11)(L_10.thisPtr,L_10.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 882));
+		V_1 = L_13;
+		il2cpp_codegen_initobj((&V_2), sizeof(TableEntry_t5E44AFA7857A41AC654D7F248FD36B15D7835FFE));
+		TableEntry_t5E44AFA7857A41AC654D7F248FD36B15D7835FFE L_14 = V_2;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 883));
+		AllocatorHandle_Install_m0526A06766A02754698DE0115B926C15566CDD3B((&V_1), L_14, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 883));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1582>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 884));
+		CHECKED_LOCAL_INIT(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_StaticInit,(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 885));
+		Long1024_tEE887C506947419DC829213E6C7483D80AF5659F* L_15;
+		L_15 = SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5((&((IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_StaticFields*)il2cpp_codegen_static_fields_for(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_il2cpp_TypeInfo_var))->___Ref), SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 885));
+		Il2CppFullySharedGenericStruct* L_16 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 886));
+		Il2CppConstrainedCallData L_18;
+		Il2CppMethodPointer L_19 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_16, &L_18, L_17);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_20)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_21 = ((func_L_20)L_19)(L_18.thisPtr,L_18.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 886));
+		V_1 = L_21;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 887));
+		int32_t L_22;
+		L_22 = AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_inline((&V_1), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 887));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 888));
+		int32_t L_23;
+		L_23 = ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323(L_15, L_22, 1, ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 888));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1583>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 889));
+		CHECKED_LOCAL_INIT(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_StaticInit,(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 890));
+		Long1024_tEE887C506947419DC829213E6C7483D80AF5659F* L_24;
+		L_24 = SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5((&((IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_StaticFields*)il2cpp_codegen_static_fields_for(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_il2cpp_TypeInfo_var))->___Ref), SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 890));
+		Il2CppFullySharedGenericStruct* L_25 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 891));
+		Il2CppConstrainedCallData L_27;
+		Il2CppMethodPointer L_28 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_25, &L_27, L_26);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_29)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_30 = ((func_L_29)L_28)(L_27.thisPtr,L_27.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 891));
+		V_1 = L_30;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 892));
+		int32_t L_31;
+		L_31 = AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_inline((&V_1), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 892));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 893));
+		int32_t L_32;
+		L_32 = ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323(L_24, L_31, 1, ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 893));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 894));
+	}
+
+IL_0083:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1585>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 895));
+		return;
+	}
+}
+// Method Definition Index: 50333
+// Method Definition Index: 50333
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllocatorManager_Unregister_TisIl2CppFullySharedGenericStruct_m1782C417767DBDCC0F33DE0B0ACCEE7BE0C9570D_fshared (Il2CppFullySharedGenericStruct* ___0_t, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5_RuntimeMethod_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	void* L_1 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	void* L_9 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	CHECKED_LOCAL(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_StaticInit);
+	void* L_16 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	CHECKED_LOCAL(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_StaticInit);
+	void* L_25 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	void* L_33 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(method->rgctx_data, 1)));
+	CHECKED_LOCAL(Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_StaticInit);
+	bool V_0 = false;
+	AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_t));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 896));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 897));
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 898));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1595>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 899));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 900));
+		Il2CppConstrainedCallData L_2;
+		Il2CppMethodPointer L_3 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_0, &L_2, L_1);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_4)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_5 = ((func_L_4)L_3)(L_2.thisPtr,L_2.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 900));
+		V_1 = L_5;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 901));
+		bool L_6;
+		L_6 = AllocatorHandle_get_IsInstalled_mB38CD887177A87128DC9A2DE6F866F9EC18FA907((&V_1), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 901));
+		V_0 = L_6;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 902));
+		bool L_7 = V_0;
+		if (!L_7)
+		{
+			goto IL_0091;
+		}
+	}
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 903));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1597>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 904));
+		Il2CppFullySharedGenericStruct* L_8 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 905));
+		Il2CppConstrainedCallData L_10;
+		Il2CppMethodPointer L_11 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_8, &L_10, L_9);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_12)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_13 = ((func_L_12)L_11)(L_10.thisPtr,L_10.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 905));
+		V_1 = L_13;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 906));
+		AllocatorHandle_Dispose_mB74CBC8980962C016A6C85F09D3F94775A2C58E3((&V_1), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 906));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1598>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 907));
+		CHECKED_LOCAL_INIT(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_StaticInit,(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 908));
+		Long1024_tEE887C506947419DC829213E6C7483D80AF5659F* L_14;
+		L_14 = SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5((&((IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_StaticFields*)il2cpp_codegen_static_fields_for(IsInstalled_t42C3CF2626E162EF686994F983A03FAACB65537C_il2cpp_TypeInfo_var))->___Ref), SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 908));
+		Il2CppFullySharedGenericStruct* L_15 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 909));
+		Il2CppConstrainedCallData L_17;
+		Il2CppMethodPointer L_18 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_15, &L_17, L_16);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_19)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_20 = ((func_L_19)L_18)(L_17.thisPtr,L_17.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 909));
+		V_1 = L_20;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 910));
+		int32_t L_21;
+		L_21 = AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_inline((&V_1), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 910));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 911));
+		int32_t L_22;
+		L_22 = ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323(L_14, L_21, 1, ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 911));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1599>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 912));
+		CHECKED_LOCAL_INIT(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_StaticInit,(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 913));
+		Long1024_tEE887C506947419DC829213E6C7483D80AF5659F* L_23;
+		L_23 = SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5((&((IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_StaticFields*)il2cpp_codegen_static_fields_for(IsAutoDispose_t042DBFFA97CC00077DEB1A53BB0046B580CFE27F_il2cpp_TypeInfo_var))->___Ref), SharedStatic_1_get_Data_mEB75F426B386E5E56A5183F271C49A7F7AA389A5_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 913));
+		Il2CppFullySharedGenericStruct* L_24 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 914));
+		Il2CppConstrainedCallData L_26;
+		Il2CppMethodPointer L_27 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_24, &L_26, L_25);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_28)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_29 = ((func_L_28)L_27)(L_26.thisPtr,L_26.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 914));
+		V_1 = L_29;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 915));
+		int32_t L_30;
+		L_30 = AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_inline((&V_1), NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 915));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 916));
+		int32_t L_31;
+		L_31 = ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323(L_23, L_30, 1, ConcurrentMask_TryFree_TisLong1024_tEE887C506947419DC829213E6C7483D80AF5659F_mA73898672B3B82A8A0B3D5FB2654735189181323_RuntimeMethod_var);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 916));
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1600>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 917));
+		Il2CppFullySharedGenericStruct* L_32 = ___0_t;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 918));
+		Il2CppConstrainedCallData L_34;
+		Il2CppMethodPointer L_35 = il2cpp_codegen_get_runtime_constrained_call_data(il2cpp_rgctx_data(method->rgctx_data, 1), il2cpp_rgctx_method(method->rgctx_data, 0), (void*)L_32, &L_34, L_33);
+		typedef AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 ( *func_L_36)(void*,const RuntimeMethod*);
+		AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148 L_37 = ((func_L_36)L_35)(L_34.thisPtr,L_34.method);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 918));
+		uint16_t L_38 = L_37.___Index;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 919));
+		CHECKED_LOCAL_INIT(Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_StaticInit,(Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		Managed_UnregisterDelegate_mE60C615D7705C878A66FB0AA06C7EE86A2359D46((int32_t)L_38, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 919));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 920));
+	}
+
+IL_0091:
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:1602>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 921));
+		return;
+	}
+}
+// Method Definition Index: 50333
+// Method Definition Index: 70080
+// Method Definition Index: 70080
+// Method Definition Index: 70080
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 AndroidJNI_GetDirectBuffer_TisIl2CppFullySharedGenericStruct_mA240D97969B6DC457DEC6F6EB97FDE5D94F28C29_fshared (intptr_t ___0_buffer, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	int8_t* V_0 = NULL;
+	int64_t V_1 = 0;
+	NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_buffer));
+	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 680));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 681));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1476>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 682));
+		intptr_t L_0 = ___0_buffer;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 683));
+		bool L_1;
+		L_1 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_0, 0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 683));
+		if (!L_1)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1477>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 684));
+		il2cpp_codegen_initobj((&V_2), sizeof(NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18));
+		NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 L_2 = V_2;
+		return L_2;
+	}
+
+IL_0017:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1478>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 685));
+		intptr_t L_3 = ___0_buffer;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 686));
+		int8_t* L_4;
+		L_4 = AndroidJNI_GetDirectBufferAddress_m0E0B127BFEB7AAF065829DC6AE11163D5616EBE8(L_3, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 686));
+		V_0 = L_4;
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1479>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 687));
+		int8_t* L_5 = V_0;
+		uintptr_t L_6 = (il2cpp_codegen_conv<uintptr_t,int32_t,int32_t,false,false>(0,NULL));
+		if ((!(((uintptr_t)L_5) == ((uintptr_t)L_6))))
+		{
+			goto IL_002d;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1480>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 688));
+		il2cpp_codegen_initobj((&V_2), sizeof(NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18));
+		NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 L_7 = V_2;
+		return L_7;
+	}
+
+IL_002d:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1481>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 689));
+		intptr_t L_8 = ___0_buffer;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 690));
+		int64_t L_9;
+		L_9 = AndroidJNI_GetDirectBufferCapacity_mCAC8D9C8E45481BE59FB17406E1E16D4F9628183(L_8, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 690));
+		V_1 = L_9;
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1482>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 691));
+		int64_t L_10 = V_1;
+		int64_t L_11 = (il2cpp_codegen_conv<int64_t,int32_t,int32_t,false,false>(((int32_t)2147483647LL),NULL));
+		if ((((int64_t)L_10) <= ((int64_t)L_11)))
+		{
+			goto IL_005d;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1483>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 692));
+		int64_t L_12 = V_1;
+		int64_t L_13 = L_12;
+		RuntimeObject* L_14 = Box(Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var, &L_13);
+		int32_t L_15 = ((int32_t)2147483647LL);
+		RuntimeObject* L_16 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_15);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 693));
+		String_t* L_17;
+		L_17 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDC955F06F1DA8A3B06C4755211822B06D698CF11)), L_14, L_16, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 693));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 694));
+		Exception_t* L_18 = (Exception_t*)il2cpp_codegen_object_new(Exception_t_il2cpp_TypeInfo_var);
+		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_18, L_17, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 694));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_18, method);
+	}
+
+IL_005d:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1484>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 695));
+		int8_t* L_19 = V_0;
+		int64_t L_20 = V_1;
+		int32_t L_21 = (il2cpp_codegen_conv<int32_t,int64_t,int64_t,false,false>(L_20,NULL));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 696));
+		NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 L_22;
+		L_22 = NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisIl2CppFullySharedGenericStruct_m6920C14D4E38FAB84BD2B5F148CE70DF7F224F52((void*)L_19, L_21, 1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 696));
+		return L_22;
+	}
+}
+// Method Definition Index: 70077
+// Method Definition Index: 70077
+// Method Definition Index: 70077
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t AndroidJNI_NewDirectByteBufferFromNativeArray_TisIl2CppFullySharedGenericStruct_mBA315BD28FAF24143A02065102FEC37584F134D1_fshared (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___0_buffer, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_buffer));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 670));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 671));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1450>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 672));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 673));
+		bool L_0;
+		L_0 = NativeArray_1_get_IsCreated_m527A2C3B75C25BFF29D1D9EA88C81172FF4F5A5A_inline((&___0_buffer), il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 673));
+		if (!L_0)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 674));
+		int32_t L_1;
+		L_1 = NativeArray_1_get_Length_mBE5CC8B844994CFC4AB434235F915881575E63C8_inline((&___0_buffer), il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 674));
+		if ((((int32_t)L_1) > ((int32_t)0)))
+		{
+			goto IL_0019;
+		}
+	}
+
+IL_0013:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1451>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 675));
+		return 0;
+	}
+
+IL_0019:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:1454>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 676));
+		NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 L_2 = ___0_buffer;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 677));
+		void* L_3;
+		L_3 = NativeArrayUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_m4AB802D5B1B296D0F976C1E7631699B0C4A4D00F_inline(L_2, il2cpp_rgctx_method(method->rgctx_data, 2));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 677));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 678));
+		int32_t L_4;
+		L_4 = NativeArray_1_get_Length_mBE5CC8B844994CFC4AB434235F915881575E63C8_inline((&___0_buffer), il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 678));
+		int64_t L_5 = (il2cpp_codegen_conv<int64_t,int32_t,int32_t,false,false>(L_4,NULL));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 679));
+		intptr_t L_6;
+		L_6 = AndroidJNI_NewDirectByteBuffer_m17389ED6D98CC0364180BAB43F2747B48FFDB107((uint8_t*)L_3, L_5, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 679));
+		return L_6;
+	}
+}
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+// Method Definition Index: 69822
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mE2FE04F1AE05E31AFCB6C62A0D8015274310BBE7_fshared (intptr_t ___0_array, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit);
+	const uint32_t SizeOf_ArrayType_t33FA9A7F66F041B4E2878FF619DA2A8FCDD39085 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_ArrayType_t33FA9A7F66F041B4E2878FF619DA2A8FCDD39085);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_array));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 98));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 99));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:186>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 100));
+		intptr_t L_0 = ___0_array;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 101));
+		CHECKED_LOCAL_INIT(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit,(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		_AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mD6B660A63955117687D6131FC1DB255161D1A2BA(L_0, (Il2CppFullySharedGenericAny*)L_1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 101));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_1, SizeOf_ArrayType_t33FA9A7F66F041B4E2878FF619DA2A8FCDD39085);
+		return;
+	}
+}
+// Method Definition Index: 69824
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t AndroidJNIHelper_GetFieldID_TisIl2CppFullySharedGenericAny_mD4DFA0128576804E9AE4FF17BD3D1398F2196069_fshared (intptr_t ___0_jclass, String_t* ___1_fieldName, bool ___2_isStatic, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_jclass), (&___1_fieldName), (&___2_isStatic));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 106));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 107));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:198>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 108));
+		intptr_t L_0 = ___0_jclass;
+		String_t* L_1 = ___1_fieldName;
+		bool L_2 = ___2_isStatic;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 109));
+		CHECKED_LOCAL_INIT(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit,(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		intptr_t L_3;
+		L_3 = _AndroidJNIHelper_GetFieldID_TisIl2CppFullySharedGenericAny_m5714D44FF454CB672C9F04F1316533DAD6C6BCBB(L_0, L_1, L_2, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 109));
+		return L_3;
+	}
+}
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+// Method Definition Index: 69823
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t AndroidJNIHelper_GetMethodID_TisIl2CppFullySharedGenericAny_mEB124826B537513D20B0E11A265E04D0612E1CE8_fshared (intptr_t ___0_jclass, String_t* ___1_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___2_args, bool ___3_isStatic, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_jclass), (&___1_methodName), (&___2_args), (&___3_isStatic));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 102));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 103));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:192>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 104));
+		intptr_t L_0 = ___0_jclass;
+		String_t* L_1 = ___1_methodName;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = ___2_args;
+		bool L_3 = ___3_isStatic;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 105));
+		CHECKED_LOCAL_INIT(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit,(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		intptr_t L_4;
+		L_4 = _AndroidJNIHelper_GetMethodID_TisIl2CppFullySharedGenericAny_mBB787943D3DB158E741B5FF2B66EFB90237F837C(L_0, L_1, L_2, L_3, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 105));
+		return L_4;
+	}
+}
+// Method Definition Index: 69825
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidJNIHelper_GetSignature_TisIl2CppFullySharedGenericAny_m4D04F21DE5CB13BC4E2A08505DA57AC729F3BA70_fshared (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_args, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	CHECKED_LOCAL(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 110));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 111));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJNI.bindings.cs:204>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 112));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ___0_args;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 113));
+		CHECKED_LOCAL_INIT(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_StaticInit,(_AndroidJNIHelper_tA796944DDB1B1459DF68C9FFA518F452C81364F3_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		String_t* L_1;
+		L_1 = _AndroidJNIHelper_GetSignature_TisIl2CppFullySharedGenericAny_m5BFF8BF215EBBD2B94DB67B384DAB97E221FA134(L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 113));
+		return L_1;
+	}
+}
+// Method Definition Index: 70270
+// Method Definition Index: 70270
+// Method Definition Index: 70270
+// Method Definition Index: 70270
+// Method Definition Index: 70270
+// Method Definition Index: 70270
+// Method Definition Index: 70270
+// Method Definition Index: 70270
+// Method Definition Index: 70271
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_TisIl2CppFullySharedGenericAny_mC798093D4EE507666B4D04C1237E82DFBBACE706_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_ReturnType_t7ECE3320BEFB3505409302EC3AA6B828AE7E1DB5 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_ReturnType_t7ECE3320BEFB3505409302EC3AA6B828AE7E1DB5);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodID), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2076));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2077));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:510>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2078));
+		intptr_t L_0 = ___0_methodID;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = ___1_args;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2079));
+		AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_m4720E88EC57849809AFC4A771495414E75120D8F(__this, L_0, L_1, (Il2CppFullySharedGenericAny*)L_2, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2079));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_2, SizeOf_ReturnType_t7ECE3320BEFB3505409302EC3AA6B828AE7E1DB5);
+		return;
+	}
+}
+// Method Definition Index: 70270
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_TisIl2CppFullySharedGenericAny_mCA7EED8FFBB862858FF426BD7D6B191F9C24234B_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_ReturnType_t7C9CEFF53F7F785E3B0A2AA52BF0599DB9E4C7A7 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_ReturnType_t7C9CEFF53F7F785E3B0A2AA52BF0599DB9E4C7A7);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodName), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2072));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2073));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:505>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2074));
+		String_t* L_0 = ___0_methodName;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = ___1_args;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2075));
+		AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_mA1A866611778FF72A2067F7E30B32913C4EB4904(__this, L_0, L_1, (Il2CppFullySharedGenericAny*)L_2, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2075));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_2, SizeOf_ReturnType_t7C9CEFF53F7F785E3B0A2AA52BF0599DB9E4C7A7);
+		return;
+	}
+}
+// Method Definition Index: 70250
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_TisIl2CppFullySharedGenericAny_mDA393DFB3EA03B230F3982EC0F62EED04C1B755E_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodID), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1967));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1968));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:374>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1969));
+		intptr_t L_0 = ___0_methodID;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1970));
+		AndroidJavaObject__Call_m2126160FB635069207535BD0E700C3605FDB3308(__this, L_0, L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1970));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:375>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1971));
+		return;
+	}
+}
+// Method Definition Index: 70249
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_TisIl2CppFullySharedGenericAny_mF7CDE80510F82B3C335324838828B788E1F0FAD4_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodName), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1962));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1963));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:369>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1964));
+		String_t* L_0 = ___0_methodName;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1965));
+		AndroidJavaObject__Call_m4C4D7D7287030773175BDF47681EA018DFA4DF1A(__this, L_0, L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1965));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:370>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1966));
+		return;
+	}
+}
+// Method Definition Index: 70269
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mE94FE031A180D9514AA8E28338270133654A7412_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	const uint32_t SizeOf_ReturnType_tE77199CFC11B9237A747C8E23BCDA97324CD4769 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_4 = alloca(SizeOf_ReturnType_tE77199CFC11B9237A747C8E23BCDA97324CD4769);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodID), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2068));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2069));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:500>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2070));
+		intptr_t L_0 = ___0_methodID;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2071));
+		AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_m4720E88EC57849809AFC4A771495414E75120D8F(__this, L_0, L_2, (Il2CppFullySharedGenericAny*)L_4, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2071));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_4, SizeOf_ReturnType_tE77199CFC11B9237A747C8E23BCDA97324CD4769);
+		return;
+	}
+}
+// Method Definition Index: 70268
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m584BD08D664D1371FF995E37EDD37FD6AA861406_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	const uint32_t SizeOf_ReturnType_t6A981EFC55AACA8DB2914A6B9C24AF2C1F0D86E3 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_4 = alloca(SizeOf_ReturnType_t6A981EFC55AACA8DB2914A6B9C24AF2C1F0D86E3);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodName), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2064));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2065));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:495>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2066));
+		String_t* L_0 = ___0_methodName;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2067));
+		AndroidJavaObject__Call_TisIl2CppFullySharedGenericAny_mA1A866611778FF72A2067F7E30B32913C4EB4904(__this, L_0, L_2, (Il2CppFullySharedGenericAny*)L_4, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2067));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_4, SizeOf_ReturnType_t6A981EFC55AACA8DB2914A6B9C24AF2C1F0D86E3);
+		return;
+	}
+}
+// Method Definition Index: 70274
+// Method Definition Index: 70275
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_CallStatic_TisIl2CppFullySharedGenericAny_m98714A38A15645388BE9EE530213C7EDB49C34AF_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_ReturnType_t955BFF9AB851C80203957B433FC00E2046696241 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_ReturnType_t955BFF9AB851C80203957B433FC00E2046696241);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodID), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2092));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2093));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:531>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2094));
+		intptr_t L_0 = ___0_methodID;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = ___1_args;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2095));
+		AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_m8D1EB1F6B7C8D0B7D54EF55F42BCE6B7576E0953(__this, L_0, L_1, (Il2CppFullySharedGenericAny*)L_2, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2095));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_2, SizeOf_ReturnType_t955BFF9AB851C80203957B433FC00E2046696241);
+		return;
+	}
+}
+// Method Definition Index: 70274
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_CallStatic_TisIl2CppFullySharedGenericAny_m7843D14A0537A1190C739261EF49C05B1FF2ED90_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_ReturnType_t94E13999E45FF70AA5DA5E427955FC4E439412B2 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_ReturnType_t94E13999E45FF70AA5DA5E427955FC4E439412B2);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodName), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2088));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2089));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:526>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2090));
+		String_t* L_0 = ___0_methodName;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = ___1_args;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2091));
+		AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_mA069934E49E8EFEB980CA5EED2B1DE810C150A68(__this, L_0, L_1, (Il2CppFullySharedGenericAny*)L_2, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2091));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_2, SizeOf_ReturnType_t94E13999E45FF70AA5DA5E427955FC4E439412B2);
+		return;
+	}
+}
+// Method Definition Index: 70254
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_CallStatic_TisIl2CppFullySharedGenericAny_m9E915D63BD1F4FB05B49296EEFE25B86C30EA692_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodID), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1987));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1988));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:397>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1989));
+		intptr_t L_0 = ___0_methodID;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1990));
+		AndroidJavaObject__CallStatic_mE917E474DB9801610FB7ABE5BE749DF84CEFD48A(__this, L_0, L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1990));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:398>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1991));
+		return;
+	}
+}
+// Method Definition Index: 70253
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_CallStatic_TisIl2CppFullySharedGenericAny_mB35C0A4F3C829AF99001B27BC0E99CD64736EE1A_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodName), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1982));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1983));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:392>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1984));
+		String_t* L_0 = ___0_methodName;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1985));
+		AndroidJavaObject__CallStatic_mD63902D30CD5626DAEAD1D6484AF7A9ACA85590E(__this, L_0, L_2, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1985));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:393>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 1986));
+		return;
+	}
+}
+// Method Definition Index: 70273
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_CallStatic_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m4C097E550C3D8A103BE65545A8CB9E688DCE341E_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_methodID, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	const uint32_t SizeOf_ReturnType_t3F35C7C5E6E91ECEB1E553CA45292DBBEC6E5501 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_4 = alloca(SizeOf_ReturnType_t3F35C7C5E6E91ECEB1E553CA45292DBBEC6E5501);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodID), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2084));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2085));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:521>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2086));
+		intptr_t L_0 = ___0_methodID;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2087));
+		AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_m8D1EB1F6B7C8D0B7D54EF55F42BCE6B7576E0953(__this, L_0, L_2, (Il2CppFullySharedGenericAny*)L_4, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2087));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_4, SizeOf_ReturnType_t3F35C7C5E6E91ECEB1E553CA45292DBBEC6E5501);
+		return;
+	}
+}
+// Method Definition Index: 70272
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_CallStatic_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_m9E8D43F22F21BB581F9478C8CF9B3A8059B3B8CD_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_args, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	if (!il2cpp_rgctx_is_initialized(method))
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_rgctx_method_init(method);
+	}
+	const uint32_t SizeOf_ReturnType_t41223B870DEBD9DC66C7F3F6FDDF2CF6D061E4EB = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_4 = alloca(SizeOf_ReturnType_t41223B870DEBD9DC66C7F3F6FDDF2CF6D061E4EB);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_methodName), (&___1_args));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2080));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2081));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:516>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2082));
+		String_t* L_0 = ___0_methodName;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_3 = ___1_args;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2083));
+		AndroidJavaObject__CallStatic_TisIl2CppFullySharedGenericAny_mA069934E49E8EFEB980CA5EED2B1DE810C150A68(__this, L_0, L_2, (Il2CppFullySharedGenericAny*)L_4, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2083));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_4, SizeOf_ReturnType_t41223B870DEBD9DC66C7F3F6FDDF2CF6D061E4EB);
+		return;
+	}
+}
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+// Method Definition Index: 70302
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_FromJavaArray_TisIl2CppFullySharedGenericAny_m4D8E7ACD1BBB7E3FEC7BA69AF6C620E70D8BBC3E_fshared (intptr_t ___0_jobject, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+	const Il2CppFullySharedGenericAny L_4 = L_2;
+	const Il2CppFullySharedGenericAny L_5 = alloca(SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+	Il2CppFullySharedGenericAny V_0 = alloca(SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+	memset(V_0, 0, SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_jobject));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3046));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3047));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1054>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3048));
+		intptr_t L_0 = ___0_jobject;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3049));
+		bool L_1;
+		L_1 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_0, 0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3049));
+		if (!L_1)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1055>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3050));
+		il2cpp_codegen_initobj((Il2CppFullySharedGenericAny*)V_0, SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+		il2cpp_codegen_memcpy(L_2, V_0, SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_2, SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+		return;
+	}
+
+IL_0017:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1056>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3051));
+		intptr_t L_3 = ___0_jobject;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3052));
+		AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mE2FE04F1AE05E31AFCB6C62A0D8015274310BBE7(L_3, (Il2CppFullySharedGenericAny*)L_4, il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3052));
+		il2cpp_codegen_box_unbox(L_4, L_5, SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC, il2cpp_rgctx_data(method->rgctx_data, 0), il2cpp_rgctx_data(method->rgctx_data, 0));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_5, SizeOf_ReturnType_t2602EED81B2B6E4946933FD7A1734F95B3DD02CC);
+		return;
+	}
+}
+// Method Definition Index: 70301
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_FromJavaArrayDeleteLocalRef_TisIl2CppFullySharedGenericAny_m5BC2B7B267EBFB3D33E1D15F5F5DFEF99AB48E84_fshared (intptr_t ___0_jobject, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+	const Il2CppFullySharedGenericAny L_5 = L_2;
+	const Il2CppFullySharedGenericAny L_7 = L_2;
+	const Il2CppFullySharedGenericAny L_6 = alloca(SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+	Il2CppFullySharedGenericAny V_0 = alloca(SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+	memset(V_0, 0, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_jobject));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3034));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3035));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1040>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3036));
+		intptr_t L_0 = ___0_jobject;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3037));
+		bool L_1;
+		L_1 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_0, 0, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3037));
+		if (!L_1)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1041>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3038));
+		il2cpp_codegen_initobj((Il2CppFullySharedGenericAny*)V_0, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+		il2cpp_codegen_memcpy(L_2, V_0, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_2, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+		return;
+	}
+
+IL_0017:
+	{
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3039));
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_002b:
+			{
+				STORE_TRY_ID(methodExecutionContext, -1);
+				//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1048>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3042));
+				intptr_t L_3 = ___0_jobject;
+				STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3043));
+				AndroidJNISafe_DeleteLocalRef_m20303564C88A1B90E3D8D7A7D893392E18967094(L_3, NULL);
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3043));
+				//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1049>
+				CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3044));
+				return;
+			}
+		});
+		try
+		{
+			STORE_TRY_ID(methodExecutionContext, 0);
+			//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1044>
+			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3040));
+			intptr_t L_4 = ___0_jobject;
+			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3041));
+			AndroidJNIHelper_ConvertFromJNIArray_TisIl2CppFullySharedGenericAny_mE2FE04F1AE05E31AFCB6C62A0D8015274310BBE7(L_4, (Il2CppFullySharedGenericAny*)L_5, il2cpp_rgctx_method(method->rgctx_data, 1));
+			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3041));
+			il2cpp_codegen_box_unbox(L_5, L_6, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9, il2cpp_rgctx_data(method->rgctx_data, 0), il2cpp_rgctx_data(method->rgctx_data, 0));
+			il2cpp_codegen_memcpy(V_0, L_6, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+			goto IL_0032;
+		}
+		catch(Il2CppNativeThreadAbortException&)
+		{
+			__finallyBlock.SetNativeThreadAbortOccurred();
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0032:
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:1050>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 3045));
+		il2cpp_codegen_memcpy(L_7, V_0, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_7, SizeOf_ReturnType_t7F4379E8D6E3B3545F3D77660B8E3F6DA1DC4DB9);
+		return;
+	}
+}
+// Method Definition Index: 70258
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Get_TisIl2CppFullySharedGenericAny_m0921C141B8FD194E4F423401D827FCB547354135_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_t3D88A0B7A2BB1C07E18A9AA7AB32582B0FB37337 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_t3D88A0B7A2BB1C07E18A9AA7AB32582B0FB37337);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldID));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2006));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2007));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:420>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2008));
+		intptr_t L_0 = ___0_fieldID;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2009));
+		AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m16AE597DA478C33ABF978BB8131126B5C7360D09(__this, L_0, (Il2CppFullySharedGenericAny*)L_1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2009));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_1, SizeOf_FieldType_t3D88A0B7A2BB1C07E18A9AA7AB32582B0FB37337);
+		return;
+	}
+}
+// Method Definition Index: 70257
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Get_TisIl2CppFullySharedGenericAny_m390E9396B06E7DB37AB22F9F94EF31B456F01185_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_tE541E61DC1EE486A3DDC10DCA2A2DD9A2A3BADE8 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_tE541E61DC1EE486A3DDC10DCA2A2DD9A2A3BADE8);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldName));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2002));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2003));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:415>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2004));
+		String_t* L_0 = ___0_fieldName;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2005));
+		AndroidJavaObject__Get_TisIl2CppFullySharedGenericAny_m6AA7C8A5BE069836640026CB6EDA5D93B3246683(__this, L_0, (Il2CppFullySharedGenericAny*)L_1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2005));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_1, SizeOf_FieldType_tE541E61DC1EE486A3DDC10DCA2A2DD9A2A3BADE8);
+		return;
+	}
+}
+// Method Definition Index: 70262
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_GetStatic_TisIl2CppFullySharedGenericAny_m7E7CB28FD389C5D15A289C22C10EEBB9E64567B9_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_t4E8B4431DA3B0620A6961D0830B049CE0FA25BB3 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_t4E8B4431DA3B0620A6961D0830B049CE0FA25BB3);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldID));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2024));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2025));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:444>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2026));
+		intptr_t L_0 = ___0_fieldID;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2027));
+		AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m265EB43F18C8FB22DCD571C5E50A76642369551D(__this, L_0, (Il2CppFullySharedGenericAny*)L_1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2027));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_1, SizeOf_FieldType_t4E8B4431DA3B0620A6961D0830B049CE0FA25BB3);
+		return;
+	}
+}
+// Method Definition Index: 70261
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_GetStatic_TisIl2CppFullySharedGenericAny_mDD5B83921F6078373B85EB4F803492A68545BA7E_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_tBB418E296327456981AAF34C2BEB510AEC3C4E4D = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 1));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_tBB418E296327456981AAF34C2BEB510AEC3C4E4D);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldName));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2020));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2021));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:439>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2022));
+		String_t* L_0 = ___0_fieldName;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2023));
+		AndroidJavaObject__GetStatic_TisIl2CppFullySharedGenericAny_m5FA6F86B221B6AD76DDD71818F721187D59BFC38(__this, L_0, (Il2CppFullySharedGenericAny*)L_1, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2023));
+		il2cpp_codegen_memcpy(il2cppRetVal, L_1, SizeOf_FieldType_tBB418E296327456981AAF34C2BEB510AEC3C4E4D);
+		return;
+	}
+}
+// Method Definition Index: 70260
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Set_TisIl2CppFullySharedGenericAny_mEB42AA9151144DAA56A324FBF5A564C71A65D35E_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_tD083F29D6E32E63E26B83C297746967559FB5289 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_tD083F29D6E32E63E26B83C297746967559FB5289);
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_FieldType_tD083F29D6E32E63E26B83C297746967559FB5289);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldID), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2015));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2016));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:431>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2017));
+		intptr_t L_0 = ___0_fieldID;
+		il2cpp_codegen_memcpy(L_1, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val), SizeOf_FieldType_tD083F29D6E32E63E26B83C297746967559FB5289);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2018));
+		AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m84E47B5A5FF416288BF85C7F79F287D6FD90356F(__this, L_0, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? il2cpp_codegen_memcpy(L_2, L_1, SizeOf_FieldType_tD083F29D6E32E63E26B83C297746967559FB5289): *(void**)L_1), il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2018));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:432>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2019));
+		return;
+	}
+}
+// Method Definition Index: 70259
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Set_TisIl2CppFullySharedGenericAny_m7286B3F15DA02D0B999CE939F20412740B22945E_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_t5C6F84F3CFFB0874A4DA0D1C58053A25B835551E = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_t5C6F84F3CFFB0874A4DA0D1C58053A25B835551E);
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_FieldType_t5C6F84F3CFFB0874A4DA0D1C58053A25B835551E);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldName), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2010));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2011));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:426>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2012));
+		String_t* L_0 = ___0_fieldName;
+		il2cpp_codegen_memcpy(L_1, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val), SizeOf_FieldType_t5C6F84F3CFFB0874A4DA0D1C58053A25B835551E);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2013));
+		AndroidJavaObject__Set_TisIl2CppFullySharedGenericAny_m1AF6344C2EF172B8799D007F4BAC3ECDC182BC22(__this, L_0, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? il2cpp_codegen_memcpy(L_2, L_1, SizeOf_FieldType_t5C6F84F3CFFB0874A4DA0D1C58053A25B835551E): *(void**)L_1), il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2013));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:427>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2014));
+		return;
+	}
+}
+// Method Definition Index: 70264
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_SetStatic_TisIl2CppFullySharedGenericAny_mFB380E32D4FBFB41D3870427D3227A38E72F3D7C_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, intptr_t ___0_fieldID, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_tD9FB37412CCB11866A06B8D683ACBBD34ED06C6B = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_tD9FB37412CCB11866A06B8D683ACBBD34ED06C6B);
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_FieldType_tD9FB37412CCB11866A06B8D683ACBBD34ED06C6B);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldID), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2033));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2034));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:455>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2035));
+		intptr_t L_0 = ___0_fieldID;
+		il2cpp_codegen_memcpy(L_1, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val), SizeOf_FieldType_tD9FB37412CCB11866A06B8D683ACBBD34ED06C6B);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2036));
+		AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_m07564225CF639F8502927F2D783809867A34367A(__this, L_0, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? il2cpp_codegen_memcpy(L_2, L_1, SizeOf_FieldType_tD9FB37412CCB11866A06B8D683ACBBD34ED06C6B): *(void**)L_1), il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2036));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:456>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2037));
+		return;
+	}
+}
+// Method Definition Index: 70263
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_SetStatic_TisIl2CppFullySharedGenericAny_mF354DBF45CBF7D251BCCAB27BAB86047439CC292_fshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_FieldType_t6076CC06F19BCC0301AE8C734F26CA429D2DB469 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	const Il2CppFullySharedGenericAny L_1 = alloca(SizeOf_FieldType_t6076CC06F19BCC0301AE8C734F26CA429D2DB469);
+	const Il2CppFullySharedGenericAny L_2 = alloca(SizeOf_FieldType_t6076CC06F19BCC0301AE8C734F26CA429D2DB469);
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fieldName), (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2028));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2029));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:450>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2030));
+		String_t* L_0 = ___0_fieldName;
+		il2cpp_codegen_memcpy(L_1, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? ___1_val : &___1_val), SizeOf_FieldType_t6076CC06F19BCC0301AE8C734F26CA429D2DB469);
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2031));
+		AndroidJavaObject__SetStatic_TisIl2CppFullySharedGenericAny_mA923EF05918D13946E2452B81B496229D8B952FB(__this, L_0, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->rgctx_data, 0)) ? il2cpp_codegen_memcpy(L_2, L_1, SizeOf_FieldType_t6076CC06F19BCC0301AE8C734F26CA429D2DB469): *(void**)L_1), il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2031));
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/AndroidJNI/AndroidJava.cs:451>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AndroidJNIModule + 2032));
+		return;
+	}
+}
+// Method Definition Index: 70286
+// Method Definition Index: 70285
+// Method Definition Index: 70286
+// Method Definition Index: 70285
+// Method Definition Index: 70286
+// Method Definition Index: 70285
+// Method Definition Index: 70286
+// Method Definition Index: 70285
+// Method Definition Index: 70286
+// Method Definition Index: 70285
+// Method Definition Index: 70286
+// Method Definition Index: 71272
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool LifecycleScopeBase_get_AllowNestedTransitions_mEF03BE23B67C81955948C2C709D01AB9B71F0345_inline (LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LifecycleScopeBase_get_AllowNestedTransitions_mEF03BE23B67C81955948C2C709D01AB9B71F0345_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LifecycleScopeBase_get_AllowNestedTransitions_mEF03BE23B67C81955948C2C709D01AB9B71F0345_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2320));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 2321));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/LifecycleScopeBase.cs:22>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2322));
+		bool L_0 = __this->___U3CAllowNestedTransitionsU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 71156
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_inline (ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ScopeTransitionRequestBase_get_Scope_mEB7F256D6FF4393EB627213D2E7343BD35BDCB50_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1492));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 1493));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:92>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1494));
+		LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_0 = __this->___U3CScopeU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 71267
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_inline (LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LifecycleScopeBase_get_Name_m9A358255FEBBEA5F94FCB82DC2B1AF1F8AB288BB_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2308));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 2309));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/LifecycleScopeBase.cs:6>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2310));
+		String_t* L_0 = __this->___U3CNameU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 71208
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool DebugLifecycle_get_LoggingEnabled_mADB463016DF27BC61A483A646E5B999ABB3A8D94_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DebugLifecycle_get_LoggingEnabled_mADB463016DF27BC61A483A646E5B999ABB3A8D94_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	CHECKED_LOCAL(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit);
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, DebugLifecycle_get_LoggingEnabled_mADB463016DF27BC61A483A646E5B999ABB3A8D94_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1753));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 1754));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/DebugLifecycle.cs:17>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1755));
+		CHECKED_LOCAL_INIT(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticInit,(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
+		bool L_0 = ((DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_StaticFields*)il2cpp_codegen_static_fields_for(DebugLifecycle_tDEBE1FE9649A80BE545B4DD634205A3880487E11_il2cpp_TypeInfo_var))->___loggingEnabled;
+		return L_0;
+	}
+}
+// Method Definition Index: 71290
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* LifecycleScopeKey_get_Type_mEC585239B2BC794EDFDE68B89A6533971E12C752_inline (LifecycleScopeKey_t786C4635697BF09DC1C3BA0331E34017B8BA961D* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LifecycleScopeKey_get_Type_mEC585239B2BC794EDFDE68B89A6533971E12C752_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LifecycleScopeKey_get_Type_mEC585239B2BC794EDFDE68B89A6533971E12C752_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2408));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 2409));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/LifecycleScopeKey.cs:8>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2410));
+		Type_t* L_0 = __this->____scopeType;
+		return L_0;
+	}
+}
+// Method Definition Index: 71158
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ScopeTransitionRequestBase_get_TransitionType_m64E9CBFD2036C2727F62B4276B07594B1AD0244B_inline (ScopeTransitionRequestBase_t9E5F91D84A64F389496153A6DA14A6686E4E3C16* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScopeTransitionRequestBase_get_TransitionType_m64E9CBFD2036C2727F62B4276B07594B1AD0244B_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ScopeTransitionRequestBase_get_TransitionType_m64E9CBFD2036C2727F62B4276B07594B1AD0244B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1498));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 1499));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:93>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 1500));
+		int32_t L_0 = __this->___U3CTransitionTypeU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 71109
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_inline (ActiveLifecycleScopeBase_t0F0C7F8D06A577773F8D661F8CCE4F9FA9999A8C* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ActiveLifecycleScopeBase_get_Scope_m711F6C219BF9AED00688EB5C251A74C6780E0780_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 640));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 641));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/ActiveLifecycleScopesTracker.cs:19>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 642));
+		LifecycleScopeBase_t7CC30D9721A69BA0A9E955EAED505A32007C0755* L_0 = __this->___U3CScopeU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 72085
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t math_max_m5EE58D9462EC2A39BDE97B0C27BB14CF4A0DB651_inline (int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&math_max_m5EE58D9462EC2A39BDE97B0C27BB14CF4A0DB651_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_x), (&___1_y));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, math_max_m5EE58D9462EC2A39BDE97B0C27BB14CF4A0DB651_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_MathematicsModule + 478));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_MathematicsModule + 479));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/Mathematics/Managed/math.cs:988>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_MathematicsModule + 480));
+		int32_t L_0 = ___0_x;
+		int32_t L_1 = ___1_y;
+		if ((((int32_t)L_0) > ((int32_t)L_1)))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		int32_t L_2 = ___1_y;
+		return L_2;
+	}
+
+IL_0006:
+	{
+		int32_t L_3 = ___0_x;
+		return L_3;
+	}
+}
+// Method Definition Index: 50352
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_inline (AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AllocatorHandle_get_Value_m24A0A3E433794106E43E9140CC2BB55493C8F30F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 1020));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Collections + 1021));
+	{
+		//<source_info:./Library/PackageCache/com.unity.collections@10fff0607388/Unity.Collections/AllocatorManager.cs:560>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Collections + 1022));
+		uint16_t L_0 = __this->___Index;
+		return (int32_t)L_0;
+	}
+}
+// Method Definition Index: 3876
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	//<source_info:<no-source>:1>
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
+	{
+		intptr_t L_0 = ___0_value1;
+		intptr_t L_1 = ___1_value2;
+		return (bool)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0);
+	}
+}
+// Method Definition Index: 11227
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_mE6103188ACDEC07F90F2D2986554730D18029750_fshared_inline (Queue_1_t00794C5F46E3254E713B03F949E6AB3A1AB1FD41* __this, const RuntimeMethod* method) 
+{
+	//<source_info:<no-source>:1>
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
+	{
+		int32_t L_0 = __this->____size;
+		return L_0;
+	}
+}
+// Method Definition Index: 71300
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppSharedGenericObject* LifecycleScopeWithContext_1_get_Context_m71715E88B71B9A07D4F70E53A5142B8F5383AC27_gshared_inline (LifecycleScopeWithContext_1_t35373E7691E4D4045644241660D92D3E94032599* __this, const RuntimeMethod* method) 
+{
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2462));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_Scripting + 2463));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/External/ScriptingCore/Unity.Scripting/LifecycleManagement/LifecycleScopeWithContext.cs:13>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_Scripting + 2464));
+		Il2CppSharedGenericObject* L_0 = __this->___U3CContextU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 11051
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m2D9E3398C2A3349E3F0F189A38E881D11DE5AA15_fshared_inline (Enumerator_tE10E03C65C00BC14DE96993EA5248F610F88C977* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	CHECKED_LOCAL(classRgctxInit);
+	const uint32_t SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(CHECKED_LOCAL_INIT_PARAM(classRgctxInit,(il2cpp_codegen_method_rgctx(method)),il2cpp_codegen_initialized_method_rgctx,(method)), 4));
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
+	//<source_info:<no-source>:1>
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
+	{
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_field_data_pointer(__this, il2cpp_rgctx_offset(CHECKED_LOCAL_INIT_PARAM(classRgctxInit,(il2cpp_codegen_method_rgctx(method)),il2cpp_codegen_initialized_method_rgctx,(method)), 5)), SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TKey_tD6F5EEADA0A8791813A4EF1C80C94030B153E4B0);
+		return;
+	}
+}
+// Method Definition Index: 11071
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m77681472C32B9ABB97AE602C0D4C365A0A8E8ACE_fshared_inline (Enumerator_tEEF12A9EDAAA0461A72ED9491F6AC20B22440222* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	CHECKED_LOCAL(classRgctxInit);
+	const uint32_t SizeOf_TValue_t000C678F2AD05088377B639A262C97D1B73DA1E8 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(CHECKED_LOCAL_INIT_PARAM(classRgctxInit,(il2cpp_codegen_method_rgctx(method)),il2cpp_codegen_initialized_method_rgctx,(method)), 4));
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_TValue_t000C678F2AD05088377B639A262C97D1B73DA1E8);
+	//<source_info:<no-source>:1>
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
+	{
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_field_data_pointer(__this, il2cpp_rgctx_offset(CHECKED_LOCAL_INIT_PARAM(classRgctxInit,(il2cpp_codegen_method_rgctx(method)),il2cpp_codegen_initialized_method_rgctx,(method)), 5)), SizeOf_TValue_t000C678F2AD05088377B639A262C97D1B73DA1E8);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_TValue_t000C678F2AD05088377B639A262C97D1B73DA1E8);
+		return;
+	}
+}
+// Method Definition Index: 11185
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_fshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
+{
+	CHECKED_LOCAL(classRgctxInit);
+	const uint32_t SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(CHECKED_LOCAL_INIT_PARAM(classRgctxInit,(il2cpp_codegen_method_rgctx(method)),il2cpp_codegen_initialized_method_rgctx,(method)), 4));
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
+	//<source_info:<no-source>:1>
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
+	{
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_field_data_pointer(__this, il2cpp_rgctx_offset(CHECKED_LOCAL_INIT_PARAM(classRgctxInit,(il2cpp_codegen_method_rgctx(method)),il2cpp_codegen_initialized_method_rgctx,(method)), 5)), SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
+		return;
+	}
+}
+// Method Definition Index: 35234
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_TisIl2CppFullySharedGenericStruct_mB6FBF9DDC79FEC02EC8705E9E527E1CD495564BF_fshared_inline (const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1879));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1880));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Runtime/Export/Unsafe/UnsafeUtilityPatchedForwarder.cs:61>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1881));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1882));
+		int32_t L_0;
+		L_0 = UnsafeUtilityInternal_SizeOf_TisIl2CppFullySharedGenericStruct_m9FC95A845D303A9C72ED4044691DD435A70F994A_inline(il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1882));
+		return L_0;
+	}
+}
+// Method Definition Index: 35235
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtility_AlignOf_TisIl2CppFullySharedGenericStruct_m11D1023B182BE19CF0F1A57DBE826004A1B81A41_fshared_inline (const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1883));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1884));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Runtime/Export/Unsafe/UnsafeUtilityPatchedForwarder.cs:69>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1885));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1886));
+		int32_t L_0;
+		L_0 = UnsafeUtilityInternal_AlignOf_TisIl2CppFullySharedGenericStruct_m530059660A1E31984686E17CC9E1E8EC5BADDADF_inline(il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1886));
+		return L_0;
+	}
+}
+// Method Definition Index: 35238
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* UnsafeUtility_AsRef_TisIl2CppFullySharedGenericStruct_m78B0690121A96EFFDA7D6D3ADAF97940CF8136BE_fshared_inline (void* ___0_ptr, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_ptr));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1895));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1896));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Runtime/Export/Unsafe/UnsafeUtilityPatchedForwarder.cs:89>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1897));
+		void* L_0 = ___0_ptr;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1898));
+		Il2CppFullySharedGenericStruct* L_1;
+		L_1 = UnsafeUtilityInternal_AsRef_TisIl2CppFullySharedGenericStruct_m4AE204964F54C3F7626BE47CADE4A52CF2797B6B_inline(L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1898));
+		return L_1;
+	}
+}
+// Method Definition Index: 35233
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* UnsafeUtility_AddressOf_TisIl2CppFullySharedGenericStruct_m8D42BD9F3A34A0C9A6BF4AA6104B9DAE7B629DE7_fshared_inline (Il2CppFullySharedGenericStruct* ___0_output, const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_output));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1875));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1876));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Runtime/Export/Unsafe/UnsafeUtilityPatchedForwarder.cs:54>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1877));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_output;
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1878));
+		void* L_1;
+		L_1 = UnsafeUtilityInternal_AddressOf_TisIl2CppFullySharedGenericStruct_m4556F0DE0C4C5FAA9B2E203DD1D76CC0B1FE567C_inline(L_0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1878));
+		return L_1;
+	}
+}
+// Method Definition Index: 71494
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FunctionPointer_1__ctor_m539FE4A638EAB194C030CB25B52DBB1BADEA6E5A_fshared_inline (FunctionPointer_1_t8F9F55036C9757966AA570D1DB1FADC59D4C7547* __this, intptr_t ___0_ptr, const RuntimeMethod* method) 
+{
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_ptr));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_BurstModule + 1617));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_BurstModule + 1618));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/Burst/Managed/FunctionPointer.cs:39>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_BurstModule + 1619));
+		intptr_t L_0 = ___0_ptr;
+		__this->____ptr = L_0;
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/Burst/Managed/FunctionPointer.cs:40>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_BurstModule + 1620));
+		return;
+	}
+}
+// Method Definition Index: 35069
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool NativeArray_1_get_IsCreated_m527A2C3B75C25BFF29D1D9EA88C81172FF4F5A5A_fshared_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) 
+{
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1073));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1074));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Runtime/Export/NativeArray/NativeArray.cs:241>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1075));
+		void* L_0 = __this->___m_Buffer;
+		uintptr_t L_1 = (il2cpp_codegen_conv<uintptr_t,int32_t,int32_t,false,false>(0,NULL));
+		return (bool)((((int32_t)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+	}
+}
+// Method Definition Index: 35066
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mBE5CC8B844994CFC4AB434235F915881575E63C8_fshared_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18* __this, const RuntimeMethod* method) 
+{
+	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, methodExecutionContextThis, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1061));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1062));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Runtime/Export/NativeArray/NativeArray.cs:170>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1063));
+		int32_t L_0 = __this->___m_Length;
+		return L_0;
+	}
+}
+// Method Definition Index: 35186
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* NativeArrayUnsafeUtility_GetUnsafePtr_TisIl2CppFullySharedGenericStruct_m4AB802D5B1B296D0F976C1E7631699B0C4A4D00F_fshared_inline (NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 ___0_nativeArray, const RuntimeMethod* method) 
+{
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_nativeArray));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1700));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1701));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Runtime/Export/NativeArray/NativeArray.cs:1204>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 1702));
+		NativeArray_1_tDB8B8DC66CC8E16ED6D9A8C75D2C1AFC80AC1E18 L_0 = ___0_nativeArray;
+		void* L_1 = L_0.___m_Buffer;
+		return L_1;
+	}
+}
+// Method Definition Index: 73794
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtilityInternal_SizeOf_TisIl2CppFullySharedGenericStruct_m9FC95A845D303A9C72ED4044691DD435A70F994A_fshared_inline (const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	const uint32_t SizeOf_T_t8EBE725B2740B3ECE9C2D5E9EBEB0B97172D5E18 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->rgctx_data, 0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 36));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 37));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Unsafe/UnsafeUtilityPatched.cs:89>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 38));
+		uint32_t L_0 = SizeOf_T_t8EBE725B2740B3ECE9C2D5E9EBEB0B97172D5E18;
+		return (int32_t)L_0;
+	}
+}
+// Method Definition Index: 73795
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtilityInternal_AlignOf_TisIl2CppFullySharedGenericStruct_m530059660A1E31984686E17CC9E1E8EC5BADDADF_fshared_inline (const RuntimeMethod* method) 
+{
+	il2cpp_rgctx_method_init(method);
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, NULL, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 39));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 40));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Unsafe/UnsafeUtilityPatched.cs:104>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 41));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 42));
+		int32_t L_0;
+		L_0 = UnsafeUtilityInternal_SizeOf_TisAlignOfHelper_1_tA18DF2C95F416AEB06D5F0702F37CBD85E8A7FB8_m934B08DAF1EA7B249CA769E8DCA4EBAC6AEB1885_inline(il2cpp_rgctx_method(method->rgctx_data, 0));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 42));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 43));
+		int32_t L_1;
+		L_1 = UnsafeUtilityInternal_SizeOf_TisIl2CppFullySharedGenericStruct_m9FC95A845D303A9C72ED4044691DD435A70F994A_inline(il2cpp_rgctx_method(method->rgctx_data, 1));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 43));
+		return ((int32_t)il2cpp_codegen_subtract(L_0, L_1));
+	}
+}
+// Method Definition Index: 73798
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* UnsafeUtilityInternal_AsRef_TisIl2CppFullySharedGenericStruct_m4AE204964F54C3F7626BE47CADE4A52CF2797B6B_fshared_inline (void* ___0_ptr, const RuntimeMethod* method) 
+{
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_ptr));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 50));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 51));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Unsafe/UnsafeUtilityPatched.cs:129>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 52));
+		void* L_0 = ___0_ptr;
+		return (Il2CppFullySharedGenericStruct*)(L_0);
+	}
+}
+// Method Definition Index: 73793
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* UnsafeUtilityInternal_AddressOf_TisIl2CppFullySharedGenericStruct_m4556F0DE0C4C5FAA9B2E203DD1D76CC0B1FE567C_fshared_inline (Il2CppFullySharedGenericStruct* ___0_output, const RuntimeMethod* method) 
+{
+	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_output));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, method, NULL, methodExecutionContextParameters, NULL);
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 33));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 34));
+	{
+		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Unsafe/UnsafeUtilityPatched.cs:81>
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 35));
+		Il2CppFullySharedGenericStruct* L_0 = ___0_output;
+		return (void*)(L_0);
+	}
+}

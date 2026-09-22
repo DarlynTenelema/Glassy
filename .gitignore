@@ -2,10 +2,14 @@
 # SECRETOS Y CREDENCIALES
 # ========================
 backend/.env
+backend/**/.env
 frontend/.env
 frontend/.env.*
 !frontend/.env.example
 *.env
+.env
+.env.*
+!.env.example
 
 # ========================
 # BACKEND — Go
@@ -79,3 +83,43 @@ $RECYCLE.BIN/
 logs/
 tmp/
 temp/
+
+# ========================
+# ASSETS PESADOS
+# ========================
+sonidos/bg_game.mp3
+frontend/unity/Glassy2/Assets/Audio/bg_game.mp3
+frontend/android/unityLibrary/src/main/jniLibs/**/*.so
+frontend/android/unityLibrary/symbols/**/*.so
+
+# ========================
+# UNITY — Archivos generados
+# ========================
+# Estos se regeneran automáticamente al abrir el proyecto en Unity Editor.
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+*.pidb
+*.suo
+*.userprefs
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+# Asset meta files que no son relevantes en repos vacíos
+# (descomenta si tu proyecto Unity está en la raíz)
+# *.meta
+sysinfo.txt
+*.apk
+*.aab
+ExportedProject/
+.vsconfig
