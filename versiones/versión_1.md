@@ -134,3 +134,4 @@ Suelo o límite = 3 (Es estático y nada lo puede mover).
 Al llegar al diamante este explota y se lleva todos los puntos y libera ese espacio como ya acordamos.
 
 Nota: Este proyecto se juega de manera vertical, es decir, con la pantalla en modo retrato.
+Darlyn08012002.

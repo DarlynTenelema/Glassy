@@ -47,15 +47,13 @@ func ensureTables() {
 	-- TABLA: users
 	-- ============================================================
 	CREATE TABLE IF NOT EXISTS users (
-		id          UUID        PRIMARY KEY DEFAULT uuid_generate_v4(),
-		google_id   VARCHAR(255) UNIQUE NOT NULL,
+		id          UUID        PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
 		email       VARCHAR(255) UNIQUE NOT NULL,
 		name        VARCHAR(255) NOT NULL,
 		avatar_url  TEXT,
-		crystals    INT         NOT NULL DEFAULT 0 CHECK (crystals >= 0),
+		crystals    INT         NOT NULL DEFAULT 100 CHECK (crystals >= 0),
 		created_at  TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP
 	);
-	CREATE INDEX IF NOT EXISTS idx_users_google_id ON users(google_id);
 
 	-- ============================================================
 	-- TABLA: leaderboards
