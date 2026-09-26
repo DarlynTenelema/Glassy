@@ -5818,7 +5818,6 @@ static const Il2CppTokenIndexMethodTuple s_reversePInvokeIndices[12] =
 	{ 0x06000B1E, 108,  (void**)&xxHash3_Hash64LongU24BurstManaged_m71E36BBD116CCA46ED23162F80B08D3B2F782B4D_RuntimeMethod_var, 0 },
 	{ 0x06000B1F, 106,  (void**)&xxHash3_Hash128LongU24BurstManaged_mC058740872D766ED00F1168A0EECEC0E90559E46_RuntimeMethod_var, 0 },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_Collections;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Collections_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Collections_CodeGenModule = 
 {
@@ -5829,7 +5828,7 @@ const Il2CppCodeGenModule g_Unity_Collections_CodeGenModule =
 	s_adjustorThunks,
 	12,
 	s_reversePInvokeIndices,
-	&g_DebuggerMetadataRegistrationUnity_Collections,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -16,7 +16,6 @@ static Il2CppMethodPointer s_methodPointers[3] =
 	RefSafetyRulesAttribute__ctor_m9995FDD7F67B5D671BBD100F259D1459DEB6BBA1,
 	GridLayout_DoNothing_mA280987BF98D257023D46C2C01902FC82EE6A00A,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_GridModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_GridModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_GridModule_CodeGenModule = 
 {
@@ -27,7 +26,7 @@ const Il2CppCodeGenModule g_UnityEngine_GridModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_GridModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

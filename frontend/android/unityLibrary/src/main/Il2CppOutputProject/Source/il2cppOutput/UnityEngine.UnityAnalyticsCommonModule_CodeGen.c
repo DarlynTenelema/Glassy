@@ -144,7 +144,6 @@ static Il2CppMethodPointer s_methodPointers[67] =
 	VCProviderAnalytics__ctor_mAD8899069C587B9D9AE3A83269AFEAE2C3DD77DB,
 	VCProviderAnalytics_CreateVCProviderAnalytics_mE4E3D95FEB31AA7DDEA8DF1241F019E504F50FC3,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_UnityAnalyticsCommonModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UnityAnalyticsCommonModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_UnityAnalyticsCommonModule_CodeGenModule = 
 {
@@ -155,7 +154,7 @@ const Il2CppCodeGenModule g_UnityEngine_UnityAnalyticsCommonModule_CodeGenModule
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_UnityAnalyticsCommonModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

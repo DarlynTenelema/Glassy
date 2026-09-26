@@ -211,7 +211,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] =
 	{ 0x06000053, PhysicsScene_Equals_mE3A11329AB6C2F4F76D2321D8BAE52671A2EDDA3_AdjustorThunk },
 	{ 0x06000054, PhysicsScene_Equals_m81E4A78FC3644FDC44044B3A5F19F1C4283648A1_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_PhysicsModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule = 
 {
@@ -222,7 +221,7 @@ const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_PhysicsModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

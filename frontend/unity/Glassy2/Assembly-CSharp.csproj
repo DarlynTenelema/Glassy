@@ -52,7 +52,6 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\LeaderboardManager.cs" />
     <Compile Include="Assets\Scripts\GameOverZone.cs" />
     <Compile Include="Assets\Scripts\ApiManager.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
@@ -62,18 +61,19 @@
     <Compile Include="Assets\FlutterUnityIntegration\SingletonMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\GemSpawner.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
-    <Compile Include="Assets\Scripts\StoreManager.cs" />
-    <Compile Include="Assets\Scripts\LoginManager.cs" />
+    <Compile Include="Assets\FlutterUnityBridge\Models\BridgeMessage.cs" />
+    <Compile Include="Assets\FlutterUnityBridge\FlutterBridgeManager.cs" />
     <Compile Include="Assets\Scripts\FloatingPhysics.cs" />
-    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\JellyEffect.cs" />
-    <Compile Include="Assets\Scripts\SettingsManager.cs" />
+    <Compile Include="Assets\Scripts\BackgroundManager.cs" />
     <Compile Include="Assets\Scripts\ScreenBoundsManager.cs" />
+    <Compile Include="Assets\Scripts\CameraAspectFitter.cs" />
     <Compile Include="Assets\Scripts\Gem.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\AuthManager.cs" />
     <Compile Include="Assets\Scripts\GameConfig.cs" />
     <Compile Include="Assets\FlutterUnityIntegration\UnityMessageManager.cs" />
+    <Compile Include="Assets\FlutterUnityBridge\Models\Payloads.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

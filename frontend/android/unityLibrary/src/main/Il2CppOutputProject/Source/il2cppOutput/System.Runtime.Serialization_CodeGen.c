@@ -22,7 +22,6 @@ static Il2CppMethodPointer s_methodPointers[6] =
 	DataMemberAttribute_get_EmitDefaultValue_m430708B4CFB34DD522B6D01A66CE8FDEDCC088E8,
 	EnumMemberAttribute_get_Value_mB41126B613B9FD1CD8A05D08FCEC4B6663864BE9,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationSystem_Runtime_Serialization;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Runtime_Serialization_CodeGenModule;
 const Il2CppCodeGenModule g_System_Runtime_Serialization_CodeGenModule = 
 {
@@ -33,7 +32,7 @@ const Il2CppCodeGenModule g_System_Runtime_Serialization_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationSystem_Runtime_Serialization,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

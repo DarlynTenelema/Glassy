@@ -29,7 +29,6 @@ static Il2CppMethodPointer s_methodPointers[15] =
 	NativeIntegerAttribute__ctor_mBDAB5520BC98665A2B58370527D6BAF64917D0C1,
 	EmbeddedAttribute__ctor_mD2BC23ADD852FC1DD7D00E1790D4877AEE78E6A3,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationSystem_Runtime_CompilerServices_Unsafe;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Runtime_CompilerServices_Unsafe_CodeGenModule;
 const Il2CppCodeGenModule g_System_Runtime_CompilerServices_Unsafe_CodeGenModule = 
 {
@@ -40,7 +39,7 @@ const Il2CppCodeGenModule g_System_Runtime_CompilerServices_Unsafe_CodeGenModule
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationSystem_Runtime_CompilerServices_Unsafe,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

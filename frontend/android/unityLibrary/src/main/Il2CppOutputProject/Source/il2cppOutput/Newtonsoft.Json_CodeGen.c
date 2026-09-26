@@ -5698,7 +5698,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[8] =
 	{ 0x06000529, TypeNameKey_GetHashCode_m2818F664C6CD4EA974EBD5D17147C28D1A903A98_AdjustorThunk },
 	{ 0x0600052A, TypeNameKey_Equals_m351AC7FD99EF650F601259E1DB999D84DC2E3E6D_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationNewtonsoft_Json;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Newtonsoft_Json_CodeGenModule;
 const Il2CppCodeGenModule g_Newtonsoft_Json_CodeGenModule = 
 {
@@ -5709,7 +5708,7 @@ const Il2CppCodeGenModule g_Newtonsoft_Json_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationNewtonsoft_Json,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

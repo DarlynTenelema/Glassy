@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using FlutterUnityIntegration;
+using FlutterUnityBridge;
+using FlutterUnityBridge.Models;
+
 /// <summary>
 /// GameManager — Director central de la escena de juego.
 /// Controla el estado (jugando/pausado/gameover), el score, los cristales
@@ -41,16 +44,74 @@ public class GameManager : MonoBehaviour
     public bool IsPaused      { get; private set; } = false;
     public bool IsGameOver    { get; private set; } = false;
 
+    private int _lastSentScore = -1;
+    private int _lastSentCrystals = -1;
+
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+
+        // Asegurar que el FlutterBridgeManager exista en la escena
+        if (FlutterBridgeManager.Instance == null)
+        {
+            GameObject bridgeObj = new GameObject("FlutterBridgeManager");
+            bridgeObj.AddComponent<FlutterBridgeManager>();
+            Debug.Log("[GameManager] FlutterBridgeManager instanciado dinámicamente.");
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (FlutterBridgeManager.Instance != null)
+        {
+            FlutterBridgeManager.Instance.OnPauseGameRequested  += HandlePauseRequest;
+            FlutterBridgeManager.Instance.OnPowerUpRequested    += HandlePowerUpRequest;
+            FlutterBridgeManager.Instance.OnAudioSettingsRequested += HandleAudioSettings;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (FlutterBridgeManager.Instance != null)
+        {
+            FlutterBridgeManager.Instance.OnPauseGameRequested  -= HandlePauseRequest;
+            FlutterBridgeManager.Instance.OnPowerUpRequested    -= HandlePowerUpRequest;
+            FlutterBridgeManager.Instance.OnAudioSettingsRequested -= HandleAudioSettings;
+        }
+    }
+
+    private void HandlePauseRequest(PauseGamePayload payload)
+    {
+        if (payload.isPaused) PauseGame();
+        else ResumeGame();
+    }
+
+    private void HandleAudioSettings(AudioSettingsPayload payload)
+    {
+        AudioManager.Instance?.SetVolume(payload.volumeEnabled);
+        AudioManager.Instance?.SetEffects(payload.effectsEnabled);
+        AudioManager.Instance?.SetMusicVolume(payload.musicVolume);
+    }
+
+    private void HandlePowerUpRequest(PowerUpPayload payload)
+    {
+        switch (payload.powerUpType)
+        {
+            case "UsePowerUpPearl": UsePowerUpPearl(); break;
+            case "UsePowerUpEmerald": UsePowerUpEmerald(); break;
+            case "UsePowerUpAll": UsePowerUpAll(); break;
+            default: UsePowerUpHighlighted(); break;
+        }
     }
 
     private void Start()
     {
+        // Instanciar el script que controla el fondo dinámicamente
+        gameObject.AddComponent<BackgroundManager>();
+
         // Cargar cristales guardados localmente (se sincroniza con el servidor al entrar)
-        LocalCrystals = PlayerPrefs.GetInt(GameConfig.KeyCrystals, 0);
+        LocalCrystals = PlayerPrefs.GetInt(GameConfig.KeyCrystals, 100);
 
         // Sincronizar cristales con el servidor si hay conexión
         if (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
@@ -71,8 +132,12 @@ public class GameManager : MonoBehaviour
         UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
         
         // Enviar estado inicial a Flutter
-        UnityMessageManager.Instance.SendMessageToFlutter("SCORE:0");
-        UnityMessageManager.Instance.SendMessageToFlutter("CRYSTALS:" + LocalCrystals);
+        SincronizarScore();
+        SincronizarCristales();
+        if (FlutterBridgeManager.Instance != null)
+        {
+            FlutterBridgeManager.Instance.SendReady();
+        }
     }
 
     // =========================================================================
@@ -110,12 +175,12 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        if (IsGameOver) return;
+        if (IsGameOver || amount <= 0) return;
         CurrentScore += amount;
         UIManager.Instance?.UpdateScoreDisplay(CurrentScore);
         
-        // Enviar nuevo score a Flutter
-        UnityMessageManager.Instance.SendMessageToFlutter("SCORE:" + CurrentScore);
+        // Enviar nuevo score a Flutter solo si cambió
+        SincronizarScore();
     }
 
     // =========================================================================
@@ -124,28 +189,32 @@ public class GameManager : MonoBehaviour
 
     public void AddCrystals(int amount)
     {
+        if (amount == 0) return;
         LocalCrystals += amount;
         PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
         PlayerPrefs.Save();
         UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
         
-        // Sincronizar cristales con Flutter
-        UnityMessageManager.Instance.SendMessageToFlutter("CRYSTALS:" + LocalCrystals);
+        // Sincronizar cristales con Flutter solo si cambiaron
+        SincronizarCristales();
     }
 
     public bool SpendCrystalsToRemoveGems(GemType type)
     {
-        if (type != GemType.Pearl && type != GemType.Emerald)
+        // Permitimos Pearl y Emerald libremente, O la gema que esté resaltada en rojo por peligro
+        bool isHighlighted = GemHighlightManager.Instance != null && GemHighlightManager.Instance.HighlightedType == type;
+
+        if (type != GemType.Pearl && type != GemType.Emerald && !isHighlighted)
         {
-            Debug.LogWarning("[GameManager] Solo se permite eliminar Perlas o Esmeraldas individualmente.");
+            Debug.LogWarning($"[GameManager] No se permite eliminar {type} a menos que esté resaltada.");
             return false;
         }
 
         int cost = GameConfig.GemCrystalCosts[(int)type];
         if (LocalCrystals < cost) return false;
 
-        // Si el usuario elige Perlas, en lugar de destruirlas del tablero, 
-        // simplemente pausamos el spawner por 5 segundos.
+        // Si el usuario elige Perlas, pausamos el spawner por 5 segundos
+        // y dejamos que el código de abajo destruya las perlas existentes.
         if (type == GemType.Pearl)
         {
             GemSpawner spawner = FindAnyObjectByType<GemSpawner>();
@@ -153,14 +222,7 @@ public class GameManager : MonoBehaviour
             {
                 spawner.PauseSpawningFor(5f);
             }
-            
-            LocalCrystals -= cost;
-            PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
-            PlayerPrefs.Save();
-            UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
-            UnityMessageManager.Instance.SendMessageToFlutter("CRYSTALS:" + LocalCrystals);
-            Debug.Log($"[GameManager] Spawner de perlas pausado por 5 segundos. Cristales restantes: {LocalCrystals}");
-            return true;
+            Debug.Log($"[GameManager] Spawner de perlas pausado por 5 segundos.");
         }
 
         // Eliminar todas las gemas de ese tipo que existan en la escena
@@ -177,13 +239,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (removed > 0)
+        if (removed > 0 || type == GemType.Pearl)
         {
             LocalCrystals -= cost;
             PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
             PlayerPrefs.Save();
             UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
-            UnityMessageManager.Instance.SendMessageToFlutter("CRYSTALS:" + LocalCrystals);
+            SincronizarCristales();
             
             // Sumar al score los puntos de las gemas eliminadas
             if (pointsToAdd > 0)
@@ -224,7 +286,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
             PlayerPrefs.Save();
             UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
-            UnityMessageManager.Instance.SendMessageToFlutter("CRYSTALS:" + LocalCrystals);
+            SincronizarCristales();
             
             if (pointsToAdd > 0)
             {
@@ -238,24 +300,55 @@ public class GameManager : MonoBehaviour
     }
 
     // =========================================================================
+    // WRAPPERS PARA FLUTTER
+    // =========================================================================
+
+    public void UsePowerUpPearl(string args = "")
+    {
+        SpendCrystalsToRemoveGems(GemType.Pearl);
+    }
+
+    public void UsePowerUpEmerald(string args = "")
+    {
+        SpendCrystalsToRemoveGems(GemType.Emerald);
+    }
+
+    public void UsePowerUpHighlighted(string args = "")
+    {
+        if (GemHighlightManager.Instance != null && GemHighlightManager.Instance.HighlightedType.HasValue)
+        {
+            SpendCrystalsToRemoveGems(GemHighlightManager.Instance.HighlightedType.Value);
+        }
+        else
+        {
+            Debug.Log("[GameManager] No hay gemas resaltadas para eliminar.");
+        }
+    }
+
+    public void UsePowerUpAll(string args = "")
+    {
+        SpendCrystalsToRemoveAllGems();
+    }
+
+    // =========================================================================
     // PAUSA
     // =========================================================================
 
-    public void PauseGame()
+    public void PauseGame(string args = "")
     {
         IsPaused = true;
         Time.timeScale = 0f;
         UIManager.Instance?.ShowPausePanel(true);
     }
 
-    public void ResumeGame()
+    public void ResumeGame(string args = "")
     {
         IsPaused = false;
         Time.timeScale = 1f;
         UIManager.Instance?.ShowPausePanel(false);
     }
 
-    public void TogglePause()
+    public void TogglePause(string args = "")
     {
         if (IsPaused) ResumeGame();
         else PauseGame();
@@ -268,7 +361,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Dispara el Game Over. Llamado por GameOverZone cuando las gemas se desbordan.
     /// </summary>
-    public void TriggerGameOver()
+    public void TriggerGameOver(string args = "")
     {
         if (IsGameOver) return;
         IsGameOver = true;
@@ -294,7 +387,29 @@ public class GameManager : MonoBehaviour
         }
         
         // Notificar a Flutter que el juego terminó
-        UnityMessageManager.Instance.SendMessageToFlutter("GAMEOVER:" + CurrentScore);
+        if (FlutterBridgeManager.Instance != null)
+        {
+            // Opcional: calcular si hay un high score. Por ahora pasamos false o implementamos la lógica.
+            FlutterBridgeManager.Instance.SendGameOver(CurrentScore, false);
+        }
+    }
+
+    private void SincronizarScore()
+    {
+        if (FlutterBridgeManager.Instance != null && CurrentScore != _lastSentScore)
+        {
+            FlutterBridgeManager.Instance.SendScoreUpdate(CurrentScore);
+            _lastSentScore = CurrentScore;
+        }
+    }
+
+    private void SincronizarCristales()
+    {
+        if (FlutterBridgeManager.Instance != null && LocalCrystals != _lastSentCrystals)
+        {
+            FlutterBridgeManager.Instance.SendCrystalsUpdate(LocalCrystals);
+            _lastSentCrystals = LocalCrystals;
+        }
     }
 
     /// <summary>
@@ -314,7 +429,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Reinicia la escena de juego.
     /// </summary>
-    public void RestartGame()
+    public void RestartGame(string args = "")
     {
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(GameConfig.SceneGame);
@@ -323,7 +438,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Vuelve al menú principal.
     /// </summary>
-    public void GoToMainMenu()
+    public void GoToMainMenu(string args = "")
     {
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(GameConfig.SceneMainMenu);

@@ -156,7 +156,6 @@ static Il2CppMethodPointer s_methodPointers[73] =
 	SpeedTreeWindManager_UpdateWindAndWriteBufferWindParams_m797D216456C652B207A2A09B87B885C5731ACD82,
 	SpeedTreeWindManager_UpdateWindAndWriteBufferWindParams_Injected_m89DD93AC1F8941B2FA0C8CF2586F887F029D021E,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_TerrainModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TerrainModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_TerrainModule_CodeGenModule = 
 {
@@ -167,7 +166,7 @@ const Il2CppCodeGenModule g_UnityEngine_TerrainModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_TerrainModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -73,7 +73,6 @@ struct VisibleToOtherModulesAttribute_tA5F28DFA258E62A0FE6D63A61440489F7984C067;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 struct WritableAttribute_t4B45B8DFAA7BF8EC656E1E61EEF002FB5419C3C2;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_ScriptingModule[];
 IL2CPP_EXTERN_C RuntimeClass* ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DataOwner_tCE1526E8508042F97CE454B8F70D36044C421CA5_il2cpp_TypeInfo_var;
@@ -92,119 +91,16 @@ IL2CPP_EXTERN_C String_t* _stringLiteralCE18B047107AA23D1AA9B2ED32D316148E02655F
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C String_t* _stringLiteralDC435B8AA14E51B7FC3CEF2ED8D5CED3A8A3151B;
 IL2CPP_EXTERN_C String_t* _stringLiteralF4D0C3AD9AC14CEF020DF94AE080C8D82512DCBB;
-IL2CPP_EXTERN_C const RuntimeMethod* AssetFileNameExtensionAttribute__ctor_m8D3488A4A61B29AC668811EA5EC3257A36E3D003_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BindingsAllocator_GetNativeOwnedDataPointer_m3668639A4B328ECC1DBB756D0217BEAFE136F25A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BlittableArrayWrapper__ctor_m01973995E52FAF7C794F1E79C18EF18A132340B0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BlittableListWrapper__ctor_mC84D2E6F6FFAA8F331B7F5DF76C48D0142B73EBB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BurstAuthorizedExternalMethodAttribute__ctor_mA3EEB1A90920FA4320D731C870386CB8714119D9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BurstDiscardAttribute__ctor_m4560DDB0821067081A9A4AE7AF8B90BD3407A7A6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Debug_LogWarning_m3DD7B93DF977FC792633C5821D2870381B94D249_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* EmbeddedAttribute__ctor_m60AA68B2B91FD25CF48D350D56192CC1E04E7820_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* ExceptionMarshaller_SetPendingException_mC29B71798C84232CB8D6669AD47258D2303290D7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FreeFunctionAttribute__ctor_m31A2D0BC0B484504134887B167957A3164595990_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FreeFunctionAttribute__ctor_m4170B1439BFE00F6A429BC9A8FCFE684DAD2B536_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FreeFunctionAttribute__ctor_mF04F5F3E178ACCF1C4ED57A72320E1B1862C3CF0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* IgnoreAttribute__ctor_mD65AB93B16A569DABF6ED6B2DC602E6640856F85_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* IgnoreAttribute_set_DoesNotContributeToSize_mEC93EE7E504A5795F885CA9A9B6A4FFD1C77A827_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Il2CppEagerStaticClassConstructionAttribute__ctor_mA7E4EB4327642FEC15C5409B08BDCDFE269F359A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IntPtrObjectMarshalling_CreateDefault_m4F8A320EE6F89B67ABC377A7A291B6DA73FD884F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IntPtrObjectMarshalling_CreateFromNative_m964C63649DC46B2B7F7A303B80033CD74DD14C9B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IntPtrObjectMarshalling_GetIntPtr_m7BBDB8A0F10ED0D586DD31ABA43569B5D61C7814_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IntPtrObjectMarshalling_SetIntPtr_mD44828D6E626A82ECB7073E788EFAE31D9E41BBC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* IsUnmanagedAttribute__ctor_m086B590A96B1F5F4C1680AF799DD3F7E99B8C99C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* ManagedSpanWrapper__ctor_m64EF660BE4BF42BC17706387C68D2BCE779802EF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MarshalledArray_CreateFromPinnedData_m4CB80166B77DE39145E4AD6553C75529ACB0D74B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MarshalledArray_Free_mD3F20B29A68C32C48883B6D9666BED8D0876BF15_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MarshalledArray_GetUnimplementedDataOwnerCaseMessage_mBD37F48D6A402C95AE1E11FC7642716A83A05C9C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MarshalledArray_ThrowUnimplementedDataOwnerCase_m2C657ACD8D66C1D47CB0880CE2AD37D7385A5538_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MarshalledArray__ctor_mD393CE0CB31D502489C2B60C0A74CF196851ABE8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MonoPInvokeCallbackAttribute__ctor_m7392CF023E50DFDA82090B3A7454797C2C131FDD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeAsStructAttribute__ctor_mE292D90345834AF58422BC9C2A86B671B012C329_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeClassAttribute__ctor_m63D66097DAABA372A5D83DC03176104CBCB241CA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeClassAttribute__ctor_m6482D30C3E5A3069A4EC44119A62FC722B5CE2C4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeConditionalAttribute__ctor_m76181464AC09D8FF97A8289E806C48243C889A8E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeConditionalAttribute__ctor_mDFCF037AAA6DC1780966239399F8D12E48F69055_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeDisableUnsafePtrRestrictionAttribute__ctor_m56A26BB2C1A251C15BBB8DB50DE187E9B7EED5A9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeHeaderAttribute__ctor_m0FC2D446A444F2CD7FFFBE0C30C9A08B2ECA36F0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute__ctor_m1E57CC20F8065159DB45E34006E5D299F9D56C4E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute__ctor_m592AEC9A7D5793DDF505DCCF554B18EF02A92346_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute__ctor_mE2A952465C7157741854AA2CE430A8A8810963CB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute_set_HasExplicitThis_m3254B94A0CA7B78B6F739A8F8DDF87DBFD6391B7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeMethodAttribute_set_ThrowsException_mD543AFCE0D248116D032FB6C3C45A4B72F1BB4E9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeNameAttribute__ctor_mC2EA0E9F4A025CB473F98B61A3A30894832DAF0F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativePropertyAttribute__ctor_m1862A42C74FDC5A2805C90287DD45B88EE6A7A96_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativePropertyAttribute__ctor_m318B1EE28CBC1F9CF7C9F89BF1BB46708ACE95F2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativePropertyAttribute__ctor_m6BC13277849A73DE26F90073FD1238920A0973AE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeTypeAttribute__ctor_m34AA4F2F7EF66CD2F81D6F57863E5F564A311EE2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeTypeAttribute__ctor_mB16C2A8266142E9FD5880C170A82EB472D485912_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeTypeAttribute__ctor_mD08B091B5E1F503572CA975ECC72D7DBDB4C3AC5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NoAllocHelpers_SafeLength_mB1F1CBA3C310ABE49EFFD290BF33527B14657DEF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NotNullAttribute__ctor_m455D72F53A2C6274C033569DC4984D8A0CE86552_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* OutStringMarshaller_GetStringAndDispose_m9D37307AC8BEF58DBD9A58B691D3CEF09FF24D01_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* PreserveAttribute__ctor_mFBCD210335404CF77CBA91028DD699B1EF5A277F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* PreventReadOnlyInstanceModificationAttribute__ctor_m3BACEB8A3961E6F40720C52C54D7D39B8F388D29_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RefSafetyRulesAttribute__ctor_m7551CAADB2FFE51B571548E1915D8712F7E6AD07_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RejectDragAndDropMaterial__ctor_mDA111A5F7D29B9F3E346F81C612BF5A94FC37B98_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RequiredByNativeCodeAttribute__ctor_m4E90B21E31D7E7A19B6BB7FB6F7094EF26417BBE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RequiredByNativeCodeAttribute__ctor_m85C09448FAFAA7CE99878EBB78C8BFA8AEBDF1F9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RequiredByNativeCodeAttribute_set_GenerateProxy_m22975660D9481C771FCCB9F88E60970993BF66F9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SimpleThrowHelper_ThrowArgumentNullException_m7F2DC9C17105429BA3367C6956EA28B7DB7A4D58_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SimpleThrowHelper_ThrowNullReferenceException_mED48B07959D8C1FB63261F427C3AE14DEE66F26B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* StaticAccessorAttribute__ctor_m662CD944CC63BB8BF7DC437D49E24D60423092E9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* StaticAccessorAttribute__ctor_mE61631919BF688FF81C977023467D01BA3157ECE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* StringMarshaller_TryMarshalEmptyOrNullString_mA7E06E9C8BEF97EC745F7DE392C854F5F5B49999_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* SystemReflectionMarshalling_UnmarshalRuntimeTypeHandle_m6C8FDF990AC7ACFB505BFF67D4777D7E67AB8BB5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* SystemReflectionMarshalling_UnmarshalSystemType_mF33F046FC09763F6F9006B5902DC086AD310EC5B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnityEngineModuleAssembly__ctor_m0B4AC86AA7A369BBC9E6E2097D11A4A55A9923D6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnityMarshalAsAttribute__ctor_mC1133D1792A5DFB1D4CC942E0CB43E28574793CE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnityMarshalAsAttribute_set_CustomMarshaller_m90D9FE5DFB0788F9BCFD42803D65C43513526525_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UsedByNativeCodeAttribute__ctor_m66BA7B0C002396A062FDA86102193E5AE3F4D121_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UsedByNativeCodeAttribute__ctor_mD57627694C965713EF128ECB837FC7C385A3FA8A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* VisibleToOtherModulesAttribute__ctor_m117998D204BD0ADD3DF7EAD5C93C8457CC266286_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* VisibleToOtherModulesAttribute__ctor_mDB3DDFE2569C8250CE5868C2EBEFB89863ED485D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* WritableAttribute__ctor_mE077FA9C9FF674FA7BD939755199FF576BAB1BF7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* AssetFileNameExtensionAttribute_t50A3949CB6493676EC771E29853B8E4E5796305D_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* BlittableArrayWrapper_t0A2B64A4A3E855FE9177EDF07099F1006B9F3589_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* BlittableListWrapper_tFB8018FE60D97C869C64538C02A4A18C3B9294CA_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* ByteU2A_t7A03686A8034AF92EF1EA2D09B280EF590D1174D_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* DataOwner_tCE1526E8508042F97CE454B8F70D36044C421CA5_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* FreeFunctionAttribute_t844385C7F9C43B7822868345460925256D917069_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IgnoreAttribute_tFDF18D8734BF63B282C69EB89C6C8F00707C02C8_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* MonoPInvokeCallbackAttribute_t3568E3CF20F9BA374E25F24685212F0033C334B7_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeClassAttribute_t9BBE53B7D3261F394407DB3FE19A493FF8D645F7_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeConditionalAttribute_tCD3268FCF0380D3738F3321FB6D2A1479AF96FC9_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeHeaderAttribute_tCB4FB9F6922D98375BF6EA7BEB1D329824AC5947_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeNameAttribute_t214B59BE443E59B58D9B10761C2DDA28CBE21C80_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativePropertyAttribute_tF858D97F7683358CD571156204035EE568FBD895_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* PreventReadOnlyInstanceModificationAttribute_t4CF399DB8A859854AC0AE3317A34A8584C267BE9_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* RequiredByNativeCodeAttribute_tC3699422778E86188FB8C37313809DF50628C1A5_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* StaticAccessorAttribute_tEE29572689E3EED22AC4772517A4F14598F7FFCA_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* UnityMarshalAsAttribute_t10417314819D4D2B286DA5CF1F4EB1A5D94C03B1_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* UsedByNativeCodeAttribute_tED735F025C1CC74BAA6B34A9BD2FC7CB1CB74BFE_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* VisibleToOtherModulesAttribute_tA5F28DFA258E62A0FE6D63A61440489F7984C067_0_0_0_var;
 struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
 
@@ -767,18 +663,10 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribut
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73780
+// Method Definition Index: 72175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_m60AA68B2B91FD25CF48D350D56192CC1E04E7820 (EmbeddedAttribute_t63227CA55AC9F189C1B931D341745A8F8A7518AA* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EmbeddedAttribute__ctor_m60AA68B2B91FD25CF48D350D56192CC1E04E7820_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, EmbeddedAttribute__ctor_m60AA68B2B91FD25CF48D350D56192CC1E04E7820_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -792,18 +680,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_m60AA68B2B91FD25
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73781
+// Method Definition Index: 72176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsUnmanagedAttribute__ctor_m086B590A96B1F5F4C1680AF799DD3F7E99B8C99C (IsUnmanagedAttribute_t4522585E7CA11A7D07CEC3FF5E50022540194C06* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IsUnmanagedAttribute__ctor_m086B590A96B1F5F4C1680AF799DD3F7E99B8C99C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IsUnmanagedAttribute__ctor_m086B590A96B1F5F4C1680AF799DD3F7E99B8C99C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -817,18 +697,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsUnmanagedAttribute__ctor_m086B590A96B1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73782
+// Method Definition Index: 72177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_m7551CAADB2FFE51B571548E1915D8712F7E6AD07 (RefSafetyRulesAttribute_t7BE4642FBCBBFE1B91543C8A8740259ED3B2B8B9* __this, int32_t ___0_p, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RefSafetyRulesAttribute__ctor_m7551CAADB2FFE51B571548E1915D8712F7E6AD07_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RefSafetyRulesAttribute__ctor_m7551CAADB2FFE51B571548E1915D8712F7E6AD07_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		int32_t L_0 = ___0_p;
@@ -844,28 +716,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_m7551CAADB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73783
+// Method Definition Index: 72178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoPInvokeCallbackAttribute__ctor_m7392CF023E50DFDA82090B3A7454797C2C131FDD (MonoPInvokeCallbackAttribute_t3568E3CF20F9BA374E25F24685212F0033C334B7* __this, Type_t* ___0_type, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MonoPInvokeCallbackAttribute__ctor_m7392CF023E50DFDA82090B3A7454797C2C131FDD_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_type));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MonoPInvokeCallbackAttribute__ctor_m7392CF023E50DFDA82090B3A7454797C2C131FDD_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 1));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/MonoPInvokeAttribute.cs:10>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 2));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 3));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 3));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/MonoPInvokeAttribute.cs:10>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 4));
 		return;
 	}
 }
@@ -877,18 +733,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoPInvokeCallbackAttribute__ctor_m7392
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73784
+// Method Definition Index: 72179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDisableUnsafePtrRestrictionAttribute__ctor_m56A26BB2C1A251C15BBB8DB50DE187E9B7EED5A9 (NativeDisableUnsafePtrRestrictionAttribute_t4C95F4FB0F1BF2DF3258797C4622C134D1062098* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeDisableUnsafePtrRestrictionAttribute__ctor_m56A26BB2C1A251C15BBB8DB50DE187E9B7EED5A9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeDisableUnsafePtrRestrictionAttribute__ctor_m56A26BB2C1A251C15BBB8DB50DE187E9B7EED5A9_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -910,18 +758,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDisableUnsafePtrRestrictionAttribu
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73804
+// Method Definition Index: 72199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Il2CppEagerStaticClassConstructionAttribute__ctor_mA7E4EB4327642FEC15C5409B08BDCDFE269F359A (Il2CppEagerStaticClassConstructionAttribute_t3D7D82DC5526590106245EEAFBBCDEF108E58986* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Il2CppEagerStaticClassConstructionAttribute__ctor_mA7E4EB4327642FEC15C5409B08BDCDFE269F359A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Il2CppEagerStaticClassConstructionAttribute__ctor_mA7E4EB4327642FEC15C5409B08BDCDFE269F359A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -935,7 +775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Il2CppEagerStaticClassConstructionAttrib
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73805
+// Method Definition Index: 72200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m32C330C71F827286347AC99CA9329BEA58CC2873 (void* ___0_message, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -945,37 +785,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m32C330C71F827286347AC9
 	_il2cpp_icall_func = (Debug_LogWarning_m32C330C71F827286347AC99CA9329BEA58CC2873_ftn)il2cpp_codegen_resolve_icall ("Unity.Scripting.LowLevel.Debug::LogWarning(System.Void*)");
 	_il2cpp_icall_func(___0_message);
 }
-// Method Definition Index: 73806
+// Method Definition Index: 72201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m3DD7B93DF977FC792633C5821D2870381B94D249 (String_t* ___0_message, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_LogWarning_m3DD7B93DF977FC792633C5821D2870381B94D249_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
+	//<source_info:<no-source>:1>
 	uint8_t* V_0 = NULL;
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_1 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_message));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Debug_LogWarning_m3DD7B93DF977FC792633C5821D2870381B94D249_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 71));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 72));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Debug/LowLevelDebug.cs:12>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 73));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 74));
 		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_0;
 		L_0 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 74));
 		String_t* L_1 = ___0_message;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 75));
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2;
 		L_2 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_0, L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 75));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Debug/LowLevelDebug.cs:13>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 76));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = L_2;
 		V_1 = L_3;
 		if (!L_3)
@@ -1010,16 +832,9 @@ IL_0019:
 
 IL_0022:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Debug/LowLevelDebug.cs:15>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 77));
 		uint8_t* L_9 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 78));
 		Debug_LogWarning_m32C330C71F827286347AC99CA9329BEA58CC2873((void*)L_9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 78));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 79));
 		V_1 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Debug/LowLevelDebug.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 80));
 		return;
 	}
 }
@@ -1031,18 +846,10 @@ IL_0022:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73807
+// Method Definition Index: 72202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BurstAuthorizedExternalMethodAttribute__ctor_mA3EEB1A90920FA4320D731C870386CB8714119D9 (BurstAuthorizedExternalMethodAttribute_t3C603CBA6244C7E648C5E6BDF55D274A57B3411B* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BurstAuthorizedExternalMethodAttribute__ctor_mA3EEB1A90920FA4320D731C870386CB8714119D9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BurstAuthorizedExternalMethodAttribute__ctor_mA3EEB1A90920FA4320D731C870386CB8714119D9_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -1056,18 +863,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BurstAuthorizedExternalMethodAttribute__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73808
+// Method Definition Index: 72203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BurstDiscardAttribute__ctor_m4560DDB0821067081A9A4AE7AF8B90BD3407A7A6 (BurstDiscardAttribute_tFD6040CDC21DC75DE6457CA5E7686375C8426157* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BurstDiscardAttribute__ctor_m4560DDB0821067081A9A4AE7AF8B90BD3407A7A6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BurstDiscardAttribute__ctor_m4560DDB0821067081A9A4AE7AF8B90BD3407A7A6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -1081,38 +880,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BurstDiscardAttribute__ctor_m4560DDB0821
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73809
+// Method Definition Index: 72204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileNameExtensionAttribute__ctor_m8D3488A4A61B29AC668811EA5EC3257A36E3D003 (AssetFileNameExtensionAttribute_t50A3949CB6493676EC771E29853B8E4E5796305D* __this, String_t* ___0_preferredExtension, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___1_otherExtensions, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AssetFileNameExtensionAttribute__ctor_m8D3488A4A61B29AC668811EA5EC3257A36E3D003_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_preferredExtension), (&___1_otherExtensions));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AssetFileNameExtensionAttribute__ctor_m8D3488A4A61B29AC668811EA5EC3257A36E3D003_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 81));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 82));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:75>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 83));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 84));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 84));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:77>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 85));
 		String_t* L_0 = ___0_preferredExtension;
 		__this->___U3CpreferredExtensionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CpreferredExtensionU3Ek__BackingField), (void*)L_0);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:78>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 86));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = ___1_otherExtensions;
 		__this->___U3CotherExtensionsU3Ek__BackingField = (RuntimeObject*)L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CotherExtensionsU3Ek__BackingField), (void*)(RuntimeObject*)L_1);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:79>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 87));
 		return;
 	}
 }
@@ -1124,18 +903,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetFileNameExtensionAttribute__ctor_m8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73810
+// Method Definition Index: 72205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WritableAttribute__ctor_mE077FA9C9FF674FA7BD939755199FF576BAB1BF7 (WritableAttribute_t4B45B8DFAA7BF8EC656E1E61EEF002FB5419C3C2* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WritableAttribute__ctor_mE077FA9C9FF674FA7BD939755199FF576BAB1BF7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, WritableAttribute__ctor_mE077FA9C9FF674FA7BD939755199FF576BAB1BF7_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -1149,18 +920,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WritableAttribute__ctor_mE077FA9C9FF674F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73811
+// Method Definition Index: 72206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RejectDragAndDropMaterial__ctor_mDA111A5F7D29B9F3E346F81C612BF5A94FC37B98 (RejectDragAndDropMaterial_t0D5DDEA64ADC71FAAC55863ECEC68D1191027445* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RejectDragAndDropMaterial__ctor_mDA111A5F7D29B9F3E346F81C612BF5A94FC37B98_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RejectDragAndDropMaterial__ctor_mDA111A5F7D29B9F3E346F81C612BF5A94FC37B98_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -1174,18 +937,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RejectDragAndDropMaterial__ctor_mDA111A5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73812
+// Method Definition Index: 72207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEngineModuleAssembly__ctor_m0B4AC86AA7A369BBC9E6E2097D11A4A55A9923D6 (UnityEngineModuleAssembly_t3F6804C9FB33566CFEEDC6C7A94F5D50C0EEE3E1* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEngineModuleAssembly__ctor_m0B4AC86AA7A369BBC9E6E2097D11A4A55A9923D6_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnityEngineModuleAssembly__ctor_m0B4AC86AA7A369BBC9E6E2097D11A4A55A9923D6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -1199,128 +954,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEngineModuleAssembly__ctor_m0B4AC86
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73813
+// Method Definition Index: 72208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176 (NativeClassAttribute_t9BBE53B7D3261F394407DB3FE19A493FF8D645F7* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 88));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 89));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:115>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 90));
 		String_t* L_0 = ___0_value;
 		__this->___U3CQualifiedNativeNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CQualifiedNativeNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73814
+// Method Definition Index: 72209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270 (NativeClassAttribute_t9BBE53B7D3261F394407DB3FE19A493FF8D645F7* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 91));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 92));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:116>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 93));
 		String_t* L_0 = ___0_value;
 		__this->___U3CDeclarationU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CDeclarationU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73815
+// Method Definition Index: 72210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeClassAttribute__ctor_m63D66097DAABA372A5D83DC03176104CBCB241CA (NativeClassAttribute_t9BBE53B7D3261F394407DB3FE19A493FF8D645F7* __this, String_t* ___0_qualifiedCppName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeClassAttribute__ctor_m63D66097DAABA372A5D83DC03176104CBCB241CA_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral934F21310025A70D145D513BA3B14AD2B960A089);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_qualifiedCppName));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeClassAttribute__ctor_m63D66097DAABA372A5D83DC03176104CBCB241CA_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 94));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 95));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:118>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 96));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 97));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 97));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:120>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 98));
 		String_t* L_0 = ___0_qualifiedCppName;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 99));
 		NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 99));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:121>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 100));
 		String_t* L_1 = ___0_qualifiedCppName;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 101));
 		String_t* L_2;
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral934F21310025A70D145D513BA3B14AD2B960A089, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 101));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 102));
 		NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_inline(__this, L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 102));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:122>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 103));
 		return;
 	}
 }
-// Method Definition Index: 73816
+// Method Definition Index: 72211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeClassAttribute__ctor_m6482D30C3E5A3069A4EC44119A62FC722B5CE2C4 (NativeClassAttribute_t9BBE53B7D3261F394407DB3FE19A493FF8D645F7* __this, String_t* ___0_qualifiedCppName, String_t* ___1_declaration, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeClassAttribute__ctor_m6482D30C3E5A3069A4EC44119A62FC722B5CE2C4_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_qualifiedCppName), (&___1_declaration));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeClassAttribute__ctor_m6482D30C3E5A3069A4EC44119A62FC722B5CE2C4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 104));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 105));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:124>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 106));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 107));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 107));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:126>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 108));
 		String_t* L_0 = ___0_qualifiedCppName;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 109));
 		NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 109));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:127>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 110));
 		String_t* L_1 = ___1_declaration;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 111));
 		NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_inline(__this, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 111));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:128>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 112));
 		return;
 	}
 }
@@ -1332,22 +1018,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeClassAttribute__ctor_m6482D30C3E5A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73818
+// Method Definition Index: 72213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NoAllocHelpers_SafeLength_mB1F1CBA3C310ABE49EFFD290BF33527B14657DEF (RuntimeArray* ___0_values, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NoAllocHelpers_SafeLength_mB1F1CBA3C310ABE49EFFD290BF33527B14657DEF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_values));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NoAllocHelpers_SafeLength_mB1F1CBA3C310ABE49EFFD290BF33527B14657DEF_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 134));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 135));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/NoAllocHelpers.bindings.cs:40>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 136));
 		RuntimeArray* L_0 = ___0_values;
 		if (L_0)
 		{
@@ -1361,11 +1036,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NoAllocHelpers_SafeLength_mB1F1CBA3C3
 IL_0005:
 	{
 		RuntimeArray* L_1 = ___0_values;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 137));
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = il2cpp_codegen_array_get_length(L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 137));
 		return L_2;
 	}
 }
@@ -1377,52 +1050,21 @@ IL_0005:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73825
+// Method Definition Index: 72220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisibleToOtherModulesAttribute__ctor_m117998D204BD0ADD3DF7EAD5C93C8457CC266286 (VisibleToOtherModulesAttribute_tA5F28DFA258E62A0FE6D63A61440489F7984C067* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VisibleToOtherModulesAttribute__ctor_m117998D204BD0ADD3DF7EAD5C93C8457CC266286_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, VisibleToOtherModulesAttribute__ctor_m117998D204BD0ADD3DF7EAD5C93C8457CC266286_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 191));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 192));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:11>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 193));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 194));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 194));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:13>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 195));
 		return;
 	}
 }
-// Method Definition Index: 73826
+// Method Definition Index: 72221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisibleToOtherModulesAttribute__ctor_mDB3DDFE2569C8250CE5868C2EBEFB89863ED485D (VisibleToOtherModulesAttribute_tA5F28DFA258E62A0FE6D63A61440489F7984C067* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_modules, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VisibleToOtherModulesAttribute__ctor_mDB3DDFE2569C8250CE5868C2EBEFB89863ED485D_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_modules));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, VisibleToOtherModulesAttribute__ctor_mDB3DDFE2569C8250CE5868C2EBEFB89863ED485D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 196));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 197));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:15>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 198));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 199));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 199));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 200));
 		return;
 	}
 }
@@ -1434,112 +1076,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisibleToOtherModulesAttribute__ctor_mDB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73827
+// Method Definition Index: 72222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596 (NativeConditionalAttribute_tCD3268FCF0380D3738F3321FB6D2A1479AF96FC9* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 201));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 202));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:35>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 203));
 		String_t* L_0 = ___0_value;
 		__this->___U3CConditionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CConditionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73828
+// Method Definition Index: 72223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2 (NativeConditionalAttribute_tCD3268FCF0380D3738F3321FB6D2A1479AF96FC9* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 204));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 205));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:40>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 206));
 		String_t* L_0 = ___0_value;
 		__this->___U3CStubReturnStatementU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CStubReturnStatementU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73829
+// Method Definition Index: 72224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeConditionalAttribute__ctor_m76181464AC09D8FF97A8289E806C48243C889A8E (NativeConditionalAttribute_tCD3268FCF0380D3738F3321FB6D2A1479AF96FC9* __this, String_t* ___0_condition, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeConditionalAttribute__ctor_m76181464AC09D8FF97A8289E806C48243C889A8E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_condition));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeConditionalAttribute__ctor_m76181464AC09D8FF97A8289E806C48243C889A8E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 207));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 208));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:46>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 209));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 210));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 210));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:48>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 211));
 		String_t* L_0 = ___0_condition;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 212));
 		NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 212));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:49>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 213));
 		return;
 	}
 }
-// Method Definition Index: 73830
+// Method Definition Index: 72225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeConditionalAttribute__ctor_mDFCF037AAA6DC1780966239399F8D12E48F69055 (NativeConditionalAttribute_tCD3268FCF0380D3738F3321FB6D2A1479AF96FC9* __this, String_t* ___0_condition, String_t* ___1_stubReturnStatement, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeConditionalAttribute__ctor_mDFCF037AAA6DC1780966239399F8D12E48F69055_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_condition), (&___1_stubReturnStatement));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeConditionalAttribute__ctor_mDFCF037AAA6DC1780966239399F8D12E48F69055_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 214));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 215));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:51>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 216));
 		String_t* L_0 = ___0_condition;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 217));
 		NativeConditionalAttribute__ctor_m76181464AC09D8FF97A8289E806C48243C889A8E(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 217));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:53>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 218));
 		String_t* L_1 = ___1_stubReturnStatement;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 219));
 		NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2_inline(__this, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 219));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:54>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 220));
 		return;
 	}
 }
@@ -1551,29 +1129,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeConditionalAttribute__ctor_mDFCF03
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73831
+// Method Definition Index: 72226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHeaderAttribute__ctor_m0FC2D446A444F2CD7FFFBE0C30C9A08B2ECA36F0 (NativeHeaderAttribute_tCB4FB9F6922D98375BF6EA7BEB1D329824AC5947* __this, String_t* ___0_header, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeHeaderAttribute__ctor_m0FC2D446A444F2CD7FFFBE0C30C9A08B2ECA36F0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_header));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeHeaderAttribute__ctor_m0FC2D446A444F2CD7FFFBE0C30C9A08B2ECA36F0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 221));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 222));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:64>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 223));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 224));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 224));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:66>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 225));
 		String_t* L_0 = ___0_header;
 		if (L_0)
 		{
@@ -1581,48 +1148,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeHeaderAttribute__ctor_m0FC2D446A44
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:66>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 226));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 227));
 		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
 		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9FB2F3655E9DD75E99A6C4F16345BA6B6F009B9D)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 227));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeHeaderAttribute__ctor_m0FC2D446A444F2CD7FFFBE0C30C9A08B2ECA36F0_RuntimeMethod_var)));
 	}
 
 IL_0014:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:67>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 228));
 		String_t* L_2 = ___0_header;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 229));
 		bool L_3;
 		L_3 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_2, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 229));
 		if (!L_3)
 		{
 			goto IL_0031;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:67>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 230));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 231));
 		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_4 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
 		ArgumentException__ctor_m8F9D40CE19D19B698A70F9A258640EB52DB39B62(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralF4D0C3AD9AC14CEF020DF94AE080C8D82512DCBB)), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9FB2F3655E9DD75E99A6C4F16345BA6B6F009B9D)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 231));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeHeaderAttribute__ctor_m0FC2D446A444F2CD7FFFBE0C30C9A08B2ECA36F0_RuntimeMethod_var)));
 	}
 
 IL_0031:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:69>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 232));
 		String_t* L_5 = ___0_header;
 		__this->___U3CHeaderU3Ek__BackingField = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CHeaderU3Ek__BackingField), (void*)L_5);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:70>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 233));
 		return;
 	}
 }
@@ -1634,52 +1185,29 @@ IL_0031:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73832
+// Method Definition Index: 72227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B (NativeNameAttribute_t214B59BE443E59B58D9B10761C2DDA28CBE21C80* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 234));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 235));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:77>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 236));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73833
+// Method Definition Index: 72228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeNameAttribute__ctor_mC2EA0E9F4A025CB473F98B61A3A30894832DAF0F (NativeNameAttribute_t214B59BE443E59B58D9B10761C2DDA28CBE21C80* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeNameAttribute__ctor_mC2EA0E9F4A025CB473F98B61A3A30894832DAF0F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeNameAttribute__ctor_mC2EA0E9F4A025CB473F98B61A3A30894832DAF0F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 237));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 238));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:83>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 239));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 240));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 240));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:85>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 241));
 		String_t* L_0 = ___0_name;
 		if (L_0)
 		{
@@ -1687,49 +1215,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeNameAttribute__ctor_mC2EA0E9F4A025
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:85>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 242));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 243));
 		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
 		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCE18B047107AA23D1AA9B2ED32D316148E02655F)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 243));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeNameAttribute__ctor_mC2EA0E9F4A025CB473F98B61A3A30894832DAF0F_RuntimeMethod_var)));
 	}
 
 IL_0014:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:86>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 244));
 		String_t* L_2 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 245));
 		bool L_3;
 		L_3 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_2, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 245));
 		if (!L_3)
 		{
 			goto IL_0031;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:86>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 246));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 247));
 		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_4 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
 		ArgumentException__ctor_m8F9D40CE19D19B698A70F9A258640EB52DB39B62(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9ACF535B9643D0C284828485C9C8163E036677DB)), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCE18B047107AA23D1AA9B2ED32D316148E02655F)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 247));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeNameAttribute__ctor_mC2EA0E9F4A025CB473F98B61A3A30894832DAF0F_RuntimeMethod_var)));
 	}
 
 IL_0031:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:88>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 248));
 		String_t* L_5 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 249));
 		NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B_inline(__this, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 249));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:89>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 250));
 		return;
 	}
 }
@@ -1741,164 +1251,78 @@ IL_0031:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73834
+// Method Definition Index: 72229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214 (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 251));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 252));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:96>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 253));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73835
+// Method Definition Index: 72230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84 (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 254));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 255));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:97>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 256));
 		bool L_0 = ___0_value;
 		__this->___U3CIsThreadSafeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73836
+// Method Definition Index: 72231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 257));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 258));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:98>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 259));
 		bool L_0 = ___0_value;
 		__this->___U3CIsFreeFunctionU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73837
+// Method Definition Index: 72232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_ThrowsException_mD543AFCE0D248116D032FB6C3C45A4B72F1BB4E9 (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_ThrowsException_mD543AFCE0D248116D032FB6C3C45A4B72F1BB4E9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_ThrowsException_mD543AFCE0D248116D032FB6C3C45A4B72F1BB4E9_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 260));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 261));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:99>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 262));
 		bool L_0 = ___0_value;
 		__this->___U3CThrowsExceptionU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73838
+// Method Definition Index: 72233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_HasExplicitThis_m3254B94A0CA7B78B6F739A8F8DDF87DBFD6391B7 (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_HasExplicitThis_m3254B94A0CA7B78B6F739A8F8DDF87DBFD6391B7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_HasExplicitThis_m3254B94A0CA7B78B6F739A8F8DDF87DBFD6391B7_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 263));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 264));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:100>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 265));
 		bool L_0 = ___0_value;
 		__this->___U3CHasExplicitThisU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73839
+// Method Definition Index: 72234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_mE2A952465C7157741854AA2CE430A8A8810963CB (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute__ctor_mE2A952465C7157741854AA2CE430A8A8810963CB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute__ctor_mE2A952465C7157741854AA2CE430A8A8810963CB_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 266));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 267));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:102>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 268));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 269));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 269));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:104>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 270));
 		return;
 	}
 }
-// Method Definition Index: 73840
+// Method Definition Index: 72235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8 (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 271));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 272));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:106>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 273));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 274));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 274));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:108>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 275));
 		String_t* L_0 = ___0_name;
 		if (L_0)
 		{
@@ -1906,114 +1330,56 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m009726A7799
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:108>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 276));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 277));
 		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
 		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCE18B047107AA23D1AA9B2ED32D316148E02655F)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 277));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8_RuntimeMethod_var)));
 	}
 
 IL_0014:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:109>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 278));
 		String_t* L_2 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 279));
 		bool L_3;
 		L_3 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_2, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 279));
 		if (!L_3)
 		{
 			goto IL_0031;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:109>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 280));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 281));
 		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_4 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
 		ArgumentException__ctor_m8F9D40CE19D19B698A70F9A258640EB52DB39B62(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9ACF535B9643D0C284828485C9C8163E036677DB)), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCE18B047107AA23D1AA9B2ED32D316148E02655F)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 281));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8_RuntimeMethod_var)));
 	}
 
 IL_0031:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:111>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 282));
 		String_t* L_5 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 283));
 		NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214_inline(__this, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 283));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:112>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 284));
 		return;
 	}
 }
-// Method Definition Index: 73841
+// Method Definition Index: 72236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m1E57CC20F8065159DB45E34006E5D299F9D56C4E (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, String_t* ___0_name, bool ___1_isFreeFunction, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute__ctor_m1E57CC20F8065159DB45E34006E5D299F9D56C4E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name), (&___1_isFreeFunction));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute__ctor_m1E57CC20F8065159DB45E34006E5D299F9D56C4E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 285));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 286));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:114>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 287));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 288));
 		NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 288));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:116>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 289));
 		bool L_1 = ___1_isFreeFunction;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 290));
 		NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_inline(__this, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 290));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:117>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 291));
 		return;
 	}
 }
-// Method Definition Index: 73842
+// Method Definition Index: 72237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m592AEC9A7D5793DDF505DCCF554B18EF02A92346 (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, String_t* ___0_name, bool ___1_isFreeFunction, bool ___2_isThreadSafe, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute__ctor_m592AEC9A7D5793DDF505DCCF554B18EF02A92346_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name), (&___1_isFreeFunction), (&___2_isThreadSafe));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute__ctor_m592AEC9A7D5793DDF505DCCF554B18EF02A92346_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 292));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 293));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:119>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 294));
 		String_t* L_0 = ___0_name;
 		bool L_1 = ___1_isFreeFunction;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 295));
 		NativeMethodAttribute__ctor_m1E57CC20F8065159DB45E34006E5D299F9D56C4E(__this, L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 295));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:121>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 296));
 		bool L_2 = ___2_isThreadSafe;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 297));
 		NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84_inline(__this, L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 297));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:122>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 298));
 		return;
 	}
 }
@@ -2033,108 +1399,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m592AEC9A7D5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73843
+// Method Definition Index: 72238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0 (NativePropertyAttribute_tF858D97F7683358CD571156204035EE568FBD895* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 299));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 300));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:141>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 301));
 		int32_t L_0 = ___0_value;
 		__this->___U3CTargetTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73844
+// Method Definition Index: 72239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativePropertyAttribute__ctor_m1862A42C74FDC5A2805C90287DD45B88EE6A7A96 (NativePropertyAttribute_tF858D97F7683358CD571156204035EE568FBD895* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativePropertyAttribute__ctor_m1862A42C74FDC5A2805C90287DD45B88EE6A7A96_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativePropertyAttribute__ctor_m1862A42C74FDC5A2805C90287DD45B88EE6A7A96_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 302));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 303));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:143>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 304));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 305));
 		NativeMethodAttribute__ctor_mE2A952465C7157741854AA2CE430A8A8810963CB(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 305));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:145>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 306));
 		return;
 	}
 }
-// Method Definition Index: 73845
+// Method Definition Index: 72240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativePropertyAttribute__ctor_m6BC13277849A73DE26F90073FD1238920A0973AE (NativePropertyAttribute_tF858D97F7683358CD571156204035EE568FBD895* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativePropertyAttribute__ctor_m6BC13277849A73DE26F90073FD1238920A0973AE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativePropertyAttribute__ctor_m6BC13277849A73DE26F90073FD1238920A0973AE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 307));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 308));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:147>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 309));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 310));
 		NativeMethodAttribute__ctor_m009726A7799161A42BFEC191F17F2C66F918FFA8(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 310));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:149>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 311));
 		return;
 	}
 }
-// Method Definition Index: 73846
+// Method Definition Index: 72241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativePropertyAttribute__ctor_m318B1EE28CBC1F9CF7C9F89BF1BB46708ACE95F2 (NativePropertyAttribute_tF858D97F7683358CD571156204035EE568FBD895* __this, String_t* ___0_name, bool ___1_isFree, int32_t ___2_targetType, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativePropertyAttribute__ctor_m318B1EE28CBC1F9CF7C9F89BF1BB46708ACE95F2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name), (&___1_isFree), (&___2_targetType));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativePropertyAttribute__ctor_m318B1EE28CBC1F9CF7C9F89BF1BB46708ACE95F2_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 312));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 313));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:156>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 314));
 		String_t* L_0 = ___0_name;
 		bool L_1 = ___1_isFree;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 315));
 		NativeMethodAttribute__ctor_m1E57CC20F8065159DB45E34006E5D299F9D56C4E(__this, L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 315));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:158>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 316));
 		int32_t L_2 = ___2_targetType;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 317));
 		NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0_inline(__this, L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 317));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:159>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 318));
 		return;
 	}
 }
@@ -2154,18 +1457,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativePropertyAttribute__ctor_m318B1EE28
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73847
+// Method Definition Index: 72242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeAsStructAttribute__ctor_mE292D90345834AF58422BC9C2A86B671B012C329 (NativeAsStructAttribute_t17688BDA339D8E2733F42858ADD712A59EEC4C2D* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeAsStructAttribute__ctor_mE292D90345834AF58422BC9C2A86B671B012C329_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeAsStructAttribute__ctor_mE292D90345834AF58422BC9C2A86B671B012C329_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -2179,140 +1474,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeAsStructAttribute__ctor_mE292D9034
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73848
+// Method Definition Index: 72243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185 (NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 319));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 320));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:185>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 321));
 		String_t* L_0 = ___0_value;
 		__this->___U3CIntermediateScriptingStructNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CIntermediateScriptingStructNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73849
+// Method Definition Index: 72244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7 (NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 322));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 323));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:187>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 324));
 		int32_t L_0 = ___0_value;
 		__this->___U3CCodegenOptionsU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73850
+// Method Definition Index: 72245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_mD08B091B5E1F503572CA975ECC72D7DBDB4C3AC5 (NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeTypeAttribute__ctor_mD08B091B5E1F503572CA975ECC72D7DBDB4C3AC5_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeTypeAttribute__ctor_mD08B091B5E1F503572CA975ECC72D7DBDB4C3AC5_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 325));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 326));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:189>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 327));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 328));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 328));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:191>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 329));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 330));
 		NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_inline(__this, 0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 330));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:192>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 331));
 		return;
 	}
 }
-// Method Definition Index: 73851
+// Method Definition Index: 72246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_mB16C2A8266142E9FD5880C170A82EB472D485912 (NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B* __this, int32_t ___0_codegenOptions, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeTypeAttribute__ctor_mB16C2A8266142E9FD5880C170A82EB472D485912_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_codegenOptions));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeTypeAttribute__ctor_mB16C2A8266142E9FD5880C170A82EB472D485912_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 332));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 333));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:194>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 334));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 335));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 335));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:196>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 336));
 		int32_t L_0 = ___0_codegenOptions;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 337));
 		NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 337));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:197>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 338));
 		return;
 	}
 }
-// Method Definition Index: 73852
+// Method Definition Index: 72247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_m34AA4F2F7EF66CD2F81D6F57863E5F564A311EE2 (NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B* __this, int32_t ___0_codegenOptions, String_t* ___1_intermediateStructName, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeTypeAttribute__ctor_m34AA4F2F7EF66CD2F81D6F57863E5F564A311EE2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_codegenOptions), (&___1_intermediateStructName));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeTypeAttribute__ctor_m34AA4F2F7EF66CD2F81D6F57863E5F564A311EE2_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 339));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 340));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:199>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 341));
 		int32_t L_0 = ___0_codegenOptions;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 342));
 		NativeTypeAttribute__ctor_mB16C2A8266142E9FD5880C170A82EB472D485912(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 342));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:201>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 343));
 		String_t* L_1 = ___1_intermediateStructName;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 344));
 		NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185_inline(__this, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 344));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:202>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 345));
 		return;
 	}
 }
@@ -2324,18 +1536,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_m34AA4F2F7EF66
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73853
+// Method Definition Index: 72248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotNullAttribute__ctor_m455D72F53A2C6274C033569DC4984D8A0CE86552 (NotNullAttribute_tF67F454D5B5275D3EE4E752CF8FD00069AA37115* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NotNullAttribute__ctor_m455D72F53A2C6274C033569DC4984D8A0CE86552_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NotNullAttribute__ctor_m455D72F53A2C6274C033569DC4984D8A0CE86552_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -2349,85 +1553,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotNullAttribute__ctor_m455D72F53A2C6274
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73854
+// Method Definition Index: 72249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FreeFunctionAttribute__ctor_mF04F5F3E178ACCF1C4ED57A72320E1B1862C3CF0 (FreeFunctionAttribute_t844385C7F9C43B7822868345460925256D917069* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FreeFunctionAttribute__ctor_mF04F5F3E178ACCF1C4ED57A72320E1B1862C3CF0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FreeFunctionAttribute__ctor_mF04F5F3E178ACCF1C4ED57A72320E1B1862C3CF0_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 346));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 347));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:232>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 348));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 349));
 		NativeMethodAttribute__ctor_mE2A952465C7157741854AA2CE430A8A8810963CB(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 349));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:234>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 350));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 351));
 		NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_inline(__this, (bool)1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 351));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:235>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 352));
 		return;
 	}
 }
-// Method Definition Index: 73855
+// Method Definition Index: 72250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FreeFunctionAttribute__ctor_m31A2D0BC0B484504134887B167957A3164595990 (FreeFunctionAttribute_t844385C7F9C43B7822868345460925256D917069* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FreeFunctionAttribute__ctor_m31A2D0BC0B484504134887B167957A3164595990_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FreeFunctionAttribute__ctor_m31A2D0BC0B484504134887B167957A3164595990_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 353));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 354));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:237>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 355));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 356));
 		NativeMethodAttribute__ctor_m1E57CC20F8065159DB45E34006E5D299F9D56C4E(__this, L_0, (bool)1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 356));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:239>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 357));
 		return;
 	}
 }
-// Method Definition Index: 73856
+// Method Definition Index: 72251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FreeFunctionAttribute__ctor_m4170B1439BFE00F6A429BC9A8FCFE684DAD2B536 (FreeFunctionAttribute_t844385C7F9C43B7822868345460925256D917069* __this, String_t* ___0_name, bool ___1_isThreadSafe, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FreeFunctionAttribute__ctor_m4170B1439BFE00F6A429BC9A8FCFE684DAD2B536_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name), (&___1_isThreadSafe));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FreeFunctionAttribute__ctor_m4170B1439BFE00F6A429BC9A8FCFE684DAD2B536_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 358));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 359));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:241>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 360));
 		String_t* L_0 = ___0_name;
 		bool L_1 = ___1_isThreadSafe;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 361));
 		NativeMethodAttribute__ctor_m592AEC9A7D5793DDF505DCCF554B18EF02A92346(__this, L_0, (bool)1, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 361));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:243>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 362));
 		return;
 	}
 }
@@ -2447,116 +1600,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FreeFunctionAttribute__ctor_m4170B1439BF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73857
+// Method Definition Index: 72252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4 (StaticAccessorAttribute_tEE29572689E3EED22AC4772517A4F14598F7FFCA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 363));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 364));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:259>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 365));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73858
+// Method Definition Index: 72253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F (StaticAccessorAttribute_tEE29572689E3EED22AC4772517A4F14598F7FFCA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 366));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 367));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:260>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 368));
 		int32_t L_0 = ___0_value;
 		__this->___U3CTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73859
+// Method Definition Index: 72254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticAccessorAttribute__ctor_mE61631919BF688FF81C977023467D01BA3157ECE (StaticAccessorAttribute_tEE29572689E3EED22AC4772517A4F14598F7FFCA* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticAccessorAttribute__ctor_mE61631919BF688FF81C977023467D01BA3157ECE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, StaticAccessorAttribute__ctor_mE61631919BF688FF81C977023467D01BA3157ECE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 369));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 370));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:267>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 371));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 372));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 372));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:269>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 373));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 374));
 		StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 374));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:270>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 375));
 		return;
 	}
 }
-// Method Definition Index: 73860
+// Method Definition Index: 72255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticAccessorAttribute__ctor_m662CD944CC63BB8BF7DC437D49E24D60423092E9 (StaticAccessorAttribute_tEE29572689E3EED22AC4772517A4F14598F7FFCA* __this, String_t* ___0_name, int32_t ___1_type, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticAccessorAttribute__ctor_m662CD944CC63BB8BF7DC437D49E24D60423092E9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name), (&___1_type));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, StaticAccessorAttribute__ctor_m662CD944CC63BB8BF7DC437D49E24D60423092E9_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 376));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 377));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:277>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 378));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 379));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 379));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:279>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 380));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 381));
 		StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 381));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:280>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 382));
 		int32_t L_1 = ___1_type;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 383));
 		StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F_inline(__this, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 383));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:281>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 384));
 		return;
 	}
 }
@@ -2568,40 +1653,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticAccessorAttribute__ctor_m662CD944C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73861
+// Method Definition Index: 72256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IgnoreAttribute_set_DoesNotContributeToSize_mEC93EE7E504A5795F885CA9A9B6A4FFD1C77A827 (IgnoreAttribute_tFDF18D8734BF63B282C69EB89C6C8F00707C02C8* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IgnoreAttribute_set_DoesNotContributeToSize_mEC93EE7E504A5795F885CA9A9B6A4FFD1C77A827_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IgnoreAttribute_set_DoesNotContributeToSize_mEC93EE7E504A5795F885CA9A9B6A4FFD1C77A827_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 385));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 386));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:297>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 387));
 		bool L_0 = ___0_value;
 		__this->___U3CDoesNotContributeToSizeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73862
+// Method Definition Index: 72257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IgnoreAttribute__ctor_mD65AB93B16A569DABF6ED6B2DC602E6640856F85 (IgnoreAttribute_tFDF18D8734BF63B282C69EB89C6C8F00707C02C8* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IgnoreAttribute__ctor_mD65AB93B16A569DABF6ED6B2DC602E6640856F85_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IgnoreAttribute__ctor_mD65AB93B16A569DABF6ED6B2DC602E6640856F85_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -2615,27 +1680,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IgnoreAttribute__ctor_mD65AB93B16A569DAB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73863
+// Method Definition Index: 72258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreventReadOnlyInstanceModificationAttribute__ctor_m3BACEB8A3961E6F40720C52C54D7D39B8F388D29 (PreventReadOnlyInstanceModificationAttribute_t4CF399DB8A859854AC0AE3317A34A8584C267BE9* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PreventReadOnlyInstanceModificationAttribute__ctor_m3BACEB8A3961E6F40720C52C54D7D39B8F388D29_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, PreventReadOnlyInstanceModificationAttribute__ctor_m3BACEB8A3961E6F40720C52C54D7D39B8F388D29_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 388));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 389));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:334>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 390));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 391));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 391));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:336>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 392));
 		return;
 	}
 }
@@ -2655,55 +1705,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreventReadOnlyInstanceModificationAttri
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73864
+// Method Definition Index: 72259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityMarshalAsAttribute_set_CustomMarshaller_m90D9FE5DFB0788F9BCFD42803D65C43513526525 (UnityMarshalAsAttribute_t10417314819D4D2B286DA5CF1F4EB1A5D94C03B1* __this, Type_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityMarshalAsAttribute_set_CustomMarshaller_m90D9FE5DFB0788F9BCFD42803D65C43513526525_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnityMarshalAsAttribute_set_CustomMarshaller_m90D9FE5DFB0788F9BCFD42803D65C43513526525_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 393));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 394));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:404>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 395));
 		Type_t* L_0 = ___0_value;
 		__this->___U3CCustomMarshallerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CCustomMarshallerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73865
+// Method Definition Index: 72260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityMarshalAsAttribute__ctor_mC1133D1792A5DFB1D4CC942E0CB43E28574793CE (UnityMarshalAsAttribute_t10417314819D4D2B286DA5CF1F4EB1A5D94C03B1* __this, int32_t ___0_nativeType, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityMarshalAsAttribute__ctor_mC1133D1792A5DFB1D4CC942E0CB43E28574793CE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_nativeType));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnityMarshalAsAttribute__ctor_mC1133D1792A5DFB1D4CC942E0CB43E28574793CE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 396));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 397));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:417>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 398));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 399));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 399));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:419>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 400));
 		int32_t L_0 = ___0_nativeType;
 		__this->___U3CNativeTypeU3Ek__BackingField = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:420>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 401));
 		return;
 	}
 }
@@ -2715,89 +1735,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityMarshalAsAttribute__ctor_mC1133D179
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73870
+// Method Definition Index: 72265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshalledArray__ctor_mD393CE0CB31D502489C2B60C0A74CF196851ABE8 (MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536* __this, void* ___0_data, int32_t ___1_size, int32_t ___2_capacity, int32_t ___3_dataOwner, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MarshalledArray__ctor_mD393CE0CB31D502489C2B60C0A74CF196851ABE8_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_data), (&___1_size), (&___2_capacity), (&___3_dataOwner));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MarshalledArray__ctor_mD393CE0CB31D502489C2B60C0A74CF196851ABE8_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 402));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 403));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:121>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 404));
 		void* L_0 = ___0_data;
 		__this->___data = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:122>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 405));
 		int32_t L_1 = ___1_size;
 		__this->___size = L_1;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:123>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 406));
 		int32_t L_2 = ___2_capacity;
 		__this->___capacity = L_2;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:124>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 407));
 		int32_t L_3 = ___3_dataOwner;
 		__this->___dataOwner = L_3;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:125>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 408));
 		return;
 	}
 }
-// Method Definition Index: 73871
+// Method Definition Index: 72266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536 MarshalledArray_CreateFromPinnedData_m4CB80166B77DE39145E4AD6553C75529ACB0D74B (void* ___0_data, int32_t ___1_size, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MarshalledArray_CreateFromPinnedData_m4CB80166B77DE39145E4AD6553C75529ACB0D74B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_data), (&___1_size));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MarshalledArray_CreateFromPinnedData_m4CB80166B77DE39145E4AD6553C75529ACB0D74B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 409));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 410));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:179>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 411));
 		void* L_0 = ___0_data;
 		int32_t L_1 = ___1_size;
 		int32_t L_2 = ___1_size;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 412));
 		MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536 L_3;
 		memset((&L_3), 0, sizeof(L_3));
 		MarshalledArray__ctor_mD393CE0CB31D502489C2B60C0A74CF196851ABE8((&L_3), L_0, L_1, L_2, 0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 412));
 		return L_3;
 	}
 }
-// Method Definition Index: 73873
+// Method Definition Index: 72268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshalledArray_Free_mD3F20B29A68C32C48883B6D9666BED8D0876BF15 (MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MarshalledArray_Free_mD3F20B29A68C32C48883B6D9666BED8D0876BF15_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
+	//<source_info:<no-source>:1>
 	int32_t V_0 = 0;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MarshalledArray_Free_mD3F20B29A68C32C48883B6D9666BED8D0876BF15_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 441));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 442));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:308>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 443));
 		int32_t L_0 = __this->___dataOwner;
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 444));
 		int32_t L_1 = V_0;
 		switch (L_1)
 		{
@@ -2837,99 +1812,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshalledArray_Free_mD3F20B29A68C32C488
 
 IL_002b:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:317>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 445));
 		void* L_2 = __this->___data;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 446));
 		BindingsAllocator_Free_m3D757414A787767EE8BB9119071408A830E21835(L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 446));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:318>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 447));
 		return;
 	}
 
 IL_0037:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:322>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 448));
 		void* L_3 = __this->___data;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 449));
 		BindingsAllocator_FreeNativeOwnedMemory_m2D5B34DB9B5653DEF78C118221D29AF5DD483ED9(L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 449));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:323>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 450));
 		return;
 	}
 
 IL_0043:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:325>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 451));
 		int32_t L_4 = __this->___dataOwner;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 452));
 		MarshalledArray_ThrowUnimplementedDataOwnerCase_m2C657ACD8D66C1D47CB0880CE2AD37D7385A5538(L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 452));
 	}
 
 IL_004e:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:328>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 453));
 		return;
 	}
 }
-// Method Definition Index: 73874
+// Method Definition Index: 72269
 IL2CPP_DISABLE_OPTIMIZATIONS
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR String_t* MarshalledArray_GetUnimplementedDataOwnerCaseMessage_mBD37F48D6A402C95AE1E11FC7642716A83A05C9C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MarshalledArray_GetUnimplementedDataOwnerCaseMessage_mBD37F48D6A402C95AE1E11FC7642716A83A05C9C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0E0CE65B59BF1413DE667DB6AEBDD9F620619234);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MarshalledArray_GetUnimplementedDataOwnerCaseMessage_mBD37F48D6A402C95AE1E11FC7642716A83A05C9C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 454));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 455));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:342>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 456));
 		return _stringLiteral0E0CE65B59BF1413DE667DB6AEBDD9F620619234;
 	}
 }
 IL2CPP_ENABLE_OPTIMIZATIONS
-// Method Definition Index: 73875
+// Method Definition Index: 72270
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void MarshalledArray_ThrowUnimplementedDataOwnerCase_m2C657ACD8D66C1D47CB0880CE2AD37D7385A5538 (int32_t ___0_dataOwner, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MarshalledArray_ThrowUnimplementedDataOwnerCase_m2C657ACD8D66C1D47CB0880CE2AD37D7385A5538_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_dataOwner));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MarshalledArray_ThrowUnimplementedDataOwnerCase_m2C657ACD8D66C1D47CB0880CE2AD37D7385A5538_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 457));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 458));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ArrayMarshalling.cs:349>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 459));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 460));
 		String_t* L_0;
 		L_0 = MarshalledArray_GetUnimplementedDataOwnerCaseMessage_mBD37F48D6A402C95AE1E11FC7642716A83A05C9C(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 460));
 		int32_t L_1 = ___0_dataOwner;
 		int32_t L_2 = L_1;
 		RuntimeObject* L_3 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&DataOwner_tCE1526E8508042F97CE454B8F70D36044C421CA5_il2cpp_TypeInfo_var)), &L_2);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 461));
 		String_t* L_4;
 		L_4 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDC435B8AA14E51B7FC3CEF2ED8D5CED3A8A3151B)), L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 461));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 462));
 		NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8* L_5 = (NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8_il2cpp_TypeInfo_var)));
 		NotImplementedException__ctor_m8339D1A685E8D77CAC9D3260C06B38B5C7CA7742(L_5, L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 462));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MarshalledArray_ThrowUnimplementedDataOwnerCase_m2C657ACD8D66C1D47CB0880CE2AD37D7385A5538_RuntimeMethod_var)));
 	}
 }
@@ -2949,7 +1884,7 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void MarshalledArray_ThrowUn
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73876
+// Method Definition Index: 72271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BindingsAllocator_Free_m3D757414A787767EE8BB9119071408A830E21835 (void* ___0_ptr, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -2959,7 +1894,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BindingsAllocator_Free_m3D757414A787767E
 	_il2cpp_icall_func = (BindingsAllocator_Free_m3D757414A787767EE8BB9119071408A830E21835_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Bindings.BindingsAllocator::Free(System.Void*)");
 	_il2cpp_icall_func(___0_ptr);
 }
-// Method Definition Index: 73877
+// Method Definition Index: 72272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BindingsAllocator_FreeNativeOwnedMemory_m2D5B34DB9B5653DEF78C118221D29AF5DD483ED9 (void* ___0_ptr, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -2969,22 +1904,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BindingsAllocator_FreeNativeOwnedMemory_
 	_il2cpp_icall_func = (BindingsAllocator_FreeNativeOwnedMemory_m2D5B34DB9B5653DEF78C118221D29AF5DD483ED9_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Bindings.BindingsAllocator::FreeNativeOwnedMemory(System.Void*)");
 	_il2cpp_icall_func(___0_ptr);
 }
-// Method Definition Index: 73878
+// Method Definition Index: 72273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* BindingsAllocator_GetNativeOwnedDataPointer_m3668639A4B328ECC1DBB756D0217BEAFE136F25A (void* ___0_ptr, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BindingsAllocator_GetNativeOwnedDataPointer_m3668639A4B328ECC1DBB756D0217BEAFE136F25A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_ptr));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BindingsAllocator_GetNativeOwnedDataPointer_m3668639A4B328ECC1DBB756D0217BEAFE136F25A_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 463));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 464));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BindingsHelpers.bindings.cs:83>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 465));
 		void* L_0 = ___0_ptr;
 		NullCheck(L_0);
 		void* L_1 = ((NativeOwnedMemory_t78EF0D467F14059891C564355B0AEFDE81175B2B*)L_0)->___data;
@@ -3007,50 +1931,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* BindingsAllocator_GetNativeOwnedDataPoi
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73879
+// Method Definition Index: 72274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleThrowHelper_ThrowArgumentNullException_m7F2DC9C17105429BA3367C6956EA28B7DB7A4D58 (RuntimeObject* ___0_obj, String_t* ___1_parameterName, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleThrowHelper_ThrowArgumentNullException_m7F2DC9C17105429BA3367C6956EA28B7DB7A4D58_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_obj), (&___1_parameterName));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, SimpleThrowHelper_ThrowArgumentNullException_m7F2DC9C17105429BA3367C6956EA28B7DB7A4D58_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 466));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 467));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BindingsHelpers.bindings.cs:92>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 468));
 		String_t* L_0 = ___1_parameterName;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 469));
 		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
 		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 469));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SimpleThrowHelper_ThrowArgumentNullException_m7F2DC9C17105429BA3367C6956EA28B7DB7A4D58_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73880
+// Method Definition Index: 72275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleThrowHelper_ThrowNullReferenceException_mED48B07959D8C1FB63261F427C3AE14DEE66F26B (RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleThrowHelper_ThrowNullReferenceException_mED48B07959D8C1FB63261F427C3AE14DEE66F26B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_obj));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, SimpleThrowHelper_ThrowNullReferenceException_mED48B07959D8C1FB63261F427C3AE14DEE66F26B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 470));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 471));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BindingsHelpers.bindings.cs:97>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 472));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 473));
 		NullReferenceException_tBDE63A6D24569B964908408389070C6A9F5005BB* L_0 = (NullReferenceException_tBDE63A6D24569B964908408389070C6A9F5005BB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NullReferenceException_tBDE63A6D24569B964908408389070C6A9F5005BB_il2cpp_TypeInfo_var)));
 		NullReferenceException__ctor_mD26D62094A5E49C18D817817E17FDFBC1D3BD752(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 473));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SimpleThrowHelper_ThrowNullReferenceException_mED48B07959D8C1FB63261F427C3AE14DEE66F26B_RuntimeMethod_var)));
 	}
 }
@@ -3062,32 +1960,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleThrowHelper_ThrowNullReferenceExce
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73881
+// Method Definition Index: 72276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlittableArrayWrapper__ctor_m01973995E52FAF7C794F1E79C18EF18A132340B0 (BlittableArrayWrapper_t0A2B64A4A3E855FE9177EDF07099F1006B9F3589* __this, void* ___0_data, int32_t ___1_size, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BlittableArrayWrapper__ctor_m01973995E52FAF7C794F1E79C18EF18A132340B0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_data), (&___1_size));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BlittableArrayWrapper__ctor_m01973995E52FAF7C794F1E79C18EF18A132340B0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 474));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 475));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BlittableArrayWrapper.cs:15>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 476));
 		void* L_0 = ___0_data;
 		int32_t L_1 = ___1_size;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 477));
 		MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536 L_2;
 		L_2 = MarshalledArray_CreateFromPinnedData_m4CB80166B77DE39145E4AD6553C75529ACB0D74B(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 477));
 		__this->___arrayWrapper = L_2;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BlittableArrayWrapper.cs:16>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 478));
 		return;
 	}
 }
@@ -3099,33 +1981,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlittableArrayWrapper__ctor_m01973995E52
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73883
+// Method Definition Index: 72278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlittableListWrapper__ctor_mC84D2E6F6FFAA8F331B7F5DF76C48D0142B73EBB (BlittableListWrapper_tFB8018FE60D97C869C64538C02A4A18C3B9294CA* __this, BlittableArrayWrapper_t0A2B64A4A3E855FE9177EDF07099F1006B9F3589 ___0_arrayWrapper, int32_t ___1_listSize, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BlittableListWrapper__ctor_mC84D2E6F6FFAA8F331B7F5DF76C48D0142B73EBB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_arrayWrapper), (&___1_listSize));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, BlittableListWrapper__ctor_mC84D2E6F6FFAA8F331B7F5DF76C48D0142B73EBB_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 490));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 491));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BlittableListWrapper.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 492));
 		BlittableArrayWrapper_t0A2B64A4A3E855FE9177EDF07099F1006B9F3589 L_0 = ___0_arrayWrapper;
 		MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536 L_1 = L_0.___arrayWrapper;
 		__this->___arrayWrapper = L_1;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BlittableListWrapper.cs:18>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 493));
 		MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536* L_2 = (MarshalledArray_t6AEAFB9F03F350E0CCFF93A3CA6C14A99D3F3536*)(&__this->___arrayWrapper);
 		int32_t L_3 = ___1_listSize;
 		L_2->___size = L_3;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/BlittableListWrapper.cs:19>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 494));
 		return;
 	}
 }
@@ -3145,28 +2011,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlittableListWrapper__ctor_mC84D2E6F6FFA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73897
+// Method Definition Index: 72292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExceptionMarshaller_SetPendingException_mC29B71798C84232CB8D6669AD47258D2303290D7 (Exception_t* ___0_ex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ExceptionMarshaller_SetPendingException_mC29B71798C84232CB8D6669AD47258D2303290D7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ExceptionMarshaller_t7B420501E566045746689D80747070C49FA2BFDF_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_ex));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ExceptionMarshaller_SetPendingException_mC29B71798C84232CB8D6669AD47258D2303290D7_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 585));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 586));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ExceptionMarshaller.cs:49>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 587));
 		Exception_t* L_0 = ___0_ex;
 		((ExceptionMarshaller_t7B420501E566045746689D80747070C49FA2BFDF_ThreadStaticFields*)il2cpp_codegen_get_thread_static_data(ExceptionMarshaller_t7B420501E566045746689D80747070C49FA2BFDF_il2cpp_TypeInfo_var))->___s_pendingException = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((ExceptionMarshaller_t7B420501E566045746689D80747070C49FA2BFDF_ThreadStaticFields*)il2cpp_codegen_get_thread_static_data(ExceptionMarshaller_t7B420501E566045746689D80747070C49FA2BFDF_il2cpp_TypeInfo_var))->___s_pendingException), (void*)L_0);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ExceptionMarshaller.cs:50>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 588));
 		return;
 	}
 }
@@ -3178,95 +2036,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExceptionMarshaller_SetPendingException_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73898
+// Method Definition Index: 72293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* IntPtrObjectMarshalling_CreateDefault_m4F8A320EE6F89B67ABC377A7A291B6DA73FD884F (intptr_t ___0_type, intptr_t* ___1_nativePointer, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtrObjectMarshalling_CreateDefault_m4F8A320EE6F89B67ABC377A7A291B6DA73FD884F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_type), (&___1_nativePointer));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IntPtrObjectMarshalling_CreateDefault_m4F8A320EE6F89B67ABC377A7A291B6DA73FD884F_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 589));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 590));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/IntPtrObjectMarshalling.cs:23>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 591));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 592));
 		PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A* L_0 = (PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A_il2cpp_TypeInfo_var)));
 		PlatformNotSupportedException__ctor_mC5103EE3FE4FE245039B1107D6685296D9CC6560(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral99AFA37AC0EE2B77EE281DB5399FEEDF77C37FB5)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 592));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IntPtrObjectMarshalling_CreateDefault_m4F8A320EE6F89B67ABC377A7A291B6DA73FD884F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73899
+// Method Definition Index: 72294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* IntPtrObjectMarshalling_CreateFromNative_m964C63649DC46B2B7F7A303B80033CD74DD14C9B (intptr_t ___0_typePtr, intptr_t ___1_ptr, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtrObjectMarshalling_CreateFromNative_m964C63649DC46B2B7F7A303B80033CD74DD14C9B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_typePtr), (&___1_ptr));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IntPtrObjectMarshalling_CreateFromNative_m964C63649DC46B2B7F7A303B80033CD74DD14C9B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 593));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 594));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/IntPtrObjectMarshalling.cs:36>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 595));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 596));
 		PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A* L_0 = (PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A_il2cpp_TypeInfo_var)));
 		PlatformNotSupportedException__ctor_mC5103EE3FE4FE245039B1107D6685296D9CC6560(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral99AFA37AC0EE2B77EE281DB5399FEEDF77C37FB5)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 596));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IntPtrObjectMarshalling_CreateFromNative_m964C63649DC46B2B7F7A303B80033CD74DD14C9B_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73900
+// Method Definition Index: 72295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t IntPtrObjectMarshalling_GetIntPtr_m7BBDB8A0F10ED0D586DD31ABA43569B5D61C7814 (RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtrObjectMarshalling_GetIntPtr_m7BBDB8A0F10ED0D586DD31ABA43569B5D61C7814_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_obj));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IntPtrObjectMarshalling_GetIntPtr_m7BBDB8A0F10ED0D586DD31ABA43569B5D61C7814_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 597));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 598));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/IntPtrObjectMarshalling.cs:47>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 599));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 600));
 		PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A* L_0 = (PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A_il2cpp_TypeInfo_var)));
 		PlatformNotSupportedException__ctor_mC5103EE3FE4FE245039B1107D6685296D9CC6560(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral99AFA37AC0EE2B77EE281DB5399FEEDF77C37FB5)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 600));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IntPtrObjectMarshalling_GetIntPtr_m7BBDB8A0F10ED0D586DD31ABA43569B5D61C7814_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73901
+// Method Definition Index: 72296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntPtrObjectMarshalling_SetIntPtr_mD44828D6E626A82ECB7073E788EFAE31D9E41BBC (RuntimeObject* ___0_obj, intptr_t ___1_ptr, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtrObjectMarshalling_SetIntPtr_mD44828D6E626A82ECB7073E788EFAE31D9E41BBC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_obj), (&___1_ptr));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IntPtrObjectMarshalling_SetIntPtr_mD44828D6E626A82ECB7073E788EFAE31D9E41BBC_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 601));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 602));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/IntPtrObjectMarshalling.cs:58>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 603));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 604));
 		PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A* L_0 = (PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PlatformNotSupportedException_tD2BD7EB9278518AA5FE8AE75AD5D0D4298A4631A_il2cpp_TypeInfo_var)));
 		PlatformNotSupportedException__ctor_mC5103EE3FE4FE245039B1107D6685296D9CC6560(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral99AFA37AC0EE2B77EE281DB5399FEEDF77C37FB5)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 604));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IntPtrObjectMarshalling_SetIntPtr_mD44828D6E626A82ECB7073E788EFAE31D9E41BBC_RuntimeMethod_var)));
 	}
 }
@@ -3278,31 +2084,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntPtrObjectMarshalling_SetIntPtr_mD4482
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73902
+// Method Definition Index: 72297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagedSpanWrapper__ctor_m64EF660BE4BF42BC17706387C68D2BCE779802EF (ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455* __this, void* ___0_begin, int32_t ___1_length, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ManagedSpanWrapper__ctor_m64EF660BE4BF42BC17706387C68D2BCE779802EF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_begin), (&___1_length));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ManagedSpanWrapper__ctor_m64EF660BE4BF42BC17706387C68D2BCE779802EF_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 605));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 606));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ManagedSpanWrapper.cs:16>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 607));
 		void* L_0 = ___0_begin;
 		__this->___begin = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ManagedSpanWrapper.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 608));
 		int32_t L_1 = ___1_length;
 		__this->___length = L_1;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/ManagedSpanWrapper.cs:18>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 609));
 		return;
 	}
 }
@@ -3314,22 +2104,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagedSpanWrapper__ctor_m64EF660BE4BF42
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73903
+// Method Definition Index: 72298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StringMarshaller_TryMarshalEmptyOrNullString_mA7E06E9C8BEF97EC745F7DE392C854F5F5B49999 (String_t* ___0_s, ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455* ___1_managedSpanWrapper, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringMarshaller_TryMarshalEmptyOrNullString_mA7E06E9C8BEF97EC745F7DE392C854F5F5B49999_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_s), (&___1_managedSpanWrapper));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, StringMarshaller_TryMarshalEmptyOrNullString_mA7E06E9C8BEF97EC745F7DE392C854F5F5B49999_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 610));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 611));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:13>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 612));
 		String_t* L_0 = ___0_s;
 		if (L_0)
 		{
@@ -3337,58 +2116,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StringMarshaller_TryMarshalEmptyOrNullSt
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:15>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 613));
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455* L_1 = ___1_managedSpanWrapper;
 		il2cpp_codegen_initobj(L_1, sizeof(ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:16>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 614));
 		return (bool)1;
 	}
 
 IL_000c:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:18>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 615));
 		String_t* L_2 = ___0_s;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 616));
 		NullCheck(L_2);
 		int32_t L_3;
 		L_3 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 616));
 		if (L_3)
 		{
 			goto IL_002e;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:21>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 617));
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455* L_4 = ___1_managedSpanWrapper;
 		int64_t L_5 = (il2cpp_codegen_conv<int64_t,int32_t,int32_t,false,false>(1,NULL));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 618));
 		uintptr_t L_6;
 		L_6 = UIntPtr_op_Explicit_mF1E7911DD5AC13B5E59EE8C7903469D12A3861E8(L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 618));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 619));
 		void* L_7;
 		L_7 = UIntPtr_op_Explicit_m42C3EA82465934F505B4274A7CE320550A48B7B9(L_6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 619));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 620));
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455 L_8;
 		memset((&L_8), 0, sizeof(L_8));
 		ManagedSpanWrapper__ctor_m64EF660BE4BF42BC17706387C68D2BCE779802EF((&L_8), L_7, 0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 620));
 		*(ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455*)L_4 = L_8;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:22>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 621));
 		return (bool)1;
 	}
 
 IL_002e:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:24>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 622));
 		return (bool)0;
 	}
 }
@@ -3400,22 +2159,11 @@ IL_002e:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73904
+// Method Definition Index: 72299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OutStringMarshaller_GetStringAndDispose_m9D37307AC8BEF58DBD9A58B691D3CEF09FF24D01 (ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455 ___0_managedSpan, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OutStringMarshaller_GetStringAndDispose_m9D37307AC8BEF58DBD9A58B691D3CEF09FF24D01_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_managedSpan));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, OutStringMarshaller_GetStringAndDispose_m9D37307AC8BEF58DBD9A58B691D3CEF09FF24D01_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 623));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 624));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:75>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 625));
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455 L_0 = ___0_managedSpan;
 		int32_t L_1 = L_0.___length;
 		if (L_1)
@@ -3424,8 +2172,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OutStringMarshaller_GetStringAndDis
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:78>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 626));
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455 L_2 = ___0_managedSpan;
 		void* L_3 = L_2.___begin;
 		uintptr_t L_4 = (il2cpp_codegen_conv<uintptr_t,int32_t,int32_t,false,false>(0,NULL));
@@ -3446,25 +2192,15 @@ IL_0018:
 
 IL_001a:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:81>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 627));
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455 L_6 = ___0_managedSpan;
 		void* L_7 = L_6.___begin;
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455 L_8 = ___0_managedSpan;
 		int32_t L_9 = L_8.___length;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 628));
 		String_t* L_10;
 		L_10 = String_CreateString_m3F8794FEB452558B8A68C65E1F0B603B3D94E0E2(NULL, (Il2CppChar*)L_7, 0, L_9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 628));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:82>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 629));
 		ManagedSpanWrapper_tE5AE0420F9CEEE99A6586A5D9E7E73C92BC01455 L_11 = ___0_managedSpan;
 		void* L_12 = L_11.___begin;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 630));
 		BindingsAllocator_Free_m3D757414A787767EE8BB9119071408A830E21835(L_12, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 630));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/StringMarshalling.cs:83>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 631));
 		return L_10;
 	}
 }
@@ -3476,78 +2212,42 @@ IL_001a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73905
+// Method Definition Index: 72300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* SystemReflectionMarshalling_UnmarshalSystemType_mF33F046FC09763F6F9006B5902DC086AD310EC5B (intptr_t ___0_handlePtr, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SystemReflectionMarshalling_UnmarshalSystemType_mF33F046FC09763F6F9006B5902DC086AD310EC5B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	CHECKED_LOCAL(Type_t_StaticInit);
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handlePtr));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, SystemReflectionMarshalling_UnmarshalSystemType_mF33F046FC09763F6F9006B5902DC086AD310EC5B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 632));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 633));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/SystemReflectionMarshalling.cs:93>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 634));
 		intptr_t L_0 = ___0_handlePtr;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 635));
 		bool L_1;
 		L_1 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_0, 0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 635));
 		if (!L_1)
 		{
 			goto IL_000f;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/SystemReflectionMarshalling.cs:94>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 636));
 		return (Type_t*)NULL;
 	}
 
 IL_000f:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/SystemReflectionMarshalling.cs:96>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 637));
 		intptr_t L_2 = ___0_handlePtr;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 638));
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_3;
 		L_3 = SystemReflectionMarshalling_UnmarshalRuntimeTypeHandle_m6C8FDF990AC7ACFB505BFF67D4777D7E67AB8BB5(L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 638));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/SystemReflectionMarshalling.cs:97>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 639));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 640));
 		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Type_t* L_4;
 		L_4 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 640));
 		return L_4;
 	}
 }
-// Method Definition Index: 73906
+// Method Definition Index: 72301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B SystemReflectionMarshalling_UnmarshalRuntimeTypeHandle_m6C8FDF990AC7ACFB505BFF67D4777D7E67AB8BB5 (intptr_t ___0_handlePtr, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SystemReflectionMarshalling_UnmarshalRuntimeTypeHandle_m6C8FDF990AC7ACFB505BFF67D4777D7E67AB8BB5_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handlePtr));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, SystemReflectionMarshalling_UnmarshalRuntimeTypeHandle_m6C8FDF990AC7ACFB505BFF67D4777D7E67AB8BB5_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 641));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 642));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Scripting/Marshalling/SystemReflectionMarshalling.cs:148>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 643));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 644));
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B* L_0;
 		L_0 = il2cpp_unsafe_as_ref<RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B>((&___0_handlePtr));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 644));
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_1 = (*(RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B*)L_0);
 		return L_1;
 	}
@@ -3560,78 +2260,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeTypeHandle_t332A452B8B6179E4469B69525D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73907
+// Method Definition Index: 72302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsedByNativeCodeAttribute__ctor_m66BA7B0C002396A062FDA86102193E5AE3F4D121 (UsedByNativeCodeAttribute_tED735F025C1CC74BAA6B34A9BD2FC7CB1CB74BFE* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UsedByNativeCodeAttribute__ctor_m66BA7B0C002396A062FDA86102193E5AE3F4D121_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UsedByNativeCodeAttribute__ctor_m66BA7B0C002396A062FDA86102193E5AE3F4D121_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 645));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 646));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:11>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 647));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 648));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 648));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:13>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 649));
 		return;
 	}
 }
-// Method Definition Index: 73908
+// Method Definition Index: 72303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsedByNativeCodeAttribute__ctor_mD57627694C965713EF128ECB837FC7C385A3FA8A (UsedByNativeCodeAttribute_tED735F025C1CC74BAA6B34A9BD2FC7CB1CB74BFE* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UsedByNativeCodeAttribute__ctor_mD57627694C965713EF128ECB837FC7C385A3FA8A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UsedByNativeCodeAttribute__ctor_mD57627694C965713EF128ECB837FC7C385A3FA8A_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 650));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 651));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:15>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 652));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 653));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 653));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 654));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 655));
 		UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 655));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:18>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 656));
 		return;
 	}
 }
-// Method Definition Index: 73909
+// Method Definition Index: 72304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494 (UsedByNativeCodeAttribute_tED735F025C1CC74BAA6B34A9BD2FC7CB1CB74BFE* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 657));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 658));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:20>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 659));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
@@ -3646,100 +2299,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UsedByNativeCodeAttribute_set_Name_m0963
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73910
+// Method Definition Index: 72305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute__ctor_m85C09448FAFAA7CE99878EBB78C8BFA8AEBDF1F9 (RequiredByNativeCodeAttribute_tC3699422778E86188FB8C37313809DF50628C1A5* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RequiredByNativeCodeAttribute__ctor_m85C09448FAFAA7CE99878EBB78C8BFA8AEBDF1F9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RequiredByNativeCodeAttribute__ctor_m85C09448FAFAA7CE99878EBB78C8BFA8AEBDF1F9_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 660));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 661));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:27>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 662));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 663));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 663));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:29>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 664));
 		return;
 	}
 }
-// Method Definition Index: 73911
+// Method Definition Index: 72306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute__ctor_m4E90B21E31D7E7A19B6BB7FB6F7094EF26417BBE (RequiredByNativeCodeAttribute_tC3699422778E86188FB8C37313809DF50628C1A5* __this, bool ___0_optional, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RequiredByNativeCodeAttribute__ctor_m4E90B21E31D7E7A19B6BB7FB6F7094EF26417BBE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_optional));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RequiredByNativeCodeAttribute__ctor_m4E90B21E31D7E7A19B6BB7FB6F7094EF26417BBE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 665));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 666));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:36>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 667));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 668));
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 668));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:38>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 669));
 		bool L_0 = ___0_optional;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 670));
 		RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D_inline(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 670));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:39>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 671));
 		return;
 	}
 }
-// Method Definition Index: 73912
+// Method Definition Index: 72307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D (RequiredByNativeCodeAttribute_tC3699422778E86188FB8C37313809DF50628C1A5* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 672));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 673));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:48>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 674));
 		bool L_0 = ___0_value;
 		__this->___U3COptionalU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73913
+// Method Definition Index: 72308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_GenerateProxy_m22975660D9481C771FCCB9F88E60970993BF66F9 (RequiredByNativeCodeAttribute_tC3699422778E86188FB8C37313809DF50628C1A5* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RequiredByNativeCodeAttribute_set_GenerateProxy_m22975660D9481C771FCCB9F88E60970993BF66F9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RequiredByNativeCodeAttribute_set_GenerateProxy_m22975660D9481C771FCCB9F88E60970993BF66F9_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 675));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 676));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:49>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 677));
 		bool L_0 = ___0_value;
 		__this->___U3CGenerateProxyU3Ek__BackingField = L_0;
 		return;
@@ -3753,18 +2347,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_Genera
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73914
+// Method Definition Index: 72309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreserveAttribute__ctor_mFBCD210335404CF77CBA91028DD699B1EF5A277F (PreserveAttribute_t1738E8F0C9331B6352A2D51C280CD0FA3AABD754* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PreserveAttribute__ctor_mFBCD210335404CF77CBA91028DD699B1EF5A277F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, PreserveAttribute__ctor_mFBCD210335404CF77CBA91028DD699B1EF5A277F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -3773,295 +2359,139 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreserveAttribute__ctor_mFBCD210335404CF
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 73813
+// Method Definition Index: 72208
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_inline (NativeClassAttribute_t9BBE53B7D3261F394407DB3FE19A493FF8D645F7* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeClassAttribute_set_QualifiedNativeName_mF932A0CCB74AAC77369A0193D11E671FCED43176_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 88));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 89));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:115>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 90));
 		String_t* L_0 = ___0_value;
 		__this->___U3CQualifiedNativeNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CQualifiedNativeNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73814
+// Method Definition Index: 72209
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_inline (NativeClassAttribute_t9BBE53B7D3261F394407DB3FE19A493FF8D645F7* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeClassAttribute_set_Declaration_mA6EE0E5E946DB1647575F5DE955316F9F849C270_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 91));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 92));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:116>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 93));
 		String_t* L_0 = ___0_value;
 		__this->___U3CDeclarationU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CDeclarationU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73827
+// Method Definition Index: 72222
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596_inline (NativeConditionalAttribute_tCD3268FCF0380D3738F3321FB6D2A1479AF96FC9* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeConditionalAttribute_set_Condition_m6687E9155FA5FEF928F706038C2253AFE20A4596_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 201));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 202));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:35>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 203));
 		String_t* L_0 = ___0_value;
 		__this->___U3CConditionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CConditionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73828
+// Method Definition Index: 72223
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2_inline (NativeConditionalAttribute_tCD3268FCF0380D3738F3321FB6D2A1479AF96FC9* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeConditionalAttribute_set_StubReturnStatement_m3937B321F45CD3E26F6F43FC687BA5B2415C06D2_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 204));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 205));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:40>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 206));
 		String_t* L_0 = ___0_value;
 		__this->___U3CStubReturnStatementU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CStubReturnStatementU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73832
+// Method Definition Index: 72227
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B_inline (NativeNameAttribute_t214B59BE443E59B58D9B10761C2DDA28CBE21C80* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeNameAttribute_set_Name_m81E21B9A75DE5339DC18B62DCA793B20D54B8F0B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 234));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 235));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:77>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 236));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73834
+// Method Definition Index: 72229
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214_inline (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_Name_m0B36DE505C3C8C2106AE3B248FCC83784C770214_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 251));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 252));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:96>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 253));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73836
+// Method Definition Index: 72231
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_inline (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_IsFreeFunction_mABE8D59B01EA4C05333959BEDAC5A9D0BD87F62A_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 257));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 258));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:98>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 259));
 		bool L_0 = ___0_value;
 		__this->___U3CIsFreeFunctionU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73835
+// Method Definition Index: 72230
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84_inline (NativeMethodAttribute_t600A29E12A726350A803F1F63F6A71A85A8181E6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeMethodAttribute_set_IsThreadSafe_m2EB94C8C78F1D3CBB2C039B4079E02283301DF84_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 254));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 255));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:97>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 256));
 		bool L_0 = ___0_value;
 		__this->___U3CIsThreadSafeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73843
+// Method Definition Index: 72238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0_inline (NativePropertyAttribute_tF858D97F7683358CD571156204035EE568FBD895* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativePropertyAttribute_set_TargetType_m3C3CB6A3566E5399568A2A7E310027F32658B8E0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 299));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 300));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:141>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 301));
 		int32_t L_0 = ___0_value;
 		__this->___U3CTargetTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73849
+// Method Definition Index: 72244
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_inline (NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeTypeAttribute_set_CodegenOptions_m25704C3D4CCFE96864392559A17A4987C29D63D7_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 322));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 323));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:187>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 324));
 		int32_t L_0 = ___0_value;
 		__this->___U3CCodegenOptionsU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73848
+// Method Definition Index: 72243
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185_inline (NativeTypeAttribute_t0C135773A5D8F6791B8E02A538079C52AA2B6A3B* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeTypeAttribute_set_IntermediateScriptingStructName_mE624391C2B59864A1421DF0570D8C8525FC07185_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 319));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 320));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:185>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 321));
 		String_t* L_0 = ___0_value;
 		__this->___U3CIntermediateScriptingStructNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CIntermediateScriptingStructNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73857
+// Method Definition Index: 72252
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_inline (StaticAccessorAttribute_tEE29572689E3EED22AC4772517A4F14598F7FFCA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, StaticAccessorAttribute_set_Name_m627882C1B1F157BAB4D5B566CDB6F85D3AC44CE4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 363));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 364));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:259>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 365));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73858
+// Method Definition Index: 72253
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F_inline (StaticAccessorAttribute_tEE29572689E3EED22AC4772517A4F14598F7FFCA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, StaticAccessorAttribute_set_Type_m2E0773C273B48F050E12FA55CEC2CEE88EEB596F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 366));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 367));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/BindingsAttributes.cs:260>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 368));
 		int32_t L_0 = ___0_value;
 		__this->___U3CTypeU3Ek__BackingField = L_0;
 		return;
@@ -4070,78 +2500,38 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_
 // Method Definition Index: 698
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->____stringLength;
 		return L_0;
 	}
 }
-// Method Definition Index: 3876
+// Method Definition Index: 3824
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		intptr_t L_0 = ___0_value1;
 		intptr_t L_1 = ___1_value2;
 		return (bool)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0);
 	}
 }
-// Method Definition Index: 73909
+// Method Definition Index: 72304
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494_inline (UsedByNativeCodeAttribute_tED735F025C1CC74BAA6B34A9BD2FC7CB1CB74BFE* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UsedByNativeCodeAttribute_set_Name_m09634BC24D79F3A31969848ADB7C82072A8D5494_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 657));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 658));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:20>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 659));
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73912
+// Method Definition Index: 72307
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D_inline (RequiredByNativeCodeAttribute_tC3699422778E86188FB8C37313809DF50628C1A5* __this, bool ___0_value, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_value));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RequiredByNativeCodeAttribute_set_Optional_mCFD7F94B50EEDB547C839C503F9676CB2E047B0D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 672));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 673));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/Scripting/Attributes/Attributes.cs:48>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_ScriptingModule + 674));
 		bool L_0 = ___0_value;
 		__this->___U3COptionalU3Ek__BackingField = L_0;
 		return;

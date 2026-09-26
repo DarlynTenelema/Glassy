@@ -20,10 +20,10 @@ public class InputManager : MonoBehaviour
 {
     [Header("Configuración")]
     [Tooltip("Multiplicador de fuerza al lanzar una gema con swipe rápido.")]
-    public float swipeForceMultiplier = 4f;
+    public float swipeForceMultiplier = 2f;
 
     [Tooltip("Velocidad máxima al arrastrar una gema con el dedo.")]
-    public float maxDragSpeed = 6f;
+    public float maxDragSpeed = 30f;
 
     [Tooltip("Distancia mínima del swipe (en unidades de mundo) para considerarlo lanzamiento.")]
     public float minSwipeDistance = 0.4f;
@@ -31,12 +31,39 @@ public class InputManager : MonoBehaviour
     private Camera _mainCam;
     private Gem    _selectedGem;
     private Rigidbody2D _selectedRb;
-    private Vector2 _swipeStartWorldPos;
+    
+    // Puntero físico reutilizable
+    private GameObject _pointerObj;
+    private Rigidbody2D _pointerRb;
+    private SpringJoint2D _dragJoint;
+    
+    private Vector2 _lastTouchWorldPos;
+    private Vector2 _trackedVelocity;
     private bool    _isDragging = false;
 
     private void Start()
     {
         _mainCam = Camera.main;
+        SetupPhysicsPointer();
+    }
+
+    private void SetupPhysicsPointer()
+    {
+        // Creamos un objeto oculto que seguirá nuestro dedo
+        _pointerObj = new GameObject("PhysicsPointer");
+        _pointerObj.transform.SetParent(this.transform);
+
+        // Kinematic para que lo movamos libremente sin gravedad
+        _pointerRb = _pointerObj.AddComponent<Rigidbody2D>();
+        _pointerRb.bodyType = RigidbodyType2D.Kinematic;
+
+        // Usamos un SpringJoint2D para conectar este puntero a las gemas
+        _dragJoint = _pointerObj.AddComponent<SpringJoint2D>();
+        _dragJoint.autoConfigureDistance = false;
+        _dragJoint.distance = 0f; // Queremos que la gema vaya exactamente al dedo
+        _dragJoint.dampingRatio = 1f; // Sin rebote
+        _dragJoint.frequency = 15f; // Respuesta muy rápida
+        _dragJoint.enabled = false; // Apagado hasta que toquemos una gema
     }
 
     private void Update()
@@ -69,10 +96,20 @@ public class InputManager : MonoBehaviour
 
         _selectedGem       = gem;
         _selectedRb        = gem.GetComponent<Rigidbody2D>();
-        _swipeStartWorldPos = worldPos;
         _isDragging        = true;
 
         _selectedGem.SetPlayerInteraction(true);
+
+        // En lugar de crear componentes, reutilizamos nuestro puntero
+        _pointerRb.position = worldPos;
+        _dragJoint.connectedBody = _selectedRb;
+        _dragJoint.enabled = true;
+
+        _lastTouchWorldPos = worldPos;
+        _trackedVelocity = Vector2.zero;
+        
+        // Detener giro loco al agarrarla
+        _selectedRb.angularVelocity = 0f;
     }
 
     // =========================================================================
@@ -81,13 +118,28 @@ public class InputManager : MonoBehaviour
 
     private void HandleDrag()
     {
-        if (!_isDragging || _selectedGem == null || _selectedRb == null) return;
+        if (!_isDragging || _selectedGem == null) return;
 
         Vector2 worldPos  = GetInputWorldPosition();
-        Vector2 direction = worldPos - _selectedRb.position;
+        
+        // Movemos físicamente nuestro puntero fantasma al dedo
+        // El joint arrastrará a la gema automáticamente
+        _pointerRb.MovePosition(worldPos);
 
-        // Mover hacia la posición del dedo, limitando la velocidad máxima
-        _selectedRb.linearVelocity = Vector2.ClampMagnitude(direction * 15f, maxDragSpeed);
+        // Calcular velocidad suavizada (inercia reciente del dedo) para el lanzamiento
+        if (Time.deltaTime > 0)
+        {
+            Vector2 instantVelocity = (worldPos - _lastTouchWorldPos) / Time.deltaTime;
+            _trackedVelocity = Vector2.Lerp(_trackedVelocity, instantVelocity, 20f * Time.deltaTime);
+        }
+        
+        // Mantener la gema quieta (sin girar como loca) mientras se la arrastra
+        if (_selectedRb != null)
+        {
+            _selectedRb.angularVelocity = 0f;
+        }
+
+        _lastTouchWorldPos = worldPos;
     }
 
     // =========================================================================
@@ -98,31 +150,39 @@ public class InputManager : MonoBehaviour
     {
         if (!_isDragging || _selectedGem == null || _selectedRb == null)
         {
-            _isDragging = false;
+            DisconnectPointer();
             return;
         }
 
-        Vector2 releaseWorldPos = GetInputWorldPosition();
-        Vector2 swipeVector     = releaseWorldPos - _swipeStartWorldPos;
+        // Soltar físicamente la gema
+        DisconnectPointer();
 
-        // Si el swipe fue lo suficientemente largo → lanzar con fuerza
-        if (swipeVector.magnitude > minSwipeDistance)
+        // Si la inercia reciente del dedo es alta, es un "Lanzamiento"
+        if (_trackedVelocity.magnitude > 5f)
         {
-            // Lanzar en la dirección del swipe
             _selectedRb.linearVelocity = Vector2.zero; // Reset velocidad previa
-            _selectedRb.AddForce(swipeVector.normalized * swipeForceMultiplier * swipeVector.magnitude,
-                                 ForceMode2D.Impulse);
+            
+            // Usamos la inercia real del dedo, escalada ligeramente, en la dirección correcta
+            float forceMagnitude = _trackedVelocity.magnitude * swipeForceMultiplier * 0.05f;
+            _selectedRb.AddForce(_trackedVelocity.normalized * forceMagnitude, ForceMode2D.Impulse);
         }
         else
         {
-            // Swipe corto → soltar suavemente (caída normal por gravedad)
-            _selectedRb.linearVelocity = Vector2.zero;
+            // Movimiento corto/lento → soltar suavemente conservando un poco de la inercia natural
+            _selectedRb.linearVelocity = _trackedVelocity * 0.2f;
         }
 
         _selectedGem.SetPlayerInteraction(false);
         _selectedGem = null;
         _selectedRb  = null;
         _isDragging  = false;
+    }
+    
+    private void DisconnectPointer()
+    {
+        _dragJoint.enabled = false;
+        _dragJoint.connectedBody = null;
+        _isDragging = false;
     }
 
     // =========================================================================

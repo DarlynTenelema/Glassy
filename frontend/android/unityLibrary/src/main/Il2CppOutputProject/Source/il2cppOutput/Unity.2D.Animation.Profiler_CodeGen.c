@@ -14,7 +14,6 @@ static Il2CppMethodPointer s_methodPointers[2] =
 	Animation2DProfilerMarkers__cctor_m745512911A1BF6F6519A909DA6532407B295B1F2,
 	SpriteSkinProfilerFrameData_GetSpriteSkinTypeName_m8ABCA585B92C4EEF444AB0C95687D49939AFA98D,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_2D_Animation_Profiler;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_2D_Animation_Profiler_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_2D_Animation_Profiler_CodeGenModule = 
 {
@@ -25,7 +24,7 @@ const Il2CppCodeGenModule g_Unity_2D_Animation_Profiler_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_2D_Animation_Profiler,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

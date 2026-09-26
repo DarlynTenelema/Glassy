@@ -29,7 +29,6 @@ static Il2CppMethodPointer s_methodPointers[10] =
 	JsonUtility_ToJsonInternal_Injected_mD9920AF91B9B0D863E19C90D6FD5D920C5D99B2D,
 	JsonUtility_FromJsonInternal_Injected_mBDEBD5493BD3D6BE8B8066104D0D2D56806D7D89,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_JSONSerializeModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_JSONSerializeModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_JSONSerializeModule_CodeGenModule = 
 {
@@ -40,7 +39,7 @@ const Il2CppCodeGenModule g_UnityEngine_JSONSerializeModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_JSONSerializeModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

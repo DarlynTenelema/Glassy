@@ -27,27 +27,27 @@ class ThemeProvider with ChangeNotifier {
 }
 
 class AppTheme {
-  // Colores principales (Neon / Premium)
-  static const Color neonPurple = Color(0xFFB534FF);
-  static const Color neonBlue = Color(0xFF00E5FF);
-  static const Color neonPink = Color(0xFFFF007F);
+  // Colores principales (Temática Glassy / Cyan)
+  static const Color neonCyan = Color(0xFF00E5FF);
+  static const Color tealGlass = Color(0xFF48D1CC);
+  static const Color whiteGlass = Color(0xE6FFFFFF);
   
-  static const Color darkBackground = Color(0xFF0A0A1A);
+  static const Color darkBackground = Color(0xFF050515); // Azul oscuro profundo
   static const Color lightBackground = Color(0xFFF0F2F5);
 
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
       scaffoldBackgroundColor: darkBackground,
-      primaryColor: neonPurple,
+      primaryColor: neonCyan,
       colorScheme: const ColorScheme.dark(
-        primary: neonPurple,
-        secondary: neonBlue,
+        primary: neonCyan,
+        secondary: tealGlass,
       ),
       textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: neonPurple,
+          backgroundColor: neonCyan,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
@@ -62,15 +62,15 @@ class AppTheme {
     return ThemeData(
       brightness: Brightness.light,
       scaffoldBackgroundColor: lightBackground,
-      primaryColor: neonPurple,
+      primaryColor: neonCyan,
       colorScheme: const ColorScheme.light(
-        primary: neonPurple,
-        secondary: neonBlue,
+        primary: neonCyan,
+        secondary: tealGlass,
       ),
       textTheme: GoogleFonts.outfitTextTheme(ThemeData.light().textTheme),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: neonPurple,
+          backgroundColor: neonCyan,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),

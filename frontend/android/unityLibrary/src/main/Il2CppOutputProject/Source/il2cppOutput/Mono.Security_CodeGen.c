@@ -1021,7 +1021,6 @@ static Il2CppMethodPointer s_methodPointers[510] =
 	SequentialSearchPrimeGeneratorBase__ctor_mFE1A43FA14390E871ED0C9025B57B84D9A7AA754,
 	U3CPrivateImplementationDetailsU3E_ComputeStringHash_mC7DC26EF4301846E2947FBD7916A16E88C887055,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationMono_Security;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
 const Il2CppCodeGenModule g_Mono_Security_CodeGenModule = 
 {
@@ -1032,7 +1031,7 @@ const Il2CppCodeGenModule g_Mono_Security_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationMono_Security,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

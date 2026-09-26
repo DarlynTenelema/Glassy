@@ -199,7 +199,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[18] =
 	{ 0x06000048, AnimatorControllerPlayable_GetHandle_m718D9A4E0DB7AC62947B1D09E47DBCD25C27AF6C_AdjustorThunk },
 	{ 0x0600004A, AnimatorControllerPlayable_Equals_m14125BB4CCFCDFFD098223AF20E38501BA264180_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_AnimationModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AnimationModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_AnimationModule_CodeGenModule = 
 {
@@ -210,7 +209,7 @@ const Il2CppCodeGenModule g_UnityEngine_AnimationModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_AnimationModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

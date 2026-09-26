@@ -40,7 +40,6 @@ static Il2CppMethodPointer s_methodPointers[15] =
 	InternalEngineBridge_ConvertIntToFloat_mB38ED35A3CD802442791415694C3E8C7E86E8148,
 	InternalEngineBridge_MarkDirty_mACDE6E198BE33C863777F878F4F166F8B1D0CB9D,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_InternalAPIEngineBridge_001;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_InternalAPIEngineBridge_001_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_InternalAPIEngineBridge_001_CodeGenModule = 
 {
@@ -51,7 +50,7 @@ const Il2CppCodeGenModule g_Unity_InternalAPIEngineBridge_001_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_InternalAPIEngineBridge_001,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

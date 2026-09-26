@@ -76,7 +76,6 @@ static Il2CppMethodPointer s_methodPointers[33] =
 	Pass_Init_m7B382342CD2678E457817E50E1FB22F36CBBB89A,
 	Pass_Clear_mDBE15CB281CDF8F189394DDE8D58E79D6A239FFE,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_RenderPipelines_Core_Runtime_Shared;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_RenderPipelines_Core_Runtime_Shared_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_RenderPipelines_Core_Runtime_Shared_CodeGenModule = 
 {
@@ -87,7 +86,7 @@ const Il2CppCodeGenModule g_Unity_RenderPipelines_Core_Runtime_Shared_CodeGenMod
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_RenderPipelines_Core_Runtime_Shared,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

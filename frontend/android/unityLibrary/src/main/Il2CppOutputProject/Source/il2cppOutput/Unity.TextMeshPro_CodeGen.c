@@ -3626,7 +3626,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[16] =
 	{ 0x0600071B, SpriteFrame_ToString_m74A323FCED2C3503F98BEB090A2EF8FE20B53E0C_AdjustorThunk },
 	{ 0x0600071C, SpriteSize_ToString_mED85E2303923FBF7A05A012E064705856A4CC2DB_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_TextMeshPro;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_TextMeshPro_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_TextMeshPro_CodeGenModule = 
 {
@@ -3637,7 +3636,7 @@ const Il2CppCodeGenModule g_Unity_TextMeshPro_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_TextMeshPro,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

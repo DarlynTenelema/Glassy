@@ -678,7 +678,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[5] =
 	{ 0x0600011B, LifecycleScopeKey_Equals_m34D5104FAAF44A7D83D971B24BA7F26B2F2EBBB3_AdjustorThunk },
 	{ 0x0600011C, LifecycleScopeKey_GetHashCode_mFF0E00A6E201E85BAE8E7D68D9F28FF33314BF73_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_Scripting;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Scripting_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Scripting_CodeGenModule = 
 {
@@ -689,7 +688,7 @@ const Il2CppCodeGenModule g_Unity_Scripting_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_Scripting,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

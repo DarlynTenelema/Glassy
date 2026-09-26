@@ -1014,7 +1014,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[58] =
 	{ 0x0600019D, WriteTransformTweensParallelJob_Execute_mFC3DE577C0708CF6280C9DCED0C25F6C426E2532_AdjustorThunk },
 	{ 0x060001A7, WriteTransformsParallelJob_Execute_m0A9DF0F2D3ECB883876E0CE5F6344EFD6A983DD9_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_PhysicsCore2DModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_PhysicsCore2DModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_PhysicsCore2DModule_CodeGenModule = 
 {
@@ -1025,7 +1024,7 @@ const Il2CppCodeGenModule g_UnityEngine_PhysicsCore2DModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_PhysicsCore2DModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

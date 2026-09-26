@@ -28,7 +28,6 @@ static Il2CppMethodPointer s_methodPointers[9] =
 	ImageConversion_EncodeToR2DInternal_Injected_m7637DF1097544D5A64DDB77F3A3E9829D1B0FDD5,
 	ImageConversion_LoadImage_Injected_m9252BDADAF202994C62FE110A05480D59BB6CDCE,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_ImageConversionModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_ImageConversionModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_ImageConversionModule_CodeGenModule = 
 {
@@ -39,7 +38,7 @@ const Il2CppCodeGenModule g_UnityEngine_ImageConversionModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_ImageConversionModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -532,7 +532,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[28] =
 	{ 0x060000B6, ButtonEventsIterator_Reset_m178B46B30A239DE2E1A29E7AA98FF1513EDA17F0_AdjustorThunk },
 	{ 0x060000B7, ButtonEventsIterator_System_Collections_IEnumerator_get_Current_mF2064D9D36208EBC155BF0F8150CC36B046AE329_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_InputForUIModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_InputForUIModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_InputForUIModule_CodeGenModule = 
 {
@@ -543,7 +542,7 @@ const Il2CppCodeGenModule g_UnityEngine_InputForUIModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_InputForUIModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -1,8 +1,14 @@
+import 'dart:async';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../theme/app_theme.dart';
 import '../widgets/gaming_button.dart';
+import '../flutter_unity_bridge/src/unity_bridge_controller.dart';
+import '../flutter_unity_bridge/src/models/payloads.dart';
+import '../services/audio_service.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({Key? key}) : super(key: key);
@@ -13,58 +19,201 @@ class GameScreen extends StatefulWidget {
 
 class _GameScreenState extends State<GameScreen> {
   late UnityWidgetController _unityWidgetController;
+  late UnityBridgeController _bridgeController;
+  
+  // Suscripciones para evitar memory leaks
+  StreamSubscription? _readySub;
+  StreamSubscription? _scoreSub;
+  StreamSubscription? _crystalsSub;
+  StreamSubscription? _gameOverSub;
+
   
   bool _isPaused = false;
   bool _isGameOver = false;
-  bool _showStartBanner = true;
+  bool _showStartBanner = false;
+  
+  // Estado de configuración local
+  bool _volumen = true;
+  bool _efectos = true;
+  double _musicVolume = 1.0;
   
   int _score = 0;
   int _highScore = 0; // Para la lógica de "Nuevo Score"
-  int _crystals = 1000; // Valor inicial o cargado del estado global
+  int _crystals = 100; // Valor inicial o cargado del estado global
 
   void onUnityCreated(controller) {
+    AudioService().stopBgMusic();
     _unityWidgetController = controller;
+    _bridgeController = UnityBridgeController(_unityWidgetController);
+    
+    // Configurar suscripciones a los eventos de Unity
+    _readySub = _bridgeController.onReady.listen((_) {
+      if (mounted) {
+        setState(() {
+          _showStartBanner = true;
+          _isGameOver = false; // Asegurar estado limpio
+        });
+        
+        // Reproducir música ahora que Unity y Flutter están listos
+        _unityWidgetController.postMessage('AudioManager', 'PlayStartGameFromFlutter', '');
+        
+        // Ocultar la barra de inicio después de 3 segundos
+        Future.delayed(const Duration(seconds: 3), () {
+          if (mounted) {
+            setState(() {
+              _showStartBanner = false;
+            });
+          }
+        });
+      }
+    });
+
+    _scoreSub = _bridgeController.onScoreUpdated.listen((payload) {
+      if (mounted) setState(() => _score = payload.currentScore);
+    });
+
+    _crystalsSub = _bridgeController.onCrystalsUpdated.listen((payload) {
+      if (mounted) setState(() => _crystals = payload.currentCrystals);
+    });
+
+    _gameOverSub = _bridgeController.onGameOver.listen((payload) {
+      if (mounted) {
+        setState(() {
+          _score = payload.finalScore;
+          _isGameOver = true;
+          if (_score > _highScore) {
+            _highScore = _score;
+          }
+        });
+      }
+    });
     
     // Pasar el token a Unity
     final session = Supabase.instance.client.auth.currentSession;
     if (session != null) {
-      _unityWidgetController.postMessage(
-        'AuthManager', // Asegúrate de que el GameObject en Unity se llame 'AuthManager'
-        'ReceiveTokenFromFlutter', 
-        session.accessToken,
-      );
+      _bridgeController.sendAuthToken(session.accessToken);
     }
 
-    // Ocultar la barra de inicio después de 3 segundos
-    Future.delayed(const Duration(seconds: 3), () {
-      if (mounted) {
-        setState(() {
-          _showStartBanner = false;
-        });
-      }
-    });
+    // Reiniciar la escena en Unity siempre que se entre aquí para borrar estado previo
+    _unityWidgetController.postMessage('GameManager', 'RestartGame', '');
+    
+    // Cargar y enviar configuración de audio
+    _loadAndSendSettings();
+  }
+
+
+  Future<void> _loadAndSendSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (mounted) {
+      setState(() {
+        _volumen = prefs.getBool('volume') ?? true;
+        _efectos = prefs.getBool('effects') ?? true;
+        _musicVolume = prefs.getDouble('musicVolume') ?? 1.0;
+      });
+    }
+    _bridgeController.updateAudioSettings(_volumen, _efectos, _musicVolume);
+  }
+
+  Future<void> _saveSetting(String key, bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(key, value);
+  }
+
+  Future<void> _saveDoubleSetting(String key, double value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setDouble(key, value);
   }
 
   void onUnityMessage(message) {
-    String msg = message.toString();
-    print('Mensaje desde Unity: $msg');
+    // Delegamos el procesamiento del mensaje al BridgeController
+    _bridgeController.receiveMessageFromUnity(message);
+  }
+
+  Future<bool> _onExitPressed() async {
+    if (_isGameOver) {
+      return true;
+    }
     
-    if (msg.startsWith('SCORE:')) {
-      setState(() {
-        _score = int.parse(msg.substring(6));
-      });
-    } else if (msg.startsWith('CRYSTALS:')) {
-      setState(() {
-        _crystals = int.parse(msg.substring(9));
-      });
-    } else if (msg.startsWith('GAMEOVER:')) {
-      setState(() {
-        _score = int.parse(msg.substring(9));
-        _isGameOver = true;
-        if (_score > _highScore) {
-          _highScore = _score;
-        }
-      });
+    bool wasPaused = _isPaused;
+    if (!_isPaused) {
+      _togglePause();
+    }
+
+    final bool? shouldExit = await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      barrierColor: Colors.black.withOpacity(0.6), // Fondo oscuro
+      builder: (context) => Dialog(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.center,
+            children: [
+              GlassContainer(
+                padding: const EdgeInsets.only(top: 80, left: 30, right: 30, bottom: 30),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '¿ABANDONAR PARTIDA?',
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 2,
+                        shadows: [const Shadow(color: AppTheme.neonCyan, blurRadius: 15)],
+                      ),
+                    ),
+                    const SizedBox(height: 15),
+                    const Text(
+                      'Si sales ahora, terminará la partida y se guardará tu puntaje actual.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white70, fontSize: 16),
+                    ),
+                    const SizedBox(height: 35),
+                    GamingButton(
+                      text: 'CONTINUAR',
+                      height: 50,
+                      fontSize: 16,
+                      primaryColor: AppTheme.neonCyan,
+                      secondaryColor: AppTheme.tealGlass,
+                      onPressed: () => Navigator.of(context).pop(false),
+                    ),
+                    const SizedBox(height: 15),
+                    GamingButton(
+                      text: 'SALIR DEL JUEGO',
+                      height: 50,
+                      fontSize: 16,
+                      primaryColor: Colors.redAccent,
+                      secondaryColor: Colors.red,
+                      onPressed: () => Navigator.of(context).pop(true),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: -120,
+                child: Image.asset(
+                  'assets/avatar/glassy_lapislazully_surprised.png',
+                  height: 180,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+
+    if (shouldExit == true) {
+      if (_isPaused) _togglePause();
+      _unityWidgetController.postMessage('GameManager', 'TriggerGameOver', '');
+      return false; // Retornamos false para que no haga pop inmediato y se muestre la pantalla de Game Over
+    } else {
+      if (!wasPaused && _isPaused) _togglePause();
+      return false;
     }
   }
 
@@ -72,17 +221,22 @@ class _GameScreenState extends State<GameScreen> {
     setState(() {
       _isPaused = !_isPaused;
     });
-    // Enviar mensaje a Unity para pausar/reanudar físicas
-    _unityWidgetController.postMessage(
-      'GameManager', // GameObject en Unity
-      _isPaused ? 'PauseGame' : 'ResumeGame', // Nombre del método
-      '', // Parámetro extra si es necesario
-    );
+    // Enviar mensaje a Unity usando el bridge
+    _bridgeController.pauseGame(_isPaused);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (didPop) async {
+        if (didPop) return;
+        final bool canExit = await _onExitPressed();
+        if (canExit && mounted) {
+          Navigator.pop(context);
+        }
+      },
+      child: Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         children: [
@@ -97,32 +251,95 @@ class _GameScreenState extends State<GameScreen> {
           // 2. Capa de HUD (Puntaje, Botones)
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Top Bar (Cristales y Pausa)
+                  // Top HUD: Cristales, Score, Controles
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Contador de Cristales
+                      // Controles Izquierdos: Cristales + Power-ups
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Contador de Cristales
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.5),
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: AppTheme.neonCyan, width: 1),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: AppTheme.neonCyan.withOpacity(0.3),
+                                  blurRadius: 8,
+                                )
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                const Icon(Icons.diamond, color: AppTheme.neonCyan, size: 20),
+                                const SizedBox(width: 6),
+                                Text(
+                                  '$_crystals',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          _buildPowerUpButton(
+                            icon: Icons.bubble_chart,
+                            cost: 1,
+                            color: Colors.white,
+                            method: 'UsePowerUpPearl',
+                          ),
+                          _buildPowerUpButton(
+                            icon: Icons.diamond_outlined,
+                            cost: 2,
+                            color: Colors.greenAccent,
+                            method: 'UsePowerUpEmerald',
+                          ),
+                          _buildPowerUpButton(
+                            icon: Icons.local_fire_department,
+                            cost: 5,
+                            color: Colors.orangeAccent,
+                            method: 'UsePowerUpAll',
+                          ),
+                        ],
+                      ),
+                      
+                      // Score Central
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         decoration: BoxDecoration(
-                          color: Colors.black54,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: AppTheme.neonPurple, width: 1.5),
+                          color: Colors.black.withOpacity(0.6),
+                          borderRadius: BorderRadius.circular(25),
+                          border: Border.all(color: Colors.white24, width: 1),
                         ),
-                        child: Row(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Icon(Icons.diamond, color: AppTheme.neonBlue, size: 20),
-                            const SizedBox(width: 8),
+                            const Text(
+                              'SCORE',
+                              style: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 10,
+                                letterSpacing: 2,
+                              ),
+                            ),
                             Text(
-                              '$_crystals',
+                              '$_score',
                               style: const TextStyle(
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: 24,
+                                fontWeight: FontWeight.w900,
+                                shadows: [Shadow(color: AppTheme.tealGlass, blurRadius: 10)],
                               ),
                             ),
                           ],
@@ -131,25 +348,29 @@ class _GameScreenState extends State<GameScreen> {
                       
                       // Botones Superiores Derecha
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           IconButton(
                             onPressed: _togglePause,
                             icon: Icon(
                               _isPaused ? Icons.play_arrow : Icons.pause,
                               color: Colors.white,
-                              size: 35,
-                              shadows: [Shadow(color: AppTheme.neonPink, blurRadius: 10)],
+                              size: 28,
+                              shadows: const [Shadow(color: AppTheme.whiteGlass, blurRadius: 10)],
                             ),
                           ),
                           IconButton(
-                            onPressed: () {
-                              Navigator.pop(context);
+                            onPressed: () async {
+                              final bool canExit = await _onExitPressed();
+                              if (canExit && mounted) {
+                                Navigator.pop(context);
+                              }
                             },
                             icon: const Icon(
                               Icons.close,
                               color: Colors.white,
-                              size: 35,
-                              shadows: [Shadow(color: AppTheme.neonPink, blurRadius: 10)],
+                              size: 28,
+                              shadows: [Shadow(color: AppTheme.whiteGlass, blurRadius: 10)],
                             ),
                           ),
                         ],
@@ -157,24 +378,7 @@ class _GameScreenState extends State<GameScreen> {
                     ],
                   ),
                   
-                  // Bottom Bar (Puntaje sobre las montañas o abajo)
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 20),
-                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.6),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Text(
-                      'Score: $_score',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        shadows: [Shadow(color: AppTheme.neonBlue, blurRadius: 15)],
-                      ),
-                    ),
-                  ),
+
                 ],
               ),
             ),
@@ -183,95 +387,157 @@ class _GameScreenState extends State<GameScreen> {
           // 3. Capa de Overlays (Pausa o Game Over)
           if (_isPaused) _buildPauseOverlay(),
           
-          // 4. Banners Animados (Inicio y Game Over)
+          // 4. Capa Táctil de Salida Rápida (Game Over)
+          if (_isGameOver) _buildGameOverOverlay(),
+          
+          // 5. Banners Animados (Inicio y Game Over)
           _buildAnimatedBanner(),
         ],
+      ),
       ),
     );
   }
 
   Widget _buildPauseOverlay() {
-    return Container(
-      color: Colors.black.withOpacity(0.7),
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'BREAK!!!',
-              style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                shadows: [const Shadow(color: AppTheme.neonBlue, blurRadius: 20)],
-              ),
-            ),
-            const SizedBox(height: 40),
-            GlassContainer(
-              width: 300,
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  SwitchListTile(
-                    title: const Text('Volumen', style: TextStyle(color: Colors.white)),
-                    value: true,
-                    activeColor: AppTheme.neonBlue,
-                    onChanged: (v) {},
+    return BackdropFilter(
+      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+      child: Container(
+        color: Colors.black.withOpacity(0.4),
+        child: Center(
+          child: GlassContainer(
+            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 25),
+            width: 340,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.pause_circle_filled_rounded, color: AppTheme.neonCyan, size: 60),
+                const SizedBox(height: 10),
+                Text(
+                  'BREAK!!!',
+                  style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 4,
+                    shadows: [const Shadow(color: AppTheme.neonCyan, blurRadius: 20)],
                   ),
-                  const Divider(color: Colors.white24),
-                  SwitchListTile(
-                    title: const Text('Efectos', style: TextStyle(color: Colors.white)),
-                    value: true,
-                    activeColor: AppTheme.neonPink,
-                    onChanged: (v) {},
+                ),
+                const SizedBox(height: 30),
+                
+                // Configuración
+                const Text('Ajustes Rápidos', style: TextStyle(color: AppTheme.tealGlass, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
+                const SizedBox(height: 10),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.05),
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 30),
-            const Text(
-              'Tienda',
-              style: TextStyle(color: Colors.white70, fontSize: 18),
-            ),
-            const SizedBox(height: 10),
-            GlassContainer(
-              width: 300,
-              padding: const EdgeInsets.all(15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Row(
+                  child: Column(
                     children: [
-                      Icon(Icons.diamond, color: AppTheme.neonBlue),
-                      SizedBox(width: 10),
-                      Text('100 Gemas', style: TextStyle(color: Colors.white, fontSize: 18)),
+                      SwitchListTile(
+                        title: const Text('Volumen General', style: TextStyle(color: Colors.white)),
+                        value: _volumen,
+                        activeColor: AppTheme.neonCyan,
+                        onChanged: (v) {
+                          setState(() => _volumen = v);
+                          _saveSetting('volume', v);
+                          _bridgeController.updateAudioSettings(_volumen, _efectos, _musicVolume);
+                        },
+                      ),
+                      const Divider(color: Colors.white24, height: 1),
+                      SwitchListTile(
+                        title: const Text('Efectos', style: TextStyle(color: Colors.white)),
+                        value: _efectos,
+                        activeColor: AppTheme.tealGlass,
+                        onChanged: (v) {
+                          setState(() => _efectos = v);
+                          _saveSetting('effects', v);
+                          _bridgeController.updateAudioSettings(_volumen, _efectos, _musicVolume);
+                        },
+                      ),
+                      const Divider(color: Colors.white24, height: 1),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                        child: Row(
+                          children: [
+                            const Text('Música Juego', style: TextStyle(color: Colors.white, fontSize: 16)),
+                            Expanded(
+                              child: Slider(
+                                value: _musicVolume,
+                                min: 0.0,
+                                max: 1.0,
+                                activeColor: AppTheme.neonCyan,
+                                onChanged: (v) {
+                                  setState(() => _musicVolume = v);
+                                  _saveDoubleSetting('musicVolume', v);
+                                  _bridgeController.updateAudioSettings(_volumen, _efectos, _musicVolume);
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
-                  SizedBox(
-                    width: 100,
-                    child: GamingButton(
-                      text: '\$0.99',
-                      height: 40,
-                      fontSize: 16,
-                      primaryColor: AppTheme.neonPurple,
-                      secondaryColor: const Color(0xFF6A0DAD),
-                      onPressed: () {},
-                    ),
+                ),
+                
+                const SizedBox(height: 25),
+                // Tienda rápida
+                const Text('Recarga de Gemas', style: TextStyle(color: AppTheme.tealGlass, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
+                const SizedBox(height: 10),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.05),
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                ],
-              ),
+                  padding: const EdgeInsets.all(15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Row(
+                        children: [
+                          Icon(Icons.diamond, color: AppTheme.neonCyan),
+                          SizedBox(width: 8),
+                          Text('100 Gemas', style: TextStyle(color: Colors.white, fontSize: 16)),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 90,
+                        child: GamingButton(
+                          text: '\$0.99',
+                          height: 35,
+                          fontSize: 14,
+                          primaryColor: AppTheme.tealGlass,
+                          secondaryColor: const Color(0xFF6A0DAD),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                
+                const SizedBox(height: 40),
+                SizedBox(
+                  width: double.infinity,
+                  child: GamingButton(
+                    text: 'REANUDAR',
+                    height: 55,
+                    fontSize: 18,
+                    primaryColor: AppTheme.neonCyan,
+                    secondaryColor: const Color(0xFF0055FF),
+                    onPressed: _togglePause,
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
   }
 
   Widget _buildAnimatedBanner() {
-    final bool showBanner = _showStartBanner || _isGameOver;
-    final String title = _isGameOver 
-        ? (_score >= _highScore && _score > 0 ? '¡Felicidades, nuevo score!' : 'Buen intento') 
-        : 'Juega, relájate y disfruta';
-    final String subtitle = _isGameOver ? 'Tu score: $_score' : '';
+    final bool showBanner = _showStartBanner;
+    final String title = 'Juega, relájate y disfruta';
 
     return AnimatedPositioned(
       duration: const Duration(milliseconds: 800),
@@ -279,8 +545,10 @@ class _GameScreenState extends State<GameScreen> {
       top: showBanner ? MediaQuery.of(context).size.height * 0.4 : -200, // Entra desde arriba o sale
       left: 0,
       right: 0,
-      child: Center(
-        child: Container(
+      child: IgnorePointer(
+        ignoring: true,
+        child: Center(
+          child: Container(
           width: double.infinity,
           margin: const EdgeInsets.symmetric(horizontal: 20),
           padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
@@ -290,7 +558,7 @@ class _GameScreenState extends State<GameScreen> {
             border: Border.all(color: Colors.white.withOpacity(0.3), width: 1.5),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.neonBlue.withOpacity(0.2),
+                color: AppTheme.neonCyan.withOpacity(0.2),
                 blurRadius: 30,
                 spreadRadius: 5,
               )
@@ -306,67 +574,183 @@ class _GameScreenState extends State<GameScreen> {
                   color: Colors.white,
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
-                  shadows: [Shadow(color: AppTheme.neonBlue, blurRadius: 10)],
+                  shadows: [Shadow(color: AppTheme.neonCyan, blurRadius: 10)],
                 ),
               ),
-              if (subtitle.isNotEmpty) ...[
-                const SizedBox(height: 10),
-                Text(
-                  subtitle,
-                  style: const TextStyle(
-                    color: AppTheme.neonPink,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600,
-                    shadows: [Shadow(color: Colors.black, blurRadius: 5)],
-                  ),
-                ),
-                const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+            ],
+          ),
+        ), // closes Container
+        ), // closes Center
+      ), // closes IgnorePointer
+    ); // closes AnimatedPositioned
+  }
+
+  Widget _buildGameOverOverlay() {
+    final bool isNewScore = (_score >= _highScore && _score > 0);
+    final String title = isNewScore ? '¡Felicidades, nuevo score!' : 'Buen intento';
+    return BackdropFilter(
+      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+      child: Container(
+        color: Colors.black.withOpacity(0.6),
+        child: Center(
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.center,
+            children: [
+              GlassContainer(
+                padding: const EdgeInsets.only(top: 100, left: 25, right: 25, bottom: 40),
+                width: 340,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    OutlinedButton(
-                      onPressed: () => Navigator.pop(context),
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        side: const BorderSide(color: Colors.white54),
-                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    Text(
+                      'GAME OVER',
+                      style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 4,
+                        shadows: [const Shadow(color: Colors.redAccent, blurRadius: 20)],
                       ),
-                      child: const Text('Salir'),
                     ),
-                    const SizedBox(width: 15),
+                    const SizedBox(height: 20),
+                    Text(
+                      title,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: AppTheme.tealGlass, fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      'Tu score: $_score',
+                      style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900),
+                    ),
+                    const SizedBox(height: 40),
                     SizedBox(
-                      width: 150,
+                      width: double.infinity,
                       child: GamingButton(
-                        text: 'REINTENTAR',
-                        height: 45,
-                        fontSize: 16,
-                        primaryColor: AppTheme.neonPurple,
-                        secondaryColor: const Color(0xFF6A0DAD),
+                        text: 'VOLVER A JUGAR',
+                        height: 55,
+                        fontSize: 18,
+                        primaryColor: AppTheme.neonCyan,
+                        secondaryColor: const Color(0xFF0055FF),
                         onPressed: () {
                           setState(() {
                             _isGameOver = false;
-                            _showStartBanner = true;
                             _score = 0;
                           });
                           _unityWidgetController.postMessage('GameManager', 'RestartGame', '');
-                          // Volver a ocultar la barra de inicio
-                          Future.delayed(const Duration(seconds: 3), () {
-                            if (mounted) {
-                              setState(() {
-                                _showStartBanner = false;
-                              });
-                            }
-                          });
                         },
                       ),
                     ),
+                    const SizedBox(height: 15),
+                    SizedBox(
+                      width: double.infinity,
+                      child: GamingButton(
+                        text: 'IR AL MENÚ PRINCIPAL',
+                        height: 55,
+                        fontSize: 18,
+                        primaryColor: Colors.redAccent,
+                        secondaryColor: Colors.red,
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                    ),
                   ],
-                )
-              ]
+                ),
+              ),
+              if (isNewScore)
+                Positioned(
+                  top: -150,
+                  child: Image.asset(
+                    'assets/avatar/glassy_lapislazully_congratulations.png',
+                    height: 250,
+                  ),
+                ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Widget _buildPowerUpButton({
+    required IconData icon,
+    required int cost,
+    required Color color,
+    required String method,
+  }) {
+    final bool canAfford = _crystals >= cost;
+    
+    return GestureDetector(
+      onTap: () {
+        if (!canAfford) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: const Text('No tienes suficientes cristales'),
+              backgroundColor: Colors.redAccent,
+              duration: const Duration(seconds: 1),
+            )
+          );
+          return;
+        }
+        
+        // Enviar método a Unity (se usa llamada directa a GameManager como en la versión anterior por compatibilidad)
+        _unityWidgetController.postMessage('GameManager', method, '');
+        // También por el bridge por si acaso
+        _bridgeController.usePowerUp(method);
+      },
+      child: AnimatedOpacity(
+        duration: const Duration(milliseconds: 300),
+        opacity: canAfford ? 1.0 : 0.4,
+        child: Container(
+          margin: const EdgeInsets.only(top: 15),
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            shape: BoxShape.circle,
+            border: Border.all(color: color.withOpacity(0.5), width: 1.5),
+            boxShadow: canAfford ? [
+              BoxShadow(
+                color: color.withOpacity(0.2),
+                blurRadius: 10,
+                spreadRadius: 1,
+              )
+            ] : null,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, color: color, size: 28),
+              const SizedBox(height: 2),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.diamond, color: AppTheme.neonCyan, size: 12),
+                  const SizedBox(width: 2),
+                  Text(
+                    '$cost',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    // Liberar recursos y cancelar suscripciones para evitar memory leaks
+    _readySub?.cancel();
+    _scoreSub?.cancel();
+    _crystalsSub?.cancel();
+    _gameOverSub?.cancel();
+    
+    _bridgeController.dispose();
+    super.dispose();
   }
 }

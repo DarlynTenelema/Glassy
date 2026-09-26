@@ -60,7 +60,6 @@ static Il2CppMethodPointer s_methodPointers[41] =
 	ProfilerMarkerExtension_Begin_mEA0E2F2019E9A1E43B86A3E71A2EA3BE40A16240,
 	NULL,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_Profiling_Core;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Profiling_Core_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Profiling_Core_CodeGenModule = 
 {
@@ -71,7 +70,7 @@ const Il2CppCodeGenModule g_Unity_Profiling_Core_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_Profiling_Core,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

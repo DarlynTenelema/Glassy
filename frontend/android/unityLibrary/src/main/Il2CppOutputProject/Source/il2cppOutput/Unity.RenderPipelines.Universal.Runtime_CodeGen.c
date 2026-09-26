@@ -6407,7 +6407,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[15] =
 	{ 0x06000A43, CameraRenderingScope_Dispose_m7E450211F8C22CDF76970E0BC4FA3832ECE0E3C5_AdjustorThunk },
 	{ 0x06000A46, ContextRenderingScope_Dispose_mB51673C299E1DAA325206945F442709AF153868D_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_RenderPipelines_Universal_Runtime;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_RenderPipelines_Universal_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_RenderPipelines_Universal_Runtime_CodeGenModule = 
 {
@@ -6418,7 +6417,7 @@ const Il2CppCodeGenModule g_Unity_RenderPipelines_Universal_Runtime_CodeGenModul
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_RenderPipelines_Universal_Runtime,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -14,7 +14,6 @@ static Il2CppMethodPointer s_methodPointers[2] =
 	Welcome2DScript_Open2DLandingPage_m6DDE3D5C86AA75D77DE5607C0E0A61E8A0E40283,
 	Welcome2DScript__ctor_m1509132DE576967C2CC30381248BC411314D2066,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_2D_Welcome;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_2D_Welcome_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_2D_Welcome_CodeGenModule = 
 {
@@ -25,7 +24,7 @@ const Il2CppCodeGenModule g_Unity_2D_Welcome_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_2D_Welcome,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -181,7 +181,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[7] =
 	{ 0x06000010, BigInteger_ToString_m6AFB0DE9CD953DA8B015C31B3CC1FEF86D98A306_AdjustorThunk },
 	{ 0x06000011, BigInteger_ToString_mF67077A813661D27640565FC41346D65A155B3F6_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationSystem_Numerics;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Numerics_CodeGenModule;
 const Il2CppCodeGenModule g_System_Numerics_CodeGenModule = 
 {
@@ -192,7 +191,7 @@ const Il2CppCodeGenModule g_System_Numerics_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationSystem_Numerics,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

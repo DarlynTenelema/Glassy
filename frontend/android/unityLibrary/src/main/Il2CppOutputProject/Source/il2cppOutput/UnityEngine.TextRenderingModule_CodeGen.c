@@ -142,7 +142,6 @@ static Il2CppMethodPointer s_methodPointers[66] =
 	FontTextureRebuildCallback__ctor_m1AF27FC83F3136E493F47015F99CE7A4E6BCA0BC,
 	FontTextureRebuildCallback_Invoke_m8B52C3F4823ADBB80062209E6BA2B33202AE958D,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_TextRenderingModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TextRenderingModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_TextRenderingModule_CodeGenModule = 
 {
@@ -153,7 +152,7 @@ const Il2CppCodeGenModule g_UnityEngine_TextRenderingModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_TextRenderingModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

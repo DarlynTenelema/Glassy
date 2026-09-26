@@ -1075,7 +1075,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[28] =
 	{ 0x0600015B, ConversionRegistry_Equals_mCC1BABC39BA8F850B4270C4CA08300166AC740CB_AdjustorThunk },
 	{ 0x0600015C, ConversionRegistry_GetHashCode_m30B58D082F5AD1F61A2D38622E8CF79DC3F50715_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_PropertiesModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_PropertiesModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_PropertiesModule_CodeGenModule = 
 {
@@ -1086,7 +1085,7 @@ const Il2CppCodeGenModule g_UnityEngine_PropertiesModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_PropertiesModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

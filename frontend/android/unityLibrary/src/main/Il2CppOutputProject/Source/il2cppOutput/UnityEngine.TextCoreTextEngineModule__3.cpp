@@ -8,13 +8,13 @@
 struct Dictionary_2_t232323BDF7857D243A4CCA18ADCF59272D0E4C23;
 struct Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090;
 struct Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371;
+struct Dictionary_2_t36B17C1CDA9BE4EE8C94D25A0DC9A7F4C75D51D7;
 struct Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64;
+struct Dictionary_2_tBBB6C8F03D5B877E19D2AD548C08B6B43B213149;
 struct Dictionary_2_t93CDF0F4011A5A3024EB73A492F9512E3046EACB;
 struct Dictionary_2_tC61348D10610A6B3D7B65102D82AC3467D59EAA7;
-struct Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E;
 struct HashSet_1_t079A33BC313C233180D2B4A99D6B9DDC5AE4EBCB;
 struct HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A;
-struct HashSet_1_t2E820DA94CC6D5A61CA29EBD9BE297C43D691C87;
 struct IEqualityComparer_1_t0FD77626ECC867C51E80375D213A11E13F49043A;
 struct IEqualityComparer_1_tDBFC8496F14612776AF930DBF84AFE7D06D1F0E9;
 struct IEqualityComparer_1_tDBA96AAC21C7C21D26B68A9F19E6AE4E015D2316;
@@ -30,7 +30,6 @@ struct List_1_t95DB74B8EE315F8F92B7B96D93C901C8C3F6FE2C;
 struct List_1_t425D3A455811E316D2DF73E46CF9CD90A4341C1B;
 struct List_1_t0F231C3F13EBA1FF9081BD61489D01AA3CBE59D4;
 struct List_1_t9B68833848E4C4D7F623C05F6B77F0449396354A;
-struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A;
 struct ValueCollection_t5390AA0A336DFE6BC4AED8BB2868F9D6869D211B;
 struct ValueCollection_tEB68379FF7A873630AB0FF97202E56B0903A3576;
 struct ValueCollection_t80CB8AAD84C079093D55DECAEEE8F62DDE374AAC;
@@ -59,7 +58,6 @@ struct Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4;
 struct UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_TextCoreTextEngineModule[];
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090_il2cpp_TypeInfo_var;
@@ -160,38 +158,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m481FB0DF0DE211423EFEBB4
 IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_mB75531372F29AE829CA92776746CE59F12A49046_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Item_mA65742FDD6C8622F43DA9E5D05CE2EA1C4CB5C98_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_m7ACB67C25D0FD50ABEC2277BFDBDED5D4E5DF8DC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FontAssetRef__ctor_m5553FC4D7E51DE97D70CE09E1C99B002A61FFDB5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FontStyleStack_Add_m26E701C9F052EEEBB213B9B8BC6CB8F1F8F6AFCB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FontStyleStack_Clear_m989659363648B27540168E46F23E1EF9877C06E0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* FontStyleStack_Remove_mC2B4F44A6596E92D6992DBCA298648F8A7416CAB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Add_mDA8E52933A6A885D9FCF549C99489EF5E095BE1E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mFC30951412A765E79E1973F8DCB19A34E0E743EF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Resources_Load_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m55E770DF81AB6D40763121667DA5E743EF1036B2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextResourceManager_AddFontAsset_mAAD97609F00F02146B283982E5DE667EB7A692EA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextResourceManager__cctor_m54E40FCFB355A0C90B56366B057F307F75832868_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextShaderUtilities_GetShaderPropertyIDs_mBA841B8CACE147593703FF6E7E2804FF2017DE52_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextShaderUtilities__cctor_m5E3AAC923C6500CFCB7F775610B085AD43CDE4EE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextShaderUtilities_get_ShaderRef_MobileBitmap_m54CAA31B3B374C0517BF356C80B34F169C89F649_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextShaderUtilities_get_ShaderRef_MobileSDF_m9014F695545914ADF74FFD8A461B1DD2590A163B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextShaderUtilities_get_ShaderRef_Sprite_mEB8685333A53464F71519FA69438381EABEFAA02_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextUtilities_GetHashCodeCaseInSensitive_m3241BDD3A6F82A061C21BF5D347B690D732F5B59_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextUtilities_GetTextFontWeightIndex_m758569A41B59CA4E6A6EE3E73299B41C25FC4E67_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TextUtilities_ToUpperFast_m7E98D5D17030A387012E262648346523DCC3AA0B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnicodeLineBreakingRules_GetCharacters_m93663235F54D32D801E67994714B79759D2F4137_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnicodeLineBreakingRules_LoadLineBreakingRules_m4686111E39B00E27AA6AD88762793EEFCCC14A75_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnicodeLineBreakingRules__ctor_mD94779B4996B56EA84C847EC4DD287AB1A8ADE85_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnicodeLineBreakingRules_get_followingCharactersLookup_m5510A21873DC5DA66F4A2DFA4C26A5EFAD494D8B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnicodeLineBreakingRules_get_leadingCharactersLookup_m1DAC015D7E37112EAE0437E6472AEA0719DFF3DC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnicodeLineBreakingRules_get_useModernHangulLineBreakingRules_mD86D283CE7BA23A0174B9227A7BD915D3D9FD464_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* FontStyleStack_t63C77495F068E6DF762D6AF063A817E3709659A7_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* String_t_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E_0_0_0_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -831,80 +802,67 @@ struct FontAsset_t61A6446D934E582651044E33D250EA8D306AB958_StaticFields
 #endif
 
 
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, Il2CppFullySharedGenericAny ___1_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_Remove_m583C4F0E2926B584BE6EC6008195360FC631C14C_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m4C6841170DD11AED683D2D71919F362A4CFF4A80_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, Il2CppFullySharedGenericAny ___1_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_fshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_fshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___0_capacity, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mEB0C4168B447A3BDFCAB7885077E4202EEB3B0B2 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_mC8F79C526E4358DD840D85CB26C87DF16E570D42 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_m4A4E98C56B428A238653A5D58BD1E9AA00496B6C_gshared (Dictionary_2_t36B17C1CDA9BE4EE8C94D25A0DC9A7F4C75D51D7* __this, int32_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_mB53657B4F779ED11B472769A9ABB51A093A4FF4B_gshared (Dictionary_2_t36B17C1CDA9BE4EE8C94D25A0DC9A7F4C75D51D7* __this, int32_t ___0_key, Il2CppSharedGenericObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_m47314CD7BA95CFA7915CA949FFA08EF5435BDDE4_gshared (Dictionary_2_tBBB6C8F03D5B877E19D2AD548C08B6B43B213149* __this, int64_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_mBE383739B00FFFDBA36E13B0272C498815AF4CAB_gshared (Dictionary_2_tBBB6C8F03D5B877E19D2AD548C08B6B43B213149* __this, int64_t ___0_key, Il2CppSharedGenericObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 Dictionary_2_get_Item_mA65742FDD6C8622F43DA9E5D05CE2EA1C4CB5C98 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_Remove_m07FA12992B3DAD86BD9CD3797525EBC22BE69E15_gshared (Dictionary_2_t36B17C1CDA9BE4EE8C94D25A0DC9A7F4C75D51D7* __this, int32_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_Remove_m83B86ECB507DB27A8E442CCFF7F9DBD55194A803_gshared (Dictionary_2_tBBB6C8F03D5B877E19D2AD548C08B6B43B213149* __this, int64_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m7ACB67C25D0FD50ABEC2277BFDBDED5D4E5DF8DC (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m2D97101BFF799B14DB447ABF1A7A0438AF077815 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m543A280CD3F7D7BB017BDEE2AAB95327542DD8A2_gshared (Dictionary_2_t36B17C1CDA9BE4EE8C94D25A0DC9A7F4C75D51D7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m85E94E3E758749C3EAB3D620B0FDA86467F5382C_gshared (Dictionary_2_tBBB6C8F03D5B877E19D2AD548C08B6B43B213149* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mFC30951412A765E79E1973F8DCB19A34E0E743EF (List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27* __this, int32_t ___0_capacity, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppSharedGenericObject* Resources_Load_TisIl2CppSharedGenericObject_m15A7702F800FD0DA993507C33D68862214337C37_gshared (String_t* ___0_path, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSet_1__ctor_m5E12B490550D90B0686D55F8F4E7B0506BD07120_fshared (HashSet_1_t2E820DA94CC6D5A61CA29EBD9BE297C43D691C87* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSet_1_Add_m73E14DB94D21272EEE1E28E4D74704B0095D8064_fshared (HashSet_1_t2E820DA94CC6D5A61CA29EBD9BE297C43D691C87* __this, Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSet_1_Add_mDA8E52933A6A885D9FCF549C99489EF5E095BE1E (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* __this, uint32_t ___0_item, const RuntimeMethod* method) ;
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 TextAsset_get_entityId_mFF74E05027FC9BCC446050BCF5B1CF7B12FBADFA (TextAsset_tB28F1843A877CCA74B89DC4F63EA532618B049B8* __this, const RuntimeMethod* method) ;
-inline bool Dictionary_2_ContainsKey_mEB0C4168B447A3BDFCAB7885077E4202EEB3B0B2 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, const RuntimeMethod* method)
-{
-	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, method);
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mEB0C4168B447A3BDFCAB7885077E4202EEB3B0B2 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextAsset_get_hashCode_m4D519E837097D8869A8D38EBD11611FADE411092 (TextAsset_tB28F1843A877CCA74B89DC4F63EA532618B049B8* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FontAsset_get_familyNameHashCode_mF2DB211A5712A291B2D28FCDB7F7C29057770330 (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FontAsset_get_styleNameHashCode_m3CD3D77F64DAEB31D8F69E4D7CC1AD0AC784ABF5 (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontAssetRef__ctor_m5553FC4D7E51DE97D70CE09E1C99B002A61FFDB5 (FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3* __this, int32_t ___0_nameHashCode, int32_t ___1_familyNameHashCode, int32_t ___2_styleNameHashCode, FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___3_fontAsset, const RuntimeMethod* method) ;
-inline void Dictionary_2_Add_mC8F79C526E4358DD840D85CB26C87DF16E570D42 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 ___1_value, const RuntimeMethod* method)
-{
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, (Il2CppFullySharedGenericAny)&___1_value, method);
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_mC8F79C526E4358DD840D85CB26C87DF16E570D42 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 ___1_value, const RuntimeMethod* method) ;
 inline bool Dictionary_2_ContainsKey_mBB052D17FFC16619945B738E7DA53361CF68D62E (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* __this, int32_t ___0_key, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, method);
+	return ((  bool (*) (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371*, int32_t, const RuntimeMethod*))Dictionary_2_ContainsKey_m4A4E98C56B428A238653A5D58BD1E9AA00496B6C_gshared)(__this, ___0_key, method);
 }
 inline void Dictionary_2_Add_m1C12BA8782E955B7B07ABBA760D4BEB22B149B7D (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* __this, int32_t ___0_key, FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___1_value, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, (Il2CppFullySharedGenericAny)___1_value, method);
+	((  void (*) (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371*, int32_t, FontAsset_t61A6446D934E582651044E33D250EA8D306AB958*, const RuntimeMethod*))Dictionary_2_Add_mB53657B4F779ED11B472769A9ABB51A093A4FF4B_gshared)(__this, ___0_key, ___1_value, method);
 }
 inline bool Dictionary_2_ContainsKey_mBBD5E0C1BC13D6DEEF25EBB70C028BCDFE6C8206 (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* __this, int64_t ___0_key, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_ContainsKey_mA268E9B914DCE838DD0CD9D879BAAEECD0C677AA_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, method);
+	return ((  bool (*) (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64*, int64_t, const RuntimeMethod*))Dictionary_2_ContainsKey_m47314CD7BA95CFA7915CA949FFA08EF5435BDDE4_gshared)(__this, ___0_key, method);
 }
 inline void Dictionary_2_Add_m5674CDF413077DC3A5E2AFA0C35372BF60B98E4B (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* __this, int64_t ___0_key, FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___1_value, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, (Il2CppFullySharedGenericAny)___1_value, method);
+	((  void (*) (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64*, int64_t, FontAsset_t61A6446D934E582651044E33D250EA8D306AB958*, const RuntimeMethod*))Dictionary_2_Add_mBE383739B00FFFDBA36E13B0272C498815AF4CAB_gshared)(__this, ___0_key, ___1_value, method);
 }
-inline FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 Dictionary_2_get_Item_mA65742FDD6C8622F43DA9E5D05CE2EA1C4CB5C98 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, const RuntimeMethod* method)
-{
-	FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 il2cppRetVal;
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Dictionary_2_get_Item_m2E96908E9716367701CD737FA54C884EB2A8C3EA_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
-	return il2cppRetVal;
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 Dictionary_2_get_Item_mA65742FDD6C8622F43DA9E5D05CE2EA1C4CB5C98 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, const RuntimeMethod* method) ;
 inline bool Dictionary_2_Remove_m0C1D60253C3096717E0931FA69BB030161AE6EFA (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* __this, int32_t ___0_key, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Remove_m583C4F0E2926B584BE6EC6008195360FC631C14C_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, method);
+	return ((  bool (*) (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371*, int32_t, const RuntimeMethod*))Dictionary_2_Remove_m07FA12992B3DAD86BD9CD3797525EBC22BE69E15_gshared)(__this, ___0_key, method);
 }
 inline bool Dictionary_2_Remove_m1FC332DDE7867BE1959EBCD001BAB61C882733F4 (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* __this, int64_t ___0_key, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_Remove_m583C4F0E2926B584BE6EC6008195360FC631C14C_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, method);
+	return ((  bool (*) (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64*, int64_t, const RuntimeMethod*))Dictionary_2_Remove_m83B86ECB507DB27A8E442CCFF7F9DBD55194A803_gshared)(__this, ___0_key, method);
 }
-inline void Dictionary_2_set_Item_m7ACB67C25D0FD50ABEC2277BFDBDED5D4E5DF8DC (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 ___1_value, const RuntimeMethod* method)
-{
-	((  void (*) (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, const RuntimeMethod*))Dictionary_2_set_Item_m4C6841170DD11AED683D2D71919F362A4CFF4A80_fshared)((Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E*)__this, (Il2CppFullySharedGenericAny)&___0_key, (Il2CppFullySharedGenericAny)&___1_value, method);
-}
-inline void Dictionary_2__ctor_m2D97101BFF799B14DB447ABF1A7A0438AF077815 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, const RuntimeMethod* method)
-{
-	((  void (*) (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_fshared)(__this, method);
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m7ACB67C25D0FD50ABEC2277BFDBDED5D4E5DF8DC (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_key, FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m2D97101BFF799B14DB447ABF1A7A0438AF077815 (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* __this, const RuntimeMethod* method) ;
 inline void Dictionary_2__ctor_m481FB0DF0DE211423EFEBB4ACD5C599E7A771140 (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_fshared)(__this, method);
+	((  void (*) (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371*, const RuntimeMethod*))Dictionary_2__ctor_m543A280CD3F7D7BB017BDEE2AAB95327542DD8A2_gshared)(__this, method);
 }
 inline void Dictionary_2__ctor_mB75531372F29AE829CA92776746CE59F12A49046 (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64*, const RuntimeMethod*))Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_fshared)(__this, method);
+	((  void (*) (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64*, const RuntimeMethod*))Dictionary_2__ctor_m85E94E3E758749C3EAB3D620B0FDA86467F5382C_gshared)(__this, method);
 }
-inline void List_1__ctor_mFC30951412A765E79E1973F8DCB19A34E0E743EF (List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27* __this, int32_t ___0_capacity, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27*, int32_t, const RuntimeMethod*))List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_fshared)(__this, ___0_capacity, method);
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mFC30951412A765E79E1973F8DCB19A34E0E743EF (List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27* __this, int32_t ___0_capacity, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextUtilities_GetHashCodeCaseInSensitive_m3241BDD3A6F82A061C21BF5D347B690D732F5B59 (String_t* ___0_s, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5 (String_t* ___0_name, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
@@ -919,16 +877,10 @@ inline TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* Resources_Load_TisTe
 	return ((  TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* (*) (String_t*, const RuntimeMethod*))Resources_Load_TisIl2CppSharedGenericObject_m15A7702F800FD0DA993507C33D68862214337C37_gshared)(___0_path, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
-inline void HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* __this, const RuntimeMethod* method)
-{
-	((  void (*) (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A*, const RuntimeMethod*))HashSet_1__ctor_m5E12B490550D90B0686D55F8F4E7B0506BD07120_fshared)(__this, method);
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* UnicodeLineBreakingRules_GetCharacters_m93663235F54D32D801E67994714B79759D2F4137 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* ___0_file, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TextAsset_get_text_m36846042E3CF3D9DD337BF3F8B2B1902D10C8FD9 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* __this, const RuntimeMethod* method) ;
-inline bool HashSet_1_Add_mDA8E52933A6A885D9FCF549C99489EF5E095BE1E (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* __this, uint32_t ___0_item, const RuntimeMethod* method)
-{
-	return ((  bool (*) (HashSet_1_t2E820DA94CC6D5A61CA29EBD9BE297C43D691C87*, Il2CppFullySharedGenericAny, const RuntimeMethod*))HashSet_1_Add_m73E14DB94D21272EEE1E28E4D74704B0095D8064_fshared)((HashSet_1_t2E820DA94CC6D5A61CA29EBD9BE297C43D691C87*)__this, (Il2CppFullySharedGenericAny)&___0_item, method);
-}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSet_1_Add_mDA8E52933A6A885D9FCF549C99489EF5E095BE1E (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* __this, uint32_t ___0_item, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -967,71 +919,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64473
+// Method Definition Index: 59855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontStyleStack_Clear_m989659363648B27540168E46F23E1EF9877C06E0 (FontStyleStack_t63C77495F068E6DF762D6AF063A817E3709659A7* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontStyleStack_Clear_m989659363648B27540168E46F23E1EF9877C06E0_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FontStyleStack_Clear_m989659363648B27540168E46F23E1EF9877C06E0_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16570));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16571));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:27>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16572));
 		__this->___bold = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:28>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16573));
 		__this->___italic = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:29>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16574));
 		__this->___underline = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:30>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16575));
 		__this->___strikethrough = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:31>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16576));
 		__this->___highlight = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:32>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16577));
 		__this->___superscript = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:33>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16578));
 		__this->___subscript = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:34>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16579));
 		__this->___uppercase = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:35>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16580));
 		__this->___lowercase = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:36>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16581));
 		__this->___smallcaps = (uint8_t)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:37>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16582));
 		return;
 	}
 }
-// Method Definition Index: 64474
+// Method Definition Index: 59856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t FontStyleStack_Add_m26E701C9F052EEEBB213B9B8BC6CB8F1F8F6AFCB (FontStyleStack_t63C77495F068E6DF762D6AF063A817E3709659A7* __this, int32_t ___0_style, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontStyleStack_Add_m26E701C9F052EEEBB213B9B8BC6CB8F1F8F6AFCB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_style));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FontStyleStack_Add_m26E701C9F052EEEBB213B9B8BC6CB8F1F8F6AFCB_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16583));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16584));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16585));
 		int32_t L_0 = ___0_style;
 		if ((((int32_t)L_0) > ((int32_t)((int32_t)16))))
 		{
@@ -1125,144 +1035,95 @@ IL_0051:
 
 IL_006c:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:44>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16586));
 		uint8_t L_9 = __this->___bold;
 		uint8_t L_10 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_9, 1)),NULL));
 		__this->___bold = L_10;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:45>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16587));
 		uint8_t L_11 = __this->___bold;
 		return L_11;
 	}
 
 IL_0082:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:47>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16588));
 		uint8_t L_12 = __this->___italic;
 		uint8_t L_13 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_12, 1)),NULL));
 		__this->___italic = L_13;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:48>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16589));
 		uint8_t L_14 = __this->___italic;
 		return L_14;
 	}
 
 IL_0098:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:50>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16590));
 		uint8_t L_15 = __this->___underline;
 		uint8_t L_16 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_15, 1)),NULL));
 		__this->___underline = L_16;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:51>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16591));
 		uint8_t L_17 = __this->___underline;
 		return L_17;
 	}
 
 IL_00ae:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:53>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16592));
 		uint8_t L_18 = __this->___uppercase;
 		uint8_t L_19 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_18, 1)),NULL));
 		__this->___uppercase = L_19;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:54>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16593));
 		uint8_t L_20 = __this->___uppercase;
 		return L_20;
 	}
 
 IL_00c4:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:56>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16594));
 		uint8_t L_21 = __this->___lowercase;
 		uint8_t L_22 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_21, 1)),NULL));
 		__this->___lowercase = L_22;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:57>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16595));
 		uint8_t L_23 = __this->___lowercase;
 		return L_23;
 	}
 
 IL_00da:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:59>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16596));
 		uint8_t L_24 = __this->___strikethrough;
 		uint8_t L_25 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_24, 1)),NULL));
 		__this->___strikethrough = L_25;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:60>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16597));
 		uint8_t L_26 = __this->___strikethrough;
 		return L_26;
 	}
 
 IL_00f0:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:62>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16598));
 		uint8_t L_27 = __this->___superscript;
 		uint8_t L_28 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_27, 1)),NULL));
 		__this->___superscript = L_28;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:63>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16599));
 		uint8_t L_29 = __this->___superscript;
 		return L_29;
 	}
 
 IL_0106:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:65>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16600));
 		uint8_t L_30 = __this->___subscript;
 		uint8_t L_31 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_30, 1)),NULL));
 		__this->___subscript = L_31;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:66>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16601));
 		uint8_t L_32 = __this->___subscript;
 		return L_32;
 	}
 
 IL_011c:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:68>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16602));
 		uint8_t L_33 = __this->___highlight;
 		uint8_t L_34 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_add((int32_t)L_33, 1)),NULL));
 		__this->___highlight = L_34;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:69>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16603));
 		uint8_t L_35 = __this->___highlight;
 		return L_35;
 	}
 
 IL_0132:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:72>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16604));
 		return (uint8_t)0;
 	}
 }
-// Method Definition Index: 64475
+// Method Definition Index: 59857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t FontStyleStack_Remove_mC2B4F44A6596E92D6992DBCA298648F8A7416CAB (FontStyleStack_t63C77495F068E6DF762D6AF063A817E3709659A7* __this, int32_t ___0_style, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontStyleStack_Remove_mC2B4F44A6596E92D6992DBCA298648F8A7416CAB_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_style));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FontStyleStack_Remove_mC2B4F44A6596E92D6992DBCA298648F8A7416CAB_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16605));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16606));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16607));
 		int32_t L_0 = ___0_style;
 		if ((((int32_t)L_0) > ((int32_t)((int32_t)16))))
 		{
@@ -1356,8 +1217,6 @@ IL_0051:
 
 IL_006c:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:80>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16608));
 		uint8_t L_9 = __this->___bold;
 		if ((((int32_t)L_9) <= ((int32_t)1)))
 		{
@@ -1365,34 +1224,25 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:81>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16609));
 		uint8_t L_10 = __this->___bold;
 		uint8_t L_11 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_10, 1)),NULL));
 		__this->___bold = L_11;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16610));
 		goto IL_008d;
 	}
 
 IL_0086:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:83>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16611));
 		__this->___bold = (uint8_t)0;
 	}
 
 IL_008d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:84>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16612));
 		uint8_t L_12 = __this->___bold;
 		return L_12;
 	}
 
 IL_0094:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:86>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16613));
 		uint8_t L_13 = __this->___italic;
 		if ((((int32_t)L_13) <= ((int32_t)1)))
 		{
@@ -1400,34 +1250,25 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:87>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16614));
 		uint8_t L_14 = __this->___italic;
 		uint8_t L_15 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_14, 1)),NULL));
 		__this->___italic = L_15;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16615));
 		goto IL_00b5;
 	}
 
 IL_00ae:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:89>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16616));
 		__this->___italic = (uint8_t)0;
 	}
 
 IL_00b5:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:90>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16617));
 		uint8_t L_16 = __this->___italic;
 		return L_16;
 	}
 
 IL_00bc:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:92>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16618));
 		uint8_t L_17 = __this->___underline;
 		if ((((int32_t)L_17) <= ((int32_t)1)))
 		{
@@ -1435,34 +1276,25 @@ IL_00bc:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:93>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16619));
 		uint8_t L_18 = __this->___underline;
 		uint8_t L_19 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_18, 1)),NULL));
 		__this->___underline = L_19;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16620));
 		goto IL_00dd;
 	}
 
 IL_00d6:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:95>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16621));
 		__this->___underline = (uint8_t)0;
 	}
 
 IL_00dd:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:96>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16622));
 		uint8_t L_20 = __this->___underline;
 		return L_20;
 	}
 
 IL_00e4:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:98>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16623));
 		uint8_t L_21 = __this->___uppercase;
 		if ((((int32_t)L_21) <= ((int32_t)1)))
 		{
@@ -1470,34 +1302,25 @@ IL_00e4:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:99>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16624));
 		uint8_t L_22 = __this->___uppercase;
 		uint8_t L_23 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_22, 1)),NULL));
 		__this->___uppercase = L_23;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16625));
 		goto IL_0105;
 	}
 
 IL_00fe:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:101>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16626));
 		__this->___uppercase = (uint8_t)0;
 	}
 
 IL_0105:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:102>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16627));
 		uint8_t L_24 = __this->___uppercase;
 		return L_24;
 	}
 
 IL_010c:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:104>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16628));
 		uint8_t L_25 = __this->___lowercase;
 		if ((((int32_t)L_25) <= ((int32_t)1)))
 		{
@@ -1505,34 +1328,25 @@ IL_010c:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:105>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16629));
 		uint8_t L_26 = __this->___lowercase;
 		uint8_t L_27 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_26, 1)),NULL));
 		__this->___lowercase = L_27;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16630));
 		goto IL_012d;
 	}
 
 IL_0126:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:107>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16631));
 		__this->___lowercase = (uint8_t)0;
 	}
 
 IL_012d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:108>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16632));
 		uint8_t L_28 = __this->___lowercase;
 		return L_28;
 	}
 
 IL_0134:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:110>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16633));
 		uint8_t L_29 = __this->___strikethrough;
 		if ((((int32_t)L_29) <= ((int32_t)1)))
 		{
@@ -1540,34 +1354,25 @@ IL_0134:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:111>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16634));
 		uint8_t L_30 = __this->___strikethrough;
 		uint8_t L_31 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_30, 1)),NULL));
 		__this->___strikethrough = L_31;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16635));
 		goto IL_0155;
 	}
 
 IL_014e:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:113>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16636));
 		__this->___strikethrough = (uint8_t)0;
 	}
 
 IL_0155:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:114>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16637));
 		uint8_t L_32 = __this->___strikethrough;
 		return L_32;
 	}
 
 IL_015c:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:116>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16638));
 		uint8_t L_33 = __this->___highlight;
 		if ((((int32_t)L_33) <= ((int32_t)1)))
 		{
@@ -1575,34 +1380,25 @@ IL_015c:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:117>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16639));
 		uint8_t L_34 = __this->___highlight;
 		uint8_t L_35 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_34, 1)),NULL));
 		__this->___highlight = L_35;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16640));
 		goto IL_017d;
 	}
 
 IL_0176:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:119>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16641));
 		__this->___highlight = (uint8_t)0;
 	}
 
 IL_017d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:120>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16642));
 		uint8_t L_36 = __this->___highlight;
 		return L_36;
 	}
 
 IL_0184:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:122>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16643));
 		uint8_t L_37 = __this->___superscript;
 		if ((((int32_t)L_37) <= ((int32_t)1)))
 		{
@@ -1610,34 +1406,25 @@ IL_0184:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:123>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16644));
 		uint8_t L_38 = __this->___superscript;
 		uint8_t L_39 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_38, 1)),NULL));
 		__this->___superscript = L_39;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16645));
 		goto IL_01a5;
 	}
 
 IL_019e:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:125>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16646));
 		__this->___superscript = (uint8_t)0;
 	}
 
 IL_01a5:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:126>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16647));
 		uint8_t L_40 = __this->___superscript;
 		return L_40;
 	}
 
 IL_01ac:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:128>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16648));
 		uint8_t L_41 = __this->___subscript;
 		if ((((int32_t)L_41) <= ((int32_t)1)))
 		{
@@ -1645,34 +1432,25 @@ IL_01ac:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:129>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16649));
 		uint8_t L_42 = __this->___subscript;
 		uint8_t L_43 = (il2cpp_codegen_conv<uint8_t,int32_t,int32_t,false,false>(((int32_t)il2cpp_codegen_subtract((int32_t)L_42, 1)),NULL));
 		__this->___subscript = L_43;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16650));
 		goto IL_01cd;
 	}
 
 IL_01c6:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:131>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16651));
 		__this->___subscript = (uint8_t)0;
 	}
 
 IL_01cd:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:132>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16652));
 		uint8_t L_44 = __this->___subscript;
 		return L_44;
 	}
 
 IL_01d4:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextProcessingStacks.cs:135>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16653));
 		return (uint8_t)0;
 	}
 }
@@ -1684,7 +1462,7 @@ IL_01d4:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64490
+// Method Definition Index: 59872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextResourceManager_AddFontAsset_mAAD97609F00F02146B283982E5DE667EB7A692EA (FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___0_fontAsset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1700,168 +1478,116 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextResourceManager_AddFontAsset_mAAD976
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Remove_m1FC332DDE7867BE1959EBCD001BAB61C882733F4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Item_mA65742FDD6C8622F43DA9E5D05CE2EA1C4CB5C98_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m7ACB67C25D0FD50ABEC2277BFDBDED5D4E5DF8DC_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextResourceManager_AddFontAsset_mAAD97609F00F02146B283982E5DE667EB7A692EA_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit);
+	//<source_info:<no-source>:1>
 	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fontAsset));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextResourceManager_AddFontAsset_mAAD97609F00F02146B283982E5DE667EB7A692EA_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16767));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16768));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:72>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16769));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_0 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16770));
 		NullCheck(L_0);
 		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_1;
 		L_1 = TextAsset_get_entityId_mFF74E05027FC9BCC446050BCF5B1CF7B12FBADFA(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16770));
 		V_0 = L_1;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:74>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16771));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* L_2 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetReferences;
 		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_3 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16772));
 		NullCheck(L_2);
 		bool L_4;
 		L_4 = Dictionary_2_ContainsKey_mEB0C4168B447A3BDFCAB7885077E4202EEB3B0B2(L_2, L_3, Dictionary_2_ContainsKey_mEB0C4168B447A3BDFCAB7885077E4202EEB3B0B2_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16772));
 		if (L_4)
 		{
 			goto IL_0084;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:76>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16773));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_5 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16774));
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = TextAsset_get_hashCode_m4D519E837097D8869A8D38EBD11611FADE411092(L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16774));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_7 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16775));
 		NullCheck(L_7);
 		int32_t L_8;
 		L_8 = FontAsset_get_familyNameHashCode_mF2DB211A5712A291B2D28FCDB7F7C29057770330(L_7, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16775));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_9 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16776));
 		NullCheck(L_9);
 		int32_t L_10;
 		L_10 = FontAsset_get_styleNameHashCode_m3CD3D77F64DAEB31D8F69E4D7CC1AD0AC784ABF5(L_9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16776));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_11 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16777));
 		FontAssetRef__ctor_m5553FC4D7E51DE97D70CE09E1C99B002A61FFDB5((&V_1), L_6, L_8, L_10, L_11, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16777));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:77>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16778));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* L_12 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetReferences;
 		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_13 = V_0;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_14 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16779));
 		NullCheck(L_12);
 		Dictionary_2_Add_mC8F79C526E4358DD840D85CB26C87DF16E570D42(L_12, L_13, L_14, Dictionary_2_Add_mC8F79C526E4358DD840D85CB26C87DF16E570D42_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16779));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:80>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16780));
 		Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* L_15 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetNameReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_16 = V_1;
 		int32_t L_17 = L_16.___nameHashCode;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16781));
 		NullCheck(L_15);
 		bool L_18;
 		L_18 = Dictionary_2_ContainsKey_mBB052D17FFC16619945B738E7DA53361CF68D62E(L_15, L_17, Dictionary_2_ContainsKey_mBB052D17FFC16619945B738E7DA53361CF68D62E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16781));
 		if (L_18)
 		{
 			goto IL_005d;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:81>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16782));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* L_19 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetNameReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_20 = V_1;
 		int32_t L_21 = L_20.___nameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_22 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16783));
 		NullCheck(L_19);
 		Dictionary_2_Add_m1C12BA8782E955B7B07ABBA760D4BEB22B149B7D(L_19, L_21, L_22, Dictionary_2_Add_m1C12BA8782E955B7B07ABBA760D4BEB22B149B7D_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16783));
 	}
 
 IL_005d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:84>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16784));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* L_23 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetFamilyNameAndStyleReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_24 = V_1;
 		int64_t L_25 = L_24.___familyNameAndStyleHashCode;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16785));
 		NullCheck(L_23);
 		bool L_26;
 		L_26 = Dictionary_2_ContainsKey_mBBD5E0C1BC13D6DEEF25EBB70C028BCDFE6C8206(L_23, L_25, Dictionary_2_ContainsKey_mBBD5E0C1BC13D6DEEF25EBB70C028BCDFE6C8206_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16785));
 		if (L_26)
 		{
 			goto IL_0199;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:85>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16786));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* L_27 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetFamilyNameAndStyleReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_28 = V_1;
 		int64_t L_29 = L_28.___familyNameAndStyleHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_30 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16787));
 		NullCheck(L_27);
 		Dictionary_2_Add_m5674CDF413077DC3A5E2AFA0C35372BF60B98E4B(L_27, L_29, L_30, Dictionary_2_Add_m5674CDF413077DC3A5E2AFA0C35372BF60B98E4B_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16787));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16788));
 		return;
 	}
 
 IL_0084:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:89>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16789));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* L_31 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetReferences;
 		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_32 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16790));
 		NullCheck(L_31);
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_33;
 		L_33 = Dictionary_2_get_Item_mA65742FDD6C8622F43DA9E5D05CE2EA1C4CB5C98(L_31, L_32, Dictionary_2_get_Item_mA65742FDD6C8622F43DA9E5D05CE2EA1C4CB5C98_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16790));
 		V_2 = L_33;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:92>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16791));
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_34 = V_2;
 		int32_t L_35 = L_34.___nameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_36 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16792));
 		NullCheck(L_36);
 		int32_t L_37;
 		L_37 = TextAsset_get_hashCode_m4D519E837097D8869A8D38EBD11611FADE411092(L_36, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16792));
 		if ((!(((uint32_t)L_35) == ((uint32_t)L_37))))
 		{
 			goto IL_00bb;
@@ -1871,11 +1597,9 @@ IL_0084:
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_38 = V_2;
 		int32_t L_39 = L_38.___familyNameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_40 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16793));
 		NullCheck(L_40);
 		int32_t L_41;
 		L_41 = FontAsset_get_familyNameHashCode_mF2DB211A5712A291B2D28FCDB7F7C29057770330(L_40, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16793));
 		if ((!(((uint32_t)L_39) == ((uint32_t)L_41))))
 		{
 			goto IL_00bb;
@@ -1885,101 +1609,73 @@ IL_0084:
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_42 = V_2;
 		int32_t L_43 = L_42.___styleNameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_44 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16794));
 		NullCheck(L_44);
 		int32_t L_45;
 		L_45 = FontAsset_get_styleNameHashCode_m3CD3D77F64DAEB31D8F69E4D7CC1AD0AC784ABF5(L_44, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16794));
 		if ((!(((uint32_t)L_43) == ((uint32_t)L_45))))
 		{
 			goto IL_00bb;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:93>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16795));
 		return;
 	}
 
 IL_00bb:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:96>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16796));
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_46 = V_2;
 		int32_t L_47 = L_46.___nameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_48 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16797));
 		NullCheck(L_48);
 		int32_t L_49;
 		L_49 = TextAsset_get_hashCode_m4D519E837097D8869A8D38EBD11611FADE411092(L_48, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16797));
 		if ((((int32_t)L_47) == ((int32_t)L_49)))
 		{
 			goto IL_010a;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:98>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16798));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* L_50 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetNameReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_51 = V_2;
 		int32_t L_52 = L_51.___nameHashCode;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16799));
 		NullCheck(L_50);
 		bool L_53;
 		L_53 = Dictionary_2_Remove_m0C1D60253C3096717E0931FA69BB030161AE6EFA(L_50, L_52, Dictionary_2_Remove_m0C1D60253C3096717E0931FA69BB030161AE6EFA_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16799));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:100>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16800));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_54 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16801));
 		NullCheck(L_54);
 		int32_t L_55;
 		L_55 = TextAsset_get_hashCode_m4D519E837097D8869A8D38EBD11611FADE411092(L_54, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16801));
 		(&V_2)->___nameHashCode = L_55;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:102>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16802));
 		Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* L_56 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetNameReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_57 = V_2;
 		int32_t L_58 = L_57.___nameHashCode;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16803));
 		NullCheck(L_56);
 		bool L_59;
 		L_59 = Dictionary_2_ContainsKey_mBB052D17FFC16619945B738E7DA53361CF68D62E(L_56, L_58, Dictionary_2_ContainsKey_mBB052D17FFC16619945B738E7DA53361CF68D62E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16803));
 		if (L_59)
 		{
 			goto IL_010a;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:103>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16804));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* L_60 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetNameReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_61 = V_2;
 		int32_t L_62 = L_61.___nameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_63 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16805));
 		NullCheck(L_60);
 		Dictionary_2_Add_m1C12BA8782E955B7B07ABBA760D4BEB22B149B7D(L_60, L_62, L_63, Dictionary_2_Add_m1C12BA8782E955B7B07ABBA760D4BEB22B149B7D_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16805));
 	}
 
 IL_010a:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:107>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16806));
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_64 = V_2;
 		int32_t L_65 = L_64.___familyNameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_66 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16807));
 		NullCheck(L_66);
 		int32_t L_67;
 		L_67 = FontAsset_get_familyNameHashCode_mF2DB211A5712A291B2D28FCDB7F7C29057770330(L_66, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16807));
 		if ((!(((uint32_t)L_65) == ((uint32_t)L_67))))
 		{
 			goto IL_0126;
@@ -1989,11 +1685,9 @@ IL_010a:
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_68 = V_2;
 		int32_t L_69 = L_68.___styleNameHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_70 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16808));
 		NullCheck(L_70);
 		int32_t L_71;
 		L_71 = FontAsset_get_styleNameHashCode_m3CD3D77F64DAEB31D8F69E4D7CC1AD0AC784ABF5(L_70, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16808));
 		if ((((int32_t)L_69) == ((int32_t)L_71)))
 		{
 			goto IL_018d;
@@ -2002,103 +1696,71 @@ IL_010a:
 
 IL_0126:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:109>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16809));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* L_72 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetFamilyNameAndStyleReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_73 = V_2;
 		int64_t L_74 = L_73.___familyNameAndStyleHashCode;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16810));
 		NullCheck(L_72);
 		bool L_75;
 		L_75 = Dictionary_2_Remove_m1FC332DDE7867BE1959EBCD001BAB61C882733F4(L_72, L_74, Dictionary_2_Remove_m1FC332DDE7867BE1959EBCD001BAB61C882733F4_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16810));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:111>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16811));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_76 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16812));
 		NullCheck(L_76);
 		int32_t L_77;
 		L_77 = FontAsset_get_familyNameHashCode_mF2DB211A5712A291B2D28FCDB7F7C29057770330(L_76, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16812));
 		(&V_2)->___familyNameHashCode = L_77;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:112>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16813));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_78 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16814));
 		NullCheck(L_78);
 		int32_t L_79;
 		L_79 = FontAsset_get_styleNameHashCode_m3CD3D77F64DAEB31D8F69E4D7CC1AD0AC784ABF5(L_78, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16814));
 		(&V_2)->___styleNameHashCode = L_79;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:113>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16815));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_80 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16816));
 		NullCheck(L_80);
 		int32_t L_81;
 		L_81 = FontAsset_get_styleNameHashCode_m3CD3D77F64DAEB31D8F69E4D7CC1AD0AC784ABF5(L_80, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16816));
 		int64_t L_82 = (il2cpp_codegen_conv<int64_t,int32_t,int32_t,false,false>(L_81,NULL));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_83 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16817));
 		NullCheck(L_83);
 		int32_t L_84;
 		L_84 = FontAsset_get_familyNameHashCode_mF2DB211A5712A291B2D28FCDB7F7C29057770330(L_83, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16817));
 		uint64_t L_85 = (il2cpp_codegen_conv<uint64_t,int32_t,int32_t,false,false>(L_84,NULL));
 		(&V_2)->___familyNameAndStyleHashCode = ((int64_t)(((int64_t)(L_82<<((int32_t)32)))|(int64_t)L_85));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:115>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16818));
 		Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* L_86 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetFamilyNameAndStyleReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_87 = V_2;
 		int64_t L_88 = L_87.___familyNameAndStyleHashCode;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16819));
 		NullCheck(L_86);
 		bool L_89;
 		L_89 = Dictionary_2_ContainsKey_mBBD5E0C1BC13D6DEEF25EBB70C028BCDFE6C8206(L_86, L_88, Dictionary_2_ContainsKey_mBBD5E0C1BC13D6DEEF25EBB70C028BCDFE6C8206_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16819));
 		if (L_89)
 		{
 			goto IL_018d;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:116>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16820));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* L_90 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetFamilyNameAndStyleReferenceLookup;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_91 = V_2;
 		int64_t L_92 = L_91.___familyNameAndStyleHashCode;
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_93 = ___0_fontAsset;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16821));
 		NullCheck(L_90);
 		Dictionary_2_Add_m5674CDF413077DC3A5E2AFA0C35372BF60B98E4B(L_90, L_92, L_93, Dictionary_2_Add_m5674CDF413077DC3A5E2AFA0C35372BF60B98E4B_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16821));
 	}
 
 IL_018d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:119>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16822));
 		CHECKED_LOCAL_INIT(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticInit,(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* L_94 = ((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetReferences;
 		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_95 = V_0;
 		FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3 L_96 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16823));
 		NullCheck(L_94);
 		Dictionary_2_set_Item_m7ACB67C25D0FD50ABEC2277BFDBDED5D4E5DF8DC(L_94, L_95, L_96, Dictionary_2_set_Item_m7ACB67C25D0FD50ABEC2277BFDBDED5D4E5DF8DC_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16823));
 	}
 
 IL_0199:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:121>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16824));
 		return;
 	}
 }
-// Method Definition Index: 64491
+// Method Definition Index: 59873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextResourceManager__cctor_m54E40FCFB355A0C90B56366B057F307F75832868 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2112,53 +1774,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextResourceManager__cctor_m54E40FCFB355
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mFC30951412A765E79E1973F8DCB19A34E0E743EF_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextResourceManager__cctor_m54E40FCFB355A0C90B56366B057F307F75832868_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0E245BD8C9F8DD2B574283BF87552C3B8586E98D);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextResourceManager__cctor_m54E40FCFB355A0C90B56366B057F307F75832868_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16825));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16826));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:59>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16827));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16828));
 		Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090* L_0 = (Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090*)il2cpp_codegen_object_new(Dictionary_2_tE7C86B2C5A23A1F27C98C2B36D5E45FA457F6090_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m2D97101BFF799B14DB447ABF1A7A0438AF077815(L_0, Dictionary_2__ctor_m2D97101BFF799B14DB447ABF1A7A0438AF077815_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16828));
 		((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetReferences = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetReferences), (void*)L_0);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:60>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16829));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16830));
 		Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371* L_1 = (Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371*)il2cpp_codegen_object_new(Dictionary_2_tC20B3D6AE4370C892734F670EF4D1FB9CE91F371_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m481FB0DF0DE211423EFEBB4ACD5C599E7A771140(L_1, Dictionary_2__ctor_m481FB0DF0DE211423EFEBB4ACD5C599E7A771140_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16830));
 		((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetNameReferenceLookup = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetNameReferenceLookup), (void*)L_1);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:61>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16831));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16832));
 		Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64* L_2 = (Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64*)il2cpp_codegen_object_new(Dictionary_2_t6A8DB1A82203EE1CADD418706BFDC84FED020B64_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mB75531372F29AE829CA92776746CE59F12A49046(L_2, Dictionary_2__ctor_mB75531372F29AE829CA92776746CE59F12A49046_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16832));
 		((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetFamilyNameAndStyleReferenceLookup = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetFamilyNameAndStyleReferenceLookup), (void*)L_2);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:62>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16833));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16834));
 		List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27* L_3 = (List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27*)il2cpp_codegen_object_new(List_1_t16E76DEB7E8DD0995C23F19B6C5AAC26B24BAE27_il2cpp_TypeInfo_var);
 		List_1__ctor_mFC30951412A765E79E1973F8DCB19A34E0E743EF(L_3, ((int32_t)16), List_1__ctor_mFC30951412A765E79E1973F8DCB19A34E0E743EF_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16834));
 		((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetRemovalList = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___s_FontAssetRemovalList), (void*)L_3);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:64>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16835));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16836));
 		int32_t L_4;
 		L_4 = TextUtilities_GetHashCodeCaseInSensitive_m3241BDD3A6F82A061C21BF5D347B690D732F5B59(_stringLiteral0E245BD8C9F8DD2B574283BF87552C3B8586E98D, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16836));
 		((TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_StaticFields*)il2cpp_codegen_static_fields_for(TextResourceManager_t10194AE8FB3DE5B9938C916F107713F6BDD3CD88_il2cpp_TypeInfo_var))->___k_RegularStyleHashCode = L_4;
 		return;
 	}
@@ -2221,27 +1860,15 @@ IL2CPP_EXTERN_C void FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3_mars
 IL2CPP_EXTERN_C void FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3_marshal_com_cleanup(FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 64492
+// Method Definition Index: 59874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontAssetRef__ctor_m5553FC4D7E51DE97D70CE09E1C99B002A61FFDB5 (FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3* __this, int32_t ___0_nameHashCode, int32_t ___1_familyNameHashCode, int32_t ___2_styleNameHashCode, FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* ___3_fontAsset, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FontAssetRef__ctor_m5553FC4D7E51DE97D70CE09E1C99B002A61FFDB5_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_nameHashCode), (&___1_familyNameHashCode), (&___2_styleNameHashCode), (&___3_fontAsset));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, FontAssetRef__ctor_m5553FC4D7E51DE97D70CE09E1C99B002A61FFDB5_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16837));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16838));
+	//<source_info:<no-source>:1>
 	FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3* G_B2_0 = NULL;
 	FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3* G_B1_0 = NULL;
 	int32_t G_B3_0 = 0;
 	FontAssetRef_t7B8E634754BC5683F1E6601D7CD0061285A28FF3* G_B3_1 = NULL;
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:51>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16839));
 		int32_t L_0 = ___0_nameHashCode;
 		if (L_0)
 		{
@@ -2267,28 +1894,18 @@ IL_0007:
 IL_0008:
 	{
 		G_B3_1->___nameHashCode = G_B3_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:52>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16840));
 		int32_t L_3 = ___1_familyNameHashCode;
 		__this->___familyNameHashCode = L_3;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:53>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16841));
 		int32_t L_4 = ___2_styleNameHashCode;
 		__this->___styleNameHashCode = L_4;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:54>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16842));
 		int32_t L_5 = ___2_styleNameHashCode;
 		int64_t L_6 = (il2cpp_codegen_conv<int64_t,int32_t,int32_t,false,false>(L_5,NULL));
 		int32_t L_7 = ___1_familyNameHashCode;
 		uint64_t L_8 = (il2cpp_codegen_conv<uint64_t,int32_t,int32_t,false,false>(L_7,NULL));
 		__this->___familyNameAndStyleHashCode = ((int64_t)(((int64_t)(L_6<<((int32_t)32)))|(int64_t)L_8));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:55>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16843));
 		FontAsset_t61A6446D934E582651044E33D250EA8D306AB958* L_9 = ___3_fontAsset;
 		__this->___fontAsset = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___fontAsset), (void*)L_9);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextResourcesManager.cs:56>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16844));
 		return;
 	}
 }
@@ -2300,23 +1917,18 @@ IL_0008:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64493
+// Method Definition Index: 59875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* TextShaderUtilities_get_ShaderRef_MobileSDF_m9014F695545914ADF74FFD8A461B1DD2590A163B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_get_ShaderRef_MobileSDF_m9014F695545914ADF74FFD8A461B1DD2590A163B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit);
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextShaderUtilities_get_ShaderRef_MobileSDF_m9014F695545914ADF74FFD8A461B1DD2590A163B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16845));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16846));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:157>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16847));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_0 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileSDF;
 		if (L_0)
@@ -2325,164 +1937,123 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Shader_tADC867D36B7876EE22427FAA2CE485105F4EE
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:158>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16848));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		String_t* L_1 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_SDFText;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16849));
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_2;
 		L_2 = Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5(L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16849));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileSDF = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileSDF), (void*)L_2);
 	}
 
 IL_0016:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:160>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16850));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_3 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileSDF;
 		return L_3;
 	}
 }
-// Method Definition Index: 64494
+// Method Definition Index: 59876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* TextShaderUtilities_get_ShaderRef_MobileBitmap_m54CAA31B3B374C0517BF356C80B34F169C89F649 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_get_ShaderRef_MobileBitmap_m54CAA31B3B374C0517BF356C80B34F169C89F649_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit);
 	CHECKED_LOCAL(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit);
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextShaderUtilities_get_ShaderRef_MobileBitmap_m54CAA31B3B374C0517BF356C80B34F169C89F649_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16851));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16852));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:172>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16853));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_0 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileBitmap;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16854));
 		CHECKED_LOCAL_INIT(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit,(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16854));
 		if (!L_1)
 		{
 			goto IL_001c;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:173>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16855));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		String_t* L_2 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_BitmapText;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16856));
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_3;
 		L_3 = Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5(L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16856));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileBitmap = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileBitmap), (void*)L_3);
 	}
 
 IL_001c:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:175>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16857));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_4 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_MobileBitmap;
 		return L_4;
 	}
 }
-// Method Definition Index: 64495
+// Method Definition Index: 59877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* TextShaderUtilities_get_ShaderRef_Sprite_mEB8685333A53464F71519FA69438381EABEFAA02 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_get_ShaderRef_Sprite_mEB8685333A53464F71519FA69438381EABEFAA02_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB7D5F65E100311567E6A5AC0EF09C92AAD89A623);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit);
 	CHECKED_LOCAL(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit);
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextShaderUtilities_get_ShaderRef_Sprite_mEB8685333A53464F71519FA69438381EABEFAA02_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16858));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16859));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:185>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16860));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_0 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_Sprite;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16861));
 		CHECKED_LOCAL_INIT(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit,(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16861));
 		if (!L_1)
 		{
 			goto IL_0038;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:187>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16862));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16863));
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_2;
 		L_2 = Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5(_stringLiteralB7D5F65E100311567E6A5AC0EF09C92AAD89A623, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16863));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_Sprite = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_Sprite), (void*)L_2);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:189>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16864));
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_3 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_Sprite;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16865));
 		CHECKED_LOCAL_INIT(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit,(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_4;
 		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16865));
 		if (!L_4)
 		{
 			goto IL_0038;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:190>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16866));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		String_t* L_5 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_SpriteText;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16867));
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_6;
 		L_6 = Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5(L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16867));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_Sprite = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_Sprite), (void*)L_6);
 	}
 
 IL_0038:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:192>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16868));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_7 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_ShaderRef_Sprite;
 		return L_7;
 	}
 }
-// Method Definition Index: 64496
+// Method Definition Index: 59878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextShaderUtilities__cctor_m5E3AAC923C6500CFCB7F775610B085AD43CDE4EE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities__cctor_m5E3AAC923C6500CFCB7F775610B085AD43CDE4EE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3994A8959273AB7A2D6095EEF2F9614459825A01);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral43EC328E72467D77312F671808A21B265267F3B8);
@@ -2499,85 +2070,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextShaderUtilities__cctor_m5E3AAC923C65
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDD796BEEFEFE52394E90603CE0821F507B9CAA3A);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextShaderUtilities__cctor_m5E3AAC923C6500CFCB7F775610B085AD43CDE4EE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16869));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16870));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:125>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16871));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Bevel = _stringLiteral43EC328E72467D77312F671808A21B265267F3B8;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Bevel), (void*)_stringLiteral43EC328E72467D77312F671808A21B265267F3B8);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:126>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16872));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Glow = _stringLiteralA87819C2031146742C1F5350BC509988DACBE9F9;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Glow), (void*)_stringLiteralA87819C2031146742C1F5350BC509988DACBE9F9);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:127>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16873));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Underlay = _stringLiteralDD796BEEFEFE52394E90603CE0821F507B9CAA3A;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Underlay), (void*)_stringLiteralDD796BEEFEFE52394E90603CE0821F507B9CAA3A);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:128>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16874));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Ratios = _stringLiteralDCD4BCED9028922F5951F8A9A35B48FC07725473;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Ratios), (void*)_stringLiteralDCD4BCED9028922F5951F8A9A35B48FC07725473);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:130>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16875));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_MASK_SOFT = _stringLiteral6E1257172AAFAF3FA30233E43C5AA80454D89686;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_MASK_SOFT), (void*)_stringLiteral6E1257172AAFAF3FA30233E43C5AA80454D89686);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:131>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16876));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_MASK_HARD = _stringLiteral9ABA2C5443319798ADBEE97162D50AEF82987BBE;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_MASK_HARD), (void*)_stringLiteral9ABA2C5443319798ADBEE97162D50AEF82987BBE);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:132>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16877));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_MASK_TEX = _stringLiteral8FB39F45849F83BA7955B5B6DEEFBE199E3AAB5D;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_MASK_TEX), (void*)_stringLiteral8FB39F45849F83BA7955B5B6DEEFBE199E3AAB5D);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:133>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16878));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Outline = _stringLiteral9035C8E66B070F9E3A5D5C4F13FD7604EC407659;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___Keyword_Outline), (void*)_stringLiteral9035C8E66B070F9E3A5D5C4F13FD7604EC407659);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:135>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16879));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ShaderTag_ZTestMode = _stringLiteral56B321BA3B5698DA44F634878586E8CF47F7E0F8;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ShaderTag_ZTestMode), (void*)_stringLiteral56B321BA3B5698DA44F634878586E8CF47F7E0F8);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:136>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16880));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ShaderTag_CullMode = _stringLiteral59B259A263D1796F7617C20534034F94A19001FE;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ShaderTag_CullMode), (void*)_stringLiteral59B259A263D1796F7617C20534034F94A19001FE);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:138>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16881));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___m_clamp = (1.0f);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:139>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16882));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___isInitialized = (bool)0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:142>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16883));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_SDFText = _stringLiteral8F88121F22653CE3B075FF43618D2330B4551B11;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_SDFText), (void*)_stringLiteral8F88121F22653CE3B075FF43618D2330B4551B11);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:144>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16884));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_BitmapText = _stringLiteral3994A8959273AB7A2D6095EEF2F9614459825A01;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_BitmapText), (void*)_stringLiteral3994A8959273AB7A2D6095EEF2F9614459825A01);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:146>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16885));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_SpriteText = _stringLiteral6FF8A544D79820FCA1D9E509867C8CA2CC09F907;
 		Il2CppCodeGenWriteBarrier((void**)(&((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___k_SpriteText), (void*)_stringLiteral6FF8A544D79820FCA1D9E509867C8CA2CC09F907);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:203>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16886));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16887));
 		TextShaderUtilities_GetShaderPropertyIDs_mBA841B8CACE147593703FF6E7E2804FF2017DE52(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16887));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:204>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16888));
 		return;
 	}
 }
-// Method Definition Index: 64497
+// Method Definition Index: 59879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextShaderUtilities_GetShaderPropertyIDs_mBA841B8CACE147593703FF6E7E2804FF2017DE52 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_GetShaderPropertyIDs_mBA841B8CACE147593703FF6E7E2804FF2017DE52_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0045DCFC92141FBD29525BE5BBACE1599A1F74E6);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0398C15EFAAA19C93AF746DA24817D2791C3F8F5);
@@ -2642,12 +2174,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextShaderUtilities_GetShaderPropertyIDs
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit);
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextShaderUtilities_GetShaderPropertyIDs_mBA841B8CACE147593703FF6E7E2804FF2017DE52_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16889));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16890));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:211>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16891));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_0 = ((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___isInitialized;
 		if (L_0)
@@ -2656,436 +2184,192 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextShaderUtilities_GetShaderPropertyIDs
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:214>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16892));
 		CHECKED_LOCAL_INIT(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticInit,(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___isInitialized = (bool)1;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:216>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16893));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16894));
 		int32_t L_1;
 		L_1 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral4B8146FB95E4F51B29DA41EB5F6D60F8FD0ECF21, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16894));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_MainTex = L_1;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:218>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16895));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16896));
 		int32_t L_2;
 		L_2 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralEE10A8FB5F6663BDC3704BFC5F4FC35CEB6F2A9C, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16896));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_FaceTex = L_2;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:219>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16897));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16898));
 		int32_t L_3;
 		L_3 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral22F32D21ECB2FA7F2B9AD8EA673180205C761B7C, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16898));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_FaceColor = L_3;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:220>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16899));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16900));
 		int32_t L_4;
 		L_4 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral421E0F68BD6ABE78BFA61D86D2FBBB4BF60B7E58, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16900));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_FaceDilate = L_4;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:221>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16901));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16902));
 		int32_t L_5;
 		L_5 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralC3949F55FBC8596A19F30C973F81E17D26C7094A, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16902));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_Shininess = L_5;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:223>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16903));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16904));
 		int32_t L_6;
 		L_6 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral51877ACC2D7BF3D261A0387F7C283CB9443CA7D3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16904));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineOffset1 = L_6;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:224>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16905));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16906));
 		int32_t L_7;
 		L_7 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral2A77A889D9E4EF37537D0C6C63791ECA4E1BCB94, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16906));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineOffset2 = L_7;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:225>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16907));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16908));
 		int32_t L_8;
 		L_8 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral726E0ED58625F732416BC99ED9E52CBEE75F4D7D, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16908));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineOffset3 = L_8;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:226>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16909));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16910));
 		int32_t L_9;
 		L_9 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralB6616F28FE322ABD0BBCDD6DDE770617C1D9F2C8, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16910));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineMode = L_9;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:228>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16911));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16912));
 		int32_t L_10;
 		L_10 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralCFC79EC499E3E982A565643FD06E71D40E47130F, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16912));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_IsoPerimeter = L_10;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:229>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16913));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16914));
 		int32_t L_11;
 		L_11 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral9AD9AC2A179FDCC5DF15DA875A0DAF5F51C43BCA, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16914));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_Softness = L_11;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:231>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16915));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16916));
 		int32_t L_12;
 		L_12 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralF63983576FA425EE2904E4E0EADBEA8972C80AD8, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16916));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UnderlayColor = L_12;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:232>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16917));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16918));
 		int32_t L_13;
 		L_13 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralA2D4D50E264DACC9F86BF78889E28F4C5DE0B2A0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16918));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UnderlayOffsetX = L_13;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:233>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16919));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16920));
 		int32_t L_14;
 		L_14 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral2F2200721C4103CF62154774377A7FE21EC3DFB8, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16920));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UnderlayOffsetY = L_14;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:234>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16921));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16922));
 		int32_t L_15;
 		L_15 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralF95A36106F6DED461458706DF8543DA03AAFD030, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16922));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UnderlayDilate = L_15;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:235>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16923));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16924));
 		int32_t L_16;
 		L_16 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral931AB8A0E7F4FA6F1F7EC84000B185B43C7781F2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16924));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UnderlaySoftness = L_16;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:237>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16925));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16926));
 		int32_t L_17;
 		L_17 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral362F8C5E63E001D7B28216A46EAD4653989618A3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16926));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UnderlayOffset = L_17;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:238>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16927));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16928));
 		int32_t L_18;
 		L_18 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralED993AC0C2F2097A0FD6F9BE811D5D012D424AE3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16928));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UnderlayIsoPerimeter = L_18;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:240>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16929));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16930));
 		int32_t L_19;
 		L_19 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral0398C15EFAAA19C93AF746DA24817D2791C3F8F5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16930));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_WeightNormal = L_19;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:241>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16931));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16932));
 		int32_t L_20;
 		L_20 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralEE06BF337688F9BA02BCD434393D092799729233, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16932));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_WeightBold = L_20;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:243>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16933));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16934));
 		int32_t L_21;
 		L_21 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral17C668C87C150408FD69585EF77C76A0E66EB3D5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16934));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineTex = L_21;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:244>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16935));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16936));
 		int32_t L_22;
 		L_22 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral444E2030643CA3A0D71BCD4D131FEB0C15E77257, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16936));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineWidth = L_22;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:245>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16937));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16938));
 		int32_t L_23;
 		L_23 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral464D71DD7E198B50E30BD474A73AE19CAC4762E6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16938));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineSoftness = L_23;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:246>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16939));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16940));
 		int32_t L_24;
 		L_24 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralD1418B66EFD4F2E84F8EE977170F5ACBF35CE35C, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16940));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_OutlineColor = L_24;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:248>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16941));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16942));
 		int32_t L_25;
 		L_25 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral07371C2E1614A8AAA3B715F2AC7A11E33A6705A0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16942));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_Outline2Color = L_25;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:249>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16943));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16944));
 		int32_t L_26;
 		L_26 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralF78C1EE8D0D2BA5FCAD383AF58DBF2E258585ACE, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16944));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_Outline2Width = L_26;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:251>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16945));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16946));
 		int32_t L_27;
 		L_27 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral7A943AA7A51825F2DD71077BF4F202D685D96D55, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16946));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_Padding = L_27;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:252>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16947));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16948));
 		int32_t L_28;
 		L_28 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral501ECC8F9B4D45174E944E1A813037B7BF1780B9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16948));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_GradientScale = L_28;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:253>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16949));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16950));
 		int32_t L_29;
 		L_29 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralD0EAB3CCFF44AA233B5F33619298DF0F3C27FDA3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16950));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_ScaleX = L_29;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:254>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16951));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16952));
 		int32_t L_30;
 		L_30 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral80F5FB961EA9E9710673ED4D7487C6D884FAD993, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16952));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_ScaleY = L_30;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:255>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16953));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16954));
 		int32_t L_31;
 		L_31 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral7182DE08801E7D3544D16D06E4BDD8EAEF2D1025, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16954));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_PerspectiveFilter = L_31;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:256>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16955));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16956));
 		int32_t L_32;
 		L_32 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralB27E7F07B4375E822409BF723BBE476EBE35D08E, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16956));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_Sharpness = L_32;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:258>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16957));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16958));
 		int32_t L_33;
 		L_33 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral0A1CC6D01EE33E3CF45053ABDFF930333F1FE274, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16958));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_TextureWidth = L_33;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:259>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16959));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16960));
 		int32_t L_34;
 		L_34 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral5EF940821F907CAB019D1C1E35554CB71D5E2F8C, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16960));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_TextureHeight = L_34;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:261>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16961));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16962));
 		int32_t L_35;
 		L_35 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral268E97832344F4779EE90DEC85BCBEAA78723A51, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16962));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_BevelAmount = L_35;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:263>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16963));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16964));
 		int32_t L_36;
 		L_36 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral6FBD8AC4E3773BDDF19000DF4E70F05BEF471EE9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16964));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_LightAngle = L_36;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:265>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16965));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16966));
 		int32_t L_37;
 		L_37 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral5D600628CED277C34B89C1E7267F9E9AED36E98E, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16966));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_EnvMap = L_37;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:266>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16967));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16968));
 		int32_t L_38;
 		L_38 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral9A7E77DB84E1908153085B0037B2757EFD9E6B67, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16968));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_EnvMatrix = L_38;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:267>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16969));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16970));
 		int32_t L_39;
 		L_39 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral90E137B55368AA457D12419FF3B1D6DFA45E3701, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16970));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_EnvMatrixRotation = L_39;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:270>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16971));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16972));
 		int32_t L_40;
 		L_40 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralE066DD3CA3CA9295CC83FA394543BA7B03B848BE, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16972));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_GlowColor = L_40;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:271>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16973));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16974));
 		int32_t L_41;
 		L_41 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral2DE8AD68EBBFEAA02CDF7C4D9A5C898F40287D4D, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16974));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_GlowOffset = L_41;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:272>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16975));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16976));
 		int32_t L_42;
 		L_42 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral8B39DD9FFA8AC3EDD72D3F435A409D265723991A, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16976));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_GlowPower = L_42;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:273>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16977));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16978));
 		int32_t L_43;
 		L_43 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral3737F9EA39D2D08261AE0A0D3A982AA9EDA16BBF, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16978));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_GlowOuter = L_43;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:274>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16979));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16980));
 		int32_t L_44;
 		L_44 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral2EBDD86FD664CC82FDAEF4EEBB5F4602B2E78D87, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16980));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_GlowInner = L_44;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:277>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16981));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16982));
 		int32_t L_45;
 		L_45 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral0045DCFC92141FBD29525BE5BBACE1599A1F74E6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16982));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_MaskCoord = L_45;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:278>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16983));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16984));
 		int32_t L_46;
 		L_46 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral3FD20DEC440298FBE8FD5B8A9049081EC15D29DC, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16984));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_ClipRect = L_46;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:279>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16985));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16986));
 		int32_t L_47;
 		L_47 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral134A2A1C4E13360C1DDDFDA4421C401BC9E3F8F9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16986));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_UseClipRect = L_47;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:280>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16987));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16988));
 		int32_t L_48;
 		L_48 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralF641266EC742840FB3A948AD37F889D31A453C65, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16988));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_MaskSoftnessX = L_48;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:281>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16989));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16990));
 		int32_t L_49;
 		L_49 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral998F34D39A72DAA353DBFA6C0583A8874FEEDC75, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16990));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_MaskSoftnessY = L_49;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:282>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16991));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16992));
 		int32_t L_50;
 		L_50 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralFC1B8C95859C5B850DB09E25ABC068B1BC5B2A0B, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16992));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_VertexOffsetX = L_50;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:283>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16993));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16994));
 		int32_t L_51;
 		L_51 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralBB74A477E1950E62FC01A6575177273213BAAC98, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16994));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_VertexOffsetY = L_51;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:285>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16995));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16996));
 		int32_t L_52;
 		L_52 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral2010EA04D3D3AB54BFDF830272F0AF4D1BEC511C, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16996));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_StencilID = L_52;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:286>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16997));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16998));
 		int32_t L_53;
 		L_53 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral5ECA508019ED4EB6B88D49932A176E84BC448126, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16998));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_StencilOp = L_53;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:287>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 16999));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17000));
 		int32_t L_54;
 		L_54 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral0F52C788AC4796FE5841155F7DF3896E049C051E, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17000));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_StencilComp = L_54;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:288>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17001));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17002));
 		int32_t L_55;
 		L_55 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral14254BB83373B11756D2303A8E187014374CE5D9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17002));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_StencilReadMask = L_55;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:289>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17003));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17004));
 		int32_t L_56;
 		L_56 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral394B8C6C8CA442EF8C63386789D48EEDD0084236, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17004));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_StencilWriteMask = L_56;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:291>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17005));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17006));
 		int32_t L_57;
 		L_57 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral6A3DC8BB44F75ECC14254B646E56B17C3D276755, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17006));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_ShaderFlags = L_57;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:292>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17007));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17008));
 		int32_t L_58;
 		L_58 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralF7DC51B045EBEB673528BFA46F2E26BF0C34CF3E, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17008));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_ScaleRatio_A = L_58;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:293>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17009));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17010));
 		int32_t L_59;
 		L_59 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralD608318BC59F8CE70448A3F3BD47A42652637238, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17010));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_ScaleRatio_B = L_59;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:294>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17011));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17012));
 		int32_t L_60;
 		L_60 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral396410BBDBEF868B59F40BE3F36BCC5CF6E110BA, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17012));
 		((TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_StaticFields*)il2cpp_codegen_static_fields_for(TextShaderUtilities_t47B400695C5D96E7B04FEF9D132468B3A1799692_il2cpp_TypeInfo_var))->___ID_ScaleRatio_C = L_60;
 	}
 
 IL_0394:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextShaderUtilities.Deprecated.cs:296>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17013));
 		return;
 	}
 }
@@ -3097,143 +2381,90 @@ IL_0394:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64498
+// Method Definition Index: 59880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar TextUtilities_ToUpperFast_m7E98D5D17030A387012E262648346523DCC3AA0B (Il2CppChar ___0_c, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextUtilities_ToUpperFast_m7E98D5D17030A387012E262648346523DCC3AA0B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0C9E0579800D2261789D578B378D6BD8D6F31974);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_c));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextUtilities_ToUpperFast_m7E98D5D17030A387012E262648346523DCC3AA0B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17014));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17015));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:74>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17016));
 		Il2CppChar L_0 = ___0_c;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17017));
 		NullCheck(_stringLiteral0C9E0579800D2261789D578B378D6BD8D6F31974);
 		int32_t L_1;
 		L_1 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(_stringLiteral0C9E0579800D2261789D578B378D6BD8D6F31974, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17017));
 		if ((((int32_t)L_0) <= ((int32_t)((int32_t)il2cpp_codegen_subtract(L_1, 1)))))
 		{
 			goto IL_0011;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:75>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17018));
 		Il2CppChar L_2 = ___0_c;
 		return L_2;
 	}
 
 IL_0011:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:77>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17019));
 		Il2CppChar L_3 = ___0_c;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17020));
 		NullCheck(_stringLiteral0C9E0579800D2261789D578B378D6BD8D6F31974);
 		Il2CppChar L_4;
 		L_4 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(_stringLiteral0C9E0579800D2261789D578B378D6BD8D6F31974, L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17020));
 		return L_4;
 	}
 }
-// Method Definition Index: 64499
+// Method Definition Index: 59881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextUtilities_GetHashCodeCaseInSensitive_m3241BDD3A6F82A061C21BF5D347B690D732F5B59 (String_t* ___0_s, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextUtilities_GetHashCodeCaseInSensitive_m3241BDD3A6F82A061C21BF5D347B690D732F5B59_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
+	//<source_info:<no-source>:1>
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_s));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextUtilities_GetHashCodeCaseInSensitive_m3241BDD3A6F82A061C21BF5D347B690D732F5B59_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17021));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17022));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:118>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17023));
 		V_0 = 0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:120>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17024));
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17025));
 		goto IL_001d;
 	}
 
 IL_0006:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:121>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17026));
 		int32_t L_0 = V_0;
 		int32_t L_1 = V_0;
 		String_t* L_2 = ___0_s;
 		int32_t L_3 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17027));
 		NullCheck(L_2);
 		Il2CppChar L_4;
 		L_4 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(L_2, L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17027));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17028));
 		Il2CppChar L_5;
 		L_5 = TextUtilities_ToUpperFast_m7E98D5D17030A387012E262648346523DCC3AA0B(L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17028));
 		V_0 = ((int32_t)(((int32_t)il2cpp_codegen_add(((int32_t)(L_0<<5)), L_1))^(int32_t)L_5));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:120>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17029));
 		int32_t L_6 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_6, 1));
 	}
 
 IL_001d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:120>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17030));
 		int32_t L_7 = V_1;
 		String_t* L_8 = ___0_s;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17031));
 		NullCheck(L_8);
 		int32_t L_9;
 		L_9 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_8, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17031));
 		if ((((int32_t)L_7) < ((int32_t)L_9)))
 		{
 			goto IL_0006;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:123>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17032));
 		int32_t L_10 = V_0;
 		return L_10;
 	}
 }
-// Method Definition Index: 64500
+// Method Definition Index: 59882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextUtilities_GetTextFontWeightIndex_m758569A41B59CA4E6A6EE3E73299B41C25FC4E67 (int32_t ___0_fontWeight, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextUtilities_GetTextFontWeightIndex_m758569A41B59CA4E6A6EE3E73299B41C25FC4E67_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_fontWeight));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TextUtilities_GetTextFontWeightIndex_m758569A41B59CA4E6A6EE3E73299B41C25FC4E67_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17033));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17034));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17035));
 		int32_t L_0 = ___0_fontWeight;
 		if ((((int32_t)L_0) > ((int32_t)((int32_t)400))))
 		{
@@ -3338,71 +2569,51 @@ IL_004b:
 
 IL_0065:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:288>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17036));
 		return 1;
 	}
 
 IL_0067:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:290>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17037));
 		return 2;
 	}
 
 IL_0069:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:292>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17038));
 		return 3;
 	}
 
 IL_006b:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:294>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17039));
 		return 4;
 	}
 
 IL_006d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:296>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17040));
 		return 5;
 	}
 
 IL_006f:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:298>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17041));
 		return 6;
 	}
 
 IL_0071:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:300>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17042));
 		return 7;
 	}
 
 IL_0073:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:302>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17043));
 		return 8;
 	}
 
 IL_0075:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:304>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17044));
 		return ((int32_t)9);
 	}
 
 IL_0078:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/TextUtilities.cs:306>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17045));
 		return 4;
 	}
 }
@@ -3414,22 +2625,11 @@ IL_0078:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64501
+// Method Definition Index: 59883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* UnicodeLineBreakingRules_get_leadingCharactersLookup_m1DAC015D7E37112EAE0437E6472AEA0719DFF3DC (UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnicodeLineBreakingRules_get_leadingCharactersLookup_m1DAC015D7E37112EAE0437E6472AEA0719DFF3DC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnicodeLineBreakingRules_get_leadingCharactersLookup_m1DAC015D7E37112EAE0437E6472AEA0719DFF3DC_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17046));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17047));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:52>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17048));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_0 = __this->___m_LeadingCharactersLookup;
 		if (L_0)
 		{
@@ -3437,37 +2637,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:53>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17049));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17050));
 		UnicodeLineBreakingRules_LoadLineBreakingRules_m4686111E39B00E27AA6AD88762793EEFCCC14A75(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17050));
 	}
 
 IL_000e:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:55>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17051));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_1 = __this->___m_LeadingCharactersLookup;
 		return L_1;
 	}
 }
-// Method Definition Index: 64502
+// Method Definition Index: 59884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* UnicodeLineBreakingRules_get_followingCharactersLookup_m5510A21873DC5DA66F4A2DFA4C26A5EFAD494D8B (UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnicodeLineBreakingRules_get_followingCharactersLookup_m5510A21873DC5DA66F4A2DFA4C26A5EFAD494D8B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnicodeLineBreakingRules_get_followingCharactersLookup_m5510A21873DC5DA66F4A2DFA4C26A5EFAD494D8B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17052));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17053));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:67>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17054));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_0 = __this->___m_LeadingCharactersLookup;
 		if (L_0)
 		{
@@ -3475,42 +2658,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:68>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17055));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17056));
 		UnicodeLineBreakingRules_LoadLineBreakingRules_m4686111E39B00E27AA6AD88762793EEFCCC14A75(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17056));
 	}
 
 IL_000e:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:70>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17057));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_1 = __this->___m_FollowingCharactersLookup;
 		return L_1;
 	}
 }
-// Method Definition Index: 64503
+// Method Definition Index: 59885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnicodeLineBreakingRules_get_useModernHangulLineBreakingRules_mD86D283CE7BA23A0174B9227A7BD915D3D9FD464 (UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnicodeLineBreakingRules_get_useModernHangulLineBreakingRules_mD86D283CE7BA23A0174B9227A7BD915D3D9FD464_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnicodeLineBreakingRules_get_useModernHangulLineBreakingRules_mD86D283CE7BA23A0174B9227A7BD915D3D9FD464_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17058));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17059));
-	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:80>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17060));
 		bool L_0 = __this->___m_UseModernHangulLineBreakingRules;
 		return L_0;
 	}
 }
-// Method Definition Index: 64504
+// Method Definition Index: 59886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnicodeLineBreakingRules_LoadLineBreakingRules_m4686111E39B00E27AA6AD88762793EEFCCC14A75 (UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3520,16 +2686,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnicodeLineBreakingRules_LoadLineBreakin
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Resources_Load_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m55E770DF81AB6D40763121667DA5E743EF1036B2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnicodeLineBreakingRules_LoadLineBreakingRules_m4686111E39B00E27AA6AD88762793EEFCCC14A75_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2BCC88E2273AB1B79FB74CB9D7E81971564B3F9C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDB9B1F9F824E5CA4FC034F155DAD22B0B357400B);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit);
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnicodeLineBreakingRules_LoadLineBreakingRules_m4686111E39B00E27AA6AD88762793EEFCCC14A75_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17061));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17062));
+	//<source_info:<no-source>:1>
 	UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* G_B5_0 = NULL;
 	UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* G_B4_0 = NULL;
 	HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* G_B6_0 = NULL;
@@ -3539,8 +2701,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnicodeLineBreakingRules_LoadLineBreakin
 	HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* G_B11_0 = NULL;
 	UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* G_B11_1 = NULL;
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:96>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17063));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_0 = __this->___m_LeadingCharactersLookup;
 		if (L_0)
 		{
@@ -3548,40 +2708,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnicodeLineBreakingRules_LoadLineBreakin
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:98>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17064));
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_1 = __this->___m_LeadingCharacters;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17065));
 		CHECKED_LOCAL_INIT(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit,(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_2;
 		L_2 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17065));
 		if (!L_2)
 		{
 			goto IL_0029;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:99>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17066));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17067));
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_3;
 		L_3 = Resources_Load_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m55E770DF81AB6D40763121667DA5E743EF1036B2(_stringLiteralDB9B1F9F824E5CA4FC034F155DAD22B0B357400B, Resources_Load_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m55E770DF81AB6D40763121667DA5E743EF1036B2_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17067));
 		__this->___m_LeadingCharacters = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LeadingCharacters), (void*)L_3);
 	}
 
 IL_0029:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:101>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17068));
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_4 = __this->___m_LeadingCharacters;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17069));
 		CHECKED_LOCAL_INIT(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit,(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_5;
 		L_5 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17069));
 		if (L_5)
 		{
 			G_B5_0 = __this;
@@ -3590,10 +2738,8 @@ IL_0029:
 		G_B4_0 = __this;
 	}
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17070));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_6 = (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A*)il2cpp_codegen_object_new(HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A(L_6, HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17070));
 		G_B6_0 = L_6;
 		G_B6_1 = G_B4_0;
 		goto IL_004a;
@@ -3602,10 +2748,8 @@ IL_0029:
 IL_003f:
 	{
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_7 = __this->___m_LeadingCharacters;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17071));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_8;
 		L_8 = UnicodeLineBreakingRules_GetCharacters_m93663235F54D32D801E67994714B79759D2F4137(L_7, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17071));
 		G_B6_0 = L_8;
 		G_B6_1 = G_B5_0;
 	}
@@ -3615,40 +2759,28 @@ IL_004a:
 		NullCheck(G_B6_1);
 		G_B6_1->___m_LeadingCharactersLookup = G_B6_0;
 		Il2CppCodeGenWriteBarrier((void**)(&G_B6_1->___m_LeadingCharactersLookup), (void*)G_B6_0);
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:103>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17072));
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_9 = __this->___m_FollowingCharacters;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17073));
 		CHECKED_LOCAL_INIT(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit,(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_10;
 		L_10 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17073));
 		if (!L_10)
 		{
 			goto IL_006d;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:104>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17074));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17075));
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_11;
 		L_11 = Resources_Load_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m55E770DF81AB6D40763121667DA5E743EF1036B2(_stringLiteral2BCC88E2273AB1B79FB74CB9D7E81971564B3F9C, Resources_Load_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m55E770DF81AB6D40763121667DA5E743EF1036B2_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17075));
 		__this->___m_FollowingCharacters = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_FollowingCharacters), (void*)L_11);
 	}
 
 IL_006d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:106>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17076));
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_12 = __this->___m_FollowingCharacters;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17077));
 		CHECKED_LOCAL_INIT(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticInit,(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		bool L_13;
 		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17077));
 		if (L_13)
 		{
 			G_B10_0 = __this;
@@ -3657,10 +2789,8 @@ IL_006d:
 		G_B9_0 = __this;
 	}
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17078));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_14 = (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A*)il2cpp_codegen_object_new(HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A(L_14, HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17078));
 		G_B11_0 = L_14;
 		G_B11_1 = G_B9_0;
 		goto IL_008e;
@@ -3669,10 +2799,8 @@ IL_006d:
 IL_0083:
 	{
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_15 = __this->___m_FollowingCharacters;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17079));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_16;
 		L_16 = UnicodeLineBreakingRules_GetCharacters_m93663235F54D32D801E67994714B79759D2F4137(L_15, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17079));
 		G_B11_0 = L_16;
 		G_B11_1 = G_B10_0;
 	}
@@ -3686,12 +2814,10 @@ IL_008e:
 
 IL_0093:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:108>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17080));
 		return;
 	}
 }
-// Method Definition Index: 64505
+// Method Definition Index: 59887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* UnicodeLineBreakingRules_GetCharacters_m93663235F54D32D801E67994714B79759D2F4137 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* ___0_file, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3700,99 +2826,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Add_mDA8E52933A6A885D9FCF549C99489EF5E095BE1E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnicodeLineBreakingRules_GetCharacters_m93663235F54D32D801E67994714B79759D2F4137_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	//<source_info:<no-source>:1>
 	HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* V_0 = NULL;
 	String_t* V_1 = NULL;
 	int32_t V_2 = 0;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_file));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnicodeLineBreakingRules_GetCharacters_m93663235F54D32D801E67994714B79759D2F4137_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17081));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17082));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:128>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17083));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17084));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_0 = (HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A*)il2cpp_codegen_object_new(HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A(L_0, HashSet_1__ctor_m4058973F19EEF9E5FCFF05F3779C7F219544C68A_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17084));
 		V_0 = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:129>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17085));
 		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_1 = ___0_file;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17086));
 		NullCheck(L_1);
 		String_t* L_2;
 		L_2 = TextAsset_get_text_m36846042E3CF3D9DD337BF3F8B2B1902D10C8FD9(L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17086));
 		V_1 = L_2;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:131>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17087));
 		V_2 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17088));
 		goto IL_0023;
 	}
 
 IL_0011:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:132>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17089));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_3 = V_0;
 		String_t* L_4 = V_1;
 		int32_t L_5 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17090));
 		NullCheck(L_4);
 		Il2CppChar L_6;
 		L_6 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(L_4, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17090));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17091));
 		NullCheck(L_3);
 		bool L_7;
 		L_7 = HashSet_1_Add_mDA8E52933A6A885D9FCF549C99489EF5E095BE1E(L_3, L_6, HashSet_1_Add_mDA8E52933A6A885D9FCF549C99489EF5E095BE1E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17091));
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:131>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17092));
 		int32_t L_8 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0023:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:131>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17093));
 		int32_t L_9 = V_2;
 		String_t* L_10 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17094));
 		NullCheck(L_10);
 		int32_t L_11;
 		L_11 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_10, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17094));
 		if ((((int32_t)L_9) < ((int32_t)L_11)))
 		{
 			goto IL_0011;
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/TextCoreTextEngine/Managed/UnicodeLineBreakingRules.cs:134>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_TextCoreTextEngineModule + 17095));
 		HashSet_1_t5DD20B42149A11AEBF12A75505306E6EFC34943A* L_12 = V_0;
 		return L_12;
 	}
 }
-// Method Definition Index: 64506
+// Method Definition Index: 59888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnicodeLineBreakingRules__ctor_mD94779B4996B56EA84C847EC4DD287AB1A8ADE85 (UnicodeLineBreakingRules_t80BE36F5E16AE48FE7B6DE1C91D36B1142B4EC0E* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnicodeLineBreakingRules__ctor_mD94779B4996B56EA84C847EC4DD287AB1A8ADE85_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UnicodeLineBreakingRules__ctor_mD94779B4996B56EA84C847EC4DD287AB1A8ADE85_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -3828,15 +2916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnicodeLineBreakingRules__ctor_mD94779B4
 // Method Definition Index: 698
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->____stringLength;
 		return L_0;

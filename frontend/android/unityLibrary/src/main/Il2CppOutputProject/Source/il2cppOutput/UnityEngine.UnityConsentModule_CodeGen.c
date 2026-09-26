@@ -29,7 +29,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] =
 {
 	{ 0x06000004, ConsentState_ToString_mEDD4D983C94831BA4C151A6D05B1906810146665_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_UnityConsentModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UnityConsentModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_UnityConsentModule_CodeGenModule = 
 {
@@ -40,7 +39,7 @@ const Il2CppCodeGenModule g_UnityEngine_UnityConsentModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_UnityConsentModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

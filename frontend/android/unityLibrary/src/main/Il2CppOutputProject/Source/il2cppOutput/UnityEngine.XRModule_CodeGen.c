@@ -319,7 +319,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[23] =
 	{ 0x0600007B, MeshGenerationResult_GetHashCode_mA542C935FE2ABB8EC0A3CE001267176095F7DCBC_AdjustorThunk },
 	{ 0x06000080, MeshTransformList_Dispose_m0F0B77B84E50F02EB1A48751831808F9C69E0636_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_XRModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_XRModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_XRModule_CodeGenModule = 
 {
@@ -330,7 +329,7 @@ const Il2CppCodeGenModule g_UnityEngine_XRModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_XRModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

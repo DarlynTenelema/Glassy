@@ -16,7 +16,6 @@ static Il2CppMethodPointer s_methodPointers[4] =
 	NULL,
 	NULL,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_Collections_LowLevel_ILSupport;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Collections_LowLevel_ILSupport_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Collections_LowLevel_ILSupport_CodeGenModule = 
 {
@@ -27,7 +26,7 @@ const Il2CppCodeGenModule g_Unity_Collections_LowLevel_ILSupport_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_Collections_LowLevel_ILSupport,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

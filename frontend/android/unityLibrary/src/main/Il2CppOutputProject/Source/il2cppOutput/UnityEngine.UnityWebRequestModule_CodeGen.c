@@ -252,7 +252,6 @@ static Il2CppMethodPointer s_methodPointers[121] =
 	UploadHandlerRaw__ctor_mF9F2BAB1D9987051714541669B3D22EC9DBDCFEF,
 	UploadHandlerRaw_Dispose_m7BC523C04CD5582382B23AF4FC019149DE328A1B,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_UnityWebRequestModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestModule_CodeGenModule = 
 {
@@ -263,7 +262,7 @@ const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_UnityWebRequestModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

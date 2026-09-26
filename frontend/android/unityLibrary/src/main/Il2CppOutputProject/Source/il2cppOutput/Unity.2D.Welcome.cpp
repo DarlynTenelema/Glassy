@@ -10,11 +10,8 @@ struct String_t;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 struct Welcome2DScript_t26D60C4AB7258C13CACECC551B6AC2F01EF09329;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_2D_Welcome[];
 IL2CPP_EXTERN_C RuntimeClass* Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral82FF183D713BDCD59087C34CB4620F149E0278D8;
-IL2CPP_EXTERN_C const RuntimeMethod* Welcome2DScript_Open2DLandingPage_m6DDE3D5C86AA75D77DE5607C0E0A61E8A0E40283_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Welcome2DScript__ctor_m1509132DE576967C2CC30381248BC411314D2066_RuntimeMethod_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -105,46 +102,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75119
+// Method Definition Index: 73543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Welcome2DScript_Open2DLandingPage_m6DDE3D5C86AA75D77DE5607C0E0A61E8A0E40283 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Welcome2DScript_Open2DLandingPage_m6DDE3D5C86AA75D77DE5607C0E0A61E8A0E40283_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral82FF183D713BDCD59087C34CB4620F149E0278D8);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_StaticInit);
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Welcome2DScript_Open2DLandingPage_m6DDE3D5C86AA75D77DE5607C0E0A61E8A0E40283_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_2D_Welcome + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_2D_Welcome + 1));
+	//<source_info:<no-source>:1>
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_2D_Welcome + 2));
-		//<source_info:C:/Users/PC/Glassy1/frontend/unity/Glassy2/Assets/Welcome/Welcome2DScript.cs:10>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_2D_Welcome + 3));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_2D_Welcome + 4));
 		CHECKED_LOCAL_INIT(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_StaticInit,(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Application_OpenURL_mE748FA4D503715DEE12BCA4BDD8A5305AE41DB89(_stringLiteral82FF183D713BDCD59087C34CB4620F149E0278D8, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_2D_Welcome + 4));
-		//<source_info:C:/Users/PC/Glassy1/frontend/unity/Glassy2/Assets/Welcome/Welcome2DScript.cs:11>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_2D_Welcome + 5));
 		return;
 	}
 }
-// Method Definition Index: 75120
+// Method Definition Index: 73544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Welcome2DScript__ctor_m1509132DE576967C2CC30381248BC411314D2066 (Welcome2DScript_t26D60C4AB7258C13CACECC551B6AC2F01EF09329* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Welcome2DScript__ctor_m1509132DE576967C2CC30381248BC411314D2066_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Welcome2DScript__ctor_m1509132DE576967C2CC30381248BC411314D2066_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF(__this, NULL);
 		return;

@@ -1002,7 +1002,6 @@ static const Il2CppTokenIndexMethodTuple s_reversePInvokeIndices[2] =
 	{ 0x060001B2, 92,  (void**)&SpriteShapeGenerator_UTessellator_m4BB2F31FE8A640490281B75C7F04F0F0EBAAF352_RuntimeMethod_var, 0 },
 	{ 0x060001D4, 93,  (void**)&SpriteShapeGenerator_UTessellatorU24BurstManaged_mFB8EBE802565BC88E547066D54243DC2356E8868_RuntimeMethod_var, 0 },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_2D_SpriteShape_Runtime;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_2D_SpriteShape_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_2D_SpriteShape_Runtime_CodeGenModule = 
 {
@@ -1013,7 +1012,7 @@ const Il2CppCodeGenModule g_Unity_2D_SpriteShape_Runtime_CodeGenModule =
 	s_adjustorThunks,
 	2,
 	s_reversePInvokeIndices,
-	&g_DebuggerMetadataRegistrationUnity_2D_SpriteShape_Runtime,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

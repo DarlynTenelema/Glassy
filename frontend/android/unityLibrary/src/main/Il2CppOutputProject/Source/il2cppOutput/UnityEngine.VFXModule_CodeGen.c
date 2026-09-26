@@ -95,7 +95,6 @@ static Il2CppMethodPointer s_methodPointers[44] =
 	VisualEffect_get_visualEffectAsset_Injected_m764595B94C5DC2BD82A19676459463A8DCE219F0,
 	VFXRenderer__ctor_mF0F7DA1BF087936A6A95638221B09CE05EA475BF,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_VFXModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VFXModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_VFXModule_CodeGenModule = 
 {
@@ -106,7 +105,7 @@ const Il2CppCodeGenModule g_UnityEngine_VFXModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_VFXModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

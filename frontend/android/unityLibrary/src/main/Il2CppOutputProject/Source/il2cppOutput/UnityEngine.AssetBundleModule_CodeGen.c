@@ -21,7 +21,6 @@ static Il2CppMethodPointer s_methodPointers[6] =
 	AssetBundle_LoadAsset_Internal_mD096392756815901FE982C1AF64DDF0846551433,
 	AssetBundle_LoadAsset_Internal_Injected_m27E8921C2E5020898FA02392D04FD586D8B73E26,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_AssetBundleModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AssetBundleModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_AssetBundleModule_CodeGenModule = 
 {
@@ -32,7 +31,7 @@ const Il2CppCodeGenModule g_UnityEngine_AssetBundleModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_AssetBundleModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

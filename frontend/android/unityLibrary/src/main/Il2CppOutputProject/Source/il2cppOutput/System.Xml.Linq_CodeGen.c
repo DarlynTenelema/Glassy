@@ -414,7 +414,6 @@ static Il2CppMethodPointer s_methodPointers[210] =
 	StringBuilderCache_GetStringAndRelease_mF731F5D5144F0723DFFCB719692FFAEAEDF47389,
 	ThrowStub_ThrowNotSupportedException_m9860569D0F80DAC07D9ECCCAFC15125E0A3603C1,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationSystem_Xml_Linq;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Xml_Linq_CodeGenModule;
 const Il2CppCodeGenModule g_System_Xml_Linq_CodeGenModule = 
 {
@@ -425,7 +424,7 @@ const Il2CppCodeGenModule g_System_Xml_Linq_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationSystem_Xml_Linq,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

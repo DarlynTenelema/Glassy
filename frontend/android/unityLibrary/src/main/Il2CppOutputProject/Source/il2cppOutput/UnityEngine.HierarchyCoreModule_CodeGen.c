@@ -385,7 +385,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[15] =
 	{ 0x0600007D, HierarchyNodeType_GetHashCode_mD56E6A6C18B5602DD3EB1E77DDF0C4ADB8BA04CA_AdjustorThunk },
 	{ 0x06000084, HierarchySearchFilter_ToString_mE726A902E60DDDD1E51502ECB14F64171B9CD2A3_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_HierarchyCoreModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_HierarchyCoreModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_HierarchyCoreModule_CodeGenModule = 
 {
@@ -396,7 +395,7 @@ const Il2CppCodeGenModule g_UnityEngine_HierarchyCoreModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_HierarchyCoreModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

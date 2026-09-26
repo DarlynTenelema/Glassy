@@ -17,9 +17,7 @@ struct VirtualFuncInvoker0
 };
 
 struct Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C;
-struct Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99;
 struct Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB;
-struct Action_3_t838D6B6BB4BFFC6E8430C389747DB008A0B26146;
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
@@ -41,7 +39,6 @@ struct IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395;
 struct SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C;
 struct UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_UnityAnalyticsModule[];
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var;
@@ -54,37 +51,9 @@ IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral567058D00FC118DAEB59AFA1642429006419ED0D;
 IL2CPP_EXTERN_C String_t* _stringLiteralF5E7B3EA46B04B4A96CF9E4C5397AD390A259B27;
-IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo_CallIdentityTokenChanged_m1AD21A1840BCB9CB222455F609DBBF7B7B380911_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo_CallSessionStateChanged_m6C3C7DD13064E37D7C3AE9411355BCEF77C4664B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_mD0CF962989CF83060CE540F74D394D11FDBEB34B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo__cctor_mB6F61DDA0DDB0D371D13A6A30E77B872A6C2580F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo_add_identityTokenChanged_m64C2D38EAE253AA50478B858E5E01CA1B13EFF78_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo_add_sessionStateChanged_mF51918A05A7489228D8EF3EA7E5CF34B1294FCD6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo_remove_identityTokenChanged_mA043898827661833FCE89DCC3682B5FF3FC19C69_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AnalyticsSessionInfo_remove_sessionStateChanged_m92DCC7984A5447F18D61BF0ECBA4D3C2AAACB2CC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* EmbeddedAttribute__ctor_m720B656498A69B70F91C7FEDEE30EB53209087BD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RefSafetyRulesAttribute__ctor_mD4883EFA6A7FB332CB6C3B41AEE96B4A7B0FD787_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteConfigSettings_RemoteConfigSettingsUpdated_mA71E7C6CDAF5D349BF0B4880A4D54DF2365EB948_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_RemoteSettingsBeforeFetchFromServer_m677DED4CFA8C9E498227A3E939242974DF8FA35C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_RemoteSettingsUpdateCompleted_m56713308E00B18BF0E5FADEC93D67A70F7E5FD86_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_RemoteSettingsUpdated_m6202CCC0AF33D44838BB46977D075E54FD5EC069_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_m70E203F0445B0F5E6B504D2441AFFC455157EDBE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings__cctor_m902604C6AA3E17D91AF6F9AD882A468192715A4E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_add_BeforeFetchFromServer_m7C4023E81A6D8BDD9C7799109B2D3C16A8A71249_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_add_Completed_mC6EBFB8A2A4CD30593ECE8E25A5D8F03F6197925_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_add_Updated_m236B4D6AAF3342720696E96A252AAD9956B84A72_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_remove_BeforeFetchFromServer_m170DE118276391E8544343DD0EBFFF9DAA6EBD57_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_remove_Completed_mF2B0CB5D6B5538FB6890D167271E5925A8EC90FF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RemoteSettings_remove_Updated_m6DD904116828854B4BDD51B968AE01FC49872A3B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* CodeLoadedScope_t991AD106C7BA1C38DC99282B021A0E0986A8B811_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4_0_0_0_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -371,28 +340,22 @@ struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public Runtim
 };
 
 
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_3_Invoke_m20DB96A6E4363A11EE736FB20842C52E012CA3D6_fshared (Action_3_t838D6B6BB4BFFC6E8430C389747DB008A0B26146* __this, Il2CppFullySharedGenericAny ___0_arg1, Il2CppFullySharedGenericAny ___1_arg2, Il2CppFullySharedGenericAny ___2_arg3, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m5A038831CEB84A7E374FE59D43444412629F833F_fshared (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99* __this, Il2CppFullySharedGenericAny ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_3_Invoke_mB1AE88F5C5FE161C85EA4A58D5CC535721E01B21_inline (Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* __this, bool ___0_arg1, bool ___1_arg2, int32_t ___2_arg3, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F_inline (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* __this, bool ___0_obj, const RuntimeMethod* method) ;
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2 (Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00 (Delegate_t* ___0_a, Delegate_t* ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3 (Delegate_t* ___0_source, Delegate_t* ___1_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UpdatedEventHandler_Invoke_m4D496F648FD908A8537A35C4A94CBB44294D6D50_inline (UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, const RuntimeMethod* method) ;
-inline void Action_3_Invoke_mB1AE88F5C5FE161C85EA4A58D5CC535721E01B21 (Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* __this, bool ___0_arg1, bool ___1_arg2, int32_t ___2_arg3, const RuntimeMethod* method)
-{
-	((  void (*) (Action_3_t838D6B6BB4BFFC6E8430C389747DB008A0B26146*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, const RuntimeMethod*))Action_3_Invoke_m20DB96A6E4363A11EE736FB20842C52E012CA3D6_fshared)((Action_3_t838D6B6BB4BFFC6E8430C389747DB008A0B26146*)__this, (Il2CppFullySharedGenericAny)&___0_arg1, (Il2CppFullySharedGenericAny)&___1_arg2, (Il2CppFullySharedGenericAny)&___2_arg3, method);
-}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_3_Invoke_mB1AE88F5C5FE161C85EA4A58D5CC535721E01B21_inline (Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* __this, bool ___0_arg1, bool ___1_arg2, int32_t ___2_arg3, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Updated_m6DD904116828854B4BDD51B968AE01FC49872A3B (UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_BeforeFetchFromServer_m170DE118276391E8544343DD0EBFFF9DAA6EBD57 (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Completed_mF2B0CB5D6B5538FB6890D167271E5925A8EC90FF (Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___0_handle, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DelegateAutoCleanup__ctor_mE4B45A8781C4FB94628512840346ADF0CEE55ABA (DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_cleanup, Type_t* ___1_scopeType, int32_t ___2_cleanOn, String_t* ___3_ownerDescription, const RuntimeMethod* method) ;
-inline void Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* __this, bool ___0_obj, const RuntimeMethod* method)
-{
-	((  void (*) (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*, Il2CppFullySharedGenericAny, const RuntimeMethod*))Action_1_Invoke_m5A038831CEB84A7E374FE59D43444412629F833F_fshared)((Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*)__this, (Il2CppFullySharedGenericAny)&___0_obj, method);
-}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F_inline (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* __this, bool ___0_obj, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionStateChanged_Invoke_mB9195B30A226CB3E53E470C24FD31E039E5BB4F5_inline (SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* __this, int32_t ___0_sessionState, int64_t ___1_sessionId, int64_t ___2_sessionElapsedTime, bool ___3_sessionChanged, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void IdentityTokenChanged_Invoke_m22D3DA825F0D6E701D050EFA3D35E84DFAC7F8D9_inline (IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* __this, String_t* ___0_token, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_sessionStateChanged_m92DCC7984A5447F18D61BF0ECBA4D3C2AAACB2CC (SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* ___0_value, const RuntimeMethod* method) ;
@@ -410,18 +373,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_identityToke
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74756
+// Method Definition Index: 73183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_m720B656498A69B70F91C7FEDEE30EB53209087BD (EmbeddedAttribute_t4F9BF30A9A883EE726EC9C75EB05952312DD9B34* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EmbeddedAttribute__ctor_m720B656498A69B70F91C7FEDEE30EB53209087BD_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, EmbeddedAttribute__ctor_m720B656498A69B70F91C7FEDEE30EB53209087BD_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -435,18 +390,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_m720B656498A69B7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74757
+// Method Definition Index: 73184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_mD4883EFA6A7FB332CB6C3B41AEE96B4A7B0FD787 (RefSafetyRulesAttribute_tC8269378E822707D4CD2BACE7C0157815EA4FA15* __this, int32_t ___0_p, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RefSafetyRulesAttribute__ctor_mD4883EFA6A7FB332CB6C3B41AEE96B4A7B0FD787_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RefSafetyRulesAttribute__ctor_mD4883EFA6A7FB332CB6C3B41AEE96B4A7B0FD787_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		int32_t L_0 = ___0_p;
@@ -462,13 +409,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_mD4883EFA6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74758
+// Method Definition Index: 73185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_Updated_m236B4D6AAF3342720696E96A252AAD9956B84A72 (UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_add_Updated_m236B4D6AAF3342720696E96A252AAD9956B84A72_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -478,8 +424,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_Updated_m236B4D6AAF33
 	UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* V_0 = NULL;
 	UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* V_1 = NULL;
 	UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_add_Updated_m236B4D6AAF3342720696E96A252AAD9956B84A72_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Updated;
@@ -488,7 +432,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_Updated_m236B4D6AAF33
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_1 = V_0;
 		V_1 = L_1;
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_2 = V_1;
@@ -513,13 +456,12 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74759
+// Method Definition Index: 73186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Updated_m6DD904116828854B4BDD51B968AE01FC49872A3B (UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_remove_Updated_m6DD904116828854B4BDD51B968AE01FC49872A3B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -529,8 +471,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Updated_m6DD904116
 	UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* V_0 = NULL;
 	UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* V_1 = NULL;
 	UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_remove_Updated_m6DD904116828854B4BDD51B968AE01FC49872A3B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Updated;
@@ -539,7 +479,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Updated_m6DD904116
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_1 = V_0;
 		V_1 = L_1;
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_2 = V_1;
@@ -564,14 +503,13 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74760
+// Method Definition Index: 73187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_BeforeFetchFromServer_m7C4023E81A6D8BDD9C7799109B2D3C16A8A71249 (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_add_BeforeFetchFromServer_m7C4023E81A6D8BDD9C7799109B2D3C16A8A71249_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -580,8 +518,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_BeforeFetchFromServer
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* V_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* V_1 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_add_BeforeFetchFromServer_m7C4023E81A6D8BDD9C7799109B2D3C16A8A71249_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___BeforeFetchFromServer;
@@ -590,7 +526,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_BeforeFetchFromServer
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = V_0;
 		V_1 = L_1;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = V_1;
@@ -615,14 +550,13 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74761
+// Method Definition Index: 73188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_BeforeFetchFromServer_m170DE118276391E8544343DD0EBFFF9DAA6EBD57 (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_remove_BeforeFetchFromServer_m170DE118276391E8544343DD0EBFFF9DAA6EBD57_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -631,8 +565,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_BeforeFetchFromSer
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* V_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* V_1 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_remove_BeforeFetchFromServer_m170DE118276391E8544343DD0EBFFF9DAA6EBD57_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___BeforeFetchFromServer;
@@ -641,7 +573,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_BeforeFetchFromSer
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = V_0;
 		V_1 = L_1;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = V_1;
@@ -666,14 +597,13 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74762
+// Method Definition Index: 73189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_Completed_mC6EBFB8A2A4CD30593ECE8E25A5D8F03F6197925 (Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_add_Completed_mC6EBFB8A2A4CD30593ECE8E25A5D8F03F6197925_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -682,8 +612,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_Completed_mC6EBFB8A2A
 	Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* V_0 = NULL;
 	Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* V_1 = NULL;
 	Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_add_Completed_mC6EBFB8A2A4CD30593ECE8E25A5D8F03F6197925_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Completed;
@@ -692,7 +620,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_add_Completed_mC6EBFB8A2A
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_1 = V_0;
 		V_1 = L_1;
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_2 = V_1;
@@ -717,14 +644,13 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74763
+// Method Definition Index: 73190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Completed_mF2B0CB5D6B5538FB6890D167271E5925A8EC90FF (Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_remove_Completed_mF2B0CB5D6B5538FB6890D167271E5925A8EC90FF_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -733,8 +659,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Completed_mF2B0CB5
 	Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* V_0 = NULL;
 	Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* V_1 = NULL;
 	Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_remove_Completed_mF2B0CB5D6B5538FB6890D167271E5925A8EC90FF_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Completed;
@@ -743,7 +667,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_remove_Completed_mF2B0CB5
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_1 = V_0;
 		V_1 = L_1;
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_2 = V_1;
@@ -768,31 +691,22 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74764
+// Method Definition Index: 73191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_RemoteSettingsUpdated_m6202CCC0AF33D44838BB46977D075E54FD5EC069 (bool ___0_wasLastUpdatedFromServer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_RemoteSettingsUpdated_m6202CCC0AF33D44838BB46977D075E54FD5EC069_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit);
+	//<source_info:<no-source>:1>
 	UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* V_0 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_wasLastUpdatedFromServer));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_RemoteSettingsUpdated_m6202CCC0AF33D44838BB46977D075E54FD5EC069_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 1));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:30>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 2));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Updated;
 		V_0 = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:31>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 3));
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_1 = V_0;
 		if (!L_1)
 		{
@@ -800,46 +714,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_RemoteSettingsUpdated_m62
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:32>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 4));
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_2 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 5));
 		NullCheck(L_2);
 		UpdatedEventHandler_Invoke_m4D496F648FD908A8537A35C4A94CBB44294D6D50_inline(L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 5));
 	}
 
 IL_000f:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:33>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 6));
 		return;
 	}
 }
-// Method Definition Index: 74765
+// Method Definition Index: 73192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_RemoteSettingsBeforeFetchFromServer_m677DED4CFA8C9E498227A3E939242974DF8FA35C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_RemoteSettingsBeforeFetchFromServer_m677DED4CFA8C9E498227A3E939242974DF8FA35C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit);
+	//<source_info:<no-source>:1>
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* V_0 = NULL;
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_RemoteSettingsBeforeFetchFromServer_m677DED4CFA8C9E498227A3E939242974DF8FA35C_RuntimeMethod_var, NULL, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 7));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 8));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:38>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 9));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___BeforeFetchFromServer;
 		V_0 = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:39>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 10));
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = V_0;
 		if (!L_1)
 		{
@@ -847,47 +747,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_RemoteSettingsBeforeFetch
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:40>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 11));
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 12));
 		NullCheck(L_2);
 		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 12));
 	}
 
 IL_000f:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:41>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 13));
 		return;
 	}
 }
-// Method Definition Index: 74766
+// Method Definition Index: 73193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_RemoteSettingsUpdateCompleted_m56713308E00B18BF0E5FADEC93D67A70F7E5FD86 (bool ___0_wasLastUpdatedFromServer, bool ___1_settingsChanged, int32_t ___2_response, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_RemoteSettingsUpdateCompleted_m56713308E00B18BF0E5FADEC93D67A70F7E5FD86_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit);
+	//<source_info:<no-source>:1>
 	Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* V_0 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_wasLastUpdatedFromServer), (&___1_settingsChanged), (&___2_response));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings_RemoteSettingsUpdateCompleted_m56713308E00B18BF0E5FADEC93D67A70F7E5FD86_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 14));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 15));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:46>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 16));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Completed;
 		V_0 = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:47>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 17));
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_1 = V_0;
 		if (!L_1)
 		{
@@ -895,26 +780,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings_RemoteSettingsUpdateCompl
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:48>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 18));
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_2 = V_0;
 		bool L_3 = ___0_wasLastUpdatedFromServer;
 		bool L_4 = ___1_settingsChanged;
 		int32_t L_5 = ___2_response;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 19));
 		NullCheck(L_2);
-		Action_3_Invoke_mB1AE88F5C5FE161C85EA4A58D5CC535721E01B21(L_2, L_3, L_4, L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 19));
+		Action_3_Invoke_mB1AE88F5C5FE161C85EA4A58D5CC535721E01B21_inline(L_2, L_3, L_4, L_5, NULL);
 	}
 
 IL_0012:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:49>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 20));
 		return;
 	}
 }
-// Method Definition Index: 74767
+// Method Definition Index: 73194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_m70E203F0445B0F5E6B504D2441AFFC455157EDBE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -922,20 +801,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings___AutoStaticsCleanup_Unit
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_m70E203F0445B0F5E6B504D2441AFFC455157EDBE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit);
+	//<source_info:<no-source>:1>
 	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* V_0 = NULL;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_m70E203F0445B0F5E6B504D2441AFFC455157EDBE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 21));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 22));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:27>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 23));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_0 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Updated;
 		if (!L_0)
@@ -944,45 +818,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings___AutoStaticsCleanup_Unit
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:29>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 24));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* L_1 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Updated;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 25));
 		NullCheck(L_1);
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_2;
 		L_2 = VirtualFuncInvoker0< DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* >::Invoke(9, L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 25));
 		V_0 = L_2;
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 26));
 		goto IL_0027;
 	}
 
 IL_0016:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:29>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 27));
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_3 = V_0;
 		int32_t L_4 = V_1;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		Delegate_t* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:31>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 28));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 29));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		RemoteSettings_remove_Updated_m6DD904116828854B4BDD51B968AE01FC49872A3B(((UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4*)CastclassSealed((RuntimeObject*)L_6, UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4_il2cpp_TypeInfo_var)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 29));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 30));
 		int32_t L_7 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
 IL_0027:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:29>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 31));
 		int32_t L_8 = V_1;
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_9 = V_0;
 		NullCheck(L_9);
@@ -995,8 +855,6 @@ IL_0027:
 
 IL_002d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:34>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 32));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_11 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___BeforeFetchFromServer;
 		if (!L_11)
@@ -1005,45 +863,31 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:36>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 33));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_12 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___BeforeFetchFromServer;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 34));
 		NullCheck(L_12);
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_13;
 		L_13 = VirtualFuncInvoker0< DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* >::Invoke(9, L_12);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 34));
 		V_0 = L_13;
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 35));
 		goto IL_0054;
 	}
 
 IL_0043:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:36>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 36));
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_14 = V_0;
 		int32_t L_15 = V_1;
 		NullCheck(L_14);
 		int32_t L_16 = L_15;
 		Delegate_t* L_17 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_16));
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:38>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 37));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 38));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		RemoteSettings_remove_BeforeFetchFromServer_m170DE118276391E8544343DD0EBFFF9DAA6EBD57(((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_17, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 38));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 39));
 		int32_t L_18 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
 IL_0054:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:36>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 40));
 		int32_t L_19 = V_1;
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_20 = V_0;
 		NullCheck(L_20);
@@ -1056,8 +900,6 @@ IL_0054:
 
 IL_005a:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:41>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 41));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_22 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Completed;
 		if (!L_22)
@@ -1066,45 +908,31 @@ IL_005a:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:43>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 42));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* L_23 = ((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->___Completed;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 43));
 		NullCheck(L_23);
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_24;
 		L_24 = VirtualFuncInvoker0< DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* >::Invoke(9, L_23);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 43));
 		V_0 = L_24;
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 44));
 		goto IL_0081;
 	}
 
 IL_0070:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:43>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 45));
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_25 = V_0;
 		int32_t L_26 = V_1;
 		NullCheck(L_25);
 		int32_t L_27 = L_26;
 		Delegate_t* L_28 = (L_25)->GetAt(static_cast<il2cpp_array_size_t>(L_27));
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:45>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 46));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 47));
 		CHECKED_LOCAL_INIT(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticInit,(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		RemoteSettings_remove_Completed_mF2B0CB5D6B5538FB6890D167271E5925A8EC90FF(((Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB*)Castclass((RuntimeObject*)L_28, Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB_il2cpp_TypeInfo_var)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 47));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 48));
 		int32_t L_29 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_29, 1));
 	}
 
 IL_0081:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:43>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 49));
 		int32_t L_30 = V_1;
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_31 = V_0;
 		NullCheck(L_31);
@@ -1117,12 +945,10 @@ IL_0081:
 
 IL_0087:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:48>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 50));
 		return;
 	}
 }
-// Method Definition Index: 74768
+// Method Definition Index: 73195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings__cctor_m902604C6AA3E17D91AF6F9AD882A468192715A4E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1131,32 +957,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteSettings__cctor_m902604C6AA3E17D91
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_m70E203F0445B0F5E6B504D2441AFFC455157EDBE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings__cctor_m902604C6AA3E17D91AF6F9AD882A468192715A4E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral567058D00FC118DAEB59AFA1642429006419ED0D);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(Type_t_StaticInit);
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteSettings__cctor_m902604C6AA3E17D91AF6F9AD882A468192715A4E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 51));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 52));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.RemoteSettings.autocleanup.generated.cs:50>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 53));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 54));
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, NULL, (intptr_t)((void*)RemoteSettings___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_m70E203F0445B0F5E6B504D2441AFFC455157EDBE_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 54));
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_1 = { reinterpret_cast<intptr_t> (CodeLoadedScope_t991AD106C7BA1C38DC99282B021A0E0986A8B811_0_0_0_var) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 55));
 		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Type_t* L_2;
 		L_2 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 55));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 56));
 		DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0* L_3 = (DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0*)il2cpp_codegen_object_new(DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0_il2cpp_TypeInfo_var);
 		DelegateAutoCleanup__ctor_mE4B45A8781C4FB94628512840346ADF0CEE55ABA(L_3, L_0, L_2, 2, _stringLiteral567058D00FC118DAEB59AFA1642429006419ED0D, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 56));
 		((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->_____autoCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&((RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_StaticFields*)il2cpp_codegen_static_fields_for(RemoteSettings_t9DFFC747AB3E7A39DF4527F245B529A407427250_il2cpp_TypeInfo_var))->_____autoCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting), (void*)L_3);
 		return;
@@ -1193,7 +1008,7 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_UpdatedEventHandler_tB0D5A5BA322FE0
 	il2cppPInvokeFunc();
 
 }
-// Method Definition Index: 74769
+// Method Definition Index: 73196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UpdatedEventHandler__ctor_mB914409481F8FDC738B4EDB1DBB4883F743F863A (UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -1228,7 +1043,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UpdatedEventHandler__ctor_mB914409481F8F
 	}
 	__this->___extra_arg = (intptr_t)UpdatedEventHandler_Invoke_m4D496F648FD908A8537A35C4A94CBB44294D6D50_Multicast;
 }
-// Method Definition Index: 74770
+// Method Definition Index: 73197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UpdatedEventHandler_Invoke_m4D496F648FD908A8537A35C4A94CBB44294D6D50 (UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -1289,30 +1104,16 @@ IL2CPP_EXTERN_C void RemoteConfigSettings_tC979947EE51355162B3241B9F80D95A8FD25F
 IL2CPP_EXTERN_C void RemoteConfigSettings_tC979947EE51355162B3241B9F80D95A8FD25FE52_marshal_com_cleanup(RemoteConfigSettings_tC979947EE51355162B3241B9F80D95A8FD25FE52_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 74771
+// Method Definition Index: 73198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteConfigSettings_RemoteConfigSettingsUpdated_mA71E7C6CDAF5D349BF0B4880A4D54DF2365EB948 (RemoteConfigSettings_tC979947EE51355162B3241B9F80D95A8FD25FE52* ___0_rcs, bool ___1_wasLastUpdatedFromServer, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RemoteConfigSettings_RemoteConfigSettingsUpdated_mA71E7C6CDAF5D349BF0B4880A4D54DF2365EB948_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
+	//<source_info:<no-source>:1>
 	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* V_0 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_rcs), (&___1_wasLastUpdatedFromServer));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RemoteConfigSettings_RemoteConfigSettingsUpdated_mA71E7C6CDAF5D349BF0B4880A4D54DF2365EB948_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 57));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 58));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:183>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 59));
 		RemoteConfigSettings_tC979947EE51355162B3241B9F80D95A8FD25FE52* L_0 = ___0_rcs;
 		NullCheck(L_0);
 		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_1 = L_0->___Updated;
 		V_0 = L_1;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:184>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 60));
 		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_2 = V_0;
 		if (!L_2)
 		{
@@ -1320,20 +1121,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteConfigSettings_RemoteConfigSetting
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:185>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 61));
 		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_3 = V_0;
 		bool L_4 = ___1_wasLastUpdatedFromServer;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 62));
 		NullCheck(L_3);
-		Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F(L_3, L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 62));
+		Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F_inline(L_3, L_4, NULL);
 	}
 
 IL_0011:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/RemoteSettings/RemoteSettings.bindings.cs:186>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 63));
 		return;
 	}
 }
@@ -1377,13 +1172,12 @@ IL_0011:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74772
+// Method Definition Index: 73199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_add_sessionStateChanged_mF51918A05A7489228D8EF3EA7E5CF34B1294FCD6 (SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_add_sessionStateChanged_mF51918A05A7489228D8EF3EA7E5CF34B1294FCD6_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -1393,8 +1187,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_add_sessionStateCha
 	SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* V_0 = NULL;
 	SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* V_1 = NULL;
 	SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo_add_sessionStateChanged_mF51918A05A7489228D8EF3EA7E5CF34B1294FCD6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_0 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___sessionStateChanged;
@@ -1403,7 +1195,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_add_sessionStateCha
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_1 = V_0;
 		V_1 = L_1;
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_2 = V_1;
@@ -1428,13 +1219,12 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74773
+// Method Definition Index: 73200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_sessionStateChanged_m92DCC7984A5447F18D61BF0ECBA4D3C2AAACB2CC (SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_remove_sessionStateChanged_m92DCC7984A5447F18D61BF0ECBA4D3C2AAACB2CC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -1444,8 +1234,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_sessionState
 	SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* V_0 = NULL;
 	SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* V_1 = NULL;
 	SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo_remove_sessionStateChanged_m92DCC7984A5447F18D61BF0ECBA4D3C2AAACB2CC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_0 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___sessionStateChanged;
@@ -1454,7 +1242,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_sessionState
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_1 = V_0;
 		V_1 = L_1;
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_2 = V_1;
@@ -1479,31 +1266,22 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74774
+// Method Definition Index: 73201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_CallSessionStateChanged_m6C3C7DD13064E37D7C3AE9411355BCEF77C4664B (int32_t ___0_sessionState, int64_t ___1_sessionId, int64_t ___2_sessionElapsedTime, bool ___3_sessionChanged, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_CallSessionStateChanged_m6C3C7DD13064E37D7C3AE9411355BCEF77C4664B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit);
+	//<source_info:<no-source>:1>
 	SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* V_0 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_sessionState), (&___1_sessionId), (&___2_sessionElapsedTime), (&___3_sessionChanged));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo_CallSessionStateChanged_m6C3C7DD13064E37D7C3AE9411355BCEF77C4664B_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 64));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 65));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:29>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 66));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_0 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___sessionStateChanged;
 		V_0 = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:30>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 67));
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_1 = V_0;
 		if (!L_1)
 		{
@@ -1511,33 +1289,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_CallSessionStateCha
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:31>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 68));
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_2 = V_0;
 		int32_t L_3 = ___0_sessionState;
 		int64_t L_4 = ___1_sessionId;
 		int64_t L_5 = ___2_sessionElapsedTime;
 		bool L_6 = ___3_sessionChanged;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 69));
 		NullCheck(L_2);
 		SessionStateChanged_Invoke_mB9195B30A226CB3E53E470C24FD31E039E5BB4F5_inline(L_2, L_3, L_4, L_5, L_6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 69));
 	}
 
 IL_0013:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:32>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 70));
 		return;
 	}
 }
-// Method Definition Index: 74775
+// Method Definition Index: 73202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_add_identityTokenChanged_m64C2D38EAE253AA50478B858E5E01CA1B13EFF78 (IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_add_identityTokenChanged_m64C2D38EAE253AA50478B858E5E01CA1B13EFF78_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -1547,8 +1318,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_add_identityTokenCh
 	IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* V_0 = NULL;
 	IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* V_1 = NULL;
 	IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo_add_identityTokenChanged_m64C2D38EAE253AA50478B858E5E01CA1B13EFF78_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_0 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___identityTokenChanged;
@@ -1557,7 +1326,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_add_identityTokenCh
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_1 = V_0;
 		V_1 = L_1;
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_2 = V_1;
@@ -1582,13 +1350,12 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74776
+// Method Definition Index: 73203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_identityTokenChanged_mA043898827661833FCE89DCC3682B5FF3FC19C69 (IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_remove_identityTokenChanged_mA043898827661833FCE89DCC3682B5FF3FC19C69_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -1598,8 +1365,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_identityToke
 	IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* V_0 = NULL;
 	IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* V_1 = NULL;
 	IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* V_2 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo_remove_identityTokenChanged_mA043898827661833FCE89DCC3682B5FF3FC19C69_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_0 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___identityTokenChanged;
@@ -1608,7 +1373,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_remove_identityToke
 
 IL_0006:
 	{
-		CHECK_PAUSE_POINT;
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_1 = V_0;
 		V_1 = L_1;
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_2 = V_1;
@@ -1633,31 +1397,22 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 74777
+// Method Definition Index: 73204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_CallIdentityTokenChanged_m1AD21A1840BCB9CB222455F609DBBF7B7B380911 (String_t* ___0_token, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_CallIdentityTokenChanged_m1AD21A1840BCB9CB222455F609DBBF7B7B380911_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit);
+	//<source_info:<no-source>:1>
 	IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* V_0 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_token));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo_CallIdentityTokenChanged_m1AD21A1840BCB9CB222455F609DBBF7B7B380911_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 71));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 72));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:108>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 73));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_0 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___identityTokenChanged;
 		V_0 = L_0;
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:109>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 74));
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_1 = V_0;
 		if (!L_1)
 		{
@@ -1665,44 +1420,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo_CallIdentityTokenCh
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:110>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 75));
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_2 = V_0;
 		String_t* L_3 = ___0_token;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 76));
 		NullCheck(L_2);
 		IdentityTokenChanged_Invoke_m22D3DA825F0D6E701D050EFA3D35E84DFAC7F8D9_inline(L_2, L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 76));
 	}
 
 IL_0010:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/Modules/UnityAnalytics/Public/AnalyticsSessionInfo.bindings.cs:111>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 77));
 		return;
 	}
 }
-// Method Definition Index: 74778
+// Method Definition Index: 73205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_mD0CF962989CF83060CE540F74D394D11FDBEB34B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_mD0CF962989CF83060CE540F74D394D11FDBEB34B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit);
+	//<source_info:<no-source>:1>
 	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* V_0 = NULL;
 	int32_t V_1 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_mD0CF962989CF83060CE540F74D394D11FDBEB34B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 78));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 79));
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:15>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 80));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_0 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___sessionStateChanged;
 		if (!L_0)
@@ -1711,45 +1455,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo___AutoStaticsCleanu
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 81));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* L_1 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___sessionStateChanged;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 82));
 		NullCheck(L_1);
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_2;
 		L_2 = VirtualFuncInvoker0< DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* >::Invoke(9, L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 82));
 		V_0 = L_2;
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 83));
 		goto IL_0027;
 	}
 
 IL_0016:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 84));
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_3 = V_0;
 		int32_t L_4 = V_1;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		Delegate_t* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:19>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 85));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 86));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		AnalyticsSessionInfo_remove_sessionStateChanged_m92DCC7984A5447F18D61BF0ECBA4D3C2AAACB2CC(((SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C*)CastclassSealed((RuntimeObject*)L_6, SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C_il2cpp_TypeInfo_var)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 86));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 87));
 		int32_t L_7 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
 IL_0027:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:17>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 88));
 		int32_t L_8 = V_1;
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_9 = V_0;
 		NullCheck(L_9);
@@ -1762,8 +1492,6 @@ IL_0027:
 
 IL_002d:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:22>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 89));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_11 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___identityTokenChanged;
 		if (!L_11)
@@ -1772,45 +1500,31 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:24>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 90));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* L_12 = ((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->___identityTokenChanged;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 91));
 		NullCheck(L_12);
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_13;
 		L_13 = VirtualFuncInvoker0< DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* >::Invoke(9, L_12);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 91));
 		V_0 = L_13;
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 92));
 		goto IL_0054;
 	}
 
 IL_0043:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:24>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 93));
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_14 = V_0;
 		int32_t L_15 = V_1;
 		NullCheck(L_14);
 		int32_t L_16 = L_15;
 		Delegate_t* L_17 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_16));
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:26>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 94));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 95));
 		CHECKED_LOCAL_INIT(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticInit,(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		AnalyticsSessionInfo_remove_identityTokenChanged_mA043898827661833FCE89DCC3682B5FF3FC19C69(((IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395*)CastclassSealed((RuntimeObject*)L_17, IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395_il2cpp_TypeInfo_var)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 95));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 96));
 		int32_t L_18 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
 IL_0054:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:24>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 97));
 		int32_t L_19 = V_1;
 		DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* L_20 = V_0;
 		NullCheck(L_20);
@@ -1823,12 +1537,10 @@ IL_0054:
 
 IL_005a:
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:29>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 98));
 		return;
 	}
 }
-// Method Definition Index: 74779
+// Method Definition Index: 73206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo__cctor_mB6F61DDA0DDB0D371D13A6A30E77B872A6C2580F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1836,33 +1548,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnalyticsSessionInfo__cctor_mB6F61DDA0DD
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_mD0CF962989CF83060CE540F74D394D11FDBEB34B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo__cctor_mB6F61DDA0DDB0D371D13A6A30E77B872A6C2580F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF5E7B3EA46B04B4A96CF9E4C5397AD390A259B27);
 		s_Il2CppMethodInitialized = true;
 	}
 	CHECKED_LOCAL(Type_t_StaticInit);
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnalyticsSessionInfo__cctor_mB6F61DDA0DDB0D371D13A6A30E77B872A6C2580F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 99));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 100));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:/home/bokken/build/output/unity/unity/artifacts/Android/Modules/Release_IL2CPP/Unprocessed/Unity.Analyzers.Common/Unity.Analyzers.Common.AutoStaticsCleanup.AutoStaticsCleanupCodeGenerator/UnityEngine.Analytics.AnalyticsSessionInfo.autocleanup.generated.cs:31>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 101));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 102));
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, NULL, (intptr_t)((void*)AnalyticsSessionInfo___AutoStaticsCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting_mD0CF962989CF83060CE540F74D394D11FDBEB34B_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 102));
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_1 = { reinterpret_cast<intptr_t> (CodeLoadedScope_t991AD106C7BA1C38DC99282B021A0E0986A8B811_0_0_0_var) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 103));
 		CHECKED_LOCAL_INIT(Type_t_StaticInit,(Type_t_il2cpp_TypeInfo_var),il2cpp_codegen_runtime_class_init_inline);
 		Type_t* L_2;
 		L_2 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 103));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 104));
 		DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0* L_3 = (DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0*)il2cpp_codegen_object_new(DelegateAutoCleanup_tF4041A6DFD65AFBE2B6806A7247061B73214F6A0_il2cpp_TypeInfo_var);
 		DelegateAutoCleanup__ctor_mE4B45A8781C4FB94628512840346ADF0CEE55ABA(L_3, L_0, L_2, 2, _stringLiteralF5E7B3EA46B04B4A96CF9E4C5397AD390A259B27, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UnityAnalyticsModule + 104));
 		((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->_____autoCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&((AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_StaticFields*)il2cpp_codegen_static_fields_for(AnalyticsSessionInfo_tDE8F7A9E13EF9723E2D975F76E916753DA61AD76_il2cpp_TypeInfo_var))->_____autoCleanup_Unity_Scripting_LifecycleManagement_CodeLoadedScope_Exiting), (void*)L_3);
 		return;
@@ -1899,7 +1600,7 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_SessionStateChanged_t1180FB66E702B6
 	il2cppPInvokeFunc(___0_sessionState, ___1_sessionId, ___2_sessionElapsedTime, static_cast<int32_t>(___3_sessionChanged));
 
 }
-// Method Definition Index: 74780
+// Method Definition Index: 73207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SessionStateChanged__ctor_m8E04BB6766439BA455F9C808171BD791230496D8 (SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -1934,7 +1635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SessionStateChanged__ctor_m8E04BB6766439
 	}
 	__this->___extra_arg = (intptr_t)SessionStateChanged_Invoke_mB9195B30A226CB3E53E470C24FD31E039E5BB4F5_Multicast;
 }
-// Method Definition Index: 74781
+// Method Definition Index: 73208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SessionStateChanged_Invoke_mB9195B30A226CB3E53E470C24FD31E039E5BB4F5 (SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* __this, int32_t ___0_sessionState, int64_t ___1_sessionId, int64_t ___2_sessionElapsedTime, bool ___3_sessionChanged, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -1984,7 +1685,7 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_IdentityTokenChanged_tE8CB0DAB5F6E6
 	____0_token_marshaled = NULL;
 
 }
-// Method Definition Index: 74782
+// Method Definition Index: 73209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IdentityTokenChanged__ctor_m1970F8BEEDAA84A8FC5ABB973C0DB62FA2AA8312 (IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -2027,7 +1728,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IdentityTokenChanged__ctor_m1970F8BEEDAA
 	}
 	__this->___extra_arg = (intptr_t)IdentityTokenChanged_Invoke_m22D3DA825F0D6E701D050EFA3D35E84DFAC7F8D9_Multicast;
 }
-// Method Definition Index: 74783
+// Method Definition Index: 73210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IdentityTokenChanged_Invoke_m22D3DA825F0D6E701D050EFA3D35E84DFAC7F8D9 (IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* __this, String_t* ___0_token, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -2037,7 +1738,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IdentityTokenChanged_Invoke_m22D3DA825F0
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 74770
+// Method Definition Index: 73197
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UpdatedEventHandler_Invoke_m4D496F648FD908A8537A35C4A94CBB44294D6D50_inline (UpdatedEventHandler_tB0D5A5BA322FE093894992C29DCF51E7E12579C4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -2051,17 +1752,31 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 74781
+// Method Definition Index: 73208
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionStateChanged_Invoke_mB9195B30A226CB3E53E470C24FD31E039E5BB4F5_inline (SessionStateChanged_t1180FB66E702B635CAD9316DC661D931277B2A0C* __this, int32_t ___0_sessionState, int64_t ___1_sessionId, int64_t ___2_sessionElapsedTime, bool ___3_sessionChanged, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
 	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, int64_t, int64_t, bool, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_sessionState, ___1_sessionId, ___2_sessionElapsedTime, ___3_sessionChanged, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 74783
+// Method Definition Index: 73210
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void IdentityTokenChanged_Invoke_m22D3DA825F0D6E701D050EFA3D35E84DFAC7F8D9_inline (IdentityTokenChanged_tE8CB0DAB5F6E640A847803F582E6CB6237742395* __this, String_t* ___0_token, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
 	typedef void (*FunctionPointerType) (RuntimeObject*, String_t*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_token, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 880
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_3_Invoke_mB1AE88F5C5FE161C85EA4A58D5CC535721E01B21_inline (Action_3_t4730167C8E7EB19F1E0034580790A915D549F6CB* __this, bool ___0_arg1, bool ___1_arg2, int32_t ___2_arg3, const RuntimeMethod* method) 
+{
+	//<source_info:<no-source>:1>
+	typedef void (*FunctionPointerType) (RuntimeObject*, bool, bool, int32_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 876
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_m69C8773D6967F3B224777183E24EA621CE056F8F_inline (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* __this, bool ___0_obj, const RuntimeMethod* method) 
+{
+	//<source_info:<no-source>:1>
+	typedef void (*FunctionPointerType) (RuntimeObject*, bool, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }

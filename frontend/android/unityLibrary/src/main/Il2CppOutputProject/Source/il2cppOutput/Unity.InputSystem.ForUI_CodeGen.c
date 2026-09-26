@@ -102,7 +102,6 @@ static Il2CppMethodPointer s_methodPointers[46] =
 	U3CU3Ec__ctor_m6BD3143DCD50739AFCB2155BC88628BBCC8AEACE,
 	U3CU3Ec_U3CUpdateU3Eb__35_0_mAF1E24FDD0A36275AC0F451D516A5789F2538A08,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_InputSystem_ForUI;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_InputSystem_ForUI_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_InputSystem_ForUI_CodeGenModule = 
 {
@@ -113,7 +112,7 @@ const Il2CppCodeGenModule g_Unity_InputSystem_ForUI_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_InputSystem_ForUI,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -21,6 +21,8 @@ public class GemHighlightManager : MonoBehaviour
 {
     public static GemHighlightManager Instance { get; private set; }
 
+    public GemType? HighlightedType => _hasHighlight ? _highlightedType : null;
+
     private GemType _highlightedType;
     private bool    _hasHighlight = false;
     private Coroutine _checkCoroutine;

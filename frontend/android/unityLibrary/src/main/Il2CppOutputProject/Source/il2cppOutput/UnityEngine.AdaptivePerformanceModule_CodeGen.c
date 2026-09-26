@@ -36,7 +36,6 @@ static Il2CppMethodPointer s_methodPointers[13] =
 	AdaptivePerformanceRenderSettings_get_SkipTransparentObjects_mF14292D682D98CD5D4BF34B9CA606FDE38918F6E,
 	AdaptivePerformanceRenderSettings__cctor_mAA2D2F6F74CADD156149ADB4939A7D4ABDDD118D,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_AdaptivePerformanceModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AdaptivePerformanceModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_AdaptivePerformanceModule_CodeGenModule = 
 {
@@ -47,7 +46,7 @@ const Il2CppCodeGenModule g_UnityEngine_AdaptivePerformanceModule_CodeGenModule 
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_AdaptivePerformanceModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

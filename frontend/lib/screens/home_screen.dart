@@ -1,44 +1,92 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../widgets/gaming_button.dart';
 import 'leaderboard_screen.dart';
 import 'settings_screen.dart';
+import 'game_screen.dart';
+import 'store_screen.dart';
+import '../services/audio_service.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+  late AnimationController _animController;
+
+  @override
+  void initState() {
+    super.initState();
+    _animController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 8),
+    )..repeat(reverse: true);
+    
+    // Iniciar música de fondo
+    AudioService().playBgMusic();
+  }
+
+  @override
+  void dispose() {
+    _animController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          // Fondo
+          // Fondo base
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF0F0C29), Color(0xFF302B63), Color(0xFF24243E)],
+                colors: [AppTheme.darkBackground, Color(0xFF0A1128)],
                 begin: Alignment.bottomRight,
                 end: Alignment.topLeft,
               ),
             ),
           ),
           
+          // Blobs animados flotando (Efecto ASMR)
+          AnimatedBuilder(
+            animation: _animController,
+            builder: (context, child) {
+              return Stack(
+                children: [
+                  Positioned(
+                    top: -50 + (_animController.value * 30),
+                    left: -50 - (_animController.value * 20),
+                    child: _buildBlurBlob(color: AppTheme.neonCyan, size: 250),
+                  ),
+                  Positioned(
+                    bottom: 100 - (_animController.value * 40),
+                    right: -50 + (_animController.value * 30),
+                    child: _buildBlurBlob(color: const Color(0xFF312E81), size: 300),
+                  ),
+                ],
+              );
+            },
+          ),
+          
           SafeArea(
             child: Column(
               children: [
-                const Spacer(flex: 2),
+                const Spacer(flex: 1),
                 
-                // Logo 
+                // Título Glassy
                 Text(
                   'Glassy',
                   style: Theme.of(context).textTheme.displayLarge?.copyWith(
                     color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 2,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 4,
                     shadows: [
-                      const Shadow(
-                        color: AppTheme.neonBlue,
-                        blurRadius: 20,
-                      )
+                      const Shadow(color: AppTheme.neonCyan, blurRadius: 25),
+                      const Shadow(color: Colors.white, blurRadius: 5),
                     ],
                   ),
                 ),
@@ -47,71 +95,91 @@ class HomeScreen extends StatelessWidget {
                   'Merge to evolve',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: Colors.white70,
+                    letterSpacing: 2,
                   ),
                 ),
                 
-                const Spacer(flex: 3),
+                const Spacer(flex: 2),
                 
-                // Botón PLAY gigante
-                GestureDetector(
-                  onTap: () {
-                    // TODO: Navegar a GameScreen
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 20),
-                    decoration: BoxDecoration(
-                      color: AppTheme.neonPurple.withOpacity(0.8),
-                      borderRadius: BorderRadius.circular(40),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppTheme.neonPurple.withOpacity(0.5),
-                          blurRadius: 25,
-                          spreadRadius: 2,
-                        ),
-                      ],
-                    ),
-                    child: Text(
-                      'Play!!!',
-                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-                
-                const Spacer(flex: 3),
-                
-                // Botones Inferiores (Leaderboard y Settings)
+                // Botones ordenados verticalmente
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Column(
                     children: [
-                      // Leaderboard
-                      IconButton(
+                      GamingButton(
+                        text: 'PLAY',
+                        icon: const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 32),
+                        height: 75,
+                        fontSize: 28,
+                        primaryColor: AppTheme.neonCyan,
+                        secondaryColor: AppTheme.tealGlass,
+                        onPressed: () async {
+                          AudioService().stopBgMusic();
+                          await Navigator.push(context, MaterialPageRoute(builder: (_) => const GameScreen()));
+                          AudioService().playBgMusic();
+                        },
+                      ),
+                      const SizedBox(height: 20),
+                      GamingButton(
+                        text: 'LEADERBOARDS',
+                        icon: const Icon(Icons.leaderboard_rounded, color: Colors.white),
+                        height: 60,
+                        fontSize: 18,
+                        primaryColor: const Color(0xFFB388FF), // Purple
+                        secondaryColor: const Color(0xFF651FFF),
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (_) => const LeaderboardScreen()));
                         },
-                        icon: const Icon(Icons.leaderboard_rounded),
-                        color: Colors.white,
-                        iconSize: 35,
                       ),
-                      
-                      // Settings
-                      IconButton(
+                      const SizedBox(height: 20),
+                      GamingButton(
+                        text: 'STORE',
+                        icon: const Icon(Icons.store_rounded, color: Colors.white),
+                        height: 60,
+                        fontSize: 18,
+                        primaryColor: const Color(0xFFFFD54F), // Amber
+                        secondaryColor: const Color(0xFFFF8F00),
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => const StoreScreen()));
+                        },
+                      ),
+                      const SizedBox(height: 20),
+                      GamingButton(
+                        text: 'SETTINGS',
+                        icon: const Icon(Icons.settings_rounded, color: Colors.white),
+                        height: 60,
+                        fontSize: 18,
+                        primaryColor: const Color(0xFF90A4AE), // Blue Grey
+                        secondaryColor: const Color(0xFF546E7A),
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen()));
                         },
-                        icon: const Icon(Icons.settings),
-                        color: Colors.white,
-                        iconSize: 35,
                       ),
                     ],
                   ),
-                )
+                ),
+                
+                const Spacer(flex: 2),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBlurBlob({required Color color, required double size}) {
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: color.withOpacity(0.15),
+        boxShadow: [
+          BoxShadow(
+            color: color.withOpacity(0.2),
+            blurRadius: 100,
+            spreadRadius: 50,
           ),
         ],
       ),

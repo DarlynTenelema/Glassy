@@ -1149,7 +1149,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] =
 	{ 0x0600013C, JStringBinding_ToString_mD50BA7AA65F37BF1CD48CCAF39BCCDD91C2B9051_AdjustorThunk },
 	{ 0x0600013D, JStringBinding_Dispose_m4182F892B4BFDAF1271D9FCAF22B7B3A4483ACE5_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_AndroidJNIModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGenModule = 
 {
@@ -1160,7 +1159,7 @@ const Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_AndroidJNIModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -235,7 +235,6 @@ static Il2CppMethodPointer s_methodPointers[135] =
 	RequiredByNativeCodeAttribute_set_GenerateProxy_m22975660D9481C771FCCB9F88E60970993BF66F9,
 	PreserveAttribute__ctor_mFBCD210335404CF77CBA91028DD699B1EF5A277F,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_ScriptingModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_ScriptingModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_ScriptingModule_CodeGenModule = 
 {
@@ -246,7 +245,7 @@ const Il2CppCodeGenModule g_UnityEngine_ScriptingModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_ScriptingModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

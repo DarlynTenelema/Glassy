@@ -5,6 +5,9 @@ import '../config/env.dart';
 import '../theme/app_theme.dart';
 import 'home_screen.dart';
 import '../widgets/gaming_button.dart';
+import '../widgets/jar_loading_widget.dart';
+import '../widgets/shatter_widget.dart';
+import '../services/audio_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -14,11 +17,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool _isLoading = false;
+  bool _isShattered = false;
 
   @override
   void initState() {
     super.initState();
+    AudioService().stopBgMusic();
     // Revisa si ya hay una sesión activa para saltar el login
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (Supabase.instance.client.auth.currentSession != null) {
@@ -31,22 +35,26 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future<void> _signInWithGoogle() async {
     setState(() {
-      _isLoading = true;
+      _isShattered = true; // Inicia la rotura del botón
     });
     
+    // Le damos un momento a la animación para que se vea
+    await Future.delayed(const Duration(milliseconds: 600));
+    
     try {
-      final googleSignIn = GoogleSignIn(
-        serverClientId: Env.webClientId,
-      );
-      
-      final googleUser = await googleSignIn.signIn();
-      if (googleUser == null) {
-        setState(() => _isLoading = false);
-        return; // El usuario canceló el inicio de sesión
+      GoogleSignInAccount? googleUser;
+      try {
+        googleUser = await GoogleSignIn.instance.authenticate();
+        if (googleUser == null) {
+          if (mounted) setState(() => _isShattered = false); // Regenerar
+          return;
+        }
+      } catch (e) {
+        if (mounted) setState(() => _isShattered = false); // Regenerar sin error técnico
+        return;
       }
       
       final googleAuth = await googleUser.authentication;
-      final accessToken = googleAuth.accessToken;
       final idToken = googleAuth.idToken;
 
       if (idToken == null) {
@@ -56,7 +64,6 @@ class _LoginScreenState extends State<LoginScreen> {
       await Supabase.instance.client.auth.signInWithIdToken(
         provider: OAuthProvider.google,
         idToken: idToken,
-        accessToken: accessToken,
       );
 
       if (mounted) {
@@ -65,18 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
         );
       }
     } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error al iniciar sesión: $e'),
-            backgroundColor: Colors.red,
-          )
-        );
-      }
-    } finally {
-      if (mounted) {
-        setState(() => _isLoading = false);
-      }
+      if (mounted) setState(() => _isShattered = false); // Regenerar
     }
   }
 
@@ -89,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF0F0C29), Color(0xFF302B63), Color(0xFF24243E)],
+                colors: [AppTheme.darkBackground, Color(0xFF0F2027), Color(0xFF203A43)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -110,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       letterSpacing: 2,
                       shadows: [
                         const Shadow(
-                          color: AppTheme.neonPurple,
+                          color: AppTheme.neonCyan,
                           blurRadius: 20,
                         )
                       ],
@@ -127,25 +123,27 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Botón de Google
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40),
-                    child: _isLoading 
-                        ? const Padding(
-                            padding: EdgeInsets.all(15.0),
-                            child: CircularProgressIndicator(color: Colors.white),
-                          )
-                        : GamingButton(
-                            text: 'JUGAR CON GOOGLE',
-                            icon: CircleAvatar(
-                              backgroundColor: Colors.white,
-                              radius: 16,
-                              child: Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Image.asset('assets/office/google.png'),
-                              ),
+                    child: IgnorePointer(
+                      ignoring: _isShattered,
+                      child: ShatterWidget(
+                        isShattered: _isShattered,
+                        child: GamingButton(
+                          text: 'JUGAR CON GOOGLE',
+                          icon: CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 16,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Image.asset('assets/office/google.png'),
                             ),
-                            onPressed: _signInWithGoogle,
-                            primaryColor: AppTheme.neonBlue,
-                            secondaryColor: const Color(0xFF008B99),
                           ),
+                          onPressed: _signInWithGoogle,
+                          primaryColor: AppTheme.neonCyan,
+                          secondaryColor: AppTheme.tealGlass,
+                          shatterEffect: false, // ShatterWidget controla la magia
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 30),
                   const Padding(

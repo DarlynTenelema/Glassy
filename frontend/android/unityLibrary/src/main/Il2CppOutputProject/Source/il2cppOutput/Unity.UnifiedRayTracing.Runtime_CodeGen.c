@@ -952,7 +952,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[6] =
 	{ 0x060000DF, ComputeTerrainMeshJob_Execute_m6A6EB6F7E3682AD85EDB81A376C0CBCD03C78DFC_AdjustorThunk },
 	{ 0x060000EE, BlockAllocator_Dispose_m06C0E65586B479EF5A9802BED16C59FA212018E5_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_UnifiedRayTracing_Runtime;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_UnifiedRayTracing_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_UnifiedRayTracing_Runtime_CodeGenModule = 
 {
@@ -963,7 +962,7 @@ const Il2CppCodeGenModule g_Unity_UnifiedRayTracing_Runtime_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_UnifiedRayTracing_Runtime,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

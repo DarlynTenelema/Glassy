@@ -347,7 +347,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[15] =
 	{ 0x0600006A, DelaEdgeCompare_Compare_m3768AE47BB0A6D4F509B4A6A51B9D07D653E6965_AdjustorThunk },
 	{ 0x06000092, Int3Compare_Compare_m7EFE1996FEDFA411A7DA01C7EB2AAC13398DFD60_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_2D_Common_Runtime;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_2D_Common_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_2D_Common_Runtime_CodeGenModule = 
 {
@@ -358,7 +357,7 @@ const Il2CppCodeGenModule g_Unity_2D_Common_Runtime_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_2D_Common_Runtime,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

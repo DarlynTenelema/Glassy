@@ -1097,7 +1097,6 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[8] =
 	{ 0x060001F0, UVFallbackBufferKey_GetHashCode_m8CBEC5825936A6A7863FFDA034060AC22B0B5166_AdjustorThunk },
 	{ 0x060001FF, MeshChartIdentificationJob_Execute_m1D38D1343F46B1CBA78AEEE081E1A883DA75A3A4_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_PathTracing_Runtime;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_PathTracing_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_PathTracing_Runtime_CodeGenModule = 
 {
@@ -1108,7 +1107,7 @@ const Il2CppCodeGenModule g_Unity_PathTracing_Runtime_CodeGenModule =
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_PathTracing_Runtime,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

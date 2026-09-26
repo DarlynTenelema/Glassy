@@ -9,8 +9,6 @@ struct Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA;
 struct EmbeddedAttribute_tBA2613C80CE04CDD5F0D03723A7454296C10BA5B;
 struct RefSafetyRulesAttribute_t7175D017D5CC9763D764EF7407C5FB6683C4D75D;
 
-IL2CPP_EXTERN_C const RuntimeMethod* EmbeddedAttribute__ctor_mEB803648DF667ECA50D661689CE20CD75239CD41_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RefSafetyRulesAttribute__ctor_m566490389527EEBD269F3F860BDD72D500E5CF83_RuntimeMethod_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -87,18 +85,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Attribute__ctor_m79ED1BF1EE36D1E417BA89A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74902
+// Method Definition Index: 73283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_mEB803648DF667ECA50D661689CE20CD75239CD41 (EmbeddedAttribute_tBA2613C80CE04CDD5F0D03723A7454296C10BA5B* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EmbeddedAttribute__ctor_mEB803648DF667ECA50D661689CE20CD75239CD41_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, EmbeddedAttribute__ctor_mEB803648DF667ECA50D661689CE20CD75239CD41_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		return;
@@ -112,18 +102,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_mEB803648DF667EC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74903
+// Method Definition Index: 73284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_m566490389527EEBD269F3F860BDD72D500E5CF83 (RefSafetyRulesAttribute_t7175D017D5CC9763D764EF7407C5FB6683C4D75D* __this, int32_t ___0_p, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RefSafetyRulesAttribute__ctor_m566490389527EEBD269F3F860BDD72D500E5CF83_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	//<source_info:<no-source>:1>
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, RefSafetyRulesAttribute__ctor_m566490389527EEBD269F3F860BDD72D500E5CF83_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		int32_t L_0 = ___0_p;
@@ -139,7 +121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_m566490389
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74904
+// Method Definition Index: 73285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderAs2DUtil_InitializeCanRenderAs2D_mE5CB68451AF6AE5EBC965EE700A067DA8CF5EEA5 (const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -149,7 +131,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderAs2DUtil_InitializeCanRenderAs2D_m
 	_il2cpp_icall_func = (RenderAs2DUtil_InitializeCanRenderAs2D_mE5CB68451AF6AE5EBC965EE700A067DA8CF5EEA5_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderAs2DUtil::InitializeCanRenderAs2D()");
 	_il2cpp_icall_func();
 }
-// Method Definition Index: 74905
+// Method Definition Index: 73286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderAs2DUtil_DisposeCanRenderAs2D_mBCFB3191DF91EBE61CF3A915D17EA2B0121B2997 (const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>

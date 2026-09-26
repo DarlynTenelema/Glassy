@@ -84,7 +84,6 @@ static Il2CppMethodPointer s_methodPointers[40] =
 	SubsystemDescriptorWithProvider__ctor_mADB008B99F8F98EDD0C5AEBE00368F96D11FCCD1,
 	SubsystemWithProvider__ctor_m7AAC2F13A01D674BF5040F42A08C88611FE60914,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_SubsystemsModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SubsystemsModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SubsystemsModule_CodeGenModule = 
 {
@@ -95,7 +94,7 @@ const Il2CppCodeGenModule g_UnityEngine_SubsystemsModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_SubsystemsModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

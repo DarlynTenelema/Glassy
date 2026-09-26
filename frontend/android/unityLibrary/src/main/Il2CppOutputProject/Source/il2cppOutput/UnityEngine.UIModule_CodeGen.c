@@ -341,7 +341,6 @@ static Il2CppMethodPointer s_methodPointers[166] =
 	UISystemProfilerApi_AddMarker_mB0E292213D18AE3770165011E265A57B17FCF90B,
 	UISystemProfilerApi_AddMarker_Injected_m996600B5A4A5261D9699ADD3F4786EEAEF409121,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_UIModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UIModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_UIModule_CodeGenModule = 
 {
@@ -352,7 +351,7 @@ const Il2CppCodeGenModule g_UnityEngine_UIModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_UIModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

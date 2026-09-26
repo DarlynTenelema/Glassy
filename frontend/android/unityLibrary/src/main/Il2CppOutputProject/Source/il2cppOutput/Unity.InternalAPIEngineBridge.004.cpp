@@ -11,11 +11,7 @@ struct TMPHelpURL_t8DC2B4A929F46C3F7E5809052038FB7BD9BC0AA4;
 struct UIModuleHelpURL_tF0DA7D43BD31FA7774C84B5EE210172A9BBE0D20;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_InternalAPIEngineBridge_004[];
 IL2CPP_EXTERN_C String_t* _stringLiteral8D831953437178E747E963C4D0C0B4B193912365;
-IL2CPP_EXTERN_C const RuntimeMethod* ObjectUtilsBridge_MarkDirty_m806D9A6DB8982C962721D9E4B974BBC23B38B5EE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* TMPHelpURL__ctor_m7C42784B8848234D4344E83F18520D6523857D6C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* TMPHelpURL_t8DC2B4A929F46C3F7E5809052038FB7BD9BC0AA4_0_0_0_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -117,30 +113,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIModuleHelpURL__ctor_m2DB495CCC60ACCC50
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75117
+// Method Definition Index: 73545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectUtilsBridge_MarkDirty_m806D9A6DB8982C962721D9E4B974BBC23B38B5EE (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
+	//<source_info:<no-source>:1>
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectUtilsBridge_MarkDirty_m806D9A6DB8982C962721D9E4B974BBC23B38B5EE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_obj));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, ObjectUtilsBridge_MarkDirty_m806D9A6DB8982C962721D9E4B974BBC23B38B5EE_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 1));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 2));
-		//<source_info:./Library/PackageCache/com.unity.ugui@23caec89ae27/Runtime/InternalBridge/ObjectUtilsBridge.cs:11>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 3));
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = ___0_obj;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 4));
 		NullCheck(L_0);
 		Object_MarkDirty_mDD84118E8E823F03DFAE1CEEDB7D6E003FAB78E8(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 4));
-		//<source_info:./Library/PackageCache/com.unity.ugui@23caec89ae27/Runtime/InternalBridge/ObjectUtilsBridge.cs:12>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 5));
 		return;
 	}
 }
@@ -152,35 +132,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectUtilsBridge_MarkDirty_m806D9A6DB89
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75118
+// Method Definition Index: 73546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMPHelpURL__ctor_m7C42784B8848234D4344E83F18520D6523857D6C (TMPHelpURL_t8DC2B4A929F46C3F7E5809052038FB7BD9BC0AA4* __this, String_t* ___0_pageName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TMPHelpURL__ctor_m7C42784B8848234D4344E83F18520D6523857D6C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8D831953437178E747E963C4D0C0B4B193912365);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_pageName));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMPHelpURL__ctor_m7C42784B8848234D4344E83F18520D6523857D6C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 6));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 7));
+	//<source_info:<no-source>:1>
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@23caec89ae27/Runtime/InternalBridge/TMPHelpURL.cs:10>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 8));
 		String_t* L_0 = ___0_pageName;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 9));
 		String_t* L_1;
 		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral8D831953437178E747E963C4D0C0B4B193912365, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 9));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 10));
 		UIModuleHelpURL__ctor_m2DB495CCC60ACCC504006ADACBBABB204B98820C(__this, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 10));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 11));
-		//<source_info:./Library/PackageCache/com.unity.ugui@23caec89ae27/Runtime/InternalBridge/TMPHelpURL.cs:10>
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_InternalAPIEngineBridge_004 + 12));
 		return;
 	}
 }

@@ -89,19 +89,10 @@ extern void ModuleHandle_Tessellate_m9B23D8DDAB759228651BBC8D682A4F6E75A72504 (v
 extern void ModuleHandle_Subdivide_m7695E07CA65BE4E7B230BB2FC86CF152F5CF4B8C (void);
 extern void ModuleHandle__cctor_m65A8673674906F9A0A532FE0E6EA8C5F3921DECC (void);
 extern void Geometry_Generate_mBEAE2BC7A84FCA2602B3AC326711BF9F28DB7A6B (void);
-static Il2CppMethodPointer s_methodPointers[115] = 
+static Il2CppMethodPointer s_methodPointers[106] = 
 {
 	EmbeddedAttribute__ctor_m16674719DAC914199CA64C936787DA2746885A44,
 	RefSafetyRulesAttribute__ctor_m663F8F6C1862DB2DAC3091E10B2857F957F8914B,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
 	NULL,
 	NULL,
 	NULL,
@@ -222,32 +213,31 @@ extern void TessJunctionCompare_Compare_mE2073A6A7C54F22AD4A3FE6F0A064BDCD62FC79
 extern void DelaEdgeCompare_Compare_mEBCEEFF69871C7807E6698DFB6631294359FAC9D_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[13] = 
 {
-	{ 0x0600004A, TestHullPointL_Test_m18877FB5843FE8D4DD328BB7BCDE931EBFA46693_AdjustorThunk },
-	{ 0x0600004B, TestHullPointU_Test_m2908103836AE765EC092AD78A74CC8BDEB9F157F_AdjustorThunk },
-	{ 0x0600004C, TestHullEventLe_Test_mE4A69DEA940F348593DF85539D65CA497D21122F_AdjustorThunk },
-	{ 0x0600004D, TestHullEventE_Test_m81AF26294EA07D3E0B604664E5E9A2A93E6F885A_AdjustorThunk },
-	{ 0x0600004E, TestEdgePointE_Test_mB86135C841A666EAD19492D44F60A2BF29843083_AdjustorThunk },
-	{ 0x0600004F, TestCellE_Test_m7C3C98372D96C65ACD81F573257FAA61AFF3838C_AdjustorThunk },
-	{ 0x06000051, XCompare_Compare_m0E999F4E85D8325A587A0323F3517731128EDCAC_AdjustorThunk },
-	{ 0x06000052, IntersectionCompare_Compare_mD3312B0BF161FF1FFEA43D01D51632B9CA5A3E62_AdjustorThunk },
-	{ 0x06000053, TessEventCompare_Compare_mEB90ADA724375D909C125F4765FEAF9373626A47_AdjustorThunk },
-	{ 0x06000054, TessEdgeCompare_Compare_m23809F44B81AA362D3E1990474C7F6EA4AFFA5BD_AdjustorThunk },
-	{ 0x06000055, TessCellCompare_Compare_m15FA15FD0171E82116C4B076EA8F7173763A883B_AdjustorThunk },
-	{ 0x06000056, TessJunctionCompare_Compare_mE2073A6A7C54F22AD4A3FE6F0A064BDCD62FC793_AdjustorThunk },
-	{ 0x06000057, DelaEdgeCompare_Compare_mEBCEEFF69871C7807E6698DFB6631294359FAC9D_AdjustorThunk },
+	{ 0x06000041, TestHullPointL_Test_m18877FB5843FE8D4DD328BB7BCDE931EBFA46693_AdjustorThunk },
+	{ 0x06000042, TestHullPointU_Test_m2908103836AE765EC092AD78A74CC8BDEB9F157F_AdjustorThunk },
+	{ 0x06000043, TestHullEventLe_Test_mE4A69DEA940F348593DF85539D65CA497D21122F_AdjustorThunk },
+	{ 0x06000044, TestHullEventE_Test_m81AF26294EA07D3E0B604664E5E9A2A93E6F885A_AdjustorThunk },
+	{ 0x06000045, TestEdgePointE_Test_mB86135C841A666EAD19492D44F60A2BF29843083_AdjustorThunk },
+	{ 0x06000046, TestCellE_Test_m7C3C98372D96C65ACD81F573257FAA61AFF3838C_AdjustorThunk },
+	{ 0x06000048, XCompare_Compare_m0E999F4E85D8325A587A0323F3517731128EDCAC_AdjustorThunk },
+	{ 0x06000049, IntersectionCompare_Compare_mD3312B0BF161FF1FFEA43D01D51632B9CA5A3E62_AdjustorThunk },
+	{ 0x0600004A, TessEventCompare_Compare_mEB90ADA724375D909C125F4765FEAF9373626A47_AdjustorThunk },
+	{ 0x0600004B, TessEdgeCompare_Compare_m23809F44B81AA362D3E1990474C7F6EA4AFFA5BD_AdjustorThunk },
+	{ 0x0600004C, TessCellCompare_Compare_m15FA15FD0171E82116C4B076EA8F7173763A883B_AdjustorThunk },
+	{ 0x0600004D, TessJunctionCompare_Compare_mE2073A6A7C54F22AD4A3FE6F0A064BDCD62FC793_AdjustorThunk },
+	{ 0x0600004E, DelaEdgeCompare_Compare_mEBCEEFF69871C7807E6698DFB6631294359FAC9D_AdjustorThunk },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_U2DRuntimeModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_U2DRuntimeModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_U2DRuntimeModule_CodeGenModule = 
 {
 	"UnityEngine.U2DRuntimeModule.dll",
-	115,
+	106,
 	s_methodPointers,
 	13,
 	s_adjustorThunks,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_U2DRuntimeModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

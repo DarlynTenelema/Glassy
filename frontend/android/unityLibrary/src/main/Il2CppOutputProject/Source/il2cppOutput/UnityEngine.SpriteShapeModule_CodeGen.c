@@ -70,7 +70,6 @@ static Il2CppMethodPointer s_methodPointers[31] =
 	SpriteShapeRenderer_SetLocalAABB_Injected_m4D381B8A76DF76FB7AA8A52D44C8EB2802B19124,
 	SpriteShapeRenderer_GetSplineMeshCount_Injected_m8EB1F051BF5101331D1E585EBE5CF54B71D439CA,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_SpriteShapeModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SpriteShapeModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SpriteShapeModule_CodeGenModule = 
 {
@@ -81,7 +80,7 @@ const Il2CppCodeGenModule g_UnityEngine_SpriteShapeModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_SpriteShapeModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

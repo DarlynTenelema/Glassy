@@ -124,7 +124,6 @@ static Il2CppMethodPointer s_methodPointers[57] =
 	InputUnsafeUtility_GetAxisRaw_Injected_mBD4731C071FA30196CF204D111EE877EAB68F258,
 	InputUnsafeUtility_GetButtonDown_Injected_m006E1D23C7C2C482AACE1323AF4AE0F200C55B93,
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_InputLegacyModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule = 
 {
@@ -135,7 +134,7 @@ const Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnityEngine_InputLegacyModule,
+	NULL,
 	NULL,
 	NULL,
 	NULL,
