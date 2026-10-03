@@ -12,11 +12,25 @@ class UnityBridgeController {
   final _scoreController = StreamController<ScoreUpdatePayload>.broadcast();
   final _crystalsController = StreamController<CrystalsUpdatePayload>.broadcast();
   final _gameOverController = StreamController<GameOverPayload>.broadcast();
+  final _achievementProgressController = StreamController<AchievementProgressPayload>.broadcast();
+  final _comboBonusController = StreamController<ComboBonusPayload>.broadcast();
+  final _epicSaveController = StreamController<EpicSavePayload>.broadcast();
+  final _dangerZoneController = StreamController<DangerZonePayload>.broadcast();
+  final _missionStartedController = StreamController<MissionStartedPayload>.broadcast();
+  final _missionUpdatedController = StreamController<MissionUpdatedPayload>.broadcast();
+  final _missionCompletedController = StreamController<MissionCompletedPayload>.broadcast();
 
   Stream<void> get onReady => _readyController.stream;
   Stream<ScoreUpdatePayload> get onScoreUpdated => _scoreController.stream;
   Stream<CrystalsUpdatePayload> get onCrystalsUpdated => _crystalsController.stream;
   Stream<GameOverPayload> get onGameOver => _gameOverController.stream;
+  Stream<AchievementProgressPayload> get onAchievementProgress => _achievementProgressController.stream;
+  Stream<ComboBonusPayload> get onComboBonus => _comboBonusController.stream;
+  Stream<EpicSavePayload> get onEpicSave => _epicSaveController.stream;
+  Stream<DangerZonePayload> get onDangerZone => _dangerZoneController.stream;
+  Stream<MissionStartedPayload> get onMissionStarted => _missionStartedController.stream;
+  Stream<MissionUpdatedPayload> get onMissionUpdated => _missionUpdatedController.stream;
+  Stream<MissionCompletedPayload> get onMissionCompleted => _missionCompletedController.stream;
 
   UnityBridgeController(this._unityController);
 
@@ -41,6 +55,27 @@ class UnityBridgeController {
           break;
         case 'GAME_OVER':
           _gameOverController.add(GameOverPayload.fromJson(payloadJson));
+          break;
+        case 'ACHIEVEMENT_PROGRESS':
+          _achievementProgressController.add(AchievementProgressPayload.fromJson(payloadJson));
+          break;
+        case 'COMBO_BONUS':
+          _comboBonusController.add(ComboBonusPayload.fromJson(payloadJson));
+          break;
+        case 'EPIC_SAVE':
+          _epicSaveController.add(EpicSavePayload.fromJson(payloadJson));
+          break;
+        case 'DANGER_ZONE':
+          _dangerZoneController.add(DangerZonePayload.fromJson(payloadJson));
+          break;
+        case 'MISSION_STARTED':
+          _missionStartedController.add(MissionStartedPayload.fromJson(payloadJson));
+          break;
+        case 'MISSION_UPDATED':
+          _missionUpdatedController.add(MissionUpdatedPayload.fromJson(payloadJson));
+          break;
+        case 'MISSION_COMPLETED':
+          _missionCompletedController.add(MissionCompletedPayload.fromJson(payloadJson));
           break;
         default:
           print('[UnityBridgeController] Evento no reconocido: ${bridgeMsg.eventName}');
@@ -82,10 +117,21 @@ class UnityBridgeController {
     _sendToUnity('AUTH_TOKEN', AuthTokenPayload(token: token).toJsonString());
   }
 
+  void setSkin(String skinId) {
+    _sendToUnity('SET_SKIN', SetSkinPayload(skin_id: skinId).toJsonString());
+  }
+
   void dispose() {
     _readyController.close();
     _scoreController.close();
     _crystalsController.close();
     _gameOverController.close();
+    _achievementProgressController.close();
+    _comboBonusController.close();
+    _epicSaveController.close();
+    _dangerZoneController.close();
+    _missionStartedController.close();
+    _missionUpdatedController.close();
+    _missionCompletedController.close();
   }
 }

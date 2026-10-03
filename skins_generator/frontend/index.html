@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Skins | Glassy</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="glass-container">
+      <h1>Generador de <span>Skins</span></h1>
+      <p>Crea temáticas y fondos automáticos para Glassy</p>
+      
+      <form id="generator-form">
+        <div class="input-group">
+          <label for="markdown_input">Contenido de la Temática (Markdown)</label>
+          <textarea id="markdown_input" placeholder="Pega aquí el contenido del archivo .md..." rows="15" required></textarea>
+        </div>
+        
+        <button type="submit" id="generate-btn">
+          Generar Temática (9 Imágenes)
+        </button>
+      </form>
+      
+      <div id="status" class="hidden">
+        <div class="spinner"></div>
+        <p>Generando imágenes y quitando fondos...</p>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

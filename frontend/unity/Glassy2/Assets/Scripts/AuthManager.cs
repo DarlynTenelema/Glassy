@@ -69,6 +69,17 @@ public class AuthManager : MonoBehaviour
     }
 
     // =========================================================================
+    // FLUTTER INTEGRATION
+    // =========================================================================
+
+    public void SetTokenFromFlutter(string token)
+    {
+        AuthToken = token;
+        ApiManager.Instance?.SetAuthToken(token);
+        Debug.Log("[AuthManager] Token recibido desde Flutter. IsLoggedIn: " + IsLoggedIn);
+    }
+
+    // =========================================================================
     // LOGIN CON GOOGLE
     // =========================================================================
 

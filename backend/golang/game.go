@@ -4,6 +4,7 @@ import (
 	"context"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -15,7 +16,7 @@ import (
 // WALLET
 // =============================================================================
 
-// GetPlayerWallet devuelve los cristales actuales del jugador.
+// GetPlayerWallet devuelve los lapislázulis actuales del jugador.
 // GET /api/player/wallet
 func GetPlayerWallet(c *gin.Context) {
 	userID := c.GetString("user_id")
@@ -97,9 +98,55 @@ func SubmitScore(c *gin.Context) {
 		return
 	}
 
+	// Lógica de Recompensas por Jugar (Farming para Suscriptores)
+	var subTier string
+	var dailyFarmed int
+	var lastFarmDate time.Time
+
+	err := DB.QueryRow(`
+		SELECT subscription_tier, daily_lapis_farmed, last_farm_date 
+		FROM users WHERE id = $1
+	`, userID).Scan(&subTier, &dailyFarmed, &lastFarmDate)
+
+	if err == nil {
+		// Resetear farming diario si es un nuevo día (UTC as base)
+		if lastFarmDate.Truncate(24 * time.Hour).Before(time.Now().Truncate(24 * time.Hour)) {
+			dailyFarmed = 0
+		}
+
+		lapisToAward := 0
+		dailyMax := 0
+
+		switch subTier {
+		case "bronze":
+			lapisToAward = (req.Score / 1000) * 1
+			dailyMax = 18
+		case "silver":
+			lapisToAward = (req.Score / 1000) * 3
+			dailyMax = 53
+		case "gold":
+			lapisToAward = (req.Score / 1000) * 5
+			dailyMax = 54
+		}
+
+		if lapisToAward > 0 {
+			if dailyFarmed+lapisToAward > dailyMax {
+				lapisToAward = dailyMax - dailyFarmed
+			}
+			if lapisToAward > 0 {
+				_, _ = DB.Exec(`
+					UPDATE users 
+					SET crystals = crystals + $1, 
+					    daily_lapis_farmed = $2, 
+					    last_farm_date = CURRENT_DATE
+					WHERE id = $3
+				`, lapisToAward, dailyFarmed+lapisToAward, userID)
+			}
+		}
+	}
+
 	// UPSERT: solo actualiza si el nuevo score es MEJOR que el guardado.
-	// Si no existe fila para este usuario, la inserta.
-	_, err := DB.Exec(`
+	_, err = DB.Exec(`
 		INSERT INTO leaderboards (user_id, score, achieved_at)
 		VALUES ($1, $2, NOW())
 		ON CONFLICT (user_id) DO UPDATE
@@ -181,10 +228,10 @@ func SaveSettings(c *gin.Context) {
 // AD REWARD
 // =============================================================================
 
-// adRewardCrystals es la cantidad de cristales que se regalan por ver un video.
+// adRewardCrystals es la cantidad de lapislázulis que se regalan por ver un video.
 const adRewardCrystals = 5
 
-// ClaimAdReward agrega cristales al jugador como recompensa por ver un video de Ad Mob.
+// ClaimAdReward agrega lapislázulis al jugador como recompensa por ver un video de Ad Mob.
 // El cliente debe llamar este endpoint SOLO cuando el SDK de AdMob confirme que el
 // video fue visto completo. Para el MVP, confiamos en el cliente.
 // POST /api/player/ad-reward
@@ -210,15 +257,32 @@ func ClaimAdReward(c *gin.Context) {
 // PURCHASES (Google Play Billing)
 // =============================================================================
 
-// packageCrystals mapea los IDs de producto de Google Play a su cantidad de cristales.
-var packageCrystals = map[string]int{
-	"glass_pack_100":  100,
-	"glass_pack_600":  600,
-	"glass_pack_1500": 1500,
-	"glass_pack_5000": 5000,
+// PurchaseReward define la recompensa en cristales y aportes al piggy bank
+type PurchaseReward struct {
+	Crystals  int
+	PiggyBank int
 }
 
-// VerifyPurchase valida un recibo de Google Play Billing y acredita los cristales.
+// packageRewards mapea los IDs de producto a sus recompensas
+var packageRewards = map[string]PurchaseReward{
+	// Paquetes Regulares
+	"glass_pack_100":   {Crystals: 100, PiggyBank: 1},     // $0.99
+	"glass_pack_600":   {Crystals: 600, PiggyBank: 5},     // $4.99
+	"glass_pack_1500":  {Crystals: 1300, PiggyBank: 10},   // $9.99
+	"glass_pack_5000":  {Crystals: 2500, PiggyBank: 20},   // $19.99
+
+	// Ofertas de Bienvenida
+	"pack_event_500":   {Crystals: 600, PiggyBank: 1},     // $0.99
+	"pack_event_2000":  {Crystals: 1300, PiggyBank: 5},    // $4.99
+	"pack_event_5000":  {Crystals: 2500, PiggyBank: 10},   // $9.99
+
+	// Suscripciones
+	"sub_bronze_weekly":   {Crystals: 0, PiggyBank: 1},    // $0.99
+	"sub_silver_biweekly": {Crystals: 0, PiggyBank: 5},    // $4.99
+	"sub_gold_monthly":    {Crystals: 0, PiggyBank: 10},   // $9.99
+}
+
+// VerifyPurchase valida un recibo de Google Play Billing y acredita los lapislázulis.
 // Protecciones implementadas:
 //   - Validación real con Google Play Developer API (no se confía en el cliente).
 //   - Transacción atómica: el purchase_token UNIQUE previene Replay Attacks.
@@ -237,7 +301,7 @@ func VerifyPurchase(c *gin.Context) {
 	}
 
 	// Validar que el product_id es uno conocido antes de llamar a Google
-	crystalsToAdd, ok := packageCrystals[req.ProductID]
+	reward, ok := packageRewards[req.ProductID]
 	if !ok {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Unknown product ID"})
 		return
@@ -263,21 +327,37 @@ func VerifyPurchase(c *gin.Context) {
 	}
 
 	// Consultar el estado de la compra en Google Play
-	purchase, err := service.Purchases.Products.Get(packageName, req.ProductID, req.PurchaseToken).Do()
-	if err != nil {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid purchase receipt"})
-		return
+	var purchaseState int
+	if strings.HasPrefix(req.ProductID, "sub_") {
+		sub, err := service.Purchases.Subscriptionsv2.Get(packageName, req.PurchaseToken).Do()
+		if err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid subscription receipt"})
+			return
+		}
+		// Validar que la suscripción esté activa o en periodo de gracia
+		if sub.SubscriptionState != "SUBSCRIPTION_STATE_ACTIVE" && sub.SubscriptionState != "SUBSCRIPTION_STATE_IN_GRACE_PERIOD" {
+			c.JSON(http.StatusPaymentRequired, gin.H{"error": "Subscription payment not received"})
+			return
+		}
+		purchaseState = 0 // Marcamos como 0 para indicar éxito
+	} else {
+		purchase, err := service.Purchases.Products.Get(packageName, req.ProductID, req.PurchaseToken).Do()
+		if err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid purchase receipt"})
+			return
+		}
+		purchaseState = int(purchase.PurchaseState)
 	}
 
-	// 0 = Purchased, 1 = Canceled, 2 = Pending
-	if purchase.PurchaseState != 0 {
+	// 0 = Purchased, 1 = Canceled, 2 = Pending (para in-app products)
+	if purchaseState != 0 {
 		c.JSON(http.StatusPaymentRequired, gin.H{"error": "Purchase is not in 'Purchased' state"})
 		return
 	}
 
 	// TRANSACCIÓN ATÓMICA:
 	// 1. Insertar el purchase_token (falla si ya existe → anti-replay).
-	// 2. Sumar los cristales al usuario.
+	// 2. Sumar los lapislázulis al usuario.
 	// Si cualquier paso falla, se hace Rollback completo.
 	tx, err := DB.Begin()
 	if err != nil {
@@ -289,19 +369,33 @@ func VerifyPurchase(c *gin.Context) {
 	_, err = tx.Exec(`
 		INSERT INTO purchases (user_id, purchase_token, package_id, crystals_added)
 		VALUES ($1, $2, $3, $4)
-	`, userID, req.PurchaseToken, req.ProductID, crystalsToAdd)
+	`, userID, req.PurchaseToken, req.ProductID, reward.Crystals)
 	if err != nil {
 		// El UNIQUE constraint en purchase_token falló → replay attack detectado
 		c.JSON(http.StatusConflict, gin.H{"error": "This purchase has already been claimed"})
 		return
 	}
 
-	_, err = tx.Exec(
-		"UPDATE users SET crystals = crystals + $1 WHERE id = $2",
-		crystalsToAdd, userID,
-	)
+	query := "UPDATE users SET crystals = crystals + $1, piggy_bank = piggy_bank + $2"
+	switch req.ProductID {
+	case "pack_event_500":
+		query += ", welcome_pack_500_bought = TRUE"
+	case "pack_event_2000":
+		query += ", welcome_pack_2000_bought = TRUE"
+	case "pack_event_5000":
+		query += ", welcome_pack_5000_bought = TRUE"
+	case "sub_bronze_weekly":
+		query += ", subscription_tier = 'bronze'"
+	case "sub_silver_biweekly":
+		query += ", subscription_tier = 'silver'"
+	case "sub_gold_monthly":
+		query += ", subscription_tier = 'gold'"
+	}
+	query += " WHERE id = $3"
+
+	_, err = tx.Exec(query, reward.Crystals, reward.PiggyBank, userID)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update crystals balance"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update crystals and piggy bank balance"})
 		return
 	}
 
@@ -311,7 +405,168 @@ func VerifyPurchase(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"message":         "Purchase verified and crystals added",
-		"crystals_added":  crystalsToAdd,
+		"message":          "Purchase verified and crystals/piggy-bank updated",
+		"crystals_added":   reward.Crystals,
+		"piggy_bank_added": reward.PiggyBank,
 	})
 }
+
+// GetStoreStatus devuelve qué ofertas de evento ha comprado el usuario y el estado del Piggy Bank
+// GET /api/player/store-status
+func GetStoreStatus(c *gin.Context) {
+	userID := c.GetString("user_id")
+
+	var status struct {
+		Welcome500Bought  bool `json:"welcome_pack_500_bought"`
+		Welcome2000Bought bool `json:"welcome_pack_2000_bought"`
+		Welcome5000Bought bool `json:"welcome_pack_5000_bought"`
+		PiggyBank         int  `json:"piggy_bank"`
+	}
+
+	err := DB.QueryRow(`
+		SELECT welcome_pack_500_bought, welcome_pack_2000_bought, welcome_pack_5000_bought, piggy_bank
+		FROM users
+		WHERE id = $1
+	`, userID).Scan(
+		&status.Welcome500Bought,
+		&status.Welcome2000Bought,
+		&status.Welcome5000Bought,
+		&status.PiggyBank,
+	)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch store status"})
+		return
+	}
+
+	c.JSON(http.StatusOK, status)
+}
+
+// =============================================================================
+// SKINS (Server-Side Logic)
+// =============================================================================
+
+// GetSkins returns unlocked skins and currently selected skin
+// GET /api/player/skins
+func GetSkins(c *gin.Context) {
+	userID := c.GetString("user_id")
+
+	var selectedSkin string
+	err := DB.QueryRow("SELECT selected_skin_id FROM users WHERE id = $1", userID).Scan(&selectedSkin)
+	if err != nil {
+		selectedSkin = "gemas_clasicas"
+	}
+
+	rows, err := DB.Query("SELECT skin_id FROM user_skins WHERE user_id = $1", userID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch skins"})
+		return
+	}
+	defer rows.Close()
+
+	var unlockedSkins []string
+	for rows.Next() {
+		var skinID string
+		if err := rows.Scan(&skinID); err == nil {
+			unlockedSkins = append(unlockedSkins, skinID)
+		}
+	}
+
+	// Make sure default skin is always in the list
+	foundDefault := false
+	for _, s := range unlockedSkins {
+		if s == "gemas_clasicas" {
+			foundDefault = true
+			break
+		}
+	}
+	if !foundDefault {
+		unlockedSkins = append(unlockedSkins, "gemas_clasicas")
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"unlocked_skins": unlockedSkins,
+		"selected_skin":  selectedSkin,
+	})
+}
+
+// BuySkin process the skin purchase using crystals securely on the backend
+// POST /api/player/skins/buy
+func BuySkin(c *gin.Context) {
+	userID := c.GetString("user_id")
+
+	var req struct {
+		SkinID string `json:"skin_id" binding:"required"`
+		Cost   int    `json:"cost" binding:"required"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request body"})
+		return
+	}
+
+	tx, err := DB.Begin()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+	defer tx.Rollback()
+
+	// 1. Verify and deduct crystals
+	res, err := tx.Exec("UPDATE users SET crystals = crystals - $1 WHERE id = $2 AND crystals >= $1", req.Cost, userID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to process payment"})
+		return
+	}
+	rowsAffected, _ := res.RowsAffected()
+	if rowsAffected == 0 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Not enough crystals"})
+		return
+	}
+
+	// 2. Add skin to user_skins (ignore if already exists)
+	_, err = tx.Exec("INSERT INTO user_skins (user_id, skin_id) VALUES ($1, $2) ON CONFLICT (user_id, skin_id) DO NOTHING", userID, req.SkinID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to unlock skin"})
+		return
+	}
+
+	if err := tx.Commit(); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Transaction commit failed"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Skin unlocked successfully"})
+}
+
+// EquipSkin sets the selected skin
+// POST /api/player/skins/equip
+func EquipSkin(c *gin.Context) {
+	userID := c.GetString("user_id")
+
+	var req struct {
+		SkinID string `json:"skin_id" binding:"required"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request body"})
+		return
+	}
+
+	// Allow equipping default skin without database check
+	if req.SkinID != "gemas_clasicas" {
+		var exists bool
+		err := DB.QueryRow("SELECT EXISTS(SELECT 1 FROM user_skins WHERE user_id = $1 AND skin_id = $2)", userID, req.SkinID).Scan(&exists)
+		if err != nil || !exists {
+			c.JSON(http.StatusForbidden, gin.H{"error": "Skin not owned"})
+			return
+		}
+	}
+
+	_, err := DB.Exec("UPDATE users SET selected_skin_id = $1 WHERE id = $2", req.SkinID, userID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to equip skin"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Skin equipped"})
+}
+

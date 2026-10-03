@@ -16,8 +16,7 @@ class PurchaseService {
   late StreamSubscription<List<PurchaseDetails>> _subscription;
   
   // Backend URL donde correrá el servicio Go
-  // En producción, esto debe reemplazarse por la URL real.
-  final String _backendUrl = 'http://localhost:8080/api'; 
+  final String _backendUrl = 'https://glassy-production.up.railway.app/api'; 
   
   BuildContext? _currentContext;
 
@@ -42,6 +41,29 @@ class PurchaseService {
     return await _inAppPurchase.isAvailable();
   }
 
+  Future<Map<String, dynamic>?> getStoreStatus() async {
+    try {
+      final session = Supabase.instance.client.auth.currentSession;
+      if (session == null) return null;
+
+      final response = await http.get(
+        Uri.parse('$_backendUrl/player/store-status'),
+        headers: {
+          'Authorization': 'Bearer ${session.accessToken}',
+        },
+      );
+
+      if (response.statusCode == 200) {
+        return jsonDecode(response.body) as Map<String, dynamic>;
+      } else {
+        debugPrint('Error fetching store status: ${response.statusCode} - ${response.body}');
+      }
+    } catch (e) {
+      debugPrint('Exception fetching store status: $e');
+    }
+    return null;
+  }
+
   Future<void> buyProduct(String productId) async {
     final ProductDetailsResponse response = await _inAppPurchase.queryProductDetails({productId});
     if (response.notFoundIDs.isNotEmpty) {
@@ -57,8 +79,12 @@ class PurchaseService {
     final ProductDetails productDetails = response.productDetails.first;
     final PurchaseParam purchaseParam = PurchaseParam(productDetails: productDetails);
     
-    // Ejecuta la compra
-    _inAppPurchase.buyConsumable(purchaseParam: purchaseParam);
+    // Ejecuta la compra: Si es suscripción es NonConsumable, si es cristales es Consumable
+    if (productId.startsWith('sub_')) {
+      _inAppPurchase.buyNonConsumable(purchaseParam: purchaseParam);
+    } else {
+      _inAppPurchase.buyConsumable(purchaseParam: purchaseParam);
+    }
   }
 
   void _listenToPurchaseUpdated(List<PurchaseDetails> purchaseDetailsList) {
@@ -109,7 +135,7 @@ class PurchaseService {
         gameProvider.addCrystals(crystalsAdded);
         
         ScaffoldMessenger.of(_currentContext!).showSnackBar(
-           SnackBar(content: Text('¡Compra exitosa! +$crystalsAdded Cristales'), backgroundColor: Colors.green),
+           SnackBar(content: Text('¡Compra exitosa! +$crystalsAdded Lapislázulis'), backgroundColor: Colors.green),
         );
       } else {
         debugPrint('Verification failed: ${response.statusCode} - ${response.body}');

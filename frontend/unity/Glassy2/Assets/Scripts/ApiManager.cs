@@ -72,7 +72,7 @@ public class ApiManager : MonoBehaviour
     // =========================================================================
 
     /// <summary>
-    /// Obtiene los cristales del jugador desde el servidor.
+    /// Obtiene los lapislázulis del jugador desde el servidor.
     /// Callback: (int crystals) — -1 si hay error.
     /// </summary>
     public void GetWallet(Action<int> callback)
@@ -207,7 +207,7 @@ public class ApiManager : MonoBehaviour
     // =========================================================================
 
     /// <summary>
-    /// Reclamar cristales por ver un video de AdMob.
+    /// Reclamar lapislázulis por ver un video de AdMob.
     /// Callback: (bool success, int crystalsAwarded)
     /// </summary>
     public void ClaimAdReward(Action<bool, int> callback)
@@ -237,7 +237,7 @@ public class ApiManager : MonoBehaviour
     // =========================================================================
 
     /// <summary>
-    /// Verifica una compra de Google Play Billing con el servidor y acredita cristales.
+    /// Verifica una compra de Google Play Billing con el servidor y acredita lapislázulis.
     /// Callback: (bool success, int crystalsAdded)
     /// </summary>
     public void VerifyPurchase(string purchaseToken, string productId, Action<bool, int> callback)
@@ -262,6 +262,30 @@ public class ApiManager : MonoBehaviour
             Debug.LogWarning($"[ApiManager] VerifyPurchase error: {req.responseCode} - {req.error}");
             callback?.Invoke(false, 0);
         }
+    }
+
+    // =========================================================================
+    // ECONOMY & MISSIONS
+    // =========================================================================
+
+    /// <summary>
+    /// Actualiza el progreso de la misión diaria del jugador en el servidor.
+    /// Callback: (bool success)
+    /// </summary>
+    public void UpdateMissionProgress(int progressAdded, int goalTotal, Action<bool> callback = null)
+    {
+        StartCoroutine(UpdateMissionProgressRoutine(progressAdded, goalTotal, callback));
+    }
+
+    private IEnumerator UpdateMissionProgressRoutine(int progressAdded, int goalTotal, Action<bool> callback)
+    {
+        string body = $"{{\"progress_added\":{progressAdded},\"goal_total\":{goalTotal}}}";
+        using var req = BuildPost("/player/mission/update", body);
+        yield return req.SendWebRequest();
+
+        bool ok = IsSuccess(req);
+        if (!ok) Debug.LogWarning($"[ApiManager] UpdateMissionProgress error: {req.error}");
+        callback?.Invoke(ok);
     }
 
     // =========================================================================

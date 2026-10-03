@@ -64,6 +64,23 @@ public class AudioManager : MonoBehaviour
     }
 
     // =========================================================================
+    // ESCALA MUSICAL (JUICINESS)
+    // =========================================================================
+
+    private float _currentPitch = 1f;
+
+    public void IncreasePitch()
+    {
+        _currentPitch += 0.05f;
+        if (_currentPitch > 2.0f) _currentPitch = 2.0f; // Límite máximo de escala
+    }
+
+    public void ResetPitch()
+    {
+        _currentPitch = 1f;
+    }
+
+    // =========================================================================
     // MÚSICA
     // =========================================================================
 
@@ -87,6 +104,7 @@ public class AudioManager : MonoBehaviour
     public void PlayGemMerge(GemType resultType)
     {
         if (!_effectsOn || gemFusionClip == null) return;
+        sfxSource.pitch = _currentPitch; // Aplicar la escala musical del combo
         sfxSource.PlayOneShot(gemFusionClip, gemFusionVolume);
     }
 
@@ -94,12 +112,14 @@ public class AudioManager : MonoBehaviour
     public void PlayDiamondSequence()
     {
         if (!_effectsOn || diamondFoundClip == null) return;
+        sfxSource.pitch = 1f;
         sfxSource.PlayOneShot(diamondFoundClip, diamondFoundVolume);
     }
 
     public void PlayStartGame()
     {
         if (!_effectsOn || startGameClip == null) return;
+        sfxSource.pitch = 1f;
         sfxSource.PlayOneShot(startGameClip, startGameVolume);
     }
 
@@ -108,6 +128,7 @@ public class AudioManager : MonoBehaviour
         if (!_effectsOn || gameOverClip == null) return;
         // Detener música y tocar game over
         StopMusic();
+        sfxSource.pitch = 1f;
         sfxSource.PlayOneShot(gameOverClip, gameOverVolume);
     }
 

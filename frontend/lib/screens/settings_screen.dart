@@ -67,7 +67,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   SwitchListTile(
                     title: Text('Volumen General', style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white)),
                     value: _volumen, 
-                    activeColor: AppTheme.neonCyan,
+                    activeColor: AppTheme.crystalBlue,
                     onChanged: (val) {
                       setState(() {
                         _volumen = val;
@@ -79,7 +79,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   SwitchListTile(
                     title: Text('Efectos', style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white)),
                     value: _efectos,
-                    activeColor: AppTheme.whiteGlass,
+                    activeColor: Colors.white.withOpacity(0.9),
                     onChanged: (val) {
                       setState(() {
                         _efectos = val;
@@ -98,7 +98,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             value: _musicVolume,
                             min: 0.0,
                             max: 1.0,
-                            activeColor: AppTheme.neonCyan,
+                            activeColor: AppTheme.crystalBlue,
                             onChanged: (v) {
                               setState(() => _musicVolume = v);
                               _saveDoubleSetting('musicVolume', v);

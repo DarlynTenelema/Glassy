@@ -68,4 +68,12 @@ namespace FlutterUnityBridge.Models
         public bool highScoreBroken;
         public string playerId;
     }
+
+    [Serializable]
+    public class AchievementProgressPayload
+    {
+        public int groupId;
+        public int level;
+        public int progressAdded;
+    }
 }

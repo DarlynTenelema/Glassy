@@ -1,9 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import '../theme/app_theme.dart';
-import '../services/audio_service.dart';
-
-class GamingButton extends StatefulWidget {
+import '../services/audio_service.dart';class GamingButton extends StatefulWidget {
   final String text;
   final VoidCallback onPressed;
   final Widget? icon;
@@ -19,8 +18,8 @@ class GamingButton extends StatefulWidget {
     required this.text,
     required this.onPressed,
     this.icon,
-    this.primaryColor = AppTheme.neonCyan,
-    this.secondaryColor = AppTheme.tealGlass,
+    this.primaryColor = AppTheme.crystalBlue,
+    this.secondaryColor = AppTheme.crystalBlue,
     this.width = double.infinity,
     this.height = 65.0,
     this.fontSize = 22.0,
@@ -131,6 +130,17 @@ class _GamingButtonState extends State<GamingButton> with TickerProviderStateMix
                   alignment: Alignment.bottomCenter,
                   clipBehavior: Clip.none,
                   children: [
+                    // Destellos naranjas que saltan al presionar
+                    if (_isPressed || _controller.isAnimating)
+                      Positioned.fill(
+                        child: CustomPaint(
+                          painter: SparklePainter(
+                            progress: _controller.value,
+                            color: AppTheme.starflareOrange,
+                          ),
+                        ),
+                      ),
+                      
                     // Base sombra cristalina
                     Container(
                       width: widget.width,
@@ -221,6 +231,9 @@ class _GamingButtonState extends State<GamingButton> with TickerProviderStateMix
                             ],
                           ),
                         ),
+                      ).animate(target: _isPressed ? 1 : 0).shimmer(
+                        color: AppTheme.starflareOrange.withValues(alpha: 0.5),
+                        duration: 300.ms,
                       ),
                     ),
                   ],
@@ -294,4 +307,49 @@ class CrackPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CrackPainter oldDelegate) => oldDelegate.progress != progress;
+}
+
+// Pintor para los destellos naranjas (partículas)
+class SparklePainter extends CustomPainter {
+  final double progress; // 0.0 to 1.0
+  final Color color;
+
+  SparklePainter({required this.progress, required this.color});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (progress == 0) return;
+
+    final paint = Paint()
+      ..color = color.withValues(alpha: (1 - progress).clamp(0.0, 1.0))
+      ..style = PaintingStyle.fill;
+
+    final center = Offset(size.width / 2, size.height / 2);
+    
+    // Distancia máxima a la que llegan las partículas
+    final distance = progress * 30.0;
+    // Tamaño de la partícula decrece
+    final radius = 3.0 * (1 - progress);
+
+    final offsets = [
+      const Offset(-1.5, -1.2), 
+      const Offset(1.5, -1.2),  
+      const Offset(-1.2, 1.5),  
+      const Offset(1.2, 1.5),   
+      const Offset(0, -1.8),    
+      const Offset(-1.8, 0),    
+      const Offset(1.8, 0),     
+    ];
+
+    for (var dir in offsets) {
+      final pos = Offset(
+        center.dx + dir.dx * distance,
+        center.dy + dir.dy * distance,
+      );
+      canvas.drawCircle(pos, radius.clamp(0.0, 5.0), paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant SparklePainter oldDelegate) => oldDelegate.progress != progress;
 }

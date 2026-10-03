@@ -140,5 +140,10 @@ namespace FlutterUnityBridge
         {
             SendToFlutter("GAME_OVER", new GameOverPayload { finalScore = score, highScoreBroken = newHighScore, playerId = playerId });
         }
+
+        public void SendAchievementProgress(int groupId, int level, int progressAdded)
+        {
+            SendToFlutter("ACHIEVEMENT_PROGRESS", new AchievementProgressPayload { groupId = groupId, level = level, progressAdded = progressAdded });
+        }
     }
 }

@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/game_provider.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,6 +11,7 @@ import '../widgets/gaming_button.dart';
 import '../flutter_unity_bridge/src/unity_bridge_controller.dart';
 import '../flutter_unity_bridge/src/models/payloads.dart';
 import '../services/audio_service.dart';
+import '../services/achievements_service.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({Key? key}) : super(key: key);
@@ -26,7 +29,25 @@ class _GameScreenState extends State<GameScreen> {
   StreamSubscription? _scoreSub;
   StreamSubscription? _crystalsSub;
   StreamSubscription? _gameOverSub;
+  StreamSubscription? _achievementSub;
+  StreamSubscription? _comboBonusSub;
+  StreamSubscription? _epicSaveSub;
+  StreamSubscription? _dangerZoneSub;
+  StreamSubscription? _missionStartedSub;
+  StreamSubscription? _missionUpdatedSub;
+  StreamSubscription? _missionCompletedSub;
+  Timer? _missionTimer;
 
+  bool _isDangerZone = false;
+  String? _epicSaveText;
+  String? _comboText;
+  
+  bool _isMissionActive = false;
+  String _missionText = '';
+  int _missionCurrent = 0;
+  int _missionTarget = 0;
+  int _missionTimeRemaining = 0;
+  String? _missionCompleteText;
   
   bool _isPaused = false;
   bool _isGameOver = false;
@@ -57,6 +78,19 @@ class _GameScreenState extends State<GameScreen> {
         // Reproducir música ahora que Unity y Flutter están listos
         _unityWidgetController.postMessage('AudioManager', 'PlayStartGameFromFlutter', '');
         
+        // Pasar el token a Unity
+        final session = Supabase.instance.client.auth.currentSession;
+        if (session != null) {
+          _bridgeController.sendAuthToken(session.accessToken);
+        }
+        
+        // Pasar la skin actual seleccionada a Unity
+        final gameProvider = Provider.of<GameProvider>(context, listen: false);
+        _bridgeController.setSkin(gameProvider.selectedSkinId);
+        
+        // Cargar y enviar configuración de audio
+        _loadAndSendSettings();
+
         // Ocultar la barra de inicio después de 3 segundos
         Future.delayed(const Duration(seconds: 3), () {
           if (mounted) {
@@ -87,18 +121,81 @@ class _GameScreenState extends State<GameScreen> {
         });
       }
     });
+
+    _achievementSub = _bridgeController.onAchievementProgress.listen((payload) {
+      AchievementsService().updateProgress(payload.groupId, payload.level, payload.progressAdded);
+    });
     
-    // Pasar el token a Unity
-    final session = Supabase.instance.client.auth.currentSession;
-    if (session != null) {
-      _bridgeController.sendAuthToken(session.accessToken);
-    }
+    _dangerZoneSub = _bridgeController.onDangerZone.listen((payload) {
+      if (mounted) setState(() => _isDangerZone = payload.isDanger);
+    });
+
+    _epicSaveSub = _bridgeController.onEpicSave.listen((payload) {
+      if (mounted) {
+        setState(() => _epicSaveText = '¡SALVADA ÉPICA!\n+${payload.bonus}');
+        Future.delayed(const Duration(seconds: 3), () {
+          if (mounted) setState(() => _epicSaveText = null);
+        });
+      }
+    });
+
+    _comboBonusSub = _bridgeController.onComboBonus.listen((payload) {
+      if (mounted) {
+        setState(() => _comboText = '¡COMBO X${payload.combo}!\n+${payload.bonus}');
+        Future.delayed(const Duration(seconds: 2), () {
+          if (mounted) setState(() => _comboText = null);
+        });
+      }
+    });
+
+    _missionStartedSub = _bridgeController.onMissionStarted.listen((payload) {
+      if (mounted) {
+        setState(() {
+          _isMissionActive = true;
+          _missionText = payload.text;
+          _missionCurrent = 0;
+          _missionTarget = int.tryParse(payload.text.split(' ')[1]) ?? 3;
+          _missionTimeRemaining = payload.timeLimitSeconds;
+        });
+        _missionTimer?.cancel();
+        _missionTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+          if (!mounted) return;
+          setState(() {
+            _missionTimeRemaining--;
+            if (_missionTimeRemaining <= 0 || !_isMissionActive) {
+              _missionTimer?.cancel();
+              _isMissionActive = false;
+            }
+          });
+        });
+      }
+    });
+
+    _missionUpdatedSub = _bridgeController.onMissionUpdated.listen((payload) {
+      if (mounted) {
+        setState(() {
+          _missionCurrent = payload.currentProgress;
+          _missionTarget = payload.targetProgress;
+        });
+      }
+    });
+
+    _missionCompletedSub = _bridgeController.onMissionCompleted.listen((payload) {
+      if (mounted) {
+        setState(() {
+          _isMissionActive = false;
+          _missionTimer?.cancel();
+          _missionCompleteText = '¡MISIÓN CUMPLIDA!\n+${payload.bonusPoints}';
+        });
+        Future.delayed(const Duration(seconds: 3), () {
+          if (mounted) setState(() => _missionCompleteText = null);
+        });
+      }
+    });
 
     // Reiniciar la escena en Unity siempre que se entre aquí para borrar estado previo
+    // Esto lo dejamos afuera porque UnityWidget puede ya estar instanciado en caché.
     _unityWidgetController.postMessage('GameManager', 'RestartGame', '');
-    
-    // Cargar y enviar configuración de audio
-    _loadAndSendSettings();
   }
 
 
@@ -164,7 +261,7 @@ class _GameScreenState extends State<GameScreen> {
                         color: Colors.white,
                         fontWeight: FontWeight.w900,
                         letterSpacing: 2,
-                        shadows: [const Shadow(color: AppTheme.neonCyan, blurRadius: 15)],
+                        shadows: [const Shadow(color: AppTheme.crystalBlue, blurRadius: 15)],
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -178,8 +275,8 @@ class _GameScreenState extends State<GameScreen> {
                       text: 'CONTINUAR',
                       height: 50,
                       fontSize: 16,
-                      primaryColor: AppTheme.neonCyan,
-                      secondaryColor: AppTheme.tealGlass,
+                      primaryColor: AppTheme.crystalBlue,
+                      secondaryColor: AppTheme.crystalBlue,
                       onPressed: () => Navigator.of(context).pop(false),
                     ),
                     const SizedBox(height: 15),
@@ -255,32 +352,32 @@ class _GameScreenState extends State<GameScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Top HUD: Cristales, Score, Controles
+                  // Top HUD: Lapislázulis, Score, Controles
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Controles Izquierdos: Cristales + Power-ups
+                      // Controles Izquierdos: Lapislázulis + Power-ups
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Contador de Cristales
+                          // Contador de Lapislázulis
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                             decoration: BoxDecoration(
                               color: Colors.black.withOpacity(0.5),
                               borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: AppTheme.neonCyan, width: 1),
+                              border: Border.all(color: AppTheme.crystalBlue, width: 1),
                               boxShadow: [
                                 BoxShadow(
-                                  color: AppTheme.neonCyan.withOpacity(0.3),
+                                  color: AppTheme.crystalBlue.withOpacity(0.3),
                                   blurRadius: 8,
                                 )
                               ],
                             ),
                             child: Row(
                               children: [
-                                const Icon(Icons.diamond, color: AppTheme.neonCyan, size: 20),
+                                const Icon(Icons.diamond, color: AppTheme.crystalBlue, size: 20),
                                 const SizedBox(width: 6),
                                 Text(
                                   '$_crystals',
@@ -292,24 +389,6 @@ class _GameScreenState extends State<GameScreen> {
                                 ),
                               ],
                             ),
-                          ),
-                          _buildPowerUpButton(
-                            icon: Icons.bubble_chart,
-                            cost: 1,
-                            color: Colors.white,
-                            method: 'UsePowerUpPearl',
-                          ),
-                          _buildPowerUpButton(
-                            icon: Icons.diamond_outlined,
-                            cost: 2,
-                            color: Colors.greenAccent,
-                            method: 'UsePowerUpEmerald',
-                          ),
-                          _buildPowerUpButton(
-                            icon: Icons.local_fire_department,
-                            cost: 5,
-                            color: Colors.orangeAccent,
-                            method: 'UsePowerUpAll',
                           ),
                         ],
                       ),
@@ -339,7 +418,7 @@ class _GameScreenState extends State<GameScreen> {
                                 color: Colors.white,
                                 fontSize: 24,
                                 fontWeight: FontWeight.w900,
-                                shadows: [Shadow(color: AppTheme.tealGlass, blurRadius: 10)],
+                                shadows: [Shadow(color: AppTheme.crystalBlue, blurRadius: 10)],
                               ),
                             ),
                           ],
@@ -356,7 +435,7 @@ class _GameScreenState extends State<GameScreen> {
                               _isPaused ? Icons.play_arrow : Icons.pause,
                               color: Colors.white,
                               size: 28,
-                              shadows: const [Shadow(color: AppTheme.whiteGlass, blurRadius: 10)],
+                              shadows: [Shadow(color: Colors.white.withOpacity(0.9), blurRadius: 10)],
                             ),
                           ),
                           IconButton(
@@ -366,11 +445,11 @@ class _GameScreenState extends State<GameScreen> {
                                 Navigator.pop(context);
                               }
                             },
-                            icon: const Icon(
+                            icon: Icon(
                               Icons.close,
                               color: Colors.white,
                               size: 28,
-                              shadows: [Shadow(color: AppTheme.whiteGlass, blurRadius: 10)],
+                              shadows: [Shadow(color: Colors.white.withOpacity(0.9), blurRadius: 10)],
                             ),
                           ),
                         ],
@@ -378,11 +457,19 @@ class _GameScreenState extends State<GameScreen> {
                     ],
                   ),
                   
+                  // Misión Express UI (Centrada arriba)
+                  if (_isMissionActive) _buildMissionWidget(),
 
                 ],
               ),
             ),
           ),
+          
+          // Efectos Visuales Especiales (Danger Zone, Combos, Salvada)
+          if (_isDangerZone && !_isGameOver && !_isPaused) _buildDangerZoneOverlay(),
+          if (_comboText != null) _buildComboOverlay(),
+          if (_epicSaveText != null) _buildEpicSaveOverlay(),
+          if (_missionCompleteText != null) _buildMissionCompletedOverlay(),
           
           // 3. Capa de Overlays (Pausa o Game Over)
           if (_isPaused) _buildPauseOverlay(),
@@ -394,6 +481,164 @@ class _GameScreenState extends State<GameScreen> {
           _buildAnimatedBanner(),
         ],
       ),
+      ),
+    );
+  }
+
+  Widget _buildDangerZoneOverlay() {
+    return IgnorePointer(
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.redAccent.withOpacity(0.6), width: 8),
+          gradient: RadialGradient(
+            colors: [Colors.transparent, Colors.red.withOpacity(0.2)],
+            radius: 1.5,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildComboOverlay() {
+    return IgnorePointer(
+      child: Center(
+        child: TweenAnimationBuilder(
+          tween: Tween<double>(begin: 0.5, end: 1.0),
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.elasticOut,
+          builder: (context, value, child) {
+            return Transform.scale(
+              scale: value,
+              child: Text(
+                _comboText!,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Colors.amberAccent,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                  shadows: [Shadow(color: Colors.orange, blurRadius: 20)],
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildEpicSaveOverlay() {
+    return IgnorePointer(
+      child: Center(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          decoration: BoxDecoration(
+            color: Colors.black.withOpacity(0.6),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: Colors.greenAccent, width: 2),
+            boxShadow: [BoxShadow(color: Colors.green.withOpacity(0.4), blurRadius: 30)],
+          ),
+          child: TweenAnimationBuilder(
+            tween: Tween<double>(begin: 0.0, end: 1.0),
+            duration: const Duration(milliseconds: 600),
+            curve: Curves.bounceOut,
+            builder: (context, value, child) {
+              return Transform.scale(
+                scale: value,
+                child: Text(
+                  _epicSaveText!,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.greenAccent,
+                    fontSize: 35,
+                    fontWeight: FontWeight.w900,
+                    shadows: [Shadow(color: Colors.green, blurRadius: 15)],
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMissionWidget() {
+    return Container(
+      margin: const EdgeInsets.only(top: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.black.withOpacity(0.7),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.orangeAccent, width: 1.5),
+        boxShadow: [BoxShadow(color: Colors.orange.withOpacity(0.3), blurRadius: 15)],
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(Icons.star, color: Colors.orangeAccent, size: 24),
+          const SizedBox(width: 10),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                _missionText,
+                style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 2),
+              Row(
+                children: [
+                  Text(
+                    '$_missionCurrent / $_missionTarget',
+                    style: const TextStyle(color: Colors.orangeAccent, fontSize: 12, fontWeight: FontWeight.w900),
+                  ),
+                  const SizedBox(width: 12),
+                  const Icon(Icons.timer, color: Colors.white70, size: 14),
+                  const SizedBox(width: 4),
+                  Text(
+                    '${_missionTimeRemaining}s',
+                    style: const TextStyle(color: Colors.white70, fontSize: 12),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMissionCompletedOverlay() {
+    return IgnorePointer(
+      child: Center(
+        child: TweenAnimationBuilder(
+          tween: Tween<double>(begin: 0.0, end: 1.0),
+          duration: const Duration(milliseconds: 600),
+          curve: Curves.elasticOut,
+          builder: (context, value, child) {
+            return Transform.scale(
+              scale: value,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                decoration: BoxDecoration(
+                  color: Colors.orange.withOpacity(0.85),
+                  borderRadius: BorderRadius.circular(25),
+                  border: Border.all(color: Colors.orangeAccent, width: 2),
+                  boxShadow: [BoxShadow(color: Colors.orangeAccent, blurRadius: 30)],
+                ),
+                child: Text(
+                  _missionCompleteText!,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 32,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -410,7 +655,7 @@ class _GameScreenState extends State<GameScreen> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.pause_circle_filled_rounded, color: AppTheme.neonCyan, size: 60),
+                const Icon(Icons.pause_circle_filled_rounded, color: AppTheme.crystalBlue, size: 60),
                 const SizedBox(height: 10),
                 Text(
                   'BREAK!!!',
@@ -418,13 +663,13 @@ class _GameScreenState extends State<GameScreen> {
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 4,
-                    shadows: [const Shadow(color: AppTheme.neonCyan, blurRadius: 20)],
+                    shadows: [const Shadow(color: AppTheme.crystalBlue, blurRadius: 20)],
                   ),
                 ),
                 const SizedBox(height: 30),
                 
                 // Configuración
-                const Text('Ajustes Rápidos', style: TextStyle(color: AppTheme.tealGlass, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
+                const Text('Ajustes Rápidos', style: TextStyle(color: AppTheme.crystalBlue, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
                 const SizedBox(height: 10),
                 Container(
                   decoration: BoxDecoration(
@@ -436,7 +681,7 @@ class _GameScreenState extends State<GameScreen> {
                       SwitchListTile(
                         title: const Text('Volumen General', style: TextStyle(color: Colors.white)),
                         value: _volumen,
-                        activeColor: AppTheme.neonCyan,
+                        activeColor: AppTheme.crystalBlue,
                         onChanged: (v) {
                           setState(() => _volumen = v);
                           _saveSetting('volume', v);
@@ -447,7 +692,7 @@ class _GameScreenState extends State<GameScreen> {
                       SwitchListTile(
                         title: const Text('Efectos', style: TextStyle(color: Colors.white)),
                         value: _efectos,
-                        activeColor: AppTheme.tealGlass,
+                        activeColor: AppTheme.crystalBlue,
                         onChanged: (v) {
                           setState(() => _efectos = v);
                           _saveSetting('effects', v);
@@ -465,7 +710,7 @@ class _GameScreenState extends State<GameScreen> {
                                 value: _musicVolume,
                                 min: 0.0,
                                 max: 1.0,
-                                activeColor: AppTheme.neonCyan,
+                                activeColor: AppTheme.crystalBlue,
                                 onChanged: (v) {
                                   setState(() => _musicVolume = v);
                                   _saveDoubleSetting('musicVolume', v);
@@ -482,7 +727,7 @@ class _GameScreenState extends State<GameScreen> {
                 
                 const SizedBox(height: 25),
                 // Tienda rápida
-                const Text('Recarga de Gemas', style: TextStyle(color: AppTheme.tealGlass, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
+                const Text('Recarga de Gemas', style: TextStyle(color: AppTheme.crystalBlue, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
                 const SizedBox(height: 10),
                 Container(
                   decoration: BoxDecoration(
@@ -495,7 +740,7 @@ class _GameScreenState extends State<GameScreen> {
                     children: [
                       const Row(
                         children: [
-                          Icon(Icons.diamond, color: AppTheme.neonCyan),
+                          Icon(Icons.diamond, color: AppTheme.crystalBlue),
                           SizedBox(width: 8),
                           Text('100 Gemas', style: TextStyle(color: Colors.white, fontSize: 16)),
                         ],
@@ -506,7 +751,7 @@ class _GameScreenState extends State<GameScreen> {
                           text: '\$0.99',
                           height: 35,
                           fontSize: 14,
-                          primaryColor: AppTheme.tealGlass,
+                          primaryColor: AppTheme.crystalBlue,
                           secondaryColor: const Color(0xFF6A0DAD),
                           onPressed: () {},
                         ),
@@ -522,7 +767,7 @@ class _GameScreenState extends State<GameScreen> {
                     text: 'REANUDAR',
                     height: 55,
                     fontSize: 18,
-                    primaryColor: AppTheme.neonCyan,
+                    primaryColor: AppTheme.crystalBlue,
                     secondaryColor: const Color(0xFF0055FF),
                     onPressed: _togglePause,
                   ),
@@ -558,7 +803,7 @@ class _GameScreenState extends State<GameScreen> {
             border: Border.all(color: Colors.white.withOpacity(0.3), width: 1.5),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.neonCyan.withOpacity(0.2),
+                color: AppTheme.crystalBlue.withOpacity(0.2),
                 blurRadius: 30,
                 spreadRadius: 5,
               )
@@ -574,7 +819,7 @@ class _GameScreenState extends State<GameScreen> {
                   color: Colors.white,
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
-                  shadows: [Shadow(color: AppTheme.neonCyan, blurRadius: 10)],
+                  shadows: [Shadow(color: AppTheme.crystalBlue, blurRadius: 10)],
                 ),
               ),
             ],
@@ -616,7 +861,7 @@ class _GameScreenState extends State<GameScreen> {
                     Text(
                       title,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(color: AppTheme.tealGlass, fontSize: 20, fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: AppTheme.crystalBlue, fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 10),
                     Text(
@@ -630,7 +875,7 @@ class _GameScreenState extends State<GameScreen> {
                         text: 'VOLVER A JUGAR',
                         height: 55,
                         fontSize: 18,
-                        primaryColor: AppTheme.neonCyan,
+                        primaryColor: AppTheme.crystalBlue,
                         secondaryColor: const Color(0xFF0055FF),
                         onPressed: () {
                           setState(() {
@@ -671,76 +916,7 @@ class _GameScreenState extends State<GameScreen> {
     );
   }
 
-  Widget _buildPowerUpButton({
-    required IconData icon,
-    required int cost,
-    required Color color,
-    required String method,
-  }) {
-    final bool canAfford = _crystals >= cost;
-    
-    return GestureDetector(
-      onTap: () {
-        if (!canAfford) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: const Text('No tienes suficientes cristales'),
-              backgroundColor: Colors.redAccent,
-              duration: const Duration(seconds: 1),
-            )
-          );
-          return;
-        }
-        
-        // Enviar método a Unity (se usa llamada directa a GameManager como en la versión anterior por compatibilidad)
-        _unityWidgetController.postMessage('GameManager', method, '');
-        // También por el bridge por si acaso
-        _bridgeController.usePowerUp(method);
-      },
-      child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 300),
-        opacity: canAfford ? 1.0 : 0.4,
-        child: Container(
-          margin: const EdgeInsets.only(top: 15),
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
-            shape: BoxShape.circle,
-            border: Border.all(color: color.withOpacity(0.5), width: 1.5),
-            boxShadow: canAfford ? [
-              BoxShadow(
-                color: color.withOpacity(0.2),
-                blurRadius: 10,
-                spreadRadius: 1,
-              )
-            ] : null,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(icon, color: color, size: 28),
-              const SizedBox(height: 2),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.diamond, color: AppTheme.neonCyan, size: 12),
-                  const SizedBox(width: 2),
-                  Text(
-                    '$cost',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+
 
   @override
   void dispose() {
@@ -749,6 +925,13 @@ class _GameScreenState extends State<GameScreen> {
     _scoreSub?.cancel();
     _crystalsSub?.cancel();
     _gameOverSub?.cancel();
+    _comboBonusSub?.cancel();
+    _epicSaveSub?.cancel();
+    _dangerZoneSub?.cancel();
+    _missionStartedSub?.cancel();
+    _missionUpdatedSub?.cancel();
+    _missionCompletedSub?.cancel();
+    _missionTimer?.cancel();
     
     _bridgeController.dispose();
     super.dispose();

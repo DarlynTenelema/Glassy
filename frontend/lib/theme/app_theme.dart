@@ -27,28 +27,30 @@ class ThemeProvider with ChangeNotifier {
 }
 
 class AppTheme {
-  // Colores principales (Temática Glassy / Cyan)
-  static const Color neonCyan = Color(0xFF00E5FF);
-  static const Color tealGlass = Color(0xFF48D1CC);
-  static const Color whiteGlass = Color(0xE6FFFFFF);
-  
-  static const Color darkBackground = Color(0xFF050515); // Azul oscuro profundo
-  static const Color lightBackground = Color(0xFFF0F2F5);
+  // Colores principales (Temática Lapislázuli)
+  static const Color deepLapis = Color(0xFF0F172A); // Fondo Principal
+  static const Color crystalBlue = Color(0xFF3B82F6); // Botones y Controles
+  static const Color starflareOrange = Color(0xFFF59E0B); // Acentos y Animaciones
+  static const Color pureWhite = Color(0xFFFFFFFF); // Textos e Iconos
+  static const Color voidBlack = Color(0xFF000000); // Sombras profundas
 
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: darkBackground,
-      primaryColor: neonCyan,
+      scaffoldBackgroundColor: deepLapis,
+      primaryColor: crystalBlue,
       colorScheme: const ColorScheme.dark(
-        primary: neonCyan,
-        secondary: tealGlass,
+        primary: crystalBlue,
+        secondary: starflareOrange,
       ),
-      textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme),
+      textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme).apply(
+        bodyColor: pureWhite,
+        displayColor: pureWhite,
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: neonCyan,
-          foregroundColor: Colors.white,
+          backgroundColor: crystalBlue,
+          foregroundColor: pureWhite,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
@@ -61,17 +63,17 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
-      scaffoldBackgroundColor: lightBackground,
-      primaryColor: neonCyan,
+      scaffoldBackgroundColor: const Color(0xFFF0F2F5),
+      primaryColor: crystalBlue,
       colorScheme: const ColorScheme.light(
-        primary: neonCyan,
-        secondary: tealGlass,
+        primary: crystalBlue,
+        secondary: starflareOrange,
       ),
       textTheme: GoogleFonts.outfitTextTheme(ThemeData.light().textTheme),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: neonCyan,
-          foregroundColor: Colors.white,
+          backgroundColor: crystalBlue,
+          foregroundColor: pureWhite,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),

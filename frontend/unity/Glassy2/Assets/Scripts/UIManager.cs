@@ -17,7 +17,7 @@ using UnityEngine.UI;
 ///
 /// TEXTOS (TMP_Text):
 ///   - scoreText        → Texto del score en gameplay
-///   - crystalText      → Texto de cristales en gameplay  
+///   - crystalText      → Texto de lapislázulis en gameplay  
 ///   - finalScoreText   → Texto del score final en Game Over
 ///   - pauseVolumeText  → "Volumen: ON/OFF" en panel de pausa
 ///   - pauseEffectsText → "Efectos: ON/OFF" en panel de pausa
@@ -72,7 +72,7 @@ public class UIManager : MonoBehaviour
     }
 
     // =========================================================================
-    // SCORE Y CRISTALES
+    // SCORE Y LAPISLAZULIS
     // =========================================================================
 
     public void UpdateScoreDisplay(int score)

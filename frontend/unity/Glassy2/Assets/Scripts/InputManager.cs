@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
 {
     [Header("Configuración")]
     [Tooltip("Multiplicador de fuerza al lanzar una gema con swipe rápido.")]
-    public float swipeForceMultiplier = 2f;
+    public float swipeForceMultiplier = 1.0f;
 
     [Tooltip("Velocidad máxima al arrastrar una gema con el dedo.")]
     public float maxDragSpeed = 30f;
@@ -158,18 +158,21 @@ public class InputManager : MonoBehaviour
         DisconnectPointer();
 
         // Si la inercia reciente del dedo es alta, es un "Lanzamiento"
-        if (_trackedVelocity.magnitude > 5f)
+        if (_trackedVelocity.magnitude > 3f)
         {
             _selectedRb.linearVelocity = Vector2.zero; // Reset velocidad previa
             
-            // Usamos la inercia real del dedo, escalada ligeramente, en la dirección correcta
-            float forceMagnitude = _trackedVelocity.magnitude * swipeForceMultiplier * 0.05f;
+            // Usamos la inercia real del dedo, escalada con una matemática más moderada
+            float forceMagnitude = _trackedVelocity.magnitude * swipeForceMultiplier * 0.015f; // Reducido de 0.05 a 0.015
+            // Aplicar un límite a la fuerza máxima para evitar que salgan volando como balas
+            forceMagnitude = Mathf.Clamp(forceMagnitude, 0f, 15f);
+            
             _selectedRb.AddForce(_trackedVelocity.normalized * forceMagnitude, ForceMode2D.Impulse);
         }
         else
         {
             // Movimiento corto/lento → soltar suavemente conservando un poco de la inercia natural
-            _selectedRb.linearVelocity = _trackedVelocity * 0.2f;
+            _selectedRb.linearVelocity = _trackedVelocity * 0.1f; // Reducido de 0.2 a 0.1
         }
 
         _selectedGem.SetPlayerInteraction(false);

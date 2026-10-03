@@ -6,6 +6,8 @@ import '../theme/app_theme.dart';
 import 'home_screen.dart';
 import '../widgets/gaming_button.dart';
 import '../widgets/jar_loading_widget.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import '../widgets/shatter_widget.dart';
 import '../services/audio_service.dart';
 
@@ -18,6 +20,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _isShattered = false;
+  final TextEditingController _referralController = TextEditingController();
 
   @override
   void initState() {
@@ -46,11 +49,21 @@ class _LoginScreenState extends State<LoginScreen> {
       try {
         googleUser = await GoogleSignIn.instance.authenticate();
         if (googleUser == null) {
-          if (mounted) setState(() => _isShattered = false); // Regenerar
+          if (mounted) {
+            setState(() => _isShattered = false); // Regenerar
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Inicio de sesión cancelado')),
+            );
+          }
           return;
         }
       } catch (e) {
-        if (mounted) setState(() => _isShattered = false); // Regenerar sin error técnico
+        if (mounted) {
+          setState(() => _isShattered = false); // Regenerar
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Error de GoogleSignIn: $e')),
+          );
+        }
         return;
       }
       
@@ -66,13 +79,38 @@ class _LoginScreenState extends State<LoginScreen> {
         idToken: idToken,
       );
 
+      // Enviar código de referido si existe
+      final referralCode = _referralController.text.trim();
+      if (referralCode.isNotEmpty) {
+        final session = Supabase.instance.client.auth.currentSession;
+        if (session != null) {
+          try {
+            await http.post(
+              Uri.parse('https://glassy-production.up.railway.app/api/player/referral'),
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ${session.accessToken}',
+              },
+              body: jsonEncode({'code': referralCode}),
+            );
+          } catch (e) {
+            debugPrint('Error enviando código de creador: $e');
+          }
+        }
+      }
+
       if (mounted) {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (_) => const HomeScreen()),
         );
       }
     } catch (e) {
-      if (mounted) setState(() => _isShattered = false); // Regenerar
+      if (mounted) {
+        setState(() => _isShattered = false); // Regenerar
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error de autenticación: $e')),
+        );
+      }
     }
   }
 
@@ -85,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [AppTheme.darkBackground, Color(0xFF0F2027), Color(0xFF203A43)],
+                colors: [AppTheme.deepLapis, Color(0xFF0F2027), Color(0xFF203A43)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -106,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       letterSpacing: 2,
                       shadows: [
                         const Shadow(
-                          color: AppTheme.neonCyan,
+                          color: AppTheme.crystalBlue,
                           blurRadius: 20,
                         )
                       ],
@@ -119,7 +157,35 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: Colors.white70,
                     ),
                   ),
-                  const SizedBox(height: 60),
+                  const SizedBox(height: 40),
+                  // Campo de texto para código de creador
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40),
+                    child: TextField(
+                      controller: _referralController,
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.black.withOpacity(0.3),
+                        hintText: 'CÓDIGO DE CREADOR (Opcional)',
+                        hintStyle: const TextStyle(color: Colors.white54, fontSize: 13, letterSpacing: 1),
+                        prefixIcon: const Icon(Icons.star_rounded, color: AppTheme.crystalBlue),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide.none,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: AppTheme.crystalBlue.withOpacity(0.3)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: const BorderSide(color: AppTheme.crystalBlue),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                   // Botón de Google
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -138,8 +204,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           onPressed: _signInWithGoogle,
-                          primaryColor: AppTheme.neonCyan,
-                          secondaryColor: AppTheme.tealGlass,
+                          primaryColor: AppTheme.crystalBlue,
+                          secondaryColor: AppTheme.crystalBlue,
                           shatterEffect: false, // ShatterWidget controla la magia
                         ),
                       ),

@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.0.0+10
 
 environment:
   sdk: ^3.12.2
@@ -47,6 +47,7 @@ dependencies:
   audioplayers: ^6.8.1
   in_app_purchase: ^3.3.1
   http: ^1.6.0
+  flutter_animate: ^4.5.2
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,26 @@ flutter:
     - assets/office/
     - assets/audio/
     - assets/avatar/
+    - assets/images/
+    - assets/game/gems/
+    - assets/ui/
+    - assets/ui/cofres_tienda/
+    - assets/skin/Ajedrez_Magico/
+    - assets/skin/Alquimia_Antigua/
+    - assets/skin/Caldero_de_Bruja/
+    - assets/skin/Cementerio_Encantado/
+    - assets/skin/Cofres_Tienda/
+    - assets/skin/Cultivo_de_Calabazas/
+    - assets/skin/Dinosaurios/
+    - assets/skin/Dulces_de_Halloween/
+    - assets/skin/Flores_Magicas/
+    - assets/skin/Frutas_Jugosas/
+    - assets/skin/Hongos_Brillantes/
+    - assets/skin/Monstruos_de_Bolsillo/
+    - assets/skin/Mundo_Dulce/
+    - assets/skin/Planetas/
+    - assets/skin/Sushi_Japones/
+    - assets/skin/vida_marina/
     - assets/logo.jpg
     - .env
 

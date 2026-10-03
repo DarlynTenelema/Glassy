@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using FlutterUnityBridge;
 
 /// <summary>
 /// GameOverZone — Zona de peligro en la boca de la botella.
@@ -28,7 +29,13 @@ public class GameOverZone : MonoBehaviour
         if (GameManager.Instance == null || GameManager.Instance.IsGameOver) return;
 
         _gemsInZone++;
+        bool wasInDanger = IsInDanger;
         IsInDanger = _gemsInZone > 0;
+
+        if (IsInDanger != wasInDanger && FlutterBridgeManager.Instance != null)
+        {
+            FlutterBridgeManager.Instance.SendDangerZone(IsInDanger);
+        }
 
         // Iniciar countdown de Game Over si no está ya corriendo
         if (_gameOverCoroutine == null)
@@ -43,7 +50,13 @@ public class GameOverZone : MonoBehaviour
         if (gem == null || gem.gemType == GemType.Pearl) return;
 
         _gemsInZone = Mathf.Max(0, _gemsInZone - 1);
+        bool wasInDanger = IsInDanger;
         IsInDanger = _gemsInZone > 0;
+
+        if (IsInDanger != wasInDanger && FlutterBridgeManager.Instance != null)
+        {
+            FlutterBridgeManager.Instance.SendDangerZone(IsInDanger);
+        }
 
         // Si la zona quedó vacía, cancelar el countdown
         if (_gemsInZone == 0 && _gameOverCoroutine != null)

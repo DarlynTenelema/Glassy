@@ -32,6 +32,12 @@ namespace FlutterUnityBridge.Models
         public string token;
     }
 
+    [Serializable]
+    public class SetSkinPayload
+    {
+        public string skin_id;
+    }
+
     // ==========================================
     // PAYLOADS: UNITY -> FLUTTER
     // ==========================================
@@ -53,5 +59,44 @@ namespace FlutterUnityBridge.Models
     {
         public int finalScore;
         public bool highScoreBroken;
+    }
+
+    [Serializable]
+    public class ComboBonusPayload
+    {
+        public int bonus;
+        public int combo;
+    }
+
+    [Serializable]
+    public class EpicSavePayload
+    {
+        public int bonus;
+    }
+
+    [Serializable]
+    public class DangerZonePayload
+    {
+        public bool isDanger;
+    }
+
+    [Serializable]
+    public class MissionStartedPayload
+    {
+        public string text;
+        public int timeLimitSeconds;
+    }
+
+    [Serializable]
+    public class MissionUpdatedPayload
+    {
+        public int currentProgress;
+        public int targetProgress;
+    }
+
+    [Serializable]
+    public class MissionCompletedPayload
+    {
+        public int bonusPoints;
     }
 }

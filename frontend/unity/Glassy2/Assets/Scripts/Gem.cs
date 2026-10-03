@@ -1,4 +1,7 @@
 using UnityEngine;
+#if UNITY_EDITOR || UNITY_6_0_OR_NEWER // Asegurarse de que soporta Light2D
+using UnityEngine.Rendering.Universal;
+#endif
 
 /// <summary>
 /// GemType — Enum de tipos de gemas. El índice coincide con:
@@ -42,7 +45,7 @@ public class Gem : MonoBehaviour
     // Valor en puntos (leído de GameConfig según el tipo)
     public int ScoreValue => GameConfig.GemScoreValues[(int)gemType];
 
-    // Costo en cristales para eliminar esta gema (usado en StoreManager)
+    // Costo en lapislázulis para eliminar esta gema (usado en StoreManager)
     public int CrystalCost => GameConfig.GemCrystalCosts[(int)gemType];
 
     // La masa se calcula automáticamente desde GameConfig.GemBaseMasses según el tipo.
@@ -57,6 +60,11 @@ public class Gem : MonoBehaviour
     // Intervención Humana
     private bool _isBeingInteracted = false;
     private float _interactionEndTime = -99f;
+    
+    // Luz de impacto dinámica
+    private Light2D _impactLight;
+    private float _glowIntensity = 0f;
+    private Color _gemColor = Color.white;
 
     private void Awake()
     {
@@ -67,16 +75,85 @@ public class Gem : MonoBehaviour
         int typeIdx = (int)gemType;
         if (typeIdx >= 0 && typeIdx < GameConfig.GemBaseMasses.Length)
             _baseMass = GameConfig.GemBaseMasses[typeIdx];
+            
+        SetupImpactLight();
     }
 
     private void Start()
     {
+        GameManager.Instance?.activeGems.Add(this);
         ConfigurePhysicsForType();
+
+        // Aplicar la skin actual
+        ApplySkin();
 
         // El Diamante explota inmediatamente al ser instanciado
         if (gemType == GemType.Diamond)
         {
             TriggerDiamondExplosion();
+        }
+    }
+
+    public void ApplySkin()
+    {
+        if (SkinManager.Instance != null && _spriteRenderer != null)
+        {
+            Sprite skinSprite = SkinManager.Instance.GetSpriteForGem(gemType);
+            if (skinSprite != null)
+            {
+                _spriteRenderer.sprite = skinSprite;
+            }
+        }
+        ExtractColorForLight();
+    }
+    
+    private void SetupImpactLight()
+    {
+        GameObject lightObj = new GameObject("ImpactLight");
+        lightObj.transform.SetParent(this.transform);
+        lightObj.transform.localPosition = Vector3.zero;
+
+        _impactLight = lightObj.AddComponent<Light2D>();
+        _impactLight.lightType = Light2D.LightType.Point;
+        _impactLight.intensity = 0f;
+        _impactLight.pointLightOuterRadius = 1.2f;
+    }
+
+    private void ExtractColorForLight()
+    {
+        if (_spriteRenderer != null && _spriteRenderer.sprite != null && _impactLight != null)
+        {
+            Texture2D tex = _spriteRenderer.sprite.texture;
+            if (tex.isReadable)
+            {
+                // Tomar un pixel representativo (el centro)
+                _gemColor = tex.GetPixel(tex.width / 2, tex.height / 2);
+                if (_gemColor.a < 0.1f) _gemColor = tex.GetPixel(tex.width / 2, tex.height / 4); // Si es transparente, bajar un poco
+                
+                // Asegurar que la luz sea brillante
+                _gemColor.a = 1f;
+                _impactLight.color = _gemColor;
+            }
+            else
+            {
+                // Si no tiene Read/Write enabled, usar un color predeterminado por GemType
+                _impactLight.color = GetFallbackColor();
+            }
+        }
+    }
+    
+    private Color GetFallbackColor()
+    {
+        switch (gemType)
+        {
+            case GemType.Emerald: return Color.green;
+            case GemType.Amethyst: return new Color(0.6f, 0.2f, 0.8f);
+            case GemType.Topaz: return Color.yellow;
+            case GemType.GreenRuby: return new Color(0.5f, 1f, 0.2f);
+            case GemType.Sapphire: return Color.blue;
+            case GemType.RedRuby: return Color.red;
+            case GemType.Diamond: return Color.cyan;
+            default: return Color.white;
         }
     }
 
@@ -168,6 +245,14 @@ public class Gem : MonoBehaviour
             Vector2 newPos = _rb.position + Vector2.down * 2f * Time.fixedDeltaTime; // fallSpeed = 2f
             _rb.MovePosition(newPos);
         }
+        
+        // Desvanecer la luz de impacto
+        if (_glowIntensity > 0 && _impactLight != null)
+        {
+            _glowIntensity -= Time.fixedDeltaTime * 4f; // Desaparece rápido
+            if (_glowIntensity < 0) _glowIntensity = 0;
+            _impactLight.intensity = _glowIntensity;
+        }
     }
 
     // =========================================================================
@@ -176,6 +261,12 @@ public class Gem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Flash de luz al impactar fuerte
+        if (collision.relativeVelocity.magnitude > 1.5f && _impactLight != null)
+        {
+            _glowIntensity = 1.5f; // Intensidad del flash
+        }
+        
         if (_hasMerged) return;
 
         // Si la perla venía en caída libre ordenada (Kinematic) y choca con algo (suelo, pared o gema),
@@ -222,11 +313,11 @@ public class Gem : MonoBehaviour
         // Determinar el siguiente tipo
         GemType nextType = gemType + 1; // Enum avanza en orden: Pearl→Emerald→...→Diamond
 
-        // Sumar los puntos de la nueva gema creada
-        GameManager.Instance?.AddScore(GameConfig.GemScoreValues[(int)nextType]);
+        // Detectar si la fusión fue provocada por el jugador recientemente
+        bool isUserInteraction = this.HasRecentInteraction() || other.HasRecentInteraction();
 
-        // Reproducir sonido de fusión
-        AudioManager.Instance?.PlayGemMerge(nextType);
+        // Enviar evento de fusión al sistema de Combos (Reemplaza a AddScore y PlayGemMerge)
+        GameManager.Instance?.RegisterMerge(gemType, nextType, isUserInteraction);
 
         // Destruir las dos gemas actuales
         Destroy(gameObject);
@@ -257,5 +348,13 @@ public class Gem : MonoBehaviour
 
         // Destruir la gema con un pequeño delay para que se vea el efecto
         Destroy(gameObject, 0.3f);
+    }
+
+    private void OnDestroy()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.activeGems.Remove(this);
+        }
     }
 }

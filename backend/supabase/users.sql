@@ -1,7 +1,7 @@
 -- ============================================================
 -- TABLA: users
 -- Almacena los datos de los jugadores que se autentican con Google OAuth.
--- Los cristales se guardan aquí como fuente de verdad del servidor.
+-- Los lapislázulis se guardan aquí como fuente de verdad del servidor.
 -- ============================================================
 CREATE TABLE IF NOT EXISTS public.users (
     id          UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
@@ -9,6 +9,25 @@ CREATE TABLE IF NOT EXISTS public.users (
     name        VARCHAR(255) NOT NULL,
     avatar_url  TEXT,
     crystals    INT NOT NULL DEFAULT 100 CHECK (crystals >= 0),
+    piggy_bank  INT NOT NULL DEFAULT 0 CHECK (piggy_bank >= 0),
+    daily_reward_streak INT NOT NULL DEFAULT 1 CHECK (daily_reward_streak >= 1 AND daily_reward_streak <= 7),
+    last_daily_claim TIMESTAMP,
+    current_mission_day INT NOT NULL DEFAULT 1 CHECK (current_mission_day >= 1 AND current_mission_day <= 30),
+    mission_progress INT NOT NULL DEFAULT 0,
+    mission_completed BOOLEAN NOT NULL DEFAULT false,
+    subscription_tier VARCHAR(50) NOT NULL DEFAULT 'none',
+    referral_code_used VARCHAR(50) DEFAULT NULL,
+    lapis_fragments INT NOT NULL DEFAULT 0,
+    last_chest_6h TIMESTAMP DEFAULT NULL,
+    last_chest_12h TIMESTAMP DEFAULT NULL,
+    last_chest_24h TIMESTAMP DEFAULT NULL,
+    total_active_days INT NOT NULL DEFAULT 1,
+    welcome_pack_500_bought BOOLEAN NOT NULL DEFAULT false,
+    welcome_pack_2000_bought BOOLEAN NOT NULL DEFAULT false,
+    welcome_pack_5000_bought BOOLEAN NOT NULL DEFAULT false,
+    selected_skin_id VARCHAR(50) NOT NULL DEFAULT 'gemas_clasicas',
+    daily_lapis_farmed INT NOT NULL DEFAULT 0,
+    last_farm_date DATE DEFAULT CURRENT_DATE,
     created_at  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 

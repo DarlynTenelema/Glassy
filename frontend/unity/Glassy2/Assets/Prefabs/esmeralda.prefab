@@ -188,6 +188,7 @@ MonoBehaviour:
   upwardForce: 0.5
   randomForceMagnitude: 1.5
   randomTorqueMagnitude: 0.1
+  flowSpeed: 0.5
 --- !u!114 &3563116548047680523
 MonoBehaviour:
   m_ObjectHideFlags: 0

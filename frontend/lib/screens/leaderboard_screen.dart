@@ -49,7 +49,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.darkBackground,
+      backgroundColor: AppTheme.deepLapis,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text(
@@ -58,7 +58,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
             color: Colors.white,
             fontWeight: FontWeight.w900,
             letterSpacing: 3,
-            shadows: [Shadow(color: AppTheme.neonCyan, blurRadius: 15)],
+            shadows: [Shadow(color: AppTheme.crystalBlue, blurRadius: 15)],
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -75,7 +75,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [AppTheme.darkBackground, Color(0xFF101828)],
+                colors: [AppTheme.deepLapis, Color(0xFF101828)],
                 begin: Alignment.bottomRight,
                 end: Alignment.topLeft,
               ),
@@ -114,7 +114,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(
-                    child: CircularProgressIndicator(color: AppTheme.neonCyan),
+                    child: CircularProgressIndicator(color: AppTheme.crystalBlue),
                   );
                 }
                 
@@ -130,18 +130,25 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
                   children: [
                     const SizedBox(height: 20),
                     // Top 3 Podium
-                    if (leaders.length >= 3)
+                    if (leaders.isNotEmpty)
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            _buildPodiumItem(leaders[1], 2, 130, const Color(0xFFE0E0E0)), // Plata
-                            const SizedBox(width: 15),
-                            _buildPodiumItem(leaders[0], 1, 170, const Color(0xFFFFD700)), // Oro
-                            const SizedBox(width: 15),
-                            _buildPodiumItem(leaders[2], 3, 100, const Color(0xFFCD7F32)), // Bronce
+                            if (leaders.length >= 2)
+                              _buildPodiumItem(leaders[1], 2, 130, const Color(0xFFE0E0E0)), // Plata
+                            if (leaders.length >= 2)
+                              const SizedBox(width: 15),
+                            
+                            if (leaders.isNotEmpty)
+                              _buildPodiumItem(leaders[0], 1, 170, const Color(0xFFFFD700)), // Oro
+                            
+                            if (leaders.length >= 3)
+                              const SizedBox(width: 15),
+                            if (leaders.length >= 3)
+                              _buildPodiumItem(leaders[2], 3, 100, const Color(0xFFCD7F32)), // Bronce
                           ],
                         ),
                       ),
@@ -163,7 +170,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: AppTheme.neonCyan.withOpacity(0.05),
+                              color: AppTheme.crystalBlue.withOpacity(0.05),
                               blurRadius: 30,
                               spreadRadius: 5,
                             )
@@ -341,12 +348,12 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
             padding: const EdgeInsets.all(2),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: AppTheme.neonCyan.withOpacity(0.5), width: 1),
+              border: Border.all(color: AppTheme.crystalBlue.withOpacity(0.5), width: 1),
             ),
             child: const CircleAvatar(
               backgroundColor: Colors.transparent,
               radius: 18,
-              child: Icon(Icons.person, color: AppTheme.neonCyan, size: 22),
+              child: Icon(Icons.person, color: AppTheme.crystalBlue, size: 22),
             ),
           ),
           const SizedBox(width: 15),
@@ -363,7 +370,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> with SingleTicker
           Text(
             '${player['score']}',
             style: const TextStyle(
-              color: AppTheme.tealGlass,
+              color: AppTheme.crystalBlue,
               fontSize: 18,
               fontWeight: FontWeight.w900,
               letterSpacing: 1,

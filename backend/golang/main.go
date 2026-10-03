@@ -33,7 +33,19 @@ func main() {
 		origin := c.Request.Header.Get("Origin")
 		allowedOrigins := os.Getenv("ALLOWED_ORIGINS")
 
-		if allowedOrigins == "*" || strings.Contains(allowedOrigins, origin) {
+		isAllowed := false
+		if allowedOrigins == "*" {
+			isAllowed = true
+		} else {
+			for _, o := range strings.Split(allowedOrigins, ",") {
+				if strings.TrimSpace(o) == origin {
+					isAllowed = true
+					break
+				}
+			}
+		}
+
+		if isAllowed {
 			if origin != "" {
 				c.Writer.Header().Set("Access-Control-Allow-Origin", origin)
 			} else {
@@ -79,11 +91,45 @@ func main() {
 		api.GET("/player/settings", GetSettings)
 		api.POST("/player/settings", SaveSettings)
 
-		// Ad reward — reclamar cristales por ver video de AdMob
+		// Ad reward — reclamar lapislázulis por ver video de AdMob
 		api.POST("/player/ad-reward", ClaimAdReward)
 
 		// Compras — verificar y acreditar compra de Google Play Billing
 		api.POST("/player/verify-purchase", VerifyPurchase)
+		api.GET("/player/store-status", GetStoreStatus)
+
+		// Skins (Tienda)
+		api.GET("/player/skins", GetSkins)
+		api.POST("/player/skins/buy", BuySkin)
+		api.POST("/player/skins/equip", EquipSkin)
+
+		// Economía — Calendario Diario, Misiones y Piggy Bank
+		api.GET("/player/economy", GetEconomyStatus)
+		api.POST("/player/claim-daily", ClaimDailyReward)
+		api.POST("/player/mission/update", UpdateMissionProgress)
+		api.POST("/player/mission/claim", ClaimMissionReward)
+		api.POST("/player/piggy-bank/claim", ClaimPiggyBank)
+		api.POST("/player/spend-crystals", SpendCrystals)
+		
+		// Referidos - Glassy Partners
+		api.POST("/player/referral", SetReferralCode)
+
+		// Logros (Achievements)
+		api.GET("/player/achievements/status", GetAchievementsStatus)
+		api.POST("/player/achievements/tiktok", SubmitTikTokLink)
+		api.POST("/player/achievements/progress", UpdateAchievementProgress)
+		api.POST("/player/achievements/claim", ClaimAchievementReward)
+
+		// Cofres de Tiempo
+		api.POST("/player/claim-chest", ClaimChest)
+
+		// ==========================================
+		// GLASSY PARTNERS ROUTES
+		// ==========================================
+		api.POST("/partner/register", RegisterPartner)
+		api.GET("/partner/dashboard", GetPartnerDashboard)
+		api.POST("/partner/paypal", UpdatePayPal)
+		api.POST("/partner/withdraw", RequestWithdrawal)
 	}
 
 	// =========================================================================

@@ -11,24 +11,34 @@ public class BackgroundManager : MonoBehaviour
         GameObject bgObj = new GameObject("DynamicBackground");
         sr = bgObj.AddComponent<SpriteRenderer>();
         
+        // Ponerlo al fondo (detrás de todo)
+        sr.sortingOrder = -1000;
+        bgObj.transform.position = new Vector3(0, 0, 50);
+        
+        cam = Camera.main;
+        
+        UpdateBackground();
+    }
+
+    public void UpdateBackground()
+    {
+        if (sr == null) return;
+        
+        string skinId = SkinManager.Instance != null ? SkinManager.Instance.CurrentSkinId : "gemas_clasicas";
+        string texPath = (skinId == "gemas_clasicas") ? "fondo" : $"Skins/{skinId}/wallpaper";
+        
         // Cargar la textura desde Resources
-        Texture2D tex = Resources.Load<Texture2D>("fondo");
+        Texture2D tex = Resources.Load<Texture2D>(texPath);
         if (tex != null)
         {
             // Crear el sprite
             Sprite bgSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100f);
             sr.sprite = bgSprite;
-            
-            // Ponerlo al fondo (detrás de todo)
-            sr.sortingOrder = -1000;
-            bgObj.transform.position = new Vector3(0, 0, 50);
-            
-            cam = Camera.main;
             AdjustScale();
         }
         else
         {
-            Debug.LogError("[BackgroundManager] No se pudo cargar 'fondo.jpg' desde Resources.");
+            Debug.LogWarning($"[BackgroundManager] No se pudo cargar el wallpaper en: {texPath}");
         }
     }
 

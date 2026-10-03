@@ -1,0 +1,33 @@
+Misiones diarias (1 por día durante 30 días):
+Creamos 30 misiones, una para cada día del mes. El objetivo es que sean posibles con la física y los elementos actuales (versión 1).
+- Día 1: Llega a 500 puntos en una partida (Recompensa 1 Lapislázuli).
+- Día 2: Crea 5 Esmeraldas fusionando Perlas (Recompensa 1 Lapislázuli).
+- Día 3: Juega 3 partidas completas (Recompensa 1 Lapislázuli).
+- Día 4: Lanza 20 gemas usando el deslizamiento rápido de tu dedo (Recompensa 1 Lapislázuli).
+- Día 5: Crea 3 Amatistas (Moradas) (Recompensa 1 Lapislázulis).
+- Día 6: Acumula 2,000 puntos totales sumando varias partidas (Recompensa 2 Lapislázulis).
+- Día 7: Crea tu primer Topacio (Naranja) (Recompensa 1 Lapislázulis).
+- Día 8: Mira un video de AdMob para ganar recompensas (Recompensa 2 Lapislázulis).
+- Día 9: Mueve 50 gemas arrastrándolas por la pantalla (Recompensa 2 Lapislázulis).
+- Día 10: Llega a 1,500 puntos en una sola partida (Recompensa 1 Lapislázulis).
+- Día 11: Crea un Rubí verde caña (Recompensa 1 Lapislázulis).
+- Día 12: Juega 5 partidas en un solo día (Recompensa 2 Lapislázulis).
+- Día 13: Lanza 50 gemas bruscamente para abrirte paso (Recompensa 2 Lapislázulis).
+- Día 14: Crea 5 Topacios a lo largo del día (Recompensa 3 Lapislázulis).
+- Día 15: Entra a revisar tu posición en el Leaderboard global (Recompensa 1 Lapislázuli).
+- Día 16: Consigue crear un Zafiro (Azul violeta) (Recompensa 1 Lapislázulis).
+- Día 17: Acumula 5,000 puntos en total (Recompensa 5 Lapislázulis).
+- Día 18: Elimina un grupo de gemas de la pantalla usando Lapislázulis (Recompensa 3 Lapislázulis).
+- Día 19: Llega a 3,000 puntos en una partida (Recompensa 3 Lapislázulis).
+- Día 20: Juega 1 partida con el Volumen en OFF y otra en ON (Recompensa 1 Lapislázuli).
+- Día 21: Crea 3 Rubís verde caña (Recompensa 2 Lapislázulis).
+- Día 22: Mueve 100 gemas con el dedo a lo largo del día (Recompensa 3 Lapislázulis).
+- Día 23: Consigue crear el Rubí (Rojo) (Recompensa 1 Lapislázulis).
+- Día 24: Mira 3 videos de anuncios en un día (Recompensa 4 Lapislázulis).
+- Día 25: Juega 10 partidas hoy (Recompensa 4 Lapislázulis).
+- Día 26: Crea 3 Zafiros en un solo día (Recompensa 2 Lapislázulis).
+- Día 27: Alcanza 5,000 puntos en una sola partida (Recompensa 5 Lapislázulis).
+- Día 28: Acumula 15,000 puntos totales sumando tus partidas (Recompensa 15 Lapislázulis).
+- Día 29: ¡Haz que aparezca el Diamante blanco! (Recompensa 1 Lapislázulis).
+- Día 30: Consigue explotar 2 Diamantes blancos hoy (Recompensa 2 Lapislázulis).
+Al completar los 30 días, se reinicia el calendario.

@@ -68,3 +68,67 @@ func AuthMiddleware() gin.HandlerFunc {
 		c.Next()
 	}
 }
+
+// SetReferralCode permite a un usuario registrar el código del influencer
+// POST /api/player/referral
+func SetReferralCode(c *gin.Context) {
+	userID := c.GetString("user_id")
+
+	var req struct {
+		Code string `json:"code" binding:"required"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Missing code"})
+		return
+	}
+
+	code := strings.ToUpper(strings.TrimSpace(req.Code))
+
+	tx, err := DB.Begin()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+	defer tx.Rollback()
+
+	// Obtener ID del partner
+	var partnerID string
+	err = tx.QueryRow(`SELECT id FROM partners WHERE partner_code = $1`, code).Scan(&partnerID)
+	if err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Invalid referral code"})
+		return
+	}
+
+	// Marcar en users
+	res, err := tx.Exec(`
+		UPDATE users 
+		SET referral_code_used = $1 
+		WHERE id = $2 AND referral_code_used IS NULL
+	`, code, userID)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to set referral code"})
+		return
+	}
+
+	rows, _ := res.RowsAffected()
+	if rows == 0 {
+		c.JSON(http.StatusConflict, gin.H{"error": "Referral code already set or user not found"})
+		return
+	}
+
+	// Insertar en partner_referrals
+	_, err = tx.Exec(`
+		INSERT INTO partner_referrals (partner_id, user_id, status)
+		VALUES ($1, $2, 'in_progress')
+	`, partnerID, userID)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to register referral internally"})
+		return
+	}
+
+	tx.Commit()
+
+	c.JSON(http.StatusOK, gin.H{"message": "Referral code applied successfully!"})
+}

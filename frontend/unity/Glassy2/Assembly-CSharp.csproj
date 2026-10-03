@@ -54,7 +54,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameOverZone.cs" />
     <Compile Include="Assets\Scripts\ApiManager.cs" />
+    <Compile Include="Assets\Scripts\MissionManager.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\SkinManager.cs" />
     <Compile Include="Assets\Scripts\GemHighlightManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\FlutterUnityIntegration\NativeAPI.cs" />
