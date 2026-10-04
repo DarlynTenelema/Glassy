@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/base64"
 	"fmt"
 	"log"
 	"net/http"
@@ -19,10 +20,15 @@ func InitAuth() {
 		fmt.Println("Warning: JWT_SECRET environment variable is not set")
 		return
 	}
-	// En versiones recientes de Supabase, el JWT Secret se utiliza como una cadena literal (raw bytes).
-	// No debemos intentar decodificarlo a Base64 aunque lo parezca, porque Supabase lo usa tal cual
-	// para firmar los tokens.
-	jwtSecret = []byte(rawSecret)
+	// Intentar decodificar Base64. Si falla, usar como raw string.
+	// Supabase en la mayoría de proyectos modernos usa un string raw, 
+	// pero en configuraciones de Railway o variables inyectadas puede venir en Base64.
+	decoded, err := base64.StdEncoding.DecodeString(rawSecret)
+	if err == nil && len(decoded) > 0 {
+		jwtSecret = decoded
+	} else {
+		jwtSecret = []byte(rawSecret)
+	}
 }
 
 // AuthMiddleware protects routes using the Supabase JWT
@@ -42,8 +48,10 @@ func AuthMiddleware() gin.HandlerFunc {
 
 		tokenString := parts[1]
 		token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
-			if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
-				return nil, fmt.Errorf("unexpected signing method")
+			// En lugar de hacer un cast estricto al struct, verificamos el algoritmo en el Header
+			alg := token.Method.Alg()
+			if !strings.HasPrefix(alg, "HS") {
+				return nil, fmt.Errorf("unexpected signing method: %v", alg)
 			}
 			return jwtSecret, nil
 		})
