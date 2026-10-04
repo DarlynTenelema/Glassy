@@ -172,33 +172,66 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         ),
                       ),
                       
-                      // Botón Settings
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.15),
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.white.withOpacity(0.3)),
-                            ),
-                            child: IconButton(
-                              icon: Image.asset('assets/ui/elemento_2.png', width: 28, height: 28),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  PageRouteBuilder(
-                                    pageBuilder: (context, animation, secondaryAnimation) => const SettingsScreen(),
-                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                      return FadeTransition(opacity: animation, child: child);
-                                    },
-                                  ),
-                                );
-                              },
+                      // Botones de la derecha (Wallet y Settings)
+                      Row(
+                        children: [
+                          // Wallet
+                          Consumer<GameProvider>(
+                            builder: (context, gameProvider, child) {
+                              return Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.15),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(color: AppTheme.crystalBlue.withOpacity(0.5)),
+                                ),
+                                child: Row(
+                                  children: [
+                                    const Icon(Icons.diamond, color: AppTheme.crystalBlue, size: 18),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      '${gameProvider.crystals}',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                          const SizedBox(width: 12),
+                          // Botón Settings
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(30),
+                            child: BackdropFilter(
+                              filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.15),
+                                  shape: BoxShape.circle,
+                                  border: Border.all(color: Colors.white.withOpacity(0.3)),
+                                ),
+                                child: IconButton(
+                                  icon: Image.asset('assets/ui/elemento_2.png', width: 28, height: 28),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      PageRouteBuilder(
+                                        pageBuilder: (context, animation, secondaryAnimation) => const SettingsScreen(),
+                                        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                          return FadeTransition(opacity: animation, child: child);
+                                        },
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),

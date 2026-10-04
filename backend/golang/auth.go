@@ -19,14 +19,10 @@ func InitAuth() {
 		fmt.Println("Warning: JWT_SECRET environment variable is not set")
 		return
 	}
-	// Supabase signs JWTs with the base64-decoded version of the JWT Secret.
-	decoded, err := base64.StdEncoding.DecodeString(rawSecret)
-	if err != nil {
-		// Not valid base64 — use raw bytes as fallback (handles local dev / custom secrets)
-		jwtSecret = []byte(rawSecret)
-	} else {
-		jwtSecret = decoded
-	}
+	// En versiones recientes de Supabase, el JWT Secret se utiliza como una cadena literal (raw bytes).
+	// No debemos intentar decodificarlo a Base64 aunque lo parezca, porque Supabase lo usa tal cual
+	// para firmar los tokens.
+	jwtSecret = []byte(rawSecret)
 }
 
 // AuthMiddleware protects routes using the Supabase JWT
@@ -53,6 +49,7 @@ func AuthMiddleware() gin.HandlerFunc {
 		})
 
 		if err != nil || !token.Valid {
+			log.Printf("JWT Parse Error: %v", err)
 			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Invalid token", "details": err.Error()})
 			return
 		}

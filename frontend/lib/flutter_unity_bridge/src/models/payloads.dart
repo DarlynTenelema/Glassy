@@ -54,6 +54,7 @@ class CrystalsUpdatePayload {
   factory CrystalsUpdatePayload.fromJson(Map<String, dynamic> json) {
     return CrystalsUpdatePayload(currentCrystals: json['currentCrystals'] as int? ?? 0);
   }
+  String toJsonString() => json.encode({'currentCrystals': currentCrystals});
 }
 
 class GameOverPayload {

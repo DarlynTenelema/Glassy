@@ -18,10 +18,7 @@ void main() async {
   
   await dotenv.load(fileName: ".env");
   
-  await GoogleSignIn.instance.initialize(
-    serverClientId: Env.webClientId,
-  );
-  
+
   await Supabase.initialize(
     url: Env.supabaseUrl,
     anonKey: Env.supabaseAnonKey,
