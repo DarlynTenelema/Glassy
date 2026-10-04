@@ -47,8 +47,9 @@ func AuthMiddleware() gin.HandlerFunc {
 		}
 
 		tokenString := parts[1]
+
+		// Primero intentamos la verificación local con el JWT Secret (HS256)
 		token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
-			// En lugar de hacer un cast estricto al struct, verificamos el algoritmo en el Header
 			alg := token.Method.Alg()
 			if !strings.HasPrefix(alg, "HS") {
 				return nil, fmt.Errorf("unexpected signing method: %v", alg)
@@ -56,20 +57,55 @@ func AuthMiddleware() gin.HandlerFunc {
 			return jwtSecret, nil
 		})
 
-		if err != nil || !token.Valid {
-			log.Printf("JWT Parse Error: %v", err)
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Invalid token", "details": err.Error()})
-			return
+		var userID string
+
+		if err == nil && token.Valid {
+			// Verificación local exitosa
+			claims, ok := token.Claims.(jwt.MapClaims)
+			if !ok {
+				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Invalid token claims"})
+				return
+			}
+			userID = fmt.Sprintf("%v", claims["sub"])
+		} else {
+			// Si falla la verificación local (ej. porque el token usa ES256 o RS256), 
+			// verificamos el token llamando a la API real de Supabase.
+			supabaseURL := os.Getenv("SUPABASE_URL")
+			supabaseAnon := os.Getenv("SUPABASE_ANON")
+			
+			if supabaseURL == "" || supabaseAnon == "" {
+				log.Printf("JWT Parse Error and missing Supabase env vars for fallback validation: %v", err)
+				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Invalid token", "details": err.Error()})
+				return
+			}
+
+			req, _ := http.NewRequest("GET", supabaseURL+"/auth/v1/user", nil)
+			req.Header.Set("Authorization", "Bearer "+tokenString)
+			req.Header.Set("apikey", supabaseAnon)
+
+			resp, reqErr := http.DefaultClient.Do(req)
+			if reqErr != nil || resp.StatusCode != http.StatusOK {
+				log.Printf("Supabase API verification failed: %v, status: %d", reqErr, resp.StatusCode)
+				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Token unverifiable by Supabase API"})
+				return
+			}
+			
+			// El token es válido según Supabase. Extraemos el UserID sin verificar la firma localmente.
+			parser := jwt.NewParser()
+			unverifiedToken, _, parseErr := parser.ParseUnverified(tokenString, jwt.MapClaims{})
+			if parseErr != nil {
+				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Could not parse unverified token"})
+				return
+			}
+			claims, ok := unverifiedToken.Claims.(jwt.MapClaims)
+			if !ok {
+				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Invalid token claims"})
+				return
+			}
+			userID = fmt.Sprintf("%v", claims["sub"])
 		}
 
-		claims, ok := token.Claims.(jwt.MapClaims)
-		if !ok {
-			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Invalid token claims"})
-			return
-		}
-
-		// Supabase JWT stores the user's UUID in the "sub" claim
-		c.Set("user_id", claims["sub"])
+		c.Set("user_id", userID)
 		c.Next()
 	}
 }
