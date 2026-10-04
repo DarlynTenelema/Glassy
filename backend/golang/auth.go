@@ -1,8 +1,8 @@
 package main
 
 import (
-	"encoding/base64"
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"strings"
