@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../services/storage_service.dart';
 import '../services/auth_service.dart';
+import '../services/game_api_service.dart';
 
 class GameProvider with ChangeNotifier {
   final StorageService _storage = StorageService();
@@ -51,6 +52,10 @@ class GameProvider with ChangeNotifier {
     // Fetch critical economy data from backend
     await fetchEconomyStatus();
     await fetchSkins();
+    
+    // Sync any offline scores
+    GameApiService().syncPendingScore();
+    
     notifyListeners();
   }
 

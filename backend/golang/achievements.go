@@ -3,9 +3,32 @@ package main
 import (
 	"net/http"
 	"strings"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
 )
+
+// AchievementDef define las metas y recompensas seguras en el servidor
+type AchievementDef struct {
+	GoalTotal  int
+	Reward     int
+	RewardType string
+}
+
+// Mapa de logros (GroupID -> Level -> AchievementDef)
+// TODO: Ajusta estos valores según el balance real de tu juego
+var AchievementsMap = map[int]map[int]AchievementDef{
+	1: { // Ejemplo Grupo 1: Partidas Jugadas
+		1: {GoalTotal: 10, Reward: 10, RewardType: "fragments"},
+		2: {GoalTotal: 50, Reward: 30, RewardType: "fragments"},
+		3: {GoalTotal: 100, Reward: 10, RewardType: "lapis"},
+	},
+	2: { // Ejemplo Grupo 2: Gemas Fusionadas
+		1: {GoalTotal: 100, Reward: 15, RewardType: "fragments"},
+		2: {GoalTotal: 500, Reward: 50, RewardType: "fragments"},
+		3: {GoalTotal: 1000, Reward: 20, RewardType: "lapis"},
+	},
+}
 
 // SubmitTikTokLink recibe el enlace de TikTok (Grupo 9) y lo marca como pendiente
 // POST /api/player/achievements/tiktok
@@ -76,14 +99,24 @@ func ClaimAchievementReward(c *gin.Context) {
 	userID := c.GetString("user_id")
 
 	var req struct {
-		GroupID   int    `json:"group_id" binding:"required"`
-		Level     int    `json:"level" binding:"required"`
-		GoalTotal int    `json:"goal_total" binding:"required"` 
-		Reward    int    `json:"reward" binding:"required"`
-		RewardType string `json:"reward_type"` // "lapis" o "fragments"     
+		GroupID int `json:"group_id" binding:"required"`
+		Level   int `json:"level" binding:"required"`
 	}
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
+		return
+	}
+
+	// Validar que el logro exista en nuestro mapa seguro del servidor
+	group, groupExists := AchievementsMap[req.GroupID]
+	if !groupExists {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid achievement group"})
+		return
+	}
+	
+	achievement, levelExists := group[req.Level]
+	if !levelExists {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid achievement level"})
 		return
 	}
 
@@ -113,8 +146,8 @@ func ClaimAchievementReward(c *gin.Context) {
 		return
 	}
 
-	if progress < req.GoalTotal {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Goal not reached yet"})
+	if progress < achievement.GoalTotal {
+		c.JSON(http.StatusBadRequest, gin.H{"error": fmt.Sprintf("Goal not reached yet (Progress: %d / %d)", progress, achievement.GoalTotal)})
 		return
 	}
 
@@ -131,8 +164,8 @@ func ClaimAchievementReward(c *gin.Context) {
 	}
 
 	// Dar recompensa (lapislázulis o fragmentos)
-	if req.RewardType == "fragments" {
-		_, err = tx.Exec(`UPDATE users SET lapis_fragments = lapis_fragments + $1 WHERE id = $2`, req.Reward, userID)
+	if achievement.RewardType == "fragments" {
+		_, err = tx.Exec(`UPDATE users SET lapis_fragments = lapis_fragments + $1 WHERE id = $2`, achievement.Reward, userID)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to award fragments"})
 			return
@@ -151,7 +184,7 @@ func ClaimAchievementReward(c *gin.Context) {
 			`, crystalsToAdd, remainingFragments, userID)
 		}
 	} else {
-		_, err = tx.Exec(`UPDATE users SET crystals = crystals + $1 WHERE id = $2`, req.Reward, userID)
+		_, err = tx.Exec(`UPDATE users SET crystals = crystals + $1 WHERE id = $2`, achievement.Reward, userID)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to award crystals"})
 			return
@@ -163,7 +196,7 @@ func ClaimAchievementReward(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"message": "Reward claimed successfully", "reward": req.Reward})
+	c.JSON(http.StatusOK, gin.H{"message": "Reward claimed successfully", "reward": achievement.Reward})
 }
 
 // GetAchievementsStatus devuelve el progreso de todos los logros del usuario

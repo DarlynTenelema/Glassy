@@ -84,6 +84,12 @@ public class GameManager : MonoBehaviour
             authObj.AddComponent<AuthManager>();
             Debug.Log("[GameManager] AuthManager instanciado dinámicamente.");
         }
+
+        if (MissionManager.Instance == null)
+        {
+            gameObject.AddComponent<MissionManager>();
+            Debug.Log("[GameManager] MissionManager instanciado dinámicamente.");
+        }
     }
 
     private void OnEnable()
@@ -94,6 +100,7 @@ public class GameManager : MonoBehaviour
             FlutterBridgeManager.Instance.OnPowerUpRequested    += HandlePowerUpRequest;
             FlutterBridgeManager.Instance.OnAudioSettingsRequested += HandleAudioSettings;
             FlutterBridgeManager.Instance.OnAuthTokenReceived   += HandleAuthToken;
+            FlutterBridgeManager.Instance.OnCrystalsUpdateReceived += HandleCrystalsUpdate;
         }
     }
 
@@ -105,6 +112,7 @@ public class GameManager : MonoBehaviour
             FlutterBridgeManager.Instance.OnPowerUpRequested    -= HandlePowerUpRequest;
             FlutterBridgeManager.Instance.OnAudioSettingsRequested -= HandleAudioSettings;
             FlutterBridgeManager.Instance.OnAuthTokenReceived   -= HandleAuthToken;
+            FlutterBridgeManager.Instance.OnCrystalsUpdateReceived -= HandleCrystalsUpdate;
         }
     }
 
@@ -129,6 +137,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void HandleCrystalsUpdate(CrystalsUpdatePayload payload)
+    {
+        LocalCrystals = payload.currentCrystals;
+        PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
+        PlayerPrefs.Save();
+        UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
+        Debug.Log($"[GameManager] Cristales sincronizados desde backend: {LocalCrystals}");
+    }
+
     private void HandlePowerUpRequest(PowerUpPayload payload)
     {
         switch (payload.powerUpType)
@@ -149,6 +166,7 @@ public class GameManager : MonoBehaviour
         LocalCrystals = PlayerPrefs.GetInt(GameConfig.KeyCrystals, 100);
 
         // Sincronizar lapislázulis con el servidor si hay conexión
+        /* 
         if (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
         {
             ApiManager.Instance?.GetWallet(crystals =>
@@ -162,6 +180,7 @@ public class GameManager : MonoBehaviour
                 UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
             });
         }
+        */
 
         UIManager.Instance?.UpdateScoreDisplay(0);
         UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
@@ -238,43 +257,48 @@ public class GameManager : MonoBehaviour
             _chainReactionMultiplier = 1; 
         }
 
-        // 2. COMBOS POR RACHA
-        if (_currentComboType == null)
+        // 2. COMBOS POR RACHA (Solo para interacciones manuales)
+        if (isUserInteraction)
         {
-            _currentComboType = mergedType;
-            _comboMultiplier = 1;
-            _accumulatedComboScore = 0;
-            AudioManager.Instance?.ResetPitch();
-        }
-        else if (_currentComboType == mergedType)
-        {
-            // Continúa la racha de la misma gema
-            _comboMultiplier++;
-            AudioManager.Instance?.IncreasePitch();
-        }
-        else
-        {
-            // SE CORTA LA RACHA -> COBRAR BONO MASIVO
-            int bonus = _accumulatedComboScore * _comboMultiplier;
-            if (bonus > 0 && _comboMultiplier > 1) 
+            if (_currentComboType == null)
             {
-                AddScore(bonus);
-                Debug.Log($"[COMBO] Racha rota! Cobrando bono: {bonus} puntos");
-                if (FlutterBridgeManager.Instance != null) {
-                    FlutterBridgeManager.Instance.SendComboBonus(bonus, _comboMultiplier);
-                }
+                _currentComboType = mergedType;
+                _comboMultiplier = 1;
+                _accumulatedComboScore = 0;
+                AudioManager.Instance?.ResetPitch();
             }
+            else if (_currentComboType == mergedType)
+            {
+                // Continúa la racha de la misma gema
+                _comboMultiplier++;
+                AudioManager.Instance?.IncreasePitch();
+            }
+            else
+            {
+                // SE CORTA LA RACHA -> COBRAR BONO MASIVO
+                int bonus = _accumulatedComboScore * _comboMultiplier;
+                if (bonus > 0 && _comboMultiplier > 1) 
+                {
+                    AddScore(bonus);
+                    Debug.Log($"[COMBO] Racha rota! Cobrando bono: {bonus} puntos");
+                    if (FlutterBridgeManager.Instance != null) {
+                        FlutterBridgeManager.Instance.SendComboBonus(bonus, _comboMultiplier);
+                    }
+                }
 
-            // Iniciar nueva racha con la nueva gema
-            _currentComboType = mergedType;
-            _comboMultiplier = 1;
-            _accumulatedComboScore = 0;
-            AudioManager.Instance?.ResetPitch();
+                // Iniciar nueva racha con la nueva gema
+                _currentComboType = mergedType;
+                _comboMultiplier = 1;
+                _accumulatedComboScore = 0;
+                AudioManager.Instance?.ResetPitch();
+            }
+            
+            // Acumular los puntos base de la gema fusionada en este combo
+            _accumulatedComboScore += basePoints;
         }
 
         // 3. PUNTOS DEL MERGE ACTUAL (Se multiplican si hay reacción en cadena)
         int totalPoints = basePoints * _chainReactionMultiplier;
-        _accumulatedComboScore += basePoints;
         
         AddScore(totalPoints);
 
@@ -515,6 +539,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance?.ShowGameOver(CurrentScore);
 
         // Enviar score al servidor (no bloquea la UI)
+        /*
         if (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
         {
             ApiManager.Instance?.SubmitScore(CurrentScore);
@@ -526,6 +551,7 @@ public class GameManager : MonoBehaviour
                 if (success) Debug.Log("[GameManager] Progreso de misión enviado al servidor.");
             });
         }
+        */
         
         // Notificar a Flutter que el juego terminó
         if (FlutterBridgeManager.Instance != null)

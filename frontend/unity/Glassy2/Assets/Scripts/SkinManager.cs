@@ -54,7 +54,7 @@ public class SkinManager : MonoBehaviour
         }
         
         // Actualizar fondo si existe
-        BackgroundManager bgManager = FindFirstObjectByType<BackgroundManager>();
+        BackgroundManager bgManager = FindAnyObjectByType<BackgroundManager>();
         if (bgManager != null)
         {
             bgManager.UpdateBackground();

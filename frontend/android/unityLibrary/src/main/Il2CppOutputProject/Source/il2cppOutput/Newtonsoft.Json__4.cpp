@@ -4221,7 +4221,7 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58145
+// Method Definition Index: 58149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAfterSelfU3Ed__42__ctor_m37EE0A945B206BA021136412A58520429F2735C3 (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4238,7 +4238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAfterSelfU3Ed__42__ctor_m37EE0A945B20
 		return;
 	}
 }
-// Method Definition Index: 58146
+// Method Definition Index: 58150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAfterSelfU3Ed__42_System_IDisposable_Dispose_mA3166E48FF8FF95A4A89203855516B4DD87DE94E (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4246,7 +4246,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAfterSelfU3Ed__42_System_IDisposable_
 		return;
 	}
 }
-// Method Definition Index: 58147
+// Method Definition Index: 58151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAfterSelfU3Ed__42_MoveNext_m421E787B40F71B5514F0A061668B294BD5A1ADB3 (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4332,7 +4332,7 @@ IL_0066:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58148
+// Method Definition Index: 58152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CAfterSelfU3Ed__42_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_m3CFE7D27A8840A67AADD0216C0AEBF7BBDD5C95D (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4341,7 +4341,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58149
+// Method Definition Index: 58153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAfterSelfU3Ed__42_System_Collections_IEnumerator_Reset_m2B49FC3BE35FC842381E23B7D0D5E739CB936B7D (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4351,7 +4351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAfterSelfU3Ed__42_System_Collections_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAfterSelfU3Ed__42_System_Collections_IEnumerator_Reset_m2B49FC3BE35FC842381E23B7D0D5E739CB936B7D_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58150
+// Method Definition Index: 58154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAfterSelfU3Ed__42_System_Collections_IEnumerator_get_Current_m201B8FEB65D8574F292B9C930CAEC899DFF0E93A (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4360,7 +4360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAfterSelfU3Ed__42_System_Co
 		return L_0;
 	}
 }
-// Method Definition Index: 58151
+// Method Definition Index: 58155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAfterSelfU3Ed__42_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_m91C9914BD7B63CB0A47F44253D5FC434126ED375 (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4414,7 +4414,7 @@ IL_003a:
 		return L_7;
 	}
 }
-// Method Definition Index: 58152
+// Method Definition Index: 58156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAfterSelfU3Ed__42_System_Collections_IEnumerable_GetEnumerator_m63B3953BF5834C19150B1394542FB27BA552165D (U3CAfterSelfU3Ed__42_t55F0F0E0DB816BB5CFC9410E322D2C1D5782CBB0* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4432,7 +4432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAfterSelfU3Ed__42_System_Co
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58153
+// Method Definition Index: 58157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeforeSelfU3Ed__43__ctor_m81322737122D9F1FC509AB30D8D45230DB90E809 (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4449,7 +4449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeforeSelfU3Ed__43__ctor_m81322737122
 		return;
 	}
 }
-// Method Definition Index: 58154
+// Method Definition Index: 58158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeforeSelfU3Ed__43_System_IDisposable_Dispose_m552B06E468EAD084633900503CFFC744F7093EC3 (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4457,7 +4457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeforeSelfU3Ed__43_System_IDisposable
 		return;
 	}
 }
-// Method Definition Index: 58155
+// Method Definition Index: 58159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CBeforeSelfU3Ed__43_MoveNext_mC85E7BCDB6DAD26C7B0B1C4C239C78D0B60BE189 (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4532,7 +4532,7 @@ IL_005c:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58156
+// Method Definition Index: 58160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CBeforeSelfU3Ed__43_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_m684F81D3EB4E44753E83A452314DC60604D5D4C1 (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4541,7 +4541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58157
+// Method Definition Index: 58161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeforeSelfU3Ed__43_System_Collections_IEnumerator_Reset_m76EEA49F9E65A6CFE4ADFCD2FEFB373A374D641F (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4551,7 +4551,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CBeforeSelfU3Ed__43_System_Collections
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CBeforeSelfU3Ed__43_System_Collections_IEnumerator_Reset_m76EEA49F9E65A6CFE4ADFCD2FEFB373A374D641F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58158
+// Method Definition Index: 58162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeforeSelfU3Ed__43_System_Collections_IEnumerator_get_Current_m658319A67F53F90D2E223F06504F7D97DF2023BC (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4560,7 +4560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeforeSelfU3Ed__43_System_C
 		return L_0;
 	}
 }
-// Method Definition Index: 58159
+// Method Definition Index: 58163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeforeSelfU3Ed__43_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_mBC551728647CD11394A3A69C4626C0A1C2E90F1A (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4614,7 +4614,7 @@ IL_003a:
 		return L_7;
 	}
 }
-// Method Definition Index: 58160
+// Method Definition Index: 58164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeforeSelfU3Ed__43_System_Collections_IEnumerable_GetEnumerator_mEE0A1F0C2148F6F7F60E46B69B64CC855030FD68 (U3CBeforeSelfU3Ed__43_tD8531E11EEDA3A22E9AB8EBB03A87AF05E5DA832* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4632,7 +4632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBeforeSelfU3Ed__43_System_C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58169
+// Method Definition Index: 58173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnnotationsU3Ed__172__ctor_m411552C8FBEAF9CB68C885BE1EA46436D5A867A0 (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4649,7 +4649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnnotationsU3Ed__172__ctor_m411552C8F
 		return;
 	}
 }
-// Method Definition Index: 58170
+// Method Definition Index: 58174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnnotationsU3Ed__172_System_IDisposable_Dispose_mA00D029222D1A721A507A80D8F777C5F17C8EF3D (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4657,7 +4657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnnotationsU3Ed__172_System_IDisposab
 		return;
 	}
 }
-// Method Definition Index: 58171
+// Method Definition Index: 58175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnnotationsU3Ed__172_MoveNext_mA4F07A21820CACA62289FC1CDCFB7D23B563510B (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4839,7 +4839,7 @@ IL_00f7:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58172
+// Method Definition Index: 58176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnnotationsU3Ed__172_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m82769F938E99304D7DA1C47301F1303517362C1E (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4848,7 +4848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnnotationsU3Ed__172_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58173
+// Method Definition Index: 58177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnnotationsU3Ed__172_System_Collections_IEnumerator_Reset_mEA8F04397C4B64024A6A3042D9BAD77670D93E44 (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4858,7 +4858,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnnotationsU3Ed__172_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnnotationsU3Ed__172_System_Collections_IEnumerator_Reset_mEA8F04397C4B64024A6A3042D9BAD77670D93E44_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58174
+// Method Definition Index: 58178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnnotationsU3Ed__172_System_Collections_IEnumerator_get_Current_m9E063542724AF5BAF6B9F6F001BC09C10C44F2C9 (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4867,7 +4867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnnotationsU3Ed__172_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58175
+// Method Definition Index: 58179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnnotationsU3Ed__172_System_Collections_Generic_IEnumerableU3CSystem_ObjectU3E_GetEnumerator_mAD10E9EC624F186218C51B112641F07EA7304BCE (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4926,7 +4926,7 @@ IL_003a:
 		return L_9;
 	}
 }
-// Method Definition Index: 58176
+// Method Definition Index: 58180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnnotationsU3Ed__172_System_Collections_IEnumerable_GetEnumerator_m8142F1EAF33526255981980B3FCCFD20F7EE251C (U3CAnnotationsU3Ed__172_t12EDAB59AFF714B18E546241ACBEE9D2A72D8BBD* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4944,7 +4944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnnotationsU3Ed__172_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58177
+// Method Definition Index: 58181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JProperty_get_ChildrenTokens_m9F7647B340F91793C217C5217399706143DC258D (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4953,7 +4953,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JProperty_get_ChildrenTokens_m
 		return L_0;
 	}
 }
-// Method Definition Index: 58178
+// Method Definition Index: 58182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JProperty_get_Name_m96280838000C5E193121125A503BA9108DB707CA (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4962,7 +4962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JProperty_get_Name_m96280838000C5E1
 		return L_0;
 	}
 }
-// Method Definition Index: 58179
+// Method Definition Index: 58183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* JProperty_get_Value_m1D20FFEA7909BF0B835848D5FE9FCA2B08EF07F9 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -4973,7 +4973,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_1;
 	}
 }
-// Method Definition Index: 58180
+// Method Definition Index: 58184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_set_Value_m41797576CAF498FF53598E7DD99AF3ABCFE662B7 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5021,7 +5021,7 @@ IL_0028:
 		return;
 	}
 }
-// Method Definition Index: 58181
+// Method Definition Index: 58185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty__ctor_m8C1AF8455FC0BE033433F9B61D610438594C9E67 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5047,7 +5047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty__ctor_m8C1AF8455FC0BE033433F9B
 		return;
 	}
 }
-// Method Definition Index: 58182
+// Method Definition Index: 58186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* JProperty_GetItem_mCB74A2D78796745CC1FED107DE4ACCA4C747C134 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5071,7 +5071,7 @@ IL_0009:
 		return L_2;
 	}
 }
-// Method Definition Index: 58183
+// Method Definition Index: 58187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_SetItem_m00A080A1D31D6FBEC2AA1DC90B900B3C851626F2 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, int32_t ___0_index, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___1_item, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5149,7 +5149,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 58184
+// Method Definition Index: 58188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JProperty_RemoveItem_m1EE45CE5F44F835C64183BE812018B280BC588BD (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_item, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticInit);
@@ -5170,7 +5170,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JProperty_RemoveItem_m1EE45CE5F44F835C64
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JProperty_RemoveItem_m1EE45CE5F44F835C64183BE812018B280BC588BD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58185
+// Method Definition Index: 58189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_RemoveItemAt_mE9CD738F149400D7D43712436841B5C773DC9377 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticInit);
@@ -5191,7 +5191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_RemoveItemAt_mE9CD738F149400D7
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JProperty_RemoveItemAt_mE9CD738F149400D7D43712436841B5C773DC9377_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58186
+// Method Definition Index: 58190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JProperty_IndexOfItem_m437AF150AB70425D939239304FB0E56E19606816 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_item, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5204,7 +5204,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JProperty_IndexOfItem_m437AF150AB7042
 		return L_2;
 	}
 }
-// Method Definition Index: 58187
+// Method Definition Index: 58191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_InsertItem_m1ABD1611D2B8EA24BB68BECB7A8D2DE26B5FA1BA (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, int32_t ___0_index, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___1_item, bool ___2_skipParentCheck, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticInit);
@@ -5262,7 +5262,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 58188
+// Method Definition Index: 58192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JProperty_ContainsItem_mB72C4413EFBB1DF0EDF3377094B52BC806C3573D (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_item, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5273,7 +5273,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JProperty_ContainsItem_mB72C4413EFBB1DF0
 		return (bool)((((RuntimeObject*)(JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3*)L_0) == ((RuntimeObject*)(JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3*)L_1))? 1 : 0);
 	}
 }
-// Method Definition Index: 58189
+// Method Definition Index: 58193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_MergeItem_mA3322A993853E37F85A2ECADB87EDFA68678830F (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, RuntimeObject* ___0_content, JsonMergeSettings_t5584AC16FFBBF04A9BBB7DB3B67DC5FB74D10D5E* ___1_settings, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5334,7 +5334,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 58190
+// Method Definition Index: 58194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_ClearItems_m54AC98D6851F7C4A511AE0BD830F8AB7957C3CE8 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticInit);
@@ -5355,7 +5355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_ClearItems_m54AC98D6851F7C4A51
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JProperty_ClearItems_m54AC98D6851F7C4A511AE0BD830F8AB7957C3CE8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58191
+// Method Definition Index: 58195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JProperty_DeepEquals_mFF73647AD6E0F72941500DB4E95AC0B4E138AAEA (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_node, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5400,7 +5400,7 @@ IL_0025:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58192
+// Method Definition Index: 58196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* JProperty_CloneToken_mA94A20011FC79498F3047F58F9294073EDBD037B (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5416,7 +5416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58193
+// Method Definition Index: 58197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JProperty_get_Type_mBA3493784CA1E0D8672D84088893C004CC971B63 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5424,7 +5424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JProperty_get_Type_mBA3493784CA1E0D86
 		return (int32_t)(4);
 	}
 }
-// Method Definition Index: 58194
+// Method Definition Index: 58198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty__ctor_m989B6CE16B40176E9BB766B7E371ABC890BF573C (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5449,7 +5449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty__ctor_m989B6CE16B40176E9BB766B
 		return;
 	}
 }
-// Method Definition Index: 58195
+// Method Definition Index: 58199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty__ctor_m728ABE798F82094AA525C74F081C2BD93D535097 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, String_t* ___0_name, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_content, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5460,7 +5460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty__ctor_m728ABE798F82094AA525C74
 		return;
 	}
 }
-// Method Definition Index: 58196
+// Method Definition Index: 58200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty__ctor_mA59A3257A0EB4DB85735EF8F576917BF3B5415F1 (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, String_t* ___0_name, RuntimeObject* ___1_content, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5522,7 +5522,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 58197
+// Method Definition Index: 58201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JProperty_WriteTo_mC777E5E99153D4F02B75718D2DE981F58F26D47D (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E* ___1_converters, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5558,7 +5558,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 58198
+// Method Definition Index: 58202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JProperty_GetDeepHashCode_m22E73E9D1CECF4BFC9BE3A921FD25AC5CF3A6C4C (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5602,7 +5602,7 @@ IL_0021:
 		return ((int32_t)(G_B3_1^G_B3_0));
 	}
 }
-// Method Definition Index: 58199
+// Method Definition Index: 58203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* JProperty_Load_m581CD72088DBFAE73C75933532C22C26672223C3 (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5613,7 +5613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C7
 		return L_1;
 	}
 }
-// Method Definition Index: 58200
+// Method Definition Index: 58204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* JProperty_Load_mDB8310C74ABE12E10DE590F257D86C8A27169BDC (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, JsonLoadSettings_t118B1B58B677D27C9D5B7B533674BEE9FC517066* ___1_settings, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5714,7 +5714,7 @@ IL_004d:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58201
+// Method Definition Index: 58205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPropertyList_GetEnumerator_m5824B6E65D20B2C34F8BEC60AA48D258BDCEB763 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5734,7 +5734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPropertyList_GetEnumerator_m5
 		return L_1;
 	}
 }
-// Method Definition Index: 58202
+// Method Definition Index: 58206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPropertyList_System_Collections_IEnumerable_GetEnumerator_mB03E09F8C69248337E04846BF65A8A1CB3290418 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5744,7 +5744,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPropertyList_System_Collectio
 		return L_0;
 	}
 }
-// Method Definition Index: 58203
+// Method Definition Index: 58207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_Add_m1F395B95588471F3B3F94DF80FD2337577EA0AC3 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_item, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5755,7 +5755,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_Add_m1F395B95588471F3B3F94
 		return;
 	}
 }
-// Method Definition Index: 58204
+// Method Definition Index: 58208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_Clear_mEDA5A3B0FAA7414429620FD785E45FE156805EBC (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5765,7 +5765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_Clear_mEDA5A3B0FAA74144296
 		return;
 	}
 }
-// Method Definition Index: 58205
+// Method Definition Index: 58209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JPropertyList_Contains_m100D7BD94B0EE4ECEF9B6D2616BC9DA6D8C62BB9 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_item, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5775,7 +5775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JPropertyList_Contains_m100D7BD94B0EE4EC
 		return (bool)((((RuntimeObject*)(JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3*)L_0) == ((RuntimeObject*)(JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3*)L_1))? 1 : 0);
 	}
 }
-// Method Definition Index: 58206
+// Method Definition Index: 58210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_CopyTo_mFE61BD1725F75537BA1154855512C1A72DD0C51F (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, JTokenU5BU5D_t43FB3829DBCF6CF25B63DF2164C727D3D6AE5C9F* ___0_array, int32_t ___1_arrayIndex, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5800,7 +5800,7 @@ IL_0011:
 		return;
 	}
 }
-// Method Definition Index: 58207
+// Method Definition Index: 58211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JPropertyList_Remove_m50FAC96ED6E3863A2D32D37CAF5796132B152641 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_item, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5823,7 +5823,7 @@ IL_0012:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58208
+// Method Definition Index: 58212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JPropertyList_get_Count_m80C947E8BD74B928ECBBD72CE6EEBD81340A8E48 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5843,7 +5843,7 @@ IL_000a:
 		return 1;
 	}
 }
-// Method Definition Index: 58209
+// Method Definition Index: 58213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JPropertyList_get_IsReadOnly_m80AF8FED0CBCFB196B1C9FEA73F8A83B365E4479 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5851,7 +5851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JPropertyList_get_IsReadOnly_m80AF8FED0C
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58210
+// Method Definition Index: 58214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JPropertyList_IndexOf_m725F7A875C197243EB227397294642997EC1072B (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_item, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5872,7 +5872,7 @@ IL_000b:
 		return 0;
 	}
 }
-// Method Definition Index: 58211
+// Method Definition Index: 58215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_Insert_m278B0EBA585882903CA04F3A51894B2D5667FCE4 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, int32_t ___0_index, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___1_item, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5894,7 +5894,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 58212
+// Method Definition Index: 58216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_RemoveAt_m3391387DA0B1473F81103C7C94F42262D728D56F (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5915,7 +5915,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 58213
+// Method Definition Index: 58217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* JPropertyList_get_Item_m1454E827714F686A14D4DA780725294696E6A450 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5936,7 +5936,7 @@ IL_0005:
 		return L_1;
 	}
 }
-// Method Definition Index: 58214
+// Method Definition Index: 58218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList_set_Item_m17B7C8C4C6C17E09CEC53A5DD89C15B13D8F19F9 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, int32_t ___0_index, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___1_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5958,7 +5958,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 58215
+// Method Definition Index: 58219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList__ctor_mDD66F5F4B93D02BDE3615A3CA00190901F32E616 (JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5975,7 +5975,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPropertyList__ctor_mDD66F5F4B93D02BDE36
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58216
+// Method Definition Index: 58220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetEnumeratorU3Ed__1__ctor_m5B6F8A76287F0CEB16B230609710257010459B7B (U3CGetEnumeratorU3Ed__1_t818D9F03D9BCA344BBC87D27D423E7067AE831D5* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5986,7 +5986,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetEnumeratorU3Ed__1__ctor_m5B6F8A762
 		return;
 	}
 }
-// Method Definition Index: 58217
+// Method Definition Index: 58221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetEnumeratorU3Ed__1_System_IDisposable_Dispose_m9FE9AEE2588E667D69233EE649B1F8839A012662 (U3CGetEnumeratorU3Ed__1_t818D9F03D9BCA344BBC87D27D423E7067AE831D5* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -5994,7 +5994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetEnumeratorU3Ed__1_System_IDisposab
 		return;
 	}
 }
-// Method Definition Index: 58218
+// Method Definition Index: 58222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetEnumeratorU3Ed__1_MoveNext_m68905C0409642C2522F5569A7234AC5523FE4137 (U3CGetEnumeratorU3Ed__1_t818D9F03D9BCA344BBC87D27D423E7067AE831D5* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6050,7 +6050,7 @@ IL_0045:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58219
+// Method Definition Index: 58223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CGetEnumeratorU3Ed__1_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_m8DBD3517400081107444232BDD7C39B3449B3F93 (U3CGetEnumeratorU3Ed__1_t818D9F03D9BCA344BBC87D27D423E7067AE831D5* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6059,7 +6059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58220
+// Method Definition Index: 58224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetEnumeratorU3Ed__1_System_Collections_IEnumerator_Reset_m6EFEBC9D0D877C84C433DC27AA114B8B3D49F64A (U3CGetEnumeratorU3Ed__1_t818D9F03D9BCA344BBC87D27D423E7067AE831D5* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6069,7 +6069,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetEnumeratorU3Ed__1_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetEnumeratorU3Ed__1_System_Collections_IEnumerator_Reset_m6EFEBC9D0D877C84C433DC27AA114B8B3D49F64A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58221
+// Method Definition Index: 58225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetEnumeratorU3Ed__1_System_Collections_IEnumerator_get_Current_m19C57ED9F0AA85C510DF342A2CBAFE5AA2AFFDE3 (U3CGetEnumeratorU3Ed__1_t818D9F03D9BCA344BBC87D27D423E7067AE831D5* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6094,7 +6094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetEnumeratorU3Ed__1_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58222
+// Method Definition Index: 58226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m2F2F6199A81B5C5C048F78EADF880B9C5A3CAAFC (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_value, int32_t ___1_type, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6116,7 +6116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m2F2F6199A81B5C5C048F78EADF
 		return;
 	}
 }
-// Method Definition Index: 58223
+// Method Definition Index: 58227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m3F20532C2284C822B4BB9A8DDDED8B344BAA0AAB (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6141,7 +6141,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m3F20532C2284C822B4BB9A8DDD
 		return;
 	}
 }
-// Method Definition Index: 58224
+// Method Definition Index: 58228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m0B6FF0141CAC10B1580852A95F36FB9816DC6CF1 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, int64_t ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6153,7 +6153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m0B6FF0141CAC10B1580852A95F
 		return;
 	}
 }
-// Method Definition Index: 58225
+// Method Definition Index: 58229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mD73418367A136D1FB6441EE458903CC695D994A3 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6171,7 +6171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mD73418367A136D1FB6441EE458
 		return;
 	}
 }
-// Method Definition Index: 58226
+// Method Definition Index: 58230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mA2B5FEB7ADF000627CC68C8962C17493454509AE (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, Il2CppChar ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6183,7 +6183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mA2B5FEB7ADF000627CC68C8962
 		return;
 	}
 }
-// Method Definition Index: 58227
+// Method Definition Index: 58231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m0AA664FCFDF124ECA8206276FCE95BD16F090072 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, uint64_t ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6195,7 +6195,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m0AA664FCFDF124ECA8206276FC
 		return;
 	}
 }
-// Method Definition Index: 58228
+// Method Definition Index: 58232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m0CF1D92EC097B9EC37E8C827B8CA0AE9F8BA1680 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, double ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6207,7 +6207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m0CF1D92EC097B9EC37E8C827B8
 		return;
 	}
 }
-// Method Definition Index: 58229
+// Method Definition Index: 58233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m9D6ABB72149F81C33CF979C920B672BCE5904511 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6219,7 +6219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m9D6ABB72149F81C33CF979C920
 		return;
 	}
 }
-// Method Definition Index: 58230
+// Method Definition Index: 58234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m174F00E1BF26DB7AA6AAC30EA0A93CCFF4DDC358 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6237,7 +6237,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m174F00E1BF26DB7AA6AAC30EA0
 		return;
 	}
 }
-// Method Definition Index: 58231
+// Method Definition Index: 58235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mF8319F53B112CD576B2307EDB6BDE2FF22AFE885 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6255,7 +6255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mF8319F53B112CD576B2307EDB6
 		return;
 	}
 }
-// Method Definition Index: 58232
+// Method Definition Index: 58236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m16067B0652E836A3F38E7A505B7F76BFC5A154DD (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6267,7 +6267,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m16067B0652E836A3F38E7A505B
 		return;
 	}
 }
-// Method Definition Index: 58233
+// Method Definition Index: 58237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mA57CD44289FCE482DBA6170A846AFE24725D39CB (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6277,7 +6277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mA57CD44289FCE482DBA6170A84
 		return;
 	}
 }
-// Method Definition Index: 58234
+// Method Definition Index: 58238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mB515ED9CF2B2ABB2BD0DE8C3D2C7BE9EE8183CAB (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, Guid_t ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6289,7 +6289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mB515ED9CF2B2ABB2BD0DE8C3D2
 		return;
 	}
 }
-// Method Definition Index: 58235
+// Method Definition Index: 58239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_mAA7F37F420FE3E8EE8AD8A01F724906FC9EB24B9 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6342,7 +6342,7 @@ IL_0011:
 		return;
 	}
 }
-// Method Definition Index: 58236
+// Method Definition Index: 58240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m5AEDAAE5959A4D16E28014107CF0D49F7D12B92B (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6360,7 +6360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m5AEDAAE5959A4D16E28014107C
 		return;
 	}
 }
-// Method Definition Index: 58237
+// Method Definition Index: 58241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m6B8489761C009E7F28C5763F88146DB5CE345E51 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6377,7 +6377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue__ctor_m6B8489761C009E7F28C5763F88
 		return;
 	}
 }
-// Method Definition Index: 58238
+// Method Definition Index: 58242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_DeepEquals_mCC778967BEA5D41BFA0D67F601C6FEB754DC6698 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_node, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6421,7 +6421,7 @@ IL_0012:
 		return L_4;
 	}
 }
-// Method Definition Index: 58239
+// Method Definition Index: 58243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_get_HasValues_m16397FF6A2E008E4A19F42FC348BFFFFD303D4D2 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -6429,7 +6429,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_get_HasValues_m16397FF6A2E008E4A1
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58240
+// Method Definition Index: 58244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_Compare_mEEAB5FC08A482CD63CF831BD1090561094D3494C (int32_t ___0_valueType, RuntimeObject* ___1_objA, RuntimeObject* ___2_objB, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7007,7 +7007,7 @@ IL_026c:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_108, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JValue_Compare_mEEAB5FC08A482CD63CF831BD1090561094D3494C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58241
+// Method Definition Index: 58245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_CompareFloat_m6AACE292E958241C1802DCEBBD3DCF6DF52522A0 (RuntimeObject* ___0_objA, RuntimeObject* ___1_objB, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7057,7 +7057,7 @@ IL_0023:
 		return L_10;
 	}
 }
-// Method Definition Index: 58242
+// Method Definition Index: 58246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* JValue_CloneToken_m415084FF8472BA71E0CFC86836855B1C3B6DB611 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7073,7 +7073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58243
+// Method Definition Index: 58247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094375* JValue_CreateComment_m6C65B659D0F245FB5613F776CAA1006A9AF67828 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7090,7 +7090,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094
 		return L_1;
 	}
 }
-// Method Definition Index: 58244
+// Method Definition Index: 58248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094375* JValue_CreateString_m2CAA0BB59DBFB45AB75D295F8B2441F695DDFB18 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7107,7 +7107,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094
 		return L_1;
 	}
 }
-// Method Definition Index: 58245
+// Method Definition Index: 58249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094375* JValue_CreateNull_m53D9AAAFB0E4707B8538937B19F18759DF10E144 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7123,7 +7123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094
 		return L_0;
 	}
 }
-// Method Definition Index: 58246
+// Method Definition Index: 58250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094375* JValue_CreateUndefined_m8182EAF420674522680EBEC1878195BF32F05CFD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7139,7 +7139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094
 		return L_0;
 	}
 }
-// Method Definition Index: 58247
+// Method Definition Index: 58251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_GetValueType_mAABD4B40D8D7C713FAC8F57FFAC3BBE511D43EA0 (Nullable_1_t98A9DFD38F91A6E94A91C0EA86F332B55B6499CB ___0_current, RuntimeObject* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7399,7 +7399,7 @@ IL_00d3:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_29, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JValue_GetValueType_mAABD4B40D8D7C713FAC8F57FFAC3BBE511D43EA0_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58248
+// Method Definition Index: 58252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_GetStringValueType_m2120C09E27DD55F09EC04FB162E3EF1AFBB92288 (Nullable_1_t98A9DFD38F91A6E94A91C0EA86F332B55B6499CB ___0_current, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -7454,7 +7454,7 @@ IL_0028:
 		return (int32_t)(8);
 	}
 }
-// Method Definition Index: 58249
+// Method Definition Index: 58253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_get_Type_m04877676E0AF75090174BFF9636B919A3DE2D3F0 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -7463,7 +7463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_get_Type_m04877676E0AF75090174
 		return L_0;
 	}
 }
-// Method Definition Index: 58250
+// Method Definition Index: 58254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JValue_get_Value_m7E0B68F90B51FD1ECC4C659765F6F949C0B0F35C (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -7472,7 +7472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JValue_get_Value_m7E0B68F90B51
 		return L_0;
 	}
 }
-// Method Definition Index: 58251
+// Method Definition Index: 58255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue_set_Value_m73B024621BED8500E9608D4921A5744C2E8BDEF3 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -7557,7 +7557,7 @@ IL_003d:
 		return;
 	}
 }
-// Method Definition Index: 58252
+// Method Definition Index: 58256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JValue_WriteTo_mF412D9869631021CCDC6EE397C7FC1A60CC35033 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, JsonConverterU5BU5D_tF69203E66D4FCB82A6F64A24EF7785E26E9E957E* ___1_converters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8114,7 +8114,7 @@ IL_028f:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_84, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JValue_WriteTo_mF412D9869631021CCDC6EE397C7FC1A60CC35033_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58253
+// Method Definition Index: 58257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_GetDeepHashCode_m52620331DF1615C845D867B36CF86A64713D6ED0 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8153,7 +8153,7 @@ IL_0016:
 		return ((int32_t)(L_4^L_5));
 	}
 }
-// Method Definition Index: 58254
+// Method Definition Index: 58258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_ValuesEquals_mA214E50023BC11A9E2103FD19B3A06A119F8BA2B (JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___0_v1, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___1_v2, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8202,7 +8202,7 @@ IL_002f:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58255
+// Method Definition Index: 58259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_Equals_m9D93133F3F7F7BF4072ED20B901B8A4DAF94A453 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___0_other, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8225,7 +8225,7 @@ IL_0005:
 		return L_2;
 	}
 }
-// Method Definition Index: 58256
+// Method Definition Index: 58260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_Equals_m7D39E26AD4F530AF12EAFCC680F61DD99030781F (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8272,7 +8272,7 @@ IL_0017:
 		return L_6;
 	}
 }
-// Method Definition Index: 58257
+// Method Definition Index: 58261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_GetHashCode_m6313D73045A9C91C4984302DF7870205C98B3D1E (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8296,7 +8296,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 58258
+// Method Definition Index: 58262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JValue_ToString_m2466E655FFE75B44C96B68B9F7B4E631CF0BCA29 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8321,7 +8321,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 58259
+// Method Definition Index: 58263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JValue_ToString_m5471300EF23591F38B96885188624ED03E7A56D2 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, String_t* ___0_format, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticInit);
@@ -8336,7 +8336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JValue_ToString_m5471300EF23591F38B
 		return L_2;
 	}
 }
-// Method Definition Index: 58260
+// Method Definition Index: 58264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JValue_ToString_mFC9CA3AA149DC9EEAAB0440DDCEE7A9A65F032C1 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_formatProvider, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8347,7 +8347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JValue_ToString_mFC9CA3AA149DC9EEAA
 		return L_1;
 	}
 }
-// Method Definition Index: 58261
+// Method Definition Index: 58265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JValue_ToString_mDBD67FDCBA088D69F64A6CF4BF9800903A1ABADF (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, String_t* ___0_format, RuntimeObject* ___1_formatProvider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8399,7 +8399,7 @@ IL_0026:
 		return L_9;
 	}
 }
-// Method Definition Index: 58262
+// Method Definition Index: 58266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_System_IComparable_CompareTo_m6A03F746EFFBFFAF620A49D3EE3DDB84254B1EB6 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8456,7 +8456,7 @@ IL_001b:
 		return L_8;
 	}
 }
-// Method Definition Index: 58263
+// Method Definition Index: 58267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_CompareTo_mF2B682185D38CDA81D191D4EA5C69B4E56708509 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___0_obj, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8483,7 +8483,7 @@ IL_0005:
 		return L_5;
 	}
 }
-// Method Definition Index: 58264
+// Method Definition Index: 58268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_System_IConvertible_GetTypeCode_m7A6B61857BAE024F30DCD9F24EAB8DC134C69BAB (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8528,7 +8528,7 @@ IL_001b:
 		return L_4;
 	}
 }
-// Method Definition Index: 58265
+// Method Definition Index: 58269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_System_IConvertible_ToBoolean_m013182504A7AF6B64212092614EE91FE42FA075B (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8546,7 +8546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JValue_System_IConvertible_ToBoolean_m01
 		return L_0;
 	}
 }
-// Method Definition Index: 58266
+// Method Definition Index: 58270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar JValue_System_IConvertible_ToChar_m2299D2462EE9C600605CAE4F1FC160D1E2815D2A (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8564,7 +8564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar JValue_System_IConvertible_ToChar_
 		return L_0;
 	}
 }
-// Method Definition Index: 58267
+// Method Definition Index: 58271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t JValue_System_IConvertible_ToSByte_mB653A11EF16D15B518C9CE4BEE362344E017F868 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8582,7 +8582,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t JValue_System_IConvertible_ToSByte_mB6
 		return L_0;
 	}
 }
-// Method Definition Index: 58268
+// Method Definition Index: 58272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t JValue_System_IConvertible_ToByte_mBD481AE7B3922275570D7399863649B0F8E30E45 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8600,7 +8600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t JValue_System_IConvertible_ToByte_mBD
 		return L_0;
 	}
 }
-// Method Definition Index: 58269
+// Method Definition Index: 58273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t JValue_System_IConvertible_ToInt16_m342AA1180C6261EDB371BEF2FE572245A6EEBB39 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8618,7 +8618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t JValue_System_IConvertible_ToInt16_m3
 		return L_0;
 	}
 }
-// Method Definition Index: 58270
+// Method Definition Index: 58274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t JValue_System_IConvertible_ToUInt16_m617AEA33948E9A9CEAB10486733F14DCCCB6C8CA (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8636,7 +8636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t JValue_System_IConvertible_ToUInt16_
 		return L_0;
 	}
 }
-// Method Definition Index: 58271
+// Method Definition Index: 58275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_System_IConvertible_ToInt32_m16735D81C4F3F7FAD8742822EBD688AB963645A1 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8654,7 +8654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JValue_System_IConvertible_ToInt32_m1
 		return L_0;
 	}
 }
-// Method Definition Index: 58272
+// Method Definition Index: 58276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t JValue_System_IConvertible_ToUInt32_m51A4013CC278349F58E22F37C19D2FF9F6CD64AB (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8672,7 +8672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t JValue_System_IConvertible_ToUInt32_
 		return L_0;
 	}
 }
-// Method Definition Index: 58273
+// Method Definition Index: 58277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t JValue_System_IConvertible_ToInt64_m2015004A64DFCA96ADF151296C82EFA2AE993BF5 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8690,7 +8690,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t JValue_System_IConvertible_ToInt64_m2
 		return L_0;
 	}
 }
-// Method Definition Index: 58274
+// Method Definition Index: 58278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t JValue_System_IConvertible_ToUInt64_m771CCACEC2CE2F776AABA7B63F7F4D44FA113A91 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8708,7 +8708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t JValue_System_IConvertible_ToUInt64_
 		return L_0;
 	}
 }
-// Method Definition Index: 58275
+// Method Definition Index: 58279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float JValue_System_IConvertible_ToSingle_m5625F9F98CBA4493904457BA6D57B673BDFD52AD (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8727,7 +8727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float JValue_System_IConvertible_ToSingle_m56
 		return L_1;
 	}
 }
-// Method Definition Index: 58276
+// Method Definition Index: 58280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double JValue_System_IConvertible_ToDouble_mFDF1062C8FD49160FEEEAAC6B49D2A3E422B019F (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8746,7 +8746,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double JValue_System_IConvertible_ToDouble_mF
 		return L_1;
 	}
 }
-// Method Definition Index: 58277
+// Method Definition Index: 58281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F JValue_System_IConvertible_ToDecimal_mD60AB15D746C975261E182F9F93A07628F5D7CF8 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8764,7 +8764,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Decimal_tDA6C877282B2D789CF97C0949661CC11D643
 		return L_0;
 	}
 }
-// Method Definition Index: 58278
+// Method Definition Index: 58282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D JValue_System_IConvertible_ToDateTime_m1FD44BF16F9A324AED43AEFD6AD37C29DBAE5BE2 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8782,7 +8782,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		return L_0;
 	}
 }
-// Method Definition Index: 58279
+// Method Definition Index: 58283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JValue_System_IConvertible_ToType_mA94787EF3D65999A0E6C71441846A0C462AE2523 (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, Type_t* ___0_conversionType, RuntimeObject* ___1_provider, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8801,7 +8801,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JValue_System_IConvertible_ToT
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58280
+// Method Definition Index: 58284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArrayIndexFilter_get_Index_m3F3664AA62500B34A916C9089F62DF1BE852C247 (ArrayIndexFilter_tA536D07FCC50742F7AF6AD7217C5DA6051DC66D7* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8810,7 +8810,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1
 		return L_0;
 	}
 }
-// Method Definition Index: 58281
+// Method Definition Index: 58285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayIndexFilter_set_Index_m46B41968492622477067FEDD88C8516890314844 (ArrayIndexFilter_tA536D07FCC50742F7AF6AD7217C5DA6051DC66D7* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8820,7 +8820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayIndexFilter_set_Index_m46B419684926
 		return;
 	}
 }
-// Method Definition Index: 58282
+// Method Definition Index: 58286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ArrayIndexFilter_ExecuteFilter_mAB6E2532EDE5F29ADBC678FBFB733DD2903D9367 (ArrayIndexFilter_tA536D07FCC50742F7AF6AD7217C5DA6051DC66D7* __this, RuntimeObject* ___0_current, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8849,7 +8849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ArrayIndexFilter_ExecuteFilter
 		return L_4;
 	}
 }
-// Method Definition Index: 58283
+// Method Definition Index: 58287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayIndexFilter__ctor_m10910C433209D36872F1C9664A792BB2B415FD11 (ArrayIndexFilter_tA536D07FCC50742F7AF6AD7217C5DA6051DC66D7* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8866,7 +8866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayIndexFilter__ctor_m10910C433209D368
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58284
+// Method Definition Index: 58288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mBD1BBA88F15EB8AF4275B330A584127A94955D71 (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -8883,7 +8883,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mBD1BBA88F
 		return;
 	}
 }
-// Method Definition Index: 58285
+// Method Definition Index: 58289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_IDisposable_Dispose_m840C1A617890DAFBDEBE1F252A520E66162951BE (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9003,7 +9003,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 58286
+// Method Definition Index: 58290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CExecuteFilterU3Ed__4_MoveNext_mF8C1E7EDB0FF3BCD2DFFAB1740DED46FA699790A (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9257,7 +9257,7 @@ IL_0190:
 		return L_35;
 	}
 }
-// Method Definition Index: 58287
+// Method Definition Index: 58291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally1_m416C393EC6206DAA1C87820E08674096545E504A (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9286,7 +9286,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58288
+// Method Definition Index: 58292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally2_m4F82760A89E908B30DFCD4F6D28FADC31172DB02 (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9315,7 +9315,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 58289
+// Method Definition Index: 58293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_mD997E6739A83AFE3D5768E1122910306347ECABD (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9324,7 +9324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58290
+// Method Definition Index: 58294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_mC15DA2ED8D566B2CD532FA34937DA497F65C5B3E (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9334,7 +9334,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_mC15DA2ED8D566B2CD532FA34937DA497F65C5B3E_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58291
+// Method Definition Index: 58295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_get_Current_m57FA8037FB70411C406B4600EF9F56A07CD64ECE (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9343,7 +9343,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58292
+// Method Definition Index: 58296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_m6D9B7FE31258D8481ED88FD2A0FB0636FBF0D2A1 (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9406,7 +9406,7 @@ IL_003a:
 		return L_11;
 	}
 }
-// Method Definition Index: 58293
+// Method Definition Index: 58297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerable_GetEnumerator_m7860738B9570068A04864A294E7069ED5BC00B3A (U3CExecuteFilterU3Ed__4_tAD08BAB101472CDF52424B579CC13291EA994130* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9424,7 +9424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58294
+// Method Definition Index: 58298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ArrayMultipleIndexFilter_get_Indexes_mB40956A7E76D0746114DD94DA7CAFE4AA4C46AB1 (ArrayMultipleIndexFilter_t1DED3311803656A2FE587CEEB07F1E0359C8DC78* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9433,7 +9433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t05915E9237850A58106982B7FE4BC5DA4E872
 		return L_0;
 	}
 }
-// Method Definition Index: 58295
+// Method Definition Index: 58299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayMultipleIndexFilter_set_Indexes_m93BCD653E31FA799DD8ED7FB6F48CF14478A93AB (ArrayMultipleIndexFilter_t1DED3311803656A2FE587CEEB07F1E0359C8DC78* __this, List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9444,7 +9444,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayMultipleIndexFilter_set_Indexes_m93
 		return;
 	}
 }
-// Method Definition Index: 58296
+// Method Definition Index: 58300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ArrayMultipleIndexFilter_ExecuteFilter_m4A9DF5987E3AF411A3405834F89E753AFEBDB713 (ArrayMultipleIndexFilter_t1DED3311803656A2FE587CEEB07F1E0359C8DC78* __this, RuntimeObject* ___0_current, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9473,7 +9473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ArrayMultipleIndexFilter_Execu
 		return L_4;
 	}
 }
-// Method Definition Index: 58297
+// Method Definition Index: 58301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayMultipleIndexFilter__ctor_m68AE4516C859AD1D41720136DA23E8548FF7D369 (ArrayMultipleIndexFilter_t1DED3311803656A2FE587CEEB07F1E0359C8DC78* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9490,7 +9490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArrayMultipleIndexFilter__ctor_m68AE4516
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58298
+// Method Definition Index: 58302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mB5AE9BD842F0EC104D13E35A208CA8D150D13268 (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9507,7 +9507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mB5AE9BD84
 		return;
 	}
 }
-// Method Definition Index: 58299
+// Method Definition Index: 58303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_IDisposable_Dispose_mEE7910ED1902A3A3AB5F5E42CD270A988762DF5A (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9611,7 +9611,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 58300
+// Method Definition Index: 58304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CExecuteFilterU3Ed__4_MoveNext_m7C802E41883905BB57913C559985D3BDC02DF77E (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9775,7 +9775,7 @@ IL_00f8:
 		return L_23;
 	}
 }
-// Method Definition Index: 58301
+// Method Definition Index: 58305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally1_mBB6989A89C8AA9B154A6E966668CD2576EFAF37D (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9804,7 +9804,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58302
+// Method Definition Index: 58306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally2_mCF61D1DBE0188B7835829264E9BC2C7999381A8F (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9815,7 +9815,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally
 		return;
 	}
 }
-// Method Definition Index: 58303
+// Method Definition Index: 58307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_m093E89D40EDBBCED73F0AF40804FDAFD632604A8 (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9824,7 +9824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58304
+// Method Definition Index: 58308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_mD2F63753CAF80612DBB415952F8A80DF765E2222 (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9834,7 +9834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_mD2F63753CAF80612DBB415952F8A80DF765E2222_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58305
+// Method Definition Index: 58309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_get_Current_mA25313C6171ED589FE15DC5AD612951A0E9A37C0 (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9843,7 +9843,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58306
+// Method Definition Index: 58310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_m9196CD40C701A407F511E294309235DDE34AA795 (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9906,7 +9906,7 @@ IL_003a:
 		return L_11;
 	}
 }
-// Method Definition Index: 58307
+// Method Definition Index: 58311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerable_GetEnumerator_m9CC12F825CE7ADBA6A251D7B7A337D6E8B194766 (U3CExecuteFilterU3Ed__4_tDE8956951B2ED7AF38B584B76890C6B91348D590* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9924,7 +9924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58308
+// Method Definition Index: 58312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArraySliceFilter_get_Start_mED87A91EE4B2B3B6E4F8A8F09B1A2F7ACDC21B45 (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9933,7 +9933,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1
 		return L_0;
 	}
 }
-// Method Definition Index: 58309
+// Method Definition Index: 58313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Start_m9F380783F8C7788FBD288262E5D04E56B9CCFF2C (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9943,7 +9943,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Start_m9F380783F8C7
 		return;
 	}
 }
-// Method Definition Index: 58310
+// Method Definition Index: 58314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArraySliceFilter_get_End_mA2AD5CA50463617A4D8805EAD2C097DEF0B52457 (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9952,7 +9952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1
 		return L_0;
 	}
 }
-// Method Definition Index: 58311
+// Method Definition Index: 58315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter_set_End_m63FDA2E6D5122CE5DD5BAC742ACC9ECFCD1218ED (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9962,7 +9962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter_set_End_m63FDA2E6D5122C
 		return;
 	}
 }
-// Method Definition Index: 58312
+// Method Definition Index: 58316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArraySliceFilter_get_Step_mCC22105147A458D7D4CA185860C0022E2E06141B (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9971,7 +9971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1
 		return L_0;
 	}
 }
-// Method Definition Index: 58313
+// Method Definition Index: 58317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Step_m853F850E5F0D84880D3D359BED47C6236144CD42 (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -9981,7 +9981,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Step_m853F850E5F0D8
 		return;
 	}
 }
-// Method Definition Index: 58314
+// Method Definition Index: 58318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ArraySliceFilter_ExecuteFilter_mAD24119E84A2A5355F0976C0F3087D6A19EE9F25 (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, RuntimeObject* ___0_current, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10010,7 +10010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ArraySliceFilter_ExecuteFilter
 		return L_4;
 	}
 }
-// Method Definition Index: 58315
+// Method Definition Index: 58319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ArraySliceFilter_IsValid_m52A1FCB40C6B1CEECDE581538C8317D734C74E4F (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, int32_t ___0_index, int32_t ___1_stopIndex, bool ___2_positiveStep, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10034,7 +10034,7 @@ IL_0008:
 		return (bool)((((int32_t)L_3) > ((int32_t)L_4))? 1 : 0);
 	}
 }
-// Method Definition Index: 58316
+// Method Definition Index: 58320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter__ctor_m642EC9DC6FE0A23FEAD208F2E8E1AAF26AC35647 (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10051,7 +10051,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArraySliceFilter__ctor_m642EC9DC6FE0A23F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58317
+// Method Definition Index: 58321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__12__ctor_mBC58F20FB2AE3EC30246626C976389C99EF2ECED (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10068,7 +10068,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__12__ctor_mBC58F20F
 		return;
 	}
 }
-// Method Definition Index: 58318
+// Method Definition Index: 58322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__12_System_IDisposable_Dispose_m369255C6DB5897BAC0575BC611C53874E2657F6A (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10122,7 +10122,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58319
+// Method Definition Index: 58323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CExecuteFilterU3Ed__12_MoveNext_mEE7D685C1722F9642F0B14EA53684A73470B621A (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10816,7 +10816,7 @@ IL_03a9:
 		return L_111;
 	}
 }
-// Method Definition Index: 58320
+// Method Definition Index: 58324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__12_U3CU3Em__Finally1_m4CB69B4B53760F70914CCF342D6FA8C1BD70ABE7 (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10845,7 +10845,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58321
+// Method Definition Index: 58325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CExecuteFilterU3Ed__12_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_mA47F8588E8957F54A04FF8204524256DF977A799 (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10854,7 +10854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58322
+// Method Definition Index: 58326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__12_System_Collections_IEnumerator_Reset_m003ED45EF35DDF94A6C35807AA2AD4F07751B875 (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10864,7 +10864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__12_System_Collecti
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CExecuteFilterU3Ed__12_System_Collections_IEnumerator_Reset_m003ED45EF35DDF94A6C35807AA2AD4F07751B875_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58323
+// Method Definition Index: 58327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__12_System_Collections_IEnumerator_get_Current_mCE689EC8ED957AF0DB4A512248C4CD6243BFB5F3 (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10873,7 +10873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__12_Syste
 		return L_0;
 	}
 }
-// Method Definition Index: 58324
+// Method Definition Index: 58328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__12_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_mB76B3FAD148729B9E367513A526B544E83AD6979 (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10936,7 +10936,7 @@ IL_003a:
 		return L_11;
 	}
 }
-// Method Definition Index: 58325
+// Method Definition Index: 58329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__12_System_Collections_IEnumerable_GetEnumerator_m327FDCBCC9E663AB440B025F2B1529B9C500A909 (U3CExecuteFilterU3Ed__12_t7977FAD26C4CFD69CF8D1D8C313447AA892BDB4C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10954,7 +10954,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__12_Syste
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58326
+// Method Definition Index: 58330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FieldFilter_get_Name_mCEF6D8A9F080712D4F90E037141624D2C1BDA19A (FieldFilter_t871E453BB206AF3F30B45F3737C35F52E359F5E8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10963,7 +10963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FieldFilter_get_Name_mCEF6D8A9F0807
 		return L_0;
 	}
 }
-// Method Definition Index: 58327
+// Method Definition Index: 58331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldFilter_set_Name_m718716D6512CA798FBB6E608C104E95EDB0BD5F5 (FieldFilter_t871E453BB206AF3F30B45F3737C35F52E359F5E8* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -10974,7 +10974,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldFilter_set_Name_m718716D6512CA798FB
 		return;
 	}
 }
-// Method Definition Index: 58328
+// Method Definition Index: 58332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FieldFilter_ExecuteFilter_m96B3652940DFB9AA2C8FD64961E6B1DA07BDEF4D (FieldFilter_t871E453BB206AF3F30B45F3737C35F52E359F5E8* __this, RuntimeObject* ___0_current, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11003,7 +11003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FieldFilter_ExecuteFilter_m96B
 		return L_4;
 	}
 }
-// Method Definition Index: 58329
+// Method Definition Index: 58333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldFilter__ctor_mE5BC245B72B8BF4E311457A98512B494B4602D56 (FieldFilter_t871E453BB206AF3F30B45F3737C35F52E359F5E8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11020,7 +11020,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldFilter__ctor_mE5BC245B72B8BF4E31145
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58330
+// Method Definition Index: 58334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mAE84C6AE51B2AAD4B13139DC84213C6EDB8B022C (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11037,7 +11037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mAE84C6AE5
 		return;
 	}
 }
-// Method Definition Index: 58331
+// Method Definition Index: 58335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_IDisposable_Dispose_mB5C6A32B7CEBC68ABC398C9E2855416BD31EA014 (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11157,7 +11157,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 58332
+// Method Definition Index: 58336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CExecuteFilterU3Ed__4_MoveNext_m9D1263B35558C843DC6A6BD8B47BD1EEA3868902 (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11454,7 +11454,7 @@ IL_01c3:
 		return L_41;
 	}
 }
-// Method Definition Index: 58333
+// Method Definition Index: 58337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally1_mD0049721CCAF0AFB6E491D667B0031452F17A5C5 (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11483,7 +11483,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58334
+// Method Definition Index: 58338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally2_m830249694B338272B205B167DD3D0E79781F12F7 (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11512,7 +11512,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 58335
+// Method Definition Index: 58339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_m19122F92F2E769D3D909B98560DBC23A930A596A (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11521,7 +11521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58336
+// Method Definition Index: 58340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m70F03CE2629FB48912A3813D95E654198CB0C2EC (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11531,7 +11531,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m70F03CE2629FB48912A3813D95E654198CB0C2EC_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58337
+// Method Definition Index: 58341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_get_Current_mB2B80767F0E53C12637858D8101C42218F4C175E (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11540,7 +11540,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58338
+// Method Definition Index: 58342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_m3C360C76CF51137A508B6F80FB5CC46523FAF491 (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11603,7 +11603,7 @@ IL_003a:
 		return L_11;
 	}
 }
-// Method Definition Index: 58339
+// Method Definition Index: 58343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerable_GetEnumerator_m5FC72DB06D154EA9D9DD59A8B5DA0397BD7805BB (U3CExecuteFilterU3Ed__4_t3D4E07A7E96BD8E4C8A6FCB467FA4F8CCB246E60* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11621,7 +11621,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58340
+// Method Definition Index: 58344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* FieldMultipleFilter_get_Names_mA07530BAC227055F3BB7981B5CED65CA104A4256 (FieldMultipleFilter_tBC3EB1DF00466CD1C0AE3C300F20E5690E185C08* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11630,7 +11630,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD
 		return L_0;
 	}
 }
-// Method Definition Index: 58341
+// Method Definition Index: 58345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldMultipleFilter_set_Names_mD00D7332F2BB454DCF05D8112BF5B3027BD892BF (FieldMultipleFilter_tBC3EB1DF00466CD1C0AE3C300F20E5690E185C08* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11641,7 +11641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldMultipleFilter_set_Names_mD00D7332F
 		return;
 	}
 }
-// Method Definition Index: 58342
+// Method Definition Index: 58346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FieldMultipleFilter_ExecuteFilter_mDE99F2B650C2B024722AA489BA291F59A7C2C619 (FieldMultipleFilter_tBC3EB1DF00466CD1C0AE3C300F20E5690E185C08* __this, RuntimeObject* ___0_current, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11670,7 +11670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FieldMultipleFilter_ExecuteFil
 		return L_4;
 	}
 }
-// Method Definition Index: 58343
+// Method Definition Index: 58347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldMultipleFilter__ctor_m083DEA736BFCB1F9D3CBB5F9FE9B4BDD2194E54E (FieldMultipleFilter_tBC3EB1DF00466CD1C0AE3C300F20E5690E185C08* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11687,7 +11687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldMultipleFilter__ctor_m083DEA736BFCB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58344
+// Method Definition Index: 58348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m84666D2594306D5E829449247FE6F7459A7736D4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11705,7 +11705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m84666D2594306D5E82944924
 		return;
 	}
 }
-// Method Definition Index: 58345
+// Method Definition Index: 58349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m365A5B2543687AE5277DA252DEF85A28A163B0DA (U3CU3Ec_t15C041878E9F5BA63BDF182FF6288DC62B258B83* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11714,7 +11714,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m365A5B2543687AE5277DA252D
 		return;
 	}
 }
-// Method Definition Index: 58346
+// Method Definition Index: 58350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CExecuteFilterU3Eb__4_0_mCD97CDFAA99174A0D82B6FA4234AACFF614FB45B (U3CU3Ec_t15C041878E9F5BA63BDF182FF6288DC62B258B83* __this, String_t* ___0_n, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11739,7 +11739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CExecuteFilterU3Eb__4_0_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58347
+// Method Definition Index: 58351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_m4CD2D0064814A54D0104C1F2182135952AF09646 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11756,7 +11756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_m4CD2D0064
 		return;
 	}
 }
-// Method Definition Index: 58348
+// Method Definition Index: 58352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_IDisposable_Dispose_m01FABC34096160A1644CDD81E552A1AE396973A1 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -11860,7 +11860,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 58349
+// Method Definition Index: 58353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CExecuteFilterU3Ed__4_MoveNext_mCE2CE3A99DFDF3BD508A098FCE00D31540B3E506 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12154,7 +12154,7 @@ IL_01b9:
 		return L_46;
 	}
 }
-// Method Definition Index: 58350
+// Method Definition Index: 58354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally1_m739FF40E28423B08D30023A521D15876B7CB1353 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12183,7 +12183,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58351
+// Method Definition Index: 58355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally2_m62F25B52D3C2D963AF4660906895C1B52D5C1609 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -12194,7 +12194,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally
 		return;
 	}
 }
-// Method Definition Index: 58352
+// Method Definition Index: 58356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_mEA1371289C8D8D0784B7BDFC0AE6F92FC06AA483 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -12203,7 +12203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58353
+// Method Definition Index: 58357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m59C709B9E5B2DC6C47B49DBEB95B60DA49EB73A1 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -12213,7 +12213,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m59C709B9E5B2DC6C47B49DBEB95B60DA49EB73A1_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58354
+// Method Definition Index: 58358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_get_Current_m5239B799B8E48A1FB081DCDB8908CA09F92DB53E (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -12222,7 +12222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58355
+// Method Definition Index: 58359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_m56B73B08080EC1FABB1FA5A82C092E0262F1D764 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12285,7 +12285,7 @@ IL_003a:
 		return L_11;
 	}
 }
-// Method Definition Index: 58356
+// Method Definition Index: 58360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerable_GetEnumerator_m305092641CA6D8DF656D8E0F379397E844ED9EC9 (U3CExecuteFilterU3Ed__4_t43392D7E08C43937711E8F95FE9AA29A497AEFD2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -12303,7 +12303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58357
+// Method Definition Index: 58361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* JPath_get_Filters_m5A9E387AD7FFD4E9E4662842C78D081EAC4890B9 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -12312,7 +12312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B4239ECC80B1A
 		return L_0;
 	}
 }
-// Method Definition Index: 58358
+// Method Definition Index: 58362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPath_set_Filters_m2BE82D08DC545C4410AA574F266AED84942AD09D (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -12323,7 +12323,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPath_set_Filters_m2BE82D08DC545C4410AA5
 		return;
 	}
 }
-// Method Definition Index: 58359
+// Method Definition Index: 58363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPath__ctor_mD45877D2BEC54534F9BA876BA00CBCAB54688648 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, String_t* ___0_expression, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12349,7 +12349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPath__ctor_mD45877D2BEC54534F9BA876BA00
 		return;
 	}
 }
-// Method Definition Index: 58360
+// Method Definition Index: 58364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPath_ParseMain_mCA485B126502B9A2754B6C6F65DA17412356E891 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Char_t521A6F19B456D956AF452D926C32709DC03D6B17_StaticInit);
@@ -12480,7 +12480,7 @@ IL_00cc:
 		return;
 	}
 }
-// Method Definition Index: 58361
+// Method Definition Index: 58365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JPath_ParsePath_m96919136966683B3761F3878B5A39BC9CD699321 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* ___0_filters, int32_t ___1_currentPartStartIndex, bool ___2_query, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13013,7 +13013,7 @@ IL_02ba:
 		return L_106;
 	}
 }
-// Method Definition Index: 58362
+// Method Definition Index: 58366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PathFilter_t9D64F7F79CCD3CB1F9D99AEA06168B0E378E7431* JPath_ParseIndexer_m4C1AEEA47B85E77F0A52AD6BC99899D1872DACF0 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, Il2CppChar ___0_indexerOpenChar, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13093,7 +13093,7 @@ IL_0065:
 		return L_13;
 	}
 }
-// Method Definition Index: 58363
+// Method Definition Index: 58367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PathFilter_t9D64F7F79CCD3CB1F9D99AEA06168B0E378E7431* JPath_ParseArrayIndexer_mB46D07B2C5AFC8F631737AE4684CA7EA0DA08D61 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, Il2CppChar ___0_indexerCloseChar, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13665,7 +13665,7 @@ IL_0328:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_122, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JPath_ParseArrayIndexer_mB46D07B2C5AFC8F631737AE4684CA7EA0DA08D61_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58364
+// Method Definition Index: 58368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPath_EatWhitespace_m0B16E7C8055024878DEFC031E1AECEC18E562C8A (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -13708,7 +13708,7 @@ IL_0038:
 		return;
 	}
 }
-// Method Definition Index: 58365
+// Method Definition Index: 58369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PathFilter_t9D64F7F79CCD3CB1F9D99AEA06168B0E378E7431* JPath_ParseQuery_m7B7A814ED7A75D444DC1F8CD077F57158FD097AD (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, Il2CppChar ___0_indexerCloseChar, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13803,7 +13803,7 @@ IL_00c8:
 		return L_24;
 	}
 }
-// Method Definition Index: 58366
+// Method Definition Index: 58370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* JPath_ParseExpression_m876409FA53AFC7938ACDDDE09AA9FA659031BB8E (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14228,7 +14228,7 @@ IL_021c:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_85, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JPath_ParseExpression_m876409FA53AFC7938ACDDDE09AA9FA659031BB8E_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58367
+// Method Definition Index: 58371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPath_ParseValue_mAEE033F259E0A2BD2513D5F3F8D06324E233DB25 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14495,7 +14495,7 @@ IL_0149:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_56, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JPath_ParseValue_mAEE033F259E0A2BD2513D5F3F8D06324E233DB25_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58368
+// Method Definition Index: 58372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JPath_ReadQuotedString_mCC28C37DE9773A659097367CB43B4A66DEBED5DF (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Char_t521A6F19B456D956AF452D926C32709DC03D6B17_StaticInit);
@@ -14650,7 +14650,7 @@ IL_0102:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_38, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JPath_ReadQuotedString_mCC28C37DE9773A659097367CB43B4A66DEBED5DF_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58369
+// Method Definition Index: 58373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JPath_Match_m2FF385BF58703F9D9E8F11E72F90955B73E8FE7E (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, String_t* ___0_s, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -14732,7 +14732,7 @@ IL_003e:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58370
+// Method Definition Index: 58374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JPath_ParseOperator_mC7967B5D9FC913D79A52B2CF6204158B54C80B45 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14860,7 +14860,7 @@ IL_0087:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_11, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JPath_ParseOperator_mC7967B5D9FC913D79A52B2CF6204158B54C80B45_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58371
+// Method Definition Index: 58375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PathFilter_t9D64F7F79CCD3CB1F9D99AEA06168B0E378E7431* JPath_ParseQuotedField_m5C1FF1ED9744290979367A98D4D231BC8673823C (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, Il2CppChar ___0_indexerCloseChar, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15007,7 +15007,7 @@ IL_00bb:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_31, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&JPath_ParseQuotedField_m5C1FF1ED9744290979367A98D4D231BC8673823C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58372
+// Method Definition Index: 58376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JPath_EnsureLength_m945CDCAA0FA02D23F09720A6F6704EA2549ED482 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15034,7 +15034,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58373
+// Method Definition Index: 58377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPath_Evaluate_m07A537A49F892FEFE1E94E181E80458DFAB6D237 (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_t, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15048,7 +15048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPath_Evaluate_m07A537A49F892F
 		return L_3;
 	}
 }
-// Method Definition Index: 58374
+// Method Definition Index: 58378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JPath_Evaluate_mB9A6B17B01734BE091D8FA8821F00C1E5067ABD2 (List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* ___0_filters, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___1_t, bool ___2_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15140,7 +15140,7 @@ IL_003c:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58376
+// Method Definition Index: 58380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* PathFilter_GetTokenIndex_m3A3CFF409F856A159E8D8928DC5B7F5EE7017484 (JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_t, bool ___1_errorWhenNoMatch, int32_t ___2_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15303,7 +15303,7 @@ IL_00a4:
 		return (JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3*)NULL;
 	}
 }
-// Method Definition Index: 58377
+// Method Definition Index: 58381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PathFilter__ctor_m94E7029DA14F6B51E42656FDBBCCC4B7ECAD19E0 (PathFilter_t9D64F7F79CCD3CB1F9D99AEA06168B0E378E7431* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15328,7 +15328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PathFilter__ctor_m94E7029DA14F6B51E42656
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58378
+// Method Definition Index: 58382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t QueryExpression_get_Operator_m68F0D73229951448937BE171762919BAE703B469 (QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15337,7 +15337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t QueryExpression_get_Operator_m68F0D73
 		return L_0;
 	}
 }
-// Method Definition Index: 58379
+// Method Definition Index: 58383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryExpression_set_Operator_m21D671F3BD6A3F5BDE607B9FDFACB830ECBB8199 (QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15347,7 +15347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryExpression_set_Operator_m21D671F3BD
 		return;
 	}
 }
-// Method Definition Index: 58381
+// Method Definition Index: 58385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryExpression__ctor_mE792ADE7A57E796DE334EBF1136BC323B2EC4196 (QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15364,7 +15364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryExpression__ctor_mE792ADE7A57E796DE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58382
+// Method Definition Index: 58386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t7CC35AC777301D2301E331621404E5BB0259D144* CompositeExpression_get_Expressions_m5DE4383743D435CA00538214A644C0E975A103E9 (CompositeExpression_tA611CBEA2784BC9522EF08F358545B1ABE89AACC* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15373,7 +15373,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t7CC35AC777301D2301E331621404E5BB0259D
 		return L_0;
 	}
 }
-// Method Definition Index: 58383
+// Method Definition Index: 58387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CompositeExpression_set_Expressions_mD8F85558E58AC33E965CB9D60E89BDEDF32B6795 (CompositeExpression_tA611CBEA2784BC9522EF08F358545B1ABE89AACC* __this, List_1_t7CC35AC777301D2301E331621404E5BB0259D144* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15384,7 +15384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CompositeExpression_set_Expressions_mD8F
 		return;
 	}
 }
-// Method Definition Index: 58384
+// Method Definition Index: 58388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CompositeExpression__ctor_mDFCD0E37BF8EFB93016797CD2CEE145C92F9AD60 (CompositeExpression_tA611CBEA2784BC9522EF08F358545B1ABE89AACC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15403,7 +15403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CompositeExpression__ctor_mDFCD0E37BF8EF
 		return;
 	}
 }
-// Method Definition Index: 58385
+// Method Definition Index: 58389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CompositeExpression_IsMatch_m84418C84B5A3AF6D341430570E929CF630F7ACEA (CompositeExpression_tA611CBEA2784BC9522EF08F358545B1ABE89AACC* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_t, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15595,7 +15595,7 @@ IL_0090:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58386
+// Method Definition Index: 58390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* BooleanQueryExpression_get_Path_m0870DDF443AA8C2A32480DD42862C42A96551FAC (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15604,7 +15604,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B4239ECC80B1A
 		return L_0;
 	}
 }
-// Method Definition Index: 58387
+// Method Definition Index: 58391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_Path_m2435C1CDE3C0A4FC33810F01C45DC7053BEEE511 (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15615,7 +15615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_Path_m2435C1C
 		return;
 	}
 }
-// Method Definition Index: 58388
+// Method Definition Index: 58392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094375* BooleanQueryExpression_get_Value_m09A14B3B8A03BC2C55CEB21E506156533932AB1A (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15624,7 +15624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094
 		return L_0;
 	}
 }
-// Method Definition Index: 58389
+// Method Definition Index: 58393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_Value_m9FFE2E08668A3C3E6E9BBD5B4794C6CD1C705A0E (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -15635,7 +15635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_Value_m9FFE2E
 		return;
 	}
 }
-// Method Definition Index: 58390
+// Method Definition Index: 58394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BooleanQueryExpression_IsMatch_mA845C96F834226F54015EE751EB97EEC8C8EE032 (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* ___0_t, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15922,7 +15922,7 @@ IL_00ff:
 		return L_34;
 	}
 }
-// Method Definition Index: 58391
+// Method Definition Index: 58395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BooleanQueryExpression_EqualsWithStringCoercion_m646B28D35AC707309E8D79394403C50C0E238143 (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___0_value, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___1_queryValue, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16164,7 +16164,7 @@ IL_00df:
 		return L_36;
 	}
 }
-// Method Definition Index: 58392
+// Method Definition Index: 58396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BooleanQueryExpression__ctor_mC2E073D357BDDE808589A9CBFC3DE9CFEE30A381 (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16181,7 +16181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BooleanQueryExpression__ctor_mC2E073D357
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58393
+// Method Definition Index: 58397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* QueryFilter_get_Expression_mE6DA813930EFEB27A7074D50DAA9C7E91252E8C1 (QueryFilter_t9B1B799527B4277D566E5DE1EE64D33006CE8064* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16190,7 +16190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR QueryExpression_t0A0887F8997D64D7F6176B7DCB47
 		return L_0;
 	}
 }
-// Method Definition Index: 58394
+// Method Definition Index: 58398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryFilter_set_Expression_m20AD61ED73104E88EFEF1B7AED0B36F3530D624A (QueryFilter_t9B1B799527B4277D566E5DE1EE64D33006CE8064* __this, QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16201,7 +16201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryFilter_set_Expression_m20AD61ED7310
 		return;
 	}
 }
-// Method Definition Index: 58395
+// Method Definition Index: 58399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* QueryFilter_ExecuteFilter_mB3DE83E9D32FB36CC5435640B0478D21C7FC5CA7 (QueryFilter_t9B1B799527B4277D566E5DE1EE64D33006CE8064* __this, RuntimeObject* ___0_current, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16226,7 +16226,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* QueryFilter_ExecuteFilter_mB3D
 		return L_2;
 	}
 }
-// Method Definition Index: 58396
+// Method Definition Index: 58400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryFilter__ctor_mE1F383E4E24BB6EA82086AD5209AC828DB7C3799 (QueryFilter_t9B1B799527B4277D566E5DE1EE64D33006CE8064* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16243,7 +16243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QueryFilter__ctor_mE1F383E4E24BB6EA82086
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58397
+// Method Definition Index: 58401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mE13E0BE4C4AAA937A832D12A4773B376D97E60F7 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16260,7 +16260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_mE13E0BE4C
 		return;
 	}
 }
-// Method Definition Index: 58398
+// Method Definition Index: 58402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_IDisposable_Dispose_mAB39DDB768493E6839CEF7937233A25B5F0322ED (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16364,7 +16364,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 58399
+// Method Definition Index: 58403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CExecuteFilterU3Ed__4_MoveNext_m65E3AFFFD9F0643078898929BDCE6727ADED0101 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16525,7 +16525,7 @@ IL_00d4:
 		return L_20;
 	}
 }
-// Method Definition Index: 58400
+// Method Definition Index: 58404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally1_mA84B41195834ABE92F10571E4FE7262EBEB369D3 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16554,7 +16554,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58401
+// Method Definition Index: 58405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally2_mE408EE6C289DBE56492F17D7EF6D82425DDCFED2 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16583,7 +16583,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 58402
+// Method Definition Index: 58406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_mA6CAFA66BDB2C7AA28692B45E886067A386BF921 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16592,7 +16592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58403
+// Method Definition Index: 58407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m7E6F7EA635AEDEE421376FE6A5445808AB1B4D49 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16602,7 +16602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m7E6F7EA635AEDEE421376FE6A5445808AB1B4D49_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58404
+// Method Definition Index: 58408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_get_Current_mAB09B05CFF5F30358746E62F24BA0CB3DE9ABDB3 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16611,7 +16611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58405
+// Method Definition Index: 58409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_m73C9E820B37F54FB99C7CADA124818ACEAE6E028 (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16670,7 +16670,7 @@ IL_003a:
 		return L_9;
 	}
 }
-// Method Definition Index: 58406
+// Method Definition Index: 58410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerable_GetEnumerator_m0EDD030FF7B1ED6C38ABAAC4E1A8A7477AC0C24B (U3CExecuteFilterU3Ed__4_tECFB12C58F16A1B8BE80F417023606B80A55E8F8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16688,7 +16688,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58407
+// Method Definition Index: 58411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ScanFilter_get_Name_m1E7C222E92A568592D64DD0AD4B1378B32532B58 (ScanFilter_tAD9276D54152FBD92E90DCD3847E35987BD7E127* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16697,7 +16697,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ScanFilter_get_Name_m1E7C222E92A568
 		return L_0;
 	}
 }
-// Method Definition Index: 58408
+// Method Definition Index: 58412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScanFilter_set_Name_m8E17CB31015E988BC346F5A96D5F2BEB2FA28B0D (ScanFilter_tAD9276D54152FBD92E90DCD3847E35987BD7E127* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16708,7 +16708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScanFilter_set_Name_m8E17CB31015E988BC34
 		return;
 	}
 }
-// Method Definition Index: 58409
+// Method Definition Index: 58413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ScanFilter_ExecuteFilter_m8B9235DCF116D73B98E64B3F320BFFB95B7B8537 (ScanFilter_tAD9276D54152FBD92E90DCD3847E35987BD7E127* __this, RuntimeObject* ___0_current, bool ___1_errorWhenNoMatch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16733,7 +16733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ScanFilter_ExecuteFilter_m8B92
 		return L_2;
 	}
 }
-// Method Definition Index: 58410
+// Method Definition Index: 58414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScanFilter__ctor_m976B5D26D55750F4ADA2DE0F437E95C68761CF69 (ScanFilter_tAD9276D54152FBD92E90DCD3847E35987BD7E127* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16750,7 +16750,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScanFilter__ctor_m976B5D26D55750F4ADA2DE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58411
+// Method Definition Index: 58415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_m5DA943CDE48A9751135C1C40051799104113BC8B (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16767,7 +16767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4__ctor_m5DA943CDE
 		return;
 	}
 }
-// Method Definition Index: 58412
+// Method Definition Index: 58416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_IDisposable_Dispose_mDBB7271684374818FCEA2314C566ADBDFBEAB8C8 (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -16844,7 +16844,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 58413
+// Method Definition Index: 58417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CExecuteFilterU3Ed__4_MoveNext_m9979E5CFDC05AD1ABD4A919231154A3520906801 (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17165,7 +17165,7 @@ IL_01dc:
 		return L_45;
 	}
 }
-// Method Definition Index: 58414
+// Method Definition Index: 58418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_U3CU3Em__Finally1_mF1ECDAF22B6F8FBA8B7C1A1332F816DDB8474CF9 (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17194,7 +17194,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58415
+// Method Definition Index: 58419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumeratorU3CNewtonsoft_Json_Linq_JTokenU3E_get_Current_m79984B5EEFEC32963CD107483547BB49C17F1E4E (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -17203,7 +17203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E
 		return L_0;
 	}
 }
-// Method Definition Index: 58416
+// Method Definition Index: 58420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m0123637AAE5E3C66567FE3B1A85E2474BB694C9C (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -17213,7 +17213,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExecuteFilterU3Ed__4_System_Collectio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_Reset_m0123637AAE5E3C66567FE3B1A85E2474BB694C9C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58417
+// Method Definition Index: 58421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerator_get_Current_m5674AAA9850FD44C949D57BC03BF139509C355C8 (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -17222,7 +17222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 		return L_0;
 	}
 }
-// Method Definition Index: 58418
+// Method Definition Index: 58422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_Generic_IEnumerableU3CNewtonsoft_Json_Linq_JTokenU3E_GetEnumerator_mA1098BBB020B83CC40DFC850BC0E888B518A581A (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17281,7 +17281,7 @@ IL_003a:
 		return L_9;
 	}
 }
-// Method Definition Index: 58419
+// Method Definition Index: 58423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System_Collections_IEnumerable_GetEnumerator_m855340BBB8609DB061D3845482F8B569C2A4DCA4 (U3CExecuteFilterU3Ed__4_t04357E7E9925822308CB2B7D7A9EC63052B79291* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -17299,7 +17299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CExecuteFilterU3Ed__4_System
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58420
+// Method Definition Index: 58424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BinaryConverter_WriteJson_m54AFB7F3527E39626E86389F48BAE9E9A56ED98B (BinaryConverter_t9144F869C540082ED393039F11E836F0FB15C4F4* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -17331,7 +17331,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 58421
+// Method Definition Index: 58425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BinaryConverter_GetByteArray_mD5871B065CC5FAB077E17BDE734FBD365836DEFE (BinaryConverter_t9144F869C540082ED393039F11E836F0FB15C4F4* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17386,7 +17386,7 @@ IL_0035:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_12, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&BinaryConverter_GetByteArray_mD5871B065CC5FAB077E17BDE734FBD365836DEFE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58422
+// Method Definition Index: 58426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BinaryConverter_EnsureReflectionObject_mFF1C9D88AFCA9F92F7FA127E89C9C23083730A75 (BinaryConverter_t9144F869C540082ED393039F11E836F0FB15C4F4* __this, Type_t* ___0_t, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17436,7 +17436,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 58423
+// Method Definition Index: 58427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BinaryConverter_ReadJson_m93A33D05378C772EF0984563A78641EC5995625C (BinaryConverter_t9144F869C540082ED393039F11E836F0FB15C4F4* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17626,7 +17626,7 @@ IL_00bd:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_45, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&BinaryConverter_ReadJson_m93A33D05378C772EF0984563A78641EC5995625C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58424
+// Method Definition Index: 58428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BinaryConverter_ReadByteArray_m8744B9592F4CFE1AFD20387016C1FDE36E45EEAF (BinaryConverter_t9144F869C540082ED393039F11E836F0FB15C4F4* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17746,7 +17746,7 @@ IL_005e:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_24, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&BinaryConverter_ReadByteArray_m8744B9592F4CFE1AFD20387016C1FDE36E45EEAF_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58425
+// Method Definition Index: 58429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BinaryConverter_CanConvert_mA8CF5D87606B8AC2C21B833329D9D68E752916A8 (BinaryConverter_t9144F869C540082ED393039F11E836F0FB15C4F4* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17774,7 +17774,7 @@ IL_000f:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58426
+// Method Definition Index: 58430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BinaryConverter__ctor_m6A759CAB2FA8F38DCEF840B9DF367F2EBDC0845E (BinaryConverter_t9144F869C540082ED393039F11E836F0FB15C4F4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -17791,7 +17791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BinaryConverter__ctor_m6A759CAB2FA8F38DC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58427
+// Method Definition Index: 58431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ColorConverter_WriteJson_mA75B89D3A9501CD73F852F1E01C18B70C56D2590 (ColorConverter_tE4AB75FF0E24801CE24F8571702950215A2243CE* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17866,7 +17866,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 58428
+// Method Definition Index: 58432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ColorConverter_CanConvert_m3A34FE3EA2A89870079CDA1617C023D1D4B48A7B (ColorConverter_tE4AB75FF0E24801CE24F8571702950215A2243CE* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -17896,7 +17896,7 @@ IL_001b:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58429
+// Method Definition Index: 58433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ColorConverter_ReadJson_m01E4C081F8BB8C0ED98B48C25B32D6112FDAB6D5 (ColorConverter_tE4AB75FF0E24801CE24F8571702950215A2243CE* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18024,7 +18024,7 @@ IL_0078:
 		return L_43;
 	}
 }
-// Method Definition Index: 58430
+// Method Definition Index: 58434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ColorConverter_get_CanRead_m2C6A824BC418C820D7EDBE108B68941E36A69840 (ColorConverter_tE4AB75FF0E24801CE24F8571702950215A2243CE* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18032,7 +18032,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ColorConverter_get_CanRead_m2C6A824BC418
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58431
+// Method Definition Index: 58435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ColorConverter__ctor_mA1C0B2F29717703EF290C59FFE6A27F5A31A9942 (ColorConverter_tE4AB75FF0E24801CE24F8571702950215A2243CE* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18049,7 +18049,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ColorConverter__ctor_mA1C0B2F29717703EF2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58438
+// Method Definition Index: 58442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DateTimeConverterBase_CanConvert_m6319B09EB67CC570AA771FB6684A43D9E8D40697 (DateTimeConverterBase_t36BB1B6037D3FB7F14C612DD537FA6B05C807E31* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -18116,7 +18116,7 @@ IL_0038:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58439
+// Method Definition Index: 58443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTimeConverterBase__ctor_m02E6F20A4F764E261FA171A2A0D8694121CAEB06 (DateTimeConverterBase_t36BB1B6037D3FB7F14C612DD537FA6B05C807E31* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18133,7 +18133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTimeConverterBase__ctor_m02E6F20A4F7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58446
+// Method Definition Index: 58450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSetConverter_WriteJson_m7258B2FBE81FE3B00090BAA6B9F1BB61FF2BFD91 (HashSetConverter_t7588066F210B52F94337F5D22A4A1C44D4C9B351* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18141,7 +18141,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSetConverter_WriteJson_m7258B2FBE81F
 		return;
 	}
 }
-// Method Definition Index: 58447
+// Method Definition Index: 58451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HashSetConverter_ReadJson_mCAAE97098C36EB09E16A5F5301337BA9922F3A79 (HashSetConverter_t7588066F210B52F94337F5D22A4A1C44D4C9B351* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18295,7 +18295,7 @@ IL_007f:
 		return L_36;
 	}
 }
-// Method Definition Index: 58448
+// Method Definition Index: 58452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSetConverter_CanConvert_mED54AD057BBC9F636D7EFE7D7636FA3164C40ED8 (HashSetConverter_t7588066F210B52F94337F5D22A4A1C44D4C9B351* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -18326,7 +18326,7 @@ IL_001b:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58449
+// Method Definition Index: 58453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSetConverter_get_CanWrite_mB6507CDFB1B08D70274FE786BA0EB6A7326ACC62 (HashSetConverter_t7588066F210B52F94337F5D22A4A1C44D4C9B351* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18334,7 +18334,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSetConverter_get_CanWrite_mB6507CDFB
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58450
+// Method Definition Index: 58454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSetConverter__ctor_mA656EFE7F0C66AAE6D9819F2614B980E583A7662 (HashSetConverter_t7588066F210B52F94337F5D22A4A1C44D4C9B351* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18351,7 +18351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSetConverter__ctor_mA656EFE7F0C66AAE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58451
+// Method Definition Index: 58455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReflectionObject_tBC7C0875C7434F4B89AC4948A4ECBD5CF84AE2E7* KeyValuePairConverter_InitializeReflectionObject_mECD1547C1FDDAE2A63C8FE1C2B2E45AE555B16F3 (Type_t* ___0_t, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18409,7 +18409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReflectionObject_tBC7C0875C7434F4B89AC4948A4E
 		return L_16;
 	}
 }
-// Method Definition Index: 58452
+// Method Definition Index: 58456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePairConverter_WriteJson_mB71698F2630B93D03C057F63D18FFEC98E0F9FA1 (KeyValuePairConverter_t1E679E4477B1456F7A261B3CF60B2D566C2F6413* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18543,7 +18543,7 @@ IL_0072:
 		return;
 	}
 }
-// Method Definition Index: 58453
+// Method Definition Index: 58457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePairConverter_ReadJson_mA993A01FB25C456BFE0DEE5CA1CEC18DBF0AA839 (KeyValuePairConverter_t1E679E4477B1456F7A261B3CF60B2D566C2F6413* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18750,7 +18750,7 @@ IL_00b9:
 		return L_45;
 	}
 }
-// Method Definition Index: 58454
+// Method Definition Index: 58458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KeyValuePairConverter_CanConvert_mF101B6EFD84D2BCE96EF03553298F5BE10B66ABF (KeyValuePairConverter_t1E679E4477B1456F7A261B3CF60B2D566C2F6413* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18825,7 +18825,7 @@ IL_0035:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58455
+// Method Definition Index: 58459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePairConverter__ctor_mE945E5DD56F012CBB65CD6213B18365A89B23EEC (KeyValuePairConverter_t1E679E4477B1456F7A261B3CF60B2D566C2F6413* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18834,7 +18834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePairConverter__ctor_mE945E5DD56F
 		return;
 	}
 }
-// Method Definition Index: 58456
+// Method Definition Index: 58460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePairConverter__cctor_m2529C663777F1625C160C3868539754FD920F863 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18866,7 +18866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePairConverter__cctor_m2529C66377
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58457
+// Method Definition Index: 58461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BsonObjectIdConverter_WriteJson_m73F5985D9544CE0BEFEB95DDAB45E9BF1C8FB7F3 (BsonObjectIdConverter_t1DB1470F9AE990BBAB52249A233F9C09A943B40A* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18913,7 +18913,7 @@ IL_001e:
 		return;
 	}
 }
-// Method Definition Index: 58458
+// Method Definition Index: 58462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BsonObjectIdConverter_ReadJson_m3FA7C54B894B616778D5C145EF1029FE68990C88 (BsonObjectIdConverter_t1DB1470F9AE990BBAB52249A233F9C09A943B40A* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18963,7 +18963,7 @@ IL_002a:
 		return L_11;
 	}
 }
-// Method Definition Index: 58459
+// Method Definition Index: 58463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BsonObjectIdConverter_CanConvert_m46DF6406FDBD5DFAFCB5F92167256C107DAC0D70 (BsonObjectIdConverter_t1DB1470F9AE990BBAB52249A233F9C09A943B40A* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -18977,7 +18977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BsonObjectIdConverter_CanConvert_m46DF64
 		return (bool)((((RuntimeObject*)(Type_t*)L_0) == ((RuntimeObject*)(Type_t*)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58460
+// Method Definition Index: 58464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BsonObjectIdConverter__ctor_m9A8067BEF8BF07BEC8A7FA3E956475540E4E495C (BsonObjectIdConverter_t1DB1470F9AE990BBAB52249A233F9C09A943B40A* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -18994,7 +18994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BsonObjectIdConverter__ctor_m9A8067BEF8B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58461
+// Method Definition Index: 58465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Matrix4x4Converter_WriteJson_mD0474A3873D2A794D3D803EC8D2600A03EEBCC08 (Matrix4x4Converter_t9144E96799D160E052274F579E5B9BA22494B9CE* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19176,7 +19176,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 58462
+// Method Definition Index: 58466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Matrix4x4Converter_ReadJson_mB7B8967D3CB786B4F84530D19A8A27DCECA28EE3 (Matrix4x4Converter_t9144E96799D160E052274F579E5B9BA22494B9CE* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19330,7 +19330,7 @@ IL_0019:
 		return L_57;
 	}
 }
-// Method Definition Index: 58463
+// Method Definition Index: 58467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Matrix4x4Converter_get_CanRead_m3A706100C88183B5814AA60E995837931F2084D3 (Matrix4x4Converter_t9144E96799D160E052274F579E5B9BA22494B9CE* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -19338,7 +19338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Matrix4x4Converter_get_CanRead_m3A706100
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58464
+// Method Definition Index: 58468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Matrix4x4Converter_CanConvert_m134D082FF47285FC0C98A5DF2B581D9184B1A042 (Matrix4x4Converter_t9144E96799D160E052274F579E5B9BA22494B9CE* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -19352,7 +19352,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Matrix4x4Converter_CanConvert_m134D082FF
 		return (bool)((((RuntimeObject*)(Type_t*)L_0) == ((RuntimeObject*)(Type_t*)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58465
+// Method Definition Index: 58469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Matrix4x4Converter__ctor_m2A40C59B6DBD0F158895D9F6CEB3A122A9B2A450 (Matrix4x4Converter_t9144E96799D160E052274F579E5B9BA22494B9CE* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -19369,7 +19369,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Matrix4x4Converter__ctor_m2A40C59B6DBD0F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58466
+// Method Definition Index: 58470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuaternionConverter_WriteJson_m1638DAE6A4637045FC0A011B0A3251967E1A41BD (QuaternionConverter_tB9C8FFA7BBF2B31F26A5EF05C9C0D83D290E7170* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19465,7 +19465,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuaternionConverter_WriteJson_m1638DAE6A
 		return;
 	}
 }
-// Method Definition Index: 58467
+// Method Definition Index: 58471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool QuaternionConverter_CanConvert_m4F046D18FEEBE42B492A079F5CF1083D973F5489 (QuaternionConverter_tB9C8FFA7BBF2B31F26A5EF05C9C0D83D290E7170* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -19479,7 +19479,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool QuaternionConverter_CanConvert_m4F046D18
 		return (bool)((((RuntimeObject*)(Type_t*)L_0) == ((RuntimeObject*)(Type_t*)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58468
+// Method Definition Index: 58472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* QuaternionConverter_ReadJson_mECD6DFE2852460F4EDD98329C673C052593FEAC7 (QuaternionConverter_tB9C8FFA7BBF2B31F26A5EF05C9C0D83D290E7170* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19852,7 +19852,7 @@ IL_01a0:
 		return L_72;
 	}
 }
-// Method Definition Index: 58469
+// Method Definition Index: 58473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool QuaternionConverter_get_CanRead_mAEB45E51CCC4E9C68692567326C809DF9DD9829C (QuaternionConverter_tB9C8FFA7BBF2B31F26A5EF05C9C0D83D290E7170* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -19860,7 +19860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool QuaternionConverter_get_CanRead_mAEB45E5
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58470
+// Method Definition Index: 58474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuaternionConverter__ctor_m6C9EA71E7FAF34373C729D39BF7CE7FB5188DCDA (QuaternionConverter_tB9C8FFA7BBF2B31F26A5EF05C9C0D83D290E7170* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -19877,7 +19877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuaternionConverter__ctor_m6C9EA71E7FAF3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58471
+// Method Definition Index: 58475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mB06C0C95B04E4FCCBA661899DD60D1F7FF695C58 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19895,7 +19895,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mB06C0C95B04E4FCCBA661899
 		return;
 	}
 }
-// Method Definition Index: 58472
+// Method Definition Index: 58476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m7714C475EF06E6AF0698904DD1A4B0C444AF3475 (U3CU3Ec_tABDB71BE9652D52181DD73D0C79E02D876DF04E4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -19904,7 +19904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m7714C475EF06E6AF0698904DD
 		return;
 	}
 }
-// Method Definition Index: 58473
+// Method Definition Index: 58477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_0_m264215F0996E1F5B024B558CC0BEDA4256D2BE35 (U3CU3Ec_tABDB71BE9652D52181DD73D0C79E02D876DF04E4* __this, JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* ___0_p, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19924,7 +19924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_0_m264215F099
 		return L_2;
 	}
 }
-// Method Definition Index: 58474
+// Method Definition Index: 58478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_1_mD9B28E958AC0E3839E4D98D4784FA9478F91E2CA (U3CU3Ec_tABDB71BE9652D52181DD73D0C79E02D876DF04E4* __this, JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* ___0_p, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19944,7 +19944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_1_mD9B28E958A
 		return L_2;
 	}
 }
-// Method Definition Index: 58475
+// Method Definition Index: 58479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_2_m4BD4839FB7F1F852B81D718AFC36BE2F0A98873B (U3CU3Ec_tABDB71BE9652D52181DD73D0C79E02D876DF04E4* __this, JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* ___0_p, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19964,7 +19964,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_2_m4BD4839FB7
 		return L_2;
 	}
 }
-// Method Definition Index: 58476
+// Method Definition Index: 58480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_3_mC49AF90ED53774807269263CE68372C8F7454ACE (U3CU3Ec_tABDB71BE9652D52181DD73D0C79E02D876DF04E4* __this, JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* ___0_p, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19984,7 +19984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_3_mC49AF90ED5
 		return L_2;
 	}
 }
-// Method Definition Index: 58477
+// Method Definition Index: 58481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_4_m85328CE33830573B7E351EB82874D02254D38A76 (U3CU3Ec_tABDB71BE9652D52181DD73D0C79E02D876DF04E4* __this, JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* ___0_p, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20012,7 +20012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CReadJsonU3Eb__2_4_m85328CE338
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58478
+// Method Definition Index: 58482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RegexConverter_WriteJson_m65FA4ECCF0C6A86ED4D93A62F79DD2848EEA910D (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20052,7 +20052,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 58479
+// Method Definition Index: 58483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RegexConverter_HasFlag_m8E63783C5E9BCD5DABF3824CDE1806E3E14D6368 (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, int32_t ___0_options, int32_t ___1_flag, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20063,7 +20063,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RegexConverter_HasFlag_m8E63783C5E9BCD5D
 		return (bool)((((int32_t)((int32_t)((int32_t)L_0&(int32_t)L_1))) == ((int32_t)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58480
+// Method Definition Index: 58484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RegexConverter_WriteBson_m4DDA78E9F73244FA1A404186035D84F684BCB791 (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, BsonWriter_tA81B979F9E0F8BE8AE56AFD64679C73B2BE10456* ___0_writer, Regex_tE773142C2BE45C5D362B0F815AFF831707A51772* ___1_regex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20175,7 +20175,7 @@ IL_007b:
 		return;
 	}
 }
-// Method Definition Index: 58481
+// Method Definition Index: 58485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RegexConverter_WriteJson_m146024645167B8D2B9CB7743115A8B75B1A9ED4C (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, Regex_tE773142C2BE45C5D362B0F815AFF831707A51772* ___1_regex, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20287,7 +20287,7 @@ IL_004f:
 		return;
 	}
 }
-// Method Definition Index: 58482
+// Method Definition Index: 58486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RegexConverter_ReadJson_m7CF77989D9D66E5D39D1C1837CBB5A64A57B411C (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20335,7 +20335,7 @@ IL_0025:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_10, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&RegexConverter_ReadJson_m7CF77989D9D66E5D39D1C1837CBB5A64A57B411C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58483
+// Method Definition Index: 58487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RegexConverter_ReadRegexString_m5202370764B9C1DDC7876800837CE4E377E189C1 (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20481,7 +20481,7 @@ IL_0078:
 		return L_27;
 	}
 }
-// Method Definition Index: 58484
+// Method Definition Index: 58488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Regex_tE773142C2BE45C5D362B0F815AFF831707A51772* RegexConverter_ReadRegexObject_mBDF60E21C6F61527B07C7F03ED7930A93C1DABEE (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___1_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20683,7 +20683,7 @@ IL_00b9:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_33, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&RegexConverter_ReadRegexObject_mBDF60E21C6F61527B07C7F03ED7930A93C1DABEE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58485
+// Method Definition Index: 58489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RegexConverter_CanConvert_m8DED3CD0981D1A6EDC73718DB07246F5EDEFAABA (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -20697,7 +20697,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RegexConverter_CanConvert_m8DED3CD0981D1
 		return (bool)((((RuntimeObject*)(Type_t*)L_0) == ((RuntimeObject*)(Type_t*)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58486
+// Method Definition Index: 58490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RegexConverter__ctor_mC1D5166D65F3777509842BB033FC4111EB826167 (RegexConverter_t4AC8A97C210552E88723F68EDDC9EF1000FA8FC1* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20714,7 +20714,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RegexConverter__ctor_mC1D5166D65F3777509
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58487
+// Method Definition Index: 58491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolutionConverter_WriteJson_m7A0FD01B2AA9CB6B904C1601067BBF073C8FE747 (ResolutionConverter_t30AB8BA723A3B323A95EA049464FB391E3504490* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20765,7 +20765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolutionConverter_WriteJson_m7A0FD01B2
 		return;
 	}
 }
-// Method Definition Index: 58488
+// Method Definition Index: 58492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ResolutionConverter_CanConvert_mEE6E6AFE7E7EC6B1EB48528CCE5A9ED2153A5D80 (ResolutionConverter_t30AB8BA723A3B323A95EA049464FB391E3504490* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -20779,7 +20779,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ResolutionConverter_CanConvert_mEE6E6AFE
 		return (bool)((((RuntimeObject*)(Type_t*)L_0) == ((RuntimeObject*)(Type_t*)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58489
+// Method Definition Index: 58493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ResolutionConverter_ReadJson_mEF1C60ED04BC9E7010FC1A35F5D00FA89ADDE2EF (ResolutionConverter_t30AB8BA723A3B323A95EA049464FB391E3504490* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20831,7 +20831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ResolutionConverter_ReadJson_m
 		return L_13;
 	}
 }
-// Method Definition Index: 58490
+// Method Definition Index: 58494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ResolutionConverter_get_CanRead_mFBCE8438EAD32800EA8AA3E244F857DD49BD8135 (ResolutionConverter_t30AB8BA723A3B323A95EA049464FB391E3504490* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20839,7 +20839,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ResolutionConverter_get_CanRead_mFBCE843
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58491
+// Method Definition Index: 58495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolutionConverter__ctor_mB8E21281DD2D7BDE07A9EB0BE61F434CA568F50A (ResolutionConverter_t30AB8BA723A3B323A95EA049464FB391E3504490* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20856,7 +20856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ResolutionConverter__ctor_mB8E21281DD2D7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58492
+// Method Definition Index: 58496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StringEnumConverter_get_CamelCaseText_m638D7E2E1ADFA8259C5C5DC44C4D6FFF4FA075F5 (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20865,7 +20865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StringEnumConverter_get_CamelCaseText_m6
 		return L_0;
 	}
 }
-// Method Definition Index: 58493
+// Method Definition Index: 58497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter_set_CamelCaseText_m5BC5140861194D1BB605D21B78AEC694E598DF18 (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20875,7 +20875,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter_set_CamelCaseText_m5
 		return;
 	}
 }
-// Method Definition Index: 58494
+// Method Definition Index: 58498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StringEnumConverter_get_AllowIntegerValues_m773843BCE2AEFD6CF8A21ABD17918C4CF62B1F9C (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20884,7 +20884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StringEnumConverter_get_AllowIntegerValu
 		return L_0;
 	}
 }
-// Method Definition Index: 58495
+// Method Definition Index: 58499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter_set_AllowIntegerValues_m06EEDD4CA3D661984541A7E3CA1C5DD8E763ECF1 (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20894,7 +20894,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter_set_AllowIntegerValu
 		return;
 	}
 }
-// Method Definition Index: 58496
+// Method Definition Index: 58500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter__ctor_m36B6009E735666675AEB30CD83B385291E98CC73 (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20904,7 +20904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter__ctor_m36B6009E73566
 		return;
 	}
 }
-// Method Definition Index: 58497
+// Method Definition Index: 58501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter__ctor_m1E18784EC90C5C7ACB775DDE8375F5FA2ABB8816 (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, bool ___0_camelCaseText, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -20915,7 +20915,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter__ctor_m1E18784EC90C5
 		return;
 	}
 }
-// Method Definition Index: 58498
+// Method Definition Index: 58502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringEnumConverter_WriteJson_m3F8A6A8539AD9E7209996B11277DA597DBB8B22D (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21006,7 +21006,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 58499
+// Method Definition Index: 58503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StringEnumConverter_ReadJson_mAF074420B274DE15507DC1FA2CB5E0E126BC5067 (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21242,7 +21242,7 @@ IL_00e9:
 		return L_55;
 	}
 }
-// Method Definition Index: 58500
+// Method Definition Index: 58504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StringEnumConverter_CanConvert_m893906149FEF1949D9BA1F3674E7C98FD275FEA3 (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21293,7 +21293,7 @@ IL_0011:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58501
+// Method Definition Index: 58505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UriConverter_CanConvert_m6028E9C58E531E897FA2665F878CF54554B26182 (UriConverter_tE672251ED23E96C273DEE2187995B362582EFE1A* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -21307,7 +21307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UriConverter_CanConvert_m6028E9C58E531E8
 		return (bool)((((RuntimeObject*)(Type_t*)L_0) == ((RuntimeObject*)(Type_t*)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58502
+// Method Definition Index: 58506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* UriConverter_ReadJson_mE5DCF0958E1B45D5A2D9202286E87305AD6A6319 (UriConverter_tE672251ED23E96C273DEE2187995B362582EFE1A* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21364,7 +21364,7 @@ IL_0026:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UriConverter_ReadJson_mE5DCF0958E1B45D5A2D9202286E87305AD6A6319_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58503
+// Method Definition Index: 58507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UriConverter_WriteJson_m0D1DE9F5634146A66BCEF4CCDC5DB10A62FC6BF8 (UriConverter_tE672251ED23E96C273DEE2187995B362582EFE1A* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21421,7 +21421,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 58504
+// Method Definition Index: 58508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UriConverter__ctor_m330C7954BA57265F04D6770D6F16BC5D5436A12C (UriConverter_tE672251ED23E96C273DEE2187995B362582EFE1A* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21438,7 +21438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UriConverter__ctor_m330C7954BA57265F04D6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58505
+// Method Definition Index: 58509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector2_m3B3C90FBD2669464F10143CD10CB34DE1A9C65EC (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21447,7 +21447,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector2_m3B3C9
 		return L_0;
 	}
 }
-// Method Definition Index: 58506
+// Method Definition Index: 58510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector2_mE7927EB6096D3E1F0E376C73657BFFAE4EA93F01 (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21457,7 +21457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector2_mE7927
 		return;
 	}
 }
-// Method Definition Index: 58507
+// Method Definition Index: 58511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector3_m717868EFFCF7AAD56AA58CE8FFA579B0B48E491A (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21466,7 +21466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector3_m71786
 		return L_0;
 	}
 }
-// Method Definition Index: 58508
+// Method Definition Index: 58512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector3_m396E789698564789734CDD684A1B1A6589FCB448 (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21476,7 +21476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector3_m396E7
 		return;
 	}
 }
-// Method Definition Index: 58509
+// Method Definition Index: 58513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector4_m64A5B4F3C38F459E77DBADA18927120326F1BF42 (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21485,7 +21485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector4_m64A5B
 		return L_0;
 	}
 }
-// Method Definition Index: 58510
+// Method Definition Index: 58514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector4_m7ABC7C2C252E7DFB946BDEDDEB33B1D0792605F4 (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21495,7 +21495,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector4_m7ABC7
 		return;
 	}
 }
-// Method Definition Index: 58511
+// Method Definition Index: 58515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter__ctor_mD7EC6E1AAD9CA4C174A718BEAA50AB26649BC3DD (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21507,7 +21507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter__ctor_mD7EC6E1AAD9CA4C17
 		return;
 	}
 }
-// Method Definition Index: 58512
+// Method Definition Index: 58516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter__ctor_m6EAB288681E7EA3130151455F7B52F7EEF53DD97 (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, bool ___0_enableVector2, bool ___1_enableVector3, bool ___2_enableVector4, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -21522,7 +21522,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter__ctor_m6EAB288681E7EA313
 		return;
 	}
 }
-// Method Definition Index: 58513
+// Method Definition Index: 58517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_WriteJson_m1EC6AC34618A6B91BE9240D12EF6575DF0C94B7B (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21659,7 +21659,7 @@ IL_00b8:
 		return;
 	}
 }
-// Method Definition Index: 58514
+// Method Definition Index: 58518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter_WriteVector_mABBFEE702E0E9959EB00722E64500943D57DF997 (JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, float ___1_x, float ___2_y, Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 ___3_z, Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 ___4_w, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21732,7 +21732,7 @@ IL_006c:
 		return;
 	}
 }
-// Method Definition Index: 58515
+// Method Definition Index: 58519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* VectorConverter_ReadJson_m53BEB27FC5055DEF363EF25DF780E262FAA7E013 (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21793,7 +21793,7 @@ IL_0028:
 		return L_15;
 	}
 }
-// Method Definition Index: 58516
+// Method Definition Index: 58520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VectorConverter_CanConvert_m64936D2B51C6C6F5C4F5C062D2B35E727AC512F5 (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21867,7 +21867,7 @@ IL_0033:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 58517
+// Method Definition Index: 58521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 VectorConverter_PopulateVector2_m646F8116C9723199ABF4A82AE49244827EEB9132 (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21920,7 +21920,7 @@ IL_0047:
 		return L_10;
 	}
 }
-// Method Definition Index: 58518
+// Method Definition Index: 58522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 VectorConverter_PopulateVector3_m801E5C586E2BA8EC8103C563387E20B6E190035E (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21981,7 +21981,7 @@ IL_005e:
 		return L_13;
 	}
 }
-// Method Definition Index: 58519
+// Method Definition Index: 58523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 VectorConverter_PopulateVector4_m1EE024C4E16391F29D2DB02913E475F547EE9F7B (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22050,7 +22050,7 @@ IL_0075:
 		return L_16;
 	}
 }
-// Method Definition Index: 58520
+// Method Definition Index: 58524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter__cctor_mC0459ADAB2DF71517A52E74EA34914A5C797C951 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22089,7 +22089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VectorConverter__cctor_mC0459ADAB2DF7151
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58521
+// Method Definition Index: 58525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VersionConverter_WriteJson_mAF07010E49ACA90B579F5899FD77D6E59101E1C8 (VersionConverter_tD05642E722EDAABE162CA1FFF42A4293B0813FB5* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22133,7 +22133,7 @@ IL_001f:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&VersionConverter_WriteJson_mAF07010E49ACA90B579F5899FD77D6E59101E1C8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58522
+// Method Definition Index: 58526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* VersionConverter_ReadJson_m7965482BF5F14BE5B2C39F483A32FB074CD48FAC (VersionConverter_tD05642E722EDAABE162CA1FFF42A4293B0813FB5* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticInit);
@@ -22237,7 +22237,7 @@ IL_006e:
 		return L_25;
 	}
 }
-// Method Definition Index: 58523
+// Method Definition Index: 58527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VersionConverter_CanConvert_m6AEC0547939825EE9D68F3353854893A51220E6A (VersionConverter_tD05642E722EDAABE162CA1FFF42A4293B0813FB5* __this, Type_t* ___0_objectType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -22251,7 +22251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VersionConverter_CanConvert_m6AEC0547939
 		return (bool)((((RuntimeObject*)(Type_t*)L_0) == ((RuntimeObject*)(Type_t*)L_2))? 1 : 0);
 	}
 }
-// Method Definition Index: 58524
+// Method Definition Index: 58528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VersionConverter__ctor_m847EFC9A24C80B75A2A30334525A3859C6A5B3C8 (VersionConverter_tD05642E722EDAABE162CA1FFF42A4293B0813FB5* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22268,7 +22268,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VersionConverter__ctor_m847EFC9A24C80B75
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58525
+// Method Definition Index: 58529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IsoDateTimeConverter_get_DateTimeStyles_mD96DAAF0F817F6DCD83FE936CE917882ED41F357 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22277,7 +22277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IsoDateTimeConverter_get_DateTimeStyl
 		return L_0;
 	}
 }
-// Method Definition Index: 58526
+// Method Definition Index: 58530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter_set_DateTimeStyles_m097C810F76901D4DAD661A83416AA4D0DFAC2719 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22287,7 +22287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter_set_DateTimeStyles_
 		return;
 	}
 }
-// Method Definition Index: 58527
+// Method Definition Index: 58531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IsoDateTimeConverter_get_DateTimeFormat_m3A80EB65E9478F864DD45E7905CCA8140A5401B7 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22313,7 +22313,7 @@ IL_000f:
 		return G_B2_0;
 	}
 }
-// Method Definition Index: 58528
+// Method Definition Index: 58532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter_set_DateTimeFormat_mE422F40170E5CDE98FE7AE5DB543122D9D7AA4D1 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22326,7 +22326,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter_set_DateTimeFormat_
 		return;
 	}
 }
-// Method Definition Index: 58529
+// Method Definition Index: 58533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* IsoDateTimeConverter_get_Culture_m6CF18B78DD2A289E49E7A8DB3968460CAA38B55D (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticInit);
@@ -22355,7 +22355,7 @@ IL_000f:
 		return G_B2_0;
 	}
 }
-// Method Definition Index: 58530
+// Method Definition Index: 58534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter_set_Culture_m2DB4987A88D54772BDDD246695F7C1C007C98393 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22366,7 +22366,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter_set_Culture_m2DB498
 		return;
 	}
 }
-// Method Definition Index: 58531
+// Method Definition Index: 58535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter_WriteJson_m60AFBDD6FB1FC4870E4B0FDA30B6067666507B18 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22543,7 +22543,7 @@ IL_00bb:
 		return;
 	}
 }
-// Method Definition Index: 58532
+// Method Definition Index: 58536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* IsoDateTimeConverter_ReadJson_m0662899DDF147D4EBAB5BFFA4095E36D37B58EE3 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22859,7 +22859,7 @@ IL_016b:
 		return L_86;
 	}
 }
-// Method Definition Index: 58533
+// Method Definition Index: 58537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter__ctor_m826994A815114F0A06F4788BEAF6A1EE2AFD0432 (IsoDateTimeConverter_t13F31560EB7046EDCEAA38C47A8EC8A09256850C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -22877,7 +22877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IsoDateTimeConverter__ctor_m826994A81511
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58534
+// Method Definition Index: 58538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JavaScriptDateTimeConverter_WriteJson_mF0E3B26942C1C76C5E1C2D5A0C0543F9742973BE (JavaScriptDateTimeConverter_tDA55121603C5E9667DB745FBA5F49AA8005F789C* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22966,7 +22966,7 @@ IL_004f:
 		return;
 	}
 }
-// Method Definition Index: 58535
+// Method Definition Index: 58539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JavaScriptDateTimeConverter_ReadJson_m36EA36CCD31603F16FB4C3E19A8E088872214348 (JavaScriptDateTimeConverter_tDA55121603C5E9667DB745FBA5F49AA8005F789C* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23203,7 +23203,7 @@ IL_0110:
 		return L_65;
 	}
 }
-// Method Definition Index: 58536
+// Method Definition Index: 58540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JavaScriptDateTimeConverter__ctor_m54DE0ABCE8E276690146CF30D4CE207AD6C0C5F1 (JavaScriptDateTimeConverter_tDA55121603C5E9667DB745FBA5F49AA8005F789C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23220,7 +23220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JavaScriptDateTimeConverter__ctor_m54DE0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58537
+// Method Definition Index: 58541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDocumentWrapper__ctor_m2DDFA872888661813F74523693DB4A34FE765DFE (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, XmlDocument_t4DE82998E642C5C21A4A620A5278237C70D3E42B* ___0_document, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23233,7 +23233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDocumentWrapper__ctor_m2DDFA872888661
 		return;
 	}
 }
-// Method Definition Index: 58538
+// Method Definition Index: 58542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateComment_mC922EE1533661AC0B35C262B206E321E22E440EE (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23254,7 +23254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateComme
 		return L_3;
 	}
 }
-// Method Definition Index: 58539
+// Method Definition Index: 58543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateTextNode_mC5999FC1111FF593533A0A3C24981EB68E11CDB8 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23275,7 +23275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateTextN
 		return L_3;
 	}
 }
-// Method Definition Index: 58540
+// Method Definition Index: 58544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateCDataSection_m09B05E9D61F98937C0CDABB9C2EB8D09E56BD033 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23296,7 +23296,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateCData
 		return L_3;
 	}
 }
-// Method Definition Index: 58541
+// Method Definition Index: 58545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateWhitespace_m680AFD5D1D1E347930980839A099D5DAA4386253 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23317,7 +23317,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateWhite
 		return L_3;
 	}
 }
-// Method Definition Index: 58542
+// Method Definition Index: 58546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateSignificantWhitespace_mAF94AFB2BB046CC35F48AF3CA5C93ABA2558D908 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23338,7 +23338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateSigni
 		return L_3;
 	}
 }
-// Method Definition Index: 58543
+// Method Definition Index: 58547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateXmlDeclaration_m5B96DF051DD3F731A388796F6D92B269D69EFE75 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_version, String_t* ___1_encoding, String_t* ___2_standalone, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23361,7 +23361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateXmlDe
 		return L_5;
 	}
 }
-// Method Definition Index: 58544
+// Method Definition Index: 58548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateXmlDocumentType_mD0588943D845FEA8D58958FD8694796DD94CA07C (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_name, String_t* ___1_publicId, String_t* ___2_systemId, String_t* ___3_internalSubset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23384,7 +23384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateXmlDo
 		return L_5;
 	}
 }
-// Method Definition Index: 58545
+// Method Definition Index: 58549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateProcessingInstruction_mABF52EF273331B86C3CEDD3B50362E540CFB27D9 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_target, String_t* ___1_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23406,7 +23406,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateProce
 		return L_4;
 	}
 }
-// Method Definition Index: 58546
+// Method Definition Index: 58550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateElement_m45C3BF72AA259B9947F65860F97065B1C283335D (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23427,7 +23427,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateEleme
 		return L_3;
 	}
 }
-// Method Definition Index: 58547
+// Method Definition Index: 58551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateElement_m98D9C428823DBD96E19D1DC3B5BCCB304A28D941 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_qualifiedName, String_t* ___1_namespaceUri, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23449,7 +23449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateEleme
 		return L_4;
 	}
 }
-// Method Definition Index: 58548
+// Method Definition Index: 58552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateAttribute_m79CF11B365F9F1FD574ECA810BF1F13FDDD82464 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_name, String_t* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23474,7 +23474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateAttri
 		return L_4;
 	}
 }
-// Method Definition Index: 58549
+// Method Definition Index: 58553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateAttribute_mC12DF3D00C4027F881A72FE1961BFBCE47224D49 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, String_t* ___0_qualifiedName, String_t* ___1_namespaceUri, String_t* ___2_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23500,7 +23500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_CreateAttri
 		return L_5;
 	}
 }
-// Method Definition Index: 58550
+// Method Definition Index: 58554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlDocumentWrapper_get_DocumentElement_m55855C0394DD8B83FDD19B0E71EED3B4994E7119 (XmlDocumentWrapper_t2C596BBEC57603F9B8DA72446CAABDC3DE251624* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23543,7 +23543,7 @@ IL_000f:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58551
+// Method Definition Index: 58555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlElementWrapper__ctor_m5EA54DDEBFA94B7DF7907BF8BCAD9A01C0AAE237 (XmlElementWrapper_tFFCFF4F15C008DF0469426DFE31B6A304DDEEC20* __this, XmlElement_t9A08B533E9A6B3548A1DE35476186F7ECCDF6FF1* ___0_element, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23556,7 +23556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlElementWrapper__ctor_m5EA54DDEBFA94B7
 		return;
 	}
 }
-// Method Definition Index: 58552
+// Method Definition Index: 58556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlElementWrapper_SetAttributeNode_m8093E93AE8461E128D28CCAFF4A7355993C2DE67 (XmlElementWrapper_tFFCFF4F15C008DF0469426DFE31B6A304DDEEC20* __this, RuntimeObject* ___0_attribute, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23582,7 +23582,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlElementWrapper_SetAttributeNode_m8093
 		return;
 	}
 }
-// Method Definition Index: 58553
+// Method Definition Index: 58557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlElementWrapper_GetPrefixOfNamespace_m6C70E6D6B59A1E6534EFA7574D2050DCD258C3E7 (XmlElementWrapper_tFFCFF4F15C008DF0469426DFE31B6A304DDEEC20* __this, String_t* ___0_namespaceUri, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23595,7 +23595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlElementWrapper_GetPrefixOfNamesp
 		return L_2;
 	}
 }
-// Method Definition Index: 58554
+// Method Definition Index: 58558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlElementWrapper_get_IsEmpty_m6C29E47E666F9A547CB3E8367FB741D1DC08C6AA (XmlElementWrapper_tFFCFF4F15C008DF0469426DFE31B6A304DDEEC20* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23615,7 +23615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlElementWrapper_get_IsEmpty_m6C29E47E6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58555
+// Method Definition Index: 58559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDeclarationWrapper__ctor_m4EAEA1BBD6AA3E66D3DBF18613BDCC12294F9529 (XmlDeclarationWrapper_t9167E036A5BE1475233675EC025E96DCA3CC1945* __this, XmlDeclaration_tA04662FA58C306A24C864BDE73D1B410858E7A79* ___0_declaration, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23628,7 +23628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDeclarationWrapper__ctor_m4EAEA1BBD6A
 		return;
 	}
 }
-// Method Definition Index: 58556
+// Method Definition Index: 58560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDeclarationWrapper_get_Version_m5AC22814EC256D574E5D37DA6601925D92B9E7CA (XmlDeclarationWrapper_t9167E036A5BE1475233675EC025E96DCA3CC1945* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23640,7 +23640,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDeclarationWrapper_get_Version_m
 		return L_1;
 	}
 }
-// Method Definition Index: 58557
+// Method Definition Index: 58561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDeclarationWrapper_get_Encoding_m479E2628A4A6375AAB4C7D302D4481DB88320E23 (XmlDeclarationWrapper_t9167E036A5BE1475233675EC025E96DCA3CC1945* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23652,7 +23652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDeclarationWrapper_get_Encoding_
 		return L_1;
 	}
 }
-// Method Definition Index: 58558
+// Method Definition Index: 58562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDeclarationWrapper_set_Encoding_mB136AB1651584B374A3B213587B380855508D58B (XmlDeclarationWrapper_t9167E036A5BE1475233675EC025E96DCA3CC1945* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23664,7 +23664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDeclarationWrapper_set_Encoding_mB136
 		return;
 	}
 }
-// Method Definition Index: 58559
+// Method Definition Index: 58563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDeclarationWrapper_get_Standalone_mA75E58DC0B6B4D48194D79195D1ECBA5CF2A0E5F (XmlDeclarationWrapper_t9167E036A5BE1475233675EC025E96DCA3CC1945* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23676,7 +23676,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDeclarationWrapper_get_Standalon
 		return L_1;
 	}
 }
-// Method Definition Index: 58560
+// Method Definition Index: 58564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDeclarationWrapper_set_Standalone_mD36763D668EBD12A31E2EE3C5883B88162F92FE7 (XmlDeclarationWrapper_t9167E036A5BE1475233675EC025E96DCA3CC1945* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23696,7 +23696,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDeclarationWrapper_set_Standalone_mD3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58561
+// Method Definition Index: 58565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDocumentTypeWrapper__ctor_m127F27D80D29C326F622FFD70CA1B3549F90C78D (XmlDocumentTypeWrapper_t8E470E157344CAE69E9551F6D0826C0E4038C4ED* __this, XmlDocumentType_tFD7379E45412FC2EBD65280ED3DE7A1C941A8D9E* ___0_documentType, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23709,7 +23709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDocumentTypeWrapper__ctor_m127F27D80D
 		return;
 	}
 }
-// Method Definition Index: 58562
+// Method Definition Index: 58566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_Name_m2FA9037C5566D8AB029C0D69129E3B60CF9DC510 (XmlDocumentTypeWrapper_t8E470E157344CAE69E9551F6D0826C0E4038C4ED* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23721,7 +23721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_Name_m2F
 		return L_1;
 	}
 }
-// Method Definition Index: 58563
+// Method Definition Index: 58567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_System_m9C848AAFC549088092657DB36BD8E04ACF0121FC (XmlDocumentTypeWrapper_t8E470E157344CAE69E9551F6D0826C0E4038C4ED* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23733,7 +23733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_System_m
 		return L_1;
 	}
 }
-// Method Definition Index: 58564
+// Method Definition Index: 58568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_Public_mE68A735EF0E56B8C242CEF4385CEA024A6C72C05 (XmlDocumentTypeWrapper_t8E470E157344CAE69E9551F6D0826C0E4038C4ED* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23745,7 +23745,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_Public_m
 		return L_1;
 	}
 }
-// Method Definition Index: 58565
+// Method Definition Index: 58569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_InternalSubset_m5D296CBCCDB4C974240A075E3B4755D18FFFA022 (XmlDocumentTypeWrapper_t8E470E157344CAE69E9551F6D0826C0E4038C4ED* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23757,7 +23757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_Internal
 		return L_1;
 	}
 }
-// Method Definition Index: 58566
+// Method Definition Index: 58570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_LocalName_m20D20EEA8F216955359FD85C71CDBEF9210B65B0 (XmlDocumentTypeWrapper_t8E470E157344CAE69E9551F6D0826C0E4038C4ED* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23779,7 +23779,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlDocumentTypeWrapper_get_LocalNam
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58567
+// Method Definition Index: 58571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeWrapper__ctor_m73806A21D3A81678F6099B62E80F7B6549D56D17 (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* ___0_node, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23791,7 +23791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeWrapper__ctor_m73806A21D3A81678F6
 		return;
 	}
 }
-// Method Definition Index: 58568
+// Method Definition Index: 58572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_get_WrappedNode_m95E187562E167E13524197070157B15EE0ABFDFF (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23800,7 +23800,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_get_WrappedNode
 		return L_0;
 	}
 }
-// Method Definition Index: 58569
+// Method Definition Index: 58573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XmlNodeWrapper_get_NodeType_m704A1F53F159B290363B45893B421742FDF82D86 (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23812,7 +23812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XmlNodeWrapper_get_NodeType_m704A1F53
 		return L_1;
 	}
 }
-// Method Definition Index: 58570
+// Method Definition Index: 58574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeWrapper_get_LocalName_m3F78DEA57A56000D98457B5A983CA62574E42D37 (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -23824,7 +23824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeWrapper_get_LocalName_m3F78D
 		return L_1;
 	}
 }
-// Method Definition Index: 58571
+// Method Definition Index: 58575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* XmlNodeWrapper_get_ChildNodes_mB44F94F340476C1993AABDBCD77F535ACF68BD4E (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23949,7 +23949,7 @@ IL_006e:
 		return L_18;
 	}
 }
-// Method Definition Index: 58572
+// Method Definition Index: 58576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_WrapNode_m45C8C60B81EA49FF73F8BB1F18EE8E4E8DE52DB4 (XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* ___0_node, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24028,7 +24028,7 @@ IL_003b:
 		return L_12;
 	}
 }
-// Method Definition Index: 58573
+// Method Definition Index: 58577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* XmlNodeWrapper_get_Attributes_m6A73C3FCD3E8E04EB983E48270831A03D0120B01 (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24168,7 +24168,7 @@ IL_007d:
 		return L_20;
 	}
 }
-// Method Definition Index: 58574
+// Method Definition Index: 58578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_get_ParentNode_mCE0D181D5080D05A5010AD8FA391AE50547FC260 (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24226,7 +24226,7 @@ IL_0030:
 		return L_7;
 	}
 }
-// Method Definition Index: 58575
+// Method Definition Index: 58579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeWrapper_get_Value_m12711466B29D2B6C01C3041813F4FD4988C973D0 (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24238,7 +24238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeWrapper_get_Value_m12711466B
 		return L_1;
 	}
 }
-// Method Definition Index: 58576
+// Method Definition Index: 58580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeWrapper_set_Value_m978C9C12AC1A81119D1DA28B143406231E41F41E (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24250,7 +24250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeWrapper_set_Value_m978C9C12AC1A81
 		return;
 	}
 }
-// Method Definition Index: 58577
+// Method Definition Index: 58581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_AppendChild_mF2D050E07BD4E4A0A4265872163D9C7232B3678B (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, RuntimeObject* ___0_newChild, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24279,7 +24279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_AppendChild_mF2
 		return L_5;
 	}
 }
-// Method Definition Index: 58578
+// Method Definition Index: 58582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeWrapper_get_NamespaceUri_m5F7FD8E9F0B9546B357626FC34D2C7A2D344C568 (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24299,7 +24299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeWrapper_get_NamespaceUri_m5F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58614
+// Method Definition Index: 58618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* XDeclarationWrapper_get_Declaration_mD7686F2EC3F760FD0AECC4FC6DD5E21F9F888437 (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24308,7 +24308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858
 		return L_0;
 	}
 }
-// Method Definition Index: 58615
+// Method Definition Index: 58619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Declaration_mB8CF488A14A6A4CE715CF6D65E9D4642746CF378 (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24319,7 +24319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Declaration_mB8C
 		return;
 	}
 }
-// Method Definition Index: 58616
+// Method Definition Index: 58620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper__ctor_mC9E3C1C1550DD2576A03D5CCD4029BD8C64A18DF (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* ___0_declaration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24338,7 +24338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper__ctor_mC9E3C1C1550DD
 		return;
 	}
 }
-// Method Definition Index: 58617
+// Method Definition Index: 58621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XDeclarationWrapper_get_NodeType_m62F1C5F17B127A6F8E3D1427259D7D2D0714F5B7 (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24346,7 +24346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XDeclarationWrapper_get_NodeType_m62F
 		return (int32_t)(((int32_t)17));
 	}
 }
-// Method Definition Index: 58618
+// Method Definition Index: 58622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDeclarationWrapper_get_Version_mE4E712D0E0E96742BD5333811C8D0FDA5836BF5D (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24359,7 +24359,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDeclarationWrapper_get_Version_mE4
 		return L_1;
 	}
 }
-// Method Definition Index: 58619
+// Method Definition Index: 58623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDeclarationWrapper_get_Encoding_mE6CADFD39D778C76B41813C61B0A1E1BE513132A (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24372,7 +24372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDeclarationWrapper_get_Encoding_mE
 		return L_1;
 	}
 }
-// Method Definition Index: 58620
+// Method Definition Index: 58624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Encoding_m62D74113A9D673C241C87496E62D0B2A2A5977D0 (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24385,7 +24385,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Encoding_m62D741
 		return;
 	}
 }
-// Method Definition Index: 58621
+// Method Definition Index: 58625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDeclarationWrapper_get_Standalone_mACE8B149D751736B59E0B61A943E1A84E9AF70CD (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24398,7 +24398,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDeclarationWrapper_get_Standalone_
 		return L_1;
 	}
 }
-// Method Definition Index: 58622
+// Method Definition Index: 58626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Standalone_m9A03E1D700C0E082D5A46E702F4F2EFE65991FE5 (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24419,7 +24419,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Standalone_m9A03
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58623
+// Method Definition Index: 58627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDocumentTypeWrapper__ctor_m448FB77B151C12873112FF5CC9B314E9DB8F6117 (XDocumentTypeWrapper_tE70B54A200381660327029F12CDB902FF2EF26DA* __this, XDocumentType_t195D491B418C3696FBCAEE34E53D734E0B53A817* ___0_documentType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24440,7 +24440,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDocumentTypeWrapper__ctor_m448FB77B151C
 		return;
 	}
 }
-// Method Definition Index: 58624
+// Method Definition Index: 58628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_Name_mA074AA947F84C787AA869A40F7B0C7F64A502B93 (XDocumentTypeWrapper_tE70B54A200381660327029F12CDB902FF2EF26DA* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24452,7 +24452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_Name_mA074
 		return L_1;
 	}
 }
-// Method Definition Index: 58625
+// Method Definition Index: 58629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_System_mC5CAC6D108869FFA6E547C06ED171CA1E235A51B (XDocumentTypeWrapper_tE70B54A200381660327029F12CDB902FF2EF26DA* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24464,7 +24464,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_System_mC5
 		return L_1;
 	}
 }
-// Method Definition Index: 58626
+// Method Definition Index: 58630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_Public_mD55A43097688C1497C9ACCE3DA915944322A8C6D (XDocumentTypeWrapper_tE70B54A200381660327029F12CDB902FF2EF26DA* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24476,7 +24476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_Public_mD5
 		return L_1;
 	}
 }
-// Method Definition Index: 58627
+// Method Definition Index: 58631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_InternalSubset_mEDBD4FCEAD914AEC869A485459F8908BEAE7E07C (XDocumentTypeWrapper_tE70B54A200381660327029F12CDB902FF2EF26DA* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24488,7 +24488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_InternalSu
 		return L_1;
 	}
 }
-// Method Definition Index: 58628
+// Method Definition Index: 58632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_LocalName_mD17BA8F109A4B4123FFBC5317380A93E730A4EE0 (XDocumentTypeWrapper_tE70B54A200381660327029F12CDB902FF2EF26DA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24510,7 +24510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XDocumentTypeWrapper_get_LocalName_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58629
+// Method Definition Index: 58633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XDocument_tFD643046CAF39623C3D8AA1693390D5EE08E82F1* XDocumentWrapper_get_Document_m368F6051580AEF8FBF78877386D469E1CAD779B6 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24526,7 +24526,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XDocument_tFD643046CAF39623C3D8AA1693390D5EE0
 		return ((XDocument_tFD643046CAF39623C3D8AA1693390D5EE08E82F1*)CastclassClass((RuntimeObject*)L_0, XDocument_tFD643046CAF39623C3D8AA1693390D5EE08E82F1_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 58630
+// Method Definition Index: 58634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDocumentWrapper__ctor_mE05A6619DC930C9ABB32122C06DC694533611BDB (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, XDocument_tFD643046CAF39623C3D8AA1693390D5EE08E82F1* ___0_document, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24536,7 +24536,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XDocumentWrapper__ctor_mE05A6619DC930C9A
 		return;
 	}
 }
-// Method Definition Index: 58631
+// Method Definition Index: 58635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* XDocumentWrapper_get_ChildNodes_m90EBA8E6ED65464C93E749266085473592223F23 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24595,7 +24595,7 @@ IL_003b:
 		return L_10;
 	}
 }
-// Method Definition Index: 58632
+// Method Definition Index: 58636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateComment_m581B5E8B4BC22B4681EB5951BC1F8220C0832373 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24615,7 +24615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateComment
 		return L_2;
 	}
 }
-// Method Definition Index: 58633
+// Method Definition Index: 58637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateTextNode_m2946508BCAEC542051832C77CCDED138EE841889 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24635,7 +24635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateTextNod
 		return L_2;
 	}
 }
-// Method Definition Index: 58634
+// Method Definition Index: 58638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateCDataSection_m8506E7328F857D71EE8C68DB9621B994F9C6A77F (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24655,7 +24655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateCDataSe
 		return L_2;
 	}
 }
-// Method Definition Index: 58635
+// Method Definition Index: 58639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateWhitespace_m3737ECC4F95F648AC7417D2C73EA0FA239640DDC (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24675,7 +24675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateWhitesp
 		return L_2;
 	}
 }
-// Method Definition Index: 58636
+// Method Definition Index: 58640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateSignificantWhitespace_m409A710011DF878E02B3D163B64232C0ADE07C28 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24695,7 +24695,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateSignifi
 		return L_2;
 	}
 }
-// Method Definition Index: 58637
+// Method Definition Index: 58641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateXmlDeclaration_m8CC17AA93A14B7FB730FDDA9FE0AC7694088A8CF (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_version, String_t* ___1_encoding, String_t* ___2_standalone, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24717,7 +24717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateXmlDecl
 		return L_4;
 	}
 }
-// Method Definition Index: 58638
+// Method Definition Index: 58642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateXmlDocumentType_m1ED0DA0569F9256577F23A9A65236E784BC031DF (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_name, String_t* ___1_publicId, String_t* ___2_systemId, String_t* ___3_internalSubset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24740,7 +24740,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateXmlDocu
 		return L_5;
 	}
 }
-// Method Definition Index: 58639
+// Method Definition Index: 58643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateProcessingInstruction_mBD1AEBE0846FDA921B485F5A457F10110ACF2510 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_target, String_t* ___1_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24761,7 +24761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateProcess
 		return L_3;
 	}
 }
-// Method Definition Index: 58640
+// Method Definition Index: 58644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateElement_m906BF5976F58F7AB707BF445B01F4936B578082F (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24783,7 +24783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateElement
 		return L_3;
 	}
 }
-// Method Definition Index: 58641
+// Method Definition Index: 58645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateElement_mFC40283D600E1C5B804460EFB4E442DCDF9FDFCF (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_qualifiedName, String_t* ___1_namespaceUri, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24808,7 +24808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateElement
 		return L_5;
 	}
 }
-// Method Definition Index: 58642
+// Method Definition Index: 58646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateAttribute_m8224C607521D472529726F0C7D9418BBE42EDAE6 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_name, String_t* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24831,7 +24831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateAttribu
 		return L_4;
 	}
 }
-// Method Definition Index: 58643
+// Method Definition Index: 58647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateAttribute_m90A8CC160233F03025ED08AAADFB3B2CE4F127BF (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, String_t* ___0_qualifiedName, String_t* ___1_namespaceUri, String_t* ___2_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24857,7 +24857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_CreateAttribu
 		return L_6;
 	}
 }
-// Method Definition Index: 58644
+// Method Definition Index: 58648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_get_DocumentElement_m5F9F99F972213A26BB538D7B3BBFDB126988BBE7 (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24894,7 +24894,7 @@ IL_000f:
 		return L_4;
 	}
 }
-// Method Definition Index: 58645
+// Method Definition Index: 58649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XDocumentWrapper_AppendChild_m266B3D4945ADE6EF06CC3CAE337432F997E2D21D (XDocumentWrapper_t3C3117E449826BEB20F7BFB77214046EE4D86AD6* __this, RuntimeObject* ___0_newChild, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24943,7 +24943,7 @@ IL_001d:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58646
+// Method Definition Index: 58650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XText_t006159E7F735736D41BBC0738FFB066A14B31AE2* XTextWrapper_get_Text_m15F65133CFB2B8E2F1AFBFE1EE9829669C3EF587 (XTextWrapper_t54304AAC4CEF7C32A60F7D6519B28810027EC797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24959,7 +24959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XText_t006159E7F735736D41BBC0738FFB066A14B31A
 		return ((XText_t006159E7F735736D41BBC0738FFB066A14B31AE2*)CastclassClass((RuntimeObject*)L_0, XText_t006159E7F735736D41BBC0738FFB066A14B31AE2_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 58647
+// Method Definition Index: 58651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XTextWrapper__ctor_m98B8EFBEC0CA0A43C328B86120E043D5A4FE8222 (XTextWrapper_t54304AAC4CEF7C32A60F7D6519B28810027EC797* __this, XText_t006159E7F735736D41BBC0738FFB066A14B31AE2* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24977,7 +24977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XTextWrapper__ctor_m98B8EFBEC0CA0A43C328
 		return;
 	}
 }
-// Method Definition Index: 58648
+// Method Definition Index: 58652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XTextWrapper_get_Value_mDDB4561D37D181C792CF57122502CDC591B8CB4D (XTextWrapper_t54304AAC4CEF7C32A60F7D6519B28810027EC797* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -24990,7 +24990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XTextWrapper_get_Value_mDDB4561D37D
 		return L_1;
 	}
 }
-// Method Definition Index: 58649
+// Method Definition Index: 58653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XTextWrapper_set_Value_m2D1DD5E4F89583AF480ECBC44AFA4C71208E1F7F (XTextWrapper_t54304AAC4CEF7C32A60F7D6519B28810027EC797* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25003,7 +25003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XTextWrapper_set_Value_m2D1DD5E4F89583AF
 		return;
 	}
 }
-// Method Definition Index: 58650
+// Method Definition Index: 58654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XTextWrapper_get_ParentNode_m5A470009D3268A28C9A5A9B8ED440C7FAE3D0A42 (XTextWrapper_t54304AAC4CEF7C32A60F7D6519B28810027EC797* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25042,7 +25042,7 @@ IL_000f:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58651
+// Method Definition Index: 58655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XComment_t2FD9205AC70AF739D97E5CE8B1CC29459191F43D* XCommentWrapper_get_Text_mF0823EAF847E1268D50A6E4D0345828B2E2C7B22 (XCommentWrapper_t1BFE83CA1648036FAD8B8C6E79806055D34F2782* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25058,7 +25058,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XComment_t2FD9205AC70AF739D97E5CE8B1CC2945919
 		return ((XComment_t2FD9205AC70AF739D97E5CE8B1CC29459191F43D*)CastclassClass((RuntimeObject*)L_0, XComment_t2FD9205AC70AF739D97E5CE8B1CC29459191F43D_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 58652
+// Method Definition Index: 58656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XCommentWrapper__ctor_m8DA2766F6E2CDC00FA2CF73EAAF21B30AFCD80B1 (XCommentWrapper_t1BFE83CA1648036FAD8B8C6E79806055D34F2782* __this, XComment_t2FD9205AC70AF739D97E5CE8B1CC29459191F43D* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25076,7 +25076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XCommentWrapper__ctor_m8DA2766F6E2CDC00F
 		return;
 	}
 }
-// Method Definition Index: 58653
+// Method Definition Index: 58657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XCommentWrapper_get_Value_m4530DD772239251DC7E9D31647FF1370C502C53B (XCommentWrapper_t1BFE83CA1648036FAD8B8C6E79806055D34F2782* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25089,7 +25089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XCommentWrapper_get_Value_m4530DD77
 		return L_1;
 	}
 }
-// Method Definition Index: 58654
+// Method Definition Index: 58658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XCommentWrapper_set_Value_m620490E761650E43321615944C58EAD492199B97 (XCommentWrapper_t1BFE83CA1648036FAD8B8C6E79806055D34F2782* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25102,7 +25102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XCommentWrapper_set_Value_m620490E761650
 		return;
 	}
 }
-// Method Definition Index: 58655
+// Method Definition Index: 58659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XCommentWrapper_get_ParentNode_m2AE469466627F7255559F9B07E7C9A1F65CCCF76 (XCommentWrapper_t1BFE83CA1648036FAD8B8C6E79806055D34F2782* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25141,7 +25141,7 @@ IL_000f:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58656
+// Method Definition Index: 58660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XProcessingInstruction_t920C9022DAD590F61972E400D46FC1C443265795* XProcessingInstructionWrapper_get_ProcessingInstruction_m465CA1E4A90DC9B2D5952C18B36D31BBC4FE9F83 (XProcessingInstructionWrapper_t73B2F6F52C84FBAB7AC112F1262C085959ED6D80* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25157,7 +25157,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XProcessingInstruction_t920C9022DAD590F61972E
 		return ((XProcessingInstruction_t920C9022DAD590F61972E400D46FC1C443265795*)CastclassClass((RuntimeObject*)L_0, XProcessingInstruction_t920C9022DAD590F61972E400D46FC1C443265795_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 58657
+// Method Definition Index: 58661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XProcessingInstructionWrapper__ctor_mF6EF6425C7E1A9D9F46CB988F8C9E542ED2153CE (XProcessingInstructionWrapper_t73B2F6F52C84FBAB7AC112F1262C085959ED6D80* __this, XProcessingInstruction_t920C9022DAD590F61972E400D46FC1C443265795* ___0_processingInstruction, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25175,7 +25175,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XProcessingInstructionWrapper__ctor_mF6E
 		return;
 	}
 }
-// Method Definition Index: 58658
+// Method Definition Index: 58662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XProcessingInstructionWrapper_get_LocalName_mA87D8E9F6975B75FC134449FCB3B8CC02602ACA3 (XProcessingInstructionWrapper_t73B2F6F52C84FBAB7AC112F1262C085959ED6D80* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25188,7 +25188,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XProcessingInstructionWrapper_get_L
 		return L_1;
 	}
 }
-// Method Definition Index: 58659
+// Method Definition Index: 58663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XProcessingInstructionWrapper_get_Value_m7C81865922E146B3EE1E2FB6AE81C2A720327C45 (XProcessingInstructionWrapper_t73B2F6F52C84FBAB7AC112F1262C085959ED6D80* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25201,7 +25201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XProcessingInstructionWrapper_get_V
 		return L_1;
 	}
 }
-// Method Definition Index: 58660
+// Method Definition Index: 58664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XProcessingInstructionWrapper_set_Value_mAD8E0AAB22DDC39F36E053EB61BDE8D9480EE353 (XProcessingInstructionWrapper_t73B2F6F52C84FBAB7AC112F1262C085959ED6D80* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25222,7 +25222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XProcessingInstructionWrapper_set_Value_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58661
+// Method Definition Index: 58665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XContainer_tF94A2D69B11B71834E4E5531DD59E627CBFE2BBF* XContainerWrapper_get_Container_mE8D578EC87F352A68CADF4E01DFAD5C242BFEDE6 (XContainerWrapper_t7B103CDF831C64B07E4BABE6307FB7D605328AF9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25238,7 +25238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XContainer_tF94A2D69B11B71834E4E5531DD59E627C
 		return ((XContainer_tF94A2D69B11B71834E4E5531DD59E627CBFE2BBF*)CastclassClass((RuntimeObject*)L_0, XContainer_tF94A2D69B11B71834E4E5531DD59E627CBFE2BBF_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 58662
+// Method Definition Index: 58666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XContainerWrapper__ctor_mDA5B56465A0FE70773B861EC590E47653923DFC4 (XContainerWrapper_t7B103CDF831C64B07E4BABE6307FB7D605328AF9* __this, XContainer_tF94A2D69B11B71834E4E5531DD59E627CBFE2BBF* ___0_container, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25256,7 +25256,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XContainerWrapper__ctor_mDA5B56465A0FE70
 		return;
 	}
 }
-// Method Definition Index: 58663
+// Method Definition Index: 58667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* XContainerWrapper_get_ChildNodes_mC85E0A4FF1522B40B19AEE06B034DE7C52EF1CA4 (XContainerWrapper_t7B103CDF831C64B07E4BABE6307FB7D605328AF9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25373,7 +25373,7 @@ IL_0052:
 		return L_14;
 	}
 }
-// Method Definition Index: 58664
+// Method Definition Index: 58668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XContainerWrapper_get_ParentNode_m945C070A2B46FAE7DF88629434EEA8672CF735B0 (XContainerWrapper_t7B103CDF831C64B07E4BABE6307FB7D605328AF9* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25404,7 +25404,7 @@ IL_000f:
 		return L_4;
 	}
 }
-// Method Definition Index: 58665
+// Method Definition Index: 58669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XContainerWrapper_WrapNode_m45080E6A0D0A531566B9B6B20B75328E5AD91CBA (XObject_t1E867FBE626AA0DC878BDDFC1ABCF19F1A4B5C29* ___0_node, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25557,7 +25557,7 @@ IL_00a0:
 		return L_25;
 	}
 }
-// Method Definition Index: 58666
+// Method Definition Index: 58670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XContainerWrapper_AppendChild_mD0C76048C57DBC7BE2A08BC215761BEF2552BC42 (XContainerWrapper_t7B103CDF831C64B07E4BABE6307FB7D605328AF9* __this, RuntimeObject* ___0_newChild, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25590,7 +25590,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XContainerWrapper_AppendChild_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58667
+// Method Definition Index: 58671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XObjectWrapper__ctor_m24EB638F7E591225CA536A66FEE9B6EE6D7E8330 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, XObject_t1E867FBE626AA0DC878BDDFC1ABCF19F1A4B5C29* ___0_xmlObject, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25602,7 +25602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XObjectWrapper__ctor_m24EB638F7E591225CA
 		return;
 	}
 }
-// Method Definition Index: 58668
+// Method Definition Index: 58672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_get_WrappedNode_m3CA9623838D4D4A96DCF882FC3C592D3D64D7573 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25611,7 +25611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_get_WrappedNode
 		return L_0;
 	}
 }
-// Method Definition Index: 58669
+// Method Definition Index: 58673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XObjectWrapper_get_NodeType_m0EC8D2F38FAC096C9A1C91B78A107C89FE08B867 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25623,7 +25623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XObjectWrapper_get_NodeType_m0EC8D2F3
 		return L_1;
 	}
 }
-// Method Definition Index: 58670
+// Method Definition Index: 58674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XObjectWrapper_get_LocalName_mF7CD25C52F1D0EE14C5D9063035C27E1B237F421 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25631,7 +25631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XObjectWrapper_get_LocalName_mF7CD2
 		return (String_t*)NULL;
 	}
 }
-// Method Definition Index: 58671
+// Method Definition Index: 58675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* XObjectWrapper_get_ChildNodes_m43561E35BC5ECC8A22C56C1CB479B4CE638EB5B7 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25648,7 +25648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE4
 		return L_0;
 	}
 }
-// Method Definition Index: 58672
+// Method Definition Index: 58676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* XObjectWrapper_get_Attributes_m7C1E335535C8FB2A6685770BE0308503578EEFE5 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25656,7 +25656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE4
 		return (List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E*)NULL;
 	}
 }
-// Method Definition Index: 58673
+// Method Definition Index: 58677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_get_ParentNode_mFEE478450A586823D4E4F27B439C3B7CBD3167BE (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25664,7 +25664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_get_ParentNode_
 		return (RuntimeObject*)NULL;
 	}
 }
-// Method Definition Index: 58674
+// Method Definition Index: 58678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XObjectWrapper_get_Value_mE59398A1F64A5FB46732FF84DF7E263FB201CE38 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25672,7 +25672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XObjectWrapper_get_Value_mE59398A1F
 		return (String_t*)NULL;
 	}
 }
-// Method Definition Index: 58675
+// Method Definition Index: 58679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XObjectWrapper_set_Value_m722090806963BEA2AEE1CA30D109FAAA63A84876 (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25682,7 +25682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XObjectWrapper_set_Value_m722090806963BE
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&XObjectWrapper_set_Value_m722090806963BEA2AEE1CA30D109FAAA63A84876_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58676
+// Method Definition Index: 58680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_AppendChild_m93FD89B25381B97A651348E158D8E33E4F37821B (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, RuntimeObject* ___0_newChild, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25692,7 +25692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_AppendChild_m93
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&XObjectWrapper_AppendChild_m93FD89B25381B97A651348E158D8E33E4F37821B_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58677
+// Method Definition Index: 58681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XObjectWrapper_get_NamespaceUri_m5CD84D5CD1475CAC24C1535FBF1D65147E58987F (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25700,7 +25700,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XObjectWrapper_get_NamespaceUri_m5C
 		return (String_t*)NULL;
 	}
 }
-// Method Definition Index: 58678
+// Method Definition Index: 58682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XObjectWrapper__cctor_mB86D35437E19AAA15DB854855C78FA0DC3686A71 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25728,7 +25728,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XObjectWrapper__cctor_mB86D35437E19AAA15
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58679
+// Method Definition Index: 58683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XAttribute_tA7C325029CA82AA067080AEA6BDDC52E08987FDF* XAttributeWrapper_get_Attribute_m64F72E3BA361213F069AF1897D47A9586F6FA2E6 (XAttributeWrapper_t1FC7334561AD249FF39775D06CEF7BCECEBD9547* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25744,7 +25744,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XAttribute_tA7C325029CA82AA067080AEA6BDDC52E0
 		return ((XAttribute_tA7C325029CA82AA067080AEA6BDDC52E08987FDF*)CastclassClass((RuntimeObject*)L_0, XAttribute_tA7C325029CA82AA067080AEA6BDDC52E08987FDF_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 58680
+// Method Definition Index: 58684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XAttributeWrapper__ctor_mCD158BF6A02EA1460BD22E3C99816A3308E2DC39 (XAttributeWrapper_t1FC7334561AD249FF39775D06CEF7BCECEBD9547* __this, XAttribute_tA7C325029CA82AA067080AEA6BDDC52E08987FDF* ___0_attribute, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25762,7 +25762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XAttributeWrapper__ctor_mCD158BF6A02EA14
 		return;
 	}
 }
-// Method Definition Index: 58681
+// Method Definition Index: 58685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XAttributeWrapper_get_Value_m8B697AE38E2DDBC0E31E7860009689FF5DA89BC2 (XAttributeWrapper_t1FC7334561AD249FF39775D06CEF7BCECEBD9547* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25775,7 +25775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XAttributeWrapper_get_Value_m8B697A
 		return L_1;
 	}
 }
-// Method Definition Index: 58682
+// Method Definition Index: 58686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XAttributeWrapper_set_Value_mD597A9910BDDB6736C58E67F5D48D8E295FE242E (XAttributeWrapper_t1FC7334561AD249FF39775D06CEF7BCECEBD9547* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25788,7 +25788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XAttributeWrapper_set_Value_mD597A9910BD
 		return;
 	}
 }
-// Method Definition Index: 58683
+// Method Definition Index: 58687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XAttributeWrapper_get_LocalName_m972043B9A5DD764604E5A3929625E04C0451D596 (XAttributeWrapper_t1FC7334561AD249FF39775D06CEF7BCECEBD9547* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25804,7 +25804,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XAttributeWrapper_get_LocalName_m97
 		return L_2;
 	}
 }
-// Method Definition Index: 58684
+// Method Definition Index: 58688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XAttributeWrapper_get_NamespaceUri_m6923813F42B9F0ABB8F8B542EFE3BA4B797DABFF (XAttributeWrapper_t1FC7334561AD249FF39775D06CEF7BCECEBD9547* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25820,7 +25820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XAttributeWrapper_get_NamespaceUri_
 		return L_2;
 	}
 }
-// Method Definition Index: 58685
+// Method Definition Index: 58689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XAttributeWrapper_get_ParentNode_mA27F66095E98A673B04FBC961F3023F2D92467C8 (XAttributeWrapper_t1FC7334561AD249FF39775D06CEF7BCECEBD9547* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25859,7 +25859,7 @@ IL_000f:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58686
+// Method Definition Index: 58690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XElement_t545ABA4BFF2045168A2E472A68FE2FCAA5E1F909* XElementWrapper_get_Element_mCE45E811C472BF01E89449EAD91DB4C37B5B2074 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25875,7 +25875,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XElement_t545ABA4BFF2045168A2E472A68FE2FCAA5E
 		return ((XElement_t545ABA4BFF2045168A2E472A68FE2FCAA5E1F909*)CastclassClass((RuntimeObject*)L_0, XElement_t545ABA4BFF2045168A2E472A68FE2FCAA5E1F909_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 58687
+// Method Definition Index: 58691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XElementWrapper__ctor_mADC48A43A4BBD8C2FEBF88F4A45ED0CA69FAEC7F (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, XElement_t545ABA4BFF2045168A2E472A68FE2FCAA5E1F909* ___0_element, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -25885,7 +25885,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XElementWrapper__ctor_mADC48A43A4BBD8C2F
 		return;
 	}
 }
-// Method Definition Index: 58688
+// Method Definition Index: 58692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XElementWrapper_SetAttributeNode_m87ADF1FE3CAA994A2B35154DB1EA020E530FF195 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, RuntimeObject* ___0_attribute, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25912,7 +25912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XElementWrapper_SetAttributeNode_m87ADF1
 		return;
 	}
 }
-// Method Definition Index: 58689
+// Method Definition Index: 58693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* XElementWrapper_get_Attributes_mBCEC2D09F107433A944B9DC2DA694454C4B2FA49 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26220,7 +26220,7 @@ IL_011e:
 		return L_45;
 	}
 }
-// Method Definition Index: 58690
+// Method Definition Index: 58694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XElementWrapper_AppendChild_m7F2CE9197158F3EFF8555A062D195E207530AFAC (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, RuntimeObject* ___0_newChild, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26233,7 +26233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XElementWrapper_AppendChild_m7
 		return L_1;
 	}
 }
-// Method Definition Index: 58691
+// Method Definition Index: 58695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_get_Value_m8610D6D1BBD66BFD3DB13666D4FFF031F6C6F561 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26246,7 +26246,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_get_Value_m8610D6D1
 		return L_1;
 	}
 }
-// Method Definition Index: 58692
+// Method Definition Index: 58696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XElementWrapper_set_Value_m9E6B42A554CCFA2498C1D26C9DF352347E8EEDC1 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26259,7 +26259,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XElementWrapper_set_Value_m9E6B42A554CCF
 		return;
 	}
 }
-// Method Definition Index: 58693
+// Method Definition Index: 58697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_get_LocalName_mA47C683BF562D2B6AD547329F99FB15945037BDF (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26275,7 +26275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_get_LocalName_mA47C
 		return L_2;
 	}
 }
-// Method Definition Index: 58694
+// Method Definition Index: 58698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_get_NamespaceUri_m537A5A8F6039B89961825F2EFFBD0D57F8EB0B04 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26291,7 +26291,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_get_NamespaceUri_m5
 		return L_2;
 	}
 }
-// Method Definition Index: 58695
+// Method Definition Index: 58699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_GetPrefixOfNamespace_m6E8DA9B2D4BAF02CD2660213C9CA4405575F1D19 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, String_t* ___0_namespaceUri, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26307,7 +26307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XElementWrapper_GetPrefixOfNamespac
 		return L_3;
 	}
 }
-// Method Definition Index: 58696
+// Method Definition Index: 58700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XElementWrapper_get_IsEmpty_mF42A83AA38E3BA1A7F55EC274D4D7ECAB1DDB880 (XElementWrapper_t15082EFC96DF60AC9ACF10A1D60C1E04207FCA61* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26328,7 +26328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XElementWrapper_get_IsEmpty_mF42A83AA38E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 58697
+// Method Definition Index: 58701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeConverter_get_DeserializeRootElementName_m2A0B73747601E99F60881D50EF7D55F0EDBE85A4 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26337,7 +26337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeConverter_get_DeserializeRoo
 		return L_0;
 	}
 }
-// Method Definition Index: 58698
+// Method Definition Index: 58702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_set_DeserializeRootElementName_m3BF71E4654215F114EDE08F035A62A886E87821A (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26348,7 +26348,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_set_DeserializeRootElem
 		return;
 	}
 }
-// Method Definition Index: 58699
+// Method Definition Index: 58703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_get_WriteArrayAttribute_mB90AAB6C83E3DFD4E0F0FE8DBB9BF151248378F2 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26357,7 +26357,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_get_WriteArrayAttribute
 		return L_0;
 	}
 }
-// Method Definition Index: 58700
+// Method Definition Index: 58704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_set_WriteArrayAttribute_mDB9B899CAC005A16290D1AE4688D6114195A1F24 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26367,7 +26367,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_set_WriteArrayAttribute
 		return;
 	}
 }
-// Method Definition Index: 58701
+// Method Definition Index: 58705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_get_OmitRootObject_m39D54F5791FD93911139FB9E46BABBDE5D062184 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26376,7 +26376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_get_OmitRootObject_m39D
 		return L_0;
 	}
 }
-// Method Definition Index: 58702
+// Method Definition Index: 58706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_set_OmitRootObject_mA3B18200974DB101932BFFD9AE802656815C7729 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -26386,7 +26386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_set_OmitRootObject_mA3B
 		return;
 	}
 }
-// Method Definition Index: 58703
+// Method Definition Index: 58707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_WriteJson_mC9928FB4E2184CDC9F294BB9AD22AC5F5E8E0CF9 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_value, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___2_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26451,7 +26451,7 @@ IL_0049:
 		return;
 	}
 }
-// Method Definition Index: 58704
+// Method Definition Index: 58708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeConverter_WrapXml_m75EF1038542649689A89FBF5A3F2CED042EBF228 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26498,7 +26498,7 @@ IL_0028:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&XmlNodeConverter_WrapXml_m75EF1038542649689A89FBF5A3F2CED042EBF228_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58705
+// Method Definition Index: 58709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_PushParentNamespaces_m72AF63B5C2C7D78F06FA7A495DADCA6759027AA3 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, RuntimeObject* ___0_node, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___1_manager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26730,7 +26730,7 @@ IL_00cd:
 		return;
 	}
 }
-// Method Definition Index: 58706
+// Method Definition Index: 58710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeConverter_ResolveFullName_mC5F07F462B6FE5B4EB555D78255961F40B8C3616 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, RuntimeObject* ___0_node, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___1_manager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26838,7 +26838,7 @@ IL_005b:
 		return L_21;
 	}
 }
-// Method Definition Index: 58707
+// Method Definition Index: 58711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeConverter_GetPropertyName_mC4EBA7F268695B3CE90E87702E7CDF96ABB01BA5 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, RuntimeObject* ___0_node, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___1_manager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27076,7 +27076,7 @@ IL_0104:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_35, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&XmlNodeConverter_GetPropertyName_mC4EBA7F268695B3CE90E87702E7CDF96ABB01BA5_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58708
+// Method Definition Index: 58712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_IsArray_mF83080575E162DED85AA9E7F30384F4FCECF4A48 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, RuntimeObject* ___0_node, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27204,7 +27204,7 @@ IL_006b:
 		return L_16;
 	}
 }
-// Method Definition Index: 58709
+// Method Definition Index: 58713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_SerializeGroupedNodes_m2310D6C0E3FA9FCDBFC1677DEFE3CFB237E6BC0E (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_node, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___2_manager, bool ___3_writePropertyName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27467,7 +27467,7 @@ IL_0110:
 		return;
 	}
 }
-// Method Definition Index: 58710
+// Method Definition Index: 58714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_SerializeNode_mBBB1AA0A7AC24A39675F1B210F51870CE932D6AA (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonWriter_t1750495CE81BD2D7BF7335A8468E2F960CA3ABC3* ___0_writer, RuntimeObject* ___1_node, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___2_manager, bool ___3_writePropertyName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28289,7 +28289,7 @@ IL_03d2:
 		return;
 	}
 }
-// Method Definition Index: 58711
+// Method Definition Index: 58715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_AllSameName_mA177F66B66101491F3DCEAD394E1A1C87F24E8FF (RuntimeObject* ___0_node, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28385,7 +28385,7 @@ IL_0046:
 		return L_9;
 	}
 }
-// Method Definition Index: 58712
+// Method Definition Index: 58716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeConverter_ReadJson_m439264C33B17C4B9AB9EB03EDB14D20DD339FDD1 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, Type_t* ___1_objectType, RuntimeObject* ___2_existingValue, JsonSerializer_t3D625A6ADB5711D3C55A7CEC5F17D74260ACCB59* ___3_serializer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28641,7 +28641,7 @@ IL_011c:
 		return L_59;
 	}
 }
-// Method Definition Index: 58713
+// Method Definition Index: 58717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_DeserializeValue_m6D20454FDBBEEE2CABB0ED3EC1BCF8F2E0067AF0 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___2_manager, String_t* ___3_propertyName, RuntimeObject* ___4_currentNode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28856,7 +28856,7 @@ IL_00f5:
 		return;
 	}
 }
-// Method Definition Index: 58714
+// Method Definition Index: 58718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_ReadElement_m09C859D452268EBC6B893181FDF83B8CC7BDFAD8 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, RuntimeObject* ___2_currentNode, String_t* ___3_propertyName, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___4_manager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29049,7 +29049,7 @@ IL_00f3:
 		return;
 	}
 }
-// Method Definition Index: 58715
+// Method Definition Index: 58719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_CreateElement_mB62D7411435EBF38A92DDD2E3F37325D14CC5819 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, RuntimeObject* ___2_currentNode, String_t* ___3_elementName, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___4_manager, String_t* ___5_elementPrefix, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___6_attributeNameValues, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29350,7 +29350,7 @@ IL_012d:
 		return;
 	}
 }
-// Method Definition Index: 58716
+// Method Definition Index: 58720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_AddAttribute_m20D57606286322BD2581F04FDB59C6661BD3177F (JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, RuntimeObject* ___2_currentNode, String_t* ___3_attributeName, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___4_manager, String_t* ___5_attributePrefix, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29426,7 +29426,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 58717
+// Method Definition Index: 58721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlNodeConverter_ConvertTokenToXmlValue_m1D07C5BEE5206E724B94ACD8231788702F3BBA2D (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29704,7 +29704,7 @@ IL_0112:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_62, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&XmlNodeConverter_ConvertTokenToXmlValue_m1D07C5BEE5206E724B94ACD8231788702F3BBA2D_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 58718
+// Method Definition Index: 58722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_ReadArrayElements_m3A4E70784167D3D49FB40746E404602CA282B3D6 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, String_t* ___2_propertyName, RuntimeObject* ___3_currentNode, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___4_manager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29892,7 +29892,7 @@ IL_00b1:
 		return;
 	}
 }
-// Method Definition Index: 58719
+// Method Definition Index: 58723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_AddJsonArrayAttribute_m2B9B98BC1EC11FEDB63C71314C1FD3312E20A800 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, RuntimeObject* ___0_element, RuntimeObject* ___1_document, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29948,7 +29948,7 @@ IL_004b:
 		return;
 	}
 }
-// Method Definition Index: 58720
+// Method Definition Index: 58724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* XmlNodeConverter_ReadAttributeElements_m9B56D685A23448B661C73F3483B9B4063D55C049 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___1_manager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30444,7 +30444,7 @@ IL_027e:
 		return L_109;
 	}
 }
-// Method Definition Index: 58721
+// Method Definition Index: 58725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_CreateInstruction_m7A5C6039FEC825B248B75841D11C1DB284F78006 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, RuntimeObject* ___2_currentNode, String_t* ___3_propertyName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30652,7 +30652,7 @@ IL_00d3:
 		return;
 	}
 }
-// Method Definition Index: 58722
+// Method Definition Index: 58726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_CreateDocumentType_m4438D07E2CC5D23244A39CC98EE3F75B74B06FFA (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, RuntimeObject* ___2_currentNode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30853,7 +30853,7 @@ IL_00d4:
 		return;
 	}
 }
-// Method Definition Index: 58723
+// Method Definition Index: 58727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeConverter_CreateElement_mD8BF7ADE4CB3682433E964C9986042FFE403FE65 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, String_t* ___0_elementName, RuntimeObject* ___1_document, String_t* ___2_elementPrefix, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___3_manager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30932,7 +30932,7 @@ IL_0031:
 		return L_17;
 	}
 }
-// Method Definition Index: 58724
+// Method Definition Index: 58728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter_DeserializeNode_m7CF6B466118CB9E0CF4CAC90CA34BC769B45229C (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, JsonReader_tB90522FA9D4C1C218A3F2C529A27D95123847765* ___0_reader, RuntimeObject* ___1_document, XmlNamespaceManager_t95431ADE7A94108629DFF894819FB1A9709D810F* ___2_manager, RuntimeObject* ___3_currentNode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31302,7 +31302,7 @@ IL_0175:
 		return;
 	}
 }
-// Method Definition Index: 58725
+// Method Definition Index: 58729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_IsNamespaceAttribute_mD9C356F879F0FF7F1006E34842F95ADE42128868 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, String_t* ___0_attributeName, String_t** ___1_prefix, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31374,7 +31374,7 @@ IL_003e:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58726
+// Method Definition Index: 58730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_ValueAttributes_m2E3B5735173BB3088B0395F6266B6BCFFF7D6090 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, List_1_tCA41878C726B03CC852C13E2FB0D9FFA9CEE458E* ___0_c, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31464,7 +31464,7 @@ IL_0040:
 		return L_6;
 	}
 }
-// Method Definition Index: 58727
+// Method Definition Index: 58731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlNodeConverter_CanConvert_m2489573A00FFEB412ECFAB91B0CA2EA83C5D1D32 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, Type_t* ___0_valueType, const RuntimeMethod* method) 
 {
 	CHECKED_LOCAL(Type_t_StaticInit);
@@ -31511,7 +31511,7 @@ IL_0028:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 58728
+// Method Definition Index: 58732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter__ctor_m5EA79F6E3B52F680FC2F5DA529993033645D62C3 (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31523,7 +31523,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNodeConverter__ctor_m5EA79F6E3B52F680
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 57990
+// Method Definition Index: 57994
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JContainer_tFD3E2CD9B9D8D3CD73133B11A1F6BE77C5C8F95A* JToken_get_Parent_m17B873780C3C7FE29F8F1212C31A062606D842C8_inline (JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31532,7 +31532,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JContainer_tFD3E2CD9B9D8D3CD73133
 		return L_0;
 	}
 }
-// Method Definition Index: 57998
+// Method Definition Index: 58002
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* JToken_get_Next_mACA1FDDD6C404B82952BBDF16B6B50BD9D478AEE_inline (JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31541,7 +31541,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JToken_tFD7D9015F3F97A09AD93E439A
 		return L_0;
 	}
 }
-// Method Definition Index: 58178
+// Method Definition Index: 58182
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* JProperty_get_Name_m96280838000C5E193121125A503BA9108DB707CA_inline (JProperty_t1B8E99236F2BD537EC4A7A63ACDB60D7C709C5F4* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31550,7 +31550,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* JProperty_get_Name_m962
 		return L_0;
 	}
 }
-// Method Definition Index: 58250
+// Method Definition Index: 58254
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* JValue_get_Value_m7E0B68F90B51FD1ECC4C659765F6F949C0B0F35C_inline (JValue_t324DDA26E0833B94892066CE744361B6B0094375* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31559,7 +31559,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* JValue_get_Value_m
 		return L_0;
 	}
 }
-// Method Definition Index: 58280
+// Method Definition Index: 58284
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArrayIndexFilter_get_Index_m3F3664AA62500B34A916C9089F62DF1BE852C247_inline (ArrayIndexFilter_tA536D07FCC50742F7AF6AD7217C5DA6051DC66D7* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31568,7 +31568,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C8
 		return L_0;
 	}
 }
-// Method Definition Index: 58294
+// Method Definition Index: 58298
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ArrayMultipleIndexFilter_get_Indexes_mB40956A7E76D0746114DD94DA7CAFE4AA4C46AB1_inline (ArrayMultipleIndexFilter_t1DED3311803656A2FE587CEEB07F1E0359C8DC78* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31577,7 +31577,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t05915E9237850A58106982B7F
 		return L_0;
 	}
 }
-// Method Definition Index: 58312
+// Method Definition Index: 58316
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArraySliceFilter_get_Step_mCC22105147A458D7D4CA185860C0022E2E06141B_inline (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31586,7 +31586,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C8
 		return L_0;
 	}
 }
-// Method Definition Index: 58308
+// Method Definition Index: 58312
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArraySliceFilter_get_Start_mED87A91EE4B2B3B6E4F8A8F09B1A2F7ACDC21B45_inline (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31595,7 +31595,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C8
 		return L_0;
 	}
 }
-// Method Definition Index: 58310
+// Method Definition Index: 58314
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ArraySliceFilter_get_End_mA2AD5CA50463617A4D8805EAD2C097DEF0B52457_inline (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31604,7 +31604,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C8
 		return L_0;
 	}
 }
-// Method Definition Index: 58326
+// Method Definition Index: 58330
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FieldFilter_get_Name_mCEF6D8A9F080712D4F90E037141624D2C1BDA19A_inline (FieldFilter_t871E453BB206AF3F30B45F3737C35F52E359F5E8* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31613,7 +31613,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FieldFilter_get_Name_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 58340
+// Method Definition Index: 58344
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* FieldMultipleFilter_get_Names_mA07530BAC227055F3BB7981B5CED65CA104A4256_inline (FieldMultipleFilter_tBC3EB1DF00466CD1C0AE3C300F20E5690E185C08* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31622,7 +31622,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F
 		return L_0;
 	}
 }
-// Method Definition Index: 58358
+// Method Definition Index: 58362
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JPath_set_Filters_m2BE82D08DC545C4410AA574F266AED84942AD09D_inline (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31642,7 +31642,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 58357
+// Method Definition Index: 58361
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* JPath_get_Filters_m5A9E387AD7FFD4E9E4662842C78D081EAC4890B9_inline (JPath_t6CB95ABA7A373F6F2EEBAB9B80C7293603392D7A* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31651,7 +31651,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B
 		return L_0;
 	}
 }
-// Method Definition Index: 58327
+// Method Definition Index: 58331
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FieldFilter_set_Name_m718716D6512CA798FBB6E608C104E95EDB0BD5F5_inline (FieldFilter_t871E453BB206AF3F30B45F3737C35F52E359F5E8* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31662,7 +31662,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FieldFilter_set_Name_m718716
 		return;
 	}
 }
-// Method Definition Index: 58408
+// Method Definition Index: 58412
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ScanFilter_set_Name_m8E17CB31015E988BC346F5A96D5F2BEB2FA28B0D_inline (ScanFilter_tAD9276D54152FBD92E90DCD3847E35987BD7E127* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31673,7 +31673,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ScanFilter_set_Name_m8E17CB3
 		return;
 	}
 }
-// Method Definition Index: 58295
+// Method Definition Index: 58299
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArrayMultipleIndexFilter_set_Indexes_m93BCD653E31FA799DD8ED7FB6F48CF14478A93AB_inline (ArrayMultipleIndexFilter_t1DED3311803656A2FE587CEEB07F1E0359C8DC78* __this, List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31684,7 +31684,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArrayMultipleIndexFilter_set
 		return;
 	}
 }
-// Method Definition Index: 58309
+// Method Definition Index: 58313
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Start_m9F380783F8C7788FBD288262E5D04E56B9CCFF2C_inline (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31694,7 +31694,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Start_m
 		return;
 	}
 }
-// Method Definition Index: 58311
+// Method Definition Index: 58315
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArraySliceFilter_set_End_m63FDA2E6D5122CE5DD5BAC742ACC9ECFCD1218ED_inline (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31704,7 +31704,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArraySliceFilter_set_End_m63
 		return;
 	}
 }
-// Method Definition Index: 58313
+// Method Definition Index: 58317
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Step_m853F850E5F0D84880D3D359BED47C6236144CD42_inline (ArraySliceFilter_tA0661C0FCA5D33D0ED780AF516C74A73BD783D27* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31714,7 +31714,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArraySliceFilter_set_Step_m8
 		return;
 	}
 }
-// Method Definition Index: 58281
+// Method Definition Index: 58285
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArrayIndexFilter_set_Index_m46B41968492622477067FEDD88C8516890314844_inline (ArrayIndexFilter_tA536D07FCC50742F7AF6AD7217C5DA6051DC66D7* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31724,7 +31724,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ArrayIndexFilter_set_Index_m
 		return;
 	}
 }
-// Method Definition Index: 58394
+// Method Definition Index: 58398
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void QueryFilter_set_Expression_m20AD61ED73104E88EFEF1B7AED0B36F3530D624A_inline (QueryFilter_t9B1B799527B4277D566E5DE1EE64D33006CE8064* __this, QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31735,7 +31735,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void QueryFilter_set_Expression_m
 		return;
 	}
 }
-// Method Definition Index: 58387
+// Method Definition Index: 58391
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_Path_m2435C1CDE3C0A4FC33810F01C45DC7053BEEE511_inline (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31746,7 +31746,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_P
 		return;
 	}
 }
-// Method Definition Index: 58379
+// Method Definition Index: 58383
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void QueryExpression_set_Operator_m21D671F3BD6A3F5BDE607B9FDFACB830ECBB8199_inline (QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31756,7 +31756,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void QueryExpression_set_Operator
 		return;
 	}
 }
-// Method Definition Index: 58389
+// Method Definition Index: 58393
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_Value_m9FFE2E08668A3C3E6E9BBD5B4794C6CD1C705A0E_inline (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, JValue_t324DDA26E0833B94892066CE744361B6B0094375* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31767,7 +31767,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BooleanQueryExpression_set_V
 		return;
 	}
 }
-// Method Definition Index: 58382
+// Method Definition Index: 58386
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t7CC35AC777301D2301E331621404E5BB0259D144* CompositeExpression_get_Expressions_m5DE4383743D435CA00538214A644C0E975A103E9_inline (CompositeExpression_tA611CBEA2784BC9522EF08F358545B1ABE89AACC* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31776,7 +31776,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t7CC35AC777301D2301E331621
 		return L_0;
 	}
 }
-// Method Definition Index: 58378
+// Method Definition Index: 58382
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t QueryExpression_get_Operator_m68F0D73229951448937BE171762919BAE703B469_inline (QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31785,7 +31785,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t QueryExpression_get_Opera
 		return L_0;
 	}
 }
-// Method Definition Index: 58341
+// Method Definition Index: 58345
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FieldMultipleFilter_set_Names_mD00D7332F2BB454DCF05D8112BF5B3027BD892BF_inline (FieldMultipleFilter_tBC3EB1DF00466CD1C0AE3C300F20E5690E185C08* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31796,7 +31796,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FieldMultipleFilter_set_Name
 		return;
 	}
 }
-// Method Definition Index: 58383
+// Method Definition Index: 58387
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CompositeExpression_set_Expressions_mD8F85558E58AC33E965CB9D60E89BDEDF32B6795_inline (CompositeExpression_tA611CBEA2784BC9522EF08F358545B1ABE89AACC* __this, List_1_t7CC35AC777301D2301E331621404E5BB0259D144* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31807,7 +31807,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CompositeExpression_set_Expr
 		return;
 	}
 }
-// Method Definition Index: 58386
+// Method Definition Index: 58390
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B4239ECC80B1ACBB* BooleanQueryExpression_get_Path_m0870DDF443AA8C2A32480DD42862C42A96551FAC_inline (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31816,7 +31816,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t4A4EC4509A882389B21B2320B
 		return L_0;
 	}
 }
-// Method Definition Index: 58388
+// Method Definition Index: 58392
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE744361B6B0094375* BooleanQueryExpression_get_Value_m09A14B3B8A03BC2C55CEB21E506156533932AB1A_inline (BooleanQueryExpression_tD2B3D1617F9AD8DF8CA6DB68F7CB1DC77F36C1C3* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31825,7 +31825,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR JValue_t324DDA26E0833B94892066CE7
 		return L_0;
 	}
 }
-// Method Definition Index: 58393
+// Method Definition Index: 58397
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3* QueryFilter_get_Expression_mE6DA813930EFEB27A7074D50DAA9C7E91252E8C1_inline (QueryFilter_t9B1B799527B4277D566E5DE1EE64D33006CE8064* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31834,7 +31834,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR QueryExpression_t0A0887F8997D64D7
 		return L_0;
 	}
 }
-// Method Definition Index: 58407
+// Method Definition Index: 58411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ScanFilter_get_Name_m1E7C222E92A568592D64DD0AD4B1378B32532B58_inline (ScanFilter_tAD9276D54152FBD92E90DCD3847E35987BD7E127* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31843,7 +31843,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ScanFilter_get_Name_m1E
 		return L_0;
 	}
 }
-// Method Definition Index: 56621
+// Method Definition Index: 56625
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectConstructor_1_t6DD3EABA8E230C0DDF3C7DB24966AA8BF2290901* ReflectionObject_get_Creator_mFE215FC9C57548498D71EE5B13DB60FBED70074C_inline (ReflectionObject_tBC7C0875C7434F4B89AC4948A4ECBD5CF84AE2E7* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31852,7 +31852,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectConstructor_1_t6DD3EABA8E23
 		return L_0;
 	}
 }
-// Method Definition Index: 35932
+// Method Definition Index: 35936
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* __this, uint8_t ___0_r, uint8_t ___1_g, uint8_t ___2_b, uint8_t ___3_a, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31869,7 +31869,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7C
 		return;
 	}
 }
-// Method Definition Index: 35900
+// Method Definition Index: 35903
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31885,7 +31885,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 58858
+// Method Definition Index: 58862
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BsonObjectId_get_Value_mEBD0BBDDA460C3B1ECFFBD7B64C709172C7F14CD_inline (BsonObjectId_tD1799B243CF7FF4983762AFD5AA7EED8287AF4C2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31894,7 +31894,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB
 		return L_0;
 	}
 }
-// Method Definition Index: 36110
+// Method Definition Index: 36114
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Quaternion_get_eulerAngles_m2DB5158B5C3A71FD60FC8A6EE43D3AAA1CFED122_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31908,7 +31908,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_2;
 	}
 }
-// Method Definition Index: 36111
+// Method Definition Index: 36115
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Quaternion_set_eulerAngles_m441C342F21FEFCED9BABED01FA516C97EA424D6E_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31925,7 +31925,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Quaternion_set_eulerAngles_m
 		return;
 	}
 }
-// Method Definition Index: 40197
+// Method Definition Index: 40201
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Regex_get_Options_m165C450CC7D77E4EA9BBFFED62C73269A6989EF2_inline (Regex_tE773142C2BE45C5D362B0F815AFF831707A51772* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31972,7 +31972,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Resolution_set_width_m32E377
 		return;
 	}
 }
-// Method Definition Index: 58495
+// Method Definition Index: 58499
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StringEnumConverter_set_AllowIntegerValues_m06EEDD4CA3D661984541A7E3CA1C5DD8E763ECF1_inline (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31982,7 +31982,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StringEnumConverter_set_Allo
 		return;
 	}
 }
-// Method Definition Index: 58493
+// Method Definition Index: 58497
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StringEnumConverter_set_CamelCaseText_m5BC5140861194D1BB605D21B78AEC694E598DF18_inline (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -31992,7 +31992,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StringEnumConverter_set_Came
 		return;
 	}
 }
-// Method Definition Index: 58492
+// Method Definition Index: 58496
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool StringEnumConverter_get_CamelCaseText_m638D7E2E1ADFA8259C5C5DC44C4D6FFF4FA075F5_inline (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32001,7 +32001,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool StringEnumConverter_get_Came
 		return L_0;
 	}
 }
-// Method Definition Index: 58494
+// Method Definition Index: 58498
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool StringEnumConverter_get_AllowIntegerValues_m773843BCE2AEFD6CF8A21ABD17918C4CF62B1F9C_inline (StringEnumConverter_t7C66875DF7AB0719190AEEF8924A99F49C480184* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32010,7 +32010,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool StringEnumConverter_get_Allo
 		return L_0;
 	}
 }
-// Method Definition Index: 58506
+// Method Definition Index: 58510
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector2_mE7927EB6096D3E1F0E376C73657BFFAE4EA93F01_inline (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32020,7 +32020,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVe
 		return;
 	}
 }
-// Method Definition Index: 58508
+// Method Definition Index: 58512
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector3_m396E789698564789734CDD684A1B1A6589FCB448_inline (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32030,7 +32030,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVe
 		return;
 	}
 }
-// Method Definition Index: 58510
+// Method Definition Index: 58514
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVector4_m7ABC7C2C252E7DFB946BDEDDEB33B1D0792605F4_inline (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32040,7 +32040,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VectorConverter_set_EnableVe
 		return;
 	}
 }
-// Method Definition Index: 58505
+// Method Definition Index: 58509
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector2_m3B3C90FBD2669464F10143CD10CB34DE1A9C65EC_inline (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32049,7 +32049,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVe
 		return L_0;
 	}
 }
-// Method Definition Index: 58507
+// Method Definition Index: 58511
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector3_m717868EFFCF7AAD56AA58CE8FFA579B0B48E491A_inline (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32058,7 +32058,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVe
 		return L_0;
 	}
 }
-// Method Definition Index: 58509
+// Method Definition Index: 58513
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVector4_m64A5B4F3C38F459E77DBADA18927120326F1BF42_inline (VectorConverter_tB41C3AEFD5581CD679E6824DD2C2CAFAA68E2001* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32067,7 +32067,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool VectorConverter_get_EnableVe
 		return L_0;
 	}
 }
-// Method Definition Index: 58568
+// Method Definition Index: 58572
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_get_WrappedNode_m95E187562E167E13524197070157B15EE0ABFDFF_inline (XmlNodeWrapper_tE399A7CC58A6C5CE54C6EFE0D075A7B88C71B991* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32076,7 +32076,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XmlNodeWrapper_get
 		return L_0;
 	}
 }
-// Method Definition Index: 53783
+// Method Definition Index: 53787
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDeclaration_get_Version_m50261F1E46B645E69A99504F494FFD3BF915E633_inline (XmlDeclaration_tA04662FA58C306A24C864BDE73D1B410858E7A79* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32085,7 +32085,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDeclaration_get_Vers
 		return L_0;
 	}
 }
-// Method Definition Index: 53785
+// Method Definition Index: 53789
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDeclaration_get_Encoding_m09D89DCD8457C62A6E49B9506A65A271DDBD011F_inline (XmlDeclaration_tA04662FA58C306A24C864BDE73D1B410858E7A79* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32094,7 +32094,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDeclaration_get_Enco
 		return L_0;
 	}
 }
-// Method Definition Index: 53787
+// Method Definition Index: 53791
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDeclaration_get_Standalone_m46CC1833EE3C478318FF865E98A6899E440DDC6C_inline (XmlDeclaration_tA04662FA58C306A24C864BDE73D1B410858E7A79* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32103,7 +32103,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDeclaration_get_Stan
 		return L_0;
 	}
 }
-// Method Definition Index: 53902
+// Method Definition Index: 53906
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDocumentType_get_SystemId_m17B225C509C0F5A4ECBB838AA81D15DED4016909_inline (XmlDocumentType_tFD7379E45412FC2EBD65280ED3DE7A1C941A8D9E* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32112,7 +32112,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDocumentType_get_Sys
 		return L_0;
 	}
 }
-// Method Definition Index: 53901
+// Method Definition Index: 53905
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDocumentType_get_PublicId_m9E81FAF2D0AA9DC847D118813CBEB085F0CE1955_inline (XmlDocumentType_tFD7379E45412FC2EBD65280ED3DE7A1C941A8D9E* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32121,7 +32121,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDocumentType_get_Pub
 		return L_0;
 	}
 }
-// Method Definition Index: 53903
+// Method Definition Index: 53907
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDocumentType_get_InternalSubset_mBD8D585ED0401EE1FC02F6FD5445E2109B083FEF_inline (XmlDocumentType_tFD7379E45412FC2EBD65280ED3DE7A1C941A8D9E* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32130,7 +32130,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlDocumentType_get_Int
 		return L_0;
 	}
 }
-// Method Definition Index: 58615
+// Method Definition Index: 58619
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Declaration_mB8CF488A14A6A4CE715CF6D65E9D4642746CF378_inline (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32141,7 +32141,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDeclarationWrapper_set_Decl
 		return;
 	}
 }
-// Method Definition Index: 58614
+// Method Definition Index: 58618
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* XDeclarationWrapper_get_Declaration_mD7686F2EC3F760FD0AECC4FC6DD5E21F9F888437_inline (XDeclarationWrapper_t30D8572D5BECE3E49B4F5BF8C17EE1A37A89AAE9* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32150,7 +32150,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XDeclaration_t62AAE9A25589F7D4C5B
 		return L_0;
 	}
 }
-// Method Definition Index: 71838
+// Method Definition Index: 71888
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDeclaration_get_Version_m675EDE875CAF23C6801015479393247D2B8A05E7_inline (XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32159,7 +32159,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDeclaration_get_Versio
 		return L_0;
 	}
 }
-// Method Definition Index: 71834
+// Method Definition Index: 71884
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDeclaration_get_Encoding_mA27D7E3A1673EE7D2A52F7D93A17FD9A33C4D5E0_inline (XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32168,7 +32168,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDeclaration_get_Encodi
 		return L_0;
 	}
 }
-// Method Definition Index: 71835
+// Method Definition Index: 71885
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDeclaration_set_Encoding_m13C45B72D33CFE9CCBA3450D0D3DF6A56D46CCD9_inline (XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32179,7 +32179,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDeclaration_set_Encoding_m1
 		return;
 	}
 }
-// Method Definition Index: 71836
+// Method Definition Index: 71886
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDeclaration_get_Standalone_mCC775D6A93C6ED7C87BFFA4E3565675B4139CE7D_inline (XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32188,7 +32188,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDeclaration_get_Standa
 		return L_0;
 	}
 }
-// Method Definition Index: 71837
+// Method Definition Index: 71887
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDeclaration_set_Standalone_mBFF62587A08487D5C7332D76AD4D3C55FB81BF33_inline (XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32199,7 +32199,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDeclaration_set_Standalone_
 		return;
 	}
 }
-// Method Definition Index: 71858
+// Method Definition Index: 71908
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_Name_m297D10AE558AA29F11E05CCAEF2D74C43F980AE9_inline (XDocumentType_t195D491B418C3696FBCAEE34E53D734E0B53A817* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32208,7 +32208,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_Name_
 		return L_0;
 	}
 }
-// Method Definition Index: 71861
+// Method Definition Index: 71911
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_SystemId_m864BD298982BDA1D5B9C4DB6CB904B78FAFA04A7_inline (XDocumentType_t195D491B418C3696FBCAEE34E53D734E0B53A817* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32217,7 +32217,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_Syste
 		return L_0;
 	}
 }
-// Method Definition Index: 71860
+// Method Definition Index: 71910
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_PublicId_mAFD124B111C0B665C14A2078EE4E30C28F1854FC_inline (XDocumentType_t195D491B418C3696FBCAEE34E53D734E0B53A817* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32226,7 +32226,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_Publi
 		return L_0;
 	}
 }
-// Method Definition Index: 71857
+// Method Definition Index: 71907
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_InternalSubset_m6914F698B32A68A55C15AD4B971FEBFA85183DA1_inline (XDocumentType_t195D491B418C3696FBCAEE34E53D734E0B53A817* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32235,7 +32235,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XDocumentType_get_Inter
 		return L_0;
 	}
 }
-// Method Definition Index: 58668
+// Method Definition Index: 58672
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_get_WrappedNode_m3CA9623838D4D4A96DCF882FC3C592D3D64D7573_inline (XObjectWrapper_t1932FA32F64A100673DEC2063AF00052A6CE1B16* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32244,7 +32244,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XObjectWrapper_get
 		return L_0;
 	}
 }
-// Method Definition Index: 71842
+// Method Definition Index: 71892
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* XDocument_get_Declaration_m54F6FE679582E4CC7FBC6FD3565260BC308D98CA_inline (XDocument_tFD643046CAF39623C3D8AA1693390D5EE08E82F1* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32253,7 +32253,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XDeclaration_t62AAE9A25589F7D4C5B
 		return L_0;
 	}
 }
-// Method Definition Index: 71843
+// Method Definition Index: 71893
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDocument_set_Declaration_m3DAB9857DC323A55ABA6F973614AABE5FB59A672_inline (XDocument_tFD643046CAF39623C3D8AA1693390D5EE08E82F1* __this, XDeclaration_t62AAE9A25589F7D4C5B016DDF6DF858D11A2A990* ___0_value, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32264,7 +32264,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XDocument_set_Declaration_m3
 		return;
 	}
 }
-// Method Definition Index: 71979
+// Method Definition Index: 72029
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XText_get_Value_m5B2A033755DE27DEC73860B9E94AA41BB55E208C_inline (XText_t006159E7F735736D41BBC0738FFB066A14B31AE2* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32273,7 +32273,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XText_get_Value_m5B2A03
 		return L_0;
 	}
 }
-// Method Definition Index: 71797
+// Method Definition Index: 71847
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XComment_get_Value_mD2D3D9900752AD9FA019947C965FF6FAF2B3E7DA_inline (XComment_t2FD9205AC70AF739D97E5CE8B1CC29459191F43D* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32282,7 +32282,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XComment_get_Value_mD2D
 		return L_0;
 	}
 }
-// Method Definition Index: 71972
+// Method Definition Index: 72022
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XProcessingInstruction_get_Target_mBB98BD38B91EBDC03558F4990591BE33FC1EB0DE_inline (XProcessingInstruction_t920C9022DAD590F61972E400D46FC1C443265795* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32291,7 +32291,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XProcessingInstruction_
 		return L_0;
 	}
 }
-// Method Definition Index: 71969
+// Method Definition Index: 72019
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XProcessingInstruction_get_Data_mF06C89FCF9F580497E3B59331676AFC9AA3F416B_inline (XProcessingInstruction_t920C9022DAD590F61972E400D46FC1C443265795* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32300,7 +32300,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XProcessingInstruction_
 		return L_0;
 	}
 }
-// Method Definition Index: 71784
+// Method Definition Index: 71834
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XAttribute_get_Value_mDCE15378AC161DF20094EF77EFF017A6F6766EB1_inline (XAttribute_tA7C325029CA82AA067080AEA6BDDC52E08987FDF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32309,7 +32309,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XAttribute_get_Value_mD
 		return L_0;
 	}
 }
-// Method Definition Index: 71782
+// Method Definition Index: 71832
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C* XAttribute_get_Name_m5EB28279BB8BB19266997CB15733BD72CFB1DCB1_inline (XAttribute_tA7C325029CA82AA067080AEA6BDDC52E08987FDF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32318,7 +32318,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XName_tAF6D9533A7D11AC27118F65698
 		return L_0;
 	}
 }
-// Method Definition Index: 71918
+// Method Definition Index: 71968
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XName_get_LocalName_m4CA50C151ADB8183972EA556868148AF0F5BED75_inline (XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32327,7 +32327,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XName_get_LocalName_m4C
 		return L_0;
 	}
 }
-// Method Definition Index: 71868
+// Method Definition Index: 71918
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XName_tAF6D9533A7D11AC27118F656985AC325C2A50E5C* XElement_get_Name_mAF691F0AFE4F732FE836AEAC566536C1231AA74D_inline (XElement_t545ABA4BFF2045168A2E472A68FE2FCAA5E1F909* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32336,7 +32336,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XName_tAF6D9533A7D11AC27118F65698
 		return L_0;
 	}
 }
-// Method Definition Index: 58701
+// Method Definition Index: 58705
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XmlNodeConverter_get_OmitRootObject_m39D54F5791FD93911139FB9E46BABBDE5D062184_inline (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32345,7 +32345,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XmlNodeConverter_get_OmitRoo
 		return L_0;
 	}
 }
-// Method Definition Index: 58697
+// Method Definition Index: 58701
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlNodeConverter_get_DeserializeRootElementName_m2A0B73747601E99F60881D50EF7D55F0EDBE85A4_inline (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32354,7 +32354,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* XmlNodeConverter_get_De
 		return L_0;
 	}
 }
-// Method Definition Index: 58699
+// Method Definition Index: 58703
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XmlNodeConverter_get_WriteArrayAttribute_mB90AAB6C83E3DFD4E0F0FE8DBB9BF151248378F2_inline (XmlNodeConverter_t2BBBEC7EB7BD0E68DE693AE4A21B507B62EAFDBF* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32506,7 +32506,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 57591
+// Method Definition Index: 57595
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ObjectConstructor_1_Invoke_m7CC8A5D65EA989FCD604264C79E79E5E3F8BAC15_gshared_inline (ObjectConstructor_1_tD79A30DBABA710081E3DA0FC44B0D1E9F9213669* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_args, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -32589,7 +32589,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppSharedGenericObject* KeyVal
 		return L_0;
 	}
 }
-// Method Definition Index: 36078
+// Method Definition Index: 36082
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>

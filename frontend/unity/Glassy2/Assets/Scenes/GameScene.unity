@@ -709,7 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e85d53244899942b3bc2789e387ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GemSpawner
-  spawnInterval: 0.5
+  spawnInterval: 0.6001
   initialDelay: 1
 --- !u!114 &1118261938
 MonoBehaviour:
@@ -1025,7 +1025,7 @@ MonoBehaviour:
   backgroundMusicClip: {fileID: 8300000, guid: a4218e348adbf9743b1f8bd1c0c1dfba, type: 3}
   backgroundMusicVolume: 1
   gemFusionClip: {fileID: 8300000, guid: 9bf64dfe8c921bd43bf67a0848196af0, type: 3}
-  gemFusionVolume: 0.5
+  gemFusionVolume: 0.4
   startGameClip: {fileID: 8300000, guid: 7e2fde475cbedf64cb12805211242473, type: 3}
   startGameVolume: 0.5
   diamondFoundClip: {fileID: 8300000, guid: f75aae830c23d114d8c3edc02523f8f1, type: 3}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
@@ -152,7 +152,7 @@ namespace FlutterUnityIntegration
                 // handle callback message
                 if (!waitCallbackMessageMap.TryGetValue(handler.id, out var m)) return;
                 waitCallbackMessageMap.Remove(handler.id);
-                m.callBack?.Invoke(handler.getData<object>()); // todo
+                m.callBack?.Invoke(handler.getData<object>());
                 return;
             }
 

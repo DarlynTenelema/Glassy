@@ -12,5 +12,21 @@ class AuthService {
   bool get isAuthenticated => currentSession != null;
   String? get accessToken => currentSession?.accessToken;
 
-  // Puedes añadir métodos de login/logout aquí después
+  Future<AuthResponse> signInWithEmail(String email, String password) async {
+    return await _supabase.auth.signInWithPassword(
+      email: email,
+      password: password,
+    );
+  }
+
+  Future<AuthResponse> signUpWithEmail(String email, String password) async {
+    return await _supabase.auth.signUp(
+      email: email,
+      password: password,
+    );
+  }
+
+  Future<void> signOut() async {
+    await _supabase.auth.signOut();
+  }
 }

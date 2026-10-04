@@ -58,13 +58,21 @@ func GetEconomyStatus(c *gin.Context) {
 	currentDate := now.Truncate(24 * time.Hour)
 
 	if lastLogin == nil || !lastLogin.Truncate(24*time.Hour).Equal(currentDate) {
-		// Es un nuevo día de login
-		totalActiveDays++
-		_, _ = DB.Exec(`UPDATE users SET last_login_at = $1, total_active_days = $2 WHERE id = $3`, now, totalActiveDays, userID)
+		// Es un nuevo día de login. Usamos un UPDATE atómico para evitar condiciones de carrera.
+		var newTotalActiveDays int
+		err := DB.QueryRow(`
+			UPDATE users 
+			SET last_login_at = $1, total_active_days = total_active_days + 1 
+			WHERE id = $2 AND (last_login_at IS NULL OR date_trunc('day', last_login_at) < date_trunc('day', $1::timestamp))
+			RETURNING total_active_days
+		`, now, userID).Scan(&newTotalActiveDays)
 		
-		// Verificar si completó los 15 días para el partner
-		if totalActiveDays == 15 {
-			go ProcessPartnerReferralConfirmation(userID)
+		if err == nil {
+			totalActiveDays = newTotalActiveDays
+			// Verificar si completó los 15 días para el partner
+			if totalActiveDays == 15 {
+				go ProcessPartnerReferralConfirmation(userID)
+			}
 		}
 	}
 
@@ -270,31 +278,48 @@ func ClaimChest(c *gin.Context) {
 	})
 }
 
+// Misiones Diarias (GoalTotal hardcodeados en servidor)
+func getMissionGoalTotal(day int) int {
+	if day <= 10 {
+		return 3
+	} else if day <= 20 {
+		return 5
+	}
+	return 10
+}
+
 // UpdateMissionProgress actualiza el progreso de la misión (ej: si recogió X gemas en la partida)
 // POST /api/player/mission/update
 func UpdateMissionProgress(c *gin.Context) {
 	userID := c.GetString("user_id")
 
 	var req struct {
-		ProgressAdded int `json:"progress_added" binding:"required,min=1"`
-		GoalTotal     int `json:"goal_total" binding:"required,min=1"`
+		ProgressAdded int `json:"progress_added" binding:"required,min=1,max=100"`
 	}
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request body"})
 		return
 	}
 
-	// En una versión más robusta, el servidor sabría cuál es el GoalTotal según el CurrentMissionDay.
-	// Por ahora validamos que si progreso llega a total, se marca completado.
-	_, err := DB.Exec(`
+	// Obtener el día actual de la misión para saber el GoalTotal real
+	var currentMissionDay int
+	err := DB.QueryRow(`SELECT current_mission_day FROM users WHERE id = $1`, userID).Scan(&currentMissionDay)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "User not found"})
+		return
+	}
+
+	goalTotal := getMissionGoalTotal(currentMissionDay)
+
+	_, err = DB.Exec(`
 		UPDATE users 
-		SET mission_progress = mission_progress + $1,
+		SET mission_progress = LEAST(mission_progress + $1, $2),
 		    mission_completed = CASE 
 		        WHEN (mission_progress + $1) >= $2 THEN true 
 		        ELSE false 
 		    END
 		WHERE id = $3 AND mission_completed = false
-	`, req.ProgressAdded, req.GoalTotal, userID)
+	`, req.ProgressAdded, goalTotal, userID)
 
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update mission"})

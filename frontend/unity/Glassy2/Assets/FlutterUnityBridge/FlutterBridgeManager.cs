@@ -22,6 +22,7 @@ namespace FlutterUnityBridge
         public event Action<PowerUpPayload> OnPowerUpRequested;
         public event Action<AuthTokenPayload> OnAuthTokenReceived;
         public event Action<SetSkinPayload> OnSkinRequested;
+        public event Action<CrystalsUpdatePayload> OnCrystalsUpdateReceived;
 
         private void Awake()
         {
@@ -77,6 +78,11 @@ namespace FlutterUnityBridge
                     case "SET_SKIN":
                         var skinPayload = JsonUtility.FromJson<SetSkinPayload>(bridgeMsg.payload);
                         OnSkinRequested?.Invoke(skinPayload);
+                        break;
+
+                    case "UPDATE_CRYSTALS":
+                        var crystalsPayload = JsonUtility.FromJson<CrystalsUpdatePayload>(bridgeMsg.payload);
+                        OnCrystalsUpdateReceived?.Invoke(crystalsPayload);
                         break;
 
                     default:

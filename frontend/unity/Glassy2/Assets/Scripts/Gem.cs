@@ -1,7 +1,5 @@
 using UnityEngine;
-#if UNITY_EDITOR || UNITY_6_0_OR_NEWER // Asegurarse de que soporta Light2D
 using UnityEngine.Rendering.Universal;
-#endif
 
 /// <summary>
 /// GemType — Enum de tipos de gemas. El índice coincide con:
@@ -342,9 +340,7 @@ public class Gem : MonoBehaviour
         // Reproducir secuencia de sonidos: encontrado → desvanecer
         AudioManager.Instance?.PlayDiamondSequence();
 
-        // TODO (EDITOR): Instanciar un particle effect de explosión aquí
-        // GameObject vfx = Instantiate(GameManager.Instance.diamondExplosionVFX, transform.position, Quaternion.identity);
-        // Destroy(vfx, 2f);
+
 
         // Destruir la gema con un pequeño delay para que se vea el efecto
         Destroy(gameObject, 0.3f);

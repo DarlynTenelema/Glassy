@@ -12,6 +12,7 @@ import '../flutter_unity_bridge/src/unity_bridge_controller.dart';
 import '../flutter_unity_bridge/src/models/payloads.dart';
 import '../services/audio_service.dart';
 import '../services/achievements_service.dart';
+import '../services/game_api_service.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({Key? key}) : super(key: key);
@@ -85,8 +86,10 @@ class _GameScreenState extends State<GameScreen> {
         }
         
         // Pasar la skin actual seleccionada a Unity
+        // Pasar la skin actual seleccionada a Unity y los cristales
         final gameProvider = Provider.of<GameProvider>(context, listen: false);
         _bridgeController.setSkin(gameProvider.selectedSkinId);
+        _bridgeController.updateCrystals(gameProvider.crystals);
         
         // Cargar y enviar configuración de audio
         _loadAndSendSettings();
@@ -107,7 +110,14 @@ class _GameScreenState extends State<GameScreen> {
     });
 
     _crystalsSub = _bridgeController.onCrystalsUpdated.listen((payload) {
-      if (mounted) setState(() => _crystals = payload.currentCrystals);
+      if (mounted) {
+        if (_crystals > payload.currentCrystals) {
+          int spent = _crystals - payload.currentCrystals;
+          GameApiService().spendCrystals(spent); // Gasto real en backend
+          Provider.of<GameProvider>(context, listen: false).updateCrystals(payload.currentCrystals);
+        }
+        setState(() => _crystals = payload.currentCrystals);
+      }
     });
 
     _gameOverSub = _bridgeController.onGameOver.listen((payload) {
@@ -120,6 +130,9 @@ class _GameScreenState extends State<GameScreen> {
           }
         });
       }
+      // Llamadas a la API centralizadas en Flutter usando el JWT correcto y fresco
+      GameApiService().submitScoreWithRetry(payload.finalScore);
+      GameApiService().updateMissionProgress(1); // +1 partida jugada
     });
 
     _achievementSub = _bridgeController.onAchievementProgress.listen((payload) {
@@ -178,6 +191,11 @@ class _GameScreenState extends State<GameScreen> {
           _missionTarget = payload.targetProgress;
         });
       }
+      
+      // La actualización de misión de recoger gemas se guarda en el servidor
+      // GameApiService().updateMissionProgress(payload.currentProgress, payload.targetProgress); 
+      // Nota: Si esto se llama muy rápido por cada gema, es mejor dejar que Unity mande un MISSION_COMPLETED
+      // y actualizar ahí.
     });
 
     _missionCompletedSub = _bridgeController.onMissionCompleted.listen((payload) {

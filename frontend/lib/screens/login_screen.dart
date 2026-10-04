@@ -47,7 +47,10 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       GoogleSignInAccount? googleUser;
       try {
-        googleUser = await GoogleSignIn.instance.authenticate();
+        final GoogleSignIn googleSignIn = GoogleSignIn(
+          serverClientId: Env.webClientId,
+        );
+        googleUser = await googleSignIn.signIn();
         if (googleUser == null) {
           if (mounted) {
             setState(() => _isShattered = false); // Regenerar

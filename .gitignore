@@ -136,3 +136,16 @@ frontend/.dart_tool/
 frontend/ios/Pods/
 frontend/macos/Pods/
 frontend/windows/flutter/ephemeral/
+
+# ========================
+# GOOGLE CLOUD / CREDENCIALES
+# ========================
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!angular.json
+skins_generator/*.json
+project-*.json
+credentials.json
+client_secret.json

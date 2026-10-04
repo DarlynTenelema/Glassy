@@ -91,58 +91,62 @@ func SubmitScore(c *gin.Context) {
 		return
 	}
 
-	// Anti-cheat: límite razonable para Glassy.
-	// Diamante = 64 pts. Obteniendo ~1000 diamantes ya serían 64,000 puntos → techo justo.
-	if req.Score > 100_000 {
+	// Anti-cheat: límite elevado para permitir jugadores muy buenos,
+	// pero bloqueando puntajes absurdos (hacks de 99 millones).
+	if req.Score > 2_000_000 {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Score rejected: exceeds maximum allowed value"})
 		return
 	}
 
-	// Lógica de Recompensas por Jugar (Farming para Suscriptores)
-	var subTier string
-	var dailyFarmed int
-	var lastFarmDate time.Time
-
-	err := DB.QueryRow(`
-		SELECT subscription_tier, daily_lapis_farmed, last_farm_date 
-		FROM users WHERE id = $1
-	`, userID).Scan(&subTier, &dailyFarmed, &lastFarmDate)
-
+	// Lógica de Recompensas por Jugar (Farming para Suscriptores) con Transacción y Bloqueo (Anti-Race Condition)
+	tx, err := DB.Begin()
 	if err == nil {
-		// Resetear farming diario si es un nuevo día (UTC as base)
-		if lastFarmDate.Truncate(24 * time.Hour).Before(time.Now().Truncate(24 * time.Hour)) {
-			dailyFarmed = 0
-		}
+		var subTier string
+		var dailyFarmed int
+		var lastFarmDate time.Time
 
-		lapisToAward := 0
-		dailyMax := 0
+		err = tx.QueryRow(`
+			SELECT subscription_tier, daily_lapis_farmed, last_farm_date 
+			FROM users WHERE id = $1 FOR UPDATE
+		`, userID).Scan(&subTier, &dailyFarmed, &lastFarmDate)
 
-		switch subTier {
-		case "bronze":
-			lapisToAward = (req.Score / 1000) * 1
-			dailyMax = 18
-		case "silver":
-			lapisToAward = (req.Score / 1000) * 3
-			dailyMax = 53
-		case "gold":
-			lapisToAward = (req.Score / 1000) * 5
-			dailyMax = 54
-		}
-
-		if lapisToAward > 0 {
-			if dailyFarmed+lapisToAward > dailyMax {
-				lapisToAward = dailyMax - dailyFarmed
+		if err == nil {
+			// Resetear farming diario si es un nuevo día (UTC as base)
+			if lastFarmDate.Truncate(24 * time.Hour).Before(time.Now().Truncate(24 * time.Hour)) {
+				dailyFarmed = 0
 			}
+
+			lapisToAward := 0
+			dailyMax := 0
+
+			switch subTier {
+			case "bronze":
+				lapisToAward = (req.Score / 1000) * 1
+				dailyMax = 18
+			case "silver":
+				lapisToAward = (req.Score / 1000) * 3
+				dailyMax = 53
+			case "gold":
+				lapisToAward = (req.Score / 1000) * 5
+				dailyMax = 54
+			}
+
 			if lapisToAward > 0 {
-				_, _ = DB.Exec(`
-					UPDATE users 
-					SET crystals = crystals + $1, 
-					    daily_lapis_farmed = $2, 
-					    last_farm_date = CURRENT_DATE
-					WHERE id = $3
-				`, lapisToAward, dailyFarmed+lapisToAward, userID)
+				if dailyFarmed+lapisToAward > dailyMax {
+					lapisToAward = dailyMax - dailyFarmed
+				}
+				if lapisToAward > 0 {
+					_, _ = tx.Exec(`
+						UPDATE users 
+						SET crystals = crystals + $1, 
+						    daily_lapis_farmed = $2, 
+						    last_farm_date = CURRENT_DATE
+						WHERE id = $3
+					`, lapisToAward, dailyFarmed+lapisToAward, userID)
+				}
 			}
 		}
+		tx.Commit()
 	}
 
 	// UPSERT: solo actualiza si el nuevo score es MEJOR que el guardado.
@@ -238,7 +242,24 @@ const adRewardCrystals = 5
 func ClaimAdReward(c *gin.Context) {
 	userID := c.GetString("user_id")
 
-	_, err := DB.Exec(
+	// Prevenir farming abusivo (Race conditions y spam): Solo 1 recompensa y actualización atómica
+	// Nota: Si quieres un cooldown de tiempo, necesitarás una columna last_ad_reward en la DB.
+	// Por ahora evitamos race conditions con un lock.
+	tx, err := DB.Begin()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+	defer tx.Rollback()
+
+	var currentCrystals int
+	err = tx.QueryRow("SELECT crystals FROM users WHERE id = $1 FOR UPDATE", userID).Scan(&currentCrystals)
+	if err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "User not found"})
+		return
+	}
+
+	_, err = tx.Exec(
 		"UPDATE users SET crystals = crystals + $1 WHERE id = $2",
 		adRewardCrystals, userID,
 	)
@@ -246,6 +267,8 @@ func ClaimAdReward(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to add reward crystals"})
 		return
 	}
+	
+	tx.Commit()
 
 	c.JSON(http.StatusOK, gin.H{
 		"message":          "Ad reward claimed",
@@ -497,10 +520,34 @@ func BuySkin(c *gin.Context) {
 
 	var req struct {
 		SkinID string `json:"skin_id" binding:"required"`
-		Cost   int    `json:"cost" binding:"required"`
 	}
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request body"})
+		return
+	}
+
+	// Precios definidos en el servidor (fuente de verdad)
+	skinPrices := map[string]int{
+		"vida_marina":          300,
+		"Dinosaurios":          300,
+		"Dulces_de_Halloween":  600,
+		"Caldero_de_Bruja":     600,
+		"Cementerio_Encantado": 600,
+		"Cultivo_de_Calabazas": 600,
+		"Ajedrez_Magico":       600,
+		"Alquimia_Antigua":     600,
+		"Flores_Magicas":       600,
+		"Frutas_Jugosas":       600,
+		"Hongos_Brillantes":    600,
+		"Monstruos_de_Bolsillo": 600,
+		"Mundo_Dulce":          600,
+		"Planetas":             600,
+		"Sushi_Japones":        600,
+	}
+
+	actualCost, exists := skinPrices[req.SkinID]
+	if !exists {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Skin not found or unavailable"})
 		return
 	}
 
@@ -511,8 +558,8 @@ func BuySkin(c *gin.Context) {
 	}
 	defer tx.Rollback()
 
-	// 1. Verify and deduct crystals
-	res, err := tx.Exec("UPDATE users SET crystals = crystals - $1 WHERE id = $2 AND crystals >= $1", req.Cost, userID)
+	// 1. Verify and deduct crystals securely using server-side cost
+	res, err := tx.Exec("UPDATE users SET crystals = crystals - $1 WHERE id = $2 AND crystals >= $1", actualCost, userID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to process payment"})
 		return

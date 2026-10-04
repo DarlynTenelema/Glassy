@@ -258,7 +258,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: isClaimable ? () async {
-                  bool success = await AchievementsService().claimReward(groupId, level, total, reward);
+                  bool success = await AchievementsService().claimReward(groupId, level, total, reward, 'crystals');
                   if (success) {
                     _loadAchievements();
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: const Text('¡Logro Reclamado!'), backgroundColor: color));

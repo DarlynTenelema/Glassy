@@ -121,6 +121,10 @@ class UnityBridgeController {
     _sendToUnity('SET_SKIN', SetSkinPayload(skin_id: skinId).toJsonString());
   }
 
+  void updateCrystals(int crystals) {
+    _sendToUnity('UPDATE_CRYSTALS', CrystalsUpdatePayload(currentCrystals: crystals).toJsonString());
+  }
+
   void dispose() {
     _readyController.close();
     _scoreController.close();
