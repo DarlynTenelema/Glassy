@@ -6,6 +6,7 @@ import '../providers/game_provider.dart';
 import '../theme/app_theme.dart';
 import '../services/audio_service.dart';
 import '../services/purchase_service.dart';
+import '../widgets/animated_wallet.dart';
 
 class StoreScreen extends StatefulWidget {
   const StoreScreen({Key? key}) : super(key: key);
@@ -94,6 +95,10 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
           icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white, size: 22),
           onPressed: () => Navigator.pop(context),
         ),
+        actions: const [
+          Center(child: AnimatedWallet()),
+          SizedBox(width: 16),
+        ],
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: AppTheme.crystalBlue,

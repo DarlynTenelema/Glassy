@@ -11,6 +11,7 @@ import 'store_screen.dart';
 import 'skins_screen.dart';
 import '../services/audio_service.dart';
 import '../providers/game_provider.dart';
+import '../widgets/animated_wallet.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -176,32 +177,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       Row(
                         children: [
                           // Wallet
-                          Consumer<GameProvider>(
-                            builder: (context, gameProvider, child) {
-                              return Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                                decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.15),
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: Border.all(color: AppTheme.crystalBlue.withOpacity(0.5)),
-                                ),
-                                child: Row(
-                                  children: [
-                                    const Icon(Icons.diamond, color: AppTheme.crystalBlue, size: 18),
-                                    const SizedBox(width: 6),
-                                    Text(
-                                      '${gameProvider.crystals}',
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            },
-                          ),
+                          const AnimatedWallet(),
                           const SizedBox(width: 12),
                           // Botón Settings
                           ClipRRect(

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -355,6 +356,7 @@ func VerifyPurchase(c *gin.Context) {
 	if strings.HasPrefix(req.ProductID, "sub_") {
 		sub, err := service.Purchases.Subscriptionsv2.Get(packageName, req.PurchaseToken).Do()
 		if err != nil {
+			log.Printf("Error verifying subscription with Google: %v", err)
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid subscription receipt"})
 			return
 		}
@@ -367,6 +369,7 @@ func VerifyPurchase(c *gin.Context) {
 	} else {
 		purchase, err := service.Purchases.Products.Get(packageName, req.ProductID, req.PurchaseToken).Do()
 		if err != nil {
+			log.Printf("Error verifying purchase with Google: %v", err)
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid purchase receipt"})
 			return
 		}
