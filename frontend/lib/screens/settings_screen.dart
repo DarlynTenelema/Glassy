@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../theme/app_theme.dart';
 import '../widgets/ui/glass_card.dart';
 import '../services/audio_service.dart';
+import '../services/auth_service.dart';
 import 'login_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -117,7 +118,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const Spacer(),
             TextButton(
               onPressed: () async {
-                await Supabase.instance.client.auth.signOut();
+                await AuthService().signOut();
                 if (mounted) {
                   Navigator.pushAndRemoveUntil(
                     context, 

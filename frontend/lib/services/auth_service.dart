@@ -1,4 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import '../config/env.dart';
 
 class AuthService {
   static final AuthService _instance = AuthService._internal();
@@ -27,6 +29,10 @@ class AuthService {
   }
 
   Future<void> signOut() async {
+    try {
+      final googleSignIn = GoogleSignIn(serverClientId: Env.webClientId);
+      await googleSignIn.signOut();
+    } catch (_) {}
     await _supabase.auth.signOut();
   }
 }

@@ -106,8 +106,27 @@ func AuthMiddleware() gin.HandlerFunc {
 		}
 
 		c.Set("user_id", userID)
+		EnsureUserExists(userID)
 		c.Next()
 	}
+}
+
+// EnsureUserExists auto-recupera la fila del jugador en public.users si por alguna razón
+// (pruebas, reseteo manual de tablas, etc.) existe en auth.users pero falta en public.users.
+func EnsureUserExists(userID string) {
+	if DB == nil || userID == "" {
+		return
+	}
+	_, _ = DB.Exec(`
+		INSERT INTO users (id, email, name, avatar_url, crystals, invite_code)
+		SELECT id, email, 
+		       COALESCE(raw_user_meta_data->>'full_name', raw_user_meta_data->>'name', 'Jugador'),
+		       COALESCE(raw_user_meta_data->>'avatar_url', ''), 
+		       100,
+		       SUBSTRING(REPLACE(gen_random_uuid()::text, '-', '') FROM 1 FOR 8)
+		FROM auth.users WHERE id = $1
+		ON CONFLICT (id) DO NOTHING
+	`, userID)
 }
 
 // SetReferralCode permite a un usuario registrar el código del influencer

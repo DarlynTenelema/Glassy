@@ -105,6 +105,8 @@ extern void Collider2D_get_shapeCount_Injected_m86A4F27A7DDEAE1DF509BA48829837D8
 extern void Collider2D_GetShapeHash_Injected_m8DD0A4DE2F43628D0203D67DD3C58E1E0FB4FA3C (void);
 extern void Collider2D_GetShapes_Internal_Injected_m9EAB6716784E4242419C41592ADBEFC2E5DA9A2A (void);
 extern void Collider2D_GetShapeBounds_Injected_m682D5C097BBA4C641F9EE4BD2D2F6E6124C93D16 (void);
+extern void CircleCollider2D_set_radius_m468ECCD06634C48E6837A55B9E8D056BBF15FC52 (void);
+extern void CircleCollider2D_set_radius_Injected_m7CA8870663E60ABB7E68F7EFE71C9E9CB1B45915 (void);
 extern void EdgeCollider2D_set_points_mFF49E39867F376E313D50F57531C28A1F715D02F (void);
 extern void EdgeCollider2D__ctor_mEFFC70C11EFA43456B9A41CEFFACD61A4D1B71DE (void);
 extern void EdgeCollider2D_set_points_Injected_m8509A8C035D9CA19B6A39C3A96505F93586940FC (void);
@@ -124,7 +126,7 @@ extern void SpringJoint2D_set_autoConfigureDistance_Injected_mACCFFD006C45E5F1D6
 extern void SpringJoint2D_set_distance_Injected_mB97AA1E63CC48F7D539E438A4E115E3348AD7973 (void);
 extern void SpringJoint2D_set_dampingRatio_Injected_m3C0A90A23253AE5D05F129082BA1FAF08BC1EE06 (void);
 extern void SpringJoint2D_set_frequency_Injected_mA3CC4C66346545606A699D08672CBF7BC6026E01 (void);
-static Il2CppMethodPointer s_methodPointers[117] = 
+static Il2CppMethodPointer s_methodPointers[119] = 
 {
 	EmbeddedAttribute__ctor_mE32B5DE5092BC424BF999934C815A842F8797063,
 	RefSafetyRulesAttribute__ctor_mF7B7F3C7A1E03599B4AE35353B0456843421B10E,
@@ -224,6 +226,8 @@ static Il2CppMethodPointer s_methodPointers[117] =
 	Collider2D_GetShapeHash_Injected_m8DD0A4DE2F43628D0203D67DD3C58E1E0FB4FA3C,
 	Collider2D_GetShapes_Internal_Injected_m9EAB6716784E4242419C41592ADBEFC2E5DA9A2A,
 	Collider2D_GetShapeBounds_Injected_m682D5C097BBA4C641F9EE4BD2D2F6E6124C93D16,
+	CircleCollider2D_set_radius_m468ECCD06634C48E6837A55B9E8D056BBF15FC52,
+	CircleCollider2D_set_radius_Injected_m7CA8870663E60ABB7E68F7EFE71C9E9CB1B45915,
 	EdgeCollider2D_set_points_mFF49E39867F376E313D50F57531C28A1F715D02F,
 	EdgeCollider2D__ctor_mEFFC70C11EFA43456B9A41CEFFACD61A4D1B71DE,
 	EdgeCollider2D_set_points_Injected_m8509A8C035D9CA19B6A39C3A96505F93586940FC,
@@ -259,7 +263,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_Physics2DModule_CodeGenM
 const Il2CppCodeGenModule g_UnityEngine_Physics2DModule_CodeGenModule = 
 {
 	"UnityEngine.Physics2DModule.dll",
-	117,
+	119,
 	s_methodPointers,
 	4,
 	s_adjustorThunks,

@@ -50,6 +50,10 @@ class _LoginScreenState extends State<LoginScreen> {
         final GoogleSignIn googleSignIn = GoogleSignIn(
           serverClientId: Env.webClientId,
         );
+        // Forzar a Google a limpiar la caché para que SIEMPRE pregunte qué cuenta usar
+        try {
+          await googleSignIn.signOut();
+        } catch (_) {}
         googleUser = await googleSignIn.signIn();
         if (googleUser == null) {
           if (mounted) {
@@ -214,7 +218,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 14),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40),
+                    child: Text(
+                      'Al jugar, aceptas nuestros Términos de Servicio y Política de Privacidad.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white.withValues(alpha: 0.6),
+                        fontSize: 11,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Text(
