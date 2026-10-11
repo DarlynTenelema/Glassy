@@ -10,11 +10,11 @@ class ShatterWidget extends StatefulWidget {
   final Duration duration;
 
   const ShatterWidget({
-    Key? key,
+    super.key,
     required this.child,
     required this.isShattered,
     this.duration = const Duration(milliseconds: 1500),
-  }) : super(key: key);
+  });
 
   @override
   State<ShatterWidget> createState() => _ShatterWidgetState();

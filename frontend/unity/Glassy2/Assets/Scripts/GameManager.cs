@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     public bool IsGameOver    { get; private set; } = false;
 
     // Track active gems for performance (O(1) add/remove avoids FindObjectsByType)
+    [System.NonSerialized]
     public HashSet<Gem> activeGems = new HashSet<Gem>();
 
     // =========================================================================
@@ -54,6 +55,10 @@ public class GameManager : MonoBehaviour
     private int _comboMultiplier = 1;
     private int _accumulatedComboScore = 0;
     private int _chainReactionMultiplier = 1;
+
+    // Combo timer
+    private float _comboTimer = 0f;
+    private const float COMBO_TIME_LIMIT = 3f;
 
     private int _lastSentScore = -1;
     private int _lastSentCrystals = -1;
@@ -90,6 +95,13 @@ public class GameManager : MonoBehaviour
             gameObject.AddComponent<MissionManager>();
             Debug.Log("[GameManager] MissionManager instanciado dinámicamente.");
         }
+
+        if (SkinManager.Instance == null)
+        {
+            GameObject skinObj = new GameObject("SkinManager");
+            skinObj.AddComponent<SkinManager>();
+            Debug.Log("[GameManager] SkinManager instanciado dinámicamente.");
+        }
     }
 
     private void OnEnable()
@@ -97,7 +109,6 @@ public class GameManager : MonoBehaviour
         if (FlutterBridgeManager.Instance != null)
         {
             FlutterBridgeManager.Instance.OnPauseGameRequested  += HandlePauseRequest;
-            FlutterBridgeManager.Instance.OnPowerUpRequested    += HandlePowerUpRequest;
             FlutterBridgeManager.Instance.OnAudioSettingsRequested += HandleAudioSettings;
             FlutterBridgeManager.Instance.OnAuthTokenReceived   += HandleAuthToken;
             FlutterBridgeManager.Instance.OnCrystalsUpdateReceived += HandleCrystalsUpdate;
@@ -109,7 +120,6 @@ public class GameManager : MonoBehaviour
         if (FlutterBridgeManager.Instance != null)
         {
             FlutterBridgeManager.Instance.OnPauseGameRequested  -= HandlePauseRequest;
-            FlutterBridgeManager.Instance.OnPowerUpRequested    -= HandlePowerUpRequest;
             FlutterBridgeManager.Instance.OnAudioSettingsRequested -= HandleAudioSettings;
             FlutterBridgeManager.Instance.OnAuthTokenReceived   -= HandleAuthToken;
             FlutterBridgeManager.Instance.OnCrystalsUpdateReceived -= HandleCrystalsUpdate;
@@ -146,16 +156,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"[GameManager] Cristales sincronizados desde backend: {LocalCrystals}");
     }
 
-    private void HandlePowerUpRequest(PowerUpPayload payload)
-    {
-        switch (payload.powerUpType)
-        {
-            case "UsePowerUpPearl": UsePowerUpPearl(); break;
-            case "UsePowerUpEmerald": UsePowerUpEmerald(); break;
-            case "UsePowerUpAll": UsePowerUpAll(); break;
-            default: UsePowerUpHighlighted(); break;
-        }
-    }
+
 
     private void Start()
     {
@@ -165,32 +166,28 @@ public class GameManager : MonoBehaviour
         // Cargar lapislázulis guardados localmente (se sincroniza con el servidor al entrar)
         LocalCrystals = PlayerPrefs.GetInt(GameConfig.KeyCrystals, 100);
 
-        // Sincronizar lapislázulis con el servidor si hay conexión
-        /* 
-        if (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
-        {
-            ApiManager.Instance?.GetWallet(crystals =>
-            {
-                if (crystals >= 0)
-                {
-                    LocalCrystals = crystals;
-                    PlayerPrefs.SetInt(GameConfig.KeyCrystals, crystals);
-                    PlayerPrefs.Save();
-                }
-                UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
-            });
-        }
-        */
-
         UIManager.Instance?.UpdateScoreDisplay(0);
         UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
         
         // Enviar estado inicial a Flutter
         SincronizarScore();
-        SincronizarCristales();
+        // NO sincronizamos cristales aquí porque Unity tiene un valor local desactualizado
+        // y Flutter es la fuente de la verdad inicial. Flutter enviará UPDATE_CRYSTALS al recibir READY.
         if (FlutterBridgeManager.Instance != null)
         {
             FlutterBridgeManager.Instance.SendReady();
+        }
+    }
+
+    private void Update()
+    {
+        if (_currentComboType != null)
+        {
+            _comboTimer -= Time.deltaTime;
+            if (_comboTimer <= 0f)
+            {
+                BreakCombo();
+            }
         }
     }
 
@@ -237,6 +234,26 @@ public class GameManager : MonoBehaviour
         SincronizarScore();
     }
 
+    private void BreakCombo()
+    {
+        if (_currentComboType == null) return;
+
+        int bonus = _accumulatedComboScore * _comboMultiplier;
+        if (bonus > 0 && _comboMultiplier > 1) 
+        {
+            AddScore(bonus);
+            Debug.Log($"[COMBO] Racha finalizada! Cobrando bono: {bonus} puntos");
+            if (FlutterBridgeManager.Instance != null) {
+                FlutterBridgeManager.Instance.SendComboBonus(bonus, _comboMultiplier);
+            }
+        }
+
+        _currentComboType = null;
+        _comboMultiplier = 1;
+        _accumulatedComboScore = 0;
+        AudioManager.Instance?.ResetPitch();
+    }
+
     /// <summary>
     /// Maneja toda la lógica de puntuación adictiva: Combos, Reacciones en Cadena y Salvadas Épicas.
     /// Llamado desde Gem.cs cuando dos gemas se fusionan.
@@ -264,37 +281,35 @@ public class GameManager : MonoBehaviour
             {
                 _currentComboType = mergedType;
                 _comboMultiplier = 1;
-                _accumulatedComboScore = 0;
+                _accumulatedComboScore = basePoints;
+                _comboTimer = COMBO_TIME_LIMIT;
                 AudioManager.Instance?.ResetPitch();
             }
             else if (_currentComboType == mergedType)
             {
                 // Continúa la racha de la misma gema
                 _comboMultiplier++;
+                _accumulatedComboScore += basePoints;
+                _comboTimer = COMBO_TIME_LIMIT; // Reset timer
                 AudioManager.Instance?.IncreasePitch();
+                
+                // NOTIFICAR EN TIEMPO REAL (Feedback visual interactivo)
+                if (FlutterBridgeManager.Instance != null) {
+                    FlutterBridgeManager.Instance.SendComboBonus(_accumulatedComboScore * _comboMultiplier, _comboMultiplier);
+                }
             }
             else
             {
                 // SE CORTA LA RACHA -> COBRAR BONO MASIVO
-                int bonus = _accumulatedComboScore * _comboMultiplier;
-                if (bonus > 0 && _comboMultiplier > 1) 
-                {
-                    AddScore(bonus);
-                    Debug.Log($"[COMBO] Racha rota! Cobrando bono: {bonus} puntos");
-                    if (FlutterBridgeManager.Instance != null) {
-                        FlutterBridgeManager.Instance.SendComboBonus(bonus, _comboMultiplier);
-                    }
-                }
+                BreakCombo();
 
                 // Iniciar nueva racha con la nueva gema
                 _currentComboType = mergedType;
                 _comboMultiplier = 1;
-                _accumulatedComboScore = 0;
+                _accumulatedComboScore = basePoints;
+                _comboTimer = COMBO_TIME_LIMIT;
                 AudioManager.Instance?.ResetPitch();
             }
-            
-            // Acumular los puntos base de la gema fusionada en este combo
-            _accumulatedComboScore += basePoints;
         }
 
         // 3. PUNTOS DEL MERGE ACTUAL (Se multiplican si hay reacción en cadena)
@@ -326,167 +341,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // =========================================================================
-    // Lapislázulis (balance local, sincronizado con servidor en tiempo real)
-    // =========================================================================
 
-    public void AddCrystals(int amount)
-    {
-        if (amount == 0) return;
-        LocalCrystals += amount;
-        PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
-        PlayerPrefs.Save();
-        UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
-        
-        // Sincronizar lapislázulis con Flutter solo si cambiaron
-        SincronizarCristales();
-    }
-
-    public bool SpendCrystalsToRemoveGems(GemType type)
-    {
-        // Permitimos Pearl y Emerald libremente, O la gema que esté resaltada en rojo por peligro
-        bool isHighlighted = GemHighlightManager.Instance != null && GemHighlightManager.Instance.HighlightedType == type;
-
-        if (type != GemType.Pearl && type != GemType.Emerald && !isHighlighted)
-        {
-            Debug.LogWarning($"[GameManager] No se permite eliminar {type} a menos que esté resaltada.");
-            return false;
-        }
-
-        int cost = GameConfig.GemCrystalCosts[(int)type];
-        if (LocalCrystals < cost) return false;
-
-        // Si el usuario elige Perlas, pausamos el spawner por 5 segundos
-        // y dejamos que el código de abajo destruya las perlas existentes.
-        if (type == GemType.Pearl)
-        {
-            GemSpawner spawner = FindAnyObjectByType<GemSpawner>();
-            if (spawner != null)
-            {
-                spawner.PauseSpawningFor(5f);
-            }
-            Debug.Log($"[GameManager] Spawner de perlas pausado por 5 segundos.");
-        }
-
-        // Eliminar todas las gemas de ese tipo que existan usando la colección cacheada
-        int removed = 0;
-        int pointsToAdd = 0;
-        List<Gem> gemsToDestroy = new List<Gem>();
-        
-        foreach (Gem gem in activeGems)
-        {
-            if (gem != null && gem.gemType == type)
-            {
-                pointsToAdd += gem.ScoreValue;
-                gemsToDestroy.Add(gem);
-                removed++;
-            }
-        }
-
-        foreach (Gem gem in gemsToDestroy)
-        {
-            Destroy(gem.gameObject);
-        }
-
-        if (removed > 0 || type == GemType.Pearl)
-        {
-            LocalCrystals -= cost;
-            PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
-            PlayerPrefs.Save();
-            UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
-            SincronizarCristales();
-            
-            // Sumar al score los puntos de las gemas eliminadas
-            if (pointsToAdd > 0)
-            {
-                AddScore(pointsToAdd);
-            }
-
-            Debug.Log($"[GameManager] Eliminadas {removed} gemas de tipo {type}. Puntos sumados: {pointsToAdd}. Lapislázulis restantes: {LocalCrystals}");
-        }
-
-        return true;
-    }
-
-    public bool SpendCrystalsToRemoveAllGems()
-    {
-        int cost = GameConfig.ClearAllCrystalCost;
-        if (LocalCrystals < cost) return false;
-
-        int removed = 0;
-        int pointsToAdd = 0;
-        List<Gem> gemsToDestroy = new List<Gem>();
-        
-        foreach (Gem gem in activeGems)
-        {
-            if (gem != null)
-            {
-                pointsToAdd += gem.ScoreValue;
-                gemsToDestroy.Add(gem);
-                removed++;
-            }
-        }
-
-        foreach (Gem gem in gemsToDestroy)
-        {
-            Destroy(gem.gameObject);
-        }
-
-        if (removed > 0)
-        {
-            GemSpawner spawner = FindAnyObjectByType<GemSpawner>();
-            if (spawner != null)
-            {
-                spawner.PauseSpawningFor(1f);
-            }
-
-            LocalCrystals -= cost;
-            PlayerPrefs.SetInt(GameConfig.KeyCrystals, LocalCrystals);
-            PlayerPrefs.Save();
-            UIManager.Instance?.UpdateCrystalDisplay(LocalCrystals);
-            SincronizarCristales();
-            
-            if (pointsToAdd > 0)
-            {
-                AddScore(pointsToAdd);
-            }
-
-            Debug.Log($"[GameManager] Eliminadas TODAS las {removed} gemas. Puntos sumados: {pointsToAdd}. Lapislázulis restantes: {LocalCrystals}");
-        }
-
-        return true;
-    }
-
-    // =========================================================================
-    // WRAPPERS PARA FLUTTER
-    // =========================================================================
-
-    public void UsePowerUpPearl(string args = "")
-    {
-        SpendCrystalsToRemoveGems(GemType.Pearl);
-    }
-
-    public void UsePowerUpEmerald(string args = "")
-    {
-        SpendCrystalsToRemoveGems(GemType.Emerald);
-    }
-
-    public void UsePowerUpHighlighted(string args = "")
-    {
-        if (GemHighlightManager.Instance != null && GemHighlightManager.Instance.HighlightedType.HasValue)
-        {
-            SpendCrystalsToRemoveGems(GemHighlightManager.Instance.HighlightedType.Value);
-        }
-        else
-        {
-            Debug.Log("[GameManager] No hay gemas resaltadas para eliminar.");
-        }
-    }
-
-    public void UsePowerUpAll(string args = "")
-    {
-        SpendCrystalsToRemoveAllGems();
-    }
 
     // =========================================================================
     // PAUSA
@@ -553,7 +408,6 @@ public class GameManager : MonoBehaviour
         }
         */
         
-        // Notificar a Flutter que el juego terminó
         if (FlutterBridgeManager.Instance != null)
         {
             // Opcional: calcular si hay un high score. Por ahora pasamos false o implementamos la lógica.
@@ -570,14 +424,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SincronizarCristales()
-    {
-        if (FlutterBridgeManager.Instance != null && LocalCrystals != _lastSentCrystals)
-        {
-            FlutterBridgeManager.Instance.SendCrystalsUpdate(LocalCrystals);
-            _lastSentCrystals = LocalCrystals;
-        }
-    }
+
 
     /// <summary>
     /// Suma los puntos de todas las gemas que permanecen en el tablero al terminar.

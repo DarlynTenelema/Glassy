@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 292
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,10 +131,10 @@ TextureImporter:
       name: peridoto_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 66
-        width: 230
-        height: 232
+        x: 184
+        y: 213
+        width: 659
+        height: 601
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
-import '../theme/app_theme.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -54,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F172A), // Dark blueish background
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor, // Dark blueish background
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: Stack(
@@ -71,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                       borderRadius: BorderRadius.circular(30),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.blueAccent.withOpacity(0.3),
+                          color: Colors.blueAccent.withValues(alpha: 0.3),
                           blurRadius: 40,
                           spreadRadius: 10,
                         ),
@@ -112,7 +111,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                   Text(
                     'Glassy © 2026',
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withValues(alpha: 0.7),
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
@@ -121,7 +120,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                   Text(
                     'Juega, relájate y disfruta',
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.5),
+                      color: Colors.white.withValues(alpha: 0.5),
                       fontSize: 12,
                     ),
                   ),
@@ -129,7 +128,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                   Text(
                     'All Rights Reserved.',
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.5),
+                      color: Colors.white.withValues(alpha: 0.5),
                       fontSize: 12,
                     ),
                   ),

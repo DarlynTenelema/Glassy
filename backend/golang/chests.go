@@ -70,11 +70,11 @@ func OpenTimeChest(c *gin.Context) {
 	fragments += config.Fragments
 	crystalsAdded := 0
 
-	// Lógica de conversión: 100 fragmentos = 10 lapislázulis
+	// Lógica de conversión: 100 fragmentos = 1 lapislázuli (regla unificada del servidor)
 	for fragments >= 100 {
 		fragments -= 100
-		crystals += 10
-		crystalsAdded += 10
+		crystals += 1
+		crystalsAdded += 1
 	}
 
 	// Actualizar base de datos

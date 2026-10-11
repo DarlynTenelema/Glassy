@@ -1,3 +1,4 @@
+import 'package:glassy/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -5,14 +6,13 @@ import '../config/env.dart';
 import '../theme/app_theme.dart';
 import 'home_screen.dart';
 import '../widgets/gaming_button.dart';
-import '../widgets/jar_loading_widget.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../widgets/shatter_widget.dart';
 import '../services/audio_service.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -124,9 +124,9 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           // Fondo animado / Gradiente
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [AppTheme.deepLapis, Color(0xFF0F2027), Color(0xFF203A43)],
+                colors: [AppColors.navyBlue, Theme.of(context).scaffoldBackgroundColor, Theme.of(context).colorScheme.surface],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -147,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       letterSpacing: 2,
                       shadows: [
                         const Shadow(
-                          color: AppTheme.crystalBlue,
+                          color: AppColors.lightBlue,
                           blurRadius: 20,
                         )
                       ],
@@ -169,21 +169,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Colors.black.withOpacity(0.3),
-                        hintText: 'CÓDIGO DE CREADOR (Opcional)',
+                        fillColor: Colors.black.withValues(alpha: 0.3),
+                        hintText: 'CÓDIGO DE AMIGO O CREADOR (Opcional)',
                         hintStyle: const TextStyle(color: Colors.white54, fontSize: 13, letterSpacing: 1),
-                        prefixIcon: const Icon(Icons.star_rounded, color: AppTheme.crystalBlue),
+                        prefixIcon: const Icon(Icons.card_giftcard, color: AppColors.lightBlue),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide.none,
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(color: AppTheme.crystalBlue.withOpacity(0.3)),
+                          borderSide: BorderSide(color: AppColors.lightBlue.withValues(alpha: 0.3)),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
-                          borderSide: const BorderSide(color: AppTheme.crystalBlue),
+                          borderSide: const BorderSide(color: AppColors.lightBlue),
                         ),
                       ),
                     ),
@@ -207,8 +207,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           onPressed: _signInWithGoogle,
-                          primaryColor: AppTheme.crystalBlue,
-                          secondaryColor: AppTheme.crystalBlue,
+                          primaryColor: AppColors.lightBlue,
+                          secondaryColor: AppColors.lightBlue,
                           shatterEffect: false, // ShatterWidget controla la magia
                         ),
                       ),

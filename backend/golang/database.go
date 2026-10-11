@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	_ "github.com/lib/pq"
 )
@@ -25,6 +26,12 @@ func InitDB() {
 	if err != nil {
 		log.Fatal("Failed to open database connection:", err)
 	}
+
+	// Configuración de Connection Pool para producción (Supabase / Railway)
+	// Evita que múltiples peticiones saturen las conexiones permitidas de PostgreSQL
+	DB.SetMaxOpenConns(25)
+	DB.SetMaxIdleConns(5)
+	DB.SetConnMaxLifetime(5 * time.Minute)
 
 	// Validar que la conexión real funciona
 	if err = DB.Ping(); err != nil {
@@ -63,6 +70,8 @@ func ensureTables() {
 		last_chest_6h       TIMESTAMP   DEFAULT NULL,
 		last_chest_12h      TIMESTAMP   DEFAULT NULL,
 		last_chest_24h      TIMESTAMP   DEFAULT NULL,
+		invite_code         VARCHAR(8)  UNIQUE,
+		total_score         BIGINT      NOT NULL DEFAULT 0,
 		created_at          TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP
 	);
 
@@ -81,6 +90,13 @@ func ensureTables() {
 	ALTER TABLE users ADD COLUMN IF NOT EXISTS welcome_pack_500_bought BOOLEAN NOT NULL DEFAULT FALSE;
 	ALTER TABLE users ADD COLUMN IF NOT EXISTS welcome_pack_2000_bought BOOLEAN NOT NULL DEFAULT FALSE;
 	ALTER TABLE users ADD COLUMN IF NOT EXISTS welcome_pack_5000_bought BOOLEAN NOT NULL DEFAULT FALSE;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS invite_code VARCHAR(8) UNIQUE;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS total_score BIGINT NOT NULL DEFAULT 0;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS last_ad_claim TIMESTAMP DEFAULT NULL;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS daily_ads_claimed INT NOT NULL DEFAULT 0;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS last_ad_date DATE DEFAULT CURRENT_DATE;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS subscription_expires_at TIMESTAMP WITH TIME ZONE DEFAULT NULL;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS last_score_at TIMESTAMP WITH TIME ZONE DEFAULT NULL;
 
 	-- ============================================================
 	-- TABLA: leaderboards

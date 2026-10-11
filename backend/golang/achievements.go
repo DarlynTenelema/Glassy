@@ -28,6 +28,12 @@ var AchievementsMap = map[int]map[int]AchievementDef{
 		2: {GoalTotal: 500, Reward: 50, RewardType: "fragments"},
 		3: {GoalTotal: 1000, Reward: 20, RewardType: "lapis"},
 	},
+	7: { // Compartir con amigos (10 amigos invitados)
+		1: {GoalTotal: 10, Reward: 0, RewardType: "skin_Metales_Preciosos"},
+	},
+	9: { // TikTok (Aprobado manualmente)
+		1: {GoalTotal: 1, Reward: 1000, RewardType: "fragments"},
+	},
 }
 
 // SubmitTikTokLink recibe el enlace de TikTok (Grupo 9) y lo marca como pendiente
@@ -62,7 +68,7 @@ func SubmitTikTokLink(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "TikTok link submitted successfully. Reward pending review (24h)."})
 }
 
-// UpdateAchievementProgress actualiza el progreso de un logro (Ej: Fusionar 1000 esmeraldas)
+// UpdateAchievementProgress actualiza el progreso de un logro del juego (Ej: partidas o gemas)
 // POST /api/player/achievements/progress
 func UpdateAchievementProgress(c *gin.Context) {
 	userID := c.GetString("user_id")
@@ -70,10 +76,25 @@ func UpdateAchievementProgress(c *gin.Context) {
 	var req struct {
 		GroupID       int `json:"group_id" binding:"required"`
 		Level         int `json:"level" binding:"required"`
-		ProgressAdded int `json:"progress_added" binding:"required,min=1"`
+		ProgressAdded int `json:"progress_added" binding:"required,min=1,max=100"`
 	}
 	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request: progress_added must be between 1 and 100"})
+		return
+	}
+
+	// SEGURIDAD ZERO-TRUST:
+	// El Grupo 7 (Amigos invitados -> Skin Metales Preciosos) solo se progresa desde el servidor
+	// cuando otro jugador canjea el código en SetReferralCode.
+	// El Grupo 9 (TikTok) solo se progresa tras aprobación manual.
+	if req.GroupID == 7 || req.GroupID == 9 {
+		c.JSON(http.StatusForbidden, gin.H{"error": "This achievement group cannot be progressed directly by client"})
+		return
+	}
+
+	// Validar que el grupo exista en la definición del servidor
+	if _, exists := AchievementsMap[req.GroupID]; !exists {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid achievement group"})
 		return
 	}
 
@@ -163,7 +184,7 @@ func ClaimAchievementReward(c *gin.Context) {
 		return
 	}
 
-	// Dar recompensa (lapislázulis o fragmentos)
+	// Dar recompensa (lapislázulis, fragmentos o skin)
 	if achievement.RewardType == "fragments" {
 		_, err = tx.Exec(`UPDATE users SET lapis_fragments = lapis_fragments + $1 WHERE id = $2`, achievement.Reward, userID)
 		if err != nil {
@@ -182,6 +203,18 @@ func ClaimAchievementReward(c *gin.Context) {
 				SET crystals = crystals + $1, lapis_fragments = $2 
 				WHERE id = $3
 			`, crystalsToAdd, remainingFragments, userID)
+		}
+	} else if strings.HasPrefix(achievement.RewardType, "skin_") {
+		skinID := strings.TrimPrefix(achievement.RewardType, "skin_")
+		// Desbloquear skin en user_skins (tabla: id, user_id, skin_id, created_at)
+		_, err = tx.Exec(`
+			INSERT INTO user_skins (user_id, skin_id)
+			VALUES ($1, $2)
+			ON CONFLICT (user_id, skin_id) DO NOTHING
+		`, userID, skinID)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to unlock skin"})
+			return
 		}
 	} else {
 		_, err = tx.Exec(`UPDATE users SET crystals = crystals + $1 WHERE id = $2`, achievement.Reward, userID)

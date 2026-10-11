@@ -1,10 +1,12 @@
+import 'package:glassy/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/game_provider.dart';
 import '../theme/app_theme.dart';
+import 'ui/currency_icon.dart';
 
 class AnimatedWallet extends StatefulWidget {
-  const AnimatedWallet({Key? key}) : super(key: key);
+  const AnimatedWallet({super.key});
 
   @override
   State<AnimatedWallet> createState() => _AnimatedWalletState();
@@ -30,8 +32,8 @@ class _AnimatedWalletState extends State<AnimatedWallet> with SingleTickerProvid
     ]).animate(_bumpController);
 
     _colorAnimation = ColorTween(
-      begin: AppTheme.crystalBlue.withOpacity(0.0),
-      end: AppTheme.crystalBlue.withOpacity(0.6),
+      begin: AppColors.lightBlue.withValues(alpha: 0.0),
+      end: AppColors.lightBlue.withValues(alpha: 0.6),
     ).animate(CurvedAnimation(parent: _bumpController, curve: Curves.easeOut));
     
     _bumpController.addListener(() {
@@ -61,9 +63,9 @@ class _AnimatedWalletState extends State<AnimatedWallet> with SingleTickerProvid
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.15),
+              color: Colors.white.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(25),
-              border: Border.all(color: AppTheme.crystalBlue.withOpacity(0.7), width: 1.5),
+              border: Border.all(color: AppColors.lightBlue.withValues(alpha: 0.7), width: 1.5),
               boxShadow: [
                 BoxShadow(
                   color: _colorAnimation.value ?? Colors.transparent,
@@ -75,12 +77,7 @@ class _AnimatedWalletState extends State<AnimatedWallet> with SingleTickerProvid
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Image.asset(
-                  'assets/images/lapislazuli.png', 
-                  width: 20, 
-                  height: 20, 
-                  errorBuilder: (c, e, s) => const Icon(Icons.diamond, color: AppTheme.crystalBlue, size: 20)
-                ),
+                CurrencyIcon(size: 20),
                 const SizedBox(width: 8),
                 TweenAnimationBuilder<int>(
                   tween: IntTween(begin: gameProvider.crystals, end: gameProvider.crystals), 

@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
-import '../services/storage_service.dart';
 
 class GameApiService {
   static final GameApiService _instance = GameApiService._internal();
@@ -42,28 +41,11 @@ class GameApiService {
   }
 
   Future<void> submitScoreWithRetry(int score) async {
-    bool success = await submitScore(score);
-    if (!success) {
-      final storage = StorageService();
-      int pending = storage.getInt('pending_score', defaultValue: 0);
-      if (score > pending) {
-        await storage.setInt('pending_score', score);
-        debugPrint('Score $score guardado en local para reintento por falta de red');
-      }
-    }
+    await submitScore(score);
   }
 
   Future<void> syncPendingScore() async {
-    final storage = StorageService();
-    int pending = storage.getInt('pending_score', defaultValue: 0);
-    if (pending > 0) {
-      debugPrint('Intentando sincronizar score guardado localmente: $pending');
-      bool success = await submitScore(pending);
-      if (success) {
-        await storage.setInt('pending_score', 0);
-        debugPrint('Score local $pending sincronizado con éxito');
-      }
-    }
+    // En la arquitectura Zero-Trust no se procesan puntuaciones guardadas en texto plano local.
   }
 
   Future<bool> updateMissionProgress(int progressAdded) async {

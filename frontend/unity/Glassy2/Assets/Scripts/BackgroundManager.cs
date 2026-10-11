@@ -27,12 +27,10 @@ public class BackgroundManager : MonoBehaviour
         string skinId = SkinManager.Instance != null ? SkinManager.Instance.CurrentSkinId : "gemas_clasicas";
         string texPath = (skinId == "gemas_clasicas") ? "fondo" : $"Skins/{skinId}/wallpaper";
         
-        // Cargar la textura desde Resources
-        Texture2D tex = Resources.Load<Texture2D>(texPath);
-        if (tex != null)
+        // Cargar el Sprite directamente desde Resources
+        Sprite bgSprite = Resources.Load<Sprite>(texPath);
+        if (bgSprite != null)
         {
-            // Crear el sprite
-            Sprite bgSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100f);
             sr.sprite = bgSprite;
             AdjustScale();
         }

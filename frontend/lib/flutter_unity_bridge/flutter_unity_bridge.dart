@@ -1,4 +1,4 @@
-library flutter_unity_bridge;
+library;
 
 export 'src/models/bridge_message.dart';
 export 'src/models/payloads.dart';

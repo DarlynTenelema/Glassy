@@ -1,111 +1,126 @@
-# ========================
-# SECRETOS Y CREDENCIALES
-# ========================
-backend/.env
-backend/**/.env
-frontend/.env
-frontend/.env.*
-!frontend/.env.example
+# ============================================================
+# SECRETOS, VARIABLES DE ENTORNO Y CREDENCIALES
+# ============================================================
+# Archivos de variables de entorno (.env) en cualquier carpeta
+**/.env
+**/.env.*
 *.env
 .env
 .env.*
 !.env.example
-*credentials*.json
-*service_account*.json
-glassy-*.json
+!*.env.example
+!**/.env.example
 
-# ========================
+# Archivos JSON de credenciales, tokens y cuentas de servicio
+*credentials*.json
+*credential*.json
+*service_account*.json
+*service-account*.json
+*serviceAccount*.json
+*client_secret*.json
+*secret*.json
+glassy-*.json
+project-*.json
+google-services.json
+GoogleService-Info.plist
+gcp-*.json
+firebase-*.json
+skins_generator/*.json
+Otros/skins_generator/*.json
+**/secrets/*.json
+**/credentials/*.json
+**/auth/*.json
+
+# Certificados, claves privadas y keystores
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+*.pkcs12
+*.cer
+*.crt
+*.der
+
+# Android / Gradle claves y propiedades locales
+local.properties
+**/android/local.properties
+**/android/key.properties
+key.properties
+
+# ============================================================
 # BACKEND — Go
-# ========================
+# ============================================================
 backend/golang/backend.exe
 backend/golang/*.exe
 backend/golang/backend
-# Binarios compilados
+*.exe
 *.out
 *.test
-# Caché de módulos Go local
 /pkg/
+__debug_bin*
 
-# ========================
-# FRONTEND — Node / Vite
-# ========================
-frontend/node_modules/
-frontend/dist/
-frontend/.vite/
+# ============================================================
+# FRONTEND / NODE / WEB
+# ============================================================
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vite/
+**/.vite/
+package-lock.json.backup
 
-# ========================
-# ANDROID — Capacitor
-# ========================
-# Archivos generados por Gradle
+# ============================================================
+# FLUTTER / DART / ANDROID BUILD
+# ============================================================
+.dart_tool/
+**/.dart_tool/
+.pub-cache/
+**/.pub-cache/
+.pub/
+**/.pub/
+build/
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+ephemeral/
+**/ephemeral/
+*.iml
+**/*.iml
 frontend/android/.gradle/
 frontend/android/build/
 frontend/android/app/build/
-frontend/android/local.properties
-frontend/android/.idea/
 frontend/android/captures/
-frontend/android/*.iml
-frontend/android/**/*.iml
-
-# APKs y bundles
+frontend/android/unityLibrary/src/main/Il2CppOutputProject/
+compile-data.json
 *.apk
 *.aab
-*.keystore
-*.jks
 
-# ========================
-# SISTEMA OPERATIVO
-# ========================
-# Windows
-Thumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Linux
-*~
-
-# ========================
-# EDITORES / IDEs
-# ========================
-.vscode/
-.idea/
-*.suo
-*.user
-*.sln.docstates
-*.swp
-*.swo
-
-# ========================
-# LOGS Y TEMPORALES
-# ========================
-*.log
-logs/
-tmp/
-temp/
-
-# ========================
-# ASSETS PESADOS
-# ========================
-sonidos/bg_game.mp3
-frontend/unity/Glassy2/Assets/Audio/bg_game.mp3
-frontend/android/unityLibrary/src/main/jniLibs/**/*.so
-frontend/android/unityLibrary/symbols/**/*.so
-
-# ========================
-# UNITY — Archivos generados
-# ========================
-# Estos se regeneran automáticamente al abrir el proyecto en Unity Editor.
+# ============================================================
+# UNITY ENGINE — Archivos temporales y de caché
+# ============================================================
 [Ll]ibrary/
+**/[Ll]ibrary/
 [Tt]emp/
+**/[Tt]emp/
 [Oo]bj/
+**/[Oo]bj/
 [Bb]uild/
+**/[Bb]uild/
 [Bb]uilds/
+**/[Bb]uilds/
 [Ll]ogs/
+**/[Ll]ogs/
 [Uu]ser[Ss]ettings/
+**/[Uu]ser[Ss]ettings/
+MemoryCaptures/
+**/MemoryCaptures/
+Recordings/
+**/Recordings/
+ExportedProject/
+**/ExportedProject/
 *.pidb
 *.suo
 *.userprefs
@@ -115,40 +130,56 @@ frontend/android/unityLibrary/symbols/**/*.so
 *.mdb
 *.opendb
 *.VC.db
-*.pidb.meta
-*.pdb.meta
-*.mdb.meta
-# Asset meta files que no son relevantes en repos vacíos
-# (descomenta si tu proyecto Unity está en la raíz)
-# *.meta
 sysinfo.txt
-*.apk
-*.aab
-ExportedProject/
+
+# ============================================================
+# PYTHON (Scripts / Generador de Skins)
+# ============================================================
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# ============================================================
+# EDITORES / IDEs
+# ============================================================
+.vscode/
+**/.vscode/
+!.vscode/settings.json.example
+.idea/
+**/.idea/
+*.user
+*.suo
+*.sln.docstates
+*.swp
+*.swo
+.vs/
+**/.vs/
 .vsconfig
 
-# ========================
-# FLUTTER / DART
-# ========================
-.dart_tool/
-.pub-cache/
-.pub/
-build/
-frontend/build/
-frontend/.dart_tool/
-frontend/ios/Pods/
-frontend/macos/Pods/
-frontend/windows/flutter/ephemeral/
+# ============================================================
+# SISTEMA OPERATIVO
+# ============================================================
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+*~
 
-# ========================
-# GOOGLE CLOUD / CREDENCIALES
-# ========================
-*.json
-!package.json
-!package-lock.json
-!tsconfig.json
-!angular.json
-skins_generator/*.json
-project-*.json
-credentials.json
-client_secret.json
+# ============================================================
+# LOGS Y TEMPORALES
+# ============================================================
+*.log
+**/logs/
+logs/
+tmp/
+**/tmp/
+temp/
+**/temp/

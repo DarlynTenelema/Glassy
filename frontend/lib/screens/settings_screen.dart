@@ -1,13 +1,15 @@
+import 'package:glassy/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../theme/app_theme.dart';
+import '../widgets/ui/glass_card.dart';
 import '../services/audio_service.dart';
 import 'login_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({super.key});
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
@@ -60,14 +62,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            GlassContainer(
+            GlassCard(
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
                   SwitchListTile(
                     title: Text('Volumen General', style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white)),
                     value: _volumen, 
-                    activeColor: AppTheme.crystalBlue,
+                    activeThumbColor: AppColors.lightBlue,
                     onChanged: (val) {
                       setState(() {
                         _volumen = val;
@@ -79,7 +81,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   SwitchListTile(
                     title: Text('Efectos', style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white)),
                     value: _efectos,
-                    activeColor: Colors.white.withOpacity(0.9),
+                    activeThumbColor: Colors.white.withValues(alpha: 0.9),
                     onChanged: (val) {
                       setState(() {
                         _efectos = val;
@@ -98,7 +100,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             value: _musicVolume,
                             min: 0.0,
                             max: 1.0,
-                            activeColor: AppTheme.crystalBlue,
+                            activeColor: AppColors.lightBlue,
                             onChanged: (v) {
                               setState(() => _musicVolume = v);
                               _saveDoubleSetting('musicVolume', v);

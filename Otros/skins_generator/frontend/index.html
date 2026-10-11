@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassy | Estudio & Visualizador de Skins</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- HEADER PRINCIPAL -->
+      <header class="app-header">
+        <div class="logo-area">
+          <div class="logo-icon">💎</div>
+          <div>
+            <h1>Glassy <span>Studio</span></h1>
+            <p class="subtitle">Diseñador y Refinador Visual de Skins para Videojuegos</p>
+          </div>
+        </div>
+
+        <!-- SELECTOR DE PESTAÑAS -->
+        <nav class="nav-tabs">
+          <button type="button" class="tab-btn active" data-tab="tab-studio">
+            <span>✨</span> Estudio de Gemas & Visualizador
+          </button>
+          <button type="button" class="tab-btn" data-tab="tab-markdown">
+            <span>📄</span> Generador por Markdown
+          </button>
+        </nav>
+      </header>
+
+      <!-- TAB 1: ESTUDIO DE GEMAS & VISUALIZADOR -->
+      <main id="tab-studio" class="tab-content active">
+        <!-- BARRA DE ACCIONES SUPERIOR -->
+        <section class="control-panel glass-panel">
+          <div class="theme-config">
+            <div class="config-field">
+              <label for="theme_name_input">Temática destino:</label>
+              <input type="text" id="theme_name_input" value="Gemas_Predeterminadas" placeholder="Nombre de la carpeta" />
+            </div>
+            <div class="action-buttons-group">
+              <button id="btn-load-unity" class="btn btn-secondary">
+                <span>🎮</span> Cargar Gemas de Unity
+              </button>
+              <button id="btn-generate-all" class="btn btn-primary">
+                <span>🚀</span> Generar Todas en Secuencia
+              </button>
+              <button id="btn-refresh-status" class="btn btn-ghost" title="Actualizar estado">
+                <span>🔄</span> Refrescar
+              </button>
+            </div>
+          </div>
+
+          <!-- SIMULADOR DE ESCALA Y ARMONÍA DEL JUEGO -->
+          <div class="game-simulator-wrap">
+            <div class="simulator-header">
+              <h3><span>🎮</span> Simulador de Tablero (Escala Tier 1 a 8)</h3>
+              <span class="badge-info">Previsualización de contraste, brillo y progresión</span>
+            </div>
+            <div class="simulator-board" id="simulator-board">
+              <!-- Se rellena dinámicamente -->
+            </div>
+          </div>
+        </section>
+
+        <!-- BARRA DE PROGRESO GLOBAL (para cuando se generan todas) -->
+        <div id="batch-progress-container" class="batch-progress glass-panel hidden">
+          <div class="progress-info">
+            <span id="batch-progress-text">Generando elementos...</span>
+            <span id="batch-progress-percent">0%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="batch-progress-bar" class="progress-bar-fill"></div>
+          </div>
+        </div>
+
+        <!-- GRID DE LOS 8 SLOTS DE GEMAS -->
+        <section class="gems-grid" id="gems-grid">
+          <!-- Tarjetas renderizadas dinámicamente por main.js -->
+        </section>
+      </main>
+
+      <!-- TAB 2: GENERADOR POR MARKDOWN CLÁSICO -->
+      <main id="tab-markdown" class="tab-content">
+        <div class="markdown-container glass-panel">
+          <h2>Generador Rápido por <span>Markdown</span></h2>
+          <p>Pega aquí cualquier plantilla estructurada para generar la temática completa con su wallpaper.</p>
+          
+          <form id="generator-form">
+            <div class="input-group">
+              <label for="markdown_input">Archivo Markdown (.md)</label>
+              <textarea id="markdown_input" placeholder="Pega aquí el contenido del archivo .md..." rows="12" required></textarea>
+            </div>
+            
+            <button type="submit" id="generate-btn" class="btn btn-primary btn-large">
+              <span>⚡</span> Generar Temática Completa
+            </button>
+          </form>
+          
+          <div id="status" class="hidden status-box">
+            <div class="spinner"></div>
+            <p id="status-message">Procesando imágenes en segundo plano...</p>
+          </div>
+        </div>
+
+        <!-- GALERÍA DE RESULTADOS MARKDOWN -->
+        <section class="results-preview glass-panel hidden" id="markdown-results-panel">
+          <h3>Galería de Resultados Generados</h3>
+          <div class="gallery-grid" id="markdown-gallery"></div>
+        </section>
+      </main>
+
+      <!-- MODAL PARA VER IMAGEN EN ALTA RESOLUCIÓN -->
+      <div id="image-modal" class="modal hidden">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content glass-panel">
+          <button type="button" class="modal-close" id="modal-close">&times;</button>
+          <h3 id="modal-title">Vista Previa</h3>
+          <div class="modal-img-wrap">
+            <img id="modal-img" src="" alt="Vista Previa" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

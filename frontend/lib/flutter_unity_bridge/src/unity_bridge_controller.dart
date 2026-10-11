@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'models/bridge_message.dart';
 import 'models/payloads.dart';
@@ -78,10 +79,10 @@ class UnityBridgeController {
           _missionCompletedController.add(MissionCompletedPayload.fromJson(payloadJson));
           break;
         default:
-          print('[UnityBridgeController] Evento no reconocido: ${bridgeMsg.eventName}');
+          debugPrint('[UnityBridgeController] Evento no reconocido: ${bridgeMsg.eventName}');
       }
     } catch (e) {
-      print('[UnityBridgeController] Error parseando mensaje de Unity: $e\nMensaje crudo: $message');
+      debugPrint('[UnityBridgeController] Error parseando mensaje de Unity: $e\nMensaje crudo: $message');
     }
   }
 
@@ -118,7 +119,7 @@ class UnityBridgeController {
   }
 
   void setSkin(String skinId) {
-    _sendToUnity('SET_SKIN', SetSkinPayload(skin_id: skinId).toJsonString());
+    _sendToUnity('SET_SKIN', SetSkinPayload(skinId: skinId).toJsonString());
   }
 
   void updateCrystals(int crystals) {

@@ -1,3 +1,4 @@
+import 'package:glassy/theme/app_colors.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -14,17 +15,17 @@ import '../services/audio_service.dart';class GamingButton extends StatefulWidge
   final bool shatterEffect; // Nuevo parámetro para el efecto de romperse
 
   const GamingButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
     this.icon,
-    this.primaryColor = AppTheme.crystalBlue,
-    this.secondaryColor = AppTheme.crystalBlue,
+    this.primaryColor = AppColors.lightBlue,
+    this.secondaryColor = AppColors.lightBlue,
     this.width = double.infinity,
     this.height = 65.0,
     this.fontSize = 22.0,
     this.shatterEffect = false,
-  }) : super(key: key);
+  });
 
   @override
   State<GamingButton> createState() => _GamingButtonState();
@@ -136,7 +137,7 @@ class _GamingButtonState extends State<GamingButton> with TickerProviderStateMix
                         child: CustomPaint(
                           painter: SparklePainter(
                             progress: _controller.value,
-                            color: AppTheme.starflareOrange,
+                            color: Colors.orangeAccent,
                           ),
                         ),
                       ),
@@ -146,11 +147,11 @@ class _GamingButtonState extends State<GamingButton> with TickerProviderStateMix
                       width: widget.width,
                       height: widget.height,
                       decoration: BoxDecoration(
-                        color: widget.secondaryColor.withOpacity(0.3),
+                        color: widget.secondaryColor.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(widget.height / 2),
                         boxShadow: [
                           BoxShadow(
-                            color: widget.primaryColor.withOpacity(0.5),
+                            color: widget.primaryColor.withValues(alpha: 0.5),
                             offset: const Offset(0, 8),
                             blurRadius: 20,
                           ),
@@ -178,14 +179,14 @@ class _GamingButtonState extends State<GamingButton> with TickerProviderStateMix
                                     begin: Alignment.topLeft,
                                     end: Alignment.bottomRight,
                                     colors: [
-                                      Colors.white.withOpacity(0.4),
-                                      widget.primaryColor.withOpacity(0.3),
-                                      widget.primaryColor.withOpacity(0.1),
+                                      Colors.white.withValues(alpha: 0.4),
+                                      widget.primaryColor.withValues(alpha: 0.3),
+                                      widget.primaryColor.withValues(alpha: 0.1),
                                     ],
                                   ),
                                   borderRadius: BorderRadius.circular(widget.height / 2),
                                   border: Border.all(
-                                    color: Colors.white.withOpacity(0.6),
+                                    color: Colors.white.withValues(alpha: 0.6),
                                     width: 1.5,
                                   ),
                                 ),
@@ -232,7 +233,7 @@ class _GamingButtonState extends State<GamingButton> with TickerProviderStateMix
                           ),
                         ),
                       ).animate(target: _isPressed ? 1 : 0).shimmer(
-                        color: AppTheme.starflareOrange.withValues(alpha: 0.5),
+                        color: Colors.orangeAccent.withValues(alpha: 0.5),
                         duration: 300.ms,
                       ),
                     ),
@@ -259,7 +260,7 @@ class CrackPainter extends CustomPainter {
     if (progress == 0) return;
     
     final paint = Paint()
-      ..color = crackColor.withOpacity((1 - progress).clamp(0.0, 1.0))
+      ..color = crackColor.withValues(alpha: (1 - progress).clamp(0.0, 1.0))
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2 + (progress * 3)
       ..strokeJoin = StrokeJoin.miter;

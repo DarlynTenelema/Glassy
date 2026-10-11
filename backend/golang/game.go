@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"database/sql"
 	"log"
 	"net/http"
 	"os"
@@ -45,17 +46,33 @@ type LeaderboardEntry struct {
 	AchievedAt time.Time `json:"achieved_at"`
 }
 
-// GetLeaderboards devuelve el TOP 200 global.
-// Solo hay 1 fila por usuario (su mejor score), así que la consulta es simple y rápida.
-// GET /api/leaderboard/global  (pública, no requiere auth)
+// GetLeaderboards devuelve el TOP 200 global, soportando tipo de ranking.
+// GET /api/leaderboard/global?type=high_score o type=total
 func GetLeaderboards(c *gin.Context) {
-	rows, err := DB.Query(`
-		SELECT u.name, u.avatar_url, l.score, l.achieved_at
-		FROM leaderboards l
-		JOIN users u ON l.user_id = u.id
-		ORDER BY l.score DESC
-		LIMIT 200
-	`)
+	rankType := c.DefaultQuery("type", "high_score")
+
+	var rows *sql.Rows
+	var err error
+
+	if rankType == "total" {
+		// Ranking de tiempo jugado y dedicación
+		rows, err = DB.Query(`
+			SELECT name, avatar_url, total_score, created_at
+			FROM users
+			ORDER BY total_score DESC
+			LIMIT 200
+		`)
+	} else {
+		// Ranking de habilidad (Mejor Partida)
+		rows, err = DB.Query(`
+			SELECT u.name, u.avatar_url, l.score, l.achieved_at
+			FROM leaderboards l
+			JOIN users u ON l.user_id = u.id
+			ORDER BY l.score DESC
+			LIMIT 200
+		`)
+	}
+
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch leaderboard"})
 		return
@@ -105,13 +122,27 @@ func SubmitScore(c *gin.Context) {
 		var subTier string
 		var dailyFarmed int
 		var lastFarmDate time.Time
+		var subExpiresAt *time.Time
+		var lastScoreAt *time.Time
 
 		err = tx.QueryRow(`
-			SELECT subscription_tier, daily_lapis_farmed, last_farm_date 
+			SELECT subscription_tier, daily_lapis_farmed, last_farm_date, subscription_expires_at, last_score_at 
 			FROM users WHERE id = $1 FOR UPDATE
-		`, userID).Scan(&subTier, &dailyFarmed, &lastFarmDate)
+		`, userID).Scan(&subTier, &dailyFarmed, &lastFarmDate, &subExpiresAt, &lastScoreAt)
 
 		if err == nil {
+			// Anti-spam: Cooldown de al menos 4 segundos entre envíos de score
+			if lastScoreAt != nil && time.Since(*lastScoreAt) < 4*time.Second {
+				tx.Rollback()
+				c.JSON(http.StatusTooManyRequests, gin.H{"error": "Please wait before submitting another score"})
+				return
+			}
+
+			// Validar expiración de suscripción VIP
+			if subExpiresAt != nil && time.Now().UTC().After(*subExpiresAt) {
+				subTier = "none"
+			}
+
 			// Resetear farming diario si es un nuevo día (UTC as base)
 			if lastFarmDate.Truncate(24 * time.Hour).Before(time.Now().Truncate(24 * time.Hour)) {
 				dailyFarmed = 0
@@ -141,10 +172,17 @@ func SubmitScore(c *gin.Context) {
 						UPDATE users 
 						SET crystals = crystals + $1, 
 						    daily_lapis_farmed = $2, 
-						    last_farm_date = CURRENT_DATE
+						    last_farm_date = CURRENT_DATE,
+						    total_score = total_score + $4,
+						    last_score_at = NOW()
 						WHERE id = $3
-					`, lapisToAward, dailyFarmed+lapisToAward, userID)
+					`, lapisToAward, dailyFarmed+lapisToAward, userID, req.Score)
+				} else {
+					_, _ = tx.Exec(`UPDATE users SET total_score = total_score + $1, last_score_at = NOW() WHERE id = $2`, req.Score, userID)
 				}
+			} else {
+				// Si no hay recompensa de cristales, al menos sumar el total_score y actualizar timestamp
+				_, _ = tx.Exec(`UPDATE users SET total_score = total_score + $1, last_score_at = NOW() WHERE id = $2`, req.Score, userID)
 			}
 		}
 		tx.Commit()
@@ -234,18 +272,17 @@ func SaveSettings(c *gin.Context) {
 // =============================================================================
 
 // adRewardCrystals es la cantidad de lapislázulis que se regalan por ver un video.
+// Configuración de recompensas por anuncios
 const adRewardCrystals = 5
+const maxDailyAds = 15
+const adCooldownSeconds = 45
 
-// ClaimAdReward agrega lapislázulis al jugador como recompensa por ver un video de Ad Mob.
-// El cliente debe llamar este endpoint SOLO cuando el SDK de AdMob confirme que el
-// video fue visto completo. Para el MVP, confiamos en el cliente.
+// ClaimAdReward agrega lapislázulis al jugador como recompensa por ver un video.
+// Valida límites diarios (máx 15) y cooldown estricto de tiempo (45s) en el servidor.
 // POST /api/player/ad-reward
 func ClaimAdReward(c *gin.Context) {
 	userID := c.GetString("user_id")
 
-	// Prevenir farming abusivo (Race conditions y spam): Solo 1 recompensa y actualización atómica
-	// Nota: Si quieres un cooldown de tiempo, necesitarás una columna last_ad_reward en la DB.
-	// Por ahora evitamos race conditions con un lock.
 	tx, err := DB.Begin()
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
@@ -254,26 +291,72 @@ func ClaimAdReward(c *gin.Context) {
 	defer tx.Rollback()
 
 	var currentCrystals int
-	err = tx.QueryRow("SELECT crystals FROM users WHERE id = $1 FOR UPDATE", userID).Scan(&currentCrystals)
+	var lastAdClaim *time.Time
+	var dailyAdsClaimed int
+	var lastAdDate *time.Time
+
+	err = tx.QueryRow(`
+		SELECT crystals, last_ad_claim, daily_ads_claimed, last_ad_date 
+		FROM users WHERE id = $1 FOR UPDATE
+	`, userID).Scan(&currentCrystals, &lastAdClaim, &dailyAdsClaimed, &lastAdDate)
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "User not found"})
 		return
 	}
 
-	_, err = tx.Exec(
-		"UPDATE users SET crystals = crystals + $1 WHERE id = $2",
-		adRewardCrystals, userID,
-	)
+	now := time.Now().UTC()
+	today := now.Truncate(24 * time.Hour)
+
+	// Reiniciar contador diario si es un nuevo día
+	if lastAdDate == nil || lastAdDate.Truncate(24*time.Hour).Before(today) {
+		dailyAdsClaimed = 0
+	}
+
+	// 1. Validar límite diario
+	if dailyAdsClaimed >= maxDailyAds {
+		c.JSON(http.StatusTooManyRequests, gin.H{
+			"error": "Límite diario alcanzado (máximo 15 videos al día)",
+			"daily_ads_claimed": dailyAdsClaimed,
+		})
+		return
+	}
+
+	// 2. Validar cooldown de tiempo anti-spam
+	if lastAdClaim != nil {
+		elapsed := now.Sub(*lastAdClaim)
+		if elapsed < time.Duration(adCooldownSeconds)*time.Second {
+			remainingSeconds := adCooldownSeconds - int(elapsed.Seconds())
+			c.JSON(http.StatusTooManyRequests, gin.H{
+				"error": "Debes esperar antes de reclamar otro anuncio",
+				"retry_after_seconds": remainingSeconds,
+			})
+			return
+		}
+	}
+
+	// 3. Acreditar recompensa y actualizar contadores
+	_, err = tx.Exec(`
+		UPDATE users 
+		SET crystals = crystals + $1,
+		    daily_ads_claimed = $2,
+		    last_ad_claim = $3,
+		    last_ad_date = CURRENT_DATE
+		WHERE id = $4
+	`, adRewardCrystals, dailyAdsClaimed+1, now, userID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to add reward crystals"})
 		return
 	}
 	
-	tx.Commit()
+	if err := tx.Commit(); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Transaction commit failed"})
+		return
+	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"message":          "Ad reward claimed",
-		"crystals_awarded": adRewardCrystals,
+		"message":             "Ad reward claimed successfully",
+		"crystals_awarded":    adRewardCrystals,
+		"daily_ads_remaining": maxDailyAds - (dailyAdsClaimed + 1),
 	})
 }
 
@@ -412,11 +495,11 @@ func VerifyPurchase(c *gin.Context) {
 	case "pack_event_5000":
 		query += ", welcome_pack_5000_bought = TRUE"
 	case "sub_bronze_weekly":
-		query += ", subscription_tier = 'bronze'"
+		query += ", subscription_tier = 'bronze', subscription_expires_at = NOW() + INTERVAL '7 days'"
 	case "sub_silver_biweekly":
-		query += ", subscription_tier = 'silver'"
+		query += ", subscription_tier = 'silver', subscription_expires_at = NOW() + INTERVAL '15 days'"
 	case "sub_gold_monthly":
-		query += ", subscription_tier = 'gold'"
+		query += ", subscription_tier = 'gold', subscription_expires_at = NOW() + INTERVAL '30 days'"
 	}
 	query += " WHERE id = $3"
 

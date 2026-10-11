@@ -24,6 +24,7 @@ type EconomyStatus struct {
 	LastChest6h       *time.Time `json:"last_chest_6h"`
 	LastChest12h      *time.Time `json:"last_chest_12h"`
 	LastChest24h      *time.Time `json:"last_chest_24h"`
+	TotalScore        int        `json:"total_score"`
 }
 
 // GetEconomyStatus devuelve el estado completo de la economía del jugador
@@ -39,13 +40,13 @@ func GetEconomyStatus(c *gin.Context) {
 		SELECT crystals, piggy_bank, daily_reward_streak, last_daily_claim,
 		       current_mission_day, mission_progress, mission_completed,
 		       last_login_at, total_active_days, lapis_fragments, 
-		       last_chest_6h, last_chest_12h, last_chest_24h
+		       last_chest_6h, last_chest_12h, last_chest_24h, total_score
 		FROM users WHERE id = $1
 	`, userID).Scan(
 		&s.Crystals, &s.PiggyBank, &s.DailyRewardStreak, &s.LastDailyClaim,
 		&s.CurrentMissionDay, &s.MissionProgress, &s.MissionCompleted,
 		&lastLogin, &totalActiveDays, &s.LapisFragments,
-		&s.LastChest6h, &s.LastChest12h, &s.LastChest24h,
+		&s.LastChest6h, &s.LastChest12h, &s.LastChest24h, &s.TotalScore,
 	)
 
 	if err != nil {
@@ -80,16 +81,17 @@ func GetEconomyStatus(c *gin.Context) {
 	s.CanClaimDaily = true
 
 	if s.LastDailyClaim != nil {
-		lastClaimDate := s.LastDailyClaim.Truncate(24 * time.Hour)
-		currentDate := now.Truncate(24 * time.Hour)
+		y1, m1, d1 := now.Date()
+		y2, m2, d2 := s.LastDailyClaim.Date()
 
-		// Si ya reclamó hoy, no puede volver a reclamar
-		if currentDate.Equal(lastClaimDate) {
+		if y1 == y2 && m1 == m2 && d1 == d2 {
 			s.CanClaimDaily = false
-		} else if currentDate.Sub(lastClaimDate).Hours() > 24 {
-			// Si pasó más de un día sin reclamar, se rompe la racha y vuelve al día 1
-			s.DailyRewardStreak = 1
-			// Aquí no actualizamos la base de datos todavía, se actualizará cuando reclame
+		} else {
+			ayer := now.AddDate(0, 0, -1)
+			ya, ma, da := ayer.Date()
+			if !(y2 == ya && m2 == ma && d2 == da) {
+				s.DailyRewardStreak = 1
+			}
 		}
 	}
 
@@ -122,15 +124,19 @@ func ClaimDailyReward(c *gin.Context) {
 	}
 
 	now := time.Now().UTC()
-	currentDate := now.Truncate(24 * time.Hour)
-
 	if lastClaim != nil {
-		lastClaimDate := lastClaim.Truncate(24 * time.Hour)
-		if currentDate.Equal(lastClaimDate) {
+		y1, m1, d1 := now.Date()
+		y2, m2, d2 := lastClaim.Date()
+
+		if y1 == y2 && m1 == m2 && d1 == d2 {
 			c.JSON(http.StatusBadRequest, gin.H{"error": "Already claimed today"})
 			return
-		} else if currentDate.Sub(lastClaimDate).Hours() > 24 {
-			streak = 1 // Racha perdida
+		} else {
+			ayer := now.AddDate(0, 0, -1)
+			ya, ma, da := ayer.Date()
+			if !(y2 == ya && m2 == ma && d2 == da) {
+				streak = 1 // Racha perdida
+			}
 		}
 	}
 
@@ -172,11 +178,16 @@ func ClaimDailyReward(c *gin.Context) {
 	if err == nil && currentFragments >= 100 {
 		crystalsToAdd := currentFragments / 100
 		remainingFragments := currentFragments % 100
-		_, _ = tx.Exec(`
+		_, err = tx.Exec(`
 			UPDATE users 
 			SET crystals = crystals + $1, lapis_fragments = $2 
 			WHERE id = $3
 		`, crystalsToAdd, remainingFragments, userID)
+		
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to convert fragments"})
+			return
+		}
 	}
 
 	tx.Commit()
@@ -263,11 +274,16 @@ func ClaimChest(c *gin.Context) {
 	if err == nil && currentFragments >= 100 {
 		crystalsToAdd := currentFragments / 100
 		remainingFragments := currentFragments % 100
-		_, _ = tx.Exec(`
+		_, err = tx.Exec(`
 			UPDATE users 
 			SET crystals = crystals + $1, lapis_fragments = $2 
 			WHERE id = $3
 		`, crystalsToAdd, remainingFragments, userID)
+		
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to convert fragments"})
+			return
+		}
 	}
 
 	tx.Commit()
@@ -392,7 +408,7 @@ func ClaimMissionReward(c *gin.Context) {
 	})
 }
 
-// ClaimPiggyBank transfiere del Piggy Bank a la Wallet si supera el mínimo de 500
+// ClaimPiggyBank transfiere 100 Lapislázulis del Piggy Bank a la Wallet gratis al llegar a 100
 // POST /api/player/piggy-bank/claim
 func ClaimPiggyBank(c *gin.Context) {
 	userID := c.GetString("user_id")
@@ -412,28 +428,34 @@ func ClaimPiggyBank(c *gin.Context) {
 		return
 	}
 
-	if piggyBank < 500 {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Piggy Bank must reach 500 Lapislázulis to claim"})
+	if piggyBank < 100 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "El cerdito necesita 100 Lapislázulis para poder canjearlo"})
 		return
 	}
 
+	// Regalo 100% gratuito: 100 lapislázulis directos a la billetera
+	const claimReward = 100
 	_, err = tx.Exec(`
 		UPDATE users 
-		SET crystals = crystals + piggy_bank, 
-		    piggy_bank = 0 
-		WHERE id = $1
-	`, userID)
+		SET crystals = crystals + $1, 
+		    piggy_bank = piggy_bank - $1 
+		WHERE id = $2
+	`, claimReward, userID)
 
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to claim piggy bank"})
 		return
 	}
 
-	tx.Commit()
+	if err := tx.Commit(); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Transaction commit failed"})
+		return
+	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Piggy bank claimed",
-		"reward":  piggyBank,
+		"message":         "Piggy bank claimed successfully",
+		"reward":          claimReward,
+		"piggy_remaining": piggyBank - claimReward,
 	})
 }
 

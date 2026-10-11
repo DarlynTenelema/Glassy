@@ -1,3 +1,4 @@
+import 'package:glassy/theme/app_colors.dart';
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
@@ -7,15 +8,17 @@ import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../theme/app_theme.dart';
+import '../widgets/ui/glass_card.dart';
 import '../widgets/gaming_button.dart';
 import '../flutter_unity_bridge/src/unity_bridge_controller.dart';
-import '../flutter_unity_bridge/src/models/payloads.dart';
 import '../services/audio_service.dart';
 import '../services/achievements_service.dart';
 import '../services/game_api_service.dart';
+import '../widgets/ui/currency_icon.dart';
+import 'package:share_plus/share_plus.dart';
 
 class GameScreen extends StatefulWidget {
-  const GameScreen({Key? key}) : super(key: key);
+  const GameScreen({super.key});
 
   @override
   State<GameScreen> createState() => _GameScreenState();
@@ -28,7 +31,7 @@ class _GameScreenState extends State<GameScreen> {
   // Suscripciones para evitar memory leaks
   StreamSubscription? _readySub;
   StreamSubscription? _scoreSub;
-  StreamSubscription? _crystalsSub;
+
   StreamSubscription? _gameOverSub;
   StreamSubscription? _achievementSub;
   StreamSubscription? _comboBonusSub;
@@ -38,6 +41,7 @@ class _GameScreenState extends State<GameScreen> {
   StreamSubscription? _missionUpdatedSub;
   StreamSubscription? _missionCompletedSub;
   Timer? _missionTimer;
+  Timer? _comboTimerDisplay;
 
   bool _isDangerZone = false;
   String? _epicSaveText;
@@ -62,6 +66,7 @@ class _GameScreenState extends State<GameScreen> {
   int _score = 0;
   int _highScore = 0; // Para la lógica de "Nuevo Score"
   int _crystals = 100; // Valor inicial o cargado del estado global
+  String? _videoPathReady;
 
   void onUnityCreated(controller) {
     AudioService().stopBgMusic();
@@ -109,16 +114,7 @@ class _GameScreenState extends State<GameScreen> {
       if (mounted) setState(() => _score = payload.currentScore);
     });
 
-    _crystalsSub = _bridgeController.onCrystalsUpdated.listen((payload) {
-      if (mounted) {
-        if (_crystals > payload.currentCrystals) {
-          int spent = _crystals - payload.currentCrystals;
-          GameApiService().spendCrystals(spent); // Gasto real en backend
-          Provider.of<GameProvider>(context, listen: false).updateCrystals(payload.currentCrystals);
-        }
-        setState(() => _crystals = payload.currentCrystals);
-      }
-    });
+
 
     _gameOverSub = _bridgeController.onGameOver.listen((payload) {
       if (mounted) {
@@ -155,7 +151,8 @@ class _GameScreenState extends State<GameScreen> {
     _comboBonusSub = _bridgeController.onComboBonus.listen((payload) {
       if (mounted) {
         setState(() => _comboText = '¡COMBO X${payload.combo}!\n+${payload.bonus}');
-        Future.delayed(const Duration(seconds: 2), () {
+        _comboTimerDisplay?.cancel();
+        _comboTimerDisplay = Timer(const Duration(seconds: 2), () {
           if (mounted) setState(() => _comboText = null);
         });
       }
@@ -239,7 +236,21 @@ class _GameScreenState extends State<GameScreen> {
     await prefs.setDouble(key, value);
   }
 
+  void _shareVideo() async {
+    if (_videoPathReady != null) {
+      await Share.shareXFiles([XFile(_videoPathReady!)], text: '¡Mira mi partida en Glassy!');
+    }
+  }
+
   void onUnityMessage(message) {
+    if (message.toString().startsWith("VIDEO_READY:")) {
+      if (mounted) {
+        setState(() {
+          _videoPathReady = message.toString().split("VIDEO_READY:")[1];
+        });
+      }
+      return;
+    }
     // Delegamos el procesamiento del mensaje al BridgeController
     _bridgeController.receiveMessageFromUnity(message);
   }
@@ -257,7 +268,7 @@ class _GameScreenState extends State<GameScreen> {
     final bool? shouldExit = await showDialog<bool>(
       context: context,
       barrierDismissible: false,
-      barrierColor: Colors.black.withOpacity(0.6), // Fondo oscuro
+      barrierColor: Colors.black.withValues(alpha: 0.6), // Fondo oscuro
       builder: (context) => Dialog(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -267,7 +278,7 @@ class _GameScreenState extends State<GameScreen> {
             clipBehavior: Clip.none,
             alignment: Alignment.center,
             children: [
-              GlassContainer(
+              GlassCard(
                 padding: const EdgeInsets.only(top: 80, left: 30, right: 30, bottom: 30),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -279,7 +290,7 @@ class _GameScreenState extends State<GameScreen> {
                         color: Colors.white,
                         fontWeight: FontWeight.w900,
                         letterSpacing: 2,
-                        shadows: [const Shadow(color: AppTheme.crystalBlue, blurRadius: 15)],
+                        shadows: [const Shadow(color: AppColors.lightBlue, blurRadius: 15)],
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -293,8 +304,8 @@ class _GameScreenState extends State<GameScreen> {
                       text: 'CONTINUAR',
                       height: 50,
                       fontSize: 16,
-                      primaryColor: AppTheme.crystalBlue,
-                      secondaryColor: AppTheme.crystalBlue,
+                      primaryColor: AppColors.lightBlue,
+                      secondaryColor: AppColors.lightBlue,
                       onPressed: () => Navigator.of(context).pop(false),
                     ),
                     const SizedBox(height: 15),
@@ -312,7 +323,7 @@ class _GameScreenState extends State<GameScreen> {
               Positioned(
                 top: -120,
                 child: Image.asset(
-                  'assets/avatar/glassy_lapislazully_surprised.png',
+                  'assets/avatar/personaje/glassy_lapislazully_surprised.png',
                   height: 180,
                 ),
               ),
@@ -368,7 +379,7 @@ class _GameScreenState extends State<GameScreen> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   // Top HUD: Lapislázulis, Score, Controles
                   Row(
@@ -383,19 +394,19 @@ class _GameScreenState extends State<GameScreen> {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                             decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.5),
+                              color: Colors.black.withValues(alpha: 0.5),
                               borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: AppTheme.crystalBlue, width: 1),
+                              border: Border.all(color: AppColors.lightBlue, width: 1),
                               boxShadow: [
                                 BoxShadow(
-                                  color: AppTheme.crystalBlue.withOpacity(0.3),
+                                  color: AppColors.lightBlue.withValues(alpha: 0.3),
                                   blurRadius: 8,
                                 )
                               ],
                             ),
                             child: Row(
                               children: [
-                                const Icon(Icons.diamond, color: AppTheme.crystalBlue, size: 20),
+                                CurrencyIcon(size: 20),
                                 const SizedBox(width: 6),
                                 Text(
                                   '$_crystals',
@@ -415,7 +426,7 @@ class _GameScreenState extends State<GameScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.6),
+                          color: Colors.black.withValues(alpha: 0.6),
                           borderRadius: BorderRadius.circular(25),
                           border: Border.all(color: Colors.white24, width: 1),
                         ),
@@ -436,7 +447,7 @@ class _GameScreenState extends State<GameScreen> {
                                 color: Colors.white,
                                 fontSize: 24,
                                 fontWeight: FontWeight.w900,
-                                shadows: [Shadow(color: AppTheme.crystalBlue, blurRadius: 10)],
+                                shadows: [Shadow(color: AppColors.lightBlue, blurRadius: 10)],
                               ),
                             ),
                           ],
@@ -453,7 +464,7 @@ class _GameScreenState extends State<GameScreen> {
                               _isPaused ? Icons.play_arrow : Icons.pause,
                               color: Colors.white,
                               size: 28,
-                              shadows: [Shadow(color: Colors.white.withOpacity(0.9), blurRadius: 10)],
+                              shadows: [Shadow(color: Colors.white.withValues(alpha: 0.9), blurRadius: 10)],
                             ),
                           ),
                           IconButton(
@@ -467,21 +478,28 @@ class _GameScreenState extends State<GameScreen> {
                               Icons.close,
                               color: Colors.white,
                               size: 28,
-                              shadows: [Shadow(color: Colors.white.withOpacity(0.9), blurRadius: 10)],
+                              shadows: [Shadow(color: Colors.white.withValues(alpha: 0.9), blurRadius: 10)],
                             ),
                           ),
                         ],
                       )
                     ],
                   ),
-                  
-                  // Misión Express UI (Centrada arriba)
-                  if (_isMissionActive) _buildMissionWidget(),
-
                 ],
               ),
             ),
           ),
+          
+          // Misión Express UI (Abajo)
+          if (_isMissionActive)
+            Positioned(
+              bottom: 80,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: _buildMissionWidget(),
+              ),
+            ),
           
           // Efectos Visuales Especiales (Danger Zone, Combos, Salvada)
           if (_isDangerZone && !_isGameOver && !_isPaused) _buildDangerZoneOverlay(),
@@ -507,9 +525,9 @@ class _GameScreenState extends State<GameScreen> {
     return IgnorePointer(
       child: Container(
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.redAccent.withOpacity(0.6), width: 8),
+          border: Border.all(color: Colors.redAccent.withValues(alpha: 0.6), width: 8),
           gradient: RadialGradient(
-            colors: [Colors.transparent, Colors.red.withOpacity(0.2)],
+            colors: [Colors.transparent, Colors.red.withValues(alpha: 0.2)],
             radius: 1.5,
           ),
         ),
@@ -550,10 +568,10 @@ class _GameScreenState extends State<GameScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.6),
+            color: Colors.black.withValues(alpha: 0.6),
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Colors.greenAccent, width: 2),
-            boxShadow: [BoxShadow(color: Colors.green.withOpacity(0.4), blurRadius: 30)],
+            boxShadow: [BoxShadow(color: Colors.green.withValues(alpha: 0.4), blurRadius: 30)],
           ),
           child: TweenAnimationBuilder(
             tween: Tween<double>(begin: 0.0, end: 1.0),
@@ -585,10 +603,10 @@ class _GameScreenState extends State<GameScreen> {
       margin: const EdgeInsets.only(top: 5),
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.7),
+        color: Colors.black.withValues(alpha: 0.7),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.orangeAccent, width: 1.5),
-        boxShadow: [BoxShadow(color: Colors.orange.withOpacity(0.3), blurRadius: 15)],
+        boxShadow: [BoxShadow(color: Colors.orange.withValues(alpha: 0.3), blurRadius: 15)],
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -639,7 +657,7 @@ class _GameScreenState extends State<GameScreen> {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 decoration: BoxDecoration(
-                  color: Colors.orange.withOpacity(0.85),
+                  color: Colors.orange.withValues(alpha: 0.85),
                   borderRadius: BorderRadius.circular(25),
                   border: Border.all(color: Colors.orangeAccent, width: 2),
                   boxShadow: [BoxShadow(color: Colors.orangeAccent, blurRadius: 30)],
@@ -665,15 +683,15 @@ class _GameScreenState extends State<GameScreen> {
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
       child: Container(
-        color: Colors.black.withOpacity(0.4),
+        color: Colors.black.withValues(alpha: 0.4),
         child: Center(
-          child: GlassContainer(
+          child: GlassCard(
             padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 25),
             width: 340,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.pause_circle_filled_rounded, color: AppTheme.crystalBlue, size: 60),
+                const Icon(Icons.pause_circle_filled_rounded, color: AppColors.lightBlue, size: 60),
                 const SizedBox(height: 10),
                 Text(
                   'BREAK!!!',
@@ -681,17 +699,17 @@ class _GameScreenState extends State<GameScreen> {
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 4,
-                    shadows: [const Shadow(color: AppTheme.crystalBlue, blurRadius: 20)],
+                    shadows: [const Shadow(color: AppColors.lightBlue, blurRadius: 20)],
                   ),
                 ),
                 const SizedBox(height: 30),
                 
                 // Configuración
-                const Text('Ajustes Rápidos', style: TextStyle(color: AppTheme.crystalBlue, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
+                const Text('Ajustes Rápidos', style: TextStyle(color: AppColors.lightBlue, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
                 const SizedBox(height: 10),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.05),
+                    color: Colors.white.withValues(alpha: 0.05),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Column(
@@ -699,7 +717,7 @@ class _GameScreenState extends State<GameScreen> {
                       SwitchListTile(
                         title: const Text('Volumen General', style: TextStyle(color: Colors.white)),
                         value: _volumen,
-                        activeColor: AppTheme.crystalBlue,
+                        activeThumbColor: AppColors.lightBlue,
                         onChanged: (v) {
                           setState(() => _volumen = v);
                           _saveSetting('volume', v);
@@ -710,7 +728,7 @@ class _GameScreenState extends State<GameScreen> {
                       SwitchListTile(
                         title: const Text('Efectos', style: TextStyle(color: Colors.white)),
                         value: _efectos,
-                        activeColor: AppTheme.crystalBlue,
+                        activeThumbColor: AppColors.lightBlue,
                         onChanged: (v) {
                           setState(() => _efectos = v);
                           _saveSetting('effects', v);
@@ -728,7 +746,7 @@ class _GameScreenState extends State<GameScreen> {
                                 value: _musicVolume,
                                 min: 0.0,
                                 max: 1.0,
-                                activeColor: AppTheme.crystalBlue,
+                                activeColor: AppColors.lightBlue,
                                 onChanged: (v) {
                                   setState(() => _musicVolume = v);
                                   _saveDoubleSetting('musicVolume', v);
@@ -745,11 +763,11 @@ class _GameScreenState extends State<GameScreen> {
                 
                 const SizedBox(height: 25),
                 // Tienda rápida
-                const Text('Recarga de Gemas', style: TextStyle(color: AppTheme.crystalBlue, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
+                const Text('Recarga de Gemas', style: TextStyle(color: AppColors.lightBlue, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
                 const SizedBox(height: 10),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.05),
+                    color: Colors.white.withValues(alpha: 0.05),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   padding: const EdgeInsets.all(15),
@@ -758,7 +776,7 @@ class _GameScreenState extends State<GameScreen> {
                     children: [
                       const Row(
                         children: [
-                          Icon(Icons.diamond, color: AppTheme.crystalBlue),
+                          CurrencyIcon(size: 24),
                           SizedBox(width: 8),
                           Text('100 Gemas', style: TextStyle(color: Colors.white, fontSize: 16)),
                         ],
@@ -769,8 +787,8 @@ class _GameScreenState extends State<GameScreen> {
                           text: '\$0.99',
                           height: 35,
                           fontSize: 14,
-                          primaryColor: AppTheme.crystalBlue,
-                          secondaryColor: const Color(0xFF6A0DAD),
+                          primaryColor: AppColors.lightBlue,
+                          secondaryColor: Color(0xFF6A0DAD),
                           onPressed: () {},
                         ),
                       ),
@@ -785,8 +803,8 @@ class _GameScreenState extends State<GameScreen> {
                     text: 'REANUDAR',
                     height: 55,
                     fontSize: 18,
-                    primaryColor: AppTheme.crystalBlue,
-                    secondaryColor: const Color(0xFF0055FF),
+                    primaryColor: AppColors.lightBlue,
+                    secondaryColor: Color(0xFF0055FF),
                     onPressed: _togglePause,
                   ),
                 ),
@@ -816,12 +834,12 @@ class _GameScreenState extends State<GameScreen> {
           margin: const EdgeInsets.symmetric(horizontal: 20),
           padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.1),
+            color: Colors.white.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.white.withOpacity(0.3), width: 1.5),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.3), width: 1.5),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.crystalBlue.withOpacity(0.2),
+                color: AppColors.lightBlue.withValues(alpha: 0.2),
                 blurRadius: 30,
                 spreadRadius: 5,
               )
@@ -837,7 +855,7 @@ class _GameScreenState extends State<GameScreen> {
                   color: Colors.white,
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
-                  shadows: [Shadow(color: AppTheme.crystalBlue, blurRadius: 10)],
+                  shadows: [Shadow(color: AppColors.lightBlue, blurRadius: 10)],
                 ),
               ),
             ],
@@ -854,13 +872,13 @@ class _GameScreenState extends State<GameScreen> {
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
       child: Container(
-        color: Colors.black.withOpacity(0.6),
+        color: Colors.black.withValues(alpha: 0.6),
         child: Center(
           child: Stack(
             clipBehavior: Clip.none,
             alignment: Alignment.center,
             children: [
-              GlassContainer(
+              GlassCard(
                 padding: const EdgeInsets.only(top: 100, left: 25, right: 25, bottom: 40),
                 width: 340,
                 child: Column(
@@ -879,12 +897,29 @@ class _GameScreenState extends State<GameScreen> {
                     Text(
                       title,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(color: AppTheme.crystalBlue, fontSize: 20, fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: AppColors.lightBlue, fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 10),
                     Text(
                       'Tu score: $_score',
                       style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900),
+                    ),
+                    const SizedBox(height: 8),
+                    Consumer<GameProvider>(
+                      builder: (context, provider, child) {
+                        return Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: AppColors.accentPurple.withValues(alpha: 0.2),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: AppColors.accentPurple.withValues(alpha: 0.5)),
+                          ),
+                          child: Text(
+                            '🌟 Acumulado Global: ${provider.totalScore}',
+                            style: const TextStyle(color: AppColors.accentPurple, fontSize: 14, fontWeight: FontWeight.bold),
+                          ),
+                        );
+                      }
                     ),
                     const SizedBox(height: 40),
                     SizedBox(
@@ -893,8 +928,8 @@ class _GameScreenState extends State<GameScreen> {
                         text: 'VOLVER A JUGAR',
                         height: 55,
                         fontSize: 18,
-                        primaryColor: AppTheme.crystalBlue,
-                        secondaryColor: const Color(0xFF0055FF),
+                        primaryColor: AppColors.lightBlue,
+                        secondaryColor: Color(0xFF0055FF),
                         onPressed: () {
                           setState(() {
                             _isGameOver = false;
@@ -916,6 +951,20 @@ class _GameScreenState extends State<GameScreen> {
                         onPressed: () => Navigator.pop(context),
                       ),
                     ),
+                    if (_videoPathReady != null) ...[
+                      const SizedBox(height: 15),
+                      SizedBox(
+                        width: double.infinity,
+                        child: GamingButton(
+                          text: 'COMPARTIR EN TIKTOK',
+                          height: 55,
+                          fontSize: 18,
+                          primaryColor: Colors.pinkAccent,
+                          secondaryColor: Colors.pink,
+                          onPressed: _shareVideo,
+                        ),
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -923,7 +972,7 @@ class _GameScreenState extends State<GameScreen> {
                 Positioned(
                   top: -150,
                   child: Image.asset(
-                    'assets/avatar/glassy_lapislazully_congratulations.png',
+                    'assets/avatar/personaje/glassy_lapislazully_congratulations.png',
                     height: 250,
                   ),
                 ),
@@ -941,7 +990,7 @@ class _GameScreenState extends State<GameScreen> {
     // Liberar recursos y cancelar suscripciones para evitar memory leaks
     _readySub?.cancel();
     _scoreSub?.cancel();
-    _crystalsSub?.cancel();
+
     _gameOverSub?.cancel();
     _comboBonusSub?.cancel();
     _epicSaveSub?.cancel();

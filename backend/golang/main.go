@@ -114,6 +114,10 @@ func main() {
 		// Referidos - Glassy Partners
 		api.POST("/player/referral", SetReferralCode)
 
+		// Cuenta
+		api.DELETE("/player/account", DeleteAccount)
+		api.POST("/player/reset-progress", ResetProgress)
+
 		// Logros (Achievements)
 		api.GET("/player/achievements/status", GetAchievementsStatus)
 		api.POST("/player/achievements/tiktok", SubmitTikTokLink)

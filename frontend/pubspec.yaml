@@ -49,6 +49,10 @@ dependencies:
   http: ^1.6.0
   flutter_animate: ^4.5.2
 
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  share_plus: ^13.3.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,6 +65,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   flutter_launcher_icons: ^0.13.1
 
+  forge2d: any
 flutter_launcher_icons:
   android: "ic_launcher"
   ios: true
@@ -72,6 +77,7 @@ flutter_launcher_icons:
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -81,7 +87,8 @@ flutter:
   assets:
     - assets/office/
     - assets/audio/
-    - assets/avatar/
+    - assets/avatar/perfiles/
+    - assets/avatar/personaje/
     - assets/images/
     - assets/game/gems/
     - assets/ui/
@@ -102,6 +109,7 @@ flutter:
     - assets/skin/Planetas/
     - assets/skin/Sushi_Japones/
     - assets/skin/vida_marina/
+    - assets/skin/Metales_Preciosos/
     - assets/logo.jpg
     - .env
 

@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 292
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,10 +131,10 @@ TextureImporter:
       name: diamante_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 152
-        width: 516
-        height: 325
+        x: 98
+        y: 251
+        width: 828
+        height: 528
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

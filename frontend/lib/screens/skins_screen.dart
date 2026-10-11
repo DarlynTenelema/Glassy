@@ -1,12 +1,14 @@
+import 'package:glassy/theme/app_colors.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../theme/app_theme.dart';
 import '../providers/game_provider.dart';
 import 'store_screen.dart';
+import '../widgets/ui/currency_icon.dart';
 
 class SkinsScreen extends StatefulWidget {
-  const SkinsScreen({Key? key}) : super(key: key);
+  const SkinsScreen({super.key});
 
   @override
   State<SkinsScreen> createState() => _SkinsScreenState();
@@ -30,6 +32,7 @@ class _SkinsScreenState extends State<SkinsScreen> {
     {'id': 'Mundo_Dulce', 'name': 'Mundo Dulce'},
     {'id': 'Planetas', 'name': 'Planetas'},
     {'id': 'Sushi_Japones', 'name': 'Sushi Japonés'},
+    {'id': 'Metales_Preciosos', 'name': 'Metales Preciosos'},
   ];
 
   void _selectSkin(String skinId, GameProvider provider) {
@@ -53,11 +56,11 @@ class _SkinsScreenState extends State<SkinsScreen> {
     final lockedSkins = _allSkins.where((s) => !unlockedSkins.contains(s['id']) && s['id'] != 'gemas_clasicas').toList();
 
     return Scaffold(
-      backgroundColor: const Color(0xFF0D0D12),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text('INVENTARIO', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, letterSpacing: 4, fontSize: 20)),
-        backgroundColor: Colors.black.withOpacity(0.3),
+        backgroundColor: Colors.black.withValues(alpha: 0.3),
         flexibleSpace: ClipRect(
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
@@ -74,11 +77,11 @@ class _SkinsScreenState extends State<SkinsScreen> {
       body: Stack(
         children: [
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: RadialGradient(
                 center: Alignment.topCenter,
                 radius: 1.5,
-                colors: [Color(0xFF1A1A2E), Color(0xFF0D0D12)],
+                colors: [Theme.of(context).colorScheme.surface, Theme.of(context).scaffoldBackgroundColor],
               ),
             ),
           ),
@@ -86,7 +89,7 @@ class _SkinsScreenState extends State<SkinsScreen> {
             child: CustomScrollView(
               physics: const BouncingScrollPhysics(),
               slivers: [
-                _buildSectionHeader('TU COLECCIÓN', Icons.check_circle_outline, AppTheme.crystalBlue),
+                _buildSectionHeader('TU COLECCIÓN', Icons.check_circle_outline, AppColors.lightBlue),
                 _buildGrid(ownedSkins, true, selectedSkinId, gameProvider),
                 
                 const SliverToBoxAdapter(child: SizedBox(height: 30)),
@@ -150,7 +153,37 @@ class _SkinsScreenState extends State<SkinsScreen> {
         if (isOwned && !isSelected) {
           _selectSkin(skin['id'], provider);
         } else if (!isOwned) {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => const StoreScreen()));
+          if (skin['id'] == 'Metales_Preciosos') {
+            showDialog(
+              context: context,
+              builder: (ctx) => AlertDialog(
+                backgroundColor: AppColors.navyBlue,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  side: const BorderSide(color: AppColors.lightBlue, width: 2),
+                ),
+                title: const Row(
+                  children: [
+                    Icon(Icons.stars, color: Colors.amber, size: 28),
+                    SizedBox(width: 8),
+                    Text('SKIN EXCLUSIVA', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
+                  ],
+                ),
+                content: const Text(
+                  '¡Metales Preciosos es una skin legendaria!\n\nPara desbloquearla, invita a 10 amigos compartiendo tu código único de Perfil y reclámala en la pantalla de Logros.',
+                  style: TextStyle(color: Colors.white70, fontSize: 14, height: 1.4),
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(ctx),
+                    child: const Text('ENTENDIDO', style: TextStyle(color: AppColors.lightBlue, fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+            );
+          } else {
+            Navigator.push(context, MaterialPageRoute(builder: (_) => const StoreScreen()));
+          }
         }
       },
       child: ClipRRect(
@@ -159,16 +192,16 @@ class _SkinsScreenState extends State<SkinsScreen> {
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.05),
+              color: Colors.white.withValues(alpha: 0.05),
               borderRadius: BorderRadius.circular(24),
               border: Border.all(
                 color: isSelected 
-                    ? AppTheme.crystalBlue 
-                    : (isOwned ? Colors.white.withOpacity(0.15) : Colors.transparent),
+                    ? AppColors.lightBlue 
+                    : (isOwned ? Colors.white.withValues(alpha: 0.15) : Colors.transparent),
                 width: isSelected ? 3 : 1.5,
               ),
               boxShadow: isSelected
-                  ? [BoxShadow(color: AppTheme.crystalBlue.withOpacity(0.3), blurRadius: 20, spreadRadius: 2)]
+                  ? [BoxShadow(color: AppColors.lightBlue.withValues(alpha: 0.3), blurRadius: 20, spreadRadius: 2)]
                   : [],
             ),
             child: Stack(
@@ -181,7 +214,7 @@ class _SkinsScreenState extends State<SkinsScreen> {
                       child: Container(
                         width: double.infinity,
                         clipBehavior: Clip.hardEdge,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
                         ),
                         child: Stack(
@@ -191,20 +224,20 @@ class _SkinsScreenState extends State<SkinsScreen> {
                             Image.asset(
                               skin['id'] == 'gemas_clasicas' ? 'assets/logo.jpg' : 'assets/skin/${skin['id']}/wallpaper.jpg',
                               fit: BoxFit.cover,
-                              errorBuilder: (c,e,s) => Container(color: Colors.black.withOpacity(0.2)),
+                              errorBuilder: (c,e,s) => Container(color: Colors.black.withValues(alpha: 0.2)),
                             ),
                             // Filtro oscuro
-                            Container(color: Colors.black.withOpacity(0.4)),
+                            Container(color: Colors.black.withValues(alpha: 0.4)),
                             // Ícono Principal (Diamante)
                             Center(
                               child: Hero(
                                 tag: 'inv_${skin['id']}',
                                 child: Image.asset(
-                                  skin['id'] == 'gemas_clasicas' ? 'assets/images/lapislazuli.png' : 'assets/skin/${skin['id']}/Diamond.png',
+                                  skin['id'] == 'gemas_clasicas' ? CurrencyIcon.imagePath : 'assets/skin/${skin['id']}/Diamond.png',
                                   width: 90,
                                   height: 90,
                                   fit: BoxFit.contain,
-                                  errorBuilder: (c, e, s) => const Icon(Icons.color_lens, color: AppTheme.crystalBlue, size: 50),
+                                  errorBuilder: (c, e, s) => const Icon(Icons.color_lens, color: AppColors.lightBlue, size: 50),
                                 ),
                               ),
                             ),
@@ -234,7 +267,7 @@ class _SkinsScreenState extends State<SkinsScreen> {
                             ),
                             const SizedBox(height: 8),
                             if (isSelected)
-                              const Text('EQUIPADO', style: TextStyle(color: AppTheme.crystalBlue, fontWeight: FontWeight.w900, fontSize: 11, letterSpacing: 1))
+                              const Text('EQUIPADO', style: TextStyle(color: AppColors.lightBlue, fontWeight: FontWeight.w900, fontSize: 11, letterSpacing: 1))
                             else if (isOwned)
                               const Text('SELECCIONAR', style: TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 10))
                             else
@@ -248,7 +281,7 @@ class _SkinsScreenState extends State<SkinsScreen> {
                 // Capa oscura 25% con candado para las que no posee
                 if (!isOwned)
                   Container(
-                    color: Colors.black.withOpacity(0.25),
+                    color: Colors.black.withValues(alpha: 0.25),
                     child: const Center(
                       child: Icon(Icons.lock_rounded, color: Colors.white54, size: 40),
                     ),

@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'config/env.dart';
 import 'theme/app_theme.dart';
-import 'screens/login_screen.dart';
 import 'screens/splash_screen.dart';
 import 'services/storage_service.dart';
 import 'services/audio_service.dart';
@@ -41,7 +39,7 @@ void main() async {
 }
 
 class GlassyApp extends StatelessWidget {
-  const GlassyApp({Key? key}) : super(key: key);
+  const GlassyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -64,10 +64,21 @@ public class Gem : MonoBehaviour
     private float _glowIntensity = 0f;
     private Color _gemColor = Color.white;
 
+    private Vector2 _defaultSpriteSize;
+    private Vector3 _originalLocalScale;
+    private Sprite _defaultSprite;
+
     private void Awake()
     {
         _rb             = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _originalLocalScale = transform.localScale;
+
+        if (_spriteRenderer != null && _spriteRenderer.sprite != null)
+        {
+            _defaultSprite = _spriteRenderer.sprite;
+            _defaultSpriteSize = _spriteRenderer.sprite.bounds.size;
+        }
 
         // Leer masa base según el tipo de gema (definida en GameConfig)
         int typeIdx = (int)gemType;
@@ -97,9 +108,54 @@ public class Gem : MonoBehaviour
         if (SkinManager.Instance != null && _spriteRenderer != null)
         {
             Sprite skinSprite = SkinManager.Instance.GetSpriteForGem(gemType);
+            CircleCollider2D col = GetComponent<CircleCollider2D>();
+
             if (skinSprite != null)
             {
                 _spriteRenderer.sprite = skinSprite;
+
+                Vector2 newSize = skinSprite.bounds.size;
+                if (newSize.x > 0 && newSize.y > 0 && _defaultSpriteSize.x > 0)
+                {
+                    float scaleX = _defaultSpriteSize.x / newSize.x;
+                    float scaleY = _defaultSpriteSize.y / newSize.y;
+                    float scaleFactor = Mathf.Min(scaleX, scaleY);
+                    
+                    Vector3 newScale = _originalLocalScale * scaleFactor;
+                    transform.localScale = newScale;
+
+                    // Calibrar el collider para que la zona de toque con el dedo y la física no se encojan
+                    if (col != null && scaleFactor > 0f)
+                    {
+                        col.radius = 1.75f / scaleFactor;
+                    }
+                    
+                    JellyEffect jelly = GetComponent<JellyEffect>();
+                    if (jelly != null)
+                    {
+                        jelly.UpdateOriginalScale(newScale);
+                    }
+                }
+            }
+            else
+            {
+                // Restore default sprite and scale if no skin is applied (e.g. classic gems)
+                if (_defaultSprite != null)
+                {
+                    _spriteRenderer.sprite = _defaultSprite;
+                }
+                transform.localScale = _originalLocalScale;
+
+                if (col != null)
+                {
+                    col.radius = 1.75f;
+                }
+                
+                JellyEffect jelly = GetComponent<JellyEffect>();
+                if (jelly != null)
+                {
+                    jelly.UpdateOriginalScale(_originalLocalScale);
+                }
             }
         }
         ExtractColorForLight();

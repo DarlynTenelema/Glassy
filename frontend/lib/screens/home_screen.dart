@@ -1,20 +1,22 @@
+import 'package:glassy/theme/app_colors.dart';
 import 'dart:math' as math;
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../theme/app_theme.dart';
-import '../widgets/gaming_button.dart';
+import '../widgets/ui/currency_icon.dart';
 import 'records_screen.dart';
 import 'settings_screen.dart';
 import 'game_screen.dart';
 import 'store_screen.dart';
 import 'skins_screen.dart';
+import 'profile_screen.dart';
 import '../services/audio_service.dart';
 import '../providers/game_provider.dart';
 import '../widgets/animated_wallet.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -56,9 +58,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         children: [
           // Fondo base
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [AppTheme.deepLapis, Color(0xFF0A1128)],
+                colors: [Theme.of(context).scaffoldBackgroundColor, Theme.of(context).colorScheme.surface],
                 begin: Alignment.bottomRight,
                 end: Alignment.topLeft,
               ),
@@ -130,47 +132,76 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Botón Records / Perfil
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            PageRouteBuilder(
-                              pageBuilder: (context, animation, secondaryAnimation) => const RecordsScreen(),
-                              transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                return FadeTransition(opacity: animation, child: child);
-                              },
-                            ),
-                          );
-                        },
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.15),
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(color: Colors.white.withOpacity(0.3)),
-                              ),
-                              child: Row(
-                                children: [
-                                  Image.asset('assets/ui/elemento_1.png', width: 24, height: 24),
-                                  const SizedBox(width: 8),
-                                  Text(
-                                    'RECORDS',
-                                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 1,
-                                    ),
+                      Row(
+                        children: [
+                          // Botón Perfil
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                PageRouteBuilder(
+                                  pageBuilder: (context, animation, secondaryAnimation) => const ProfileScreen(),
+                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                    return FadeTransition(opacity: animation, child: child);
+                                  },
+                                ),
+                              );
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: BackdropFilter(
+                                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withValues(alpha: 0.15),
+                                    borderRadius: BorderRadius.circular(20),
+                                    border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
                                   ),
-                                ],
+                                  child: Row(
+                                    children: [
+                                      const Icon(Icons.person, color: Colors.white, size: 24),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-                        ),
+                          const SizedBox(width: 8),
+                          // Botón Records
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                PageRouteBuilder(
+                                  pageBuilder: (context, animation, secondaryAnimation) => const RecordsScreen(),
+                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                    return FadeTransition(opacity: animation, child: child);
+                                  },
+                                ),
+                              );
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: BackdropFilter(
+                                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withValues(alpha: 0.15),
+                                    borderRadius: BorderRadius.circular(20),
+                                    border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Image.asset('assets/ui/elemento_1.png', width: 24, height: 24),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       
                       // Botones de la derecha (Wallet y Settings)
@@ -186,9 +217,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                               filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.15),
+                                  color: Colors.white.withValues(alpha: 0.15),
                                   shape: BoxShape.circle,
-                                  border: Border.all(color: Colors.white.withOpacity(0.3)),
+                                  border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
                                 ),
                                 child: IconButton(
                                   icon: Image.asset('assets/ui/elemento_2.png', width: 28, height: 28),
@@ -223,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     fontWeight: FontWeight.w900,
                     letterSpacing: 4,
                     shadows: [
-                      const Shadow(color: AppTheme.crystalBlue, blurRadius: 25),
+                      const Shadow(color: AppColors.lightBlue, blurRadius: 25),
                       const Shadow(color: Colors.white, blurRadius: 5),
                     ],
                   ),
@@ -248,11 +279,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.1),
+                          color: Colors.white.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: Colors.white.withOpacity(0.4), width: 1.5),
+                          border: Border.all(color: Colors.white.withValues(alpha: 0.4), width: 1.5),
                           boxShadow: [
-                            BoxShadow(color: AppTheme.crystalBlue.withOpacity(0.3), blurRadius: 30, spreadRadius: 5),
+                            BoxShadow(color: AppColors.lightBlue.withValues(alpha: 0.3), blurRadius: 30, spreadRadius: 5),
                           ],
                         ),
                         child: Material(
@@ -355,11 +386,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               child: Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
+                  color: Colors.white.withValues(alpha: 0.1),
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white.withOpacity(0.3), width: 1.5),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.3), width: 1.5),
                   boxShadow: [
-                    BoxShadow(color: Colors.white.withOpacity(0.1), blurRadius: 15, spreadRadius: 1),
+                    BoxShadow(color: Colors.white.withValues(alpha: 0.1), blurRadius: 15, spreadRadius: 1),
                   ],
                 ),
                 child: Image.asset(iconAsset, width: 35, height: 35),
@@ -394,11 +425,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           child: Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: const Color(0xFF161622),
+              color: Theme.of(context).scaffoldBackgroundColor,
               borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: Colors.orangeAccent.withOpacity(0.5), width: 2),
+              border: Border.all(color: Colors.orangeAccent.withValues(alpha: 0.5), width: 2),
               boxShadow: [
-                BoxShadow(color: Colors.orangeAccent.withOpacity(0.2), blurRadius: 30, spreadRadius: -5),
+                BoxShadow(color: Colors.orangeAccent.withValues(alpha: 0.2), blurRadius: 30, spreadRadius: -5),
               ],
             ),
             child: Column(
@@ -439,19 +470,19 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     if (day == 6) rewardValue = 75;
                     if (day == 7) rewardValue = 100;
                     
-                    String imageAsset = day == 7 ? 'assets/images/lapislazuli.png' : 'assets/images/lapis_fragments.png';
+                    String imageAsset = day == 7 ? CurrencyIcon.imagePath : 'assets/images/lapis_fragments.png';
                     
                     return Container(
                       width: 60,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: isToday ? Colors.orangeAccent.withOpacity(0.2) : (isPast ? Colors.green.withOpacity(0.1) : const Color(0xFF232332)),
+                        color: isToday ? Colors.orangeAccent.withValues(alpha: 0.2) : (isPast ? Colors.green.withValues(alpha: 0.1) : Theme.of(context).colorScheme.surface),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
-                          color: isToday ? Colors.orangeAccent : (isPast ? Colors.green : const Color(0xFF2A2A3A)),
+                          color: isToday ? Colors.orangeAccent : (isPast ? Colors.green : Colors.white12),
                           width: isToday ? 2 : 1,
                         ),
-                        boxShadow: isToday ? [BoxShadow(color: Colors.orangeAccent.withOpacity(0.4), blurRadius: 10)] : [],
+                        boxShadow: isToday ? [BoxShadow(color: Colors.orangeAccent.withValues(alpha: 0.4), blurRadius: 10)] : [],
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -460,9 +491,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           const SizedBox(height: 4),
                           isPast 
                             ? const Icon(Icons.check_circle, color: Colors.green, size: 28)
-                            : Image.asset(imageAsset, width: 28, height: 28, errorBuilder: (c,e,s) => const Icon(Icons.diamond, color: AppTheme.crystalBlue, size: 28)),
+                            : Image.asset(imageAsset, width: 28, height: 28, errorBuilder: (c,e,s) => CurrencyIcon(size: 28)),
                           const SizedBox(height: 4),
-                          Text('+$rewardValue', style: TextStyle(color: isToday ? Colors.orangeAccent : AppTheme.crystalBlue, fontWeight: FontWeight.w900, fontSize: 14)),
+                          Text('+$rewardValue', style: TextStyle(color: isToday ? Colors.orangeAccent : AppColors.lightBlue, fontWeight: FontWeight.w900, fontSize: 14)),
                         ],
                       ),
                     );
@@ -487,7 +518,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       elevation: 10,
-                      shadowColor: Colors.orangeAccent.withOpacity(0.5),
+                      shadowColor: Colors.orangeAccent.withValues(alpha: 0.5),
                     ),
                     child: const Text('RECLAMAR', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, letterSpacing: 2)),
                   ),
@@ -507,7 +538,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         'assets/game/gems/$assetName',
         width: size,
         height: size,
-        color: AppTheme.crystalBlue, // Silueta con el color complementario
+        color: AppColors.lightBlue, // Silueta con el color complementario
       ),
     );
   }

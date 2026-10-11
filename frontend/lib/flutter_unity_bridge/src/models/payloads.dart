@@ -31,9 +31,9 @@ class AuthTokenPayload {
 }
 
 class SetSkinPayload {
-  final String skin_id;
-  SetSkinPayload({required this.skin_id});
-  String toJsonString() => json.encode({'skin_id': skin_id});
+  final String skinId;
+  SetSkinPayload({required this.skinId});
+  String toJsonString() => json.encode({'skin_id': skinId});
 }
 
 // ==========================================

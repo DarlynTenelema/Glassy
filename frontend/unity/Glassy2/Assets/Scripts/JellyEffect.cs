@@ -28,6 +28,16 @@ public class JellyEffect : MonoBehaviour
         _originalScale = _visualTransform.localScale;
     }
 
+    public void UpdateOriginalScale(Vector3 newScale)
+    {
+        _originalScale = newScale;
+        // Si no está animándose en este momento, aplicamos la escala inmediatamente
+        if (_jellyCoroutine == null && _visualTransform != null)
+        {
+            _visualTransform.localScale = newScale;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Calcular la velocidad relativa del impacto

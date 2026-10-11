@@ -10,8 +10,8 @@ public class MissionManager : MonoBehaviour
     public static MissionManager Instance { get; private set; }
 
     [Header("Mission Config")]
-    public float minDelayBetweenMissions = 45f;
-    public float maxDelayBetweenMissions = 90f;
+    public float minDelayBetweenMissions = 15f;
+    public float maxDelayBetweenMissions = 30f;
     public float baseTimeLimit = 60f; // 1 min for missions
     
     private bool _isMissionActive = false;
@@ -25,7 +25,7 @@ public class MissionManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            Destroy(this); // Just destroy the extra component
             return;
         }
         Instance = this;
@@ -33,7 +33,8 @@ public class MissionManager : MonoBehaviour
 
     private void Start()
     {
-        ScheduleNextMission();
+        // La primera misión aparece más rápido para atrapar la atención (5 a 10 seg)
+        _nextMissionTimer = Random.Range(5f, 10f);
     }
 
     private void Update()

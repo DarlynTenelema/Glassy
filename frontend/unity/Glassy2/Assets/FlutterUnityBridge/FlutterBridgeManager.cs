@@ -19,7 +19,6 @@ namespace FlutterUnityBridge
 
         public event Action<PauseGamePayload> OnPauseGameRequested;
         public event Action<AudioSettingsPayload> OnAudioSettingsRequested;
-        public event Action<PowerUpPayload> OnPowerUpRequested;
         public event Action<AuthTokenPayload> OnAuthTokenReceived;
         public event Action<SetSkinPayload> OnSkinRequested;
         public event Action<CrystalsUpdatePayload> OnCrystalsUpdateReceived;
@@ -65,10 +64,7 @@ namespace FlutterUnityBridge
                         OnAudioSettingsRequested?.Invoke(audioPayload);
                         break;
 
-                    case "USE_POWERUP":
-                        var powerUpPayload = JsonUtility.FromJson<PowerUpPayload>(bridgeMsg.payload);
-                        OnPowerUpRequested?.Invoke(powerUpPayload);
-                        break;
+
 
                     case "AUTH_TOKEN":
                         var authPayload = JsonUtility.FromJson<AuthTokenPayload>(bridgeMsg.payload);
@@ -129,11 +125,6 @@ namespace FlutterUnityBridge
         public void SendScoreUpdate(int newScore)
         {
             SendToFlutter("SCORE_UPDATED", new ScoreUpdatePayload { currentScore = newScore });
-        }
-
-        public void SendCrystalsUpdate(int newCrystals)
-        {
-            SendToFlutter("CRYSTALS_UPDATED", new CrystalsUpdatePayload { currentCrystals = newCrystals });
         }
 
         public void SendGameOver(int score, bool newHighScore)

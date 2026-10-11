@@ -64,6 +64,30 @@ class PurchaseService {
     return null;
   }
 
+  Future<Map<String, dynamic>?> claimPiggyBank() async {
+    try {
+      final session = Supabase.instance.client.auth.currentSession;
+      if (session == null) return null;
+
+      final response = await http.post(
+        Uri.parse('$_backendUrl/player/piggy-bank/claim'),
+        headers: {
+          'Authorization': 'Bearer ${session.accessToken}',
+          'Content-Type': 'application/json',
+        },
+      );
+
+      if (response.statusCode == 200) {
+        return jsonDecode(response.body) as Map<String, dynamic>;
+      } else {
+        debugPrint('Error claiming piggy bank: ${response.statusCode} - ${response.body}');
+      }
+    } catch (e) {
+      debugPrint('Exception claiming piggy bank: $e');
+    }
+    return null;
+  }
+
   Future<void> buyProduct(String productId) async {
     final ProductDetailsResponse response = await _inAppPurchase.queryProductDetails({productId});
     if (response.notFoundIDs.isNotEmpty) {
@@ -94,13 +118,13 @@ class PurchaseService {
       } else {
         if (purchaseDetails.status == PurchaseStatus.error) {
           debugPrint('Purchase error: ${purchaseDetails.error}');
+          if (purchaseDetails.pendingCompletePurchase) {
+            _inAppPurchase.completePurchase(purchaseDetails);
+          }
         } else if (purchaseDetails.status == PurchaseStatus.purchased ||
                    purchaseDetails.status == PurchaseStatus.restored) {
+          // Solo se completa la compra dentro de _verifyPurchaseWithBackend tras recibir HTTP 200 OK
           _verifyPurchaseWithBackend(purchaseDetails);
-        }
-        
-        if (purchaseDetails.pendingCompletePurchase) {
-          _inAppPurchase.completePurchase(purchaseDetails);
         }
       }
     }
@@ -129,16 +153,32 @@ class PurchaseService {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        final crystalsAdded = data['crystals_added'] as int;
+        final crystalsAdded = data['crystals_added'] as int? ?? 0;
         
-        final gameProvider = Provider.of<GameProvider>(_currentContext!, listen: false);
-        gameProvider.addCrystals(crystalsAdded);
-        
-        ScaffoldMessenger.of(_currentContext!).showSnackBar(
-           SnackBar(content: Text('¡Compra exitosa! +$crystalsAdded Lapislázulis'), backgroundColor: Colors.green),
-        );
+        if (_currentContext != null && _currentContext!.mounted) {
+          final gameProvider = Provider.of<GameProvider>(_currentContext!, listen: false);
+          if (crystalsAdded > 0) {
+            gameProvider.addCrystals(crystalsAdded);
+          }
+          gameProvider.fetchEconomyStatus();
+          
+          ScaffoldMessenger.of(_currentContext!).showSnackBar(
+             SnackBar(
+               content: Text('¡Compra verificada con éxito! +$crystalsAdded Lapislázulis'), 
+               backgroundColor: Colors.green,
+             ),
+          );
+        }
+
+        // CONFIRMACIÓN CRÍTICA: Solo le decimos a Google que la compra fue completada
+        // DESPUÉS de que el servidor la registró y acreditó exitosamente.
+        if (purchaseDetails.pendingCompletePurchase) {
+          await _inAppPurchase.completePurchase(purchaseDetails);
+        }
       } else {
         debugPrint('Verification failed: ${response.statusCode} - ${response.body}');
+        // Si falló (error de red o servidor temporal), NO llamamos a completePurchase.
+        // Google Play mantendrá la compra pendiente y la reintentará automáticamente al reiniciar la app.
       }
     } catch (e) {
       debugPrint('Error verifying purchase: $e');

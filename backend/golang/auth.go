@@ -132,15 +132,59 @@ func SetReferralCode(c *gin.Context) {
 	}
 	defer tx.Rollback()
 
-	// Obtener ID del partner
+	// Primero intentamos buscarlo como Partner (Influencer)
 	var partnerID string
 	err = tx.QueryRow(`SELECT id FROM partners WHERE partner_code = $1`, code).Scan(&partnerID)
-	if err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Invalid referral code"})
+	if err == nil {
+		// Es un partner
+		// Marcar en users
+		res, err := tx.Exec(`
+			UPDATE users 
+			SET referral_code_used = $1 
+			WHERE id = $2 AND referral_code_used IS NULL
+		`, code, userID)
+
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to set referral code"})
+			return
+		}
+
+		rows, _ := res.RowsAffected()
+		if rows == 0 {
+			c.JSON(http.StatusConflict, gin.H{"error": "Referral code already set or user not found"})
+			return
+		}
+
+		// Insertar en partner_referrals
+		_, err = tx.Exec(`
+			INSERT INTO partner_referrals (partner_id, user_id, status)
+			VALUES ($1, $2, 'in_progress')
+		`, partnerID, userID)
+
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to register referral internally"})
+			return
+		}
+
+		tx.Commit()
+		c.JSON(http.StatusOK, gin.H{"message": "Partner code applied successfully!"})
 		return
 	}
 
-	// Marcar en users
+	// Si no es partner, buscar si es el invite_code de otro usuario
+	var inviterID string
+	err = tx.QueryRow(`SELECT id FROM users WHERE invite_code = $1`, code).Scan(&inviterID)
+	if err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Invalid referral or invite code"})
+		return
+	}
+
+	if inviterID == userID {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "You cannot use your own invite code"})
+		return
+	}
+
+	// Marcar que el usuario ya usó un código
 	res, err := tx.Exec(`
 		UPDATE users 
 		SET referral_code_used = $1 
@@ -148,28 +192,135 @@ func SetReferralCode(c *gin.Context) {
 	`, code, userID)
 
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to set referral code"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to set invite code"})
 		return
 	}
 
 	rows, _ := res.RowsAffected()
 	if rows == 0 {
-		c.JSON(http.StatusConflict, gin.H{"error": "Referral code already set or user not found"})
+		c.JSON(http.StatusConflict, gin.H{"error": "You have already used an invite code"})
 		return
 	}
 
-	// Insertar en partner_referrals
+	// Sumar +1 al logro del inviter (Grupo 7, Nivel 1)
 	_, err = tx.Exec(`
-		INSERT INTO partner_referrals (partner_id, user_id, status)
-		VALUES ($1, $2, 'in_progress')
-	`, partnerID, userID)
+		INSERT INTO user_achievements (user_id, group_id, level, progress, updated_at)
+		VALUES ($1, 7, 1, 1, NOW())
+		ON CONFLICT (user_id, group_id, level)
+		DO UPDATE SET progress = user_achievements.progress + 1, updated_at = NOW()
+	`, inviterID)
 
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to register referral internally"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to reward inviter"})
 		return
 	}
 
 	tx.Commit()
 
-	c.JSON(http.StatusOK, gin.H{"message": "Referral code applied successfully!"})
+	c.JSON(http.StatusOK, gin.H{"message": "Invite code applied successfully!"})
 }
+
+// DeleteAccount permite al usuario eliminar permanentemente su cuenta
+// DELETE /api/player/account
+func DeleteAccount(c *gin.Context) {
+	userID := c.GetString("user_id")
+
+	supabaseURL := os.Getenv("SUPABASE_URL")
+	serviceRoleKey := os.Getenv("SUPABASE_SERVICE_ROLE_KEY")
+
+	if supabaseURL == "" || serviceRoleKey == "" {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Server misconfiguration: missing Supabase keys"})
+		return
+	}
+
+	// Opcional: Borrar de la tabla pública 'users' si no hay ON DELETE CASCADE configurado
+	// Si hay CASCADE, la API de Supabase lo borrará de auth.users y propagará el borrado.
+	tx, err := DB.Begin()
+	if err == nil {
+		tx.Exec("DELETE FROM users WHERE id = $1", userID)
+		tx.Commit()
+	}
+
+	// Llamar a Supabase Admin API para eliminar el usuario
+	req, _ := http.NewRequest("DELETE", supabaseURL+"/auth/v1/admin/users/"+userID, nil)
+	req.Header.Set("Authorization", "Bearer "+serviceRoleKey)
+	req.Header.Set("apikey", serviceRoleKey)
+
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to communicate with auth service"})
+		return
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK && resp.StatusCode != http.StatusNoContent {
+		log.Printf("Failed to delete Supabase user: status %d", resp.StatusCode)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete user from Auth service"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Account deleted successfully"})
+}
+
+// ResetProgress permite al usuario borrar todo su progreso en el juego sin borrar su cuenta
+// POST /api/player/reset-progress
+func ResetProgress(c *gin.Context) {
+	userID := c.GetString("user_id")
+
+	tx, err := DB.Begin()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+	defer tx.Rollback()
+
+	// 1. Limpiar tablas secundarias
+	tablesToClear := []string{
+		"user_skins",
+		"leaderboards",
+		"user_achievements",
+		"tiktok_submissions",
+	}
+
+	for _, table := range tablesToClear {
+		_, err = tx.Exec(fmt.Sprintf("DELETE FROM %s WHERE user_id = $1", table), userID)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to reset " + table})
+			return
+		}
+	}
+
+	// 2. Resetear valores en la tabla users
+	// Mantenemos subscription_tier y last_login_at
+	_, err = tx.Exec(`
+		UPDATE users SET
+			crystals = 0,
+			piggy_bank = 0,
+			daily_reward_streak = 0,
+			last_daily_claim = NULL,
+			current_mission_day = 1,
+			mission_progress = 0,
+			mission_completed = FALSE,
+			lapis_fragments = 0,
+			last_chest_6h = NULL,
+			last_chest_12h = NULL,
+			last_chest_24h = NULL,
+			daily_lapis_farmed = 0,
+			last_farm_date = NULL,
+			selected_skin_id = 'gemas_clasicas'
+		WHERE id = $1
+	`, userID)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to reset user data"})
+		return
+	}
+
+	if err := tx.Commit(); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Transaction commit failed"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Progress reset successfully"})
+}
+
