@@ -419,18 +419,21 @@ func VerifyPurchase(c *gin.Context) {
 	ctx := context.Background()
 
 	credentialsJSON := os.Getenv("GOOGLE_CREDENTIALS_JSON")
-	var service *androidpublisher.Service
-	var err error
-	if credentialsJSON != "" {
-		service, err = androidpublisher.NewService(ctx, option.WithCredentialsJSON([]byte(credentialsJSON)))
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to initialize Play Billing service"})
-			return
-		}
+	if credentialsJSON == "" {
+		log.Printf("[VerifyPurchase] ERROR: GOOGLE_CREDENTIALS_JSON environment variable is empty")
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "GOOGLE_CREDENTIALS_JSON not configured"})
+		return
 	}
 
-	if credentialsJSON == "" {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "GOOGLE_CREDENTIALS_JSON not configured"})
+	trimmedCreds := strings.TrimSpace(credentialsJSON)
+	if strings.HasPrefix(trimmedCreds, "\"") && strings.HasSuffix(trimmedCreds, "\"") {
+		trimmedCreds = trimmedCreds[1 : len(trimmedCreds)-1]
+	}
+
+	service, err := androidpublisher.NewService(ctx, option.WithCredentialsJSON([]byte(trimmedCreds)))
+	if err != nil {
+		log.Printf("[VerifyPurchase] ERROR initializing Play Billing service: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to initialize Play Billing service", "details": err.Error()})
 		return
 	}
 
@@ -439,21 +442,22 @@ func VerifyPurchase(c *gin.Context) {
 	if strings.HasPrefix(req.ProductID, "sub_") {
 		sub, err := service.Purchases.Subscriptionsv2.Get(packageName, req.PurchaseToken).Do()
 		if err != nil {
-			log.Printf("Error verifying subscription with Google: %v", err)
-			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid subscription receipt"})
+			log.Printf("[VerifyPurchase] Error verifying subscription with Google: %v", err)
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid subscription receipt", "details": err.Error()})
 			return
 		}
 		// Validar que la suscripción esté activa o en periodo de gracia
 		if sub.SubscriptionState != "SUBSCRIPTION_STATE_ACTIVE" && sub.SubscriptionState != "SUBSCRIPTION_STATE_IN_GRACE_PERIOD" {
-			c.JSON(http.StatusPaymentRequired, gin.H{"error": "Subscription payment not received"})
+			log.Printf("[VerifyPurchase] Subscription not active: %s", sub.SubscriptionState)
+			c.JSON(http.StatusPaymentRequired, gin.H{"error": "Subscription payment not received", "state": sub.SubscriptionState})
 			return
 		}
 		purchaseState = 0 // Marcamos como 0 para indicar éxito
 	} else {
 		purchase, err := service.Purchases.Products.Get(packageName, req.ProductID, req.PurchaseToken).Do()
 		if err != nil {
-			log.Printf("Error verifying purchase with Google: %v", err)
-			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid purchase receipt"})
+			log.Printf("[VerifyPurchase] Error verifying purchase with Google for product %s: %v", req.ProductID, err)
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid purchase receipt", "details": err.Error()})
 			return
 		}
 		purchaseState = int(purchase.PurchaseState)
@@ -461,9 +465,13 @@ func VerifyPurchase(c *gin.Context) {
 
 	// 0 = Purchased, 1 = Canceled, 2 = Pending (para in-app products)
 	if purchaseState != 0 {
-		c.JSON(http.StatusPaymentRequired, gin.H{"error": "Purchase is not in 'Purchased' state"})
+		log.Printf("[VerifyPurchase] Purchase not in purchased state: %d", purchaseState)
+		c.JSON(http.StatusPaymentRequired, gin.H{"error": "Purchase is not in 'Purchased' state", "state": purchaseState})
 		return
 	}
+
+	// Asegurar que el usuario existe en public.users antes de registrar la compra
+	EnsureUserExists(userID)
 
 	// TRANSACCIÓN ATÓMICA:
 	// 1. Insertar el purchase_token (falla si ya existe → anti-replay).
@@ -471,22 +479,27 @@ func VerifyPurchase(c *gin.Context) {
 	// Si cualquier paso falla, se hace Rollback completo.
 	tx, err := DB.Begin()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error: could not begin transaction"})
+		log.Printf("[VerifyPurchase] ERROR DB.Begin failed: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error: could not begin transaction", "details": err.Error()})
 		return
 	}
-	defer tx.Rollback() // Solo tiene efecto si no se llamó tx.Commit()
+	defer tx.Rollback()
 
 	_, err = tx.Exec(`
 		INSERT INTO purchases (user_id, purchase_token, package_id, crystals_added)
 		VALUES ($1, $2, $3, $4)
 	`, userID, req.PurchaseToken, req.ProductID, reward.Crystals)
 	if err != nil {
-		// El UNIQUE constraint en purchase_token falló → replay attack detectado
-		c.JSON(http.StatusConflict, gin.H{"error": "This purchase has already been claimed"})
+		log.Printf("[VerifyPurchase] ERROR Insert purchases: %v", err)
+		if strings.Contains(err.Error(), "unique") || strings.Contains(err.Error(), "duplicate") || strings.Contains(err.Error(), "purchases_token_unique") {
+			c.JSON(http.StatusConflict, gin.H{"error": "This purchase has already been claimed"})
+		} else {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to record purchase receipt", "details": err.Error()})
+		}
 		return
 	}
 
-	query := "UPDATE users SET crystals = crystals + $1, piggy_bank = piggy_bank + $2"
+	query := "UPDATE users SET crystals = COALESCE(crystals, 0) + $1, piggy_bank = COALESCE(piggy_bank, 0) + $2"
 	switch req.ProductID {
 	case "pack_event_500":
 		query += ", welcome_pack_500_bought = TRUE"
@@ -503,16 +516,27 @@ func VerifyPurchase(c *gin.Context) {
 	}
 	query += " WHERE id = $3"
 
-	_, err = tx.Exec(query, reward.Crystals, reward.PiggyBank, userID)
+	res, err := tx.Exec(query, reward.Crystals, reward.PiggyBank, userID)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update crystals and piggy bank balance"})
+		log.Printf("[VerifyPurchase] ERROR UPDATE users (%s): %v", query, err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update crystals and piggy bank balance", "details": err.Error()})
+		return
+	}
+
+	rows, _ := res.RowsAffected()
+	if rows == 0 {
+		log.Printf("[VerifyPurchase] ERROR User %s not found in users table during balance update", userID)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "User record not found in database"})
 		return
 	}
 
 	if err := tx.Commit(); err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to commit transaction"})
+		log.Printf("[VerifyPurchase] ERROR tx.Commit: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to commit transaction", "details": err.Error()})
 		return
 	}
+
+	log.Printf("[VerifyPurchase] SUCCESS: Credited %d crystals and %d piggy bank to user %s for product %s", reward.Crystals, reward.PiggyBank, userID, req.ProductID)
 
 	c.JSON(http.StatusOK, gin.H{
 		"message":          "Purchase verified and crystals/piggy-bank updated",

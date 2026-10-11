@@ -117,7 +117,7 @@ func EnsureUserExists(userID string) {
 	if DB == nil || userID == "" {
 		return
 	}
-	_, _ = DB.Exec(`
+	_, err := DB.Exec(`
 		INSERT INTO users (id, email, name, avatar_url, crystals, invite_code)
 		SELECT id, email, 
 		       COALESCE(raw_user_meta_data->>'full_name', raw_user_meta_data->>'name', 'Jugador'),
@@ -127,6 +127,9 @@ func EnsureUserExists(userID string) {
 		FROM auth.users WHERE id = $1
 		ON CONFLICT (id) DO NOTHING
 	`, userID)
+	if err != nil {
+		log.Printf("[EnsureUserExists] Error inserting user %s from auth.users: %v", userID, err)
+	}
 }
 
 // SetReferralCode permite a un usuario registrar el código del influencer

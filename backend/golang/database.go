@@ -127,14 +127,15 @@ func ensureTables() {
 	-- purchase_token UNIQUE = protección anti-replay attacks.
 	-- ============================================================
 	CREATE TABLE IF NOT EXISTS purchases (
-		id             UUID         PRIMARY KEY DEFAULT uuid_generate_v4(),
+		id             UUID         PRIMARY KEY DEFAULT gen_random_uuid(),
 		user_id        UUID         NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-		purchase_token VARCHAR(255) NOT NULL,
+		purchase_token TEXT         NOT NULL,
 		package_id     VARCHAR(50)  NOT NULL,
-		crystals_added INT          NOT NULL CHECK (crystals_added > 0),
+		crystals_added INT          NOT NULL CHECK (crystals_added >= 0),
 		created_at     TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
 		CONSTRAINT purchases_token_unique UNIQUE (purchase_token)
 	);
+	ALTER TABLE purchases ALTER COLUMN purchase_token TYPE TEXT;
 	-- ============================================================
 	-- TABLA: user_achievements
 	-- Registra el progreso de los distintos logros por grupo (1 a 10) y niveles.
