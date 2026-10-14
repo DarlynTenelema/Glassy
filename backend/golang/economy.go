@@ -77,21 +77,20 @@ func GetEconomyStatus(c *gin.Context) {
 		}
 	}
 
-	// Lógica anti-trampas de tiempo: comprobar la fecha desde el servidor
+	// Lógica anti-trampas de tiempo: comprobar la elegibilidad de reclamo diario
 	s.CanClaimDaily = true
-
 	if s.LastDailyClaim != nil {
+		elapsed := now.Sub(*s.LastDailyClaim)
 		y1, m1, d1 := now.Date()
 		y2, m2, d2 := s.LastDailyClaim.Date()
+		isDifferentDay := (y1 != y2 || m1 != m2 || d1 != d2)
 
-		if y1 == y2 && m1 == m2 && d1 == d2 {
+		// Puede reclamar si es un nuevo día (con al menos 8h de diferencia) o si pasaron 18h
+		if !((isDifferentDay && elapsed >= 8*time.Hour) || elapsed >= 18*time.Hour) {
 			s.CanClaimDaily = false
-		} else {
-			ayer := now.AddDate(0, 0, -1)
-			ya, ma, da := ayer.Date()
-			if !(y2 == ya && m2 == ma && d2 == da) {
-				s.DailyRewardStreak = 1
-			}
+		} else if elapsed > 48*time.Hour {
+			// Si pasaron más de 48 horas sin entrar, se reinicia la racha
+			s.DailyRewardStreak = 1
 		}
 	}
 
@@ -125,31 +124,25 @@ func ClaimDailyReward(c *gin.Context) {
 
 	now := time.Now().UTC()
 	if lastClaim != nil {
+		elapsed := now.Sub(*lastClaim)
 		y1, m1, d1 := now.Date()
 		y2, m2, d2 := lastClaim.Date()
+		isDifferentDay := (y1 != y2 || m1 != m2 || d1 != d2)
 
-		if y1 == y2 && m1 == m2 && d1 == d2 {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Already claimed today"})
+		if !((isDifferentDay && elapsed >= 8*time.Hour) || elapsed >= 18*time.Hour) {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "Ya has reclamado tu recompensa diaria de hoy."})
 			return
-		} else {
-			ayer := now.AddDate(0, 0, -1)
-			ya, ma, da := ayer.Date()
-			if !(y2 == ya && m2 == ma && d2 == da) {
-				streak = 1 // Racha perdida
-			}
+		}
+
+		if elapsed > 48*time.Hour {
+			streak = 1 // Racha reiniciada si faltó más de 48 horas
 		}
 	}
 
-	// Lógica de recompensas en fragmentos: 10, 20, 30, 40, 50, 75, 100
-	rewardFragments := 0
-	switch streak {
-	case 1: rewardFragments = 10
-	case 2: rewardFragments = 20
-	case 3: rewardFragments = 30
-	case 4: rewardFragments = 40
-	case 5: rewardFragments = 50
-	case 6: rewardFragments = 75
-	case 7: rewardFragments = 100
+	// Recompensa en Lapislázulis directa a la billetera (Día 1: 1 ... Día 6: 6, Día 7: 10)
+	rewardCrystals := streak
+	if streak >= 7 {
+		rewardCrystals = 10
 	}
 
 	// Actualizar el estado
@@ -158,43 +151,24 @@ func ClaimDailyReward(c *gin.Context) {
 		nextStreak = 1 // Reiniciar ciclo tras completar 7 días
 	}
 
-	// Convertir fragmentos a Lapis si llegan a 100
 	_, err = tx.Exec(`
 		UPDATE users 
-		SET lapis_fragments = lapis_fragments + $1, 
+		SET crystals = crystals + $1, 
 		    daily_reward_streak = $2, 
 		    last_daily_claim = $3 
 		WHERE id = $4
-	`, rewardFragments, nextStreak, now, userID)
+	`, rewardCrystals, nextStreak, now, userID)
 
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update reward"})
 		return
 	}
 
-	// Auto-conversión a cristales si tiene 100 o más
-	var currentFragments int
-	err = tx.QueryRow(`SELECT lapis_fragments FROM users WHERE id = $1`, userID).Scan(&currentFragments)
-	if err == nil && currentFragments >= 100 {
-		crystalsToAdd := currentFragments / 100
-		remainingFragments := currentFragments % 100
-		_, err = tx.Exec(`
-			UPDATE users 
-			SET crystals = crystals + $1, lapis_fragments = $2 
-			WHERE id = $3
-		`, crystalsToAdd, remainingFragments, userID)
-		
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to convert fragments"})
-			return
-		}
-	}
-
 	tx.Commit()
 
 	c.JSON(http.StatusOK, gin.H{
 		"message":         "Daily reward claimed",
-		"reward_fragments": rewardFragments,
+		"reward_crystals": rewardCrystals,
 		"new_streak":      nextStreak,
 	})
 }
