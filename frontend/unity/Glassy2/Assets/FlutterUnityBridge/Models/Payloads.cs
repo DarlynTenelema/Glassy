@@ -85,6 +85,8 @@ namespace FlutterUnityBridge.Models
     {
         public string text;
         public int timeLimitSeconds;
+        public int gemType;
+        public int targetAmount;
     }
 
     [Serializable]
@@ -98,5 +100,11 @@ namespace FlutterUnityBridge.Models
     public class MissionCompletedPayload
     {
         public int bonusPoints;
+    }
+
+    [Serializable]
+    public class ReviveOpportunityPayload
+    {
+        public int currentScore;
     }
 }

@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
@@ -83,9 +84,13 @@ func AuthMiddleware() gin.HandlerFunc {
 			req.Header.Set("Authorization", "Bearer "+tokenString)
 			req.Header.Set("apikey", supabaseAnon)
 
-			resp, reqErr := http.DefaultClient.Do(req)
-			if reqErr != nil || resp.StatusCode != http.StatusOK {
-				log.Printf("Supabase API verification failed: %v, status: %d", reqErr, resp.StatusCode)
+			client := &http.Client{Timeout: 8 * time.Second}
+			resp, reqErr := client.Do(req)
+			if resp != nil {
+				defer resp.Body.Close()
+			}
+			if reqErr != nil || resp == nil || resp.StatusCode != http.StatusOK {
+				log.Printf("Supabase API verification failed: %v", reqErr)
 				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Token unverifiable by Supabase API"})
 				return
 			}
@@ -112,24 +117,35 @@ func AuthMiddleware() gin.HandlerFunc {
 }
 
 // EnsureUserExists auto-recupera la fila del jugador en public.users si por alguna razón
-// (pruebas, reseteo manual de tablas, etc.) existe en auth.users pero falta en public.users.
+// (registro OAuth, pruebas, reseteo manual de tablas, etc.) existe en auth.users pero falta en public.users.
 func EnsureUserExists(userID string) {
 	if DB == nil || userID == "" {
 		return
 	}
 	_, err := DB.Exec(`
 		INSERT INTO users (id, email, name, avatar_url, crystals, invite_code)
-		SELECT id, email, 
-		       COALESCE(raw_user_meta_data->>'full_name', raw_user_meta_data->>'name', 'Jugador'),
-		       COALESCE(raw_user_meta_data->>'avatar_url', ''), 
+		SELECT id, 
+		       COALESCE(email, ''), 
+		       COALESCE(NULLIF(raw_user_meta_data->>'full_name', ''), NULLIF(raw_user_meta_data->>'name', ''), 'Jugador'),
+		       COALESCE(NULLIF(raw_user_meta_data->>'avatar_url', ''), NULLIF(raw_user_meta_data->>'picture', ''), ''), 
 		       100,
-		       SUBSTRING(REPLACE(gen_random_uuid()::text, '-', '') FROM 1 FOR 8)
+		       SUBSTRING(MD5(gen_random_uuid()::text || id::text) FROM 1 FOR 8)
 		FROM auth.users WHERE id = $1
-		ON CONFLICT (id) DO NOTHING
+		ON CONFLICT (id) DO UPDATE SET
+		       email = CASE WHEN users.email = '' THEN EXCLUDED.email ELSE users.email END,
+		       name = CASE WHEN users.name = 'Jugador' OR users.name = '' THEN EXCLUDED.name ELSE users.name END,
+		       avatar_url = CASE WHEN users.avatar_url = '' OR users.avatar_url IS NULL THEN EXCLUDED.avatar_url ELSE users.avatar_url END
 	`, userID)
 	if err != nil {
 		log.Printf("[EnsureUserExists] Error inserting user %s from auth.users: %v", userID, err)
 	}
+
+	// Asegurar que la skin base está asignada
+	_, _ = DB.Exec(`
+		INSERT INTO user_skins (user_id, skin_id)
+		VALUES ($1, 'gemas_clasicas')
+		ON CONFLICT (user_id, skin_id) DO NOTHING
+	`, userID)
 }
 
 // SetReferralCode permite a un usuario registrar el código del influencer
@@ -196,50 +212,83 @@ func SetReferralCode(c *gin.Context) {
 	// Si no es partner, buscar si es el invite_code de otro usuario
 	var inviterID string
 	err = tx.QueryRow(`SELECT id FROM users WHERE invite_code = $1`, code).Scan(&inviterID)
-	if err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Invalid referral or invite code"})
+	if err == nil {
+		if inviterID == userID {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "You cannot use your own invite code"})
+			return
+		}
+
+		// Marcar que el usuario ya usó un código
+		res, err := tx.Exec(`
+			UPDATE users 
+			SET referral_code_used = $1 
+			WHERE id = $2 AND referral_code_used IS NULL
+		`, code, userID)
+
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to set invite code"})
+			return
+		}
+
+		rows, _ := res.RowsAffected()
+		if rows == 0 {
+			c.JSON(http.StatusConflict, gin.H{"error": "You have already used an invite code"})
+			return
+		}
+
+		// Sumar +1 al logro del inviter (Grupo 7, Nivel 1)
+		_, err = tx.Exec(`
+			INSERT INTO user_achievements (user_id, group_id, level, progress, updated_at)
+			VALUES ($1, 7, 1, 1, NOW())
+			ON CONFLICT (user_id, group_id, level)
+			DO UPDATE SET progress = user_achievements.progress + 1, updated_at = NOW()
+		`, inviterID)
+
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to reward inviter"})
+			return
+		}
+
+		tx.Commit()
+		c.JSON(http.StatusOK, gin.H{"message": "Invite code applied successfully!"})
 		return
 	}
 
-	if inviterID == userID {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "You cannot use your own invite code"})
+	// 3. Si no es partner ni amigo interno, validar contra la plataforma InAds
+	inadsSuccess, inadsMsg, _ := ClaimInAdsReferral(code, userID, "glassy_"+userID)
+	if inadsSuccess {
+		// ¡El código pertenece a un creador en InAds!
+		// Acreditar 300 cristales de bienvenida al jugador
+		res, err := tx.Exec(`
+			UPDATE users 
+			SET referral_code_used = $1, crystals = crystals + 300 
+			WHERE id = $2 AND referral_code_used IS NULL
+		`, code, userID)
+
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Error acreditando recompensa de cristales"})
+			return
+		}
+
+		rows, _ := res.RowsAffected()
+		if rows == 0 {
+			c.JSON(http.StatusConflict, gin.H{"error": "Ya has utilizado un código de creador anteriormente"})
+			return
+		}
+
+		tx.Commit()
+		c.JSON(http.StatusOK, gin.H{
+			"status":          "success",
+			"message":         "¡Código de creador canjeado con éxito! Recibiste 300 cristales gratis.",
+			"crystals_reward": 300,
+		})
 		return
 	}
 
-	// Marcar que el usuario ya usó un código
-	res, err := tx.Exec(`
-		UPDATE users 
-		SET referral_code_used = $1 
-		WHERE id = $2 AND referral_code_used IS NULL
-	`, code, userID)
-
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to set invite code"})
-		return
-	}
-
-	rows, _ := res.RowsAffected()
-	if rows == 0 {
-		c.JSON(http.StatusConflict, gin.H{"error": "You have already used an invite code"})
-		return
-	}
-
-	// Sumar +1 al logro del inviter (Grupo 7, Nivel 1)
-	_, err = tx.Exec(`
-		INSERT INTO user_achievements (user_id, group_id, level, progress, updated_at)
-		VALUES ($1, 7, 1, 1, NOW())
-		ON CONFLICT (user_id, group_id, level)
-		DO UPDATE SET progress = user_achievements.progress + 1, updated_at = NOW()
-	`, inviterID)
-
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to reward inviter"})
-		return
-	}
-
-	tx.Commit()
-
-	c.JSON(http.StatusOK, gin.H{"message": "Invite code applied successfully!"})
+	c.JSON(http.StatusNotFound, gin.H{
+		"error":   "Código de referido o creador inválido",
+		"details": inadsMsg,
+	})
 }
 
 // DeleteAccount permite al usuario eliminar permanentemente su cuenta
@@ -259,8 +308,9 @@ func DeleteAccount(c *gin.Context) {
 	// Si hay CASCADE, la API de Supabase lo borrará de auth.users y propagará el borrado.
 	tx, err := DB.Begin()
 	if err == nil {
-		tx.Exec("DELETE FROM users WHERE id = $1", userID)
-		tx.Commit()
+		defer tx.Rollback()
+		_, _ = tx.Exec("DELETE FROM users WHERE id = $1", userID)
+		_ = tx.Commit()
 	}
 
 	// Llamar a Supabase Admin API para eliminar el usuario
@@ -268,7 +318,8 @@ func DeleteAccount(c *gin.Context) {
 	req.Header.Set("Authorization", "Bearer "+serviceRoleKey)
 	req.Header.Set("apikey", serviceRoleKey)
 
-	resp, err := http.DefaultClient.Do(req)
+	client := &http.Client{Timeout: 8 * time.Second}
+	resp, err := client.Do(req)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to communicate with auth service"})
 		return

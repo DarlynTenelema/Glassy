@@ -1,4 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/foundation.dart';
 
 class AudioService {
   static final AudioService _instance = AudioService._internal();
@@ -9,9 +10,11 @@ class AudioService {
   final AudioPlayer _bgMusicPlayer = AudioPlayer();
   final AudioPlayer _sfxPlayer1 = AudioPlayer();
   final AudioPlayer _sfxPlayer2 = AudioPlayer();
+  bool _isBgMusicPlaying = false;
+  bool get isBgMusicPlaying => _isBgMusicPlaying;
   
 
-  bool _isBgMusicPlaying = false;
+
 
   Future<void> init() async {
     // Configurar el contexto de audio global para que SFX no interrumpa BGM
@@ -38,7 +41,7 @@ class AudioService {
       }
       _isBgMusicPlaying = true;
     } catch (e) {
-      print('Error playing bg music: $e');
+      debugPrint('Error playing bg music: $e');
     }
   }
 
@@ -47,7 +50,7 @@ class AudioService {
       await _bgMusicPlayer.stop();
       _isBgMusicPlaying = false;
     } catch (e) {
-      print('Error stopping bg music: $e');
+      debugPrint('Error stopping bg music: $e');
     }
   }
 
@@ -58,7 +61,7 @@ class AudioService {
       await _sfxPlayer1.stop();
       await _sfxPlayer1.play(AssetSource('audio/click.mp3'), volume: 0.4);
     } catch (e) {
-      print('Error playing click: $e');
+      debugPrint('Error playing click: $e');
     }
   }
 
@@ -67,7 +70,7 @@ class AudioService {
       await _sfxPlayer2.stop();
       await _sfxPlayer2.play(AssetSource('audio/glass_break.mp3'), volume: 0.5);
     } catch (e) {
-      print('Error playing glass break: $e');
+      debugPrint('Error playing glass break: $e');
     }
   }
 
@@ -76,7 +79,7 @@ class AudioService {
       await _sfxPlayer2.stop();
       await _sfxPlayer2.play(AssetSource('audio/change_glass.mp3'), volume: 1.0);
     } catch (e) {
-      print('Error playing change glass: $e');
+      debugPrint('Error playing change glass: $e');
     }
   }
 }

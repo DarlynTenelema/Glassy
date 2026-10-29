@@ -70,9 +70,15 @@ func GetEconomyStatus(c *gin.Context) {
 		
 		if err == nil {
 			totalActiveDays = newTotalActiveDays
-			// Verificar si completó los 15 días para el partner
+			// Verificar si completó los 15 días para el partner interno
 			if totalActiveDays == 15 {
 				go ProcessPartnerReferralConfirmation(userID)
+			}
+			// Si completó al menos 3 días de actividad, notificar a InAds para verificar conversión y liberar los $0.10 al influencer
+			if totalActiveDays >= 3 {
+				go func(pID string) {
+					_ = VerifyInAdsRetention(pID, "retention_confirmed")
+				}(userID)
 			}
 		}
 	}

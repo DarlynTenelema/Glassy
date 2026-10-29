@@ -118,7 +118,13 @@ public class InputManager : MonoBehaviour
 
     private void HandleDrag()
     {
-        if (!_isDragging || _selectedGem == null) return;
+        if (!_isDragging) return;
+
+        if (_selectedGem == null || _selectedRb == null)
+        {
+            DisconnectPointer();
+            return;
+        }
 
         Vector2 worldPos  = GetInputWorldPosition();
         

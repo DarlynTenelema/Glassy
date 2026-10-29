@@ -6,6 +6,7 @@
     "gameMusic": "Música Juego",
     "darkMode": "Modo Oscuro",
     "language": "Idioma",
+    "selectLanguage": "Seleccionar Idioma",
     "terms": "Términos",
     "privacy": "Privacidad",
     "deleteAccount": "Eliminar Cuenta",
@@ -20,5 +21,229 @@
     "resetProgressWarning": "¿Estás seguro de que quieres reiniciar tu juego? Perderás todas tus gemas, skins, logros y progreso, pero conservarás tu cuenta y compras. Esta acción no se puede deshacer.",
     "reset": "Restablecer",
     "resetProgressError": "Error al restablecer progreso. Intenta nuevamente.",
-    "resetProgressSuccess": "Progreso restablecido correctamente."
+    "resetProgressSuccess": "Progreso restablecido correctamente.",
+
+    "continueWithGoogle": "Continuar con Google",
+    "loginCancelled": "Inicio de sesión cancelado",
+    "referralCodeOptional": "Código de referido (opcional)",
+    "applyReferral": "Aplicar",
+    "referralApplied": "¡Código de referido aplicado!",
+    "invalidReferralCode": "Código de referido inválido",
+
+    "play": "PLAY",
+    "skins": "SKINS",
+    "store": "TIENDA",
+    "records": "RÉCORDS",
+    "profile": "PERFIL",
+    "mergeToEvolve": "Fusiona para evolucionar",
+    "dailyReward": "RECOMPENSA DIARIA",
+    "dayNumber": "Día {day}",
+    "@dayNumber": {
+        "placeholders": {
+            "day": { "type": "int" }
+        }
+    },
+    "claim": "RECLAMAR",
+    "dailyRewardClaimed": "¡Recompensa del Día {day} Reclamada!",
+    "@dailyRewardClaimed": {
+        "placeholders": {
+            "day": { "type": "int" }
+        }
+    },
+
+    "breakTitle": "BREAK!!!",
+    "quickSettings": "Ajustes Rápidos",
+    "resume": "REANUDAR",
+    "gemRecharge": "Recarga de Gemas",
+    "gameStartBanner": "Juega, relájate y disfruta",
+    "gameOver": "GAME OVER",
+    "newHighScore": "¡Felicidades, nuevo score!",
+    "goodTry": "Buen intento",
+    "scoreLabel": "PUNTUACIÓN",
+    "highScoreLabel": "RÉCORD",
+    "epicSave": "¡SALVADA ÉPICA!\n+{bonus}",
+    "@epicSave": {
+        "placeholders": {
+            "bonus": { "type": "int" }
+        }
+    },
+    "comboText": "¡COMBO X{combo}!\n+{bonus}",
+    "@comboText": {
+        "placeholders": {
+            "combo": { "type": "int" },
+            "bonus": { "type": "int" }
+        }
+    },
+    "missionComplete": "¡MISIÓN COMPLETADA!",
+    "missionCreateGems": "Crea {count} {gemName}",
+    "@missionCreateGems": {
+        "placeholders": {
+            "count": { "type": "int" },
+            "gemName": { "type": "String" }
+        }
+    },
+    "shareScore": "Compartir",
+    "shareText": "¡Conseguí {score} puntos en Glassy! ¿Puedes superarme?",
+    "@shareText": {
+        "placeholders": {
+            "score": { "type": "int" }
+        }
+    },
+
+    "gemPearl": "Perlas",
+    "gemEmerald": "Esmeraldas",
+    "gemAmethyst": "Amatistas",
+    "gemTopaz": "Topacios",
+    "gemGreenRuby": "Rubíes Verdes",
+    "gemSapphire": "Zafiros",
+    "gemRedRuby": "Rubíes",
+    "gemDiamond": "Diamantes",
+    "gemDefault": "Gemas",
+
+    "achievementsTab": "Logros",
+    "rankingTab": "Ranking",
+    "dailyTab": "Diario",
+    "achievementsSystemTitle": "SISTEMA DE LOGROS",
+    "achievementsSystemSubtitle": "Completa retos para ganar Lapislázulis gratis.",
+    "gemFusionCategory": "FUSIÓN DE GEMAS",
+    "specialOffersCategory": "OFERTAS ESPECIALES",
+    "claimed": "RECLAMADO",
+    "completed": "COMPLETADO",
+    "weeklyRanking": "Semanal",
+    "totalRanking": "Histórico Total",
+
+    "skinsCollection": "COLECCIÓN DE SKINS",
+    "equipped": "EQUIPADO",
+    "equip": "EQUIPAR",
+    "unlock": "DESBLOQUEAR",
+    "exclusiveSkin": "Skin Exclusiva",
+
+    "storeTitle": "TIENDA",
+    "chests": "COFRES",
+    "gemPacks": "PAQUETES DE GEMAS",
+    "free": "GRATIS",
+    "purchaseSuccessful": "¡Compra realizada con éxito!",
+    "purchaseFailed": "Error en la compra. Intenta de nuevo.",
+
+    "playerProfile": "PERFIL DE JUGADOR",
+    "stats": "ESTADÍSTICAS",
+    "totalScore": "Puntuación Total",
+    "gamesPlayed": "Partidas Jugadas",
+    "changeAvatar": "Cambiar Avatar",
+    "copyId": "Copiar ID",
+    "idCopied": "¡ID copiado al portapapeles!",
+    "playAgain": "VOLVER A JUGAR",
+    "mainMenu": "IR AL MENÚ PRINCIPAL",
+    "yourScore": "Tu score: {score}",
+    "@yourScore": {
+        "placeholders": {
+            "score": { "type": "int" }
+        }
+    },
+    "globalAccumulated": "🌟 Acumulado Global: {total}",
+    "@globalAccumulated": {
+        "placeholders": {
+            "total": { "type": "int" }
+        }
+    },
+
+    "playWithGoogle": "JUGAR CON GOOGLE",
+    "authError": "Error de autenticación: {error}",
+    "@authError": {
+        "placeholders": {
+            "error": { "type": "String" }
+        }
+    },
+    "googleSignInError": "Error de Google Sign In: {error}",
+    "@googleSignInError": {
+        "placeholders": {
+            "error": { "type": "String" }
+        }
+    },
+    "termsNotice": "Al jugar, aceptas nuestros Términos de Servicio y Política de Privacidad.",
+    "allRightsReserved": "© Todos los derechos del juego están reservados.\nProhibida su copia o distribución no autorizada.",
+    "welcomeSubtitle": "Bienvenido al siguiente nivel",
+    "referralCodeHint": "CÓDIGO DE AMIGO O CREADOR (Opcional)",
+    "saveChanges": "GUARDAR CAMBIOS",
+    "profileUpdatedSuccess": "Perfil actualizado correctamente",
+    "profileUpdateError": "Error al guardar el perfil. Intenta de nuevo.",
+    "usernameEmpty": "El nombre de usuario no puede estar vacío",
+    "playerNameHint": "Tu Nombre de Jugador",
+    "streak": "RACHA",
+    "vipInviteCode": "CÓDIGO DE INVITACIÓN VIP",
+    "inviteFriendsDesc": "Invita 10 amigos y gana la skin Metales Preciosos",
+    "inviteCodeCopied": "¡Código copiado! Compártelo con tus amigos.",
+    "copy": "COPIAR",
+    "selectAvatar": "SELECCIONA TU AVATAR",
+    "boy": "Chico",
+    "girl": "Chica",
+    "allAvatars": "Todos",
+    "heroes": "Héroes",
+    "heroines": "Heroínas",
+    "acquired": "ADQUIRIDO",
+    "bonusTab": "BONUS",
+    "categoryStarter": "Iniciales",
+    "categoryStandard": "Estándar",
+    "categoryEvent": "Evento",
+    "skinUnlocked": "¡Skin desbloqueada!",
+    "insufficientLapisOrError": "Lapislázulis insuficientes o error de conexión.",
+    "uniqueOffers": "OFERTAS ÚNICAS",
+    "noEventOffers": "No hay ofertas de evento disponibles.",
+    "lapisPacks": "PAQUETES DE LAPISLÁZULIS",
+    "timeChests": "COFRES DE TIEMPO",
+    "extraRewards": "RECOMPENSAS EXTRA",
+    "chestBronze": "Bronce",
+    "chestSilver": "Plata",
+    "chestGold": "Oro",
+    "chestOpened": "¡Cofre abierto! +{fragments} Fragmentos",
+    "@chestOpened": {
+        "placeholders": {
+            "fragments": { "type": "int" }
+        }
+    },
+    "chestOpenError": "Error al abrir el cofre",
+    "chestOpenBtn": "ABRIR",
+    "chestEvery": "Cada {time}",
+    "@chestEvery": {
+        "placeholders": {
+            "time": { "type": "String" }
+        }
+    },
+    "confirmPurchase": "Confirmar compra",
+    "confirmPurchasePrompt": "¿Deseas adquirir {title} por {price}?",
+    "@confirmPurchasePrompt": {
+        "placeholders": {
+            "title": { "type": "String" },
+            "price": { "type": "String" }
+        }
+    },
+    "processingPurchase": "Procesando compra...",
+    "buy": "COMPRAR",
+    "giftBonus": "+{bonus} de regalo",
+    "@giftBonus": {
+        "placeholders": {
+            "bonus": { "type": "int" }
+        }
+    },
+    "subscribeFor": "SUSCRIBIRSE POR {price}",
+    "@subscribeFor": {
+        "placeholders": {
+            "price": { "type": "String" }
+        }
+    },
+    "piggyBankTitle": "PIGGY BANK",
+    "piggyReady": "¡Llegaste a 100! Toca el cerdito para canjear GRATIS",
+    "piggyCashback": "Cashback gratis por cada compra",
+    "piggyClaimBtn": "¡CANJEAR 100 LAPIS GRATIS!",
+    "piggyClaiming": "CANJEANDO...",
+    "piggyClaimSuccess": "🎉 ¡Has roto el cerdito! +{reward} Lapislázulis gratis añadidos a tu billetera.",
+    "@piggyClaimSuccess": {
+        "placeholders": {
+            "reward": { "type": "int" }
+        }
+    },
+    "piggyClaimError": "No se pudo canjear el Piggy Bank en este momento.",
+    "freeLapisAd": "LAPISLAZULI GRATIS",
+    "freeLapisAdDesc": "Mira un video y gana +1.",
+    "watchAd": "VER"
 }

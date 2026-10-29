@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
+import '../l10n/l10n_extension.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -67,14 +68,11 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                     width: 150,
                     height: 150,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.blueAccent.withValues(alpha: 0.3),
-                          blurRadius: 40,
-                          spreadRadius: 10,
-                        ),
-                      ],
+                      borderRadius: BorderRadius.circular(32),
+                      border: Border.all(
+                        color: Colors.cyanAccent.withValues(alpha: 0.35),
+                        width: 1.5,
+                      ),
                       image: const DecorationImage(
                         image: AssetImage('assets/logo.jpg'),
                         fit: BoxFit.cover,
@@ -118,7 +116,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Juega, relájate y disfruta',
+                    context.l10n.gameStartBanner,
                     style: TextStyle(
                       color: Colors.white.withValues(alpha: 0.5),
                       fontSize: 12,

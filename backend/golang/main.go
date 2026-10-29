@@ -17,6 +17,7 @@ func main() {
 	// Inicializar conexión a BD y autenticación JWT
 	InitDB()
 	InitAuth()
+	StartBotSimulationScheduler()
 
 	// Configurar modo de Gin (release en producción)
 	if os.Getenv("GIN_MODE") == "release" {
@@ -75,6 +76,19 @@ func main() {
 	// Leaderboard global — público para que cualquiera pueda verlo
 	r.GET("/api/leaderboard/global", GetLeaderboards)
 
+	// Descarga de la versión para TikTok Live (Streamer Edition)
+	r.GET("/api/download/tiktok-live", DownloadTikTokLiveBuild)
+
+	// Configuración de Skills para Unity Standalone PC (Tiempo Real)
+	r.GET("/api/partner/stream-config", GetPartnerStreamConfig)
+
+	// Endpoint para forzar simulación de bots bajo demanda (Admin / Cron externo)
+	r.POST("/api/admin/simulate-bots", AdminSimulateBots)
+
+	// Endpoints Administrativos para Skins en Vivo de TikTok (protegidos por X-Admin-Secret)
+	r.POST("/api/admin/assign-custom-skin", AdminAssignCustomSkin)
+	r.GET("/api/admin/custom-skins", AdminListCustomSkins)
+
 	// =========================================================================
 	// RUTAS PROTEGIDAS (requieren JWT de Supabase en el header Authorization)
 	// =========================================================================
@@ -128,12 +142,14 @@ func main() {
 		api.POST("/player/claim-chest", ClaimChest)
 
 		// ==========================================
-		// GLASSY PARTNERS ROUTES
+		// GLASSY PARTNERS ROUTES (RevShare 25%)
 		// ==========================================
 		api.POST("/partner/register", RegisterPartner)
 		api.GET("/partner/dashboard", GetPartnerDashboard)
+		api.GET("/partner/sales", GetPartnerSalesHistory)
 		api.POST("/partner/paypal", UpdatePayPal)
 		api.POST("/partner/withdraw", RequestWithdrawal)
+		api.POST("/partner/skills/toggle", TogglePartnerSkill)
 	}
 
 	// =========================================================================

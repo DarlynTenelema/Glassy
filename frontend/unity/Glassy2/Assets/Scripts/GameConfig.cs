@@ -38,6 +38,7 @@ public static class GameConfig
     public const string SceneLeaderboard = "LeaderboardScene";
     public const string SceneStore       = "StoreScene";
     public const string SceneSettings    = "SettingsScene";
+    public const string SceneTikTok      = "TikTokScene";
 
     // =========================================================================
     // PLAYERPREFS KEYS — Claves para almacenamiento local
@@ -73,30 +74,31 @@ public static class GameConfig
     public const int   MaxScore              = 100_000;
     public const float SpawnInterval         = 0.12f; // Súper rápido, como una manguera de agua
     public const float GameOverGraceSecs     = 1.5f;  // Tiempo en zona de peligro antes de Game Over
+    public const float ComboTimeLimit        = 3.0f;  // Tiempo límite para continuar la racha de combos clásicos
 
     // =========================================================================
     // SISTEMA DE PESOS (según documentación v1)
-    // =========================================================================
-    /// <summary>
+    // ================================    /// <summary>
     /// Masa base de cada gema según su tipo.
     /// Pearl = 0 (ignorada por física de gemas), Diamond = 0 (explota al aparecer).
     /// Las gemas intermedias tienen masas 1.1–1.6 para simular tamaño relativo.
     /// Índice coincide con GemType enum:
-    ///   [0] Pearl=0.1  [1] Emerald=1.1  [2] Amethyst=1.2  [3] Topaz=1.3
-    ///   [4] GreenRuby=1.4  [5] Sapphire=1.5  [6] RedRuby=1.6  [7] Diamond=0.1
+    ///   [0] Pearl=0.1  [1] Emerald=1.0  [2] Amethyst=1.2  [3] Topaz=1.6
+    ///   [4] GreenRuby=2.2  [5] Sapphire=3.0  [6] RedRuby=4.0  [7] Diamond=0.1
+    ///   [8] Quartz=1.0  [9] Stone=4.5
     /// </summary>
     public static readonly float[] GemBaseMasses =
     {
-        0.1f,  // Pearl     — sin interacción con gemas
-        1.0f,  // Emerald   — valor 1
-        1.2f,  // Amethyst  — valor 2
-        1.6f,  // Topaz     — valor 4
-        2.2f,  // GreenRuby — valor 8
-        3.0f,  // Sapphire  — valor 16
-        4.0f,  // RedRuby   — valor 32
-        0.1f,  // Diamond   — explota, no necesita masa real
-        5.0f,  // Stone     — pesado obstáculo
-        1.0f   // Quartz    — peso normal
+        0.1f,  // [0] Pearl     — sin interacción con gemas
+        1.0f,  // [1] Emerald   — valor 1
+        1.2f,  // [2] Amethyst  — valor 2
+        1.6f,  // [3] Topaz     — valor 4
+        2.2f,  // [4] GreenRuby — valor 8
+        3.0f,  // [5] Sapphire  — valor 16
+        4.0f,  // [6] RedRuby   — valor 32
+        0.1f,  // [7] Diamond   — explota, no necesita masa real
+        1.0f,  // [8] Quartz    — peso normal / limpiador
+        4.5f   // [9] Stone     — pesado obstáculo
     };
 
     /// <summary>
@@ -126,14 +128,14 @@ public static class GameConfig
     // =========================================================================
     /// <summary>
     /// Puntos de cada gema. El índice es el valor del enum GemType.
-    /// Pearl=0, Emerald=1, Amethyst=2, Topaz=3, GreenRuby=4, Sapphire=5, RedRuby=6, Diamond=7, Stone=8, Quartz=9
+    /// Pearl=0, Emerald=1, Amethyst=2, Topaz=3, GreenRuby=4, Sapphire=5, RedRuby=6, Diamond=7, Quartz=8, Stone=9
     /// </summary>
-    public static readonly int[] GemScoreValues = { 0, 1, 2, 4, 8, 16, 32, 64, 0, 0 };
+    public static readonly int[] GemScoreValues = { 0, 1, 2, 4, 8, 16, 32, 64, 20, 30 };
 
     /// <summary>
     /// Costo en lapislázulis para eliminar todas las gemas de ese tipo del tablero.
     /// El diamante (índice 7) no se puede comprar porque explota solo.
-    /// Stone y Quartz no se pueden comprar.
+    /// Quartz y Stone no se pueden comprar.
     /// </summary>
     public static readonly int[] GemCrystalCosts = { 1, 2, 4, 8, 16, 32, 64, 0, 0, 0 };
 

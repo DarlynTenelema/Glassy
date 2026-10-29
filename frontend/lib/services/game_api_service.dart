@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
+import '../config/env.dart';
 
 class GameApiService {
   static final GameApiService _instance = GameApiService._internal();
   factory GameApiService() => _instance;
   GameApiService._internal();
 
-  // URL del backend en producción
-  final String _baseUrl = 'https://glassy-production.up.railway.app/api';
+  final String _baseUrl = Env.backendUrl;
 
   Future<bool> submitScore(int score) async {
     try {

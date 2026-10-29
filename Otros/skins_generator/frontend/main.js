@@ -57,12 +57,15 @@ function setupEventListeners() {
     btnGenerateAll.addEventListener('click', generateAllGemsSequentially);
   }
 
-  // Modal
+  // Modal de imagen
   const modal = document.getElementById('image-modal');
   const modalClose = document.getElementById('modal-close');
   const modalBackdrop = document.getElementById('modal-backdrop');
   if (modalClose) modalClose.addEventListener('click', () => modal.classList.add('hidden'));
   if (modalBackdrop) modalBackdrop.addEventListener('click', () => modal.classList.add('hidden'));
+
+  // Modal para entregar skin a jugador
+  setupAssignModal();
 
   // Formulario de Markdown clásico
   setupMarkdownForm();
@@ -466,3 +469,88 @@ function setupMarkdownForm() {
     }
   });
 }
+
+// Configuración del modal para entregar skin a jugador
+function setupAssignModal() {
+  const btnOpen = document.getElementById('btn-open-assign-modal');
+  const modal = document.getElementById('assign-modal');
+  const btnClose = document.getElementById('assign-modal-close');
+  const backdrop = document.getElementById('assign-modal-backdrop');
+  const form = document.getElementById('assign-skin-form');
+  const statusMsg = document.getElementById('assign-status-msg');
+  const btnConfirm = document.getElementById('btn-confirm-assign');
+
+  if (!btnOpen || !modal) return;
+
+  btnOpen.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    if (statusMsg) {
+      statusMsg.style.display = 'none';
+      statusMsg.textContent = '';
+    }
+    const playerInput = document.getElementById('assign_player_id');
+    if (playerInput) playerInput.focus();
+  });
+
+  if (btnClose) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
+  if (backdrop) backdrop.addEventListener('click', () => modal.classList.add('hidden'));
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const playerId = document.getElementById('assign_player_id')?.value.trim();
+      const tiktokUser = document.getElementById('assign_tiktok_user')?.value.trim();
+      const autoEquip = document.getElementById('assign_auto_equip')?.checked ?? true;
+
+      if (!playerId) {
+        alert('Debes ingresar el código de jugador o email.');
+        return;
+      }
+
+      btnConfirm.disabled = true;
+      btnConfirm.innerHTML = '<span>⏳</span> Entregando en vivo...';
+      statusMsg.style.display = 'block';
+      statusMsg.style.background = 'rgba(56, 189, 248, 0.15)';
+      statusMsg.style.color = '#38bdf8';
+      statusMsg.style.border = '1px solid rgba(56, 189, 248, 0.3)';
+      statusMsg.textContent = 'Verificando jugador y asignando skin en el servidor...';
+
+      try {
+        const res = await fetch(`${API_BASE}/api/assign-skin-to-player`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            player_identifier: playerId,
+            theme: currentTheme,
+            donor_tiktok_user: tiktokUser,
+            auto_equip: autoEquip
+          })
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.detail || data.error || 'Error al asignar la skin');
+        }
+
+        statusMsg.style.background = 'rgba(16, 185, 129, 0.2)';
+        statusMsg.style.color = '#34d399';
+        statusMsg.style.border = '1px solid rgba(16, 185, 129, 0.4)';
+        statusMsg.innerHTML = `✅ <b>¡Skin entregada al instante!</b><br>Jugador: <b>${data.user_name || playerId}</b> (${data.invite_code || ''})<br>Temática: <b>${data.skin_name || currentTheme}</b>`;
+
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          form.reset();
+        }, 3500);
+      } catch (err) {
+        statusMsg.style.background = 'rgba(239, 68, 68, 0.2)';
+        statusMsg.style.color = '#f87171';
+        statusMsg.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        statusMsg.textContent = `❌ ${err.message}`;
+      } finally {
+        btnConfirm.disabled = false;
+        btnConfirm.innerHTML = '<span>🚀</span> Asignar y Entregar al Instante';
+      }
+    });
+  }
+}
+

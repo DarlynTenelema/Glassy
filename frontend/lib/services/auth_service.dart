@@ -28,6 +28,28 @@ class AuthService {
     );
   }
 
+  Future<AuthResponse?> signInWithGoogle() async {
+    final googleSignIn = GoogleSignIn(
+      serverClientId: Env.webClientId,
+      scopes: const ['email', 'profile'],
+    );
+    try {
+      await googleSignIn.signOut();
+    } catch (_) {}
+    final googleUser = await googleSignIn.signIn();
+    if (googleUser == null) return null;
+
+    final googleAuth = await googleUser.authentication;
+    final idToken = googleAuth.idToken;
+    if (idToken == null) throw Exception('No Google ID Token found');
+
+    return await _supabase.auth.signInWithIdToken(
+      provider: OAuthProvider.google,
+      idToken: idToken,
+      accessToken: googleAuth.accessToken,
+    );
+  }
+
   Future<void> signOut() async {
     try {
       final googleSignIn = GoogleSignIn(serverClientId: Env.webClientId);

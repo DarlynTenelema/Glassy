@@ -87,14 +87,24 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic()
     {
         if (musicSource == null || backgroundMusicClip == null) return;
-        if (musicSource.isPlaying) return;
 
         musicSource.clip = backgroundMusicClip;
         musicSource.loop = true;
-        if (_volumeOn) musicSource.Play();
+        ApplyVolumeSettings();
+
+        if (_volumeOn && !musicSource.isPlaying)
+        {
+            musicSource.Play();
+        }
     }
 
-    public void StopMusic() => musicSource?.Stop();
+    public void StopMusic()
+    {
+        if (musicSource != null && musicSource.isPlaying)
+        {
+            musicSource.Stop();
+        }
+    }
 
     // =========================================================================
     // EFECTOS DE SONIDO
@@ -118,6 +128,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayStartGame()
     {
+        PlayMusic();
         if (!_effectsOn || startGameClip == null) return;
         sfxSource.pitch = 1f;
         sfxSource.PlayOneShot(startGameClip, startGameVolume);
@@ -125,9 +136,10 @@ public class AudioManager : MonoBehaviour
 
     public void PlayGameOver()
     {
-        if (!_effectsOn || gameOverClip == null) return;
-        // Detener música y tocar game over
+        // Detener música siempre al terminar la partida
         StopMusic();
+
+        if (!_effectsOn || gameOverClip == null) return;
         sfxSource.pitch = 1f;
         sfxSource.PlayOneShot(gameOverClip, gameOverVolume);
     }
@@ -142,6 +154,10 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetInt(GameConfig.KeyVolumeOn, on ? 1 : 0);
         PlayerPrefs.Save();
         ApplyVolumeSettings();
+        if (_volumeOn && musicSource != null && !musicSource.isPlaying)
+        {
+            PlayMusic();
+        }
     }
 
     /// <summary>Ajusta el volumen de la música del juego (0.0 – 1.0). Llamado desde Flutter vía bridge.</summary>
@@ -151,6 +167,10 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetFloat("glassy_music_volume", _musicVolume);
         PlayerPrefs.Save();
         ApplyVolumeSettings();
+        if (_volumeOn && _musicVolume > 0f && musicSource != null && !musicSource.isPlaying)
+        {
+            PlayMusic();
+        }
     }
 
     public void SetEffects(bool on)
@@ -174,6 +194,17 @@ public class AudioManager : MonoBehaviour
     public void PlayStartGameFromFlutter(string dummy)
     {
         PlayStartGame();
+        PlayMusic();
+    }
+
+    public void PlayMusicFromFlutter(string dummy = "")
+    {
+        PlayMusic();
+    }
+
+    public void StopMusicFromFlutter(string dummy = "")
+    {
+        StopMusic();
     }
 
     public bool IsVolumeOn  => _volumeOn;

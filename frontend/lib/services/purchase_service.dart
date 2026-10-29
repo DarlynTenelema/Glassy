@@ -7,34 +7,43 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../providers/game_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../config/env.dart';
+
 class PurchaseService {
   static final PurchaseService _instance = PurchaseService._internal();
   factory PurchaseService() => _instance;
   PurchaseService._internal();
 
   final InAppPurchase _inAppPurchase = InAppPurchase.instance;
-  late StreamSubscription<List<PurchaseDetails>> _subscription;
+  StreamSubscription<List<PurchaseDetails>>? _subscription;
+  bool _isInitialized = false;
   
-  // Backend URL donde correrá el servicio Go
-  final String _backendUrl = 'https://glassy-production.up.railway.app/api'; 
+  // Backend URL centralizada
+  final String _backendUrl = Env.backendUrl; 
   
   BuildContext? _currentContext;
 
   void initialize(BuildContext context) {
     _currentContext = context;
+    if (_isInitialized) return;
+    _isInitialized = true;
+    
     final Stream<List<PurchaseDetails>> purchaseUpdated = _inAppPurchase.purchaseStream;
     _subscription = purchaseUpdated.listen((purchaseDetailsList) {
       _listenToPurchaseUpdated(purchaseDetailsList);
     }, onDone: () {
-      _subscription.cancel();
+      _isInitialized = false;
+      _subscription?.cancel();
+      _subscription = null;
     }, onError: (error) {
-      // handle error
       debugPrint('Purchase Stream Error: $error');
     });
   }
 
   void dispose() {
-    _subscription.cancel();
+    _isInitialized = false;
+    _subscription?.cancel();
+    _subscription = null;
   }
 
   Future<bool> isAvailable() async {

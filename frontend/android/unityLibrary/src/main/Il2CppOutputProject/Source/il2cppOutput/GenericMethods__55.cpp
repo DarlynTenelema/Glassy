@@ -169,6 +169,70 @@ inline uint32_t* UnsafeUtilityInternal_As_TisUInt32_t1833D51FFA667B18A5AA4B8D34D
 {
 	return ((  uint32_t* (*) (uint32_t*, const RuntimeMethod*))UnsafeUtilityInternal_As_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mE1CA751887466B801BE69083C2B0EA3EDE41FF9B_fshared_inline)(___0_from, method);
 }
+// Method Definition Index: 67112
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t PrimitivesConverters_DoConvert_TisSByte_tFEFFEF5D2FEBF5207950AE6FAC150FC53B668DB5_m8010C83E1CB72DD72ED9004D8EEF52FD90C8D4A4 (bool* ___0_source, const RuntimeMethod* method) 
+{
+	//<source_info:<no-source>:1>
+	uint8_t V_0 = 0x0;
+	Il2CppChar V_1 = 0x0;
+	double V_2 = 0.0;
+	int16_t V_3 = 0;
+	int32_t V_4 = 0;
+	int64_t V_5 = 0;
+	int8_t V_6 = 0x0;
+	float V_7 = 0.0f;
+	String_t* V_8 = NULL;
+	uint16_t V_9 = 0;
+	uint32_t V_10 = 0;
+	uint64_t V_11 = 0;
+	{
+		goto IL_0027;
+	}
+
+IL_0027:
+	{
+		goto IL_0056;
+	}
+
+IL_0056:
+	{
+		goto IL_0085;
+	}
+
+IL_0085:
+	{
+		goto IL_00c6;
+	}
+
+IL_00c6:
+	{
+		goto IL_00f5;
+	}
+
+IL_00f5:
+	{
+		goto IL_0124;
+	}
+
+IL_0124:
+	{
+		goto IL_0154;
+	}
+
+IL_0154:
+	{
+	}
+	{
+		bool* L_0 = ___0_source;
+		int32_t L_1 = il2cpp_codegen_ldind<int32_t, uint8_t>(((uint8_t*)L_0));
+		int8_t L_2 = (il2cpp_codegen_conv<int8_t,int32_t,int32_t,false,false>(((!(((uint32_t)L_1) <= ((uint32_t)0)))? 1 : 0),NULL));
+		V_6 = L_2;
+		int8_t* L_3;
+		L_3 = UnsafeUtility_As_TisSByte_tFEFFEF5D2FEBF5207950AE6FAC150FC53B668DB5_TisSByte_tFEFFEF5D2FEBF5207950AE6FAC150FC53B668DB5_m6BE5A65FF160A9699EB4E8E7D06C8B866376C609_inline((&V_6), NULL);
+		int8_t L_4 = (*(int8_t*)L_3);
+		return L_4;
+	}
+}
 // Method Definition Index: 67113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t PrimitivesConverters_DoConvert_TisSByte_tFEFFEF5D2FEBF5207950AE6FAC150FC53B668DB5_m6C365925F1EB321578B7414F16E4E907D61767BF (uint8_t* ___0_source, const RuntimeMethod* method) 
 {
@@ -3263,89 +3327,6 @@ IL_01eb:
 		return L_3;
 	}
 }
-// Method Definition Index: 67114
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t PrimitivesConverters_DoConvert_TisUInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B_m085001CBA513EB7984BAE2B671E2938926627935 (Il2CppChar* ___0_source, const RuntimeMethod* method) 
-{
-	//<source_info:<no-source>:1>
-	bool V_0 = false;
-	uint8_t V_1 = 0x0;
-	double V_2 = 0.0;
-	int16_t V_3 = 0;
-	int32_t V_4 = 0;
-	int64_t V_5 = 0;
-	int8_t V_6 = 0x0;
-	float V_7 = 0.0f;
-	String_t* V_8 = NULL;
-	uint16_t V_9 = 0;
-	uint32_t V_10 = 0;
-	uint64_t V_11 = 0;
-	{
-		goto IL_002e;
-	}
-
-IL_002e:
-	{
-		goto IL_005a;
-	}
-
-IL_005a:
-	{
-		goto IL_0081;
-	}
-
-IL_0081:
-	{
-		goto IL_00ad;
-	}
-
-IL_00ad:
-	{
-		goto IL_00d9;
-	}
-
-IL_00d9:
-	{
-		goto IL_0105;
-	}
-
-IL_0105:
-	{
-		goto IL_0132;
-	}
-
-IL_0132:
-	{
-		goto IL_015f;
-	}
-
-IL_015f:
-	{
-		goto IL_018c;
-	}
-
-IL_018c:
-	{
-		goto IL_01c1;
-	}
-
-IL_01c1:
-	{
-		goto IL_01ed;
-	}
-
-IL_01ed:
-	{
-	}
-	{
-		Il2CppChar* L_0 = ___0_source;
-		int32_t L_1 = il2cpp_codegen_ldind<int32_t, uint16_t>(((uint16_t*)L_0));
-		V_10 = L_1;
-		uint32_t* L_2;
-		L_2 = UnsafeUtility_As_TisUInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B_TisUInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B_m369F96FC89A6943FB311E6BFE00F0BEB953CF1ED_inline((&V_10), NULL);
-		uint32_t L_3 = (*(uint32_t*)L_2);
-		return L_3;
-	}
-}
 // Method Definition Index: 34001
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int8_t* UnsafeUtility_As_TisSByte_tFEFFEF5D2FEBF5207950AE6FAC150FC53B668DB5_TisSByte_tFEFFEF5D2FEBF5207950AE6FAC150FC53B668DB5_m6BE5A65FF160A9699EB4E8E7D06C8B866376C609_inline (int8_t* ___0_from, const RuntimeMethod* method) 
 {
@@ -3390,7 +3371,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t* UnsafeUtility_As_TisUIn
 		return L_1;
 	}
 }
-// Method Definition Index: 72246
+// Method Definition Index: 72376
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppFullySharedGenericAny* UnsafeUtilityInternal_As_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mE1CA751887466B801BE69083C2B0EA3EDE41FF9B_fshared_inline (Il2CppFullySharedGenericAny* ___0_from, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>

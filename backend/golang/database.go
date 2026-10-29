@@ -100,6 +100,11 @@ func ensureTables() {
 	ALTER TABLE users ADD COLUMN IF NOT EXISTS daily_lapis_farmed INT NOT NULL DEFAULT 0;
 	ALTER TABLE users ADD COLUMN IF NOT EXISTS last_farm_date DATE DEFAULT CURRENT_DATE;
 	ALTER TABLE users ADD COLUMN IF NOT EXISTS last_score_at TIMESTAMP WITH TIME ZONE DEFAULT NULL;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS avatar_id VARCHAR(100) DEFAULT 'personaje_2.jpg';
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS bot_archetype VARCHAR(20) DEFAULT NULL;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS selected_skin_id VARCHAR(50) NOT NULL DEFAULT 'gemas_clasicas';
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS total_active_days INT NOT NULL DEFAULT 1;
+	ALTER TABLE users ADD COLUMN IF NOT EXISTS last_login_at TIMESTAMP DEFAULT NULL;
 
 	-- ============================================================
 	-- TABLA: leaderboards
@@ -164,6 +169,137 @@ func ensureTables() {
 		status        VARCHAR(20) NOT NULL DEFAULT 'PENDING', -- PENDING, APPROVED, REJECTED
 		created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 	);
+
+	-- ============================================================
+	-- TABLA: user_skins
+	-- Registra las skins desbloqueadas por el usuario
+	-- ============================================================
+	CREATE TABLE IF NOT EXISTS user_skins (
+		id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+		user_id     UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+		skin_id     VARCHAR(100) NOT NULL,
+		created_at  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+		CONSTRAINT user_skins_unique UNIQUE (user_id, skin_id)
+	);
+	ALTER TABLE user_skins ALTER COLUMN skin_id TYPE VARCHAR(100);
+
+	-- ============================================================
+	-- TABLA: custom_skins
+	-- Metadatos de skins exclusivas / dinámicas creadas en vivo
+	-- ============================================================
+	CREATE TABLE IF NOT EXISTS custom_skins (
+		id                VARCHAR(100) PRIMARY KEY,
+		name              VARCHAR(100) NOT NULL,
+		owner_id          UUID REFERENCES users(id) ON DELETE SET NULL,
+		donor_tiktok_user VARCHAR(100) DEFAULT '',
+		preview_url       TEXT NOT NULL DEFAULT '',
+		base_storage_url  TEXT NOT NULL DEFAULT '',
+		is_exclusive      BOOLEAN NOT NULL DEFAULT TRUE,
+		created_at        TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+	);
+	CREATE INDEX IF NOT EXISTS idx_custom_skins_owner ON custom_skins(owner_id);
+	CREATE INDEX IF NOT EXISTS idx_custom_skins_created_at ON custom_skins(created_at DESC);
+
+
+	-- ============================================================
+	-- TABLAS: Glassy Partners (Afiliados y Referidos)
+	-- ============================================================
+	CREATE TABLE IF NOT EXISTS partners (
+		id                UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+		partner_code      VARCHAR(50) UNIQUE NOT NULL,
+		paypal_email      VARCHAR(255) DEFAULT '',
+		total_earnings    NUMERIC(10,2) NOT NULL DEFAULT 0.00,
+		available_balance NUMERIC(10,2) NOT NULL DEFAULT 0.00,
+		created_at        TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+	);
+
+	CREATE TABLE IF NOT EXISTS partner_referrals (
+		id           SERIAL PRIMARY KEY,
+		partner_id   UUID NOT NULL REFERENCES partners(id) ON DELETE CASCADE,
+		user_id      UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+		status       VARCHAR(20) NOT NULL DEFAULT 'in_progress',
+		created_at   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+		confirmed_at TIMESTAMP DEFAULT NULL,
+		CONSTRAINT partner_referrals_user_unique UNIQUE (user_id)
+	);
+
+	CREATE TABLE IF NOT EXISTS partner_withdrawals (
+		id           SERIAL PRIMARY KEY,
+		partner_id   UUID NOT NULL REFERENCES partners(id) ON DELETE CASCADE,
+		amount       NUMERIC(10,2) NOT NULL,
+		paypal_email VARCHAR(255) NOT NULL,
+		status       VARCHAR(20) NOT NULL DEFAULT 'PENDING',
+		created_at   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+	);
+
+	ALTER TABLE partners ADD COLUMN IF NOT EXISTS total_sales_usd NUMERIC(10,2) NOT NULL DEFAULT 0.00;
+
+	-- ============================================================
+	-- TABLA: partner_sales (Comisiones 25% por compras IAP)
+	-- ============================================================
+	CREATE TABLE IF NOT EXISTS partner_sales (
+		id             SERIAL PRIMARY KEY,
+		partner_id     UUID NOT NULL REFERENCES partners(id) ON DELETE CASCADE,
+		user_id        UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+		package_id     VARCHAR(50) NOT NULL,
+		amount_usd     NUMERIC(10,2) NOT NULL,
+		commission_usd NUMERIC(10,2) NOT NULL,
+		created_at     TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+	);
+	CREATE INDEX IF NOT EXISTS idx_partner_sales_partner ON partner_sales(partner_id, created_at DESC);
+
+	-- ============================================================
+	-- TABLA: partner_skills (Suscripciones a Skills para TikTok Live)
+	-- ============================================================
+	CREATE TABLE IF NOT EXISTS partner_skills (
+		id           SERIAL PRIMARY KEY,
+		partner_id   UUID NOT NULL REFERENCES partners(id) ON DELETE CASCADE,
+		skill_id     VARCHAR(50) NOT NULL,
+		is_unlocked  BOOLEAN NOT NULL DEFAULT FALSE,
+		is_enabled   BOOLEAN NOT NULL DEFAULT FALSE,
+		expires_at   TIMESTAMP DEFAULT NULL,
+		updated_at   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+		CONSTRAINT partner_skills_unique UNIQUE (partner_id, skill_id)
+	);
+
+	-- ============================================================
+	-- TRIGGER: auto-crear usuario en public.users al registrarse con OAuth
+	-- ============================================================
+	CREATE OR REPLACE FUNCTION public.handle_new_user() 
+	RETURNS trigger AS $$
+	BEGIN
+	  INSERT INTO public.users (id, email, name, avatar_url, crystals, invite_code)
+	  VALUES (
+	    new.id,
+	    COALESCE(new.email, ''),
+	    COALESCE(NULLIF(new.raw_user_meta_data->>'full_name', ''), NULLIF(new.raw_user_meta_data->>'name', ''), 'Jugador'),
+	    COALESCE(NULLIF(new.raw_user_meta_data->>'avatar_url', ''), NULLIF(new.raw_user_meta_data->>'picture', ''), ''),
+	    100,
+	    SUBSTRING(REPLACE(gen_random_uuid()::text, '-', '') FROM 1 FOR 8)
+	  )
+	  ON CONFLICT (id) DO NOTHING;
+
+	  -- Asignar skin por defecto de inmediato
+	  INSERT INTO public.user_skins (user_id, skin_id)
+	  VALUES (new.id, 'gemas_clasicas')
+	  ON CONFLICT (user_id, skin_id) DO NOTHING;
+
+	  RETURN new;
+	END;
+	$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+	DO $$
+	BEGIN
+		IF NOT EXISTS (
+			SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created'
+		) THEN
+			CREATE TRIGGER on_auth_user_created
+			  AFTER INSERT ON auth.users
+			  FOR EACH ROW EXECUTE PROCEDURE public.handle_new_user();
+		END IF;
+	EXCEPTION WHEN OTHERS THEN
+		NULL;
+	END $$;
 	`
 
 	if _, err := DB.Exec(query); err != nil {

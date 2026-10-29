@@ -1,15 +1,18 @@
 import 'package:glassy/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../config/env.dart';
 
-import '../theme/app_theme.dart';
 import '../widgets/ui/currency_icon.dart';
 import '../widgets/ui/glass_card.dart';
 import '../services/audio_service.dart';
 import '../services/achievements_service.dart';
 import '../providers/game_provider.dart';
+import '../l10n/l10n_extension.dart';
 
 class RecordsScreen extends StatefulWidget {
   const RecordsScreen({super.key});
@@ -56,6 +59,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
     // Si el backend falla, simularemos algo de progreso para que no sea solo estética
     final progress = await AchievementsService().getAchievementsStatus();
     
+    if (!mounted) return;
     // Fallback simulado si viene vacío para que el usuario vea progreso
     if (progress.isEmpty) {
       final int highScore = Provider.of<GameProvider>(context, listen: false).highScore;
@@ -85,6 +89,28 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
   // --- LÓGICA DE LEADERBOARD ---
   Future<List<Map<String, dynamic>>> _fetchLeaderboard() async {
     try {
+      // 1. Intentar obtener el ranking oficial en vivo directamente del backend en Railway
+      try {
+        final rankType = _showTotalRanking ? 'total' : 'high_score';
+        final res = await http.get(Uri.parse('${Env.backendUrl}/leaderboard/global?type=$rankType')).timeout(const Duration(seconds: 4));
+        if (res.statusCode == 200) {
+          final List<dynamic> data = jsonDecode(res.body);
+          if (data.isNotEmpty) {
+            return data.map((item) => {
+              'user_id': (item['rank'] ?? 0).toString(),
+              'score': item['score'] ?? 0,
+              'users': {
+                'name': item['name'] ?? 'Jugador',
+                'avatar_id': item['avatar_url'] ?? item['avatar_id'],
+              }
+            }).toList();
+          }
+        }
+      } catch (err) {
+        debugPrint('Backend leaderboard request fallback to Supabase: $err');
+      }
+
+      // 2. Fallback a Supabase si el backend está inaccesible
       List<Map<String, dynamic>> realData = [];
       
       if (_showTotalRanking) {
@@ -92,7 +118,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
             .from('users')
             .select('id, name, avatar_id, total_score')
             .order('total_score', ascending: false)
-            .limit(100);
+            .limit(200);
             
         // Map it to look like the standard leaderboard format
         realData = List<Map<String, dynamic>>.from(response).map((row) => {
@@ -108,32 +134,63 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
             .from('leaderboards')
             .select('user_id, score, users(name, avatar_id)')
             .order('score', ascending: false)
-            .limit(100);
+            .limit(200);
         realData = List<Map<String, dynamic>>.from(response);
       }
       
-      // DATOS MOCK PARA PREVISUALIZAR EL DISEÑO
-      final List<Map<String, dynamic>> mockData = [
-        {'user_id': 'mock1', 'score': 150400, 'users': {'name': 'MasterGamer', 'avatar_id': 'personaje_2.jpg'}},
-        {'user_id': 'mock2', 'score': 142000, 'users': {'name': 'CristalQueen', 'avatar_id': 'personaje_4.jpg'}},
-        {'user_id': 'mock3', 'score': 135500, 'users': {'name': 'ProPlayerX', 'avatar_id': 'personaje_7.jpg'}},
-        {'user_id': 'mock4', 'score': 120000, 'users': {'name': 'ShadowNinja', 'avatar_id': 'personaje_8.jpg'}},
-        {'user_id': 'mock5', 'score': 115250, 'users': {'name': 'LapisHunter', 'avatar_id': 'personaje_5.jpg'}},
-        {'user_id': 'mock6', 'score': 98000, 'users': {'name': 'NoobMaster', 'avatar_id': 'personaje_10.jpg'}},
-        {'user_id': 'mock7', 'score': 85000, 'users': {'name': 'GlassWalker', 'avatar_id': 'personaje_13.jpg'}},
-        {'user_id': 'mock8', 'score': 72300, 'users': {'name': 'EpicGamer', 'avatar_id': 'personaje_17.jpg'}},
-        {'user_id': 'mock9', 'score': 65000, 'users': {'name': 'CrystalBot', 'avatar_id': 'personaje_19.jpg'}},
-      ];
-      
-      // Combinar los reales con los mock y ordenar de mayor a menor score
-      final combined = [...realData, ...mockData];
-      combined.sort((a, b) => (b['score'] as int).compareTo(a['score'] as int));
-      
-      return combined;
+      if (realData.isEmpty) {
+        return _generateOfflineFallback();
+      }
+
+      return realData;
     } catch (e) {
       debugPrint('Error fetching leaderboard: $e');
-      return [];
+      return _generateOfflineFallback();
     }
+  }
+
+  List<Map<String, dynamic>> _generateOfflineFallback() {
+    final now = DateTime.now();
+    final dayOffset = (now.year * 365 + now.day * 13) % 1000;
+    
+    final fallbackBots = [
+      {'name': 'Shadow_99', 'avatar': 'personaje_2.jpg', 'base': 138540},
+      {'name': 'Valeria_pro', 'avatar': 'personaje_4.jpg', 'base': 122190},
+      {'name': 'Mateo_X', 'avatar': 'personaje_3.jpg', 'base': 105820},
+      {'name': 'NovaGamer', 'avatar': 'personaje_5.jpg', 'base': 94310},
+      {'name': 'Lucas_gt', 'avatar': 'personaje_7.jpg', 'base': 87650},
+      {'name': 'Sofia_23', 'avatar': 'personaje_6.jpg', 'base': 79420},
+      {'name': 'Diego_latam', 'avatar': 'personaje_8.jpg', 'base': 71200},
+      {'name': 'Emma_ツ', 'avatar': 'personaje_10.jpg', 'base': 64890},
+      {'name': 'Viper_07', 'avatar': 'personaje_9.jpg', 'base': 58740},
+      {'name': 'Daniel_97', 'avatar': 'personaje_13.jpg', 'base': 52310},
+      {'name': 'Camila_X', 'avatar': 'personaje_11.jpg', 'base': 47920},
+      {'name': 'Zenith_pro', 'avatar': 'personaje_14.jpg', 'base': 43150},
+      {'name': 'Leo_Gamer', 'avatar': 'personaje_15.jpg', 'base': 38940},
+      {'name': 'Mia_Play', 'avatar': 'personaje_12.jpg', 'base': 34520},
+      {'name': 'Bruno_777', 'avatar': 'personaje_19.jpg', 'base': 31200},
+      {'name': 'Clara_99', 'avatar': 'personaje_16.jpg', 'base': 27850},
+      {'name': 'Gael_latam', 'avatar': 'personaje_8.jpg', 'base': 24610},
+      {'name': 'Elena_pro', 'avatar': 'personaje_17.jpg', 'base': 21400},
+      {'name': 'Julian_gt', 'avatar': 'personaje_3.jpg', 'base': 18750},
+      {'name': 'Sara_X', 'avatar': 'personaje_18.jpg', 'base': 15920},
+    ];
+
+    return fallbackBots.asMap().entries.map((entry) {
+      final index = entry.key;
+      final bot = entry.value;
+      final scoreMult = _showTotalRanking ? 3 : 1;
+      final score = ((bot['base'] as int) * scoreMult) + ((dayOffset * (20 - index)) ~/ 5);
+      
+      return {
+        'user_id': 'fallback_$index',
+        'score': score,
+        'users': {
+          'name': bot['name'],
+          'avatar_id': bot['avatar'],
+        }
+      };
+    }).toList();
   }
 
   Map<String, dynamic>? _extractUserData(dynamic usersData) {
@@ -152,9 +209,9 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text(
-          'RECORDS',
-          style: TextStyle(
+        title: Text(
+          context.l10n.records,
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w900,
             letterSpacing: 3,
@@ -173,9 +230,9 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white54,
           tabs: [
-            Tab(icon: Image.asset('assets/ui/elemento_1.png', width: 26, height: 26), text: 'Logros'),
-            Tab(icon: Icon(Icons.leaderboard_rounded), text: 'Ranking'),
-            Tab(icon: Icon(Icons.calendar_month_rounded), text: 'Diario'),
+            Tab(icon: Image.asset('assets/ui/elemento_1.png', width: 26, height: 26), text: context.l10n.achievementsTab),
+            Tab(icon: const Icon(Icons.leaderboard_rounded), text: context.l10n.rankingTab),
+            Tab(icon: const Icon(Icons.calendar_month_rounded), text: context.l10n.dailyTab),
           ],
         ),
       ),
@@ -252,9 +309,9 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('SISTEMA DE LOGROS', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
-                    SizedBox(height: 8),
-                    Text('Completa retos para ganar Lapislázulis gratis.', style: TextStyle(color: Colors.white70, fontSize: 13, height: 1.4)),
+                    Text(context.l10n.achievementsSystemTitle, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+                    const SizedBox(height: 8),
+                    Text(context.l10n.achievementsSystemSubtitle, style: const TextStyle(color: Colors.white70, fontSize: 13, height: 1.4)),
                   ],
                 ),
               ),
@@ -262,20 +319,231 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
           ),
         ),
         const SizedBox(height: 30),
-        const Text('FUSIÓN DE GEMAS', style: TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 14, letterSpacing: 2)),
+        Text(context.l10n.gemFusionCategory, style: const TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 14, letterSpacing: 2)),
         const SizedBox(height: 15),
         _buildDynamicAchievementCard(1, 1, 'Nivel 1: Fusiona Esmeraldas', 'Logra fusionar 1,000 esmeraldas en total.', 1, 1000, Colors.greenAccent),
         
         const SizedBox(height: 30),
-        const Text('OFERTAS ESPECIALES', style: TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 14, letterSpacing: 2)),
+        Text(context.l10n.specialOffersCategory, style: const TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 14, letterSpacing: 2)),
         const SizedBox(height: 15),
-        _buildDynamicAchievementCard(7, 1, 'Invitación VIP', 'Comparte el juego con 10 amigos.', 0, 10, Colors.pinkAccent, customRewardText: 'Skin Exclusiva', customIcon: Icons.card_giftcard),
-        _buildDynamicAchievementCard(9, 1, 'Creador de Contenido', 'Sube una de tus partidas a TikTok.', 1000, 1, Colors.lightBlueAccent, isTikTok: true),
+        _buildExclusiveSkinChallengeCard(),
       ],
     );
   }
 
-  Widget _buildDynamicAchievementCard(int groupId, int level, String title, String desc, int reward, int total, Color color, {String? customRewardText, IconData? customIcon, bool isTikTok = false}) {
+  Widget _buildExclusiveSkinChallengeCard() {
+    final status = _getProgressFor(7, 1);
+    final currentProgress = status?['progress'] ?? 0;
+    final isClaimed = status?['is_claimed'] ?? false;
+    const int total = 10;
+    
+    bool isCompleted = isClaimed;
+    bool isClaimable = !isClaimed && currentProgress >= total;
+    double progressPercent = (currentProgress / total).clamp(0.0, 1.0);
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 24),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surface,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(
+          color: isClaimable 
+              ? Colors.amber 
+              : (isCompleted ? Colors.greenAccent.withValues(alpha: 0.5) : Colors.white.withValues(alpha: 0.15)),
+          width: isClaimable ? 2 : 1.5,
+        ),
+        boxShadow: [
+          if (isClaimable)
+            BoxShadow(color: Colors.amber.withValues(alpha: 0.25), blurRadius: 20, spreadRadius: 2)
+          else if (isCompleted)
+            BoxShadow(color: Colors.greenAccent.withValues(alpha: 0.15), blurRadius: 15)
+        ],
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Vitrina 3D con Wallpaper y Diamante (idéntica a las skins de paga)
+          SizedBox(
+            height: 160,
+            width: double.infinity,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                // Wallpaper de fondo
+                Image.asset(
+                  'assets/skin/Metales_Preciosos/wallpaper.jpg',
+                  fit: BoxFit.cover,
+                  errorBuilder: (c, e, s) => Container(color: Colors.black45),
+                ),
+                // Gradiente oscuro para resaltar el diamante y textos
+                Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.black.withValues(alpha: 0.3),
+                        Colors.black.withValues(alpha: 0.75),
+                      ],
+                    ),
+                  ),
+                ),
+                // Badge de Rareza
+                Positioned(
+                  top: 14,
+                  left: 16,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.amber.withValues(alpha: 0.9),
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black.withValues(alpha: 0.4), blurRadius: 6),
+                      ],
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.stars, color: Colors.black, size: 14),
+                        SizedBox(width: 4),
+                        Text(
+                          'SKIN EXCLUSIVA',
+                          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w900, fontSize: 10, letterSpacing: 0.8),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                // Diamante central representativo
+                Center(
+                  child: Image.asset(
+                    'assets/skin/Metales_Preciosos/Diamond.png',
+                    width: 95,
+                    height: 95,
+                    fit: BoxFit.contain,
+                    errorBuilder: (c, e, s) => const Icon(Icons.diamond, color: Colors.amber, size: 60),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          
+          // Información y progreso
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      'METALES PRECIOSOS',
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 17, letterSpacing: 1),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: Colors.pinkAccent.withValues(alpha: 0.2),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.pinkAccent.withValues(alpha: 0.4)),
+                      ),
+                      child: const Text('LEGENDARIO', style: TextStyle(color: Colors.pinkAccent, fontSize: 10, fontWeight: FontWeight.bold)),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                const Text(
+                  'Comparte tu código de invitación con 10 amigos y desbloquea este set completo de gemas de metales preciosos.',
+                  style: TextStyle(color: Colors.white70, fontSize: 13, height: 1.4),
+                ),
+                const SizedBox(height: 16),
+                
+                if (!isCompleted) ...[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text('Progreso de invitaciones', style: TextStyle(color: Colors.white54, fontSize: 12)),
+                      Text('$currentProgress / $total amigos', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12)),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: LinearProgressIndicator(
+                      value: progressPercent,
+                      backgroundColor: Colors.white12,
+                      color: isClaimable ? Colors.amber : AppColors.lightBlue,
+                      minHeight: 8,
+                    ),
+                  ),
+                  const SizedBox(height: 18),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: isClaimable ? () async {
+                        bool success = await AchievementsService().claimReward(7, 1, total, 0, 'skin_Metales_Preciosos');
+                        if (success) {
+                          _loadAchievements();
+                          if (mounted) {
+                            Provider.of<GameProvider>(context, listen: false).fetchSkins();
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('¡Felicidades! Has desbloqueado la skin exclusiva Metales Preciosos.'), 
+                                backgroundColor: Colors.amber,
+                              ),
+                            );
+                          }
+                        }
+                      } : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.amber,
+                        disabledBackgroundColor: Colors.white10,
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                      ),
+                      child: Text(
+                        isClaimable ? 'RECLAMAR SKIN EXCLUSIVA' : 'EN PROGRESO ($currentProgress/$total)',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1,
+                          color: isClaimable ? Colors.black : Colors.white38,
+                        ),
+                      ),
+                    ),
+                  ),
+                ] else ...[
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    decoration: BoxDecoration(
+                      color: Colors.greenAccent.withValues(alpha: 0.15),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: Colors.greenAccent.withValues(alpha: 0.4)),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.check_circle, color: Colors.greenAccent, size: 20),
+                        SizedBox(width: 8),
+                        Text(
+                          'DESBLOQUEADA EN TU INVENTARIO',
+                          style: TextStyle(color: Colors.greenAccent, fontWeight: FontWeight.w900, fontSize: 12, letterSpacing: 1),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDynamicAchievementCard(int groupId, int level, String title, String desc, int reward, int total, Color color) {
     final status = _getProgressFor(groupId, level);
     final currentProgress = status?['progress'] ?? 0;
     final isClaimed = status?['is_claimed'] ?? false;
@@ -299,14 +567,9 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
           Row(
             children: [
               Expanded(child: Text(title, style: TextStyle(color: isClaimable ? Colors.white : Colors.white70, fontSize: 16, fontWeight: FontWeight.bold))),
-              if (customIcon != null)
-                Icon(customIcon, color: color, size: 20)
-              else if (groupId == 9)
-                Image.asset('assets/ui/fragments_icon.png', width: 20, height: 20, errorBuilder: (c,e,s) => Icon(Icons.diamond, color: color, size: 20)) // O puedes usar otro icono para fragmentos
-              else
-                CurrencyIcon(size: 20),
+              CurrencyIcon(size: 20),
               const SizedBox(width: 4),
-              Text(customRewardText ?? '+$reward', style: TextStyle(color: color, fontWeight: FontWeight.w900, fontSize: customRewardText != null ? 12 : 16)),
+              Text('+$reward', style: TextStyle(color: color, fontWeight: FontWeight.w900, fontSize: 16)),
             ],
           ),
           const SizedBox(height: 8),
@@ -326,142 +589,40 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
               child: LinearProgressIndicator(value: progressPercent, backgroundColor: Colors.white12, color: isClaimable ? color : AppColors.lightBlue, minHeight: 8),
             ),
             const SizedBox(height: 20),
-            if (isTikTok && !isClaimable && currentProgress == 0) ...[
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: () => _showTikTokSubmissionDialog(),
-                  icon: const Icon(Icons.link, color: Colors.black),
-                  label: const Text('ENVIAR LINK', style: TextStyle(fontWeight: FontWeight.w900, color: Colors.black)),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: color,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  ),
-                ),
-              ),
-            ] else ...[
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: isClaimable ? () async {
-                    final rewardType = (groupId == 7) ? 'skin_Metales_Preciosos' : 'crystals';
-                    bool success = await AchievementsService().claimReward(groupId, level, total, reward, rewardType);
-                    if (success) {
-                      _loadAchievements();
-                      if (groupId == 7) {
-                        if (mounted) {
-                          Provider.of<GameProvider>(context, listen: false).fetchSkins();
-                        }
-                        if (mounted) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('¡Felicidades! Has desbloqueado la skin exclusiva Metales Preciosos.'), 
-                              backgroundColor: Colors.pinkAccent,
-                            ),
-                          );
-                        }
-                      } else {
-                        if (mounted) {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: const Text('¡Logro Reclamado!'), backgroundColor: color));
-                        }
-                      }
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: isClaimable ? () async {
+                  bool success = await AchievementsService().claimReward(groupId, level, total, reward, 'crystals');
+                  if (success) {
+                    _loadAchievements();
+                    if (mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: const Text('¡Logro Reclamado!'), backgroundColor: color));
                     }
-                  } : null,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: color,
-                    disabledBackgroundColor: Theme.of(context).colorScheme.surface,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  ),
-                  child: Text(
-                    isTikTok && currentProgress > 0 && !isClaimable ? 'EN REVISIÓN' : (isClaimable ? 'RECLAMAR' : 'EN PROGRESO'), 
-                    style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.black)
-                  ),
+                  }
+                } : null,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: color,
+                  disabledBackgroundColor: Theme.of(context).colorScheme.surface,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                ),
+                child: Text(
+                  isClaimable ? context.l10n.claim : 'EN PROGRESO', 
+                  style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.black)
                 ),
               ),
-            ]
+            ),
           ] else ...[
-             Row(
-               mainAxisAlignment: MainAxisAlignment.center,
-               children: [
-                 Icon(Icons.check_circle, color: color, size: 20),
-                 const SizedBox(width: 8),
-                 const Text('COMPLETADO', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, letterSpacing: 1)),
-               ],
-             )
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.check_circle, color: color, size: 20),
+                const SizedBox(width: 8),
+                Text(context.l10n.completed, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, letterSpacing: 1)),
+              ],
+            )
           ]
-        ],
-      ),
-    );
-  }
-
-  Future<void> _showTikTokSubmissionDialog() async {
-    final TextEditingController urlController = TextEditingController();
-    
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: AppColors.navyBlue,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: BorderSide(color: AppColors.lightBlue)),
-        title: const Text('SUBIR A TIKTOK', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, letterSpacing: 1), textAlign: TextAlign.center),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text('Pega aquí el enlace de tu video de TikTok jugando Glassy. Nuestro equipo lo revisará en menos de 24 horas.', style: TextStyle(color: Colors.white70, fontSize: 13), textAlign: TextAlign.center),
-            const SizedBox(height: 20),
-            TextField(
-              controller: urlController,
-              style: const TextStyle(color: Colors.white),
-              decoration: InputDecoration(
-                hintText: 'https://vm.tiktok.com/...',
-                hintStyle: TextStyle(color: Colors.white.withValues(alpha: 0.3)),
-                filled: true,
-                fillColor: Colors.black26,
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide.none),
-                prefixIcon: const Icon(Icons.link, color: AppColors.lightBlue),
-              ),
-            ),
-          ],
-        ),
-        actionsAlignment: MainAxisAlignment.spaceEvenly,
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx),
-            child: const Text('CANCELAR', style: TextStyle(color: Colors.white54, fontWeight: FontWeight.bold)),
-          ),
-          ElevatedButton(
-            onPressed: () async {
-              if (urlController.text.trim().isEmpty) return;
-              Navigator.pop(ctx);
-              
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Enviando...'), backgroundColor: Colors.orange));
-              
-              bool success = await AchievementsService().submitTikTokLink(urlController.text.trim());
-              
-              if (mounted) {
-                if (success) {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('¡Enlace enviado! En revisión.'), backgroundColor: Colors.green));
-                  // Optimistically set progress to 1 to show 'EN REVISIÓN'
-                  setState(() {
-                    final status = _userProgress.firstWhere((p) => p['group_id'] == 9 && p['level'] == 1, orElse: () {
-                      final newStatus = {'group_id': 9, 'level': 1, 'progress': 0, 'is_claimed': false};
-                      _userProgress.add(newStatus);
-                      return newStatus;
-                    });
-                    status['progress'] = 1;
-                  });
-                } else {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Error al enviar. Intenta de nuevo.'), backgroundColor: Colors.red));
-                }
-              }
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.lightBlue,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            ),
-            child: const Text('ENVIAR', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w900)),
-          ),
         ],
       ),
     );
@@ -472,6 +633,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
   // ==========================================
 
   Widget _buildAvatar(String? avatarId, double radius, Color borderColor, double borderWidth, bool glow) {
+    final bool isNetwork = avatarId != null && (avatarId.startsWith('http://') || avatarId.startsWith('https://'));
     return Container(
       width: radius * 2,
       height: radius * 2,
@@ -486,11 +648,17 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
       ),
       child: ClipOval(
         child: avatarId != null && avatarId.isNotEmpty
-            ? Image.asset(
-                'assets/avatar/perfiles/$avatarId',
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) => Icon(Icons.person, color: borderColor, size: radius),
-              )
+            ? (isNetwork
+                ? Image.network(
+                    avatarId,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => Icon(Icons.person, color: borderColor, size: radius),
+                  )
+                : Image.asset(
+                    'assets/avatar/perfiles/$avatarId',
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => Icon(Icons.person, color: borderColor, size: radius),
+                  ))
             : Icon(Icons.person, color: borderColor, size: radius),
       ),
     );
@@ -744,7 +912,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Text(
-                          'Mejor Partida',
+                          context.l10n.weeklyRanking,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: !_showTotalRanking ? Colors.black : Colors.white54,
@@ -765,7 +933,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Text(
-                          'Puntaje Total',
+                          context.l10n.totalRanking,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: _showTotalRanking ? Colors.white : Colors.white54,
@@ -858,81 +1026,135 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
           }
         }
         
-        String rankStr = rank > 0 ? '#$rank' : '#+100';
+        String rankStr = rank > 0 ? '#$rank' : '#+200';
 
         return Container(
-          margin: const EdgeInsets.fromLTRB(20, 10, 20, 24),
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          margin: const EdgeInsets.fromLTRB(16, 10, 16, 20),
           decoration: BoxDecoration(
-            color: Theme.of(context).primaryColorDark.withValues(alpha: 0.85), // Azul vibrante/oscuro
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: AppColors.lightBlue, width: 2),
+            gradient: const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF1D4ED8), // Royal Blue vibrante
+                Color(0xFF2563EB), // Azul brillante
+                Color(0xFF0F2B75), // Deep navy blue
+              ],
+            ),
+            borderRadius: BorderRadius.circular(22),
+            border: Border.all(color: const Color(0xFF60A5FA), width: 2), // Borde azul eléctrico
             boxShadow: [
-              BoxShadow(color: AppColors.lightBlue.withValues(alpha: 0.3), blurRadius: 15, spreadRadius: 2),
-              BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 10, offset: const Offset(0, 5))
-            ]
-          ),
-          child: Row(
-            children: [
-              // Número
-              SizedBox(
-                width: 45,
-                child: Text(
-                  rankStr,
-                  style: TextStyle(
-                    color: Colors.white.withValues(alpha: 0.9),
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
+              BoxShadow(
+                color: const Color(0xFF2563EB).withValues(alpha: 0.5),
+                blurRadius: 18,
+                spreadRadius: 2,
+                offset: const Offset(0, 4),
               ),
-              
-              // Avatar
-              _buildAvatar(avatarId, 22, Colors.white, 2, true),
-              
-              const SizedBox(width: 12),
-              
-              // Nombre
-              Expanded(
-                child: Text(
-                  name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: 0.5,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              
-              // Score
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '$score',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w900,
-                      shadows: [Shadow(color: Colors.white54, blurRadius: 8)],
-                    ),
-                  ),
-                  const Text(
-                    'PTS',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 9,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1,
-                    ),
-                  ),
-                ],
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.35),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
               ),
             ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                child: Row(
+                  children: [
+                    // Badge de Rank
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withValues(alpha: 0.25),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
+                      ),
+                      child: Text(
+                        rankStr,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w900,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    
+                    // Avatar con halo azul
+                    _buildAvatar(avatarId, 22, Colors.white, 2, true),
+                    
+                    const SizedBox(width: 12),
+                    
+                    // Nombre y etiqueta "TU POSICIÓN"
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Row(
+                            children: [
+                              Icon(Icons.person_pin_circle_rounded, color: Color(0xFF93C5FD), size: 12),
+                              SizedBox(width: 4),
+                              Text(
+                                'TU POSICIÓN',
+                                style: TextStyle(
+                                  color: Color(0xFFBFDBFE),
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w900,
+                                  letterSpacing: 1,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            name,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.5,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                    
+                    // Score
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          '$score',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 0.5,
+                            shadows: [Shadow(color: Color(0xFF60A5FA), blurRadius: 10)],
+                          ),
+                        ),
+                        const Text(
+                          'PUNTOS',
+                          style: TextStyle(
+                            color: Color(0xFFBFDBFE),
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         );
       }
@@ -965,7 +1187,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
                   children: [
                     const Icon(Icons.calendar_month, color: Colors.orangeAccent, size: 40),
                     const SizedBox(height: 10),
-                    const Text('RECOMPENSA DIARIA', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18, letterSpacing: 1)),
+                    Text(context.l10n.dailyReward, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18, letterSpacing: 1)),
                     const SizedBox(height: 8),
                     const Text('Vuelve cada día para reclamar gemas gratis.', textAlign: TextAlign.center, style: TextStyle(color: Colors.white70)),
                     const SizedBox(height: 24),
@@ -989,7 +1211,7 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('Día $day', style: TextStyle(color: isToday ? Colors.white : Colors.white54, fontSize: 12, fontWeight: FontWeight.bold)),
+                              Text(context.l10n.dayNumber(day), style: TextStyle(color: isToday ? Colors.white : Colors.white54, fontSize: 12, fontWeight: FontWeight.bold)),
                               const SizedBox(height: 8),
                               isPast ? const Icon(Icons.check_circle, color: Colors.green, size: 24) : CurrencyIcon(size: 24),
                               const SizedBox(height: 8),
@@ -1003,9 +1225,15 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: canClaim ? () {
-                          gameProvider.claimDailyReward();
-                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('¡Recompensa Reclamada!'), backgroundColor: Colors.orange));
+                        onPressed: (canClaim && !gameProvider.isClaimingDaily) ? () async {
+                          final success = await gameProvider.claimDailyReward();
+                          if (context.mounted) {
+                            if (success) {
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.l10n.dailyRewardClaimed(currentStreak)), backgroundColor: Colors.orange));
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No se pudo reclamar la recompensa en este momento.'), backgroundColor: Colors.redAccent));
+                            }
+                          }
                         } : null,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.orangeAccent,
@@ -1013,7 +1241,9 @@ class _RecordsScreenState extends State<RecordsScreen> with TickerProviderStateM
                           padding: const EdgeInsets.symmetric(vertical: 16),
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                         ),
-                        child: Text(canClaim ? 'RECLAMAR HOY' : 'VUELVE MAÑANA', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: canClaim ? Colors.black : Colors.white54)),
+                        child: gameProvider.isClaimingDaily
+                            ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.black))
+                            : Text(canClaim ? context.l10n.claim : 'VUELVE MAÑANA', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: canClaim ? Colors.black : Colors.white54)),
                       ),
                     ),
                   ],

@@ -6,16 +6,22 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'config/env.dart';
 import 'theme/app_theme.dart';
 import 'screens/splash_screen.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'services/storage_service.dart';
 import 'services/audio_service.dart';
 import 'providers/settings_provider.dart';
 import 'providers/game_provider.dart';
+import 'providers/locale_provider.dart';
+import 'l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  await dotenv.load(fileName: ".env");
-  
+  try {
+    await dotenv.load(fileName: ".env");
+  } catch (e) {
+    debugPrint("Info: Archivo .env no encontrado o empaquetado, usando variables de entorno seguras.");
+  }
 
   await Supabase.initialize(
     url: Env.supabaseUrl,
@@ -25,6 +31,13 @@ void main() async {
   // Inicializar servicios
   await StorageService().init();
   await AudioService().init();
+
+  // Inicializar Google Mobile Ads
+  try {
+    await MobileAds.instance.initialize();
+  } catch (e) {
+    debugPrint("Error inicializando Google Mobile Ads: $e");
+  }
   
   runApp(
     MultiProvider(
@@ -32,6 +45,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         ChangeNotifierProvider(create: (_) => SettingsProvider()),
         ChangeNotifierProvider(create: (_) => GameProvider()),
+        ChangeNotifierProvider(create: (_) => LocaleProvider()),
       ],
       child: const GlassyApp(),
     ),
@@ -43,14 +57,17 @@ class GlassyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeProvider>(
-      builder: (context, themeProvider, child) {
+    return Consumer2<ThemeProvider, LocaleProvider>(
+      builder: (context, themeProvider, localeProvider, child) {
         return MaterialApp(
           title: 'Glassy',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeProvider.themeMode,
+          locale: localeProvider.locale,
+          supportedLocales: AppLocalizations.supportedLocales,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
           home: const SplashScreen(),
         );
       },

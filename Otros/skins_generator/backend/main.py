@@ -411,3 +411,157 @@ async def generate_skins_from_md(request: MarkdownRequest, background_tasks: Bac
         "message": f"Generando imágenes de '{theme}' en segundo plano...",
         "elements_found": len(elements_prompts)
     }
+
+# ==================== GENERADOR DE ÍCONO PROFESIONAL (GOOGLE PLAY & ADAPTIVE) ====================
+
+def create_professional_app_icon(custom_prompt: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Genera un ícono profesional 1:1 para 'Glassy' con medidas exactas:
+    - 512x512 PNG sin bordes blancos ni esquinas pre-cortadas (Google Play Console).
+    - assets/logo.jpg para SplashScreen.
+    - assets/icon_foreground.png (Capa central transparente para Adaptive Icon).
+    """
+    base_prompt = custom_prompt or (
+        "Mobile game application icon for a casual puzzle game named 'Glassy'. "
+        "MAIN SUBJECT: A stunning, perfectly rendered 3D glowing spherical crystal orb / glass marble floating majestically in the center. "
+        "VISUAL STYLE: Ultra-high quality glassmorphism, iridescent crystalline refractions, smooth specular highlights, ethereal glow, cyan and deep sapphire blue light emission with subtle magenta undertones. "
+        "BACKGROUND: Deep midnight navy blue gradient (#080E1E to #0F1C3F), pristine and clean, filled completely edge-to-edge across the entire square canvas. "
+        "COMPOSITION RULES: "
+        "- Full bleed 1:1 square canvas. "
+        "- Absolutely NO white borders, NO white margins, NO frames. "
+        "- Do NOT round the canvas corners (must remain a full square 1:1 image). "
+        "- The central glowing glass sphere must be sized to fit within the center 75% safe circle so nothing gets cropped by app stores. "
+        "- NO text, NO typography, NO letters, NO human characters, NO watermarks. "
+        "- Sharp, crisp, modern, premium mobile gaming icon aesthetic."
+    )
+
+    print("Generando ícono profesional con Gemini...")
+    response = client.models.generate_content(
+        model=MODEL_NAME,
+        contents=base_prompt,
+        config=types.GenerateContentConfig(
+            response_modalities=["IMAGE"],
+            image_config=types.ImageConfig(aspect_ratio="1:1")
+        )
+    )
+
+    if not response.candidates or not response.candidates[0].content.parts[0].inline_data:
+        raise RuntimeError("No se recibieron datos de imagen de Gemini.")
+
+    raw_bytes = response.candidates[0].content.parts[0].inline_data.data
+    img = Image.open(io.BytesIO(raw_bytes))
+    if img.mode != "RGBA" and img.mode != "RGB":
+        img = img.convert("RGB")
+
+    # 1. 512x512 para Google Play Console
+    play_store_img = img.resize((512, 512), Image.Resampling.LANCZOS)
+    
+    frontend_assets_dir = os.path.abspath(os.path.join(BASE_DIR, "../../../frontend/assets"))
+    output_dir = os.path.abspath(os.path.join(BASE_DIR, "../output_icons"))
+    os.makedirs(frontend_assets_dir, exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
+
+    play_store_path = os.path.join(frontend_assets_dir, "play_store_512.png")
+    play_store_local = os.path.join(output_dir, "play_store_512.png")
+    play_store_img.save(play_store_path, format="PNG", optimize=True)
+    play_store_img.save(play_store_local, format="PNG", optimize=True)
+
+    # 2. Logo para Splash Screen de Flutter
+    logo_path = os.path.join(frontend_assets_dir, "logo.jpg")
+    play_store_img.convert("RGB").save(logo_path, format="JPEG", quality=95)
+
+    # 3. Foreground transparente para Adaptive Icon
+    fg_flutter = os.path.join(frontend_assets_dir, "icon_foreground.png")
+    try:
+        fg_raw = remove(raw_bytes, session=rembg_session)
+        fg_img = Image.open(io.BytesIO(fg_raw)).convert("RGBA")
+        adaptive_fg = Image.new("RGBA", (512, 512), (0, 0, 0, 0))
+        target_size = int(512 * 0.70)
+        fg_resized = fg_img.resize((target_size, target_size), Image.Resampling.LANCZOS)
+        offset = ((512 - target_size) // 2, (512 - target_size) // 2)
+        adaptive_fg.paste(fg_resized, offset, fg_resized)
+        adaptive_fg.save(fg_flutter, format="PNG", optimize=True)
+    except Exception as e:
+        print(f"Aviso al extraer foreground: {e}")
+
+    return {
+        "status": "success",
+        "play_store_icon": play_store_path,
+        "splash_logo": logo_path,
+        "adaptive_foreground": fg_flutter
+    }
+
+class IconGenerationRequest(BaseModel):
+    prompt: Optional[str] = None
+
+@app.post("/api/generate-app-icon")
+def generate_icon_api(req: Optional[IconGenerationRequest] = None):
+    try:
+        custom_prompt = req.prompt if req else None
+        result = create_professional_app_icon(custom_prompt)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+class AssignSkinRequest(BaseModel):
+    player_identifier: str  # invite_code (ej: GLAS8X2K), UUID o email
+    theme: str
+    donor_tiktok_user: Optional[str] = ""
+    auto_equip: Optional[bool] = True
+
+@app.post("/api/assign-skin-to-player")
+async def assign_skin_to_player(req: AssignSkinRequest):
+    """Asigna la skin generada directamente a la cuenta del usuario en el backend de Go."""
+    folder_name = req.theme.replace(" ", "_")
+    target_folder = os.path.join(SKINS_OUTPUT_DIR, folder_name)
+    if not os.path.exists(target_folder):
+        raise HTTPException(status_code=404, detail=f"La carpeta '{req.theme}' no existe en disco. Genera la skin primero.")
+
+    go_backend_url = os.getenv("GLASSY_BACKEND_URL", "http://localhost:8080")
+    admin_secret = os.getenv("ADMIN_SECRET_KEY", "glassy_admin_secret_key_tiktok_2026")
+
+    preview_url = f"/skins-output/{folder_name}/wallpaper.jpg"
+    base_storage_url = f"/skins-output/{folder_name}"
+
+    payload = {
+        "player_identifier": req.player_identifier,
+        "skin_id": folder_name,
+        "name": req.theme.replace("_", " "),
+        "donor_tiktok_user": req.donor_tiktok_user or "",
+        "preview_url": preview_url,
+        "base_storage_url": base_storage_url,
+        "is_exclusive": True,
+        "auto_equip": req.auto_equip if req.auto_equip is not None else True
+    }
+
+    import urllib.request
+    import urllib.error
+    import json
+
+    endpoint = f"{go_backend_url}/api/admin/assign-custom-skin"
+    headers = {
+        "Content-Type": "application/json",
+        "X-Admin-Secret": admin_secret
+    }
+
+    req_data = json.dumps(payload).encode('utf-8')
+    request_obj = urllib.request.Request(endpoint, data=req_data, headers=headers, method="POST")
+
+    try:
+        with urllib.request.urlopen(request_obj, timeout=10) as response:
+            res_body = json.loads(response.read().decode('utf-8'))
+            return res_body
+    except urllib.error.HTTPError as e:
+        error_detail = e.read().decode('utf-8')
+        raise HTTPException(status_code=e.code, detail=f"Error del backend Go: {error_detail}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error conectando al backend Go: {str(e)}")
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "icon":
+        create_professional_app_icon()
+    else:
+        import uvicorn
+        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

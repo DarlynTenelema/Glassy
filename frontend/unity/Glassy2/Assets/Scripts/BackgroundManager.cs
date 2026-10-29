@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 
 public class BackgroundManager : MonoBehaviour
@@ -29,6 +30,13 @@ public class BackgroundManager : MonoBehaviour
         
         // Cargar el Sprite directamente desde Resources
         Sprite bgSprite = Resources.Load<Sprite>(texPath);
+        
+        // Si no está en Resources (ej. skin personalizada adquirida en vivo), buscar en almacenamiento persistente
+        if (bgSprite == null && skinId != "gemas_clasicas")
+        {
+            bgSprite = LoadCustomBackgroundFromDisk(skinId);
+        }
+
         if (bgSprite != null)
         {
             sr.sprite = bgSprite;
@@ -38,6 +46,33 @@ public class BackgroundManager : MonoBehaviour
         {
             Debug.LogWarning($"[BackgroundManager] No se pudo cargar el wallpaper en: {texPath}");
         }
+    }
+
+    private Sprite LoadCustomBackgroundFromDisk(string skinId)
+    {
+        try
+        {
+            string folder = Path.Combine(Application.persistentDataPath, "Skins", skinId);
+            string[] possibleNames = { "wallpaper.jpg", "wallpaper.png", "fondo.jpg", "fondo.png" };
+            foreach (string name in possibleNames)
+            {
+                string path = Path.Combine(folder, name);
+                if (File.Exists(path))
+                {
+                    byte[] fileData = File.ReadAllBytes(path);
+                    Texture2D tex = new Texture2D(2, 2, TextureFormat.RGB24, false);
+                    if (tex.LoadImage(fileData))
+                    {
+                        return Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100f);
+                    }
+                }
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogWarning($"[BackgroundManager] Error al cargar fondo dinámico desde disco: {ex.Message}");
+        }
+        return null;
     }
 
     void Update()

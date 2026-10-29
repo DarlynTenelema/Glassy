@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
+import '../config/env.dart';
 
 class AchievementsService {
   static final AchievementsService _instance = AchievementsService._internal();
   factory AchievementsService() => _instance;
   AchievementsService._internal();
 
-  // Cambia esto a tu URL de backend de producción
-  final String _backendUrl = 'https://glassy-production.up.railway.app/api/player/achievements';
+  final String _backendUrl = '${Env.backendUrl}/player/achievements';
 
   Future<List<Map<String, dynamic>>> getAchievementsStatus() async {
     try {

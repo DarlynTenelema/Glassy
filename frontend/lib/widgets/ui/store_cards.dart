@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import '../../providers/game_provider.dart';
 import '../../services/purchase_service.dart';
+import '../../services/game_api_service.dart';
+import '../../services/ad_service.dart';
 import 'currency_icon.dart';
 import 'glass_card.dart';
+import '../../l10n/l10n_extension.dart';
 
 // Función auxiliar compartida para el diálogo de compra
 void showPurchaseConfirmation(BuildContext context, String id, String title, String price) {
@@ -11,20 +15,20 @@ void showPurchaseConfirmation(BuildContext context, String id, String title, Str
   showDialog(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Confirmar compra'),
-      content: Text('¿Deseas adquirir $title por $price?'),
+      title: Text(context.l10n.confirmPurchase),
+      content: Text(context.l10n.confirmPurchasePrompt(title, price)),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: Text('CANCELAR', style: TextStyle(color: theme.colorScheme.onSurface.withValues(alpha: 0.5))),
+          child: Text(context.l10n.cancel, style: TextStyle(color: theme.colorScheme.onSurface.withValues(alpha: 0.5))),
         ),
         ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
             PurchaseService().buyProduct(id);
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Procesando compra...')));
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.l10n.processingPurchase)));
           },
-          child: const Text('COMPRAR'),
+          child: Text(context.l10n.buy),
         ),
       ],
     ),
@@ -124,7 +128,7 @@ class PackageCard extends StatelessWidget {
                 Text(title.toUpperCase(), style: TextStyle(color: isPopular ? accentColor : theme.colorScheme.onSurface.withValues(alpha: 0.7), fontWeight: FontWeight.bold, fontSize: 12, letterSpacing: 1)),
                 const SizedBox(height: 4),
                 Text('$crystals Lapis', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900, fontSize: 16)),
-                if (bonus > 0) Text('+$bonus de regalo', style: const TextStyle(color: Colors.greenAccent, fontSize: 11, fontWeight: FontWeight.bold)),
+                if (bonus > 0) Text(context.l10n.giftBonus(bonus), style: const TextStyle(color: Colors.greenAccent, fontSize: 11, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
@@ -192,7 +196,7 @@ class SubscriptionCard extends StatelessWidget {
                 backgroundColor: isPopular ? accentColor : theme.colorScheme.onSurface.withValues(alpha: 0.24),
                 foregroundColor: isPopular ? Colors.black : theme.colorScheme.onSurface,
               ),
-              child: Text('SUSCRIBIRSE POR $price'),
+              child: Text(context.l10n.subscribeFor(price)),
             ),
           ),
         ],
@@ -232,7 +236,7 @@ class TimeChestCard extends StatelessWidget {
     if (chestType == '24h') lastChestTime = gameProvider.lastChest24h;
 
     bool isReady = true;
-    String countdownStr = 'ABRIR';
+    String countdownStr = context.l10n.chestOpenBtn;
 
     if (lastChestTime != null) {
       final now = DateTime.now();
@@ -259,7 +263,7 @@ class TimeChestCard extends StatelessWidget {
           const SizedBox(height: 10),
           Text(title.toUpperCase(), style: TextStyle(color: color, fontSize: 11, fontWeight: FontWeight.w900, letterSpacing: 1), textAlign: TextAlign.center),
           const SizedBox(height: 4),
-          Text('Cada $time', style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.onSurface.withValues(alpha: 0.5))),
+          Text(context.l10n.chestEvery(time), style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.onSurface.withValues(alpha: 0.5))),
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -277,10 +281,10 @@ class TimeChestCard extends StatelessWidget {
                 bool success = await gameProvider.claimChest(chestType);
                 if (success) {
                   if (!context.mounted) return;
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('¡Cofre abierto! +$fragments Fragmentos')));
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.l10n.chestOpened(fragments))));
                 } else {
                   if (!context.mounted) return;
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Error al abrir el cofre')));
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.l10n.chestOpenError)));
                 }
               } : null,
               style: ElevatedButton.styleFrom(
@@ -314,43 +318,99 @@ class _PiggyBankCardState extends State<PiggyBankCard> {
     if (_isClaiming) return;
     setState(() => _isClaiming = true);
 
-    final result = await PurchaseService().claimPiggyBank();
-    if (!mounted) return;
-    setState(() => _isClaiming = false);
+    try {
+      final result = await PurchaseService().claimPiggyBank();
+      if (!mounted) return;
 
-    if (result != null) {
-      final reward = result['reward'] as int? ?? 100;
-      final gameProvider = Provider.of<GameProvider>(context, listen: false);
-      gameProvider.addCrystals(reward);
-      gameProvider.fetchEconomyStatus();
+      if (result != null) {
+        final reward = result['reward'] as int? ?? 100;
+        final gameProvider = Provider.of<GameProvider>(context, listen: false);
+        gameProvider.addCrystals(reward);
+        gameProvider.fetchEconomyStatus();
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Row(
-            children: [
-              const Icon(Icons.savings, color: Colors.amber, size: 28),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  '🎉 ¡Has roto el cerdito! +$reward Lapislázulis gratis añadidos a tu billetera.',
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Row(
+              children: [
+                const Icon(Icons.savings, color: Colors.amber, size: 28),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    context.l10n.piggyClaimSuccess(reward),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
+            backgroundColor: Colors.green[700],
+            duration: const Duration(seconds: 4),
           ),
-          backgroundColor: Colors.green[700],
-          duration: const Duration(seconds: 4),
-        ),
-      );
-      widget.onClaimed?.call();
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('No se pudo canjear el Piggy Bank en este momento.'),
-          backgroundColor: Colors.redAccent,
-        ),
-      );
+        );
+        widget.onClaimed?.call();
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(context.l10n.piggyClaimError),
+            backgroundColor: Colors.redAccent,
+          ),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isClaiming = false);
+      }
     }
+  }
+
+  Widget _buildClaimingAnimation(ThemeData theme) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.amber.withValues(alpha: 0.25),
+            Colors.orangeAccent.withValues(alpha: 0.40),
+            Colors.amber.withValues(alpha: 0.25),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.amber, width: 1.5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.amber.withValues(alpha: 0.35),
+            blurRadius: 18,
+            spreadRadius: 2,
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Icon(Icons.savings_rounded, color: Colors.amber, size: 26)
+              .animate(onPlay: (controller) => controller.repeat(reverse: true))
+              .scale(begin: const Offset(0.9, 0.9), end: const Offset(1.2, 1.2), duration: 450.ms)
+              .rotate(begin: -0.06, end: 0.06, duration: 450.ms),
+          const SizedBox(width: 12),
+          Text(
+            '¡Rompiendo cerdito y canjeando!...',
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w900,
+              fontSize: 13,
+              letterSpacing: 0.5,
+            ),
+          ).animate(onPlay: (controller) => controller.repeat(reverse: true))
+           .shimmer(duration: 1200.ms, color: Colors.amberAccent),
+          const SizedBox(width: 12),
+          const SizedBox(
+            width: 18,
+            height: 18,
+            child: CircularProgressIndicator(strokeWidth: 2.5, color: Colors.amber),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -369,7 +429,7 @@ class _PiggyBankCardState extends State<PiggyBankCard> {
       child: Column(
         children: [
           GestureDetector(
-            onTap: canClaim ? _handleClaim : null,
+            onTap: (canClaim && !_isClaiming) ? _handleClaim : null,
             child: Row(
               children: [
                 Stack(
@@ -399,7 +459,7 @@ class _PiggyBankCardState extends State<PiggyBankCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'PIGGY BANK', 
+                        context.l10n.piggyBankTitle, 
                         style: theme.textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.w900, 
                           letterSpacing: 1,
@@ -408,7 +468,7 @@ class _PiggyBankCardState extends State<PiggyBankCard> {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        canClaim ? '¡Llegaste a 100! Toca el cerdito para canjear GRATIS' : 'Cashback gratis por cada compra', 
+                        canClaim ? context.l10n.piggyReady : context.l10n.piggyCashback, 
                         style: theme.textTheme.bodySmall?.copyWith(
                           color: canClaim ? Colors.greenAccent : theme.colorScheme.onSurface.withValues(alpha: 0.7),
                           fontWeight: canClaim ? FontWeight.bold : FontWeight.normal,
@@ -452,25 +512,26 @@ class _PiggyBankCardState extends State<PiggyBankCard> {
           ),
           if (canClaim) ...[
             const SizedBox(height: 18),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: _isClaiming ? null : _handleClaim,
-                icon: _isClaiming 
-                    ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.black))
-                    : const Icon(Icons.stars, color: Colors.black),
-                label: Text(
-                  _isClaiming ? 'CANJEANDO...' : '¡CANJEAR 100 LAPIS GRATIS!',
-                  style: const TextStyle(fontWeight: FontWeight.w900, letterSpacing: 1, color: Colors.black),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.amber,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                  elevation: 6,
+            if (_isClaiming)
+              _buildClaimingAnimation(theme)
+            else
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: _handleClaim,
+                  icon: const Icon(Icons.stars, color: Colors.black),
+                  label: Text(
+                    context.l10n.piggyClaimBtn,
+                    style: const TextStyle(fontWeight: FontWeight.w900, letterSpacing: 1, color: Colors.black),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                    elevation: 6,
+                  ),
                 ),
               ),
-            ),
           ],
         ],
       ),
@@ -478,8 +539,75 @@ class _PiggyBankCardState extends State<PiggyBankCard> {
   }
 }
 
-class AdBannerCard extends StatelessWidget {
+class AdBannerCard extends StatefulWidget {
   const AdBannerCard({super.key});
+
+  @override
+  State<AdBannerCard> createState() => _AdBannerCardState();
+}
+
+class _AdBannerCardState extends State<AdBannerCard> {
+  bool _isLoadingAd = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Precargar el anuncio bonificado
+    AdService().loadRewardedAd();
+  }
+
+  Future<void> _handleWatchAd() async {
+    if (_isLoadingAd) return;
+    setState(() => _isLoadingAd = true);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Abriendo video de anuncio...'),
+        duration: Duration(seconds: 1),
+      ),
+    );
+
+    try {
+      final rewardGranted = await AdService().showRewardedAd(
+        onRewardEarned: () async {
+          final success = await GameApiService().claimAdReward();
+          if (mounted && success) {
+            final gameProvider = Provider.of<GameProvider>(context, listen: false);
+            gameProvider.addCrystals(1);
+            gameProvider.fetchEconomyStatus();
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('¡Recompensa obtenida! +1 Lapislázuli'),
+                backgroundColor: Colors.green,
+              ),
+            );
+          }
+        },
+      );
+
+      if (mounted && !rewardGranted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('El anuncio no se pudo cargar o no completaste el video.'),
+            backgroundColor: Colors.orange,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error al reproducir anuncio: $e'),
+            backgroundColor: Colors.redAccent,
+          ),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isLoadingAd = false);
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -498,19 +626,25 @@ class AdBannerCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('LAPISLAZULI GRATIS', style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold)),
+                Text(context.l10n.freeLapisAd, style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 4),
-                Text('Mira un video y gana +5.', style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.onSurface.withValues(alpha: 0.5))),
+                Text(context.l10n.freeLapisAdDesc, style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.onSurface.withValues(alpha: 0.5))),
               ],
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: _isLoadingAd ? null : _handleWatchAd,
             style: ElevatedButton.styleFrom(
               backgroundColor: theme.colorScheme.primary,
               foregroundColor: theme.colorScheme.surface,
             ),
-            child: const Text('VER'),
+            child: _isLoadingAd
+                ? const SizedBox(
+                    width: 16,
+                    height: 16,
+                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                  )
+                : Text(context.l10n.watchAd),
           ),
         ],
       ),

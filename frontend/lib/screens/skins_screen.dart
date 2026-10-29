@@ -2,10 +2,10 @@ import 'package:glassy/theme/app_colors.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../theme/app_theme.dart';
 import '../providers/game_provider.dart';
 import 'store_screen.dart';
 import '../widgets/ui/currency_icon.dart';
+import '../l10n/l10n_extension.dart';
 
 class SkinsScreen extends StatefulWidget {
   const SkinsScreen({super.key});
@@ -41,9 +41,9 @@ class _SkinsScreenState extends State<SkinsScreen> {
   }
 
   void _sendSkinToUnity(String skinId) {
-    print("------------------------------------------------");
-    print("SKIN SELECCIONADA: $skinId (Se enviará a Unity al iniciar el juego)");
-    print("------------------------------------------------");
+    debugPrint("------------------------------------------------");
+    debugPrint("SKIN SELECCIONADA: $skinId (Se enviará a Unity al iniciar el juego)");
+    debugPrint("------------------------------------------------");
   }
 
   @override
@@ -52,14 +52,23 @@ class _SkinsScreenState extends State<SkinsScreen> {
     final unlockedSkins = gameProvider.unlockedSkins;
     final selectedSkinId = gameProvider.selectedSkinId;
 
-    final ownedSkins = _allSkins.where((s) => unlockedSkins.contains(s['id']) || s['id'] == 'gemas_clasicas').toList();
+    final ownedSkins = [
+      ..._allSkins.where((s) => unlockedSkins.contains(s['id']) || s['id'] == 'gemas_clasicas'),
+      ...unlockedSkins
+          .where((id) => !_allSkins.any((s) => s['id'] == id))
+          .map((id) => {
+                'id': id,
+                'name': id.replaceAll('_', ' '),
+                'is_custom': true,
+              }),
+    ];
     final lockedSkins = _allSkins.where((s) => !unlockedSkins.contains(s['id']) && s['id'] != 'gemas_clasicas').toList();
 
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('INVENTARIO', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, letterSpacing: 4, fontSize: 20)),
+        title: Text(context.l10n.skinsCollection, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, letterSpacing: 4, fontSize: 20)),
         backgroundColor: Colors.black.withValues(alpha: 0.3),
         flexibleSpace: ClipRect(
           child: BackdropFilter(
@@ -267,11 +276,11 @@ class _SkinsScreenState extends State<SkinsScreen> {
                             ),
                             const SizedBox(height: 8),
                             if (isSelected)
-                              const Text('EQUIPADO', style: TextStyle(color: AppColors.lightBlue, fontWeight: FontWeight.w900, fontSize: 11, letterSpacing: 1))
+                              Text(context.l10n.equipped, style: const TextStyle(color: AppColors.lightBlue, fontWeight: FontWeight.w900, fontSize: 11, letterSpacing: 1))
                             else if (isOwned)
-                              const Text('SELECCIONAR', style: TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 10))
+                              Text(context.l10n.equip, style: const TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 10))
                             else
-                              const Text('VER EN TIENDA', style: TextStyle(color: Colors.orangeAccent, fontWeight: FontWeight.bold, fontSize: 10)),
+                              Text(context.l10n.store, style: const TextStyle(color: Colors.orangeAccent, fontWeight: FontWeight.bold, fontSize: 10)),
                           ],
                         ),
                       ),

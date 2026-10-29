@@ -20,6 +20,7 @@ class UnityBridgeController {
   final _missionStartedController = StreamController<MissionStartedPayload>.broadcast();
   final _missionUpdatedController = StreamController<MissionUpdatedPayload>.broadcast();
   final _missionCompletedController = StreamController<MissionCompletedPayload>.broadcast();
+  final _reviveOpportunityController = StreamController<ReviveOpportunityPayload>.broadcast();
 
   Stream<void> get onReady => _readyController.stream;
   Stream<ScoreUpdatePayload> get onScoreUpdated => _scoreController.stream;
@@ -32,6 +33,7 @@ class UnityBridgeController {
   Stream<MissionStartedPayload> get onMissionStarted => _missionStartedController.stream;
   Stream<MissionUpdatedPayload> get onMissionUpdated => _missionUpdatedController.stream;
   Stream<MissionCompletedPayload> get onMissionCompleted => _missionCompletedController.stream;
+  Stream<ReviveOpportunityPayload> get onReviveOpportunity => _reviveOpportunityController.stream;
 
   UnityBridgeController(this._unityController);
 
@@ -77,6 +79,9 @@ class UnityBridgeController {
           break;
         case 'MISSION_COMPLETED':
           _missionCompletedController.add(MissionCompletedPayload.fromJson(payloadJson));
+          break;
+        case 'REVIVE_OPPORTUNITY':
+          _reviveOpportunityController.add(ReviveOpportunityPayload.fromJson(payloadJson));
           break;
         default:
           debugPrint('[UnityBridgeController] Evento no reconocido: ${bridgeMsg.eventName}');
@@ -126,6 +131,14 @@ class UnityBridgeController {
     _sendToUnity('UPDATE_CRYSTALS', CrystalsUpdatePayload(currentCrystals: crystals).toJsonString());
   }
 
+  void reviveGame() {
+    _sendToUnity('REVIVE_GAME', '{}');
+  }
+
+  void declineRevive() {
+    _sendToUnity('DECLINE_REVIVE', '{}');
+  }
+
   void dispose() {
     _readyController.close();
     _scoreController.close();
@@ -138,5 +151,6 @@ class UnityBridgeController {
     _missionStartedController.close();
     _missionUpdatedController.close();
     _missionCompletedController.close();
+    _reviveOpportunityController.close();
   }
 }

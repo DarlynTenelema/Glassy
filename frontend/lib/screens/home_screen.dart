@@ -1,10 +1,8 @@
-import 'package:glassy/theme/app_colors.dart';
 import 'dart:math' as math;
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../theme/app_theme.dart';
 import '../widgets/ui/currency_icon.dart';
+import '../l10n/l10n_extension.dart';
 import 'records_screen.dart';
 import 'settings_screen.dart';
 import 'game_screen.dart';
@@ -14,6 +12,9 @@ import 'profile_screen.dart';
 import '../services/audio_service.dart';
 import '../providers/game_provider.dart';
 import '../widgets/animated_wallet.dart';
+import '../widgets/ui/glass_orb_button.dart';
+import '../widgets/ui/glass_play_button.dart';
+import '../widgets/ui/cosmic_glass_background.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,23 +24,28 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
-  late AnimationController _animController;
+  late AnimationController _floatAnimController;
+  bool _hasShownDailyDialog = false;
 
   @override
   void initState() {
     super.initState();
-    _animController = AnimationController(
+    // Animación suave continua para la levitación de la gema central y esquirlas
+    _floatAnimController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 5), // 5s in, 5s out = 10s total
+      duration: const Duration(seconds: 4),
     )..repeat(reverse: true);
-    
+
     // Iniciar música de fondo
     AudioService().playBgMusic();
-    
-    // Mostrar calendario diario si puede reclamar
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+
+    // Sincronizar datos y mostrar recompensa diaria si está disponible
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       final gameProvider = Provider.of<GameProvider>(context, listen: false);
-      if (gameProvider.canClaimDailyReward) {
+      await gameProvider.fetchEconomyStatus();
+      await gameProvider.fetchSkins();
+      if (mounted && gameProvider.canClaimDailyReward && !_hasShownDailyDialog) {
+        _hasShownDailyDialog = true;
         _showDailyCalendar(context, gameProvider);
       }
     });
@@ -47,370 +53,343 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   @override
   void dispose() {
-    _animController.dispose();
+    _floatAnimController.dispose();
     super.dispose();
+  }
+
+  void _navigateTo(Widget screen) {
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => screen,
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    final gameProvider = Provider.of<GameProvider>(context);
+
     return Scaffold(
-      body: Stack(
-        children: [
-          // Fondo base
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Theme.of(context).scaffoldBackgroundColor, Theme.of(context).colorScheme.surface],
-                begin: Alignment.bottomRight,
-                end: Alignment.topLeft,
-              ),
-            ),
-          ),
-          
-          // Animación de gemas flotantes (siluetas ASMR)
-          AnimatedBuilder(
-            animation: _animController,
-            builder: (context, child) {
-              final size = MediaQuery.of(context).size;
-              final value = _animController.value;
-              final t = value * 2 * math.pi;
-
-              // Trayectorias para que entren, floten (wobble) y salgan suavemente
-              double esmeraldaX = -150 + (size.width * 0.8) * value;
-              double esmeraldaY = size.height * 0.2 + 60 * math.sin(t);
-
-              double topacioX = size.width + 50 - (size.width * 0.9) * value;
-              double topacioY = size.height * 0.5 + 80 * math.cos(t);
-
-              double zafiroX = size.width * 0.3 + 100 * math.sin(t);
-              double zafiroY = size.height + 50 - (size.height * 0.7) * value;
-
-              double rubiX = size.width * 0.6 + 80 * math.cos(t);
-              double rubiY = -150 + (size.height * 0.6) * value;
-
-              return Stack(
-                children: [
-                  Positioned(
-                    left: esmeraldaX, top: esmeraldaY,
-                    child: Transform.rotate(
-                      angle: value * math.pi,
-                      child: _buildGemSilhouette('esmeralda.png', 120),
-                    ),
-                  ),
-                  Positioned(
-                    left: topacioX, top: topacioY,
-                    child: Transform.rotate(
-                      angle: -value * math.pi * 0.8,
-                      child: _buildGemSilhouette('topacio.png', 100),
-                    ),
-                  ),
-                  Positioned(
-                    left: zafiroX, top: zafiroY,
-                    child: Transform.rotate(
-                      angle: value * math.pi * 1.2,
-                      child: _buildGemSilhouette('zafiro.png', 140),
-                    ),
-                  ),
-                  Positioned(
-                    left: rubiX, top: rubiY,
-                    child: Transform.rotate(
-                      angle: -value * math.pi * 1.5,
-                      child: _buildGemSilhouette('rubi.png', 110),
-                    ),
-                  ),
-                ],
-              );
-            },
-          ),
-          
-          SafeArea(
-            child: Column(
-              children: [
-                // Top HUD
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          // Botón Perfil
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                PageRouteBuilder(
-                                  pageBuilder: (context, animation, secondaryAnimation) => const ProfileScreen(),
-                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                    return FadeTransition(opacity: animation, child: child);
-                                  },
-                                ),
-                              );
-                            },
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: BackdropFilter(
-                                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withValues(alpha: 0.15),
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      const Icon(Icons.person, color: Colors.white, size: 24),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          // Botón Records
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                PageRouteBuilder(
-                                  pageBuilder: (context, animation, secondaryAnimation) => const RecordsScreen(),
-                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                    return FadeTransition(opacity: animation, child: child);
-                                  },
-                                ),
-                              );
-                            },
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: BackdropFilter(
-                                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withValues(alpha: 0.15),
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assets/ui/elemento_1.png', width: 24, height: 24),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      
-                      // Botones de la derecha (Wallet y Settings)
-                      Row(
-                        children: [
-                          // Wallet
-                          const AnimatedWallet(),
-                          const SizedBox(width: 12),
-                          // Botón Settings
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: BackdropFilter(
-                              filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.white.withValues(alpha: 0.15),
-                                  shape: BoxShape.circle,
-                                  border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
-                                ),
-                                child: IconButton(
-                                  icon: Image.asset('assets/ui/elemento_2.png', width: 28, height: 28),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      PageRouteBuilder(
-                                        pageBuilder: (context, animation, secondaryAnimation) => const SettingsScreen(),
-                                        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                          return FadeTransition(opacity: animation, child: child);
-                                        },
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                
-                const Spacer(flex: 1),
-                
-                // Título Glassy
-                Text(
-                  'Glassy',
-                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 4,
-                    shadows: [
-                      const Shadow(color: AppColors.lightBlue, blurRadius: 25),
-                      const Shadow(color: Colors.white, blurRadius: 5),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  'Merge to evolve',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: Colors.white70,
-                    letterSpacing: 2,
-                  ),
-                ),
-                
-                const Spacer(flex: 2),
-                
-                // Botón de PLAY central y gigante
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.1),
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: Colors.white.withValues(alpha: 0.4), width: 1.5),
-                          boxShadow: [
-                            BoxShadow(color: AppColors.lightBlue.withValues(alpha: 0.3), blurRadius: 30, spreadRadius: 5),
-                          ],
+      backgroundColor: const Color(0xFF030A1A),
+      body: CosmicGlassBackground(
+        child: SafeArea(
+          child: Column(
+            children: [
+              // ---------------------------------------------------------------
+              // 1. TOP HUD (Esferas de Perfil, Trofeo, Saldo y Ajustes)
+              // ---------------------------------------------------------------
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Izquierda: Perfil y Records (Trophy)
+                    Row(
+                      children: [
+                        GlassOrbButton(
+                          size: 52,
+                          iconSize: 26,
+                          glowColor: const Color(0xFF38BDF8),
+                          icon: const Icon(Icons.person_rounded, color: Colors.white),
+                          onTap: () => _navigateTo(const ProfileScreen()),
                         ),
-                        child: Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(30),
-                            onTap: () async {
-                              AudioService().stopBgMusic();
-                              await Navigator.push(
-                                context, 
-                                PageRouteBuilder(
-                                  pageBuilder: (context, animation, secondaryAnimation) => const GameScreen(),
-                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                    return FadeTransition(opacity: animation, child: child);
-                                  },
-                                ),
-                              );
-                              AudioService().playBgMusic();
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 20),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset('assets/ui/elemento_3.png', width: 45, height: 45),
-                                  const SizedBox(width: 15),
-                                  const Text(
-                                    'PLAY',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 36,
-                                      fontWeight: FontWeight.w900,
-                                      letterSpacing: 4,
-                                    ),
+                        const SizedBox(width: 10),
+                        GlassOrbButton(
+                          size: 52,
+                          iconSize: 28,
+                          glowColor: const Color(0xFFFFD700),
+                          icon: Image.asset('assets/ui/elemento_1.png', fit: BoxFit.contain),
+                          onTap: () => _navigateTo(const RecordsScreen()),
+                        ),
+                      ],
+                    ),
+
+                    // Derecha: Wallet de Lapislázulis y Ajustes
+                    Row(
+                      children: [
+                        AnimatedWallet(
+                          onTap: () => _navigateTo(const StoreScreen()),
+                        ),
+                        const SizedBox(width: 10),
+                        GlassOrbButton(
+                          size: 52,
+                          iconSize: 28,
+                          glowColor: const Color(0xFFA855F7),
+                          icon: Image.asset('assets/ui/elemento_2.png', fit: BoxFit.contain),
+                          onTap: () => _navigateTo(const SettingsScreen()),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
+              const Spacer(flex: 1),
+
+              // ---------------------------------------------------------------
+              // 2. HERO CENTRAL: Gema Facetada 3D Levitando + Esquirlas Orbitando
+              // ---------------------------------------------------------------
+              AnimatedBuilder(
+                animation: _floatAnimController,
+                builder: (context, child) {
+                  final t = _floatAnimController.value * 2 * math.pi;
+                  final gemOffsetY = 10 * math.sin(t);
+                  final shard1OffsetY = -14 * math.sin(t * 1.2);
+                  final shard2OffsetY = 12 * math.cos(t * 0.9);
+
+                  return Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Contenedor de la Gema 3D con Esquirlas de Cristal
+                      SizedBox(
+                        width: 220,
+                        height: 160,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          clipBehavior: Clip.none,
+                          children: [
+                            // Resplandor de nebulosa azul zafiro detrás de la gema
+                            Container(
+                              width: 140,
+                              height: 140,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xFF00E5FF).withValues(alpha: 0.35),
+                                    blurRadius: 45,
+                                    spreadRadius: 10,
+                                  ),
+                                  BoxShadow(
+                                    color: const Color(0xFF6366F1).withValues(alpha: 0.30),
+                                    blurRadius: 60,
+                                    spreadRadius: 15,
                                   ),
                                 ],
                               ),
                             ),
-                          ),
+
+                            // Gema Principal Levitando (Lapislázuli)
+                            Transform.translate(
+                              offset: Offset(0, gemOffsetY),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: const Color(0xFF00E5FF).withValues(alpha: 0.50),
+                                      blurRadius: 36,
+                                      spreadRadius: 3,
+                                    ),
+                                  ],
+                                ),
+                                child: Image.asset(
+                                  'assets/images/lapislazuli.png',
+                                  width: 140,
+                                  height: 140,
+                                  fit: BoxFit.contain,
+                                  filterQuality: FilterQuality.high,
+                                ),
+                              ),
+                            ),
+
+                            // Esquirla de cristal superior izquierda
+                            Positioned(
+                              left: 20,
+                              top: 15 + shard1OffsetY,
+                              child: Transform.rotate(
+                                angle: -0.4 + (0.1 * math.sin(t)),
+                                child: _buildCrystalShard(size: 28, opacity: 0.85),
+                              ),
+                            ),
+
+                            // Esquirla de cristal derecha
+                            Positioned(
+                              right: 15,
+                              top: 40 + shard2OffsetY,
+                              child: Transform.rotate(
+                                angle: 0.5 + (0.15 * math.cos(t)),
+                                child: _buildCrystalShard(size: 34, opacity: 0.90),
+                              ),
+                            ),
+
+                            // Pequeña esquirla inferior izquierda
+                            Positioned(
+                              left: 35,
+                              bottom: 10 - shard1OffsetY * 0.5,
+                              child: Transform.rotate(
+                                angle: 0.8,
+                                child: _buildCrystalShard(size: 20, opacity: 0.70),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                  ),
-                ),
-                
-                const Spacer(flex: 1),
-                
-                // Barra de navegación inferior tipo juego
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      _buildBottomNavButton(
-                        context,
-                        'SKINS',
-                        'assets/ui/elemento_4.png',
-                        () => Navigator.push(
-                          context, 
-                          PageRouteBuilder(
-                            pageBuilder: (context, animation, secondaryAnimation) => const SkinsScreen(),
-                            transitionsBuilder: (context, animation, secondaryAnimation, child) => FadeTransition(opacity: animation, child: child),
-                          ),
-                        ),
-                      ),
-                      _buildBottomNavButton(
-                        context,
-                        'STORE',
-                        'assets/ui/elemento_5.png',
-                        () => Navigator.push(
-                          context, 
-                          PageRouteBuilder(
-                            pageBuilder: (context, animation, secondaryAnimation) => const StoreScreen(),
-                            transitionsBuilder: (context, animation, secondaryAnimation, child) => FadeTransition(opacity: animation, child: child),
-                          ),
+
+                      const SizedBox(height: 12),
+
+                      // Logo "Glassy" con tipografía de cristal esculpido y brillo
+                      _buildCrystalLogo(context),
+
+                      const SizedBox(height: 6),
+
+                      // Subtítulo "Merge to evolve"
+                      Text(
+                        context.l10n.mergeToEvolve,
+                        style: TextStyle(
+                          color: Colors.white.withValues(alpha: 0.85),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 2.5,
+                          shadows: [
+                            Shadow(
+                              color: const Color(0xFF00E5FF).withValues(alpha: 0.4),
+                              blurRadius: 10,
+                            ),
+                          ],
                         ),
                       ),
                     ],
-                  ),
-                ),
-                const SizedBox(height: 20),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+                  );
+                },
+              ),
 
-  Widget _buildBottomNavButton(BuildContext context, String title, String iconAsset, VoidCallback onTap) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(35),
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-              child: Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.1),
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white.withValues(alpha: 0.3), width: 1.5),
-                  boxShadow: [
-                    BoxShadow(color: Colors.white.withValues(alpha: 0.1), blurRadius: 15, spreadRadius: 1),
+              const Spacer(flex: 2),
+
+              // ---------------------------------------------------------------
+              // 3. BOTÓN PRINCIPAL DE ACCIÓN: ▶ PLAY (Glassy Capsule)
+              // ---------------------------------------------------------------
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                child: GlassPlayButton(
+                  text: context.l10n.play,
+                  icon: Image.asset(
+                    'assets/ui/elemento_3.png',
+                    width: 44,
+                    height: 44,
+                    fit: BoxFit.contain,
+                  ),
+                  onPressed: () async {
+                    AudioService().stopBgMusic();
+                    await Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) => const GameScreen(),
+                        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                          return FadeTransition(opacity: animation, child: child);
+                        },
+                      ),
+                    );
+                    AudioService().playBgMusic();
+                  },
+                ),
+              ),
+
+              const Spacer(flex: 2),
+
+              // ---------------------------------------------------------------
+              // 4. NAVEGACIÓN INFERIOR: SKINS & STORE (Esferas de Cristal 3D)
+              // ---------------------------------------------------------------
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    // Botón SKINS (Esfera de Cristal)
+                    GlassOrbButton(
+                      size: 72,
+                      iconSize: 40,
+                      label: context.l10n.skins,
+                      glowColor: const Color(0xFF00E5FF),
+                      icon: Image.asset('assets/ui/elemento_4.png', fit: BoxFit.contain),
+                      onTap: () => _navigateTo(const SkinsScreen()),
+                    ),
+
+                    // Botón STORE (Esfera de Cristal con cofre/diamante)
+                    GlassOrbButton(
+                      size: 72,
+                      iconSize: 40,
+                      label: context.l10n.store,
+                      glowColor: const Color(0xFFA855F7),
+                      hasBadge: gameProvider.canClaimDailyReward,
+                      icon: Image.asset('assets/ui/elemento_5.png', fit: BoxFit.contain),
+                      onTap: () => _navigateTo(const StoreScreen()),
+                    ),
                   ],
                 ),
-                child: Image.asset(iconAsset, width: 35, height: 35),
               ),
-            ),
+
+              const SizedBox(height: 10),
+            ],
           ),
-          const SizedBox(height: 8),
-          Text(
-            title,
-            style: const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
 
+  /// Construye el logotipo "Glassy" con gradiente de cristal y sombra bioluminiscente
+  Widget _buildCrystalLogo(BuildContext context) {
+    return ShaderMask(
+      shaderCallback: (bounds) {
+        return const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Colors.white,
+            Color(0xFFE0F7FA), // Hielo brillante
+            Color(0xFF80DEEA), // Cian de cristal
+            Color(0xFF00E5FF), // Resplandor zafiro
+          ],
+          stops: [0.0, 0.35, 0.70, 1.0],
+        ).createShader(bounds);
+      },
+      child: Text(
+        'Glassy',
+        style: Theme.of(context).textTheme.displayLarge?.copyWith(
+          color: Colors.white,
+          fontSize: 54,
+          fontWeight: FontWeight.w900,
+          letterSpacing: 4.0,
+          shadows: [
+            const Shadow(
+              color: Color(0xFF00E5FF),
+              blurRadius: 30,
+              offset: Offset(0, 4),
+            ),
+            const Shadow(
+              color: Colors.white,
+              blurRadius: 10,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// Dibuja una esquirla de cristal translúcida facetada
+  Widget _buildCrystalShard({required double size, required double opacity}) {
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF00E5FF).withValues(alpha: opacity * 0.6),
+            blurRadius: 12,
+          ),
+        ],
+      ),
+      child: CustomPaint(
+        painter: _ShardPainter(opacity: opacity),
+      ),
+    );
+  }
+
+  /// Diálogo del Calendario de Recompensas Diarias (Preservado)
   void _showDailyCalendar(BuildContext context, GameProvider gameProvider) {
     showDialog(
       context: context,
@@ -425,24 +404,27 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           child: Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: Theme.of(context).scaffoldBackgroundColor,
+              color: const Color(0xFF0A162B).withValues(alpha: 0.95),
               borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: Colors.orangeAccent.withValues(alpha: 0.5), width: 2),
+              border: Border.all(color: const Color(0xFF00E5FF).withValues(alpha: 0.5), width: 1.5),
               boxShadow: [
-                BoxShadow(color: Colors.orangeAccent.withValues(alpha: 0.2), blurRadius: 30, spreadRadius: -5),
+                BoxShadow(
+                  color: const Color(0xFF00E5FF).withValues(alpha: 0.25),
+                  blurRadius: 35,
+                  spreadRadius: 2,
+                ),
               ],
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Header con botón X
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Icon(Icons.calendar_today_rounded, color: Colors.orangeAccent),
-                    const Text(
-                      'RECOMPENSA DIARIA',
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16, letterSpacing: 1),
+                    const Icon(Icons.calendar_today_rounded, color: Color(0xFF00E5FF)),
+                    Text(
+                      context.l10n.dailyReward,
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16, letterSpacing: 1),
                     ),
                     InkWell(
                       onTap: () => Navigator.pop(dialogContext),
@@ -451,8 +433,6 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   ],
                 ),
                 const SizedBox(height: 24),
-                
-                // Grilla de 7 días
                 Wrap(
                   spacing: 10,
                   runSpacing: 10,
@@ -461,66 +441,68 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     int day = index + 1;
                     bool isToday = day == currentStreak;
                     bool isPast = day < currentStreak;
-                    
-                    int rewardValue = 10;
-                    if (day == 2) rewardValue = 20;
-                    if (day == 3) rewardValue = 30;
-                    if (day == 4) rewardValue = 40;
-                    if (day == 5) rewardValue = 50;
-                    if (day == 6) rewardValue = 75;
-                    if (day == 7) rewardValue = 100;
-                    
-                    String imageAsset = day == 7 ? CurrencyIcon.imagePath : 'assets/images/lapis_fragments.png';
-                    
+                    int rewardValue = day == 7 ? 10 : day;
+
                     return Container(
                       width: 60,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: isToday ? Colors.orangeAccent.withValues(alpha: 0.2) : (isPast ? Colors.green.withValues(alpha: 0.1) : Theme.of(context).colorScheme.surface),
+                        color: isToday
+                            ? const Color(0xFF00E5FF).withValues(alpha: 0.2)
+                            : (isPast ? Colors.green.withValues(alpha: 0.15) : const Color(0xFF13233D)),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
-                          color: isToday ? Colors.orangeAccent : (isPast ? Colors.green : Colors.white12),
+                          color: isToday ? const Color(0xFF00E5FF) : (isPast ? Colors.green : Colors.white12),
                           width: isToday ? 2 : 1,
                         ),
-                        boxShadow: isToday ? [BoxShadow(color: Colors.orangeAccent.withValues(alpha: 0.4), blurRadius: 10)] : [],
+                        boxShadow: isToday ? [BoxShadow(color: const Color(0xFF00E5FF).withValues(alpha: 0.4), blurRadius: 10)] : [],
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Día $day', style: TextStyle(color: isToday ? Colors.white : Colors.white54, fontSize: 12, fontWeight: FontWeight.bold)),
+                          Text(context.l10n.dayNumber(day), style: TextStyle(color: isToday ? Colors.white : Colors.white54, fontSize: 12, fontWeight: FontWeight.bold)),
                           const SizedBox(height: 4),
-                          isPast 
-                            ? const Icon(Icons.check_circle, color: Colors.green, size: 28)
-                            : Image.asset(imageAsset, width: 28, height: 28, errorBuilder: (c,e,s) => CurrencyIcon(size: 28)),
+                          isPast ? const Icon(Icons.check_circle, color: Colors.green, size: 28) : const CurrencyIcon(size: 28),
                           const SizedBox(height: 4),
-                          Text('+$rewardValue', style: TextStyle(color: isToday ? Colors.orangeAccent : AppColors.lightBlue, fontWeight: FontWeight.w900, fontSize: 14)),
+                          Text('+$rewardValue', style: TextStyle(color: isToday ? const Color(0xFF00E5FF) : const Color(0xFF38BDF8), fontWeight: FontWeight.w900, fontSize: 14)),
                         ],
                       ),
                     );
                   }),
                 ),
-                
                 const SizedBox(height: 24),
-                
-                // Botón Reclamar
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: (gameProvider.canClaimDailyReward && !gameProvider.isClaimingDaily) ? () async {
                       int claimedDay = currentStreak;
-                      gameProvider.claimDailyReward();
                       Navigator.pop(dialogContext);
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('¡Recompensa del Día $claimedDay Reclamada!'), backgroundColor: Colors.orange));
-                    },
+                      final success = await gameProvider.claimDailyReward();
+                      if (context.mounted) {
+                        if (success) {
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.l10n.dailyRewardClaimed(claimedDay)), backgroundColor: const Color(0xFF00E5FF)));
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Ya has reclamado tu recompensa diaria de hoy.'), backgroundColor: Colors.redAccent));
+                        }
+                      }
+                    } : null,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.orangeAccent,
+                      backgroundColor: const Color(0xFF00E5FF),
                       foregroundColor: Colors.black,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       elevation: 10,
-                      shadowColor: Colors.orangeAccent.withValues(alpha: 0.5),
+                      shadowColor: const Color(0xFF00E5FF).withValues(alpha: 0.5),
                     ),
-                    child: const Text('RECLAMAR', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, letterSpacing: 2)),
+                    child: Text(
+                      gameProvider.canClaimDailyReward ? context.l10n.claim : 'VUELVE MAÑANA',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 16,
+                        letterSpacing: 2,
+                        color: gameProvider.canClaimDailyReward ? Colors.black : Colors.white54,
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -530,16 +512,45 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       },
     );
   }
+}
 
-  Widget _buildGemSilhouette(String assetName, double size) {
-    return Opacity(
-      opacity: 0.5, // Opacidad del 50% solicitada
-      child: Image.asset(
-        'assets/game/gems/$assetName',
-        width: size,
-        height: size,
-        color: AppColors.lightBlue, // Silueta con el color complementario
-      ),
-    );
+/// Dibuja una esquirla de cristal triangular facetada
+class _ShardPainter extends CustomPainter {
+  final double opacity;
+
+  _ShardPainter({required this.opacity});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width;
+    final h = size.height;
+
+    final path = Path()
+      ..moveTo(w * 0.5, 0)
+      ..lineTo(w, h * 0.7)
+      ..lineTo(w * 0.3, h)
+      ..lineTo(0, h * 0.4)
+      ..close();
+
+    final fillPaint = Paint()
+      ..shader = LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [
+          Colors.white.withValues(alpha: opacity * 0.9),
+          const Color(0xFF38BDF8).withValues(alpha: opacity * 0.7),
+          const Color(0xFF0284C7).withValues(alpha: opacity * 0.4),
+        ],
+      ).createShader(Offset.zero & size);
+    canvas.drawPath(path, fillPaint);
+
+    final edgePaint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.2
+      ..color = Colors.white.withValues(alpha: opacity);
+    canvas.drawPath(path, edgePaint);
   }
+
+  @override
+  bool shouldRepaint(covariant _ShardPainter oldDelegate) => oldDelegate.opacity != opacity;
 }

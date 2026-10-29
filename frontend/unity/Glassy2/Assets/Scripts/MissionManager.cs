@@ -83,7 +83,7 @@ public class MissionManager : MonoBehaviour
 
         if (FlutterBridgeManager.Instance != null)
         {
-            FlutterBridgeManager.Instance.SendMissionStarted(missionText, (int)_timeRemaining);
+            FlutterBridgeManager.Instance.SendMissionStarted(missionText, (int)_timeRemaining, (int)_targetGemType, _targetAmount);
         }
         Debug.Log($"[MISION] Nueva misión iniciada: {missionText} en {_timeRemaining}s");
     }

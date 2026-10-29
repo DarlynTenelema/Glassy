@@ -8,7 +8,7 @@ PhysicsMaterial2D:
   m_PrefabAsset: {fileID: 0}
   m_Name: ReboteGems
   serializedVersion: 2
-  friction: 0.2
-  bounciness: 0.45
+  friction: 0.8
+  bounciness: 0.05
   m_FrictionCombine: 0
   m_BounceCombine: 0

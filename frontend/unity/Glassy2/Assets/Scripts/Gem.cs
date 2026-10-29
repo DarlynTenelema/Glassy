@@ -17,7 +17,9 @@ public enum GemType
     GreenRuby = 4, //  8 pts — Rubí verde (Peridoto)
     Sapphire = 5,  // 16 pts — Zafiro
     RedRuby  = 6,  // 32 pts — Rubí rojo
-    Diamond  = 7   // 64 pts — Diamante (explota al aparecer, no persiste en el tablero)
+    Diamond  = 7,  // 64 pts — Diamante (explota al aparecer, no persiste en el tablero)
+    Quartz   = 8,  // 20 pts — Cuarzo (desaparece al fusionarse con otro cuarzo)
+    Stone    = 9   // 30 pts — Piedra (no se fusiona; se destruye al fusionar gemas cerca)
 }
 
 /// <summary>
@@ -52,6 +54,7 @@ public class Gem : MonoBehaviour
     // Estado interno
     private Rigidbody2D _rb;
     private bool  _hasMerged     = false;
+    public bool IsMergeLocked { get; set; } = false;
     private float _baseMass      = 1.1f; // Cargado en Awake() desde GameConfig
     private SpriteRenderer _spriteRenderer;
     
@@ -67,12 +70,21 @@ public class Gem : MonoBehaviour
     private Vector2 _defaultSpriteSize;
     private Vector3 _originalLocalScale;
     private Sprite _defaultSprite;
+    private float _defaultColliderRadius = 1.75f;
+    private Vector2 _defaultColliderOffset = Vector2.zero;
 
     private void Awake()
     {
         _rb             = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _originalLocalScale = transform.localScale;
+
+        CircleCollider2D col = GetComponent<CircleCollider2D>();
+        if (col != null)
+        {
+            _defaultColliderRadius = col.radius;
+            _defaultColliderOffset = col.offset;
+        }
 
         if (_spriteRenderer != null && _spriteRenderer.sprite != null)
         {
@@ -103,61 +115,39 @@ public class Gem : MonoBehaviour
         }
     }
 
+    public Sprite DefaultSprite => _defaultSprite;
+
     public void ApplySkin()
     {
-        if (SkinManager.Instance != null && _spriteRenderer != null)
+        if (_spriteRenderer == null) return;
+
+        Sprite skinSprite = null;
+
+        // Soporte exclusivo y desacoplado para la pantalla relajada de TikTok (Beta.md)
+        if (TikTokRelaxDonorManager.Instance != null)
         {
-            Sprite skinSprite = SkinManager.Instance.GetSpriteForGem(gemType);
-            CircleCollider2D col = GetComponent<CircleCollider2D>();
-
-            if (skinSprite != null)
-            {
-                _spriteRenderer.sprite = skinSprite;
-
-                Vector2 newSize = skinSprite.bounds.size;
-                if (newSize.x > 0 && newSize.y > 0 && _defaultSpriteSize.x > 0)
-                {
-                    float scaleX = _defaultSpriteSize.x / newSize.x;
-                    float scaleY = _defaultSpriteSize.y / newSize.y;
-                    float scaleFactor = Mathf.Min(scaleX, scaleY);
-                    
-                    Vector3 newScale = _originalLocalScale * scaleFactor;
-                    transform.localScale = newScale;
-
-                    // Calibrar el collider para que la zona de toque con el dedo y la física no se encojan
-                    if (col != null && scaleFactor > 0f)
-                    {
-                        col.radius = 1.75f / scaleFactor;
-                    }
-                    
-                    JellyEffect jelly = GetComponent<JellyEffect>();
-                    if (jelly != null)
-                    {
-                        jelly.UpdateOriginalScale(newScale);
-                    }
-                }
-            }
-            else
-            {
-                // Restore default sprite and scale if no skin is applied (e.g. classic gems)
-                if (_defaultSprite != null)
-                {
-                    _spriteRenderer.sprite = _defaultSprite;
-                }
-                transform.localScale = _originalLocalScale;
-
-                if (col != null)
-                {
-                    col.radius = 1.75f;
-                }
-                
-                JellyEffect jelly = GetComponent<JellyEffect>();
-                if (jelly != null)
-                {
-                    jelly.UpdateOriginalScale(_originalLocalScale);
-                }
-            }
+            skinSprite = TikTokRelaxDonorManager.Instance.GetDonorSpriteForGem(this);
         }
+
+        if (skinSprite == null && SkinManager.Instance != null)
+        {
+            skinSprite = SkinManager.Instance.GetSpriteForGem(gemType);
+        }
+
+        if (skinSprite != null)
+        {
+            _spriteRenderer.sprite = skinSprite;
+        }
+        else if (_defaultSprite != null)
+        {
+            _spriteRenderer.sprite = _defaultSprite;
+        }
+
+        // REGLA FUNDAMENTAL (Beta.md):
+        // La física, escala y colisionadores de las perlas y gemas NUNCA se alteran por una foto o skin.
+        // Se preserva exactamente la escala original del prefab para que caiga y se comporte 100% normal.
+        transform.localScale = _originalLocalScale;
+
         ExtractColorForLight();
     }
     
@@ -207,6 +197,8 @@ public class Gem : MonoBehaviour
             case GemType.Sapphire: return Color.blue;
             case GemType.RedRuby: return Color.red;
             case GemType.Diamond: return Color.cyan;
+            case GemType.Quartz: return new Color(0.9f, 0.95f, 1f);
+            case GemType.Stone: return new Color(0.45f, 0.45f, 0.5f);
             default: return Color.white;
         }
     }
@@ -263,7 +255,8 @@ public class Gem : MonoBehaviour
 
     public bool HasRecentInteraction()
     {
-        if (gemType == GemType.Pearl) return true; // Las perlas no requieren intervención
+        // Las perlas son elementos iniciadores automáticos sin interacción humana directa
+        if (gemType == GemType.Pearl) return false;
 
         if (_isBeingInteracted) return true; // Está siendo arrastrada actualmente
 
@@ -321,7 +314,7 @@ public class Gem : MonoBehaviour
             _glowIntensity = 1.5f; // Intensidad del flash
         }
         
-        if (_hasMerged) return;
+        if (_hasMerged || this.IsMergeLocked) return;
 
         // Si la perla venía en caída libre ordenada (Kinematic) y choca con algo (suelo, pared o gema),
         // se vuelve Dynamic para rebotar y comportarse con físicas normales.
@@ -332,22 +325,31 @@ public class Gem : MonoBehaviour
             _rb.linearVelocity = Vector2.down * 2f; // Transferir inercia de la cascada
         }
         
-        // Las perlas ahora se fusionan al chocar con otras perlas,
-        // igual que el resto de las gemas.
-        // (Se eliminó la restricción que evitaba que colisionaran).
-        
+        // Las perlas se fusionan al chocar con otras perlas en el frasco
         if (gemType == GemType.Diamond) return; // El diamante ya se destruyó en Start
+        if (gemType == GemType.Stone) return;   // Las piedras no se fusionan con nada
 
         Gem other = collision.gameObject.GetComponent<Gem>();
-        if (other == null || other._hasMerged) return;
+        if (other == null || other._hasMerged || other.IsMergeLocked) return;
+        if (other.gemType == GemType.Stone) return; // No se puede fusionar con piedras
 
         // Solo se fusionan gemas del mismo tipo
         if (this.gemType != other.gemType) return;
 
-        // Requiere intervención humana si no son perlas (arrastrando o lanzadas hace < 2 seg)
-        if (!this.HasRecentInteraction() && !other.HasRecentInteraction())
+        // Si ambas perlas aún están cayendo en el tubo (Kinematic), esperar a que lleguen al fondo
+        if (gemType == GemType.Pearl && _rb.bodyType == RigidbodyType2D.Kinematic && other._rb.bodyType == RigidbodyType2D.Kinematic)
         {
-            return; // No se fusionan si ninguna fue tocada recientemente
+            return;
+        }
+
+        // Las perlas y los cuarzos se fusionan automáticamente entre sí al chocar.
+        // Para las gemas jugables estándar (Esmeralda a Rubí Rojo), se requiere intervención humana (arrastrada o lanzada hace < 2s).
+        if (gemType != GemType.Pearl && gemType != GemType.Quartz)
+        {
+            if (!this.HasRecentInteraction() && !other.HasRecentInteraction())
+            {
+                return; // No se fusionan si ninguna fue manipulada recientemente por el jugador
+            }
         }
 
         if (this.gameObject.GetHashCode() > other.gameObject.GetHashCode())
@@ -356,19 +358,45 @@ public class Gem : MonoBehaviour
         }
     }
 
-    private void MergeWith(Gem other)
+    public void DirectMerge(Gem other, bool isUserInteraction = true)
     {
+        if (_hasMerged || other == null || other._hasMerged) return;
         _hasMerged       = true;
         other._hasMerged = true;
+
+        // Desactivar colisionadores y simulación inmediatamente para prevenir
+        // que choquen o generen impulsos explosivos de separación con gemas vecinas
+        Collider2D colA = GetComponent<Collider2D>();
+        Collider2D colB = other.GetComponent<Collider2D>();
+        if (colA != null) colA.enabled = false;
+        if (colB != null) colB.enabled = false;
+
+        Rigidbody2D rbA = GetComponent<Rigidbody2D>();
+        Rigidbody2D rbB = other.GetComponent<Rigidbody2D>();
+        if (rbA != null) { rbA.linearVelocity = Vector2.zero; rbA.simulated = false; }
+        if (rbB != null) { rbB.linearVelocity = Vector2.zero; rbB.simulated = false; }
 
         // Calcular posición del punto medio entre las dos gemas
         Vector2 spawnPos = ((Vector2)transform.position + (Vector2)other.transform.position) / 2f;
 
+        // Caso especial: CUARZO (Al fusionarse desaparece y otorga 20 puntos)
+        if (gemType == GemType.Quartz)
+        {
+            GameManager.Instance?.RegisterQuartzMerge(spawnPos);
+
+            // Destruir las dos gemas de cuarzo
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+
+            // Destruir piedras cercanas por la onda expansiva del cuarzo
+            GameManager.Instance?.DestroyNearbyStones(spawnPos, 2.0f);
+
+            GemHighlightManager.Instance?.ForceRefresh();
+            return;
+        }
+
         // Determinar el siguiente tipo
         GemType nextType = gemType + 1; // Enum avanza en orden: Pearl→Emerald→...→Diamond
-
-        // Detectar si la fusión fue provocada por el jugador recientemente
-        bool isUserInteraction = this.HasRecentInteraction() || other.HasRecentInteraction();
 
         // Enviar evento de fusión al sistema de Combos (Reemplaza a AddScore y PlayGemMerge)
         GameManager.Instance?.RegisterMerge(gemType, nextType, isUserInteraction);
@@ -380,8 +408,19 @@ public class Gem : MonoBehaviour
         // Instanciar la nueva gema (si es Diamante, su Start() dispara la explosión)
         GameManager.Instance?.SpawnEvolvedGem(nextType, spawnPos);
 
+        // Destruir piedras cercanas si las hay (onda expansiva)
+        GameManager.Instance?.DestroyNearbyStones(spawnPos, 1.8f);
+
         // Notificar al sistema de highlight para que reevalúe de inmediato
         GemHighlightManager.Instance?.ForceRefresh();
+    }
+
+    private void MergeWith(Gem other)
+    {
+        // Detectar si la fusión fue provocada por el jugador recientemente
+        // (Las perlas son automáticas; las gemas jugables requieren intervención humana)
+        bool isUserInteraction = (gemType != GemType.Pearl) && (this.HasRecentInteraction() || other.HasRecentInteraction());
+        DirectMerge(other, isUserInteraction);
     }
 
     // =========================================================================
@@ -390,8 +429,8 @@ public class Gem : MonoBehaviour
 
     private void TriggerDiamondExplosion()
     {
-        // Sumar los 64 puntos del diamante al score total
-        GameManager.Instance?.AddScore(ScoreValue);
+        // NOTA: Los puntos del Diamante ya son otorgados en RegisterMerge
+        // al fusionar los dos Rubís Rojos, evitando duplicidad de puntuación.
 
         // Reproducir secuencia de sonidos: encontrado → desvanecer
         AudioManager.Instance?.PlayDiamondSequence();
@@ -408,5 +447,6 @@ public class Gem : MonoBehaviour
         {
             GameManager.Instance.activeGems.Remove(this);
         }
+        TikTokRelaxDonorManager.Instance?.OnGemDestroyed(this);
     }
 }

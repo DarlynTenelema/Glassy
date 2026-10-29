@@ -16,7 +16,10 @@ using UnityEngine;
 public class CameraAspectFitter : MonoBehaviour
 {
     [Tooltip("El ancho del mundo que siempre debe ser visible (en unidades de Unity).")]
-    public float targetWidth = 6.5f; 
+    public float targetWidth = 5.2f; 
+
+    [Tooltip("La altura vertical mínima ortográfica para que el frasco quepa completo en pantallas horizontales (PC 16:9). Menor valor = Frasco más grande (Zoom In).")]
+    public float targetHalfHeight = 4.8f;
 
     private Camera _cam;
 
@@ -39,8 +42,9 @@ public class CameraAspectFitter : MonoBehaviour
         if (_cam == null || !_cam.orthographic) return;
 
         float currentAspect = (float)Screen.width / (float)Screen.height;
-        float requiredOrthographicSize = targetWidth / (2f * currentAspect);
+        float requiredByWidth = targetWidth / (2f * currentAspect);
 
-        _cam.orthographicSize = requiredOrthographicSize;
+        // En pantallas horizontales de PC (16:9), aseguramos que el frasco vertical no se corte
+        _cam.orthographicSize = Mathf.Max(requiredByWidth, targetHalfHeight);
     }
 }

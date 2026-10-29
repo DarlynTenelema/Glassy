@@ -22,6 +22,8 @@ namespace FlutterUnityBridge
         public event Action<AuthTokenPayload> OnAuthTokenReceived;
         public event Action<SetSkinPayload> OnSkinRequested;
         public event Action<CrystalsUpdatePayload> OnCrystalsUpdateReceived;
+        public event Action OnReviveGameRequested;
+        public event Action OnDeclineReviveRequested;
 
         private void Awake()
         {
@@ -79,6 +81,16 @@ namespace FlutterUnityBridge
                     case "UPDATE_CRYSTALS":
                         var crystalsPayload = JsonUtility.FromJson<CrystalsUpdatePayload>(bridgeMsg.payload);
                         OnCrystalsUpdateReceived?.Invoke(crystalsPayload);
+                        break;
+
+                    case "REVIVE_GAME":
+                        OnReviveGameRequested?.Invoke();
+                        GameManager.Instance?.ReviveGame();
+                        break;
+
+                    case "DECLINE_REVIVE":
+                        OnDeclineReviveRequested?.Invoke();
+                        GameManager.Instance?.DeclineRevive();
                         break;
 
                     default:
@@ -147,9 +159,14 @@ namespace FlutterUnityBridge
             SendToFlutter("DANGER_ZONE", new DangerZonePayload { isDanger = isDanger });
         }
 
-        public void SendMissionStarted(string text, int timeLimitSeconds)
+        public void SendMissionStarted(string text, int timeLimitSeconds, int gemType = -1, int targetAmount = 0)
         {
-            SendToFlutter("MISSION_STARTED", new MissionStartedPayload { text = text, timeLimitSeconds = timeLimitSeconds });
+            SendToFlutter("MISSION_STARTED", new MissionStartedPayload { 
+                text = text, 
+                timeLimitSeconds = timeLimitSeconds,
+                gemType = gemType,
+                targetAmount = targetAmount
+            });
         }
 
         public void SendMissionUpdated(int current, int target)
@@ -160,6 +177,11 @@ namespace FlutterUnityBridge
         public void SendMissionCompleted(int bonus)
         {
             SendToFlutter("MISSION_COMPLETED", new MissionCompletedPayload { bonusPoints = bonus });
+        }
+
+        public void SendReviveOpportunity(int currentScore)
+        {
+            SendToFlutter("REVIVE_OPPORTUNITY", new ReviveOpportunityPayload { currentScore = currentScore });
         }
     }
 }

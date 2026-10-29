@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -527,12 +527,12 @@ body { padding: 0; margin: 0; overflow: hidden; }
 
         private static string[] GetEnabledScenes()
         {
-            var scenes = EditorBuildSettings.scenes
-                .Where(s => s.enabled)
-                .Select(s => s.path)
-                .ToArray();
-
-            return scenes;
+            // AISLAMIENTO TOTAL: La versión para móviles exportada a Flutter
+            // debe contener ÚNICA Y EXCLUSIVAMENTE la escena de juego móvil (GameScene).
+            // Las escenas de TikTok (TikTokScene y TikTokRelaxScene) están estrictamente excluidas de la app móvil.
+            const string mobileScene = "Assets/Scenes/GameScene.unity";
+            Debug.Log($"[FlutterUnityIntegration] Exportando exclusivamente escena móvil: {mobileScene}");
+            return new string[] { mobileScene };
         }
 
         // uncomment for addressables

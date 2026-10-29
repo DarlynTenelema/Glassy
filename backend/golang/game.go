@@ -42,6 +42,7 @@ type LeaderboardEntry struct {
 	Rank       int       `json:"rank"`
 	Name       string    `json:"name"`
 	AvatarURL  string    `json:"avatar_url"`
+	AvatarID   string    `json:"avatar_id"`
 	Score      int       `json:"score"`
 	AchievedAt time.Time `json:"achieved_at"`
 }
@@ -57,7 +58,7 @@ func GetLeaderboards(c *gin.Context) {
 	if rankType == "total" {
 		// Ranking de tiempo jugado y dedicación
 		rows, err = DB.Query(`
-			SELECT name, avatar_url, total_score, created_at
+			SELECT name, COALESCE(avatar_id, avatar_url, 'personaje_2.jpg'), total_score, created_at
 			FROM users
 			ORDER BY total_score DESC
 			LIMIT 200
@@ -65,7 +66,7 @@ func GetLeaderboards(c *gin.Context) {
 	} else {
 		// Ranking de habilidad (Mejor Partida)
 		rows, err = DB.Query(`
-			SELECT u.name, u.avatar_url, l.score, l.achieved_at
+			SELECT u.name, COALESCE(u.avatar_id, u.avatar_url, 'personaje_2.jpg'), l.score, l.achieved_at
 			FROM leaderboards l
 			JOIN users u ON l.user_id = u.id
 			ORDER BY l.score DESC
@@ -83,15 +84,70 @@ func GetLeaderboards(c *gin.Context) {
 	rank := 1
 	for rows.Next() {
 		var entry LeaderboardEntry
-		if err := rows.Scan(&entry.Name, &entry.AvatarURL, &entry.Score, &entry.AchievedAt); err != nil {
+		var avatar string
+		if err := rows.Scan(&entry.Name, &avatar, &entry.Score, &entry.AchievedAt); err != nil {
 			continue
 		}
 		entry.Rank = rank
+		entry.AvatarURL = avatar
+		entry.AvatarID = avatar
 		results = append(results, entry)
 		rank++
 	}
 
 	c.JSON(http.StatusOK, results)
+}
+
+// TriggerBotSimulation invoca el procedimiento almacenado en PostgreSQL para actualizar los puntajes de los bots.
+func TriggerBotSimulation() error {
+	_, err := DB.Exec("SELECT public.simulate_daily_bot_activity()")
+	return err
+}
+
+// AdminSimulateBots permite forzar la simulación de bots bajo demanda.
+// POST /api/admin/simulate-bots
+func AdminSimulateBots(c *gin.Context) {
+	adminKey := os.Getenv("ADMIN_SECRET_KEY")
+	clientKey := c.GetHeader("X-Admin-Secret")
+	if adminKey == "" || clientKey != adminKey {
+		c.JSON(http.StatusForbidden, gin.H{"error": "Unauthorized access"})
+		return
+	}
+
+	if err := TriggerBotSimulation(); err != nil {
+		log.Printf("❌ Error running bot simulation: %v\n", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to simulate bots", "details": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"status": "success", "message": "Bot activity simulated successfully"})
+}
+
+// StartBotSimulationScheduler ejecuta la simulación diaria de forma automática en segundo plano.
+func StartBotSimulationScheduler() {
+	go func() {
+		for {
+			now := time.Now().UTC()
+			// Programar cada día a las 04:00 AM UTC (noche de LATAM)
+			next := time.Date(now.Year(), now.Month(), now.Day(), 4, 0, 0, 0, time.UTC)
+			if next.Before(now) {
+				next = next.Add(24 * time.Hour)
+			}
+
+			waitDuration := time.Until(next)
+			log.Printf("⏰ Bot Scheduler: Próxima simulación en %v (%v)\n", waitDuration.Round(time.Minute), next.Format(time.RFC3339))
+			time.Sleep(waitDuration)
+
+			log.Println("🤖 Ejecutando simulación diaria de bots en el ranking...")
+			if err := TriggerBotSimulation(); err != nil {
+				log.Printf("❌ Error al simular actividad de bots: %v\n", err)
+			} else {
+				log.Println("✅ Simulación diaria de bots completada con éxito.")
+			}
+
+			time.Sleep(10 * time.Second)
+		}
+	}()
 }
 
 // SubmitScore guarda el puntaje final de una partida.
@@ -119,6 +175,7 @@ func SubmitScore(c *gin.Context) {
 	// Lógica de Recompensas por Jugar (Farming para Suscriptores) con Transacción y Bloqueo (Anti-Race Condition)
 	tx, err := DB.Begin()
 	if err == nil {
+		defer tx.Rollback()
 		var subTier string
 		var dailyFarmed int
 		var lastFarmDate time.Time
@@ -148,6 +205,12 @@ func SubmitScore(c *gin.Context) {
 				dailyFarmed = 0
 			}
 
+			// Recompensa base por completar partida (Modelo Appodeal: +1 Lapislázuli para partidas jugadas)
+			baseMatchLapis := 0
+			if req.Score >= 10 {
+				baseMatchLapis = 1
+			}
+
 			lapisToAward := 0
 			dailyMax := 0
 
@@ -167,21 +230,23 @@ func SubmitScore(c *gin.Context) {
 				if dailyFarmed+lapisToAward > dailyMax {
 					lapisToAward = dailyMax - dailyFarmed
 				}
-				if lapisToAward > 0 {
-					_, _ = tx.Exec(`
-						UPDATE users 
-						SET crystals = crystals + $1, 
-						    daily_lapis_farmed = $2, 
-						    last_farm_date = CURRENT_DATE,
-						    total_score = total_score + $4,
-						    last_score_at = NOW()
-						WHERE id = $3
-					`, lapisToAward, dailyFarmed+lapisToAward, userID, req.Score)
-				} else {
-					_, _ = tx.Exec(`UPDATE users SET total_score = total_score + $1, last_score_at = NOW() WHERE id = $2`, req.Score, userID)
-				}
+			}
+
+			totalLapisAward := baseMatchLapis + lapisToAward
+			newDailyFarmed := dailyFarmed + lapisToAward
+
+			if totalLapisAward > 0 {
+				_, _ = tx.Exec(`
+					UPDATE users 
+					SET crystals = crystals + $1, 
+					    daily_lapis_farmed = $2, 
+					    last_farm_date = CURRENT_DATE,
+					    total_score = total_score + $4,
+					    last_score_at = NOW()
+					WHERE id = $3
+				`, totalLapisAward, newDailyFarmed, userID, req.Score)
 			} else {
-				// Si no hay recompensa de cristales, al menos sumar el total_score y actualizar timestamp
+				// Si no hay cristales otorgados, actualizar total_score y timestamp
 				_, _ = tx.Exec(`UPDATE users SET total_score = total_score + $1, last_score_at = NOW() WHERE id = $2`, req.Score, userID)
 			}
 		}
@@ -273,9 +338,9 @@ func SaveSettings(c *gin.Context) {
 
 // adRewardCrystals es la cantidad de lapislázulis que se regalan por ver un video.
 // Configuración de recompensas por anuncios
-const adRewardCrystals = 5
-const maxDailyAds = 15
-const adCooldownSeconds = 45
+const adRewardCrystals = 1
+const maxDailyAds = 50
+const adCooldownSeconds = 15
 
 // ClaimAdReward agrega lapislázulis al jugador como recompensa por ver un video.
 // Valida límites diarios (máx 15) y cooldown estricto de tiempo (45s) en el servidor.
@@ -387,6 +452,20 @@ var packageRewards = map[string]PurchaseReward{
 	"sub_bronze_weekly":   {Crystals: 0, PiggyBank: 1},    // $0.99
 	"sub_silver_biweekly": {Crystals: 0, PiggyBank: 5},    // $4.99
 	"sub_gold_monthly":    {Crystals: 0, PiggyBank: 10},   // $9.99
+}
+
+// packagePricesUSD contiene el valor en USD para el cálculo de comisiones del 25%
+var packagePricesUSD = map[string]float64{
+	"glass_pack_100":      0.99,
+	"glass_pack_600":      4.99,
+	"glass_pack_1500":     9.99,
+	"glass_pack_5000":     19.99,
+	"pack_event_500":      0.99,
+	"pack_event_2000":     4.99,
+	"pack_event_5000":     9.99,
+	"sub_bronze_weekly":   0.99,
+	"sub_silver_biweekly": 4.99,
+	"sub_gold_monthly":    9.99,
 }
 
 // VerifyPurchase valida un recibo de Google Play Billing y acredita los lapislázulis.
@@ -530,6 +609,38 @@ func VerifyPurchase(c *gin.Context) {
 		return
 	}
 
+	// =========================================================================
+	// 25% REV-SHARE PARA PARTNERS / INFLUENCERS
+	// =========================================================================
+	var partnerID string
+	errPartner := tx.QueryRow(`
+		SELECT partner_id FROM partner_referrals WHERE user_id = $1
+	`, userID).Scan(&partnerID)
+
+	if errPartner == nil && partnerID != "" {
+		priceUSD := packagePricesUSD[req.ProductID]
+		if priceUSD > 0 {
+			commission := priceUSD * 0.25 // 25% de comisión neta para el creador
+			_, errP := tx.Exec(`
+				UPDATE partners 
+				SET total_earnings = total_earnings + $1,
+				    available_balance = available_balance + $1,
+				    total_sales_usd = total_sales_usd + $2
+				WHERE id = $3
+			`, commission, priceUSD, partnerID)
+
+			if errP == nil {
+				_, _ = tx.Exec(`
+					INSERT INTO partner_sales (partner_id, user_id, package_id, amount_usd, commission_usd)
+					VALUES ($1, $2, $3, $4, $5)
+				`, partnerID, userID, req.ProductID, priceUSD, commission)
+				log.Printf("[RevShare] Socio %s acreditado con $%.2f (25%% de compra de %s)", partnerID, commission, req.ProductID)
+			} else {
+				log.Printf("[RevShare] Advertencia actualizando saldo de socio: %v", errP)
+			}
+		}
+	}
+
 	if err := tx.Commit(); err != nil {
 		log.Printf("[VerifyPurchase] ERROR tx.Commit: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to commit transaction", "details": err.Error()})
@@ -580,7 +691,18 @@ func GetStoreStatus(c *gin.Context) {
 // SKINS (Server-Side Logic)
 // =============================================================================
 
-// GetSkins returns unlocked skins and currently selected skin
+// CustomSkinMetadata define los metadatos de una skin personalizada/dinámica
+type CustomSkinMetadata struct {
+	ID              string `json:"id"`
+	Name            string `json:"name"`
+	DonorTikTokUser string `json:"donor_tiktok_user,omitempty"`
+	PreviewURL      string `json:"preview_url"`
+	BaseStorageURL  string `json:"base_storage_url"`
+	IsExclusive     bool   `json:"is_exclusive"`
+	CreatedAt       string `json:"created_at,omitempty"`
+}
+
+// GetSkins returns unlocked skins, currently selected skin, and custom skins metadata
 // GET /api/player/skins
 func GetSkins(c *gin.Context) {
 	userID := c.GetString("user_id")
@@ -618,9 +740,29 @@ func GetSkins(c *gin.Context) {
 		unlockedSkins = append(unlockedSkins, "gemas_clasicas")
 	}
 
+	// Consultar metadatos de custom_skins pertenecientes al usuario o desbloqueadas
+	customSkins := make([]CustomSkinMetadata, 0)
+	customRows, err := DB.Query(`
+		SELECT cs.id, cs.name, cs.donor_tiktok_user, cs.preview_url, cs.base_storage_url, cs.is_exclusive, cs.created_at::text
+		FROM custom_skins cs
+		INNER JOIN user_skins us ON us.skin_id = cs.id
+		WHERE us.user_id = $1
+		ORDER BY cs.created_at DESC
+	`, userID)
+	if err == nil {
+		defer customRows.Close()
+		for customRows.Next() {
+			var meta CustomSkinMetadata
+			if err := customRows.Scan(&meta.ID, &meta.Name, &meta.DonorTikTokUser, &meta.PreviewURL, &meta.BaseStorageURL, &meta.IsExclusive, &meta.CreatedAt); err == nil {
+				customSkins = append(customSkins, meta)
+			}
+		}
+	}
+
 	c.JSON(http.StatusOK, gin.H{
 		"unlocked_skins": unlockedSkins,
 		"selected_skin":  selectedSkin,
+		"custom_skins":   customSkins,
 	})
 }
 
@@ -637,23 +779,23 @@ func BuySkin(c *gin.Context) {
 		return
 	}
 
-	// Precios definidos en el servidor (fuente de verdad)
+	// Precios definidos en el servidor (fuente de verdad - Actualizado para modelo publicitario Appodeal)
 	skinPrices := map[string]int{
-		"vida_marina":          300,
-		"Dinosaurios":          300,
-		"Dulces_de_Halloween":  600,
-		"Caldero_de_Bruja":     600,
-		"Cementerio_Encantado": 600,
-		"Cultivo_de_Calabazas": 600,
-		"Ajedrez_Magico":       600,
-		"Alquimia_Antigua":     600,
-		"Flores_Magicas":       600,
-		"Frutas_Jugosas":       600,
-		"Hongos_Brillantes":    600,
-		"Monstruos_de_Bolsillo": 600,
-		"Mundo_Dulce":          600,
-		"Planetas":             600,
-		"Sushi_Japones":        600,
+		"vida_marina":           50,
+		"Dinosaurios":           50,
+		"Dulces_de_Halloween":   100,
+		"Caldero_de_Bruja":      100,
+		"Cementerio_Encantado":  100,
+		"Cultivo_de_Calabazas":  100,
+		"Ajedrez_Magico":        100,
+		"Alquimia_Antigua":      100,
+		"Flores_Magicas":        100,
+		"Frutas_Jugosas":        100,
+		"Hongos_Brillantes":     100,
+		"Monstruos_de_Bolsillo": 100,
+		"Mundo_Dulce":           100,
+		"Planetas":              100,
+		"Sushi_Japones":         100,
 	}
 
 	actualCost, exists := skinPrices[req.SkinID]
@@ -669,7 +811,19 @@ func BuySkin(c *gin.Context) {
 	}
 	defer tx.Rollback()
 
-	// 1. Verify and deduct crystals securely using server-side cost
+	// 1. Check if user already owns this skin before deducting crystals
+	var alreadyOwned bool
+	err = tx.QueryRow("SELECT EXISTS(SELECT 1 FROM user_skins WHERE user_id = $1 AND skin_id = $2)", userID, req.SkinID).Scan(&alreadyOwned)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error checking skin ownership"})
+		return
+	}
+	if alreadyOwned {
+		c.JSON(http.StatusConflict, gin.H{"error": "Skin already owned"})
+		return
+	}
+
+	// 2. Verify and deduct crystals securely using server-side cost
 	res, err := tx.Exec("UPDATE users SET crystals = crystals - $1 WHERE id = $2 AND crystals >= $1", actualCost, userID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to process payment"})
@@ -681,8 +835,8 @@ func BuySkin(c *gin.Context) {
 		return
 	}
 
-	// 2. Add skin to user_skins (ignore if already exists)
-	_, err = tx.Exec("INSERT INTO user_skins (user_id, skin_id) VALUES ($1, $2) ON CONFLICT (user_id, skin_id) DO NOTHING", userID, req.SkinID)
+	// 3. Add skin to user_skins (strict insert; if duplicate races in, transaction rolls back safely)
+	_, err = tx.Exec("INSERT INTO user_skins (user_id, skin_id) VALUES ($1, $2)", userID, req.SkinID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to unlock skin"})
 		return
@@ -727,4 +881,162 @@ func EquipSkin(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"message": "Skin equipped"})
 }
+
+// =============================================================================
+// ADMIN: TIKTOK LIVE CUSTOM SKINS
+// =============================================================================
+
+// AdminAssignCustomSkin asigna una skin personalizada a un jugador mediante su invite_code, UUID o email.
+// POST /api/admin/assign-custom-skin
+func AdminAssignCustomSkin(c *gin.Context) {
+	adminKey := os.Getenv("ADMIN_SECRET_KEY")
+	clientKey := c.GetHeader("X-Admin-Secret")
+	if adminKey == "" || clientKey != adminKey {
+		c.JSON(http.StatusForbidden, gin.H{"error": "Unauthorized access"})
+		return
+	}
+
+	var req struct {
+		PlayerIdentifier string `json:"player_identifier" binding:"required"` // invite_code (ej: GLAS8X2K), UUID o email
+		SkinID           string `json:"skin_id" binding:"required"`
+		Name             string `json:"name" binding:"required"`
+		DonorTikTokUser  string `json:"donor_tiktok_user"`
+		PreviewURL       string `json:"preview_url"`
+		BaseStorageURL   string `json:"base_storage_url"`
+		IsExclusive      *bool  `json:"is_exclusive"`
+		AutoEquip        bool   `json:"auto_equip"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request body", "details": err.Error()})
+		return
+	}
+
+	isExclusive := true
+	if req.IsExclusive != nil {
+		isExclusive = *req.IsExclusive
+	}
+
+	identifier := strings.TrimSpace(req.PlayerIdentifier)
+	var targetUserID string
+	var targetUserName string
+	var targetInviteCode string
+
+	// 1. Buscar al usuario: primero por invite_code, luego por UUID, luego por email
+	query := `
+		SELECT id, name, COALESCE(invite_code, '') 
+		FROM users 
+		WHERE UPPER(TRIM(invite_code)) = UPPER($1) 
+		   OR id::text = $1 
+		   OR LOWER(TRIM(email)) = LOWER($1)
+		LIMIT 1
+	`
+	err := DB.QueryRow(query, identifier).Scan(&targetUserID, &targetUserName, &targetInviteCode)
+	if err != nil {
+		c.JSON(http.StatusNotFound, gin.H{
+			"error":      "Jugador no encontrado con el identificador proporcionado",
+			"identifier": identifier,
+		})
+		return
+	}
+
+	// 2. Iniciar transacción para registrar la skin e insertarla en user_skins
+	tx, err := DB.Begin()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database transaction error"})
+		return
+	}
+	defer tx.Rollback()
+
+	// 3. Registrar o actualizar la metadata en custom_skins
+	upsertSkinQuery := `
+		INSERT INTO custom_skins (id, name, owner_id, donor_tiktok_user, preview_url, base_storage_url, is_exclusive)
+		VALUES ($1, $2, $3, $4, $5, $6, $7)
+		ON CONFLICT (id) DO UPDATE 
+		SET name = EXCLUDED.name,
+		    owner_id = EXCLUDED.owner_id,
+		    donor_tiktok_user = EXCLUDED.donor_tiktok_user,
+		    preview_url = EXCLUDED.preview_url,
+		    base_storage_url = EXCLUDED.base_storage_url,
+		    is_exclusive = EXCLUDED.is_exclusive
+	`
+	_, err = tx.Exec(upsertSkinQuery, req.SkinID, req.Name, targetUserID, req.DonorTikTokUser, req.PreviewURL, req.BaseStorageURL, isExclusive)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to save custom skin metadata", "details": err.Error()})
+		return
+	}
+
+	// 4. Asignar la skin en user_skins
+	_, err = tx.Exec(`
+		INSERT INTO user_skins (user_id, skin_id)
+		VALUES ($1, $2)
+		ON CONFLICT (user_id, skin_id) DO NOTHING
+	`, targetUserID, req.SkinID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to assign skin to user", "details": err.Error()})
+		return
+	}
+
+	// 5. Opcional: auto-equipar en el usuario
+	if req.AutoEquip {
+		_, _ = tx.Exec("UPDATE users SET selected_skin_id = $1 WHERE id = $2", req.SkinID, targetUserID)
+	}
+
+	if err := tx.Commit(); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to commit transaction"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"status":        "success",
+		"message":       "Skin asignada exitosamente al jugador",
+		"skin_id":       req.SkinID,
+		"skin_name":     req.Name,
+		"user_id":       targetUserID,
+		"user_name":     targetUserName,
+		"invite_code":   targetInviteCode,
+		"auto_equipped": req.AutoEquip,
+	})
+}
+
+// AdminListCustomSkins devuelve las últimas skins personalizadas generadas
+// GET /api/admin/custom-skins
+func AdminListCustomSkins(c *gin.Context) {
+	adminKey := os.Getenv("ADMIN_SECRET_KEY")
+	clientKey := c.GetHeader("X-Admin-Secret")
+	if adminKey == "" || clientKey != adminKey {
+		c.JSON(http.StatusForbidden, gin.H{"error": "Unauthorized access"})
+		return
+	}
+
+	rows, err := DB.Query(`
+		SELECT cs.id, cs.name, cs.donor_tiktok_user, cs.preview_url, cs.base_storage_url, cs.is_exclusive, cs.created_at::text,
+		       COALESCE(u.name, 'N/A'), COALESCE(u.invite_code, 'N/A')
+		FROM custom_skins cs
+		LEFT JOIN users u ON u.id = cs.owner_id
+		ORDER BY cs.created_at DESC
+		LIMIT 100
+	`)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch custom skins"})
+		return
+	}
+	defer rows.Close()
+
+	type CustomSkinAdminItem struct {
+		CustomSkinMetadata
+		OwnerName       string `json:"owner_name"`
+		OwnerInviteCode string `json:"owner_invite_code"`
+	}
+
+	results := make([]CustomSkinAdminItem, 0)
+	for rows.Next() {
+		var item CustomSkinAdminItem
+		if err := rows.Scan(&item.ID, &item.Name, &item.DonorTikTokUser, &item.PreviewURL, &item.BaseStorageURL, &item.IsExclusive, &item.CreatedAt, &item.OwnerName, &item.OwnerInviteCode); err == nil {
+			results = append(results, item)
+		}
+	}
+
+	c.JSON(http.StatusOK, results)
+}
+
 

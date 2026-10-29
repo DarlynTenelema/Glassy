@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../services/storage_service.dart';
 import '../services/auth_service.dart';
+import '../config/env.dart';
 
 class GameProvider with ChangeNotifier {
   final StorageService _storage = StorageService();
-  final String _backendUrl = 'https://glassy-production.up.railway.app/api';
+  final String _backendUrl = Env.backendUrl;
   
   int _score = 0;
   int _highScore = 0;
@@ -21,6 +22,10 @@ class GameProvider with ChangeNotifier {
   // Skins State
   List<String> _unlockedSkins = ['gemas_clasicas'];
   String _selectedSkinId = 'gemas_clasicas';
+  final Set<String> _pendingSkinPurchases = {};
+
+  bool isSkinPurchasePending(String skinId) => _pendingSkinPurchases.contains(skinId);
+  bool get isAnySkinPurchasePending => _pendingSkinPurchases.isNotEmpty;
 
   // Chests & Fragments
   int _lapisFragments = 0;
@@ -121,16 +126,18 @@ class GameProvider with ChangeNotifier {
   }
 
   bool _isClaimingDaily = false;
+  bool get isClaimingDaily => _isClaimingDaily;
 
-  Future<void> claimDailyReward() async {
-    if (!_canClaimDailyReward || _isClaimingDaily) return;
+  Future<bool> claimDailyReward() async {
+    if (!_canClaimDailyReward || _isClaimingDaily) return false;
     
     final token = AuthService().accessToken;
-    if (token == null) return; // Solo online
+    if (token == null) return false; // Solo online
     
     _isClaimingDaily = true;
     notifyListeners();
 
+    bool success = false;
     try {
       final response = await http.post(
         Uri.parse('$_backendUrl/player/claim-daily'),
@@ -140,15 +147,17 @@ class GameProvider with ChangeNotifier {
       if (response.statusCode == 200) {
         // Obtenemos los nuevos datos desde el servidor inmediatamente
         await fetchEconomyStatus();
+        success = true;
       } else {
-        debugPrint('Backend rejected daily claim: ${response.statusCode}');
+        debugPrint('Backend rejected daily claim: ${response.statusCode} - ${response.body}');
       }
     } catch (e) {
       debugPrint('Error claiming daily reward: $e');
+    } finally {
+      _isClaimingDaily = false;
+      notifyListeners();
     }
-    
-    _isClaimingDaily = false;
-    notifyListeners();
+    return success;
   }
 
   Future<bool> claimChest(String chestType) async {
@@ -210,9 +219,13 @@ class GameProvider with ChangeNotifier {
       return false;
     }
 
-    if (_crystals < cost || _unlockedSkins.contains(skinId)) {
+    if (_pendingSkinPurchases.contains(skinId) || _unlockedSkins.contains(skinId) || _crystals < cost) {
+      debugPrint('Compra rechazada preventivamente (en progreso, ya adquirida o saldo insuficiente)');
       return false;
     }
+
+    _pendingSkinPurchases.add(skinId);
+    notifyListeners();
 
     try {
       final response = await http.post(
@@ -242,6 +255,9 @@ class GameProvider with ChangeNotifier {
     } catch (e) {
       debugPrint('Excepción al comprar skin en el servidor: $e');
       return false;
+    } finally {
+      _pendingSkinPurchases.remove(skinId);
+      notifyListeners();
     }
   }
 

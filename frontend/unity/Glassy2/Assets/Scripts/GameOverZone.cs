@@ -18,9 +18,31 @@ using FlutterUnityBridge;
 /// </summary>
 public class GameOverZone : MonoBehaviour
 {
+    public static GameOverZone Instance { get; private set; }
     public static bool IsInDanger { get; private set; } = false;
     private int     _gemsInZone = 0;  // Contador de gemas no-perla dentro de la zona
     private Coroutine _gameOverCoroutine;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this) Instance = null;
+    }
+
+    public void ResetZone()
+    {
+        _gemsInZone = 0;
+        IsInDanger = false;
+        if (_gameOverCoroutine != null)
+        {
+            StopCoroutine(_gameOverCoroutine);
+            _gameOverCoroutine = null;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

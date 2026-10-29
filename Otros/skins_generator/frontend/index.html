@@ -46,6 +46,9 @@
               <button id="btn-generate-all" class="btn btn-primary">
                 <span>🚀</span> Generar Todas en Secuencia
               </button>
+              <button id="btn-open-assign-modal" class="btn btn-secondary" style="border-color: #10b981; color: #34d399;" title="Asignar al inventario del usuario en vivo">
+                <span>🎁</span> Entregar a Jugador
+              </button>
               <button id="btn-refresh-status" class="btn btn-ghost" title="Actualizar estado">
                 <span>🔄</span> Refrescar
               </button>
@@ -120,6 +123,36 @@
           <div class="modal-img-wrap">
             <img id="modal-img" src="" alt="Vista Previa" />
           </div>
+        </div>
+      </div>
+
+      <!-- MODAL PARA ENTREGAR SKIN AL JUGADOR (TIKTOK LIVE) -->
+      <div id="assign-modal" class="modal hidden">
+        <div class="modal-backdrop" id="assign-modal-backdrop"></div>
+        <div class="modal-content glass-panel" style="max-width: 460px;">
+          <button type="button" class="modal-close" id="assign-modal-close">&times;</button>
+          <h3 style="color: #34d399; display: flex; align-items: center; gap: 8px;"><span>🎁</span> Entregar Skin a Jugador</h3>
+          <p style="font-size: 13px; color: #94a3b8; margin: 8px 0 16px 0;">
+            Asigna esta temática al inventario del usuario en vivo y al instante mediante su código de jugador de Glassy.
+          </p>
+          <form id="assign-skin-form" style="display: flex; flex-direction: column; gap: 14px; text-align: left;">
+            <div>
+              <label for="assign_player_id" style="font-size: 12px; font-weight: 600; color: #cbd5e1; display: block; margin-bottom: 4px;">Código de Jugador (Invite Code) o Email:</label>
+              <input type="text" id="assign_player_id" placeholder="Ej: GLAS8X2K o email" style="width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #38bdf8; font-weight: bold; font-family: monospace; font-size: 14px;" required />
+            </div>
+            <div>
+              <label for="assign_tiktok_user" style="font-size: 12px; font-weight: 600; color: #cbd5e1; display: block; margin-bottom: 4px;">Usuario de TikTok del Donante (Opcional):</label>
+              <input type="text" id="assign_tiktok_user" placeholder="Ej: @donante_pro" style="width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white; font-size: 14px;" />
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="assign_auto_equip" checked style="accent-color: #10b981; width: 18px; height: 18px; cursor: pointer;" />
+              <label for="assign_auto_equip" style="font-size: 13px; color: #e2e8f0; cursor: pointer;">Equipar automáticamente en el teléfono del jugador</label>
+            </div>
+            <button type="submit" id="btn-confirm-assign" class="btn btn-primary" style="margin-top: 6px; width: 100%; padding: 12px; font-size: 15px; font-weight: bold; background: linear-gradient(135deg, #10b981, #059669);">
+              <span>🚀</span> Asignar y Entregar al Instante
+            </button>
+            <div id="assign-status-msg" style="display: none; padding: 10px; border-radius: 8px; font-size: 13px; text-align: center;"></div>
+          </form>
         </div>
       </div>
     </div>

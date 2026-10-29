@@ -120,11 +120,22 @@ class DangerZonePayload {
 class MissionStartedPayload {
   final String text;
   final int timeLimitSeconds;
-  MissionStartedPayload({required this.text, required this.timeLimitSeconds});
+  final int gemType;
+  final int targetAmount;
+
+  MissionStartedPayload({
+    required this.text,
+    required this.timeLimitSeconds,
+    this.gemType = -1,
+    this.targetAmount = 0,
+  });
+
   factory MissionStartedPayload.fromJson(Map<String, dynamic> json) {
     return MissionStartedPayload(
       text: json['text'] as String? ?? '',
       timeLimitSeconds: json['timeLimitSeconds'] as int? ?? 0,
+      gemType: json['gemType'] as int? ?? -1,
+      targetAmount: json['targetAmount'] as int? ?? 0,
     );
   }
 }
@@ -146,5 +157,13 @@ class MissionCompletedPayload {
   MissionCompletedPayload({required this.bonusPoints});
   factory MissionCompletedPayload.fromJson(Map<String, dynamic> json) {
     return MissionCompletedPayload(bonusPoints: json['bonusPoints'] as int? ?? 0);
+  }
+}
+
+class ReviveOpportunityPayload {
+  final int currentScore;
+  ReviveOpportunityPayload({required this.currentScore});
+  factory ReviveOpportunityPayload.fromJson(Map<String, dynamic> json) {
+    return ReviveOpportunityPayload(currentScore: json['currentScore'] as int? ?? 0);
   }
 }
