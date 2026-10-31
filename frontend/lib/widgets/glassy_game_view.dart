@@ -366,11 +366,11 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
       return;
     }
 
-    // Impulso de nacimiento:
-    // Al fusionarse (especialmente dos perlas formando una esmeralda), la nueva gema
-    // nace con energía cinética y un ligero empuje ascendente para despegarse del suelo con dinamismo.
-    final angle = (math.Random().nextDouble() - 0.5) * math.pi * 0.8;
-    final speed = 45.0 + math.Random().nextDouble() * 35.0;
+    // Nacimiento equilibrado y orgánico:
+    // Dispersión suave y simétrica en todas direcciones (arriba, izquierda o derecha)
+    // para que las gemas no se acumulen en una sola esquina ni se peguen a la pared derecha.
+    final angle = (math.Random().nextDouble() - 0.5) * math.pi * 0.9;
+    final speed = 30.0 + math.Random().nextDouble() * 25.0;
     final initialVx = math.sin(angle) * speed;
     final initialVy = -math.cos(angle).abs() * speed;
 
@@ -405,9 +405,10 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
         }
       } else {
         if (!gem.isBeingInteracted) {
-          // Flotabilidad Zero-G con Perlin Noise suave para gemas superiores (Esmeralda a Rubí)
-          final nx = math.sin(now * 0.8 + gem.noiseOffsetX) * 16.0;
-          final ny = math.cos(now * 0.8 + gem.noiseOffsetY) * 16.0;
+          // Flotabilidad Zero-G armónica para gemas superiores (Esmeralda a Rubí)
+          // Genera micro-corrientes orgánicas suaves que mantienen las gemas flotando en el espacio interior del frasco
+          final nx = math.sin(now * 0.7 + gem.noiseOffsetX) * 18.0;
+          final ny = (math.cos(now * 0.7 + gem.noiseOffsetY) - 0.25) * 18.0; // Ligera tendencia de sustentación hacia arriba
           gem.vx += nx * dt;
           gem.vy += ny * dt;
 
