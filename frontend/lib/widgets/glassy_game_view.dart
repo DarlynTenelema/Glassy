@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../services/audio_service.dart';
 
 enum GemType {
   pearl, // 0 pts - Perla (iniciador, cae al fondo sin interactuar con gemas)
@@ -35,7 +36,7 @@ class GlassyGem {
   final double noiseOffsetY;
   final double noiseOffsetTorque;
 
-  // Jelly squash & stretch
+  // Jelly squash & stretch (10% sutil y elástico)
   double squashX = 0.0;
   double squashY = 0.0;
   double squashRecovery = 0.0;
@@ -93,6 +94,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
     with SingleTickerProviderStateMixin {
   late AnimationController _ticker;
   final GlassyGameController _controller = GlassyGameController();
+  final AudioService _audio = AudioService();
 
   final List<GlassyGem> _gems = [];
   final List<List<GlassyGem>> _pendingMerges = [];
@@ -155,6 +157,9 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
     _controller.onPostMessage = _handleHostMessage;
     widget.onCreated?.call(_controller);
 
+    // Iniciar música de fondo del juego
+    _audio.playBgMusic();
+
     _ticker = AnimationController(vsync: this, duration: const Duration(seconds: 1))
       ..addListener(_gameLoop)
       ..repeat();
@@ -216,6 +221,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
       _restartGame();
     } else if (method == 'TriggerGameOver') {
       _isGameOver = true;
+      _audio.playGameOver();
     } else if (method == 'ReceiveMessageFromFlutter') {
       try {
         final parsed = json.decode(param);
@@ -223,10 +229,21 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
         if (event == 'PAUSE_GAME') {
           final payload = json.decode(parsed['payload'] ?? '{}');
           _isPaused = payload['isPaused'] == true;
+          if (_isPaused) {
+            _audio.stopBgMusic();
+          } else {
+            _audio.playBgMusic();
+          }
         } else if (event == 'REVIVE_GAME') {
           _reviveGame();
         }
       } catch (_) {}
+    } else if (gameObject == 'AudioManager') {
+      if (method == 'PlayStartGameFromFlutter' || method == 'PlayStartGame') {
+        _audio.playStartGame();
+      } else if (method == 'PlayMusicFromFlutter') {
+        _audio.playBgMusic();
+      }
     }
   }
 
@@ -240,6 +257,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
     _spawnTimer = 1.0;
     _comboMultiplier = 0;
     _comboTimer = 0.0;
+    _audio.playStartGame();
     _sendBridgeEvent('SCORE_UPDATED', json.encode({'score': 0}));
     _sendBridgeEvent('DANGER_ZONE', json.encode({'isDanger': false}));
   }
@@ -253,6 +271,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
     _gems.removeWhere((g) => g.isMerged);
     _dangerTimer = 0.0;
     _isGameOver = false;
+    _audio.playBgMusic();
     _sendBridgeEvent('DANGER_ZONE', json.encode({'isDanger': false}));
   }
 
@@ -303,6 +322,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
       _dangerTimer += dt;
       if (_dangerTimer >= 1.5 && !_isGameOver) {
         _isGameOver = true;
+        _audio.playGameOver();
         _sendBridgeEvent('GAME_OVER', json.encode({'finalScore': _score, 'isNewHighScore': false}));
       }
     } else {
@@ -313,6 +333,9 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
   }
 
   void _spawnPearl() {
+    // Sonido suave de aparición de perla
+    _audio.playPearlSpawn();
+
     // SpawnPoint exacto en X=288.0, Y=85.0 dentro del cuello
     _gems.add(GlassyGem(
       type: GemType.pearl,
@@ -329,6 +352,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
     final idx = type.index;
     if (type == GemType.diamond) {
       _score += gemScores[idx];
+      _audio.playDiamondExplosion();
       _sendBridgeEvent('SCORE_UPDATED', json.encode({'score': _score}));
       return;
     }
@@ -386,11 +410,11 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
         }
       }
 
-      // Animación Jelly (Squash & stretch elástico)
+      // Animación Jelly (Squash & stretch elástico calibrado al 10%)
       if (gem.squashRecovery > 0) {
         gem.squashRecovery -= dt;
-        gem.squashX *= 0.88;
-        gem.squashY *= 0.88;
+        gem.squashX *= 0.85;
+        gem.squashY *= 0.85;
         if (gem.squashRecovery <= 0) {
           gem.squashX = 0;
           gem.squashY = 0;
@@ -452,16 +476,16 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
             b.vy += p * massA * nx * 0.7;
           }
 
-          // Squash & stretch de impacto
+          // Squash & stretch elástico (Jelly 10% sutil y satisfactorio)
           final impact = math.sqrt(kx * kx + ky * ky);
-          if (impact > 20.0) {
-            final intensity = (impact * 0.001).clamp(0.05, 0.2);
+          if (impact > 15.0) {
+            final intensity = (impact * 0.0008).clamp(0.04, 0.10);
             a.squashX = intensity;
             a.squashY = intensity;
-            a.squashRecovery = 0.3;
+            a.squashRecovery = 0.25;
             b.squashX = intensity;
             b.squashY = intensity;
-            b.squashRecovery = 0.3;
+            b.squashRecovery = 0.25;
           }
 
           // Fusión si son del mismo tipo
@@ -541,6 +565,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
 
       if (a.type == GemType.quartz) {
         _score += gemScores[GemType.quartz.index];
+        _audio.playGemMerge(0);
         _destroyNearbyStones(midX, midY, 180.0);
         continue;
       }
@@ -550,11 +575,17 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
 
       if (a.type == GemType.pearl) {
         _score += basePoints;
+        // Sonido de fusión con Do musical base
+        _audio.playGemMerge(0);
       } else {
         _comboMultiplier++;
         _comboTimer = 3.0;
         final totalPoints = basePoints * _comboMultiplier;
         _score += totalPoints;
+
+        // Escala musical ascendente (Do, Re, Mi, Fa...) según racha
+        _audio.playGemMerge(_comboMultiplier);
+
         _sendBridgeEvent('COMBO_BONUS', json.encode({
           'combo': _comboMultiplier,
           'bonus': totalPoints,
@@ -596,14 +627,12 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
         final screenW = constraints.maxWidth;
         final screenH = constraints.maxHeight;
 
-        // Escala vertical responsiva:
-        // En teléfonos alargados (20:9), escalamos por altura para llenar el 100% vertical
-        // y evitar cualquier franja negra o corte abajo.
-        final scaleH = screenH / 1024.0;
-        final scaleW = screenW / 576.0;
-        final isWide = (screenW / screenH) > (576.0 / 1024.0);
+        // Escalado responsive ajustado con margen de seguridad del 10%
+        // Evita que el frasco quede desproporcionado en pantallas de teléfono estrechas (como 20:9 o 9:16)
+        // mientras se mantiene centrado y nítido en pantallas panorámicas de PC y Tablets.
+        final rawScale = math.min(screenW / 576.0, screenH / 1024.0);
+        final scale = rawScale * 0.90; // Margen de confort visual
 
-        final scale = isWide ? math.min(scaleW, scaleH) : scaleH;
         final renderW = 576.0 * scale;
         final renderH = 1024.0 * scale;
         final offsetX = (screenW - renderW) / 2.0;
@@ -713,7 +742,6 @@ class _GlassyPainter extends CustomPainter {
     }
 
     if (activeBg != null) {
-      // Escalado Cover para llenar la pantalla completa sin distorsión
       final imgW = activeBg.width.toDouble();
       final imgH = activeBg.height.toDouble();
       final imgAspect = imgW / imgH;
