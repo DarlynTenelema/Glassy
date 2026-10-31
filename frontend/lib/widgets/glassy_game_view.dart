@@ -136,17 +136,26 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
   static const List<double> gemMasses = [0.0, 1.0, 1.2, 1.6, 2.2, 3.0, 4.0, 0.0, 1.0, 4.5];
 
   // Radios de colisión en Canvas virtuales
+  // Cada gema superior es aprox 20% más grande que la anterior para ocupar más espacio en el frasco
+  // Perla: 16 (diámetro 32)
+  // Esmeralda: 25 (+56% respecto a perla)
+  // Amatista: 30 (+20%)
+  // Topacio: 36 (+20%)
+  // Peridoto / Rubí Verde: 43 (+20%)
+  // Zafiro: 52 (+20%)
+  // Rubí: 62 (+20%)
+  // Diamante: 75 (+20%, gema suprema antes de explotar)
   static const List<double> gemRadii = [
-    16.0, // Pearl (diámetro 32 px, cabe con fluidez)
+    16.0, // Pearl (iniciador)
     25.0, // Emerald
-    32.0, // Amethyst
-    39.0, // Topaz
-    46.0, // GreenRuby / Peridot
-    53.0, // Sapphire
-    60.0, // RedRuby
-    60.0, // Diamond
-    32.0, // Quartz
-    44.0  // Stone
+    30.0, // Amethyst (~ +20%)
+    36.0, // Topaz (~ +20%)
+    43.0, // GreenRuby / Peridot (~ +20%)
+    52.0, // Sapphire (~ +20%)
+    62.0, // RedRuby (~ +20%)
+    75.0, // Diamond (~ +20%)
+    36.0, // Quartz
+    48.0  // Stone
   ];
 
   @override
@@ -425,15 +434,15 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
       _constrainToFlask(gem);
     }
 
-    // Colisiones entre gemas
+    // Colisiones físicas entre objetos
     for (int i = 0; i < _gems.length; i++) {
       for (int j = i + 1; j < _gems.length; j++) {
         final a = _gems[i];
         final b = _gems[j];
 
-        // Regla de capas de Unity (Gem.cs y versión_1.md):
-        // Perlas solo colisionan con perlas.
-        // Gemas solo colisionan con gemas.
+        // Regla estricta del Iniciador (versión_1.md):
+        // La perla (peso 0) solo interactúa con otras perlas.
+        // No choca con gemas superiores (Esmeralda en adelante), atraviesa/desciende libremente.
         if (a.type == GemType.pearl && b.type != GemType.pearl) continue;
         if (a.type != GemType.pearl && b.type == GemType.pearl) continue;
 
@@ -455,30 +464,49 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
           final nx = dx / dist;
           final ny = dy / dist;
           final overlap = minDist - dist;
-          final kx = a.vx - b.vx;
-          final ky = a.vy - b.vy;
 
+          // Separación posicional para evitar que se traspasen o se queden pegadas
           if (!a.isBeingInteracted && !b.isBeingInteracted) {
             a.x -= nx * overlap * 0.5;
             a.y -= ny * overlap * 0.5;
             b.x += nx * overlap * 0.5;
             b.y += ny * overlap * 0.5;
+          } else if (a.isBeingInteracted && !b.isBeingInteracted) {
+            b.x += nx * overlap;
+            b.y += ny * overlap;
+          } else if (!a.isBeingInteracted && b.isBeingInteracted) {
+            a.x -= nx * overlap;
+            a.y -= ny * overlap;
+          }
 
-            // Intercambio de momento elástico con masas según versión_1.md
+          // Velocidad relativa
+          final rvx = b.vx - a.vx;
+          final rvy = b.vy - a.vy;
+          final velAlongNormal = rvx * nx + rvy * ny;
+
+          // Si ya se están separando, no aplicar impulso de rebote
+          if (velAlongNormal < 0) {
             final massA = a.mass + (a.isBeingInteracted ? 1.5 : 0.0);
             final massB = b.mass + (b.isBeingInteracted ? 1.5 : 0.0);
             final totalMass = math.max(0.1, massA + massB);
 
-            final p = 2.0 * (nx * kx + ny * ky) / totalMass;
-            a.vx -= p * massB * nx * 0.7;
-            a.vy -= p * massB * ny * 0.7;
-            b.vx += p * massA * nx * 0.7;
-            b.vy += p * massA * nx * 0.7;
+            // Coeficiente de restitución (rebote elástico)
+            const double restitution = 0.65;
+            final impulseMag = -(1.0 + restitution) * velAlongNormal / totalMass;
+
+            if (!a.isBeingInteracted) {
+              a.vx -= (impulseMag * massB) * nx;
+              a.vy -= (impulseMag * massB) * ny;
+            }
+            if (!b.isBeingInteracted) {
+              b.vx += (impulseMag * massA) * nx;
+              b.vy += (impulseMag * massA) * ny;
+            }
           }
 
           // Squash & stretch elástico (Jelly 10% sutil y satisfactorio)
-          final impact = math.sqrt(kx * kx + ky * ky);
-          if (impact > 15.0) {
+          final impact = math.sqrt((a.vx - b.vx) * (a.vx - b.vx) + (a.vy - b.vy) * (a.vy - b.vy));
+          if (impact > 10.0) {
             final intensity = (impact * 0.0008).clamp(0.04, 0.10);
             a.squashX = intensity;
             a.squashY = intensity;
@@ -488,17 +516,9 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
             b.squashRecovery = 0.25;
           }
 
-          // Fusión si son del mismo tipo
+          // Fusión instantánea al chocar si son del mismo tipo (ej. Esmeralda + Esmeralda)
           if (a.type == b.type && a.type != GemType.stone && a.type != GemType.diamond) {
-            // Regla estricta de versión_1.md:
-            // Perlas y Cuarzos se fusionan automáticamente al tocarse.
-            // Para el resto (Esmeralda a Rubí) se requiere intervención humana (< 2s).
-            final isAuto = (a.type == GemType.pearl || a.type == GemType.quartz);
-            final isHuman = a.hasRecentInteraction(now) || b.hasRecentInteraction(now);
-
-            if (isAuto || isHuman) {
-              _pendingMerges.add([a, b]);
-            }
+            _pendingMerges.add([a, b]);
           }
         }
       }
