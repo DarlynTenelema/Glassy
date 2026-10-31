@@ -3,11 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:http/http.dart' as http;
-import 'package:supabase_flutter/supabase_flutter.dart';
 import '../providers/game_provider.dart';
 import 'package:provider/provider.dart';
-
+import 'auth_service.dart';
+import 'storage_service.dart';
 import '../config/env.dart';
+import '../main.dart';
 
 class PurchaseService {
   static final PurchaseService _instance = PurchaseService._internal();
@@ -23,8 +24,10 @@ class PurchaseService {
   
   BuildContext? _currentContext;
 
-  void initialize(BuildContext context) {
-    _currentContext = context;
+  void initialize([BuildContext? context]) {
+    if (context != null) {
+      _currentContext = context;
+    }
     if (_isInitialized) return;
     _isInitialized = true;
     
@@ -40,6 +43,10 @@ class PurchaseService {
     });
   }
 
+  void setContext(BuildContext context) {
+    _currentContext = context;
+  }
+
   void dispose() {
     _isInitialized = false;
     _subscription?.cancel();
@@ -52,13 +59,13 @@ class PurchaseService {
 
   Future<Map<String, dynamic>?> getStoreStatus() async {
     try {
-      final session = Supabase.instance.client.auth.currentSession;
-      if (session == null) return null;
+      final token = await AuthService().getFreshAccessToken();
+      if (token == null) return null;
 
       final response = await http.get(
         Uri.parse('$_backendUrl/player/store-status'),
         headers: {
-          'Authorization': 'Bearer ${session.accessToken}',
+          'Authorization': 'Bearer $token',
         },
       );
 
@@ -75,13 +82,13 @@ class PurchaseService {
 
   Future<Map<String, dynamic>?> claimPiggyBank() async {
     try {
-      final session = Supabase.instance.client.auth.currentSession;
-      if (session == null) return null;
+      final token = await AuthService().getFreshAccessToken();
+      if (token == null) return null;
 
       final response = await http.post(
         Uri.parse('$_backendUrl/player/piggy-bank/claim'),
         headers: {
-          'Authorization': 'Bearer ${session.accessToken}',
+          'Authorization': 'Bearer $token',
           'Content-Type': 'application/json',
         },
       );
@@ -101,8 +108,9 @@ class PurchaseService {
     final ProductDetailsResponse response = await _inAppPurchase.queryProductDetails({productId});
     if (response.notFoundIDs.isNotEmpty) {
       debugPrint('Product not found: $productId');
-      if (_currentContext != null) {
-         ScaffoldMessenger.of(_currentContext!).showSnackBar(
+      final ctx = (_currentContext?.mounted == true) ? _currentContext : rootNavigatorKey.currentContext;
+      if (ctx != null && ctx.mounted) {
+         ScaffoldMessenger.of(ctx).showSnackBar(
             const SnackBar(content: Text('Producto no disponible en la tienda')),
          );
       }
@@ -123,7 +131,7 @@ class PurchaseService {
   void _listenToPurchaseUpdated(List<PurchaseDetails> purchaseDetailsList) {
     for (var purchaseDetails in purchaseDetailsList) {
       if (purchaseDetails.status == PurchaseStatus.pending) {
-        // UI de carga si es necesario
+        debugPrint('Purchase pending: ${purchaseDetails.productID}');
       } else {
         if (purchaseDetails.status == PurchaseStatus.error) {
           debugPrint('Purchase error: ${purchaseDetails.error}');
@@ -132,7 +140,7 @@ class PurchaseService {
           }
         } else if (purchaseDetails.status == PurchaseStatus.purchased ||
                    purchaseDetails.status == PurchaseStatus.restored) {
-          // Solo se completa la compra dentro de _verifyPurchaseWithBackend tras recibir HTTP 200 OK
+          // Se completa la compra dentro de _verifyPurchaseWithBackend tras recibir confirmación del backend
           _verifyPurchaseWithBackend(purchaseDetails);
         }
       }
@@ -140,38 +148,49 @@ class PurchaseService {
   }
 
   Future<void> _verifyPurchaseWithBackend(PurchaseDetails purchaseDetails) async {
-    final session = Supabase.instance.client.auth.currentSession;
-    if (session == null || _currentContext == null) return;
+    final token = await AuthService().getFreshAccessToken();
+    if (token == null) {
+      debugPrint('No access token available to verify purchase with backend');
+      return;
+    }
     
     try {
       // En Play Store, el serverVerificationData es el purchaseToken real
-      final token = purchaseDetails.verificationData.serverVerificationData;
+      final purchaseToken = purchaseDetails.verificationData.serverVerificationData;
       final productId = purchaseDetails.productID;
 
       final response = await http.post(
         Uri.parse('$_backendUrl/player/verify-purchase'),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${session.accessToken}',
+          'Authorization': 'Bearer $token',
         },
         body: jsonEncode({
-          'purchase_token': token,
+          'purchase_token': purchaseToken,
           'product_id': productId,
         }),
       );
+
+      final ctx = (_currentContext?.mounted == true) 
+          ? _currentContext 
+          : rootNavigatorKey.currentContext;
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         final crystalsAdded = data['crystals_added'] as int? ?? 0;
         
-        if (_currentContext != null && _currentContext!.mounted) {
-          final gameProvider = Provider.of<GameProvider>(_currentContext!, listen: false);
+        // Guardar respaldo inmediato en almacenamiento local para prevenir pérdidas al salir
+        final currentCrystals = StorageService().getInt('crystals', defaultValue: 0);
+        await StorageService().setInt('crystals', currentCrystals + crystalsAdded);
+
+        if (ctx != null && ctx.mounted) {
+          final gameProvider = Provider.of<GameProvider>(ctx, listen: false);
           if (crystalsAdded > 0) {
             gameProvider.addCrystals(crystalsAdded);
           }
           gameProvider.fetchEconomyStatus();
           
-          ScaffoldMessenger.of(_currentContext!).showSnackBar(
+          ScaffoldMessenger.of(ctx).showSnackBar(
              SnackBar(
                content: Text('¡Compra verificada con éxito! +$crystalsAdded Lapislázulis'), 
                backgroundColor: Colors.green,
@@ -179,15 +198,24 @@ class PurchaseService {
           );
         }
 
-        // CONFIRMACIÓN CRÍTICA: Solo le decimos a Google que la compra fue completada
-        // DESPUÉS de que el servidor la registró y acreditó exitosamente.
+        // CONFIRMACIÓN CRÍTICA: Notificar a Google Play que la compra fue entregada
         if (purchaseDetails.pendingCompletePurchase) {
           await _inAppPurchase.completePurchase(purchaseDetails);
+        }
+      } else if (response.statusCode == 409) {
+        // La compra ya fue acreditada previamente en la BD.
+        // Confirmamos en Google Play para no dejar la transacción pendiente reintentándose.
+        debugPrint('Purchase already claimed in database (409). Completing in Google Play.');
+        if (purchaseDetails.pendingCompletePurchase) {
+          await _inAppPurchase.completePurchase(purchaseDetails);
+        }
+        if (ctx != null && ctx.mounted) {
+          Provider.of<GameProvider>(ctx, listen: false).fetchEconomyStatus();
         }
       } else {
         debugPrint('Verification failed: ${response.statusCode} - ${response.body}');
         // Si falló (error de red o servidor temporal), NO llamamos a completePurchase.
-        // Google Play mantendrá la compra pendiente y la reintentará automáticamente al reiniciar la app.
+        // Google Play mantendrá la compra pendiente y la reintentará automáticamente.
       }
     } catch (e) {
       debugPrint('Error verifying purchase: $e');

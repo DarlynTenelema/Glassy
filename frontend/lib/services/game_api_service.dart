@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
 import '../config/env.dart';
+import 'auth_service.dart';
 
 class GameApiService {
   static final GameApiService _instance = GameApiService._internal();
@@ -13,14 +13,14 @@ class GameApiService {
 
   Future<bool> submitScore(int score) async {
     try {
-      final session = Supabase.instance.client.auth.currentSession;
-      if (session == null) return false;
+      final token = await AuthService().getFreshAccessToken();
+      if (token == null) return false;
 
       final response = await http.post(
         Uri.parse('$_baseUrl/leaderboard'),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${session.accessToken}',
+          'Authorization': 'Bearer $token',
         },
         body: jsonEncode({
           'score': score,
@@ -50,14 +50,14 @@ class GameApiService {
 
   Future<bool> updateMissionProgress(int progressAdded) async {
     try {
-      final session = Supabase.instance.client.auth.currentSession;
-      if (session == null) return false;
+      final token = await AuthService().getFreshAccessToken();
+      if (token == null) return false;
 
       final response = await http.post(
         Uri.parse('$_baseUrl/player/mission/update'),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${session.accessToken}',
+          'Authorization': 'Bearer $token',
         },
         body: jsonEncode({
           'progress_added': progressAdded,
@@ -79,14 +79,14 @@ class GameApiService {
 
   Future<bool> claimAdReward() async {
     try {
-      final session = Supabase.instance.client.auth.currentSession;
-      if (session == null) return false;
+      final token = await AuthService().getFreshAccessToken();
+      if (token == null) return false;
 
       final response = await http.post(
         Uri.parse('$_baseUrl/player/ad-reward'),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${session.accessToken}',
+          'Authorization': 'Bearer $token',
         },
       );
 
@@ -105,14 +105,14 @@ class GameApiService {
 
   Future<bool> spendCrystals(int amount) async {
     try {
-      final session = Supabase.instance.client.auth.currentSession;
-      if (session == null) return false;
+      final token = await AuthService().getFreshAccessToken();
+      if (token == null) return false;
 
       final response = await http.post(
         Uri.parse('$_baseUrl/player/spend-crystals'),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${session.accessToken}',
+          'Authorization': 'Bearer $token',
         },
         body: jsonEncode({
           'amount': amount,

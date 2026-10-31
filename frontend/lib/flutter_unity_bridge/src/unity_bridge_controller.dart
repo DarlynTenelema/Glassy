@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_unity_widget/flutter_unity_widget.dart';
+// flutter_unity_widget removed
 import 'models/bridge_message.dart';
 import 'models/payloads.dart';
 
 class UnityBridgeController {
-  final UnityWidgetController _unityController;
+  dynamic _unityController;
 
   // Streams para que la UI de Flutter escuche eventos de Unity
   final _readyController = StreamController<void>.broadcast();
@@ -35,7 +35,7 @@ class UnityBridgeController {
   Stream<MissionCompletedPayload> get onMissionCompleted => _missionCompletedController.stream;
   Stream<ReviveOpportunityPayload> get onReviveOpportunity => _reviveOpportunityController.stream;
 
-  UnityBridgeController(this._unityController);
+  UnityBridgeController([this._unityController]);
 
   /// Método principal que debe llamarse cuando `onUnityMessage` se dispara en el UnityWidget.
   void receiveMessageFromUnity(dynamic message) {

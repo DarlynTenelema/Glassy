@@ -122,7 +122,7 @@ func EnsureUserExists(userID string) {
 	if DB == nil || userID == "" {
 		return
 	}
-	_, err := DB.Exec(`
+	res, err := DB.Exec(`
 		INSERT INTO users (id, email, name, avatar_url, crystals, invite_code)
 		SELECT id, 
 		       COALESCE(email, ''), 
@@ -138,6 +138,18 @@ func EnsureUserExists(userID string) {
 	`, userID)
 	if err != nil {
 		log.Printf("[EnsureUserExists] Error inserting user %s from auth.users: %v", userID, err)
+	}
+
+	// Respaldo de seguridad: si auth.users no devolvió ninguna fila o falló, garantizar que el usuario existe
+	if res != nil {
+		rows, _ := res.RowsAffected()
+		if rows == 0 {
+			_, _ = DB.Exec(`
+				INSERT INTO users (id, email, name, avatar_url, crystals, invite_code)
+				VALUES ($1, '', 'Jugador', '', 100, SUBSTRING(MD5(gen_random_uuid()::text || $1::text) FROM 1 FOR 8))
+				ON CONFLICT (id) DO NOTHING
+			`, userID)
+		}
 	}
 
 	// Asegurar que la skin base está asignada

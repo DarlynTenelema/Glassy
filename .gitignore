@@ -101,6 +101,13 @@ compile-data.json
 # ============================================================
 # UNITY ENGINE — Archivos temporales y de caché
 # ============================================================
+# Proyecto completo de Unity y archivos C#
+*.cs
+*.csproj
+*.sln
+*.slnx
+frontend/unity/
+frontend/android/unityLibrary/
 [Ll]ibrary/
 **/[Ll]ibrary/
 [Tt]emp/

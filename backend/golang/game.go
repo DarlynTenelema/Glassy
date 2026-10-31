@@ -505,7 +505,8 @@ func VerifyPurchase(c *gin.Context) {
 	}
 
 	trimmedCreds := strings.TrimSpace(credentialsJSON)
-	if strings.HasPrefix(trimmedCreds, "\"") && strings.HasSuffix(trimmedCreds, "\"") {
+	if (strings.HasPrefix(trimmedCreds, "\"") && strings.HasSuffix(trimmedCreds, "\"")) ||
+		(strings.HasPrefix(trimmedCreds, "'") && strings.HasSuffix(trimmedCreds, "'")) {
 		trimmedCreds = trimmedCreds[1 : len(trimmedCreds)-1]
 	}
 
@@ -571,7 +572,7 @@ func VerifyPurchase(c *gin.Context) {
 	if err != nil {
 		log.Printf("[VerifyPurchase] ERROR Insert purchases: %v", err)
 		if strings.Contains(err.Error(), "unique") || strings.Contains(err.Error(), "duplicate") || strings.Contains(err.Error(), "purchases_token_unique") {
-			c.JSON(http.StatusConflict, gin.H{"error": "This purchase has already been claimed"})
+			c.JSON(http.StatusConflict, gin.H{"error": "This purchase has already been claimed", "already_claimed": true})
 		} else {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to record purchase receipt", "details": err.Error()})
 		}

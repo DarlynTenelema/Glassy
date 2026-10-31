@@ -9,10 +9,13 @@ import 'screens/splash_screen.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'services/storage_service.dart';
 import 'services/audio_service.dart';
+import 'services/purchase_service.dart';
 import 'providers/settings_provider.dart';
 import 'providers/game_provider.dart';
 import 'providers/locale_provider.dart';
 import 'l10n/app_localizations.dart';
+
+final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,6 +34,13 @@ void main() async {
   // Inicializar servicios
   await StorageService().init();
   await AudioService().init();
+
+  // Inicializar compras in-app a nivel global para escuchar reintentos automáticos
+  try {
+    PurchaseService().initialize();
+  } catch (e) {
+    debugPrint("Error inicializando PurchaseService: $e");
+  }
 
   // Inicializar Google Mobile Ads
   try {
@@ -60,6 +70,7 @@ class GlassyApp extends StatelessWidget {
     return Consumer2<ThemeProvider, LocaleProvider>(
       builder: (context, themeProvider, localeProvider, child) {
         return MaterialApp(
+          navigatorKey: rootNavigatorKey,
           title: 'Glassy',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,

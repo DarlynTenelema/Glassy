@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/game_provider.dart';
-import 'package:flutter_unity_widget/flutter_unity_widget.dart';
+import '../widgets/glassy_game_view.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/ui/glass_card.dart';
@@ -28,7 +28,7 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreenState extends State<GameScreen> {
-  late UnityWidgetController _unityWidgetController;
+  dynamic _unityWidgetController;
   late UnityBridgeController _bridgeController;
   
   // Suscripciones para evitar memory leaks
@@ -110,7 +110,7 @@ class _GameScreenState extends State<GameScreen> {
     });
   }
 
-  void onUnityCreated(UnityWidgetController controller) {
+  void onUnityCreated(dynamic controller) {
     AudioService().stopBgMusic();
     _unityWidgetController = controller;
     _bridgeController = UnityBridgeController(_unityWidgetController);
@@ -448,11 +448,9 @@ class _GameScreenState extends State<GameScreen> {
       body: Stack(
         children: [
           // 1. Capa Base: Unity (El Juego)
-          UnityWidget(
-            onUnityCreated: onUnityCreated,
-            onUnityMessage: onUnityMessage,
-            useAndroidViewSurface: false,
-            borderRadius: const BorderRadius.all(Radius.circular(0)),
+          GlassyNativeView(
+            onCreated: onUnityCreated,
+            onMessage: onUnityMessage,
           ),
           
           // 2. Capa de HUD (Puntaje, Botones)

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -12,8 +13,10 @@ class GameProvider with ChangeNotifier {
   int _score = 0;
   int _highScore = 0;
   int _totalScore = 0;
-  int _crystals = 0; // Fetch from backend
+  int _crystals = 0; // Caché local + sincronizado con el backend
   bool _isGameOver = false;
+
+  StreamSubscription? _authSub;
 
   // Daily Reward State
   int _currentStreak = 1;
@@ -52,23 +55,44 @@ class GameProvider with ChangeNotifier {
     _loadData();
   }
 
+  @override
+  void dispose() {
+    _authSub?.cancel();
+    super.dispose();
+  }
+
   Future<void> _loadData() async {
+    // 1. Cargar de inmediato desde almacenamiento local persistente (Caché Offline)
+    // Esto garantiza que el contador NUNCA se resetee a 0 al salir del juego
     _highScore = _storage.getInt('highScore', defaultValue: 0);
     _totalScore = _storage.getInt('totalScore', defaultValue: 0);
-    
-    // La fuente de la verdad es 100% el backend y la base de datos
+    _crystals = _storage.getInt('crystals', defaultValue: 0);
+    _lapisFragments = _storage.getInt('lapis_fragments', defaultValue: 0);
+    _selectedSkinId = _storage.getString('selected_skin', defaultValue: 'gemas_clasicas');
+    final cachedSkins = _storage.getStringList('unlocked_skins', defaultValue: ['gemas_clasicas']);
+    if (cachedSkins.isNotEmpty) {
+      _unlockedSkins = cachedSkins;
+    }
+    notifyListeners();
+
+    // 2. Escuchar cambios de autenticación (resuelve la condición de carrera al arrancar la app)
+    _authSub?.cancel();
+    _authSub = AuthService().onAuthStateChange.listen((authState) {
+      if (authState.session != null) {
+        fetchEconomyStatus();
+        fetchSkins();
+      }
+    });
+
+    // 3. Sincronizar datos oficiales desde el backend
     await fetchEconomyStatus();
     await fetchSkins();
-    
-    notifyListeners();
   }
 
   Future<void> fetchSkins() async {
-    final token = AuthService().accessToken;
+    final token = await AuthService().getFreshAccessToken();
     
     if (token == null) {
-      _selectedSkinId = 'gemas_clasicas';
-      _unlockedSkins = ['gemas_clasicas'];
       notifyListeners();
       return;
     }
@@ -86,9 +110,13 @@ class GameProvider with ChangeNotifier {
           remoteUnlocked.add('gemas_clasicas');
         }
         
-        // Estado oficial desde el servidor (cero almacenamiento local manipulable)
         _unlockedSkins = remoteUnlocked;
         _selectedSkinId = data['selected_skin'] ?? 'gemas_clasicas';
+
+        // Guardar copia local de aspectos
+        _storage.setStringList('unlocked_skins', _unlockedSkins);
+        _storage.setString('selected_skin', _selectedSkinId);
+
         notifyListeners();
       }
     } catch (e) {
@@ -97,7 +125,7 @@ class GameProvider with ChangeNotifier {
   }
 
   Future<void> fetchEconomyStatus() async {
-    final token = AuthService().accessToken;
+    final token = await AuthService().getFreshAccessToken();
     if (token == null) return;
 
     try {
@@ -108,12 +136,17 @@ class GameProvider with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        _crystals = data['crystals'] ?? 0;
-        _totalScore = data['total_score'] ?? _storage.getInt('totalScore', defaultValue: 0);
+        _crystals = data['crystals'] ?? _crystals;
+        _totalScore = data['total_score'] ?? _totalScore;
         _currentStreak = data['daily_reward_streak'] ?? 1;
         _canClaimDailyReward = data['can_claim_daily'] ?? false;
-        _lapisFragments = data['lapis_fragments'] ?? 0;
+        _lapisFragments = data['lapis_fragments'] ?? _lapisFragments;
         
+        // Persistir en caché local
+        _storage.setInt('crystals', _crystals);
+        _storage.setInt('totalScore', _totalScore);
+        _storage.setInt('lapis_fragments', _lapisFragments);
+
         if (data['last_chest_6h'] != null) _lastChest6h = DateTime.parse(data['last_chest_6h']).toLocal();
         if (data['last_chest_12h'] != null) _lastChest12h = DateTime.parse(data['last_chest_12h']).toLocal();
         if (data['last_chest_24h'] != null) _lastChest24h = DateTime.parse(data['last_chest_24h']).toLocal();
@@ -131,7 +164,7 @@ class GameProvider with ChangeNotifier {
   Future<bool> claimDailyReward() async {
     if (!_canClaimDailyReward || _isClaimingDaily) return false;
     
-    final token = AuthService().accessToken;
+    final token = await AuthService().getFreshAccessToken();
     if (token == null) return false; // Solo online
     
     _isClaimingDaily = true;
@@ -145,7 +178,6 @@ class GameProvider with ChangeNotifier {
       );
       
       if (response.statusCode == 200) {
-        // Obtenemos los nuevos datos desde el servidor inmediatamente
         await fetchEconomyStatus();
         success = true;
       } else {
@@ -161,7 +193,7 @@ class GameProvider with ChangeNotifier {
   }
 
   Future<bool> claimChest(String chestType) async {
-    final token = AuthService().accessToken;
+    final token = await AuthService().getFreshAccessToken();
     if (token == null) return false;
 
     try {
@@ -175,7 +207,6 @@ class GameProvider with ChangeNotifier {
       );
 
       if (response.statusCode == 200) {
-        // Refetch state to get new times and fragments/crystals
         await fetchEconomyStatus();
         return true;
       }
@@ -187,7 +218,7 @@ class GameProvider with ChangeNotifier {
 
   void updateScore(int newScore) {
     _score = newScore;
-    _totalScore += newScore; // Update local total score optimistically
+    _totalScore += newScore;
     _storage.setInt('totalScore', _totalScore);
     
     if (_score > _highScore) {
@@ -199,11 +230,13 @@ class GameProvider with ChangeNotifier {
 
   void updateCrystals(int newCrystals) {
     _crystals = newCrystals;
+    _storage.setInt('crystals', _crystals);
     notifyListeners();
   }
 
   void addCrystals(int amount) {
     _crystals += amount;
+    _storage.setInt('crystals', _crystals);
     notifyListeners();
   }
 
@@ -213,7 +246,7 @@ class GameProvider with ChangeNotifier {
   }
 
   Future<bool> buySkin(String skinId, int cost) async {
-    final token = AuthService().accessToken;
+    final token = await AuthService().getFreshAccessToken();
     if (token == null) {
       debugPrint('No se puede comprar skins sin conexión o sin sesión.');
       return false;
@@ -238,14 +271,14 @@ class GameProvider with ChangeNotifier {
       );
 
       if (response.statusCode == 200) {
-        // Compra aprobada por el servidor
         if (!_unlockedSkins.contains(skinId)) {
           _unlockedSkins.add(skinId);
         }
         _crystals = (_crystals - cost).clamp(0, double.infinity).toInt();
+        _storage.setInt('crystals', _crystals);
+        _storage.setStringList('unlocked_skins', _unlockedSkins);
         notifyListeners();
         
-        // Sincronizar estado oficial completo de economía
         await fetchEconomyStatus();
         return true;
       } else {
@@ -264,9 +297,10 @@ class GameProvider with ChangeNotifier {
   Future<void> equipSkin(String skinId) async {
     if (_unlockedSkins.contains(skinId) || skinId == 'gemas_clasicas') {
       _selectedSkinId = skinId;
+      _storage.setString('selected_skin', _selectedSkinId);
       notifyListeners();
 
-      final token = AuthService().accessToken;
+      final token = await AuthService().getFreshAccessToken();
       if (token == null) return;
 
       try {
