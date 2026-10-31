@@ -366,12 +366,20 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
       return;
     }
 
+    // Impulso de nacimiento:
+    // Al fusionarse (especialmente dos perlas formando una esmeralda), la nueva gema
+    // nace con energía cinética y un ligero empuje ascendente para despegarse del suelo con dinamismo.
+    final angle = (math.Random().nextDouble() - 0.5) * math.pi * 0.8;
+    final speed = 45.0 + math.Random().nextDouble() * 35.0;
+    final initialVx = math.sin(angle) * speed;
+    final initialVy = -math.cos(angle).abs() * speed;
+
     _gems.add(GlassyGem(
       type: type,
       x: x,
       y: y,
-      vx: (math.Random().nextDouble() - 0.5) * 35.0,
-      vy: (math.Random().nextDouble() - 0.5) * 35.0,
+      vx: initialVx,
+      vy: initialVy,
       radius: gemRadii[idx],
       mass: gemMasses[idx],
       isKinematic: false,
@@ -537,46 +545,78 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
   }
 
   void _constrainToFlask(GlassyGem gem) {
+    // Restitución física realista contra el frasco (objeto estático masivo):
+    // Las paredes reflejan la velocidad con conservación de energía elástica y dispersión tangencial
+    final restitution = (gem.type == GemType.pearl) ? 0.65 : 0.75;
+
+    // 1. Colisión con la cámara esférica inferior (centro en 288, 625, radio 242)
+    const double cx = 288.0;
+    const double cy = 625.0;
+    const double r = 242.0;
+
+    if (gem.y >= 430.0) {
+      final dx = gem.x - cx;
+      final dy = gem.y - cy;
+      final dist = math.sqrt(dx * dx + dy * dy);
+      final maxDist = r - gem.radius;
+
+      if (dist > maxDist && dist > 0) {
+        final nx = dx / dist;
+        final ny = dy / dist;
+
+        // Posicionar gema en el límite interno
+        gem.x = cx + nx * maxDist;
+        gem.y = cy + ny * maxDist;
+
+        // Rebote físico vectorial contra pared curva
+        final dot = gem.vx * nx + gem.vy * ny;
+        if (dot > 0) {
+          gem.vx -= (1.0 + restitution) * dot * nx;
+          gem.vy -= (1.0 + restitution) * dot * ny;
+
+          // Añadir un pequeño impulso hacia arriba si impacta contra el fondo profundo
+          if (ny > 0.5 && gem.type == GemType.pearl) {
+            gem.vy -= 25.0;
+          }
+
+          // Squash & stretch al impactar la pared
+          final speed = math.sqrt(gem.vx * gem.vx + gem.vy * gem.vy);
+          if (speed > 20.0) {
+            final intensity = (speed * 0.0008).clamp(0.04, 0.10);
+            gem.squashX = intensity;
+            gem.squashY = intensity;
+            gem.squashRecovery = 0.22;
+          }
+        }
+        return;
+      }
+    }
+
+    // 2. Colisión con el cuello y hombros cilíndricos (Y < 430.0)
     final y = gem.y;
     double leftWall = 247.0;
     double rightWall = 329.0;
 
     if (y <= 360.0) {
-      // Cuello cilíndrico recto (ancho 82 px)
       leftWall = 247.0;
       rightWall = 329.0;
-    } else if (y <= 450.0) {
-      // Hombro acampanado (apertura suave del cuello al cuerpo)
-      final t = (y - 360.0) / 90.0;
+    } else {
+      final t = (y - 360.0) / 70.0;
       final smooth = t * t * (3.0 - 2.0 * t);
       leftWall = 247.0 - smooth * (247.0 - 76.0);
       rightWall = 329.0 + smooth * (500.0 - 329.0);
-    } else if (y <= 867.0) {
-      // Cámara esférica inferior (centro en 288, 625, radio 242)
-      const cy = 625.0;
-      const r = 242.0;
-      final dy = (y - cy).clamp(-r, r);
-      final halfW = math.sqrt(math.max(0.0, r * r - dy * dy));
-      leftWall = 288.0 - halfW;
-      rightWall = 288.0 + halfW;
-    } else {
-      leftWall = 288.0;
-      rightWall = 288.0;
     }
 
     if (gem.x - gem.radius < leftWall) {
       gem.x = leftWall + gem.radius;
-      gem.vx = -gem.vx * 0.3;
-    }
-    if (gem.x + gem.radius > rightWall) {
+      if (gem.vx < 0) {
+        gem.vx = -gem.vx * restitution;
+      }
+    } else if (gem.x + gem.radius > rightWall) {
       gem.x = rightWall - gem.radius;
-      gem.vx = -gem.vx * 0.3;
-    }
-
-    // Suelo inferior de la botella (las perlas tocan el fondo en Y ~ 865)
-    if (gem.y + gem.radius > 865.0) {
-      gem.y = 865.0 - gem.radius;
-      gem.vy = -gem.vy * 0.2;
+      if (gem.vx > 0) {
+        gem.vx = -gem.vx * restitution;
+      }
     }
   }
 
