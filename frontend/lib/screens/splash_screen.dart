@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'login_screen.dart';
+import 'home_screen.dart';
 import '../l10n/l10n_extension.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,16 +31,18 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     _animationController.forward();
 
-    // Navigate after 3.5 seconds
-    Future.delayed(const Duration(milliseconds: 3500), () {
+    // Navigate after 2 seconds checking session
+    Future.delayed(const Duration(milliseconds: 2000), () {
       if (mounted) {
+        final hasSession = Supabase.instance.client.auth.currentSession != null;
         Navigator.of(context).pushReplacement(
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const LoginScreen(),
+            pageBuilder: (context, animation, secondaryAnimation) => 
+                hasSession ? const HomeScreen() : const LoginScreen(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(opacity: animation, child: child);
             },
-            transitionDuration: const Duration(milliseconds: 800),
+            transitionDuration: const Duration(milliseconds: 600),
           ),
         );
       }
