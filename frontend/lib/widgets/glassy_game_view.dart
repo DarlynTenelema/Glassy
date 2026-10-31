@@ -390,30 +390,26 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
     const double damping = 0.985;
     final now = _totalTime;
 
-    // Actualizar movimiento
+    // Físicas de cada gema
     for (var gem in _gems) {
       if (gem.isKinematic) {
-        // Descenso ASMR en línea recta por el tubo hasta tocar el suelo o chocar con otra gema
+        // Descenso ASMR en línea recta por el centro del tubo (X = 288) hasta el fondo del frasco
+        gem.x = 288.0;
+        gem.vx = 0.0;
         gem.y += 110.0 * dt;
 
-        // Si llega al fondo de la botella (suelo Y >= 849), se detiene y pasa a dinámica
+        // Al llegar al fondo de la botella (suelo Y >= 849), se detiene y espera a la siguiente perla
         if (gem.y >= 849.0) {
           gem.y = 849.0;
-          gem.isKinematic = false;
           gem.vy = 0.0;
         }
       } else {
         if (!gem.isBeingInteracted) {
-          if (gem.type == GemType.pearl) {
-            // Perlas libres: gravedad suave para asentarse abajo si salieron del cuello
-            gem.vy += 80.0 * dt;
-          } else {
-            // Flotabilidad Zero-G con Perlin Noise suave para gemas superiores (Esmeralda a Rubí)
-            final nx = math.sin(now * 0.8 + gem.noiseOffsetX) * 14.0;
-            final ny = math.cos(now * 0.8 + gem.noiseOffsetY) * 14.0;
-            gem.vx += nx * dt;
-            gem.vy += ny * dt;
-          }
+          // Flotabilidad Zero-G con Perlin Noise suave para gemas superiores (Esmeralda a Rubí)
+          final nx = math.sin(now * 0.8 + gem.noiseOffsetX) * 16.0;
+          final ny = math.cos(now * 0.8 + gem.noiseOffsetY) * 16.0;
+          gem.vx += nx * dt;
+          gem.vy += ny * dt;
 
           gem.vx *= damping;
           gem.vy *= damping;
@@ -425,6 +421,9 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
           gem.angularVelocity *= 0.95;
           gem.angle += gem.angularVelocity * dt;
         }
+
+        // Solo las gemas dinámicas se contienen contra las paredes curvas del frasco
+        _constrainToFlask(gem);
       }
 
       // Animación Jelly (Squash & stretch elástico calibrado al 10%)
@@ -437,9 +436,6 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
           gem.squashY = 0;
         }
       }
-
-      // Contener dentro del contorno del frasco
-      _constrainToFlask(gem);
     }
 
     // Colisiones físicas entre objetos
@@ -449,31 +445,34 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
         final b = _gems[j];
 
         // Regla estricta del Iniciador (versión_1.md):
-        // La perla (peso 0) solo interactúa con otras perlas.
-        // No choca con gemas superiores (Esmeralda en adelante), atraviesa/desciende libremente.
+        // 1. La perla solo interactúa con otra perla.
+        // 2. Las gemas superiores solo interactúan entre ellas.
         if (a.type == GemType.pearl && b.type != GemType.pearl) continue;
         if (a.type != GemType.pearl && b.type == GemType.pearl) continue;
 
-        // Si ambas son perlas cinemáticas cayendo en fila por el cuello, mantener la distancia
-        if (a.type == GemType.pearl && b.type == GemType.pearl && a.isKinematic && b.isKinematic) {
+        // Si ambas son perlas cayendo en el cuello y aún no llegan al fondo, no colisionan entre sí en el aire
+        if (a.type == GemType.pearl && b.type == GemType.pearl) {
+          // Si una perla que cae toca a la perla que está quieta en el fondo (o en el camino)
+          final dy = (b.y - a.y).abs();
+          if (dy < (a.radius + b.radius)) {
+            // Fusión instantánea de perlas para crear la Esmeralda
+            _pendingMerges.add([a, b]);
+          }
           continue;
         }
 
+        // Colisión física entre gemas superiores (Esmeralda, Amatista, etc.)
         final dx = b.x - a.x;
         final dy = b.y - a.y;
         final dist = math.sqrt(dx * dx + dy * dy);
         final minDist = a.radius + b.radius;
 
         if (dist > 0 && dist < minDist) {
-          // Despertar perlas cinemáticas si impactan con otra perla asentada
-          if (a.isKinematic) a.isKinematic = false;
-          if (b.isKinematic) b.isKinematic = false;
-
           final nx = dx / dist;
           final ny = dy / dist;
           final overlap = minDist - dist;
 
-          // Separación posicional para evitar que se traspasen o se queden pegadas
+          // Separación posicional para evitar que se traspasen
           if (!a.isBeingInteracted && !b.isBeingInteracted) {
             a.x -= nx * overlap * 0.5;
             a.y -= ny * overlap * 0.5;
@@ -512,7 +511,7 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
             }
           }
 
-          // Squash & stretch elástico (Jelly 10% sutil y satisfactorio)
+          // Squash & stretch elástico (Jelly 10% sutil)
           final impact = math.sqrt((a.vx - b.vx) * (a.vx - b.vx) + (a.vy - b.vy) * (a.vy - b.vy));
           if (impact > 10.0) {
             final intensity = (impact * 0.0008).clamp(0.04, 0.10);
@@ -524,18 +523,12 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
             b.squashRecovery = 0.25;
           }
 
-          // Regla de dificultad estricta (Dificultad.md y versión_1.md):
-          // 1. Las perlas son iniciadores automáticos: chocan y se fusionan solas.
-          // 2. Las gemas superiores (Esmeralda hasta Diamante) NO se fusionan por sí solas.
-          //    Solo se fusionan si:
-          //    - Modo 1: El usuario está sosteniendo/guiando una de las dos gemas actualmente.
-          //    - Modo 2: El usuario lanzó una de las gemas y han pasado menos de 2.0 segundos desde que la soltó.
-          //    Pasados los 2.0 segundos, rebotan elásticamente pero NUNCA se fusionan solas.
+          // Regla de dificultad estricta (Dificultad.md):
+          // Las gemas superiores NO se fusionan por sí solas.
+          // Solo si hay intervención humana activa o dentro de los 2.0s de lanzamiento
           if (a.type == b.type && a.type != GemType.stone && a.type != GemType.diamond) {
-            final isPearl = (a.type == GemType.pearl);
             final hasHumanIntervention = a.hasRecentInteraction(now) || b.hasRecentInteraction(now);
-
-            if (isPearl || hasHumanIntervention) {
+            if (hasHumanIntervention) {
               _pendingMerges.add([a, b]);
             }
           }
