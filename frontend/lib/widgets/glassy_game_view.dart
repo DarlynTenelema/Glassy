@@ -516,9 +516,20 @@ class _GlassyNativeViewState extends State<GlassyNativeView>
             b.squashRecovery = 0.25;
           }
 
-          // Fusión instantánea al chocar si son del mismo tipo (ej. Esmeralda + Esmeralda)
+          // Regla de dificultad estricta (Dificultad.md y versión_1.md):
+          // 1. Las perlas son iniciadores automáticos: chocan y se fusionan solas.
+          // 2. Las gemas superiores (Esmeralda hasta Diamante) NO se fusionan por sí solas.
+          //    Solo se fusionan si:
+          //    - Modo 1: El usuario está sosteniendo/guiando una de las dos gemas actualmente.
+          //    - Modo 2: El usuario lanzó una de las gemas y han pasado menos de 2.0 segundos desde que la soltó.
+          //    Pasados los 2.0 segundos, rebotan elásticamente pero NUNCA se fusionan solas.
           if (a.type == b.type && a.type != GemType.stone && a.type != GemType.diamond) {
-            _pendingMerges.add([a, b]);
+            final isPearl = (a.type == GemType.pearl);
+            final hasHumanIntervention = a.hasRecentInteraction(now) || b.hasRecentInteraction(now);
+
+            if (isPearl || hasHumanIntervention) {
+              _pendingMerges.add([a, b]);
+            }
           }
         }
       }
