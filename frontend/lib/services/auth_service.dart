@@ -48,9 +48,10 @@ class AuthService {
   Future<AuthResponse?> signInWithGoogle() async {
     // En Web, Supabase signInWithOAuth maneja la autenticación sin conflicto de puertos de localhost
     if (kIsWeb) {
+      final currentOrigin = Uri.base.origin;
       await _supabase.auth.signInWithOAuth(
         OAuthProvider.google,
-        redirectTo: kIsWeb ? null : 'glassy://callback',
+        redirectTo: currentOrigin,
       );
       return null;
     }

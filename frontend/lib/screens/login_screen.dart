@@ -25,19 +25,38 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool _isShattered = false;
   final TextEditingController _referralController = TextEditingController();
+  StreamSubscription<AuthState>? _authSub;
 
   @override
   void initState() {
     super.initState();
     AudioService().stopBgMusic();
-    // Revisa si ya hay una sesión activa para saltar el login
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (Supabase.instance.client.auth.currentSession != null) {
+
+    // Escuchar el evento de autenticación (especialmente al volver de OAuth en Web)
+    _authSub = Supabase.instance.client.auth.onAuthStateChange.listen((data) {
+      final session = data.session;
+      if (session != null && mounted) {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (_) => const HomeScreen()),
         );
       }
     });
+
+    // Revisa si ya hay una sesión activa para saltar el login
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (Supabase.instance.client.auth.currentSession != null && mounted) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const HomeScreen()),
+        );
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _authSub?.cancel();
+    _referralController.dispose();
+    super.dispose();
   }
 
   Future<void> _signInWithGoogle() async {
@@ -50,8 +69,11 @@ class _LoginScreenState extends State<LoginScreen> {
     
     try {
       if (kIsWeb) {
+        // En Web, redirigir explícitamente a la URL local/actual de la ventana
+        final currentOrigin = Uri.base.origin;
         await Supabase.instance.client.auth.signInWithOAuth(
           OAuthProvider.google,
+          redirectTo: currentOrigin,
         );
         return;
       }
