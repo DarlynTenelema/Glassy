@@ -73,6 +73,9 @@ func main() {
 		c.JSON(200, gin.H{"status": "ok", "service": "glassy-backend"})
 	})
 
+	// WebSocket Multijugador en Tiempo Real (Matchmaking, Salas Privadas y Combate por Combos)
+	r.GET("/ws/multiplayer", HandleMultiplayerWS)
+
 	// Leaderboard global — público para que cualquiera pueda verlo
 	r.GET("/api/leaderboard/global", GetLeaderboards)
 

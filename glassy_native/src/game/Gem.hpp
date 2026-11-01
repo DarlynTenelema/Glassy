@@ -18,8 +18,14 @@ public:
     bool hasRecentInteraction(float currentTime) const;
 
     GemType getType() const { return m_type; }
-    int getScoreValue() const { return GameConfig::GemScoreValues[(size_t)m_type]; }
-    float getRadius() const { return GameConfig::GemRadii[(size_t)m_type]; }
+    int getScoreValue() const { 
+        size_t idx = (size_t)m_type;
+        return (idx < GameConfig::GemScoreValues.size()) ? GameConfig::GemScoreValues[idx] : 0; 
+    }
+    float getRadius() const { 
+        size_t idx = (size_t)m_type;
+        return (idx < GameConfig::GemRadii.size()) ? GameConfig::GemRadii[idx] : 0.20f; 
+    }
     b2Body* getBody() const { return m_body; }
 
     Engine::Vec2 getPosition() const;

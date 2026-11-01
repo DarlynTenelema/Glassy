@@ -96,6 +96,30 @@ void Application::processEvents() {
             else if (event.key.keysym.sym == SDLK_SPACE) {
                 if (m_gameWorld) m_gameWorld->restart();
             }
+            else if (event.key.keysym.sym == SDLK_p) {
+                if (m_gameWorld) m_gameWorld->togglePause();
+            }
+            // Teclas de prueba rápida para simular tablets y teléfonos al vuelo
+            else if (event.key.keysym.sym == SDLK_F1) {
+                // F1: Teléfono clásico vertical (9:16)
+                SDL_SetWindowSize(m_window, 450, 800);
+            }
+            else if (event.key.keysym.sym == SDLK_F2) {
+                // F2: Tablet semi-cuadrada vertical (iPad 3:4)
+                SDL_SetWindowSize(m_window, 768, 1024);
+            }
+            else if (event.key.keysym.sym == SDLK_F3) {
+                // F3: Tablet semi-cuadrada vertical (OnePlus Pad / Oppo 5:7)
+                SDL_SetWindowSize(m_window, 700, 980);
+            }
+            else if (event.key.keysym.sym == SDLK_F4) {
+                // F4: Tablet semi-cuadrada horizontal (iPad 4:3)
+                SDL_SetWindowSize(m_window, 1024, 768);
+            }
+            else if (event.key.keysym.sym == SDLK_F5) {
+                // F5: Tablet panorámica horizontal (Samsung Tab 16:10 / Monitor PC)
+                SDL_SetWindowSize(m_window, 1280, 800);
+            }
         }
 
         // Reenviar al gestor unificado de entrada táctil y ratón

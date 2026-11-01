@@ -17,6 +17,8 @@ class GlassPlayButton extends StatefulWidget {
   final double height;
   final double? width;
   final Widget? icon;
+  final Color? glowColor;
+  final double? fontSize;
 
   const GlassPlayButton({
     super.key,
@@ -25,6 +27,8 @@ class GlassPlayButton extends StatefulWidget {
     this.height = 76.0,
     this.width,
     this.icon,
+    this.glowColor,
+    this.fontSize,
   });
 
   @override
@@ -140,6 +144,10 @@ class _GlassPlayButtonState extends State<GlassPlayButton> with TickerProviderSt
             builder: (context, child) {
               final depthVal = _depthAnimation.value;
               final currentYOffset = depthVal * (_extrusionDepth - 1.0); // Se hunde 6px hacia abajo
+              final glow = widget.glowColor ?? const Color(0xFF00E5FF);
+              final double computedFontSize = widget.fontSize ??
+                  (widget.text.length > 8 ? 20.0 : (widget.text.length > 5 ? 24.0 : 30.0));
+              final double computedLetterSpacing = widget.text.length > 8 ? 2.0 : 4.0;
 
               return SizedBox(
                 width: widget.width ?? double.infinity,
@@ -160,13 +168,13 @@ class _GlassPlayButtonState extends State<GlassPlayButton> with TickerProviderSt
                           borderRadius: BorderRadius.circular(radius),
                           color: const Color(0xFF030D24), // Base oscura del zócalo de cristal
                           border: Border.all(
-                            color: const Color(0xFF00E5FF).withValues(alpha: 0.35),
+                            color: glow.withValues(alpha: 0.35),
                             width: 1.5,
                           ),
                           boxShadow: [
                             // Resplandor neón exterior base
                             BoxShadow(
-                              color: const Color(0xFF00E5FF).withValues(alpha: 0.30 + (0.35 * depthVal)),
+                              color: glow.withValues(alpha: 0.30 + (0.35 * depthVal)),
                               blurRadius: 28 - (12 * depthVal),
                               spreadRadius: 2 * (1 - depthVal),
                               offset: Offset(0, 10 - (7 * depthVal)), // Sombra se comprime contra el suelo
@@ -200,9 +208,9 @@ class _GlassPlayButtonState extends State<GlassPlayButton> with TickerProviderSt
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(radius),
                             boxShadow: [
-                              // Resplandor cian directo de la placa
+                              // Resplandor directo de la placa
                               BoxShadow(
-                                color: const Color(0xFF00E5FF).withValues(alpha: 0.35 + (0.35 * depthVal)),
+                                color: glow.withValues(alpha: 0.35 + (0.35 * depthVal)),
                                 blurRadius: 24,
                                 spreadRadius: 1,
                               ),
@@ -253,12 +261,12 @@ class _GlassPlayButtonState extends State<GlassPlayButton> with TickerProviderSt
                                           widget.text,
                                           style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 32,
+                                            fontSize: computedFontSize,
                                             fontWeight: FontWeight.w900,
-                                            letterSpacing: 5.0,
+                                            letterSpacing: computedLetterSpacing,
                                             shadows: [
                                               Shadow(
-                                                color: const Color(0xFF00E5FF).withValues(alpha: 0.8),
+                                                color: glow.withValues(alpha: 0.8),
                                                 blurRadius: 18,
                                               ),
                                               Shadow(

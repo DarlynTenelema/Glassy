@@ -19,8 +19,8 @@ Gem::Gem(b2World* world, GemType type, Engine::Vec2 position, bool isKinematic)
     b2BodyDef bd;
     bd.position.Set(position.x, position.y);
     bd.type = (m_type == GemType::Pearl && isKinematic) ? b2_kinematicBody : b2_dynamicBody;
-    bd.linearDamping = 0.5f; // Resistencia de fluido suave (agua/espacio)
-    bd.angularDamping = 0.8f;
+    bd.linearDamping = 0.05f; // Resistencia de fluido muy suave para flotabilidad continua
+    bd.angularDamping = 0.1f;
     bd.fixedRotation = false;
 
     m_body = m_world->CreateBody(&bd);
@@ -31,8 +31,8 @@ Gem::Gem(b2World* world, GemType type, Engine::Vec2 position, bool isKinematic)
     b2FixtureDef fd;
     fd.shape = &circle;
     fd.density = m_baseMass / (3.14159f * radius * radius);
-    fd.friction = 0.2f;
-    fd.restitution = 0.25f; // Rebote suave
+    fd.friction = 0.05f;
+    fd.restitution = 0.98f; // Rebote elástico: se devuelve en sentido contrario con la misma fuerza del choque
 
     if (m_type == GemType::Pearl) {
         fd.filter.categoryBits = Engine::CATEGORY_PEARL;
@@ -69,17 +69,19 @@ void Gem::update(float dt, float totalTime) {
     // Cascada cinemática ordenada para perlas en el tubo
     if (m_isKinematic && m_type == GemType::Pearl) {
         b2Vec2 pos = m_body->GetPosition();
-        pos.y += 2.0f * dt; // Caída constante hacia el cuello del frasco
+        pos.x = 2.88f; // Centrada exactamente en el centro del cuello
+        pos.y += 2.0f * dt; // Caída constante hacia el fondo
         m_body->SetTransform(pos, 0.0f);
     }
     else if (!m_isBeingInteracted) {
-        // Flotabilidad Zero-G con Perlin Noise (reproduce FloatingPhysics.cs de Unity)
-        float flowSpeed = 0.5f;
+        // Flotabilidad libre Zero-G (FloatingPhysics de Unity)
+        // Permite que las gemas floten libremente por todo el interior del frasco
+        float flowSpeed = 0.6f;
         float nx = Engine::PerlinNoise::noise2D(totalTime * flowSpeed + m_noiseOffsetX, 0.0f) * 2.0f - 1.0f;
         float ny = Engine::PerlinNoise::noise2D(0.0f, totalTime * flowSpeed + m_noiseOffsetY) * 2.0f - 1.0f;
         float torque = Engine::PerlinNoise::noise2D(totalTime * flowSpeed + m_noiseOffsetTorque, 0.0f) * 2.0f - 1.0f;
 
-        m_body->ApplyForceToCenter(b2Vec2(nx * 0.15f * m_baseMass, ny * 0.15f * m_baseMass), true);
+        m_body->ApplyForceToCenter(b2Vec2(nx * 0.35f * m_baseMass, ny * 0.35f * m_baseMass), true);
         m_body->ApplyTorque(torque * 0.05f * m_baseMass, true);
     }
 

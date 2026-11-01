@@ -44,29 +44,43 @@ void GameWorld::setupFlaskBounds() {
     bd.position.Set(0.0f, 0.0f);
     b2Body* staticBody = m_physics.getRaw()->CreateBody(&bd);
 
-    // Vértices del contorno interior del Frasco / Matraz
-    // Cuello delgado arriba, hombro inclinado y cámara ancha abajo
-    std::vector<b2Vec2> leftWallPoints = {
-        b2Vec2(2.28f, 0.5f),  // Boca cuello izq
-        b2Vec2(2.28f, 2.6f),  // Base cuello izq
-        b2Vec2(0.60f, 3.8f),  // Hombro izq
-        b2Vec2(0.60f, 9.4f),  // Pared izq inferior
-        b2Vec2(1.20f, 9.8f),  // Esquina inferior izq biselada
-        b2Vec2(4.56f, 9.8f),  // Esquina inferior der biselada
-        b2Vec2(5.16f, 9.4f),  // Pared der inferior
-        b2Vec2(5.16f, 3.8f),  // Hombro der
-        b2Vec2(3.48f, 2.6f),  // Base cuello der
-        b2Vec2(3.48f, 0.5f)   // Boca cuello der
-    };
+    // Contorno interior suave de alta fidelidad que replica el cuenco esférico del matraz de Unity
+    std::vector<b2Vec2> wallPoints;
+
+    const float cx = 2.88f;
+    const float cy = 6.85f;
+    const float r = 2.38f;
+    const float neckHalfW = 0.395f;
+    const float neckTopY = 0.50f;
+
+    // 1. Boca superior derecha del cuello
+    wallPoints.push_back(b2Vec2(cx + neckHalfW, neckTopY));
+
+    // 2. Arco circular continuo y suave para el cuenco esférico inferior (36 segmentos)
+    // Conecta el hombro derecho (Y ~ 4.50), pasa por el fondo (Y = 9.23) y sube al hombro izquierdo
+    const float cosAlpha = neckHalfW / r;
+    const float alphaStart = -std::acos(cosAlpha);
+    const float alphaEnd = 3.14159265f + std::acos(cosAlpha);
+    const int arcSegments = 36;
+
+    for (int i = 0; i <= arcSegments; ++i) {
+        float a = alphaStart + (alphaEnd - alphaStart) * ((float)i / (float)arcSegments);
+        float x = cx + r * std::cos(a);
+        float y = cy + r * std::sin(a);
+        wallPoints.push_back(b2Vec2(x, y));
+    }
+
+    // 3. Boca superior izquierda del cuello
+    wallPoints.push_back(b2Vec2(cx - neckHalfW, neckTopY));
 
     b2ChainShape chain;
-    chain.CreateChain(leftWallPoints.data(), (int32)leftWallPoints.size(),
-                      leftWallPoints.front(), leftWallPoints.back());
+    chain.CreateChain(wallPoints.data(), (int32)wallPoints.size(),
+                      wallPoints.front(), wallPoints.back());
 
     b2FixtureDef fd;
     fd.shape = &chain;
-    fd.friction = 0.2f;
-    fd.restitution = 0.2f;
+    fd.friction = 0.02f;    // Superficie de cristal pulido sin fricción
+    fd.restitution = 0.98f; // Rebote elástico: devuelve las gemas en sentido contrario con la misma fuerza
     fd.filter.categoryBits = Engine::CATEGORY_WALL;
     fd.filter.maskBits     = 0xFFFF; // Colisiona con todo
 
@@ -76,11 +90,11 @@ void GameWorld::setupFlaskBounds() {
 void GameWorld::setupDangerZone() {
     b2BodyDef bd;
     bd.type = b2_staticBody;
-    bd.position.Set(2.88f, 2.5f); // Justo en la transición del cuello
+    bd.position.Set(2.88f, 3.2f); // Justo en la entrada del cuello
     b2Body* sensorBody = m_physics.getRaw()->CreateBody(&bd);
 
     b2PolygonShape box;
-    box.SetAsBox(0.65f, 0.15f); // Ancho cubre todo el cuello
+    box.SetAsBox(0.40f, 0.15f); // Ancho cubre exactamente el cuello
 
     b2FixtureDef fd;
     fd.shape = &box;
@@ -154,11 +168,13 @@ void GameWorld::restart() {
     m_pendingMerges.clear();
     m_score = 0;
     m_isGameOver = false;
+    m_isPaused = false;
     m_isInDanger = false;
     m_dangerTimer = 0.0f;
     m_gemsInDangerZone = 0;
     m_spawnTimer = GameConfig::INITIAL_DELAY;
     m_combo.resetCombo();
+    m_mission.reset();
 
     Engine::AudioManager::get().playSound("assets/audio/start_game.mp3");
 }
@@ -183,6 +199,9 @@ void GameWorld::spawnEvolvedGem(GemType type, Engine::Vec2 position) {
     }
 
     auto gem = std::make_unique<Gem>(m_physics.getRaw(), type, position, false);
+    // Emerge elevándose flotando hacia el interior del frasco
+    float randVx = ((rand() % 100) / 50.0f - 1.0f) * 0.8f;
+    gem->getBody()->SetLinearVelocity(b2Vec2(randVx, -1.4f));
     m_gems.push_back(std::move(gem));
 }
 
@@ -289,6 +308,9 @@ void GameWorld::processDeferredMerges() {
         int earnedPoints = m_combo.registerMerge(curType, nextType, isHuman);
         m_score += earnedPoints;
 
+        // Registrar en el sistema de micro-misiones dinámicas (valida elementos, combos y síntesis)
+        m_mission.registerMerge(curType, nextType, m_combo.getMultiplier(), m_score);
+
         // Reproducir sonido con escala de pitch según el combo
         Engine::AudioManager::get().playSound("assets/audio/fusion.mp3", m_combo.getPitch(), 0.9f);
 
@@ -330,7 +352,7 @@ void GameWorld::checkDangerZone(float dt) {
 void GameWorld::update(float dt) {
     handleInput(dt);
 
-    if (!m_isGameOver) {
+    if (!m_isGameOver && !m_isPaused) {
         // 1. Spawner de perlas
         m_spawnTimer -= dt;
         if (m_spawnTimer <= 0.0f) {
@@ -354,39 +376,69 @@ void GameWorld::update(float dt) {
         m_combo.update(dt);
         checkDangerZone(dt);
     }
+
+    // Actualizar ciclo de misiones (en pausa se congela el tiempo limpiamente)
+    if (!m_isGameOver) {
+        m_mission.update(dt, m_isPaused);
+    }
 }
 
 void GameWorld::render() {
     auto& r = Engine::Renderer2D::get();
+    const auto& layout = r.getLayout();
 
-    // 0. Dibujar Fondo Paisaje Nocturno (Montañas y Lago)
+    // 0. Dibujar Fondo Paisaje Nocturno Inmersivo (Aspect-Fill 100% en cualquier tablet o pantalla)
     if (m_backgroundTexture.isValid()) {
-        Engine::Vec2 bgCenter(288.0f, 512.0f);
-        Engine::Vec2 bgSize(576.0f, 1024.0f);
-        r.drawTexture(m_backgroundTexture, bgCenter, bgSize);
+        r.drawFullscreenBackground(m_backgroundTexture);
     }
 
-    // 1. Dibujar contorno del Frasco
-    Engine::Vec2 flaskCenter(288.0f, 512.0f);
-    Engine::Vec2 flaskSize(576.0f, 1024.0f);
+    // 1. Dibujar Paneles Laterales en Tablets y Escritorio (Alas Izquierda y Derecha)
+    if (layout.hasSideWings()) {
+        // Ala Izquierda: Centro de Misiones y Estadísticas
+        r.drawGlassPanel(layout.leftWing, Engine::Color(14, 11, 28, 220), Engine::Color(80, 140, 255, 120));
+
+        // Ala Derecha: Códice de Evolución y Estado
+        r.drawGlassPanel(layout.rightWing, Engine::Color(14, 11, 28, 220), Engine::Color(80, 140, 255, 120));
+
+        // Vista previa visual de gemas en el ala derecha (Códice rápido de tablet)
+        float wingCenterX = layout.rightWing.x + layout.rightWing.w * 0.5f;
+        float startY = layout.rightWing.y + 36.0f;
+        float stepY = std::min(48.0f, (layout.rightWing.h - 60.0f) / 8.0f);
+        float iconSize = std::clamp(stepY * 0.75f, 20.0f, 40.0f);
+
+        for (int i = 0; i < 8; ++i) {
+            float y = startY + i * stepY;
+            if (m_gemTextures[i].isValid()) {
+                r.drawScreenTexture(m_gemTextures[i], Engine::Vec2(wingCenterX, y), Engine::Vec2(iconSize, iconSize));
+            }
+        }
+    } else if (layout.bottomDock.h > 0.0f) {
+        // Modo Teléfono: Dock inferior de misiones
+        r.drawGlassPanel(layout.bottomDock, Engine::Color(14, 11, 28, 225), Engine::Color(80, 140, 255, 120));
+    }
+
+    // 2. Dibujar contorno del Frasco alineado con el espacio de colisión
+    Engine::Vec2 flaskCenter(288.0f, 446.8f);
+    Engine::Vec2 flaskSize(576.0f, 1033.0f);
     if (m_flaskTexture.isValid()) {
         r.drawTexture(m_flaskTexture, flaskCenter, flaskSize, 0.0f, Engine::Color(255, 255, 255, 230));
     }
 
-    // 2. Línea indicadora de Zona de Peligro
+    // 3. Línea indicadora de Zona de Peligro
     Engine::Color dangerColor = m_isInDanger ? Engine::Color(255, 40, 40, 220) : Engine::Color(255, 255, 255, 60);
     r.drawLine(Engine::Vec2(228.0f, 250.0f), Engine::Vec2(348.0f, 250.0f), dangerColor);
 
-    // 3. Dibujar todas las Gemas
+    // 4. Dibujar todas las Gemas
     for (const auto& g : m_gems) {
         if (!g || g->isMerged()) continue;
 
         Engine::Vec2 wPos = g->getPosition();
         Engine::Vec2 vPos = wPos * GameConfig::PIXELS_PER_METER;
-        float radiusPix = g->getRadius() * GameConfig::PIXELS_PER_METER;
+        size_t typeIdx = (size_t)g->getType();
+        float vScale = (typeIdx < 10) ? GameConfig::GemVisualScales[typeIdx] : 1.35f;
+        float radiusPix = g->getRadius() * GameConfig::PIXELS_PER_METER * vScale;
         Engine::Vec2 size(radiusPix * 2.0f, radiusPix * 2.0f);
 
-        size_t typeIdx = (size_t)g->getType();
         if (typeIdx < 10 && m_gemTextures[typeIdx].isValid()) {
             r.drawJellyTexture(
                 m_gemTextures[typeIdx],
@@ -403,11 +455,41 @@ void GameWorld::render() {
         }
     }
 
-    // 4. Marcadores UI sencillos y ultra rápidos
+    // 5. Marcadores UI sencillos y ultra rápidos
     // Si hay combo activo
     if (m_combo.getMultiplier() > 1) {
         // Indicador de racha
         r.drawRect(Engine::Rect{210.0f, 100.0f, 156.0f, 36.0f}, Engine::Color(255, 215, 0, 180), true);
+    }
+
+    // Dibujar tarjeta visual de misión activa
+    if (m_mission.isMissionActive()) {
+        const auto& mis = m_mission.getMission();
+        float barProgress = (mis.targetAmount > 0) ? (float)mis.currentAmount / (float)mis.targetAmount : 0.0f;
+        barProgress = std::clamp(barProgress, 0.0f, 1.0f);
+
+        // Tarjeta en dock inferior
+        float dockY = 890.0f;
+        r.drawRect(Engine::Rect{108.0f, dockY, 360.0f, 64.0f}, Engine::Color(14, 11, 28, 225), true);
+        r.drawRect(Engine::Rect{108.0f, dockY, 360.0f, 64.0f}, Engine::Color(255, 170, 40, 200), false);
+
+        // Icono de la gema objetivo
+        size_t gIdx = (size_t)mis.targetGem;
+        if (gIdx < 10 && m_gemTextures[gIdx].isValid()) {
+            r.drawTexture(m_gemTextures[gIdx], Engine::Vec2(146.0f, dockY + 32.0f), Engine::Vec2(36.0f, 36.0f));
+        }
+
+        // Barra de progreso de la misión
+        float barX = 180.0f;
+        float barW = 260.0f;
+        r.drawRect(Engine::Rect{barX, dockY + 36.0f, barW, 12.0f}, Engine::Color(50, 40, 70, 200), true);
+        r.drawRect(Engine::Rect{barX, dockY + 36.0f, barW * barProgress, 12.0f}, Engine::Color(255, 170, 40, 240), true);
+    }
+
+    // Overlay de Pausa
+    if (m_isPaused && !m_isGameOver) {
+        r.drawRect(Engine::Rect{88.0f, 420.0f, 400.0f, 140.0f}, Engine::Color(14, 11, 28, 235), true);
+        r.drawRect(Engine::Rect{88.0f, 420.0f, 400.0f, 140.0f}, Engine::Color(80, 140, 255, 200), false);
     }
 
     // Si es Game Over

@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'package:flutter/foundation.dart' show kIsWeb, defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../widgets/ui/currency_icon.dart';
@@ -6,6 +7,10 @@ import '../l10n/l10n_extension.dart';
 import 'records_screen.dart';
 import 'settings_screen.dart';
 import 'game_screen.dart';
+import 'local_versus_screen.dart';
+import 'online_versus_screen.dart';
+import 'team_versus_screen.dart';
+import 'phone_preview_screen.dart';
 import 'store_screen.dart';
 import 'skins_screen.dart';
 import 'profile_screen.dart';
@@ -67,6 +72,32 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         },
       ),
     );
+  }
+
+  void _navigateToWithHorizontalSlide(Widget screen) {
+    AudioService().stopBgMusic();
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => screen,
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          const begin = Offset(1.0, 0.0);
+          const end = Offset.zero;
+          final tween = Tween(begin: begin, end: end).chain(CurveTween(curve: Curves.easeInOutCubic));
+          return SlideTransition(position: animation.drive(tween), child: child);
+        },
+        transitionDuration: const Duration(milliseconds: 380),
+      ),
+    ).then((_) {
+      AudioService().playBgMusic();
+    });
+  }
+
+  bool _isDesktop(BuildContext context) {
+    if (kIsWeb) return MediaQuery.of(context).size.width >= 1000;
+    return defaultTargetPlatform == TargetPlatform.windows ||
+        defaultTargetPlatform == TargetPlatform.macOS ||
+        defaultTargetPlatform == TargetPlatform.linux;
   }
 
   @override
@@ -258,38 +289,99 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 },
               ),
 
-              const Spacer(flex: 2),
+              const Spacer(flex: 1),
 
               // ---------------------------------------------------------------
-              // 3. BOTÓN PRINCIPAL DE ACCIÓN: ▶ PLAY (Glassy Capsule)
+              // 3. BOTONES DE MODO DE JUEGO: SINGLE, ONLINE, LOCAL Y 2v2 (PC)
               // ---------------------------------------------------------------
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                child: GlassPlayButton(
-                  text: context.l10n.play,
-                  icon: Image.asset(
-                    'assets/ui/elemento_3.png',
-                    width: 44,
-                    height: 44,
-                    fit: BoxFit.contain,
-                  ),
-                  onPressed: () async {
-                    AudioService().stopBgMusic();
-                    await Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) => const GameScreen(),
-                        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                          return FadeTransition(opacity: animation, child: child);
-                        },
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // Botón 1: SINGLE (Solitario)
+                    GlassPlayButton(
+                      text: context.l10n.singlePlayer,
+                      height: 54.0,
+                      glowColor: const Color(0xFF00E5FF),
+                      icon: Image.asset(
+                        'assets/ui/elemento_3.png',
+                        width: 34,
+                        height: 34,
+                        fit: BoxFit.contain,
                       ),
-                    );
-                    AudioService().playBgMusic();
-                  },
+                      onPressed: () => _navigateToWithHorizontalSlide(const GameScreen()),
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    // Botón 2: ONLINE
+                    GlassPlayButton(
+                      text: context.l10n.onlineMultiplayer,
+                      height: 54.0,
+                      glowColor: const Color(0xFF38BDF8),
+                      icon: Image.asset(
+                        'assets/ui/elemento_5.png',
+                        width: 34,
+                        height: 34,
+                        fit: BoxFit.contain,
+                      ),
+                      onPressed: () => _navigateToWithHorizontalSlide(const OnlineVersusScreen()),
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    // Botón 3: LOCAL
+                    GlassPlayButton(
+                      text: context.l10n.localMultiplayer,
+                      height: 54.0,
+                      glowColor: const Color(0xFF0284C7),
+                      icon: Image.asset(
+                        'assets/ui/elemento_2.png',
+                        width: 34,
+                        height: 34,
+                        fit: BoxFit.contain,
+                      ),
+                      onPressed: () => _navigateToWithHorizontalSlide(const LocalVersusScreen()),
+                    ),
+
+                    // Botón 4: 2v2 EXCLUSIVO PARA COMPUTADORAS (OCULTO EN MÓVILES Y TABLETS)
+                    if (_isDesktop(context)) ...[
+                      const SizedBox(height: 10),
+                      GlassPlayButton(
+                        text: '2 VS 2 (PC)',
+                        height: 54.0,
+                        glowColor: const Color(0xFFF59E0B),
+                        icon: Image.asset(
+                          'assets/ui/elemento_1.png',
+                          width: 34,
+                          height: 34,
+                          fit: BoxFit.contain,
+                        ),
+                        onPressed: () => _navigateToWithHorizontalSlide(const TeamVersusScreen()),
+                      ),
+                    ],
+
+                    // -------------------------------------------------------------
+                    // BOTÓN DE PRUEBA: MULTIJUGADOR DIRECTO 1v1
+                    // -------------------------------------------------------------
+                    const SizedBox(height: 10),
+                    GlassPlayButton(
+                      text: '(Prueba)',
+                      height: 50.0,
+                      glowColor: const Color(0xFF00E5FF),
+                      icon: const Icon(
+                        Icons.sports_esports_rounded,
+                        color: Color(0xFF00E5FF),
+                        size: 26,
+                      ),
+                      onPressed: () => _navigateToWithHorizontalSlide(const PhonePreviewScreen()),
+                    ),
+                  ],
                 ),
               ),
 
-              const Spacer(flex: 2),
+              const Spacer(flex: 1),
 
               // ---------------------------------------------------------------
               // 4. NAVEGACIÓN INFERIOR: SKINS & STORE (Esferas de Cristal 3D)

@@ -43,6 +43,7 @@ dependencies:
   audioplayers: ^6.8.1
   in_app_purchase: ^3.3.1
   http: ^1.6.0
+  web_socket_channel: ^3.0.3
   flutter_animate: ^4.5.2
   google_mobile_ads: ^5.2.0
 

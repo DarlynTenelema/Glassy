@@ -99,6 +99,15 @@ class AppLocalizationsPt extends AppLocalizations {
   String get play => 'JOGAR';
 
   @override
+  String get singlePlayer => 'SOLITÁRIO';
+
+  @override
+  String get onlineMultiplayer => 'ONLINE';
+
+  @override
+  String get localMultiplayer => 'LOCAL';
+
+  @override
   String get skins => 'SKINS';
 
   @override

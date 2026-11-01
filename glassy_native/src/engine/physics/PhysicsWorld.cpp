@@ -38,7 +38,7 @@ PhysicsWorld::~PhysicsWorld() {
 void PhysicsWorld::init() {
     if (m_world) delete m_world;
 
-    // Gravedad cero para simular flotabilidad ASMR Zero-G
+    // Gravedad cero para que las gemas floten libremente dentro del frasco
     b2Vec2 gravity(0.0f, 0.0f);
     m_world = new b2World(gravity);
     m_world->SetContactListener(this);

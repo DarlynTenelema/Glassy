@@ -51,18 +51,32 @@ struct GameConfig {
         4.5f  // [9] Stone
     };
 
-    // Radios de colisión en metros (para Box2D)
+    // Radios de colisión en metros (para Box2D) - Reducidos un 25% (excepto Pearl)
     static constexpr std::array<float, 10> GemRadii = {
-        0.20f, // Pearl (40 px)
-        0.28f, // Emerald (56 px)
-        0.34f, // Amethyst (68 px)
-        0.40f, // Topaz (80 px)
-        0.47f, // GreenRuby (94 px)
-        0.54f, // Sapphire (108 px)
-        0.62f, // RedRuby (124 px)
-        0.66f, // Diamond (132 px)
-        0.36f, // Quartz (72 px)
-        0.48f  // Stone (96 px)
+        0.20f,  // Pearl (iniciador, intacto)
+        0.21f,  // Emerald (-25% de 0.28f)
+        0.255f, // Amethyst (-25% de 0.34f)
+        0.30f,  // Topaz (-25% de 0.40f)
+        0.35f,  // GreenRuby (-25% de 0.47f)
+        0.405f, // Sapphire (-25% de 0.54f)
+        0.465f, // RedRuby (-25% de 0.62f)
+        0.495f, // Diamond (-25% de 0.66f)
+        0.27f,  // Quartz (-25% de 0.36f)
+        0.36f   // Stone (-25% de 0.48f)
+    };
+
+    // Escalas de renderizado visual para que las siluetas coincidan exactamente con el hitbox de Box2D
+    static constexpr std::array<float, 10> GemVisualScales = {
+        1.34f, // Pearl
+        1.48f, // Emerald
+        1.30f, // Amethyst
+        1.28f, // Topaz
+        1.58f, // GreenRuby
+        1.33f, // Sapphire
+        1.70f, // RedRuby
+        1.28f, // Diamond
+        1.43f, // Quartz
+        1.44f  // Stone
     };
 
     // Archivos de texturas

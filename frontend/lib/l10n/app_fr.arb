@@ -31,6 +31,9 @@
     "invalidReferralCode": "Code de parrainage invalide",
 
     "play": "JOUER",
+    "singlePlayer": "SOLITAIRE",
+    "onlineMultiplayer": "EN LIGNE",
+    "localMultiplayer": "LOCAL",
     "skins": "SKINS",
     "store": "BOUTIQUE",
     "records": "RECORDS",

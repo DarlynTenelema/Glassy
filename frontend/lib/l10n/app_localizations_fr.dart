@@ -100,6 +100,15 @@ class AppLocalizationsFr extends AppLocalizations {
   String get play => 'JOUER';
 
   @override
+  String get singlePlayer => 'SOLITAIRE';
+
+  @override
+  String get onlineMultiplayer => 'EN LIGNE';
+
+  @override
+  String get localMultiplayer => 'LOCAL';
+
+  @override
   String get skins => 'SKINS';
 
   @override

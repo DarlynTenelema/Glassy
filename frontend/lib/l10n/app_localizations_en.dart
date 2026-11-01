@@ -99,6 +99,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get play => 'PLAY';
 
   @override
+  String get singlePlayer => 'SINGLE';
+
+  @override
+  String get onlineMultiplayer => 'ONLINE';
+
+  @override
+  String get localMultiplayer => 'LOCAL';
+
+  @override
   String get skins => 'SKINS';
 
   @override

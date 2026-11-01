@@ -276,6 +276,24 @@ abstract class AppLocalizations {
   /// **'PLAY'**
   String get play;
 
+  /// No description provided for @singlePlayer.
+  ///
+  /// In es, this message translates to:
+  /// **'SOLITARIO'**
+  String get singlePlayer;
+
+  /// No description provided for @onlineMultiplayer.
+  ///
+  /// In es, this message translates to:
+  /// **'ONLINE'**
+  String get onlineMultiplayer;
+
+  /// No description provided for @localMultiplayer.
+  ///
+  /// In es, this message translates to:
+  /// **'LOCAL'**
+  String get localMultiplayer;
+
   /// No description provided for @skins.
   ///
   /// In es, this message translates to:

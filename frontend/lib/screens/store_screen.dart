@@ -129,13 +129,18 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
           SafeArea(
             child: _isLoading 
             ? const Center(child: CircularProgressIndicator(color: AppColors.lightBlue))
-            : TabBarView(
-                controller: _tabController,
-                children: [
-                  _buildSkinsTab(),
-                  _buildCoinsTab(),
-                  _buildBonusTab(),
-                ],
+            : Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 1100),
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      _buildSkinsTab(),
+                      _buildCoinsTab(),
+                      _buildBonusTab(),
+                    ],
+                  ),
+                ),
               ),
           ),
         ],
@@ -155,53 +160,56 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
       children: [
         const SizedBox(height: 15),
         // Filtros Categorías en Burbujas Glassmorphism
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Row(
-            children: [
-              {'key': 'Iniciales', 'label': context.l10n.categoryStarter},
-              {'key': 'Estándar', 'label': context.l10n.categoryStandard},
-              {'key': 'Evento', 'label': context.l10n.categoryEvent},
-            ].map((item) {
-              final categoryKey = item['key']!;
-              final categoryLabel = item['label']!;
-              bool isSelected = _selectedSkinCategory == categoryKey;
-              return GestureDetector(
-                onTap: () => setState(() => _selectedSkinCategory = categoryKey),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  margin: const EdgeInsets.symmetric(horizontal: 6),
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  decoration: BoxDecoration(
-                    color: isSelected ? AppColors.lightBlue.withValues(alpha: 0.2) : Colors.white.withValues(alpha: 0.05),
-                    borderRadius: BorderRadius.circular(25),
-                    border: Border.all(color: isSelected ? AppColors.lightBlue : Colors.white.withValues(alpha: 0.1), width: 1.5),
-                  ),
-                  child: Text(
-                    categoryLabel.toUpperCase(),
-                    style: TextStyle(
-                      color: isSelected ? AppColors.lightBlue : Colors.white60,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 1,
+        Center(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                {'key': 'Iniciales', 'label': context.l10n.categoryStarter},
+                {'key': 'Estándar', 'label': context.l10n.categoryStandard},
+                {'key': 'Evento', 'label': context.l10n.categoryEvent},
+              ].map((item) {
+                final categoryKey = item['key']!;
+                final categoryLabel = item['label']!;
+                bool isSelected = _selectedSkinCategory == categoryKey;
+                return GestureDetector(
+                  onTap: () => setState(() => _selectedSkinCategory = categoryKey),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    margin: const EdgeInsets.symmetric(horizontal: 6),
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: isSelected ? AppColors.lightBlue.withValues(alpha: 0.2) : Colors.white.withValues(alpha: 0.05),
+                      borderRadius: BorderRadius.circular(25),
+                      border: Border.all(color: isSelected ? AppColors.lightBlue : Colors.white.withValues(alpha: 0.1), width: 1.5),
+                    ),
+                    child: Text(
+                      categoryLabel.toUpperCase(),
+                      style: TextStyle(
+                        color: isSelected ? AppColors.lightBlue : Colors.white60,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 1,
+                      ),
                     ),
                   ),
-                ),
-              );
-            }).toList(),
+                );
+              }).toList(),
+            ),
           ),
         ),
         const SizedBox(height: 20),
         
-        // Cuadrícula de Cartas Coleccionables (Trading Cards style)
+        // Cuadrícula Responsiva de Cartas Coleccionables (Trading Cards style)
         Expanded(
           child: GridView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10).copyWith(bottom: 40),
             physics: const BouncingScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 0.65, // Formato alto tipo carta
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 220,
+              childAspectRatio: 0.68, // Proporción perfecta para tarjeta coleccionable
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
             ),
@@ -286,16 +294,21 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                         ),
                         // Filtro oscuro para resaltar el diamante
                         Container(color: Colors.black.withValues(alpha: 0.4)),
-                        // Ícono Principal (Diamante)
+                        // Ícono Principal (Diamante / Criatura con escala proporcional)
                         Center(
                           child: Hero(
                             tag: 'skin_${skin['id']}',
-                            child: Image.asset(
-                              'assets/skin/${skin['id']}/Diamond.png',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.contain,
-                              errorBuilder: (c, e, s) => const Icon(Icons.color_lens, color: AppColors.lightBlue, size: 50),
+                            child: LayoutBuilder(
+                              builder: (context, constraints) {
+                                final iconSize = (constraints.maxHeight * 0.60).clamp(65.0, 110.0);
+                                return Image.asset(
+                                  'assets/skin/${skin['id']}/Diamond.png',
+                                  width: iconSize,
+                                  height: iconSize,
+                                  fit: BoxFit.contain,
+                                  errorBuilder: (c, e, s) => Icon(Icons.color_lens, color: AppColors.lightBlue, size: iconSize * 0.5),
+                                );
+                              },
                             ),
                           ),
                         ),
@@ -307,7 +320,7 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                 Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -316,7 +329,7 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 13,
+                            fontSize: 12,
                             letterSpacing: 0.5,
                           ),
                           textAlign: TextAlign.center,
@@ -325,7 +338,8 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                         ),
                         if (isOwned)
                           Container(
-                            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                            width: double.infinity,
+                            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
                             decoration: BoxDecoration(
                               color: Colors.greenAccent.withValues(alpha: 0.15),
                               borderRadius: BorderRadius.circular(12),
@@ -334,7 +348,7 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Icon(Icons.check_circle, color: Colors.greenAccent, size: 16),
+                                const Icon(Icons.check_circle, color: Colors.greenAccent, size: 15),
                                 const SizedBox(width: 4),
                                 Text(
                                   context.l10n.acquired,
@@ -351,7 +365,8 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                           GestureDetector(
                             onTap: isPending ? null : () => _openSkinPurchaseDialog(skin),
                             child: Container(
-                              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                              width: double.infinity,
+                              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
                               decoration: BoxDecoration(
                                 color: isPending ? AppColors.lightBlue.withValues(alpha: 0.5) : AppColors.lightBlue,
                                 borderRadius: BorderRadius.circular(12),
@@ -381,7 +396,7 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                                           '${skin['price']}',
                                           style: const TextStyle(
                                             color: Colors.black,
-                                            fontSize: 14,
+                                            fontSize: 13,
                                             fontWeight: FontWeight.w900,
                                           ),
                                         ),

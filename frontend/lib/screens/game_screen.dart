@@ -1,4 +1,5 @@
 import 'package:glassy/theme/app_colors.dart';
+import '../services/skin_themes.dart';
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
@@ -58,9 +59,13 @@ class _GameScreenState extends State<GameScreen> {
   int _missionCurrent = 0;
   int _missionTarget = 0;
   int _missionTimeRemaining = 0;
+  String _missionAction = 'merge';
   String? _missionCompleteText;
 
-  String _getGemName(AppLocalizations l10n, int gemType) {
+  String _getGemName(AppLocalizations l10n, int gemType, {String? skinId, int count = 1}) {
+    if (skinId != null && skinId != 'gemas_clasicas') {
+      return SkinThemes.getElementName(skinId, gemType, count: count);
+    }
     switch (gemType) {
       case 0: return l10n.gemPearl;
       case 1: return l10n.gemEmerald;
@@ -220,6 +225,7 @@ class _GameScreenState extends State<GameScreen> {
           _isMissionActive = true;
           _missionGemType = payload.gemType;
           _missionTargetAmount = payload.targetAmount;
+          _missionAction = payload.action;
           _missionCurrent = 0;
           _missionTarget = payload.targetAmount > 0 
               ? payload.targetAmount 
@@ -230,6 +236,7 @@ class _GameScreenState extends State<GameScreen> {
         _missionTimer?.cancel();
         _missionTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
           if (!mounted) return;
+          if (_isPaused) return; // Pausar temporizador si el juego está en pausa
           setState(() {
             _missionTimeRemaining--;
             if (_missionTimeRemaining <= 0 || !_isMissionActive) {
@@ -433,6 +440,11 @@ class _GameScreenState extends State<GameScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final gameProvider = Provider.of<GameProvider>(context);
+    final currentSkinId = gameProvider.selectedSkinId;
+    final screenSize = MediaQuery.of(context).size;
+    final bool isWideScreen = screenSize.width >= 750 && (screenSize.width / screenSize.height) >= 0.85;
+
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) async {
@@ -447,141 +459,50 @@ class _GameScreenState extends State<GameScreen> {
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          // 1. Capa Base: Unity (El Juego)
+          // 1. Capa Base: Motor de Juego con la Skin Equipada
           GlassyNativeView(
+            skinId: currentSkinId,
             onCreated: onUnityCreated,
             onMessage: onUnityMessage,
           ),
           
-          // 2. Capa de HUD (Puntaje, Botones)
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  // Top HUD: Lapislázulis, Score, Controles
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // Controles Izquierdos: Lapislázulis + Power-ups
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Contador de Lapislázulis
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                            decoration: BoxDecoration(
-                              color: Colors.black.withValues(alpha: 0.5),
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: AppColors.lightBlue, width: 1),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: AppColors.lightBlue.withValues(alpha: 0.3),
-                                  blurRadius: 8,
-                                )
-                              ],
-                            ),
-                            child: Consumer<GameProvider>(
-                              builder: (context, provider, child) {
-                                return Row(
-                                  children: [
-                                    const CurrencyIcon(size: 20),
-                                    const SizedBox(width: 6),
-                                    Text(
-                                      '${provider.crystals}',
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                      
-                      // Score Central
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.6),
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border.all(color: Colors.white24, width: 1),
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Text(
-                              'SCORE',
-                              style: TextStyle(
-                                color: Colors.white70,
-                                fontSize: 10,
-                                letterSpacing: 2,
-                              ),
-                            ),
-                            Text(
-                              '$_score',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 24,
-                                fontWeight: FontWeight.w900,
-                                shadows: [Shadow(color: AppColors.lightBlue, blurRadius: 10)],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      
-                      // Botones Superiores Derecha
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          IconButton(
-                            onPressed: _togglePause,
-                            icon: Icon(
-                              _isPaused ? Icons.play_arrow : Icons.pause,
-                              color: Colors.white,
-                              size: 28,
-                              shadows: [Shadow(color: Colors.white.withValues(alpha: 0.9), blurRadius: 10)],
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () async {
-                              final navigator = Navigator.of(context);
-                              final bool canExit = await _onExitPressed();
-                              if (canExit && mounted) {
-                                navigator.pop();
-                              }
-                            },
-                            icon: Icon(
-                              Icons.close,
-                              color: Colors.white,
-                              size: 28,
-                              shadows: [Shadow(color: Colors.white.withValues(alpha: 0.9), blurRadius: 10)],
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // 2. Capa de HUD Responsiva
+          if (isWideScreen)
+            _buildWideHUD(currentSkinId, gameProvider)
+          else
+            _buildMobileHUD(currentSkinId, gameProvider),
           
-          // Misión Express UI (Abajo)
+          // Misión Express Adaptativa:
+          // En móvil: dock inferior
+          // En tablet/computadora: ala lateral izquierda para NO tapar el fondo del frasco
           if (_isMissionActive)
+            if (isWideScreen)
+              Positioned(
+                left: 20,
+                top: 90,
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 280),
+                  child: _buildWideMissionWidget(currentSkinId),
+                ),
+              )
+            else
+              Positioned(
+                bottom: 80,
+                left: 0,
+                right: 0,
+                child: Center(
+                  child: _buildMissionWidget(skinId: currentSkinId),
+                ),
+              ),
+
+          // En tablet y computadora: Ala derecha con Stats y Botones de acción rápida
+          if (isWideScreen)
             Positioned(
-              bottom: 80,
-              left: 0,
-              right: 0,
-              child: Center(
-                child: _buildMissionWidget(),
+              right: 20,
+              top: 90,
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 240),
+                child: _buildWideRightPanel(currentSkinId),
               ),
             ),
           
@@ -684,26 +605,186 @@ class _GameScreenState extends State<GameScreen> {
     );
   }
 
-  Widget _buildMissionWidget() {
+  Widget _buildMobileHUD(String? skinId, GameProvider provider) {
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Contador de Lapislázulis
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: Colors.black.withValues(alpha: 0.5),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: AppColors.lightBlue, width: 1),
+                boxShadow: [
+                  BoxShadow(color: AppColors.lightBlue.withValues(alpha: 0.3), blurRadius: 8),
+                ],
+              ),
+              child: Row(
+                children: [
+                  const CurrencyIcon(size: 20),
+                  const SizedBox(width: 6),
+                  Text(
+                    '${provider.crystals}',
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                ],
+              ),
+            ),
+
+            // Score Central
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              decoration: BoxDecoration(
+                color: Colors.black.withValues(alpha: 0.6),
+                borderRadius: BorderRadius.circular(25),
+                border: Border.all(color: Colors.white24, width: 1),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('SCORE', style: TextStyle(color: Colors.white70, fontSize: 10, letterSpacing: 2)),
+                  Text(
+                    '$_score',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w900,
+                      shadows: [Shadow(color: AppColors.lightBlue, blurRadius: 10)],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Botones Pausa y Salir
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  onPressed: _togglePause,
+                  icon: Icon(
+                    _isPaused ? Icons.play_arrow : Icons.pause,
+                    color: Colors.white,
+                    size: 28,
+                    shadows: [Shadow(color: Colors.white.withValues(alpha: 0.9), blurRadius: 10)],
+                  ),
+                ),
+                IconButton(
+                  onPressed: () async {
+                    final navigator = Navigator.of(context);
+                    final bool canExit = await _onExitPressed();
+                    if (canExit && mounted) navigator.pop();
+                  },
+                  icon: Icon(
+                    Icons.close,
+                    color: Colors.white,
+                    size: 28,
+                    shadows: [Shadow(color: Colors.white.withValues(alpha: 0.9), blurRadius: 10)],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildWideHUD(String? skinId, GameProvider provider) {
+    return SafeArea(
+      child: Align(
+        alignment: Alignment.topCenter,
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 480),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              // Contador de Lapislázulis
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.6),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: AppColors.lightBlue, width: 1.5),
+                  boxShadow: [
+                    BoxShadow(color: AppColors.lightBlue.withValues(alpha: 0.3), blurRadius: 8),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    const CurrencyIcon(size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      '${provider.crystals}',
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
+                  ],
+                ),
+              ),
+
+              // Score Central
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.6),
+                  borderRadius: BorderRadius.circular(25),
+                  border: Border.all(color: Colors.white24, width: 1),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text('SCORE', style: TextStyle(color: Colors.white70, fontSize: 10, letterSpacing: 2)),
+                    Text(
+                      '$_score',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w900,
+                        shadows: [Shadow(color: AppColors.lightBlue, blurRadius: 10)],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMissionWidget({String? skinId}) {
     String displayMissionText = _missionText;
     if (_missionGemType >= 0 && _missionTargetAmount > 0) {
-      final gemName = _getGemName(context.l10n, _missionGemType);
-      displayMissionText = context.l10n.missionCreateGems(_missionTargetAmount, gemName);
+      displayMissionText = SkinThemes.getMissionText(skinId, _missionGemType, _missionTargetAmount, action: _missionAction);
     }
+    final iconAsset = SkinThemes.getElementAsset(skinId, _missionGemType);
 
     return Container(
       margin: const EdgeInsets.only(top: 5),
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.7),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.orangeAccent, width: 1.5),
-        boxShadow: [BoxShadow(color: Colors.orange.withValues(alpha: 0.3), blurRadius: 15)],
+        color: const Color(0xE60E0B1C),
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: Colors.orangeAccent.withValues(alpha: 0.8), width: 1.5),
+        boxShadow: [BoxShadow(color: Colors.orange.withValues(alpha: 0.25), blurRadius: 15)],
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.star, color: Colors.orangeAccent, size: 24),
+          Image.asset(
+            iconAsset,
+            width: 28,
+            height: 28,
+            fit: BoxFit.contain,
+            errorBuilder: (c, e, s) => const Icon(Icons.star, color: Colors.orangeAccent, size: 24),
+          ),
           const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -721,17 +802,220 @@ class _GameScreenState extends State<GameScreen> {
                     style: const TextStyle(color: Colors.orangeAccent, fontSize: 12, fontWeight: FontWeight.w900),
                   ),
                   const SizedBox(width: 12),
-                  const Icon(Icons.timer, color: Colors.white70, size: 14),
+                  const Icon(Icons.timer_outlined, color: Colors.white70, size: 14),
                   const SizedBox(width: 4),
                   Text(
                     '${_missionTimeRemaining}s',
-                    style: const TextStyle(color: Colors.white70, fontSize: 12),
+                    style: TextStyle(
+                      color: _missionTimeRemaining <= 10 ? Colors.redAccent : Colors.white70,
+                      fontSize: 12,
+                      fontWeight: _missionTimeRemaining <= 10 ? FontWeight.bold : FontWeight.normal,
+                    ),
                   ),
                 ],
               ),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildWideMissionWidget(String? skinId) {
+    String displayMissionText = _missionText;
+    if (_missionGemType >= 0 && _missionTargetAmount > 0) {
+      displayMissionText = SkinThemes.getMissionText(skinId, _missionGemType, _missionTargetAmount, action: _missionAction);
+    }
+    final iconAsset = SkinThemes.getElementAsset(skinId, _missionGemType);
+    final progress = _missionTarget > 0 ? (_missionCurrent / _missionTarget).clamp(0.0, 1.0) : 0.0;
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: const Color(0xCC0E0B1C),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: Colors.orangeAccent.withValues(alpha: 0.6), width: 1.5),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.orange.withValues(alpha: 0.2),
+                blurRadius: 20,
+                spreadRadius: 2,
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                children: [
+                  const Icon(Icons.track_changes, color: Colors.orangeAccent, size: 18),
+                  const SizedBox(width: 6),
+                  const Text(
+                    'MISIÓN EXPRESS',
+                    style: TextStyle(
+                      color: Colors.orangeAccent,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                  const Spacer(),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: (_missionTimeRemaining <= 10 ? Colors.redAccent : Colors.white.withValues(alpha: 0.1)),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(Icons.timer_outlined, color: Colors.white, size: 12),
+                        const SizedBox(width: 3),
+                        Text(
+                          '${_missionTimeRemaining}s',
+                          style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 14),
+              Row(
+                children: [
+                  Container(
+                    width: 44,
+                    height: 44,
+                    padding: const EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.05),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
+                    ),
+                    child: Image.asset(
+                      iconAsset,
+                      fit: BoxFit.contain,
+                      errorBuilder: (c, e, s) => const Icon(Icons.star, color: Colors.orangeAccent, size: 24),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          displayMissionText,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Progreso: $_missionCurrent / $_missionTarget',
+                          style: const TextStyle(color: Colors.white70, fontSize: 11),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 8,
+                  backgroundColor: Colors.white.withValues(alpha: 0.1),
+                  valueColor: const AlwaysStoppedAnimation<Color>(Colors.orangeAccent),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildWideRightPanel(String? skinId) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: const Color(0xCC0E0B1C),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: AppColors.lightBlue.withValues(alpha: 0.4), width: 1.5),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                'SCORE',
+                style: TextStyle(color: Colors.white60, fontSize: 11, letterSpacing: 2, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                '$_score',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 26,
+                  fontWeight: FontWeight.w900,
+                  shadows: [Shadow(color: AppColors.lightBlue, blurRadius: 10)],
+                ),
+              ),
+              if (_highScore > 0) ...[
+                const SizedBox(height: 4),
+                Text(
+                  'RÉCORD: $_highScore',
+                  style: const TextStyle(color: Colors.amberAccent, fontSize: 11, fontWeight: FontWeight.bold),
+                ),
+              ],
+              const SizedBox(height: 12),
+              const Divider(color: Colors.white12, height: 1),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: _togglePause,
+                    tooltip: 'Pausa',
+                    icon: Icon(
+                      _isPaused ? Icons.play_arrow : Icons.pause,
+                      color: Colors.white,
+                      size: 26,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  IconButton(
+                    onPressed: () async {
+                      final navigator = Navigator.of(context);
+                      final bool canExit = await _onExitPressed();
+                      if (canExit && mounted) navigator.pop();
+                    },
+                    tooltip: 'Salir',
+                    icon: const Icon(
+                      Icons.close,
+                      color: Colors.white,
+                      size: 26,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

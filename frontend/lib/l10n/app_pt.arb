@@ -31,6 +31,9 @@
     "invalidReferralCode": "Código de indicação inválido",
 
     "play": "JOGAR",
+    "singlePlayer": "SOLITÁRIO",
+    "onlineMultiplayer": "ONLINE",
+    "localMultiplayer": "LOCAL",
     "skins": "SKINS",
     "store": "LOJA",
     "records": "RECORDES",

@@ -44,7 +44,9 @@ class ScoreUpdatePayload {
   final int currentScore;
   ScoreUpdatePayload({required this.currentScore});
   factory ScoreUpdatePayload.fromJson(Map<String, dynamic> json) {
-    return ScoreUpdatePayload(currentScore: json['currentScore'] as int? ?? 0);
+    return ScoreUpdatePayload(
+      currentScore: (json['currentScore'] ?? json['score'] ?? json['finalScore'] ?? 0) as int,
+    );
   }
 }
 
@@ -122,12 +124,14 @@ class MissionStartedPayload {
   final int timeLimitSeconds;
   final int gemType;
   final int targetAmount;
+  final String action; // 'merge' (fusionar elementos de este tipo) o 'create' (sintetizar elemento nuevo)
 
   MissionStartedPayload({
     required this.text,
     required this.timeLimitSeconds,
     this.gemType = -1,
     this.targetAmount = 0,
+    this.action = 'merge',
   });
 
   factory MissionStartedPayload.fromJson(Map<String, dynamic> json) {
@@ -136,6 +140,7 @@ class MissionStartedPayload {
       timeLimitSeconds: json['timeLimitSeconds'] as int? ?? 0,
       gemType: json['gemType'] as int? ?? -1,
       targetAmount: json['targetAmount'] as int? ?? 0,
+      action: json['action'] as String? ?? 'merge',
     );
   }
 }

@@ -31,6 +31,9 @@
     "invalidReferralCode": "Código de referido inválido",
 
     "play": "PLAY",
+    "singlePlayer": "SOLITARIO",
+    "onlineMultiplayer": "ONLINE",
+    "localMultiplayer": "LOCAL",
     "skins": "SKINS",
     "store": "TIENDA",
     "records": "RÉCORDS",

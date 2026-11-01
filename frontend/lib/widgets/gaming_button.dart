@@ -9,6 +9,7 @@ import '../services/audio_service.dart';class GamingButton extends StatefulWidge
   final Widget? icon;
   final Color primaryColor;
   final Color secondaryColor;
+  final Color? glowColor;
   final double width;
   final double height;
   final double fontSize;
@@ -19,13 +20,15 @@ import '../services/audio_service.dart';class GamingButton extends StatefulWidge
     required this.text,
     required this.onPressed,
     this.icon,
-    this.primaryColor = AppColors.lightBlue,
-    this.secondaryColor = AppColors.lightBlue,
+    Color? primaryColor,
+    Color? secondaryColor,
+    this.glowColor,
     this.width = double.infinity,
     this.height = 65.0,
     this.fontSize = 22.0,
     this.shatterEffect = false,
-  });
+  })  : primaryColor = glowColor ?? primaryColor ?? AppColors.lightBlue,
+        secondaryColor = glowColor ?? secondaryColor ?? AppColors.lightBlue;
 
   @override
   State<GamingButton> createState() => _GamingButtonState();

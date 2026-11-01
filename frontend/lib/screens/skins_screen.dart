@@ -95,20 +95,25 @@ class _SkinsScreenState extends State<SkinsScreen> {
             ),
           ),
           SafeArea(
-            child: CustomScrollView(
-              physics: const BouncingScrollPhysics(),
-              slivers: [
-                _buildSectionHeader('TU COLECCIÓN', Icons.check_circle_outline, AppColors.lightBlue),
-                _buildGrid(ownedSkins, true, selectedSkinId, gameProvider),
-                
-                const SliverToBoxAdapter(child: SizedBox(height: 30)),
-                
-                if (lockedSkins.isNotEmpty) ...[
-                  _buildSectionHeader('POR DESBLOQUEAR', Icons.lock_outline, Colors.white54),
-                  _buildGrid(lockedSkins, false, selectedSkinId, gameProvider),
-                ],
-                const SliverToBoxAdapter(child: SizedBox(height: 40)),
-              ],
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 1100),
+                child: CustomScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  slivers: [
+                    _buildSectionHeader('TU COLECCIÓN', Icons.check_circle_outline, AppColors.lightBlue),
+                    _buildGrid(ownedSkins, true, selectedSkinId, gameProvider),
+                    
+                    const SliverToBoxAdapter(child: SizedBox(height: 30)),
+                    
+                    if (lockedSkins.isNotEmpty) ...[
+                      _buildSectionHeader('POR DESBLOQUEAR', Icons.lock_outline, Colors.white54),
+                      _buildGrid(lockedSkins, false, selectedSkinId, gameProvider),
+                    ],
+                    const SliverToBoxAdapter(child: SizedBox(height: 40)),
+                  ],
+                ),
+              ),
             ),
           ),
         ],
@@ -138,9 +143,9 @@ class _SkinsScreenState extends State<SkinsScreen> {
     return SliverPadding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       sliver: SliverGrid(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 0.7,
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 220,
+          childAspectRatio: 0.70, // Proporción perfecta para tarjeta coleccionable
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
         ),
@@ -223,7 +228,7 @@ class _SkinsScreenState extends State<SkinsScreen> {
                       child: Container(
                         width: double.infinity,
                         clipBehavior: Clip.hardEdge,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
                         ),
                         child: Stack(
@@ -237,16 +242,21 @@ class _SkinsScreenState extends State<SkinsScreen> {
                             ),
                             // Filtro oscuro
                             Container(color: Colors.black.withValues(alpha: 0.4)),
-                            // Ícono Principal (Diamante)
+                            // Ícono Principal (Diamante / Criatura con escala proporcional)
                             Center(
                               child: Hero(
                                 tag: 'inv_${skin['id']}',
-                                child: Image.asset(
-                                  skin['id'] == 'gemas_clasicas' ? CurrencyIcon.imagePath : 'assets/skin/${skin['id']}/Diamond.png',
-                                  width: 90,
-                                  height: 90,
-                                  fit: BoxFit.contain,
-                                  errorBuilder: (c, e, s) => const Icon(Icons.color_lens, color: AppColors.lightBlue, size: 50),
+                                child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                    final iconSize = (constraints.maxHeight * 0.60).clamp(60.0, 105.0);
+                                    return Image.asset(
+                                      skin['id'] == 'gemas_clasicas' ? CurrencyIcon.imagePath : 'assets/skin/${skin['id']}/Diamond.png',
+                                      width: iconSize,
+                                      height: iconSize,
+                                      fit: BoxFit.contain,
+                                      errorBuilder: (c, e, s) => Icon(Icons.color_lens, color: AppColors.lightBlue, size: iconSize * 0.5),
+                                    );
+                                  },
                                 ),
                               ),
                             ),

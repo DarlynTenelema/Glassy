@@ -3,6 +3,7 @@
 #include <memory>
 #include "Gem.hpp"
 #include "ComboManager.hpp"
+#include "MissionManager.hpp"
 #include "../engine/physics/PhysicsWorld.hpp"
 #include "../engine/renderer/Renderer2D.hpp"
 #include "../engine/renderer/Texture.hpp"
@@ -23,9 +24,14 @@ public:
     void spawnEvolvedGem(GemType type, Engine::Vec2 position);
     void destroyNearbyStones(Engine::Vec2 center, float radius);
 
+    void togglePause() { m_isPaused = !m_isPaused; }
+    void setPaused(bool paused) { m_isPaused = paused; }
+    bool isPaused() const { return m_isPaused; }
+
     int getScore() const { return m_score; }
     bool isGameOver() const { return m_isGameOver; }
     bool isInDanger() const { return m_isInDanger; }
+    const MissionManager& getMissionManager() const { return m_mission; }
 
 private:
     void setupFlaskBounds();
@@ -37,6 +43,7 @@ private:
 
     Engine::PhysicsWorld m_physics;
     ComboManager m_combo;
+    MissionManager m_mission;
 
     std::vector<std::unique_ptr<Gem>> m_gems;
     Gem* m_selectedGem = nullptr;
@@ -56,6 +63,7 @@ private:
     // Estado del juego
     int m_score = 0;
     bool m_isGameOver = false;
+    bool m_isPaused = false;
     bool m_isInDanger = false;
     float m_dangerTimer = 0.0f;
     int m_gemsInDangerZone = 0;
